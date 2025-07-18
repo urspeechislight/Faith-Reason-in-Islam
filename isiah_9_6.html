@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Analysis of Isaiah 9:6 | A Hebraic Perspective</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=SBL+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-hebrew {
+            font-family: 'SBL Hebrew', serif;
+        }
+        .tab.active {
+            border-color: #A43820; /* Muted Terracotta */
+            color: #A43820;
+            background-color: #FDFBF7;
+        }
+        .accordion-header svg {
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-header svg {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .analysis-section {
+            margin-bottom: 1rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.25rem;
+        }
+        .quote-original {
+            font-family: 'SBL Hebrew', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .quote-translit {
+            font-style: italic;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+        }
+        .quote-translation {
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        
+        <header class="text-center mb-12">
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-2">A Linguistic & Historical Analysis</h1>
+            <p class="text-md md:text-lg text-gray-500">Examining Kingship and Divinity in Isaiah 9:6 [Hebrew 9:5]</p>
+        </header>
+
+        <main>
+            <section id="argument" class="mb-12 p-6 bg-white rounded-lg shadow-sm border border-gray-200 max-w-4xl mx-auto">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-center text-[#A43820]">The Argument Under Examination</h2>
+                <p class="mb-6 text-gray-600 text-center">This analysis addresses the traditional Christian polemical argument which posits Isaiah 9:6 as a direct prophecy of Jesus's divinity. The argument is typically constructed as follows:</p>
+                <div class="space-y-4 mb-8">
+                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                        <p class="font-semibold text-gray-800">Premise 1: A Prophecy of Divine Titles</p>
+                        <p class="text-gray-600">Isaiah 9:6 prophesies that a child will be born and given a series of names, including “Mighty God” (<span class="font-hebrew">אֵל גִּבּוֹר</span> / El Gibbor) and “Everlasting Father” (<span class="font-hebrew">אֲבִי־עַד</span> / Avi-Ad). These titles are understood to be literal declarations of the child’s divine nature.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                        <p class="font-semibold text-gray-800">Premise 2: A Fulfillment in Jesus of Nazareth</p>
+                        <p class="text-gray-600">The New Testament identifies Jesus as the fulfillment of Isaiah’s prophecies (e.g., Matthew 1:23). Therefore, the divine titles prophesied by Isaiah apply directly and ontologically to Jesus.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-[#A43820] bg-red-50 rounded-r-lg">
+                        <p class="font-semibold text-[#A43820]">Conclusion: A Proof of Divinity</p>
+                        <p class="text-gray-700">Therefore, Isaiah 9:6 is a definitive proof from the Hebrew Bible that the Messiah was prophesied to be God incarnate, a belief fulfilled in the person of Jesus.</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-center">The following five-part analysis demonstrates that this syllogism is untenable from linguistic, doctrinal, logical, historical, and textual perspectives, arguing that Isaiah 9:6 describes a human king, likely Hezekiah, in a historical context.</p>
+            </section>
+
+            <div class="mb-8 border-b border-gray-200">
+                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
+                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic">1. The Linguistic Proof</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal">2. The Doctrinal Proof</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="logical">3. The Logical Proof</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="historical">4. The Historical Proof</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="textual">5. Textual & Reception History</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="comparison">6. Comparison</button>
+                </nav>
+            </div>
+
+            <div id="tab-content">
+                <div id="linguistic" class="tab-pane active">
+                    <div id="linguistic-accordion" class="space-y-4">
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Active Verb Vayikra: God as the Namer</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>The Hebrew verb <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> (<strong>vayikra</strong>, “and he called”) is in the active voice, requiring a subject, typically God in biblical naming contexts. Christian translations render it passively (“he will be called”) to apply divine titles to the child, but this lacks grammatical support. The correct passive form would be <span class="font-hebrew">יִקָּרֵא</span> (yikkare).</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Leviticus 1:1 uses <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> with God as the implicit subject, establishing a pattern of divine naming:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p class="quote-original rtl"><strong>וַיִּקְרָא</strong> אֶל־מֹשֶׁה</p>
+                                            <p class="quote-translit"><strong>vayikra</strong> el-Moshe</p>
+                                            <p class="quote-translation">"<strong>And He [God] called</strong> to Moses."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>In Isaiah 9:5, the active verb indicates that God is the one doing the naming. Jewish exegesis interprets this as God—who is Himself described by the titles "Wonderful Counselor, Mighty God, Everlasting Father"—naming the child "Prince of Peace" (Sar Shalom). The long string of titles describes the Namer, not the one being named.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>The active verb <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> unequivocally indicates God names the child, assigning the divine titles to Himself. This grammatical reading, reinforced by early Jewish translations and syntactic norms, dismantles the divine interpretation, which relies on an unsupported change from active to passive voice.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: El Gibbor as Metaphorical</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>The term <span class="font-hebrew"><strong>אֵל גִּבּוֹר</strong></span> (<strong>El Gibbor</strong>) can mean "Mighty God," but <span class="font-hebrew">אֵל</span> (El) fundamentally means "power" or "might" and is used metaphorically for powerful humans, reflecting heroic strength, not ontological divinity. Pro-deity claims that this term is exclusively divine are overstated, as biblical, lexical, and regional evidence supports its non-divine flexibility.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Ezekiel 32:21 uses a variant of <span class="font-hebrew">אֵל</span> for human warriors in the underworld:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p class="quote-original rtl"><strong>אֵילֵי גִבּוֹרִים</strong></p>
+                                            <p class="quote-translit"><strong>eilei gibborim</strong></p>
+                                            <p class="quote-translation">"<strong>mighty heroes</strong>."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>In Isaiah 9:5, <span class="font-hebrew"><strong>אֵל גִּבּוֹר</strong></span> is best understood as "mighty hero" or "divine warrior," a title reflecting the king’s God-given strength. This aligns with other uses of divine-like titles for humans, such as Moses (Exodus 7:1) and judges (Psalm 82:1). While Isaiah 10:21 uses the same term for YHWH, this reinforces the interpretation that it is God (the El Gibbor) who is naming the child. Ancient Near Eastern parallels, such as Ugaritic kings called “sons of El” or Mesopotamian kings as “divine” representatives, confirm that divine titles for rulers are honorific, not ontological.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p><span class="font-hebrew"><strong>אֵל גִּבּוֹר</strong></span> is an honorific title, not a unique divine designation. Its metaphorical use, supported by multiple biblical examples, regional parallels, and early translations, makes the anti-deity interpretation more coherent than a literal divine reading.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: Avi-Ad as Royal Hyperbole</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>The title <span class="font-hebrew"><strong>אֲבִי־עַד</strong></span> (<strong>Avi-Ad</strong>, “Everlasting Father”) is best understood as royal hyperbole for a lasting reign, meaning "father of the age," not a claim of literal divinity. This is especially problematic for Trinitarian theology, which distinguishes the Son from the Father.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>In Isaiah 22:21, the human official Eliakim is called a "father" to the nation:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p class="quote-original rtl">וְהָיָה <strong>לְאָב</strong></p>
+                                            <p class="quote-translit">vehaya <strong>le-av</strong></p>
+                                            <p class="quote-translation">"and he shall be <strong>a father</strong>."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>In Isaiah 9:5, <span class="font-hebrew"><strong>אֲבִי־עַד</strong></span> signifies "father of the age," a king whose dynasty will endure. The term <span class="font-hebrew">עַד</span> (ad) often means "for an age" or a long duration, not absolute eternity. Calling the child "Father" also risks the heresy of modalism, which contradicts orthodox Trinitarian theology.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p><span class="font-hebrew"><strong>אֲבִי־עַד</strong></span> is a royal title for a human king’s enduring role, not a divine attribute. This reading avoids theological paradoxes and aligns with Hebrew naming conventions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="doctrinal" class="tab-pane hidden">
+                    <div id="doctrinal-accordion" class="space-y-4">
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Radical Monotheism in Isaiah</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>Isaiah’s uncompromising monotheism, emphasizing YHWH as the sole God, precludes a divine Messiah, as a second divine figure would contradict the text’s core theology.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Isaiah 45:5 declares strict monotheism:</p>
+                                        <blockquote class="border-l-4 border-[#A43820] pl-4 my-2">
+                                            <p class="quote-original rtl">אֲנִי יְהוָה וְאֵין עוֹד זוּלָתִי אֵין <strong>אֱלֹהִים</strong></p>
+                                            <p class="quote-translit">ani YHWH ve-ein od zulati ein <strong>Elohim</strong></p>
+                                            <p class="quote-translation">"I am YHWH, and there is no other; besides me there is no <strong>God</strong>."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>A divine child in Isaiah 9:5 would imply polytheism, a concept foreign to 8th-century BCE Israel. The titles must be honorific to maintain theological consistency with Isaiah's own message in chapters 40-46.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>Isaiah’s monotheism makes a divine Messiah incoherent without anachronistic Trinitarian assumptions, supporting a human king with God-given titles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Theophoric Naming and Royal Ideology</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>Theophoric names in ancient Israel include divine elements (e.g., <span class="font-hebrew">אֵל</span> / El, <span class="font-hebrew">יָהוּ</span> / Yahu) to attribute qualities to God, not to deify the bearer, fitting Isaiah 9:6’s royal context.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Hezekiah’s name reflects God’s power, not the king’s divinity:</p>
+                                        <blockquote class="border-l-4 border-[#A43820] pl-4 my-2">
+                                            <p class="quote-original rtl"><strong>חִזְקִיָּהוּ</strong></p>
+                                            <p class="quote-translit"><strong>Chizkiyahu</strong></p>
+                                            <p class="quote-translation">"<strong>YHWH is my strength</strong>."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>In Isaiah 9:5, the titles are theophoric, celebrating God’s strength through the king. Ancient Near Eastern parallels, such as Ugaritic kings called “sons of El” or Egyptian kings as “son of Ra,” reinforce this practice.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>Theophoric naming explains Isaiah 9:6’s titles as honoring God’s work through a human king, fully consistent with Israelite and regional traditions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="logical" class="tab-pane hidden">
+                     <div id="logical-accordion" class="space-y-4">
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Presumption & Context</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Anachronism: Imposing Trinitarian Concepts</h5>
+                                        <p><strong>Description:</strong> Anachronism occurs when later theological concepts, like the Trinity, are projected onto an earlier text, misrepresenting its original intent.</p>
+                                        <p><strong>Application:</strong> Interpreting Isaiah 9:5 as Trinitarian imposes a post-resurrection, Hellenistic doctrine alien to 8th-century BCE Israel. Isaiah’s audience lacked a “God-man” concept.</p>
+                                        <p><strong>Conclusion:</strong> The Trinitarian reading is anachronistic, relying on later Christian theology, making the human king interpretation more logical.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Begging the Question (Petitio Principii)</h5>
+                                        <p><strong>Description:</strong> Begging the Question occurs when the conclusion is assumed in the premise, creating circular reasoning.</p>
+                                        <p><strong>Application:</strong> The pro-deity argument assumes Jesus is divine to interpret Isaiah 9:5’s titles as divine, then uses this to prove his divinity, ignoring non-divine readings.</p>
+                                        <p><strong>Conclusion:</strong> The argument’s circular assumption of Jesus’ divinity invalidates its logical foundation.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Decontextualization of Revelation</h5>
+                                        <p><strong>Description:</strong> Decontextualization occurs when a text is interpreted without its historical and literary context, leading to misinterpretation.</p>
+                                        <p><strong>Application:</strong> The pro-deity interpretation removes Isaiah 9:5 from its Assyrian crisis context (734–701 BCE), where Hezekiah’s deliverance is central.</p>
+                                        <p><strong>Conclusion:</strong> Decontextualizing Isaiah 9:6 from its historical setting supports a human king interpretation, as the divine reading lacks contextual grounding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Ambiguity & Inconsistency</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Equivocation on El</h5>
+                                        <p><strong>Description:</strong> Equivocation occurs when a term with multiple meanings is used as if it has one, leading to a flawed conclusion.</p>
+                                        <p><strong>Application:</strong> The pro-deity argument assumes <span class="font-hebrew">אֵל</span> in <span class="font-hebrew">אֵל גִּבּוֹר</span> denotes deity, ignoring its metaphorical use for humans (Ezekiel 32:21, Exodus 7:1, Psalm 45:6).</p>
+                                        <p><strong>Conclusion:</strong> Equivocating on <span class="font-hebrew">אֵל</span>’s meaning creates a false divine claim. Its flexible use supports a human king interpretation.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Special Pleading in Translation</h5>
+                                        <p><strong>Description:</strong> Special pleading occurs when a standard is applied inconsistently to support a desired conclusion, such as translating <span class="font-hebrew">וַיִּקְרָא</span> as a future passive only in Isaiah 9:6.</p>
+                                        <p><strong>Application:</strong> The verb <span class="font-hebrew">וַיִּקְרָא</span> is translated as past tense in hundreds of biblical instances but rendered as “will be called” in Isaiah 9:5 to fit a prophetic model, lacking grammatical justification.</p>
+                                        <p><strong>Conclusion:</strong> The inconsistent translation of <span class="font-hebrew">וַיִּקְרָא</span> reveals a bias to support a divine Messiah, undermining the pro-deity argument’s integrity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Relevance</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Suppressed Evidence (Cherry Picking)</h5>
+                                        <p><strong>Description:</strong> Suppressed Evidence occurs when relevant contradictory evidence is ignored to favor a biased interpretation.</p>
+                                        <p><strong>Application:</strong> The pro-deity argument cites Isaiah 10:21 (<span class="font-hebrew">אֵל גִּבּוֹר</span> for YHWH) but ignores Ezekiel 32:21, Exodus 7:1, and Psalm 45:6 where divine-like titles are used for humans.</p>
+                                        <p><strong>Conclusion:</strong> Ignoring non-divine uses of these titles undermines the pro-deity argument, strengthening the metaphorical, human king interpretation.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="font-bold text-red-700 mb-2">Appeal to Authority (Ad Verecundiam)</h5>
+                                        <p><strong>Description:</strong> Appeal to Authority occurs when an argument relies on an authority’s opinion rather than evidence, especially when the authority is biased or irrelevant to the context.</p>
+                                        <p><strong>Application:</strong> The pro-deity argument relies on later Christian interpretations while ignoring earlier Jewish readings (LXX, Targum) that assign divine titles to God, not the child.</p>
+                                        <p><strong>Conclusion:</strong> Relying on biased Christian authorities over earlier, contextually relevant Jewish interpretations weakens the pro-deity argument.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="historical" class="tab-pane hidden">
+                    <div id="historical-accordion" class="space-y-4">
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Assyrian Crisis Context (734–701 BCE)</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>Isaiah 7-12’s prophecies address the Syro-Ephraimite and Assyrian crises, making a contemporary king like Hezekiah the primary referent, not a future divine Messiah. The text’s immediate historical focus and hyperbolic language align with celebrating a human king’s role in divine deliverance.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>2 Kings 18:5 praises Hezekiah’s piety during Jerusalem’s deliverance from Assyria in 701 BCE:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p class="quote-original rtl">וְלֹא־הָיָה <strong>כָמֹהוּ</strong></p>
+                                            <p class="quote-translit">velo-haya <strong>kamohu</strong></p>
+                                            <p class="quote-translation">"there was no one <strong>like him</strong>."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>Isaiah 9:5 celebrates Hezekiah’s role in the Assyrian defeat. The Talmud (Sanhedrin 94a) suggests Hezekiah as a potential Messiah, reinforcing the immediate context. The prophecy’s urgency fits a contemporary king, not a figure 700 years later. Intertextual links to other messianic passages (Isaiah 11, 42, 53; Zech. 9) describe a human figure empowered by God, not a divine being, consistent with Hezekiah's historical role.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>The Assyrian crisis context demands a focus on Hezekiah. The eternal reign is poetic hyperbole, and intertextual links describe a human figure empowered by God. This renders the divine Messiah claim irrelevant to Isaiah’s audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Context of Isaiah 7, 9, and 11</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>Linking Isaiah 7’s “Emmanuel” to Isaiah 9 and 11’s figures implies multiple divine births, creating theological inconsistency for the pro-deity view.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Isaiah 7:14 refers to a contemporary birth:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p class="quote-original rtl">הִנֵּה <strong>הָעַלְמָה</strong> הָרָה וְיֹלֶדֶת בֵּן</p>
+                                            <p class="quote-translit">hinneh <strong>ha-almah</strong> hara veyoledet ben</p>
+                                            <p class="quote-translation">"the <strong>young woman</strong> is pregnant and bearing a son."</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>Isaiah 7’s <span class="font-hebrew">עַלְמָה</span> (alma, “young woman”) indicates a present event. Linking this to Isaiah 9 suggests two divine births, problematic for Trinitarian theology. Isaiah 11’s human Messiah, focused on God’s spirit (<span class="font-hebrew">רוּחַ יְהוָה</span> / ruach YHWH), not divinity, further supports this distinction.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>The distinct contexts of Isaiah 7 and 9 undermine the pro-deity’s unified divine Messiah, supporting separate human figures, likely Hezekiah.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="textual" class="tab-pane hidden">
+                    <div id="textual-accordion" class="space-y-4">
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Septuagint and Targum Interpretations</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>Early Jewish translations (Septuagint, Targum Jonathan) avoid deifying the child, reflecting a non-divine understanding in pre-Christian communities.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>The LXX omits divine titles, while the Targum assigns them to God:</p>
+                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                            <p><strong>Septuagint (LXX):</strong> καλεῖται τὸ ὄνομα αὐτοῦ μεγάλης βουλῆς ἄγγελος (kaleitai to onoma autou megales boules angelos, “his name is called Messenger of Great Counsel”).</p>
+                                            <p><strong>Targum Jonathan:</strong> אִתְקְרִי שְׁמֵיהּ מִן קֳדָם פְּלִי יוֹעֵץ אֱלָהָא גִבָּרָא (itkri shemeih min kodam peli yoetz elaha gibbara, “his name was called from the presence of Wonderful Counselor, Mighty God”).</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>The LXX and Targum’s non-divine renderings, supported by textual variants and Jewish tradition (Dead Sea Scrolls, 4QFlorilegium), confirm a human king interpretation.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>The ancient translations prove that the divine interpretation is a later, revisionist reading, contrary to the established tradition.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">New Testament Silence and Typological Usage</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">1. Description</h5>
+                                        <p>The absence of Isaiah 9:6 citations in the New Testament, despite its supposed centrality to Jesus’ divinity, and the typological use of related texts, question its divine significance.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">2. Example (The Evidence)</h5>
+                                        <p>Matthew 4:15-16 cites Isaiah 9:1-2 but conspicuously omits 9:6.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">3. Application</h5>
+                                        <p>Despite its apparent value, Isaiah 9:6 is never quoted in the NT, unlike Isaiah 7:14 (Matthew 1:23) or Isaiah 53. The use of related texts is typological, not direct proof of divinity. If 9:6 were foundational, its absence is significant.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">4. Conclusion</h5>
+                                        <p>The NT’s silence on Isaiah 9:6 weakens its pro-deity significance, supporting a non-divine interpretation consistent with early Jewish readings.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="comparison" class="tab-pane hidden">
+                    <div class="space-y-8">
+                        <!-- Argument 1 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">1. Messianic Context and Intertextual Links</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">Isaiah 9:6 is a messianic prophecy, as evidenced by intertextual connections with Isaiah 11:1-5, 10 (a shoot from Jesse), Isaiah 42, 49, 53 (the servant), and Zechariah 9:9-12 (a humble king). These texts describe a figure reigning on David’s throne with eternal justice, a light to the Gentiles, and a suffering servant, fulfilled in Jesus as the divine Messiah. The Targum Jonathan identifies the child as “Messiah,” reinforcing a divine interpretation.</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">Isaiah 9:6 refers to Hezekiah in the Assyrian crisis context (734–701 BCE), supported by Isaiah 36-39 and Talmudic views (Sanhedrin 94a). Intertextual links (Isaiah 11, 42, 49, 53; Zechariah 9:9-12) describe a human figure empowered by God’s spirit (e.g., Isaiah 11:2, <span class="font-hebrew">רוּחַ יְהוָה</span> / ruach YHWH; Zechariah 9:9, <span class="font-hebrew">עָנִי</span> / ani, “humble”), not divine. The Targum’s “Messiah” reflects a human deliverer, as Second Temple Judaism (e.g., Dead Sea Scrolls, 1QS 9:11) avoids divine messiahs. Poetic hyperbole in Isaiah 9:7 (e.g., Psalm 72:8, <span class="font-hebrew">מִיָּם עַד־יָם</span> / miyam ad-yam) fits Hezekiah’s temporary peace.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails due to its robust historical and textual analysis. The Assyrian crisis context and Hezekiah’s role (2 Kings 18:5; Isaiah 36-39) align better with Isaiah 9:6-7’s immediate focus than a distant divine Messiah. Intertextual links emphasize human attributes (e.g., Isaiah 42:1, <span class="font-hebrew">נָתַתִּי רוּחִי</span> / natatti ruchiy), and Second Temple evidence (Talmud, Dead Sea Scrolls) supports a human messianic figure. The pro-deity links are valid but assume a divine ontology not explicit in the texts, and the Targum’s human messianic focus undermines divinity claims.</p>
+                            </div>
+                        </div>
+                        <!-- Argument 2 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">2. Divine Titles Imply Deity</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">The titles “Mighty God” (<span class="font-hebrew">אֵל גִּבּוֹר</span> / El Gibbor) and “Everlasting Father” (<span class="font-hebrew">אֲבִי־עַד</span> / Avi-Ad) denote divinity. “El Gibbor” refers to YHWH in Isaiah 10:21, and “El” (<span class="font-hebrew">אֵל</span>) denotes deity in 217 biblical instances. “Everlasting Father” implies the child as creator of eternity, a divine attribute. The title “Wonderful Counselor” echoes divine wisdom (Isaiah 28:29), and “El” is a noun (deity), not an adjective (e.g., “mighty warrior”).</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">“El Gibbor” is metaphorical, as seen in Ezekiel 32:21 (<span class="font-hebrew">אֵילֵי גִבּוֹרִים</span> / eilei gibborim, “mighty heroes” for humans), Exodus 7:1 (<span class="font-hebrew">אֱלֹהִים</span> / Elohim for Moses), and Psalm 45:6 (<span class="font-hebrew">אֱלֹהִים</span> / Elohim for a king). “Avi-Ad” (Father of the Age) is royal hyperbole for a lasting reign, as in Isaiah 22:21 (<span class="font-hebrew">וְהָיָה לְאָב</span> / vehaya le-av, “a father”). Ancient Near Eastern parallels (e.g., Ugaritic “sons of El”) and the Septuagint’s non-divine rendering (μεγάλης βουλῆς ἄγγελος / megales boules angelos) confirm this. The claim that “El” is exclusively divine ignores non-divine uses (e.g., Job 41:25, <span class="font-hebrew">אֵילִים</span> / eilim; Psalm 29:1, <span class="font-hebrew">בְּנֵי אֵלִים</span> / benei elim).</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails by providing extensive biblical and cultural evidence for non-divine uses of <span class="font-hebrew">אֵל</span> (El) and <span class="font-hebrew">אֲבִי־עַד</span> (Avi-Ad). Ezekiel 32:21 and other examples (e.g., Psalm 82:1, <span class="font-hebrew">אֱלֹהִים</span> / Elohim for judges) demonstrate “El Gibbor” as metaphorical, and “Avi-Ad” aligns with human leadership (Isaiah 22:21). The Septuagint’s omission of divine titles and Ugaritic parallels strengthen this. The pro-deity reliance on Isaiah 10:21 and “El”’s noun status is valid but ignores contextual flexibility, as the anti-deity’s broader lexical analysis prevails.</p>
+                            </div>
+                        </div>
+                        <!-- Argument 3 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">3. Prophetic Perfect Supports Future Messiah</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">The future tense in Christian translations (e.g., NASB, “he will be called”) reflects a prophetic perfect, where future events are described as completed (e.g., Isaiah 5:13, <span class="font-hebrew">הָלְכוּ</span> / halkhu; Isaiah 53:5, <span class="font-hebrew">וְהוּא מְחֹלָל</span> / vehu mecholal). This supports a future divine Messiah, fulfilled in Jesus, not a contemporary figure like Hezekiah.</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">The verb <span class="font-hebrew">וַיִּקְרָא</span> (vayikra, “and he called”) is active, requiring God as the subject, not a passive future naming. Prophetic perfects describe events (e.g., Isaiah 5:13, exile; Isaiah 53:5, suffering), not naming acts, which use active verbs (e.g., Genesis 17:5, <span class="font-hebrew">וַיִּקְרָא</span> / vayikra; Judges 13:24, <span class="font-hebrew">וַתִּקְרָא</span> / vattikra). The Assyrian context (Isaiah 9:4, <span class="font-hebrew">שְׁבַתָּה</span> / shavatta) ties the naming to an immediate event, likely Hezekiah’s role, not a distant prophecy. The passive <span class="font-hebrew">יִקָּרֵא</span> (yikkare) is absent, undermining the future passive claim.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails by demonstrating that prophetic perfects do not apply to naming acts, which consistently use active verbs with God as the subject (e.g., Genesis 21:3). The absence of a passive verb (<span class="font-hebrew">יִקָּרֵא</span> / yikkare) and the Assyrian context (Isaiah 9:1-7) align with an immediate naming event, not a future prophecy. The pro-deity examples (Isaiah 5:13, 53:5) are irrelevant to naming, and the anti-deity syntactic analysis is more precise.</p>
+                            </div>
+                        </div>
+                        <!-- Argument 4 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">4. Hezekiah’s Reign Fails to Fulfill Isaiah 9:7</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">Hezekiah cannot be the child, as his reign was limited, and his son Manasseh’s idolatry (2 Kings 21:1-6) contradicts Isaiah 9:7’s promise of an eternal, righteous government (<span class="font-hebrew">וּלְמַרְבֵּה הַמִּשְׂרָה וּלְשָׁלוֹם אֵין־קֵץ</span> / ulemarbeh hammisrah uleshalom ein-ketz, “of the increase of his government and of peace there will be no end”). Only a divine Messiah (Jesus) fits this eternal scope.</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">Isaiah 9:7’s “no end” is poetic hyperbole, common in royal poetry (e.g., Psalm 72:7, <span class="font-hebrew">עַד־בְּלִי יָרֵחַ</span> / ad-beli yareach; Ecclesiastes 4:16, <span class="font-hebrew">אֵין קֵץ</span> / ein ketz). Hezekiah’s deliverance (701 BCE, Isaiah 36-39) and piety (2 Kings 18:5) fulfill the prophecy’s immediate hope, with “eternal” language idealizing Davidic continuity, not literal eternity. The exile under Manasseh’s successors reflects historical realities, not a failure of the prophecy, as it aimed to inspire hope in crisis.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails by showing that “no end” is hyperbolic, as evidenced by parallels in Psalm 72:7 and Ecclesiastes 4:16, fitting Hezekiah’s temporary peace. The Assyrian context and Talmudic view (Sanhedrin 94a) support Hezekiah as the referent. The pro-deity insistence on literal eternity assumes an eschatological scope not required by the text’s poetic genre, making the anti-deity interpretation more contextually grounded.</p>
+                            </div>
+                        </div>
+                        <!-- Argument 5 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">5. Trinitarian Implications of Titles</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">The titles “Mighty God” (<span class="font-hebrew">אֵל גִּבּוֹר</span> / El Gibbor) and “Everlasting Father” (<span class="font-hebrew">אֲבִי־עַד</span> / Avi-Ad) support the Trinity, aligning with Jesus as God incarnate. Additional texts like Zechariah 12:10 (“they will look on me, the one they have pierced”) and Malachi 3:1 (“the Lord you are seeking will come to his temple”) reinforce a divine Messiah, fulfilled in Jesus.</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">“Mighty God” (<span class="font-hebrew">אֵל גִּבּוֹר</span> / El Gibbor) and “Everlasting Father” (<span class="font-hebrew">אֲבִי־עַד</span> / Avi-Ad) are metaphorical, as seen in Jeremiah 33:15 (<span class="font-hebrew">יְהוָה צִדְקֵנוּ</span> / YHWH tzidkenu, “The Lord is our Righteousness” for Jerusalem), Exodus 7:1 (<span class="font-hebrew">אֱלֹהִים</span> / Elohim for Moses), and Psalm 45:6 (<span class="font-hebrew">אֱלֹהִים</span> / Elohim for a king). “Avi-Ad” as “Father of the Age” denotes a human king’s lasting reign, and Trinitarian readings impose anachronistic theology alien to Isaiah’s monotheism (Isaiah 45:5, <span class="font-hebrew">זוּלָתִי אֵין אֱלֹהִים</span> / zulati ein Elohim). Zechariah 12:10 and Malachi 3:1 describe human figures or God’s actions, not a divine Messiah.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails by demonstrating that divine titles are metaphorical in biblical usage (e.g., Jeremiah 33:15; Psalm 82:1), and “Avi-Ad” avoids Trinitarian modalism. Isaiah’s monotheism (Isaiah 44:6) precludes a divine Messiah, and Zechariah 12:10’s textual variants and Malachi 3:1’s human messenger (Eliyahu, Malachi 4:5) undermine divine claims. The Trinitarian argument is anachronistic, relying on later theology.</p>
+                            </div>
+                        </div>
+                        <!-- Argument 6 -->
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                            <div class="md:border-r md:pr-6">
+                                <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">6. Targum’s Messianic Reference Supports Deity</h4>
+                                <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
+                                <p class="text-gray-600">The Targum Jonathan identifies the child as “Messiah” (<span class="font-hebrew">אִתְקְרִי שְׁמֵיהּ מִן קֳדָם</span> / itkri shemeih min kodam), supporting a divine Messiah, as the titles “Wonderful Counselor, Mighty God” align with Jesus’ divinity in Christian theology.</p>
+                            </div>
+                            <div class="md:border-r md:pr-6">
+                                <p class="font-semibold text-gray-800">Anti-Deity Counterargument</p>
+                                <p class="text-gray-600">The Targum assigns divine titles to God, not the child, naming him “Messiah” as a human deliverer (<span class="font-hebrew">אִתְקְרִי שְׁמֵיהּ מִן קֳדָם פְּלִי יוֹעֵץ אֱלָהָא גִבָּרָא</span> / itkri shemeih min kodam peli yoetz elaha gibbara). Second Temple Jewish messianism (e.g., Dead Sea Scrolls, 1QS 9:11; Psalms of Solomon 17) describes human figures, and the Talmud (Sanhedrin 94a) views Hezekiah as a messianic figure without divinity. The phrase “from the presence of” (<span class="font-hebrew">מִן קֳדָם</span> / min kodam) separates the titles from the child, aligning with the Masoretic Text’s active verb (<span class="font-hebrew">וַיִּקְרָא</span> / vayikra).</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#A43820]">Winner & Reasoning</p>
+                                <p class="text-gray-700"><strong class="text-[#A43820]">Anti-Deity:</strong> The anti-deity position prevails by clarifying the Targum’s intent, supported by Second Temple evidence and the Talmud, which view the Messiah as human. The phrase “from the presence of” explicitly assigns divine titles to God, not the child, aligning with the Masoretic Text and Jewish exegesis (Rashi, Commentary on Isaiah 9:6). The pro-deity assumption of divinity misreads the Targum’s human focus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+                <h4 class="font-serif text-2xl font-bold mb-3 text-[#3D4451]">Final Verdict</h4>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                    The child of Isaiah 9:6 is a human king, likely Hezekiah, celebrated in the context of the Syro-Ephraimite and Assyrian crises (734–701 BCE). His titles—<span class="font-hebrew">אֵל גִּבּוֹר</span> (El Gibbor, “Mighty Hero”) and <span class="font-hebrew">אֲבִי־עַד</span> (Avi-Ad, “Father of the Age”)—are theophoric and hyperbolic, reflecting God’s strength and the king’s enduring role, not divinity. The active verb <span class="font-hebrew">וַיִּקְרָא</span> (vayikra) assigns divine titles to God, not the child. Isaiah’s monotheism, early Jewish translations (LXX, Targum), New Testament silence, poetic conventions (e.g., Psalm 45:6, <span class="font-hebrew">כִּסְאֲךָ אֱלֹהִים</span> / kiseakha Elohim), and logical fallacies (anachronism, equivocation, special pleading, begging the question, suppressed evidence, appeal to authority, decontextualization) confirm this. The Christian divine interpretation relies on anachronistic Trinitarian assumptions, inconsistent translations, and selective evidence, making the human king interpretation more coherent with the Hebrew text, historical context, and Israelite theology.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.target;
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    
+                    const parentAccordion = item.closest('.space-y-4');
+                    // This part ensures only one accordion item in a group is open at a time.
+                    parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
+                        if (i !== item) {
+                           i.classList.remove('open');
+                           i.querySelector('.accordion-content').style.maxHeight = '0px';
+                        }
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('open');
+                        content.style.maxHeight = '0px';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
