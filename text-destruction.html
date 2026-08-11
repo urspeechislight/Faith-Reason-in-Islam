@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A scholarly analysis of how the surviving early Christian textual record was filtered through destruction and suppression, and its implications for arguments from silence.">
+    <meta name="keywords" content="Biblical canon, textual criticism, Diocletian persecution, Constantine, Athanasius, Marcion, Gospel of Thomas, Nag Hammadi, Ehrman, Metzger, McDonald, Schneemelcher, early Christianity, textual suppression">
+    <title>The Destruction of Non-Conforming Texts: How the Early Church Shaped Its Own Evidence Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .tab.active {
+            border-color: #B99C6B;
+            color: #B99C6B;
+            background-color: #FDFBF7;
+        }
+        .accordion-header svg {
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-header svg {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .hadith-callout {
+            border-left-width: 4px;
+            border-left-color: #B99C6B;
+            background-color: #FFFCF5;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .quran-callout {
+            border-left-width: 4px;
+            border-left-color: #a0aec0;
+            background-color: #f7fafc;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .thesis-box {
+            border-left-width: 4px;
+            border-left-color: #B99C6B;
+            background-color: #FFFCF5;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .conclusion-box {
+            border: 2px solid #B99C6B;
+            background-color: #FFFCF5;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .disclaimer-box {
+            border-left-width: 4px;
+            border-left-color: #a0aec0;
+            background-color: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <header class="text-center mb-12">
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-2">The Destruction of Non-Conforming Texts</h1>
+            <p class="text-md md:text-lg text-gray-500">How the Early Church Shaped Its Own Evidence Base</p>
+        </header>
+
+        <main>
+            <!-- Tab Navigation -->
+            <div class="mb-8 border-b border-gray-200">
+                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
+                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-base md:text-lg" data-target="thesis" role="tab" aria-controls="thesis" aria-selected="true">1. Thesis</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="external" role="tab" aria-controls="external" aria-selected="false">2. External Destruction</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="institutional" role="tab" aria-controls="institutional" aria-selected="false">3. Institutional Suppression</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="mechanisms" role="tab" aria-controls="mechanisms" aria-selected="false">4. Mechanisms</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="timeline" role="tab" aria-controls="timeline" aria-selected="false">5. Timeline</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="divergence" role="tab" aria-controls="divergence" aria-selected="false">6. Divergence Evidence</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="islamic" role="tab" aria-controls="islamic" aria-selected="false">7. Islamic Implications</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="scholars" role="tab" aria-controls="scholars" aria-selected="false">8. Scholars Cited</button>
+                </nav>
+            </div>
+
+            <div id="tab-content">
+
+                <!-- ==================== TAB 1: THESIS ==================== -->
+                <div id="thesis" class="tab-pane active" role="tabpanel" aria-labelledby="thesis-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <div class="thesis-box mb-8">
+                            <p class="text-gray-700 leading-relaxed"><strong>Thesis.</strong> The surviving body of early Christian literature is not a neutral archive. It is a filtered sample, shaped by two complementary forces: destruction at the hands of external enemies, and suppression at the hands of the institutional church itself. Imperial persecutors burned Christian scriptures. Imperial patrons burned heretical writings. Canonical decrees declared everything outside the emerging canon to be fabrication. And once a text was excluded from liturgical use, it stopped being copied, and parchment and papyrus perished. The result is that the evidence base from which all reconstructions of early Christianity are built reflects, with systematic bias, the theological position of the party that won.</p>
+                            <p class="text-gray-700 leading-relaxed mt-4">This does not prove that any particular lost text contained a specific doctrine. It establishes an epistemic point: arguments from silence that appeal to the surviving textual record carry less weight than they appear to, because the record has been filtered through a theological conformist process that would have eliminated non-conforming material if it existed.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">What This Note Does NOT Claim</h2>
+                        <div class="disclaimer-box mb-6">
+                            <p class="text-gray-700 leading-relaxed">This note does not assert that specific Muhammad-prophecy texts existed and were destroyed. It does not claim that the Paraclete passages in John originally contained the name Ahmad and were altered. It does not claim that the institutional church conducted a coordinated campaign to erase every trace of Islamic prophecy from the Gospel record. These are historical claims that would require positive evidence this note cannot supply.</p>
+                            <p class="text-gray-700 leading-relaxed mt-4">What this note establishes is narrower: <strong>the absence of a specific motif from the surviving textual record cannot be taken as evidence that the motif was absent from the original body of Christian literature, because the record has been filtered.</strong> A filtered database cannot ground an argument from silence. This is an epistemic point about evidence quality, not a historical claim about the content of destroyed texts.</p>
+                            <p class="text-gray-700 leading-relaxed mt-4">The reader is not asked to believe that destroyed texts contained anything specific. The reader is asked to recognize that the silence of a filtered record proves nothing about what the unfiltered record contained.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">The Problem: Why We Have So Few Non-Conforming Texts</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">The question is not whether early Christianity was diverse. That much is now conceded on all sides. McDonald states it plainly: "Early Christianity appears to have been much less united and much more diversified than we have thought" (p.28). At the Egyptian site of Oxyrhynchus alone, archaeologists have recovered seven copies of the Shepherd of Hermas, three of the Gospel of Thomas, two of the Gospel of Mary, and two of the Gospel of Peter, alongside canonical material. These were texts that churches read, valued, and transmitted. They were not fringe productions known only to dissident sects. They were, for the communities that used them, scripture.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">The real question is why so little of this diversity survived. The answer has two parts, and the parts work together. External enemies destroyed Christian texts, sometimes in vast numbers. The institutional church, once it acquired imperial power, destroyed or suppressed texts it judged heretical. Between these two forces, the range of surviving literature was narrowed to what one branch of Christianity — the branch that eventually defined orthodoxy — chose to preserve.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">The mechanism of narrowing was not always dramatic book burning. Often it was something quieter and more effective: a text excluded from the canon simply stopped being copied, and without continuous copying, the physical materials on which it was written perished within a few centuries. The effect was the same as active destruction.</p>
+                        <p class="text-gray-600 leading-relaxed">This note documents the episodes of destruction, the mechanisms of suppression, and the implications for arguments that appeal to the silence of the surviving record. The Islamic relevance is direct: if the Quran claims that Jesus predicted Ahmad, and if no surviving Gospel manuscript contains that prediction, the question is whether the silence of the surviving manuscripts can be taken as proof of absence. The answer depends on whether the surviving manuscripts are a representative sample of what was originally written. They are not. This note explains why.</p>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 2: EXTERNAL DESTRUCTION ==================== -->
+                <div id="external" class="tab-pane hidden" role="tabpanel" aria-labelledby="external-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part One: Destruction by External Enemies</h2>
+
+                        <div id="external-accordion" class="space-y-4">
+
+                            <!-- Antiochus IV -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Antiochus IV Epiphanes and the First Recorded Destruction (167 BCE)</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The earliest recorded destruction of sacred texts in the biblical tradition comes from the Maccabean crisis. In 167 BCE, Antiochus IV Epiphanes, the Seleucid ruler, launched a systematic campaign to suppress Jewish religious practice. He issued decrees outlawing circumcision, Sabbath observance, and the reading of the Torah. He desecrated the Temple in Jerusalem by erecting an altar to Zeus Olympios and sacrificing pigs on it.</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"The books of the law that they found they tore to pieces and burned with fire. Anyone found possessing the book of the covenant was condemned to death by royal decree."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— 1 Maccabees 1:56-57</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The decree targeted the physical objects, the scrolls themselves, and the people who held them. Possession was a capital offence. Royal agents searched house to house. Wherever Torah scrolls were discovered, they were seized, torn apart, and committed to the flames. The destruction was not incidental to the persecution. It was its centrepiece. Antiochus understood what subsequent persecutors would also understand: the textual infrastructure of a religion is its point of maximum vulnerability.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">The Maccabean destruction catalyzed Judas Maccabeus's collection efforts, beginning the process by which the Jewish community identified, gathered, and authenticated the sacred books that survived.</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.355</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The destruction prompted a countermeasure: the gathering, preservation, and authentication of the sacred books that survived. Canon formation begins not as a leisurely ecclesial exercise but as an emergency response to a textual crisis. When texts are burned, the community that values them discovers, suddenly and painfully, which texts it cannot afford to lose. The act of destruction forces the act of selection.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4 Ezra -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">4 Ezra and the Memory of Catastrophic Textual Loss</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The fourth book of Ezra, a Jewish apocalyptic work composed near the end of the first century CE, looks back on the history of textual destruction and attributes to it a near total loss:</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"Your law has been burned."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— 4 Ezra 14:21</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The work describes Ezra receiving a divine command to rewrite the twenty-four books of the Hebrew scripture that had been lost, along with seventy additional books reserved for the wise. The divine dictation is miraculous: Ezra speaks and five scribes write at supernatural speed, producing ninety-four books in forty days.</p>
+                                        <p class="text-gray-600 leading-relaxed">The narrative is theological fiction, but it preserves a memory that the sacred texts had been destroyed and required supernatural restoration. The tradition does not claim that Ezra copied from surviving manuscripts. It claims that he dictated under divine inspiration, because the original texts were gone. This concedes that the chain of textual transmission was broken and had to be restored through a new act of revelation.</p>
+                                        <p class="text-gray-600 leading-relaxed">The rabbinic tradition preserves a parallel set of claims. According to the Talmud (b. Sukkah 20a), the Torah was forgotten during the Babylonian exile and had to be restored. The tradition itself acknowledges that the textual transmission of the Torah was interrupted by a catastrophic event and required human reconstruction. If the sacred text was once destroyed and rebuilt from memory and fragments, then the claim that the received text is an unbroken, verbatim transmission from Moses becomes difficult to sustain on the tradition's own terms.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Babylonian destruction -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Babylonian Destruction of the Temple (586 BCE)</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The Babylonian destruction of the First Temple in 586 BCE is the earlier and more devastating precedent. When Nebuchadnezzar's forces captured Jerusalem, razed the Temple, and deported the Judean elite to Babylon, the sacred texts stored in the Temple complex were among the casualties.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"It is quite likely that the author of 2 Maccabees believed that all of the sacred books in the temple, not just the Pentateuch, were destroyed."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.2710</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The Temple was the primary repository for sacred texts — where official copies were kept, where scribal activity was concentrated, and where the archival memory of the nation was preserved. Its destruction would have been a literary catastrophe of the first order. The loss was not limited to the Torah. It extended to historical records, prophetic collections, wisdom literature, and whatever other written materials the Temple had accumulated over four centuries.</p>
+                                        <p class="text-gray-600 leading-relaxed">The post-exilic books, Ezra and Nehemiah, describe the effort to reconstitute the textual tradition. Ezra, described as "a scribe skilled in the law of Moses" (Ezra 7:6), leads the project of restoration. Whether miraculous or mundane, the tradition concedes that it was necessary. The text had to be rebuilt because it had been lost.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Diocletian -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Diocletian Persecution: The Major Episode (303 CE)</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The Diocletian persecution is the single most consequential episode of text destruction in Christian history. McDonald devotes an entire section of The Biblical Canon to it, titled "Burning Sacred Books" (pp.1367-1410). The persecution began in February 303 CE, when the emperor Diocletian issued edicts ordering the suppression of Christianity. The first edict ordered the destruction of churches, the burning of scriptures, and the stripping of legal privileges from Christians.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Diocletian insisted that no blood be shed, but demanded that all Christian churches be destroyed and that their sacred Scriptures be burned."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1369</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Eusebius of Caesarea, who lived through the persecution and wrote about it in his Ecclesiastical History, describes the edicts with the authority of an eyewitness:</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"Royal edicts were published everywhere, commanding that the churches be leveled to the ground and the Scriptures be destroyed by fire."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Eusebius, Ecclesiastical History VIII.2.4</cite>
+                                        </blockquote>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"We saw with our own eyes the houses of prayer thrown down to the very foundations, and the Divine and Sacred Scriptures committed to the flames in the midst of the market-places."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Eusebius, Ecclesiastical History VIII.2.1</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The scene is vivid. Sacred books were not quietly confiscated. They were publicly burned in the market square, as an act of ritual humiliation. The destruction was performative — designed to demonstrate that the power of the Roman state exceeded the power of the Christian God.</p>
+                                        <p class="text-gray-600 leading-relaxed">The significance of the <em>traditores</em> (those who handed over scriptures) is indirect but important. Christians who had to decide what to give the authorities and what to risk their lives to protect were making a judgment about which texts were scripture and which were secondary. The persecution forced every community to make a triage decision, and those decisions, aggregated across the empire, shaped the emerging consensus about what counted as scripture.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"This same tendency toward unity and conformity during the reign of Constantine had several important consequences for the church and may have played a role in the churches' establishment of a biblical canon."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1408</cite>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 3: INSTITUTIONAL SUPPRESSION ==================== -->
+                <div id="institutional" class="tab-pane hidden" role="tabpanel" aria-labelledby="institutional-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part Two: Suppression by the Institutional Church Itself</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">If external enemies destroyed texts from without, the institutional church destroyed and suppressed texts from within. The story of the church's own role in shaping its textual record is less dramatic than the story of persecution, but it is more systematic and ultimately more consequential. It happened over centuries, through a combination of imperial action, episcopal decree, and the quiet force of institutional neglect.</p>
+
+                        <div id="institutional-accordion" class="space-y-4">
+
+                            <!-- Constantine -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Constantine's Burning of Heretical Writings</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The conversion of Constantine reversed the dynamic. Where Diocletian had burned Christian scriptures, Constantine burned the writings of those he judged heretical. The Council of Nicaea in 325 CE declared the <em>homoousion</em> orthodox and condemned Arius. But Constantine did not stop at theological definition. He enforced his judgments with the power of the state.</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"Those whose doctrines were not in keeping with the orthodoxy of the day were banished into exile, their writings burned, and their meeting places confiscated."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Constantine's decree, cited in McDonald, The Biblical Canon (2017), p.1417; Eusebius, Life of Constantine 3.66</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Constantine's decree against Arius is the first known instance of a Roman emperor ordering the burning of Christian theological writings. The precedent was established: the state had the authority to define heresy and the duty to suppress it by force.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Following the suppression of heresy, Eusebius wrote with pleasure: 'Thus the members of the entire body became united, and compacted in one harmonious whole, while no heretical or schismatic body anywhere continued to exist.'"</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1425, citing Eusebius, Life of Constantine</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Eusebius describes the total elimination of dissident communities as a triumph of unity. From any other perspective, it is the suppression of evidence. Constantine also commissioned fifty official Bibles from Eusebius of Caesarea — effectively privileging one collection of texts over all others.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Major dissidents within the church were all but silenced during this time. The theological views adopted by the churches, or were imposed on them, played an important role in the process of identifying the Christian Scriptures."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1427</cite>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Successors & Justinian -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Continuation Under Successors and the Justinianic Consolidation</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Constantine's policy did not end with his death. His successors continued and intensified the practice. The Emperor Theodosius I, in his Edict of Thessalonica of 380 CE, declared Nicene Christianity to be the only legitimate religion of the empire. The state now had a theological position, and it enforced it with the full apparatus of imperial power.</p>
+                                        <p class="text-gray-600 leading-relaxed">The Emperor Justinian I (527-565 CE) brought the full apparatus of the Roman legal system to bear on theological conformity. His <em>Corpus Juris Civilis</em> included provisions against heretics: assemblies forbidden, meeting places confiscated, teachers silenced. His policy toward non-Chalcedonian communities led to the schism that persists to this day between the Eastern Orthodox and the Oriental Orthodox churches.</p>
+                                        <p class="text-gray-600 leading-relaxed">Justinian's reign also saw the closure of the pagan Academy of Athens in 529 CE. When an institution is closed by the state, the texts associated with it cease to be transmitted through normal institutional channels. Survival becomes dependent on accident.</p>
+                                        <p class="text-gray-600 leading-relaxed">The destruction of pagan libraries continued across the empire. The Temple of Serapis in Alexandria, which housed a major library, was destroyed by a Christian mob in 391 CE. The Codex Theodosianus (438 CE) contains multiple provisions for the destruction of non-orthodox texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rabbinic burning -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Rabbinic Burning of Christian Books</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Text burning was not practised only by the Christian community. The rabbinic tradition records a parallel practice. The Tosefta, a compendium of rabbinic law compiled around the third century CE, contains a ruling on the treatment of Christian texts:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"The books of the Evangelists and the books of the minim they do not save from the fire."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1040, citing Tosefta Shabbat 13:5</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Rabbi Tarfon, a second-century sage, expressed the policy in stark personal terms:</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"May I bury my sons, if such things come into my hands and I do not burn them, and everyone who mentions the name of Baal with them."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1041, citing t. Shabbat 13:5</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Christian texts that circulated in Jewish or Jewish-Christian contexts — the Gospel of the Nazareans, the Gospel of the Ebionites, the Gospel of the Hebrews — were subject to suppression from both directions: from the rabbinic community that judged them heretical, and from the gentile church that judged the communities which used them heretical. Texts caught between these two forces had very little chance of surviving.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Marcion -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Marcion's Works: Lost or Destroyed</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Marcion of Sinope, active in Rome around 144 CE, produced the first known attempt to define a closed Christian canon: an edited Gospel of Luke and ten letters of Paul. He rejected the Hebrew Bible entirely. He was the most formidable theological opponent the second-century church faced — wealthy, articulate, organized, with a parallel church structure across the Roman Empire.</p>
+                                        <p class="text-gray-600 leading-relaxed">Marcion's own writings have not survived. Not a single page of his major work, the <em>Antitheses</em>, is extant.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Since all of Marcion's works have been lost (or destroyed), we are dependent on the early church fathers to reconstruct his views."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1455</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The parenthetical "(or destroyed)" carries weight. Marcion was the church's most dangerous enemy. The notion that his writings simply perished through neglect is implausible. What we know of Marcion is what his opponents chose to tell us. His own voice was silenced. The case of Marcion set the precedent: if you define a canon that the institutional church does not accept, your canon will be destroyed, your writings will be burned, and your movement will be suppressed.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tatian -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Tatian's Diatessaron: Suppressed</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Tatian, a pupil of Justin Martyr, composed the <em>Diatessaron</em> around 170 CE — a single continuous gospel narrative woven from the four canonical gospels. For approximately two centuries, it was the standard gospel text in the Syriac-speaking churches. Then it was suppressed because its author fell into disrepute for his later Encratite views.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"The Diatessaron was eventually suppressed by the Roman Catholic and Eastern Orthodox churches because its author was viewed as a heretic."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1303</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">No complete manuscript of the <em>Diatessaron</em> survives in its original Greek or Syriac. The criterion for suppression was not content alone — the <em>Diatessaron</em> was compiled from the four canonical gospels. But its author fell into disrepute, and that was sufficient. Texts were judged not by what they said but by who said it.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Athanasius -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Athanasius's Condemnation of Apocrypha (367 CE)</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The thirty-ninth Festal Letter of Athanasius, bishop of Alexandria, issued in 367 CE, is a watershed document. It contains the first surviving complete list of the twenty-seven books of the New Testament. But the letter does more than list the accepted books. It condemns everything else:</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"They are an invention of heretics, who write them when they choose, bestowing upon them their approbation, and assigning to them a date, that so, using them as ancient writings, they may find occasion to lead astray the simple."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Athanasius, Festal Letter 39, section 7 (367 CE)</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">This is not a neutral bibliographic observation. It is a conspiracy theory of textual production. Athanasius claims that every non-canonical text was fabricated by heretics, deliberately backdated, and falsely presented as ancient. He allows only two categories: canonical and fraudulent. This binary framework, once adopted, made the disappearance of non-canonical literature a matter of policy, not neglect. If a text was not canonical, it was a heretical fabrication, and preserving it was tantamount to preserving heresy.</p>
+                                        <p class="text-gray-600 leading-relaxed">The practical consequence was predictable. If a text was declared heretical, no orthodox community would copy it. Without continuous copying, papyrus and parchment are impermanent. Papyrus deteriorates rapidly in damp climates. Parchment is routinely reused (palimpsests). Without continuous institutional support, a text simply disappeared.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 4: MECHANISMS ==================== -->
+                <div id="mechanisms" class="tab-pane hidden" role="tabpanel" aria-labelledby="mechanisms-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part Three: The Mechanism of Suppression</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">The destruction of texts by persecution and the suppression by the institutional church explain why certain categories of literature disappeared. But they do not, by themselves, explain the full extent of the loss. Many texts that were never explicitly targeted still vanished. The mechanism is more subtle and, in its own way, more thoroughgoing than dramatic episodes of book burning.</p>
+
+                        <div id="mechanisms-accordion" class="space-y-4">
+
+                            <!-- Schneemelcher -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Schneemelcher's Five Channels of Survival</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Wilhelm Schneemelcher, editor of the standard reference work <em>New Testament Apocrypha</em>, provides the most lucid account: the suppression of non-conforming texts was not primarily the result of active book burning. It was the result of institutional neglect. The mechanism operated through three stages: (1) canon closure cut off the means of transmission, (2) imperial unification made exclusion permanent, and (3) survival became accidental and marginal.</p>
+                                        <p class="text-gray-600 leading-relaxed">Schneemelcher identifies five channels through which non-canonical texts survived:</p>
+                                        <div class="space-y-3 mt-4">
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">(a) Egyptian Sands</p>
+                                                <p class="text-gray-600 text-sm mt-1">The dry climate preserved manuscripts that would have perished elsewhere. The Nag Hammadi library (13 codices buried in jars, discovered 1945) and the Oxyrhynchus papyri survived not because they were preserved but because they were abandoned or hidden. The survival is geographical accident, not institutional intent.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">(b) Heretical Communities</p>
+                                                <p class="text-gray-600 text-sm mt-1">Texts survived because they were transmitted by communities the institutional church judged heretical but that persisted long enough to preserve their own literature. The Manichaeans preserved the Gospel of Thomas among their scriptures.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">(c) Quotations in Church Fathers</p>
+                                                <p class="text-gray-600 text-sm mt-1">Many texts survive only because they were quoted by church fathers who cited them to refute them — adversarial preservation. The Gospel of the Hebrews, Nazareans, and Ebionites are known entirely from such quotations in Jerome, Epiphanius, Origen, Eusebius.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">(d) Translation into Vernacular Languages</p>
+                                                <p class="text-gray-600 text-sm mt-1">Texts moved into linguistic communities beyond the jurisdiction of the Latin or Greek hierarchy. The Ethiopian church preserved the Book of Enoch and Jubilees, lost to the Western and Byzantine churches for centuries.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">(e) Absorption into Hagiography and Art</p>
+                                                <p class="text-gray-600 text-sm mt-1">Some traditions survived as stories or images rather than texts. The Protoevangelium of James was excluded from the canon but its stories entered popular imagination through church art and liturgical tradition.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ehrman's Six Mechanisms -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Ehrman's Six Mechanisms of Textual Corruption</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Bart Ehrman's <em>The Orthodox Corruption of Scripture</em> documents a different kind of suppression: not the elimination of entire texts but the alteration of individual passages within texts that survived. Scribes altered the wording to make it conform to orthodox theology.</p>
+                                        <div class="space-y-3 mt-4">
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">1. Scribal Substitution</p>
+                                                <p class="text-gray-600 text-sm mt-1">Luke 3:22: the earliest witnesses read "You are my Son; today I have begotten you" (adoptionistic). Orthodox scribes replaced it with "You are my beloved Son; in you I am well pleased."</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">2. Deletion and Excision</p>
+                                                <p class="text-gray-600 text-sm mt-1">A scribe physically removed an offending sentence. Passages conflicting with developing theological positions about Christ's nature or genealogy were removed.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">3. Linguistic Modification</p>
+                                                <p class="text-gray-600 text-sm mt-1">A scribe reworded a passage to eliminate ambiguity. Luke 2:43 was modified to preserve a higher Christology.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">4. Hermeneutic Constraint</p>
+                                                <p class="text-gray-600 text-sm mt-1">The interpretive tradition demanded a certain text, and the scribe produced it. If a passage must mean X, scribes eliminated variants that could be read as meaning Y.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">5. Literary Warfare</p>
+                                                <p class="text-gray-600 text-sm mt-1">Counter-texts were produced to argue against other texts. If the counter-text survived and the target text did not, the argument appears unanswerable — not because it was right but because its opponent was silenced.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">6. Manuscript Survival Bias</p>
+                                                <p class="text-gray-600 text-sm mt-1">The entire manuscript record is skewed toward the theological position of the community that survived.</p>
+                                            </div>
+                                        </div>
+                                        <blockquote class="hadith-callout mt-4">
+                                            <p class="text-gray-700 italic">"Because it was the victorious party of later centuries that by and large produced the manuscripts that have survived antiquity, we should not expect to find in them a large number of textual modifications that support an adoptionistic Christology."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Ehrman, The Orthodox Corruption of Scripture (1993), p.456</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed mt-4">The textual critic can see what is in Vaticanus and Sinaiticus and in the manuscripts that descend from them. She cannot see what was in the manuscripts that were burned under Diocletian, or in the texts that Constantine ordered destroyed, or in the gospels used by communities that Athanasius declared heretical. The variant record is a window onto what the surviving branch preserved — not onto the full range of what early Christians wrote.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Demographic displacement -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Suppression by Demographic Displacement</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Non-conforming manuscripts were not individually hunted down and destroyed. They simply stopped being copied. The communities that valued them were suppressed, dispersed, or absorbed. Without a community to maintain the cycle of copying, the manuscripts perished.</p>
+                                        <p class="text-gray-600 leading-relaxed">The orthodox communities, backed by imperial favour after Constantine, continued to grow. Their monasteries became centres of textual production. Their scriptoria produced the great codices — Sinaiticus, Vaticanus, Alexandrinus — that became the basis of the received text. Their bishops commissioned official Bibles, like the fifty codices ordered by Constantine from Eusebius.</p>
+                                        <p class="text-gray-600 leading-relaxed">The result is demographic displacement in the manuscript record. Orthodox manuscripts outnumber heterodox manuscripts not because orthodox scribes wrote more but because orthodox communities survived and heterodox ones did not. The ratio does not reflect the original demographics of Christianity. It reflects the demographics of survival.</p>
+                                        <p class="text-gray-600 leading-relaxed font-medium text-[#3D4451]">A Christian debater who says "no surviving manuscript of Luke contains a prediction of Muhammad" is making an argument from a database that has been shaped by demographic displacement. The absence is exactly what the filter hypothesis predicts.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 5: TIMELINE ==================== -->
+                <div id="timeline" class="tab-pane hidden" role="tabpanel" aria-labelledby="timeline-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part Four: The Timeline — Before, During, or After Canonization?</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">The destruction and suppression of texts happened in all three periods. But the most critical phase falls within a narrow window.</p>
+
+                        <div id="timeline-accordion" class="space-y-4">
+
+                            <!-- Before canonization -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Before Canonization: The External Persecutions</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The destruction under Antiochus IV (167 BCE), the Babylonian catastrophe (586 BCE), and the Diocletian persecution (303 CE) all occurred before the New Testament canon was fixed. The canon, as a closed list of twenty-seven books, does not exist before Athanasius's Festal Letter of 367 CE. Before that date, the boundaries of Christian scripture were fluid. The Diocletian persecution destroyed whatever was in the churches it targeted — and it certainly included texts that were later judged non-canonical, because at the time there was no canonical list to distinguish "scripture" from "non-scripture."</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- During canonization -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">During Canonization: Imperial Suppression</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Constantine's reign (306-337 CE) overlaps with the critical formative period. The burning of heretical writings removed texts from circulation at exactly the moment when the canon was being formed. The texts that were destroyed were not texts that had already been formally excluded. They were texts associated with theological positions declared heretical. The suppression was prior to canonical exclusion. By the time Athanasius wrote his Festal Letter in 367, the texts associated with defeated theological positions had already been substantially reduced by four decades of imperial suppression.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- After canonization -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">After Canonization: Systematic Non-Copying</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Athanasius's Festal Letter of 367 CE declared everything outside the twenty-seven-book canon to be heretical fabrication. A text that was not in the canon was not read in church, not taught in the catechumenate, not copied in the monastic scriptoria. The physical manuscripts, once they stopped being copied, had a lifespan measured in centuries at most.</p>
+                                        <p class="text-gray-600 leading-relaxed">Papyrus deteriorates within two to three centuries in damp climates. Parchment lasts longer but is subject to reuse — scribes scraped old texts from parchment to write new ones (palimpsests). Without continuous institutional support, a text simply disappeared.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- The Critical Window -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Critical Window: 303–367 CE</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <div class="grid md:grid-cols-2 gap-4">
+                                            <div class="p-4 border-l-4 border-[#B99C6B] bg-amber-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#B99C6B]">303 CE</p>
+                                                <p class="text-gray-600 text-sm mt-1">Diocletian launches the persecution. Christian scriptures are burned across the empire.</p>
+                                            </div>
+                                            <div class="p-4 border-l-4 border-[#B99C6B] bg-amber-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#B99C6B]">313 CE</p>
+                                                <p class="text-gray-600 text-sm mt-1">Constantine issues the Edict of Milan. Imperial favour begins; suppression of "heretical" texts follows.</p>
+                                            </div>
+                                            <div class="p-4 border-l-4 border-[#B99C6B] bg-amber-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#B99C6B]">325–337 CE</p>
+                                                <p class="text-gray-600 text-sm mt-1">Constantine's reign: burning of heretical writings, commissioning of fifty official Bibles from Eusebius.</p>
+                                            </div>
+                                            <div class="p-4 border-l-4 border-[#B99C6B] bg-amber-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#B99C6B]">367 CE</p>
+                                                <p class="text-gray-600 text-sm mt-1">Athanasius issues Festal Letter 39, closing the canon. Everything outside is heretical fabrication.</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600 leading-relaxed mt-4">In the span of a single human lifetime, the evidence base of early Christianity was subjected to two imperial actions and one canonical decree. The texts that survived this gauntlet became the basis of the received tradition. The texts that did not survive became, at best, fragments. Most became nothing.</p>
+                                        <p class="text-gray-600 leading-relaxed font-medium text-[#3D4451]">The major destruction preceded the fixing of the canon. The canon was not formed from a full and representative sample of early Christian literature and then used as a basis for suppressing the rest. The suppression happened first. The canon was formed from what the suppression had left.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- OT Canon fluidity -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Old Testament Canon Fluidity and the Case of 1 Enoch</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The Old Testament canon itself was not fixed in the first century. The Hebrew Bible existed in two major forms: the shorter Palestinian Hebrew canon and the longer Greek Septuagint. The Dead Sea Scrolls show that even in the first century BCE, the Hebrew text existed in multiple forms.</p>
+                                        <p class="text-gray-600 leading-relaxed">1 Enoch illustrates the problem: it is quoted in the New Testament Epistle of Jude (vv.14-15) as authoritative scripture. Tertullian defended its inspiration. Yet it was eventually excluded from both the Jewish and Christian canons. In the West, it was lost for over a millennium. The Ethiopian Orthodox Church alone retained it. The complete text survived only in Ethiopic (Ge'ez) translation.</p>
+                                        <p class="text-gray-600 leading-relaxed">The inclusion of 1 Clement and Barnabas in Codex Sinaiticus (c.350 CE) alongside the canonical books shows that at least one major centre of textual production still treated these texts as scripture in the mid-fourth century. Within a generation of Athanasius's letter, they would be classified as non-canonical. Within a few centuries, they would cease to be copied. The transition from scripture to non-scripture was a decision, not a recognition.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 6: DIVERGENCE ==================== -->
+                <div id="divergence" class="tab-pane hidden" role="tabpanel" aria-labelledby="divergence-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part Five: How Much Divergence Actually Existed?</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">The argument of this note depends on the claim that the early Christian textual landscape was significantly more diverse than the surviving record suggests. If the non-conforming texts that were destroyed were merely minor variants, their loss would be of little consequence. But the evidence indicates that the diversity was substantial.</p>
+
+                        <div id="divergence-accordion" class="space-y-4">
+
+                            <!-- McDonald's evidence -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">McDonald's Evidence: Irenaeus Alone on Four Gospels</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">At Oxyrhynchus alone, the remains include seven copies of the Shepherd of Hermas, three of the Gospel of Thomas, two of the Gospel of Mary, and two of the Gospel of Peter. If a single provincial centre had this many copies of non-canonical texts, the distribution across the Christian world must have been far more extensive.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Early Christianity appears to have been much less united and much more diversified than we have thought."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.28</cite>
+                                        </blockquote>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Irenaeus is the only known witness in his generation who acknowledges only the four canonical Gospels in his NT Scripture collection."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1304</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The canonical fourfold gospel was the position of a single bishop. Irenaeus, writing around 180 CE, is the first known author to insist on exactly four gospels. His argument reveals the nature of the case:</p>
+                                        <blockquote class="quran-callout">
+                                            <p class="text-gray-700 italic">"It is not possible that the Gospels can be either more or fewer in number than they are. For, since there are four zones of the world in which we live, and four principal winds, while the Church is scattered throughout all the world, and the pillar and ground of the Church is the Gospel and the Spirit of life; it is fitting that she should have four pillars..."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Irenaeus, Against Heresies 3.11.8 (c.180 CE)</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">The argument is cosmological, not historical. Irenaeus does not say "there are four gospels because these four are the ones the apostles wrote." He says there must be four because there are four zones of the world and four winds. The fourfold gospel was a contested position that took two centuries to become majority practice.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Before Justin we cannot speak of 'canonical' status for individual books of the NT."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— Schneemelcher, New Testament Apocrypha (1991), p.27</cite>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Serapion -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Serapion of Antioch and the Gospel of Peter</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">Serapion was bishop of Antioch around 190-211 CE. He initially permitted the use of the Gospel of Peter in the churches of Rhossus. When he later discovered that it contained teachings diverging from the emerging rule of faith — specifically a docetic Christology — he withdrew permission.</p>
+                                        <p class="text-gray-600 leading-relaxed">The episode is revealing: the Gospel of Peter was in liturgical use in a church under one of the most important sees in Christendom. Its removal was not the result of careful evaluation of historical pedigree. It was a theological judgment, made after the fact.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">The criterion for inclusion was theological compatibility with the emerging "rule of faith," not apostolic authorship or antiquity, both of which were applied inconsistently.</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.155</cite>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Regional variation -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Regional Variation: The Canons That Did Not Converge</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The twenty-seven-book New Testament did not become universal overnight. Different regions maintained different collections for centuries:</p>
+                                        <div class="grid md:grid-cols-3 gap-4 mt-4">
+                                            <div class="p-4 border border-gray-200 rounded-lg">
+                                                <p class="font-semibold text-[#3D4451]">Syrian Church</p>
+                                                <p class="text-gray-600 text-sm mt-1">Used the Diatessaron until the 5th century. The Peshitta contained only 22 books, lacking 2 Peter, 2-3 John, Jude, and Revelation — not accepted until the 7th-8th century.</p>
+                                            </div>
+                                            <div class="p-4 border border-gray-200 rounded-lg">
+                                                <p class="font-semibold text-[#3D4451]">Ethiopian Church</p>
+                                                <p class="text-gray-600 text-sm mt-1">Maintained a larger canon including the Sinodos, Octateuch, Book of the Covenant, and 1 Enoch. Crystallized in isolation from Rome and Constantinople.</p>
+                                            </div>
+                                            <div class="p-4 border border-gray-200 rounded-lg">
+                                                <p class="font-semibold text-[#3D4451]">Armenian Church</p>
+                                                <p class="text-gray-600 text-sm mt-1">For centuries included 3 Corinthians as part of the Pauline corpus, well into the medieval period.</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600 leading-relaxed mt-4">The convergence on twenty-seven books was the result of the growing dominance of the Western and Byzantine churches, backed by imperial and institutional power. The process of convergence was a process of suppression: regional canons were narrowed, additional texts were dropped, and the twenty-seven-book list was imposed.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- What survived -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">What Survived, and How It Reveals What Was Lost</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The surviving non-canonical texts are the exception, not the rule. Their survival was accidental and marginal:</p>
+                                        <div class="space-y-3 mt-4">
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">Nag Hammadi Library (1945)</p>
+                                                <p class="text-gray-600 text-sm mt-1">13 codices buried in jars, containing the Gospel of Thomas, Philip, the Apocryphon of John, and others. Hidden, not preserved — probably buried to protect from Athanasius's campaigns against non-canonical texts.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">Gospel of Thomas</p>
+                                                <p class="text-gray-600 text-sm mt-1">114 sayings of Jesus, many without canonical parallel. Unknown for over 15 centuries except as three small Oxyrhynchus fragments and hostile notices. The Nag Hammadi discovery transformed the study of early Christianity.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">Gospel of Mary</p>
+                                                <p class="text-gray-600 text-sm mt-1">Entirely unknown before 1896. No church father mentions it. Presents Mary Magdalene as a visionary — a configuration of community leadership the canonical gospels do not preserve. Lost for ~17 centuries.</p>
+                                            </div>
+                                            <div class="p-3 bg-gray-50 rounded">
+                                                <p class="font-semibold text-[#3D4451]">Jewish-Christian Gospels</p>
+                                                <p class="text-gray-600 text-sm mt-1">The Nazareans, Ebionites, and Hebrews survive only as fragments in the writings of opponents. The Ebionite gospel eliminated the virgin birth and presented Jesus as human — a non-conforming tradition that did not survive.</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-600 leading-relaxed mt-4 font-medium text-[#3D4451]">If a sayings gospel with 114 sayings of Jesus could be completely unknown for fifteen centuries and then recovered by accident from the sand, how many other texts of similar significance were lost without trace? The survival of non-canonical literature is the exception. The rule is disappearance.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 7: ISLAMIC IMPLICATIONS ==================== -->
+                <div id="islamic" class="tab-pane hidden" role="tabpanel" aria-labelledby="islamic-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">Part Six: Implications for the Islamic Argument</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">The preceding sections establish a historical case: the surviving textual record of early Christianity has been filtered through a process that systematically favoured one theological position. This has direct implications for the Islamic claim that Jesus predicted Ahmad.</p>
+
+                        <div id="islamic-accordion" class="space-y-4">
+
+                            <!-- McDonald's admission -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">McDonald's Explicit Admission</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Only a small portion of the total number of ancient written documents is known today. Many were destroyed by the enemies of the church, and some were destroyed by Christians themselves in heresy hunts."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1643</cite>
+                                        </blockquote>
+                                        <blockquote class="hadith-callout">
+                                            <p class="text-gray-700 italic">"Are fixed scriptural canons Christian? There can be little doubt that scriptural canons had the effect of legitimizing only one branch of Christianity."</p>
+                                            <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.2024</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 leading-relaxed">Canon formation was not a neutral process of identifying the best texts. It was a process of legitimizing one branch and delegitimizing the others. The texts that survived were the texts of the winning branch.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- The argument from filtered evidence -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Five Filters: The Argument from Filtered Evidence</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <div class="space-y-3">
+                                            <div class="p-3 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#3D4451]">1. Imperial Persecution</p>
+                                                <p class="text-gray-600 text-sm mt-1">Diocletian's edicts ordered the burning of Christian scriptures. Whatever was in the churches his agents raided was destroyed.</p>
+                                            </div>
+                                            <div class="p-3 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#3D4451]">2. Imperial Favour</p>
+                                                <p class="text-gray-600 text-sm mt-1">Constantine burned heretical writings and commissioned fifty official Bibles, privileging one collection over all others.</p>
+                                            </div>
+                                            <div class="p-3 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#3D4451]">3. Canonical Exclusion</p>
+                                                <p class="text-gray-600 text-sm mt-1">Athanasius's Festal Letter declared everything outside the twenty-seven-book canon to be heretical fabrication.</p>
+                                            </div>
+                                            <div class="p-3 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#3D4451]">4. Institutional Neglect</p>
+                                                <p class="text-gray-600 text-sm mt-1">Once excluded, a text stopped being copied. Without continuous copying, manuscripts perished. This was more thoroughgoing than any single act of destruction.</p>
+                                            </div>
+                                            <div class="p-3 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                                                <p class="font-semibold text-[#3D4451]">5. Demographic Displacement</p>
+                                                <p class="text-gray-600 text-sm mt-1">Orthodox communities, backed by imperial power, outproduced heterodox communities. The surviving manuscripts reflect demographics of survival, not of original production.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- The structural analogy -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Structural Asymmetry: Torah vs. Gospel</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The filter hypothesis predicts an asymmetry in the surviving textual record. Imam al-Rida's arguments from the Torah rest on passages that survive in every Hebrew Bible today: Isaiah 21:7, Habakkuk 3:3, Deuteronomy 33:2, Deuteronomy 18:18. These passages survive because the Jewish community, which controlled the transmission of the Hebrew Bible, had no theological motive to remove them.</p>
+                                        <p class="text-gray-600 leading-relaxed">The Imam's arguments from the Gospel rest on passages that do not survive in any canonical manuscript. The filter hypothesis predicts exactly this distribution: Torah passages survive where the custodians had no motive to remove them; Gospel passages do not survive where the custodians did have a motive.</p>
+                                        <p class="text-gray-600 leading-relaxed">The asymmetry is structural, not accidental. The Torah was controlled by a community that disputed the interpretation but not the presence of these passages. The Gospel was controlled by a community for whom a prediction of Muhammad would have been theologically catastrophic.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Three objections -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">Three Objections Considered</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="font-semibold text-[#3D4451]">Objection 1: If the filter was effective, why did non-conforming texts survive at all?</p>
+                                        <p class="text-gray-600 leading-relaxed">The surviving non-conforming texts survived through accident: burial in jars, preservation in sand, translation into remote languages, quotation by hostile opponents. These channels are narrow and unpredictable. The survival of some non-conforming texts proves the filter existed, not that it caught everything. The exception proves that survival required extraordinary circumstances — not that every significant text found its extraordinary circumstance.</p>
+                                        <hr class="border-gray-200 my-4">
+                                        <p class="font-semibold text-[#3D4451]">Objection 2: Textual criticism has not produced a single variant containing a prediction of Muhammad.</p>
+                                        <p class="text-gray-600 leading-relaxed">Textual criticism works with surviving manuscripts, and surviving manuscripts are the product of the filter. The oldest surviving substantial manuscripts of the Gospels date to the fourth century (Vaticanus and Sinaiticus, c.350 CE). By that date, the process of theological standardization had been under way for more than a century. The textual critic can see what is in the surviving manuscripts. She cannot see what was in the manuscripts that were burned, suppressed, or allowed to perish.</p>
+                                        <hr class="border-gray-200 my-4">
+                                        <p class="font-semibold text-[#3D4451]">Objection 3: The Jewish community had no motive to suppress predictions of Muhammad, yet the Hebrew Bible contains no Gospel prediction of Muhammad.</p>
+                                        <p class="text-gray-600 leading-relaxed">This conflates two separate textual traditions. The Jewish community preserved the Hebrew Bible, not the Christian Gospels. The Rabbinic literature does not transmit Gospel material. The prediction, if it existed, would have been in the <em>Injil</em>, the revelation given to Jesus, not in the Torah or the Prophets. The Dead Sea Scrolls are irrelevant to the question of whether the Gospel tradition was altered, because they contain no Gospel material at all.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Epistemic status -->
+                            <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                                    <h4 class="text-lg font-semibold text-[#3D4451]">The Epistemic Status of the Argument</h4>
+                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-200 space-y-4">
+                                        <p class="text-gray-600 leading-relaxed">The argument is not circular. It does not assert that the prediction was suppressed. It asserts that the silence of the surviving record cannot disprove the prediction, because the record has been filtered. The suppression hypothesis cannot be ruled out, because the mechanisms are documented: imperial edicts, eyewitness accounts, canonical decrees, and material evidence of texts that survived only through accident.</p>
+                                        <p class="text-gray-600 leading-relaxed">The proper analogy is to a criminal trial where the key evidence has been tampered with. If the police have tampered with the evidence, the jury cannot use the evidence to reach a verdict, even if the evidence as it now stands points toward innocence. The jury does not conclude guilt. It concludes that it cannot tell, because the evidence is compromised. The Islamic argument says: the surviving evidence cannot establish that the prediction was not there.</p>
+                                        <p class="text-gray-600 leading-relaxed">The Islamic position is best stated as a double claim. <strong>First</strong>, the surviving textual record has been filtered through a theological conformist process. <strong>Second</strong>, the silence of the surviving record is exactly what the filter hypothesis predicts, and therefore cannot be taken as independent evidence against the prediction. The first claim is a historical fact. The second is a logical consequence of the first.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section class="mb-8 p-6 conclusion-box">
+                        <h3 class="font-serif text-xl font-bold mb-3 text-[#B99C6B]">Conclusion</h3>
+                        <p class="text-gray-700 leading-relaxed">The surviving textual record of early Christianity is a filtered archive, not a neutral one. The filters are documented: imperial persecution under Diocletian, imperial suppression under Constantine and his successors, canonical exclusion by Athanasius, institutional neglect through the cessation of copying, and demographic displacement. Arguments from silence that appeal to this record are arguments from a filtered database. The Islamic claim that Jesus predicted Ahmad cannot be disproved by appealing to the silence of texts that have been filtered through a process designed to eliminate non-conforming material. The epistemic point is not that the prediction was certainly there. It is that the silence of the surviving evidence cannot establish that it was not.</p>
+                    </section>
+                </div>
+
+                <!-- ==================== TAB 8: SCHOLARS CITED ==================== -->
+                <div id="scholars" class="tab-pane hidden" role="tabpanel" aria-labelledby="scholars-tab">
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">The Scholars Cited: Who Are They?</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Every major claim in this note rests on the authority of scholars who are not Muslim, not apologists for Islam, and in most cases explicitly Christian. Their testimony carries weight precisely because they are establishment biblical scholars with no motive to support an Islamic argument.</p>
+
+                        <div class="space-y-4">
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Bart D. Ehrman</p>
+                                <p class="text-gray-600 text-sm mt-1">James A. Gray Distinguished Professor of Religious Studies at the University of North Carolina at Chapel Hill. PhD from Princeton Theological Seminary (magna cum laude, 1985), under Bruce M. Metzger. Author of <em>The Orthodox Corruption of Scripture</em> (Oxford, 1993) and the standard textbook on NT textual criticism (co-authored with Metzger, 4th ed., Oxford). His credentials in the text of the NT are not contested by any serious academic.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Bruce M. Metzger (1914–2007)</p>
+                                <p class="text-gray-600 text-sm mt-1">George L. Collord Professor of NT Language and Literature at Princeton Theological Seminary. President of the Society of Biblical Literature, the International Society for NT Studies, and the North American Patristic Society. Chaired the NRSV translation committee. <em>The Canon of the New Testament</em> (Oxford, 1987) remains the standard reference. Ordained Presbyterian elder.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Lee Martin McDonald</p>
+                                <p class="text-gray-600 text-sm mt-1">President Emeritus and Professor of NT at Acadia Divinity College, Nova Scotia. PhD from the University of Edinburgh. <em>The Biblical Canon: Its Origin, Transmission, and Authority</em> (3rd ed., Baker Academic, 2017), used as a seminary textbook across Protestant and Catholic institutions. Ordained Baptist minister.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Wilhelm Schneemelcher (1914–2003)</p>
+                                <p class="text-gray-600 text-sm mt-1">Professor of Church History at the University of Bonn. <em>New Testament Apocrypha</em>, co-edited with Hennecke, translated by R. McL. Wilson (Cambridge), is the standard scholarly reference work on non-canonical early Christian literature.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">G. M. Hahneman</p>
+                                <p class="text-gray-600 text-sm mt-1">Author of the Oxford monograph <em>The Muratorian Fragment and the Development of the Canon</em> (Oxford University Press, 1992), the leading revisionist study of the canon's earliest catalogue. His argument that Irenaeus's four-gospel position was an innovation is widely cited.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Michael J. Kruger</p>
+                                <p class="text-gray-600 text-sm mt-1">President and Professor of NT at Reformed Theological Seminary, Charlotte. PhD from the University of Edinburgh. Ordained minister in the Presbyterian Church in America. <em>Canon Revisited</em> (Crossway, 2012) represents the conservative evangelical counter-argument. Included here to represent the opposing position fairly.</p>
+                            </div>
+                            <div class="quran-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Eusebius of Caesarea (c.260–339 CE)</p>
+                                <p class="text-gray-600 text-sm mt-1">The first historian of the Christian church. His <em>Ecclesiastical History</em> is the primary source for the first three centuries of Christianity. He was an eyewitness to the Diocletian persecution and an advisor to Constantine. His testimony about the burning of scriptures is firsthand.</p>
+                            </div>
+                            <div class="hadith-callout p-4">
+                                <p class="font-semibold text-[#3D4451] text-lg">Eldon Jay Epp</p>
+                                <p class="text-gray-600 text-sm mt-1">Harkness Professor of Biblical Literature Emeritus at Case Western Reserve University. President of the Society of Biblical Literature. His work on NT textual criticism is foundational.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                            <p class="text-gray-600 leading-relaxed text-sm">The cumulative weight of this testimony is derived from the mainstream of Western biblical scholarship, published by Oxford University Press, Cambridge University Press, Baker Academic, Westminster Press, and Eerdmans. The scholars cited include Presbyterians, Baptists, and a Catholic-trained textual critic. When Ehrman says "scribes occasionally altered the words of their sacred texts to make them more patently orthodox," he speaks as the leading living authority on the text of the NT. When McDonald says "some were destroyed by Christians themselves in heresy hunts," he speaks as a Baptist minister and seminary professor. When Eusebius describes the Scriptures "committed to the flames in the midst of the market-places," he speaks as an eyewitness.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="font-serif text-xl font-bold mb-4 text-[#B99C6B]">Selected Sources</h3>
+                        <div class="grid md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <p class="font-semibold text-[#3D4451] mb-2">Canon Studies & Biblical Scholarship</p>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>McDonald, <em>The Formation of the Biblical Canon</em> (Bloomsbury, 2017)</li>
+                                    <li>Ehrman, <em>The Orthodox Corruption of Scripture</em> (Oxford, 1993)</li>
+                                    <li>Metzger, <em>The Canon of the New Testament</em> (Oxford, 1987)</li>
+                                    <li>Metzger & Ehrman, <em>The Text of the NT</em>, 4th ed. (Oxford, 2005)</li>
+                                    <li>Schneemelcher, ed., <em>NT Apocrypha</em>, rev. ed. (Westminster, 1991-92)</li>
+                                    <li>Hahneman, <em>The Muratorian Fragment</em> (Oxford, 1992)</li>
+                                    <li>Kruger, <em>Canon Revisited</em> (Crossway, 2012)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#3D4451] mb-2">Primary Sources</p>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>Eusebius, <em>Ecclesiastical History</em>, VIII.1-6 (Loeb)</li>
+                                    <li>Eusebius, <em>Life of Constantine</em>, 3.64-66</li>
+                                    <li>Athanasius, <em>Festal Letter 39</em> (367 CE)</li>
+                                    <li>Irenaeus, <em>Against Heresies</em> 3.11.8-9</li>
+                                    <li>Tertullian, <em>Against Marcion</em></li>
+                                    <li>1 Maccabees 1:56-57; 4 Ezra 14:21-48</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+            <p class="text-sm text-gray-500">© 2025 Theological Library · All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const target = e.currentTarget.dataset.target;
+
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.classList.add('border-transparent', 'text-gray-500');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    e.currentTarget.classList.add('active');
+                    e.currentTarget.classList.remove('border-transparent', 'text-gray-500');
+                    e.currentTarget.setAttribute('aria-selected', 'true');
+
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    item.classList.toggle('open');
+
+                    if (!isOpen) {
+                        header.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        header.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0px';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
