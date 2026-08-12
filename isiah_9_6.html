@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An analysis of Isaiah 9:6, examining kingship and divinity in the verse's titles from a Hebraic and Shi'i perspective.">
+    <meta property="og:title" content="An Analysis of Isaiah 9:6 | A Hebraic Perspective">
+    <meta property="og:description" content="An analysis of Isaiah 9:6, examining kingship and divinity in the verse's titles from a Hebraic and Shi'i perspective.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/isiah_9_6.html">
     <title>An Analysis of Isaiah 9:6 | A Hebraic Perspective</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +19,28 @@
             background-color: #FDFBF7;
             color: #3D4451;
         }
+        main p {
+            line-height: 1.7;
+        }
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
         .font-hebrew {
             font-family: 'SBL Hebrew', serif;
         }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
         .tab.active {
             border-color: #A43820; /* Muted Terracotta */
             color: #A43820;
             background-color: #FDFBF7;
+        }
+        .accordion-header {
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #FAF6EF;
         }
         .accordion-header svg {
             transition: transform 0.3s ease;
@@ -41,12 +58,55 @@
             text-align: right;
         }
         .analysis-section {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .analysis-heading {
             font-weight: 700;
             color: #3D4451;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #A43820;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
         }
         .quote-original {
             font-family: 'SBL Hebrew', serif;
@@ -61,38 +121,56 @@
         .quote-translation {
             color: #374151;
         }
+        .thesis-box {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .conclusion-box {
+            border: 1px solid #A43820;
+            background-color: #F8F1E2;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto px-4 py-8 md:py-12">
-        
-        <header class="text-center mb-12">
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-2">A Linguistic & Historical Analysis</h1>
-            <p class="text-md md:text-lg text-gray-500">Examining Kingship and Divinity in Isaiah 9:6 [Hebrew 9:5]</p>
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <nav class="mb-10">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#A43820]">&larr; Faith &amp; Reason in Islam</a>
+        </nav>
+
+        <header class="mb-12">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#A43820] mb-3">Intertextual Analysis</p>
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">A Linguistic & Historical Analysis</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Examining Kingship and Divinity in Isaiah 9:6 [Hebrew 9:5]</p>
+            <hr class="mt-10 border-[#E7E0D1]">
         </header>
 
         <main>
-            <section id="argument" class="mb-12 p-6 bg-white rounded-lg shadow-sm border border-gray-200 max-w-4xl mx-auto">
-                <h2 class="font-serif text-2xl font-bold mb-4 text-center text-[#A43820]">The Argument Under Examination</h2>
-                <p class="mb-6 text-gray-600 text-center">This analysis addresses the traditional Christian polemical argument which posits Isaiah 9:6 as a direct prophecy of Jesus's divinity. The argument is typically constructed as follows:</p>
+            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#A43820]">The Argument Under Examination</h2>
+                <p class="mb-6 text-gray-600">This analysis addresses the traditional Christian polemical argument which posits Isaiah 9:6 as a direct prophecy of Jesus's divinity. The argument is typically constructed as follows:</p>
                 <div class="space-y-4 mb-8">
-                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                    <div class="premise-card">
                         <p class="font-semibold text-gray-800">Premise 1: A Prophecy of Divine Titles</p>
                         <p class="text-gray-600">Isaiah 9:6 prophesies that a child will be born and given a series of names, including “Mighty God” (<span class="font-hebrew">אֵל גִּבּוֹר</span> / El Gibbor) and “Everlasting Father” (<span class="font-hebrew">אֲבִי־עַד</span> / Avi-Ad). These titles are understood to be literal declarations of the child’s divine nature.</p>
                     </div>
-                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                    <div class="premise-card">
                         <p class="font-semibold text-gray-800">Premise 2: A Fulfillment in Jesus of Nazareth</p>
                         <p class="text-gray-600">The New Testament identifies Jesus as the fulfillment of Isaiah’s prophecies (e.g., Matthew 1:23). Therefore, the divine titles prophesied by Isaiah apply directly and ontologically to Jesus.</p>
                     </div>
-                    <div class="p-4 border-l-4 border-[#A43820] bg-red-50 rounded-r-lg">
+                    <div class="conclusion-card">
                         <p class="font-semibold text-[#A43820]">Conclusion: A Proof of Divinity</p>
                         <p class="text-gray-700">Therefore, Isaiah 9:6 is a definitive proof from the Hebrew Bible that the Messiah was prophesied to be God incarnate, a belief fulfilled in the person of Jesus.</p>
                     </div>
                 </div>
-                <p class="text-gray-600 text-center">The following five-part analysis demonstrates that this syllogism is untenable from linguistic, doctrinal, logical, historical, and textual perspectives, arguing that Isaiah 9:6 describes a human king, likely Hezekiah, in a historical context.</p>
+                <p class="text-gray-600">The following five-part analysis demonstrates that this syllogism is untenable from linguistic, doctrinal, logical, historical, and textual perspectives, arguing that Isaiah 9:6 describes a human king, likely Hezekiah, in a historical context.</p>
             </section>
 
-            <div class="mb-8 border-b border-gray-200">
+            <div class="mb-8 border-b border-[#E7E0D1]">
                 <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
                     <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic">1. The Linguistic Proof</button>
                     <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal">2. The Doctrinal Proof</button>
@@ -106,13 +184,13 @@
             <div id="tab-content">
                 <div id="linguistic" class="tab-pane active">
                     <div id="linguistic-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Active Verb Vayikra: God as the Namer</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The Hebrew verb <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> (<strong>vayikra</strong>, “and he called”) is in the active voice, requiring a subject, typically God in biblical naming contexts. Christian translations render it passively (“he will be called”) to apply divine titles to the child, but this lacks grammatical support. The correct passive form would be <span class="font-hebrew">יִקָּרֵא</span> (yikkare).</p>
@@ -120,7 +198,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>Leviticus 1:1 uses <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> with God as the implicit subject, establishing a pattern of divine naming:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl"><strong>וַיִּקְרָא</strong> אֶל־מֹשֶׁה</p>
                                             <p class="quote-translit"><strong>vayikra</strong> el-Moshe</p>
                                             <p class="quote-translation">"<strong>And He [God] called</strong> to Moses."</p>
@@ -137,13 +215,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: El Gibbor as Metaphorical</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The term <span class="font-hebrew"><strong>אֵל גִּבּוֹר</strong></span> (<strong>El Gibbor</strong>) can mean "Mighty God," but <span class="font-hebrew">אֵל</span> (El) fundamentally means "power" or "might" and is used metaphorically for powerful humans, reflecting heroic strength, not ontological divinity. Pro-deity claims that this term is exclusively divine are overstated, as biblical, lexical, and regional evidence supports its non-divine flexibility.</p>
@@ -151,7 +229,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>Ezekiel 32:21 uses a variant of <span class="font-hebrew">אֵל</span> for human warriors in the underworld:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl"><strong>אֵילֵי גִבּוֹרִים</strong></p>
                                             <p class="quote-translit"><strong>eilei gibborim</strong></p>
                                             <p class="quote-translation">"<strong>mighty heroes</strong>."</p>
@@ -168,13 +246,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: Avi-Ad as Royal Hyperbole</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The title <span class="font-hebrew"><strong>אֲבִי־עַד</strong></span> (<strong>Avi-Ad</strong>, “Everlasting Father”) is best understood as royal hyperbole for a lasting reign, meaning "father of the age," not a claim of literal divinity. This is especially problematic for Trinitarian theology, which distinguishes the Son from the Father.</p>
@@ -182,7 +260,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>In Isaiah 22:21, the human official Eliakim is called a "father" to the nation:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">וְהָיָה <strong>לְאָב</strong></p>
                                             <p class="quote-translit">vehaya <strong>le-av</strong></p>
                                             <p class="quote-translation">"and he shall be <strong>a father</strong>."</p>
@@ -204,13 +282,13 @@
 
                 <div id="doctrinal" class="tab-pane hidden">
                     <div id="doctrinal-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Radical Monotheism in Isaiah</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Isaiah’s uncompromising monotheism, emphasizing YHWH as the sole God, precludes a divine Messiah, as a second divine figure would contradict the text’s core theology.</p>
@@ -218,7 +296,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>Isaiah 45:5 declares strict monotheism:</p>
-                                        <blockquote class="border-l-4 border-[#A43820] pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">אֲנִי יְהוָה וְאֵין עוֹד זוּלָתִי אֵין <strong>אֱלֹהִים</strong></p>
                                             <p class="quote-translit">ani YHWH ve-ein od zulati ein <strong>Elohim</strong></p>
                                             <p class="quote-translation">"I am YHWH, and there is no other; besides me there is no <strong>God</strong>."</p>
@@ -235,13 +313,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Theophoric Naming and Royal Ideology</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Theophoric names in ancient Israel include divine elements (e.g., <span class="font-hebrew">אֵל</span> / El, <span class="font-hebrew">יָהוּ</span> / Yahu) to attribute qualities to God, not to deify the bearer, fitting Isaiah 9:6’s royal context.</p>
@@ -249,7 +327,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>Hezekiah’s name reflects God’s power, not the king’s divinity:</p>
-                                        <blockquote class="border-l-4 border-[#A43820] pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl"><strong>חִזְקִיָּהוּ</strong></p>
                                             <p class="quote-translit"><strong>Chizkiyahu</strong></p>
                                             <p class="quote-translation">"<strong>YHWH is my strength</strong>."</p>
@@ -271,13 +349,13 @@
 
                 <div id="logical" class="tab-pane hidden">
                      <div id="logical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Presumption & Context</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-red-700 mb-2">Anachronism: Imposing Trinitarian Concepts</h5>
                                         <p><strong>Description:</strong> Anachronism occurs when later theological concepts, like the Trinity, are projected onto an earlier text, misrepresenting its original intent.</p>
@@ -299,13 +377,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Ambiguity & Inconsistency</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-red-700 mb-2">Equivocation on El</h5>
                                         <p><strong>Description:</strong> Equivocation occurs when a term with multiple meanings is used as if it has one, leading to a flawed conclusion.</p>
@@ -321,13 +399,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Relevance</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-6">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-red-700 mb-2">Suppressed Evidence (Cherry Picking)</h5>
                                         <p><strong>Description:</strong> Suppressed Evidence occurs when relevant contradictory evidence is ignored to favor a biased interpretation.</p>
@@ -348,13 +426,13 @@
 
                 <div id="historical" class="tab-pane hidden">
                     <div id="historical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Assyrian Crisis Context (734–701 BCE)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Isaiah 7-12’s prophecies address the Syro-Ephraimite and Assyrian crises, making a contemporary king like Hezekiah the primary referent, not a future divine Messiah. The text’s immediate historical focus and hyperbolic language align with celebrating a human king’s role in divine deliverance.</p>
@@ -362,7 +440,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>2 Kings 18:5 praises Hezekiah’s piety during Jerusalem’s deliverance from Assyria in 701 BCE:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">וְלֹא־הָיָה <strong>כָמֹהוּ</strong></p>
                                             <p class="quote-translit">velo-haya <strong>kamohu</strong></p>
                                             <p class="quote-translation">"there was no one <strong>like him</strong>."</p>
@@ -379,13 +457,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Context of Isaiah 7, 9, and 11</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Linking Isaiah 7’s “Emmanuel” to Isaiah 9 and 11’s figures implies multiple divine births, creating theological inconsistency for the pro-deity view.</p>
@@ -393,7 +471,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>Isaiah 7:14 refers to a contemporary birth:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">הִנֵּה <strong>הָעַלְמָה</strong> הָרָה וְיֹלֶדֶת בֵּן</p>
                                             <p class="quote-translit">hinneh <strong>ha-almah</strong> hara veyoledet ben</p>
                                             <p class="quote-translation">"the <strong>young woman</strong> is pregnant and bearing a son."</p>
@@ -415,13 +493,13 @@
                 
                 <div id="textual" class="tab-pane hidden">
                     <div id="textual-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Septuagint and Targum Interpretations</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Early Jewish translations (Septuagint, Targum Jonathan) avoid deifying the child, reflecting a non-divine understanding in pre-Christian communities.</p>
@@ -429,7 +507,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">2. Example (The Evidence)</h5>
                                         <p>The LXX omits divine titles, while the Targum assigns them to God:</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p><strong>Septuagint (LXX):</strong> καλεῖται τὸ ὄνομα αὐτοῦ μεγάλης βουλῆς ἄγγελος (kaleitai to onoma autou megales boules angelos, “his name is called Messenger of Great Counsel”).</p>
                                             <p><strong>Targum Jonathan:</strong> אִתְקְרִי שְׁמֵיהּ מִן קֳדָם פְּלִי יוֹעֵץ אֱלָהָא גִבָּרָא (itkri shemeih min kodam peli yoetz elaha gibbara, “his name was called from the presence of Wonderful Counselor, Mighty God”).</p>
                                         </blockquote>
@@ -445,13 +523,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">New Testament Silence and Typological Usage</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The absence of Isaiah 9:6 citations in the New Testament, despite its supposed centrality to Jesus’ divinity, and the typological use of related texts, question its divine significance.</p>
@@ -477,7 +555,7 @@
                 <div id="comparison" class="tab-pane hidden">
                     <div class="space-y-8">
                         <!-- Argument 1 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">1. Messianic Context and Intertextual Links</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -493,7 +571,7 @@
                             </div>
                         </div>
                         <!-- Argument 2 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">2. Divine Titles Imply Deity</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -509,7 +587,7 @@
                             </div>
                         </div>
                         <!-- Argument 3 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">3. Prophetic Perfect Supports Future Messiah</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -525,7 +603,7 @@
                             </div>
                         </div>
                         <!-- Argument 4 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">4. Hezekiah’s Reign Fails to Fulfill Isaiah 9:7</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -541,7 +619,7 @@
                             </div>
                         </div>
                         <!-- Argument 5 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">5. Trinitarian Implications of Titles</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -557,7 +635,7 @@
                             </div>
                         </div>
                         <!-- Argument 6 -->
-                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-lg bg-white">
+                        <div class="grid md:grid-cols-3 gap-6 p-4 border border-[#E7E0D1] rounded-lg bg-white">
                             <div class="md:border-r md:pr-6">
                                 <h4 class="font-serif text-xl font-bold mb-3 text-[#3D4451]">6. Targum’s Messianic Reference Supports Deity</h4>
                                 <p class="font-semibold text-gray-800">Pro-Deity Argument (Christian Position)</p>
@@ -576,11 +654,14 @@
                 </div>
             </div>
 
-            <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-                <h4 class="font-serif text-2xl font-bold mb-3 text-[#3D4451]">Final Verdict</h4>
-                <p class="max-w-3xl mx-auto text-lg text-gray-600">
+            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#A43820] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700">
                     The child of Isaiah 9:6 is a human king, likely Hezekiah, celebrated in the context of the Syro-Ephraimite and Assyrian crises (734–701 BCE). His titles—<span class="font-hebrew">אֵל גִּבּוֹר</span> (El Gibbor, “Mighty Hero”) and <span class="font-hebrew">אֲבִי־עַד</span> (Avi-Ad, “Father of the Age”)—are theophoric and hyperbolic, reflecting God’s strength and the king’s enduring role, not divinity. The active verb <span class="font-hebrew">וַיִּקְרָא</span> (vayikra) assigns divine titles to God, not the child. Isaiah’s monotheism, early Jewish translations (LXX, Targum), New Testament silence, poetic conventions (e.g., Psalm 45:6, <span class="font-hebrew">כִּסְאֲךָ אֱלֹהִים</span> / kiseakha Elohim), and logical fallacies (anachronism, equivocation, special pleading, begging the question, suppressed evidence, appeal to authority, decontextualization) confirm this. The Christian divine interpretation relies on anachronistic Trinitarian assumptions, inconsistent translations, and selective evidence, making the human king interpretation more coherent with the Hebrew text, historical context, and Israelite theology.
                 </p>
+                </div>
             </footer>
         </main>
     </div>
@@ -639,8 +720,8 @@
         });
     </script>
 
-    <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-        <p class="text-sm text-gray-500">© 2025 Theological Library · All Rights Reserved</p>
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
 </body>
 </html>

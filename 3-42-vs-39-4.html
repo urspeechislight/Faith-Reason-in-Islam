@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A scholarly analysis of Qur'an verses 3:42 and 39:4 from a Shi'i theological perspective, refuting the concept of divine sonship.">
+    <meta property="og:title" content="Denying Sonship: A Shi'i Perspective on 3:42 and 39:4">
+    <meta property="og:description" content="A scholarly analysis of Qur'an verses 3:42 and 39:4 from a Shi'i theological perspective, refuting the concept of divine sonship.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/3-42-vs-39-4.html">
     <meta name="keywords" content="Tawhid, Shi'i Islam, Qur'an, Jesus in Islam, Maryam, Tafsir, Kitab al-Tawhid, Shaykh Saduq, Divine Sonship, Christology">
     <title>Denying Sonship: A Shi'i Perspective on 3:42 and 39:4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Scholarly Neutrals (Off-white, Dark Slate, Muted Gold Accent) -->
     <!-- Application Structure Plan: A tabbed interface with four core sections (Linguistic, Doctrinal, Logical, Historical) was chosen to break down the complex theological argument into digestible parts. This avoids overwhelming the user with a long scroll and allows for focused exploration of each pillar of the refutation. Interactive elements like accordions for narrations and distinct cards for logical points enhance engagement and clarity. The goal is to guide the user through the argument step-by-step, making the dense information accessible and understandable. -->
     <!-- Visualization & Content Choices: The report is entirely textual and argumentative. Goal: Inform/Compare/Organize. Method: Structured HTML/CSS with interactive components. Interactions: Tab navigation to switch between argument pillars. Accordions to cleanly present scriptural evidence (Hadith, Tafsir, Lexical entries, Historical context) with original Arabic and translations. Clickable cards and accordions to deconstruct the logical syllogism. Justification: These choices present dense text in a structured, non-linear, and engaging way, improving comprehension over a static document. Library/Method: Vanilla JavaScript for all interactions. CONFIRMATION: NO SVG/Mermaid used. -->
@@ -20,16 +24,30 @@
             background-color: #FDFBF7;
             color: #3D4451;
         }
+        main p {
+            line-height: 1.7;
+        }
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
         .font-amiri {
             font-family: 'Amiri', serif;
         }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
         .tab.active {
             border-color: #B99C6B;
-            color: #B99C6B;
+            color: #8A6D3B;
             background-color: #FDFBF7;
+        }
+        .accordion-header {
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #FAF6EF;
         }
         .accordion-header svg {
             transition: transform 0.3s ease;
@@ -47,82 +65,126 @@
             text-align: right;
         }
         .analysis-section {
-            margin-bottom: 1.5rem; /* Increased margin for better separation */
+            margin-bottom: 1.5rem;
         }
         .analysis-heading {
             font-weight: 700;
             color: #3D4451;
-            margin-bottom: 0.5rem; /* Increased margin */
-            font-size: 1.1rem; /* Slightly larger heading */
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
         }
         .quote-block .transliteration {
             margin-top: 0.75rem;
             margin-bottom: 0.75rem;
         }
         .hadith-callout {
-            border-left-width: 4px;
-            border-left-color: #B99C6B; /* Muted Gold */
-            background-color: #FFFCF5; /* Lighter cream for contrast */
-            padding-left: 1rem;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
         }
         .quran-callout {
-            border-left-width: 4px;
-            border-left-color: #a0aec0; /* Muted Gray */
-            background-color: #f7fafc; /* Lighter Gray */
-            padding-left: 1rem;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .thesis-box {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .conclusion-box {
+            border: 1px solid #B99C6B;
+            background-color: #F8F1E2;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
         }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto px-4 py-8 md:py-12">
-        
-        <header class="text-center mb-12">
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-2">A Theological & Linguistic Analysis</h1>
-            <p class="text-md md:text-lg text-gray-500">Examining Divine Selection and Sonship in Qur'an 3:42 and 39:4</p>
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <nav class="mb-10">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
+        </nav>
+
+        <header class="mb-12">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Theological Analysis</p>
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">A Theological & Linguistic Analysis</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Examining Divine Selection and Sonship in Qur'an 3:42 and 39:4</p>
+            <hr class="mt-10 border-[#E7E0D1]">
         </header>
 
         <main>
-            <section id="argument" class="mb-12 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
-                <h2 class="font-serif text-2xl font-bold mb-4 text-[#B99C6B]">The Argument Under Examination</h2>
+            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
                 <div class="analysis-section">
                     <h5 class="analysis-heading">Background to the Debate</h5>
                     <p class="mb-4 text-gray-600">This analysis addresses a specific polemical argument sometimes raised in interfaith dialogues. In Christian theology, Jesus is often seen as God's literal son, but Islam views this as associating partners with God (shirk), emphasizing His indivisible oneness (Tawḥīd). This argument misreads Qur'anic verses to bridge that theological gap by constructing a syllogism from two separate verses, one discussing Maryam's divine selection and another positing a hypothetical about God taking a son. The following sections will deconstruct this syllogism to demonstrate its invalidity.</p>
                 </div>
                 <p class="mb-6 text-gray-600">Here is the argument in its formal structure:</p>
                 <div class="space-y-4 mb-8">
-                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                    <div class="premise-card">
                         <p class="font-semibold text-gray-800">Premise 1: A Conditional Blueprint</p>
                         <p class="text-gray-600 mb-2">The first premise is drawn from Sūrat al-Zumar, which establishes a hypothetical condition for how God could take a son: by choosing (`iṣṭifā`) from His creation. The verse reads:</p>
                         <blockquote class="quran-callout">
                             <p class="rtl font-amiri text-xl" lang="ar">لَوْ أَرَادَ اللَّهُ أَنْ يَتَّخِذَ وَلَدًا لَاصْطَفَىٰ مِمَّا يَخْلُقُ مَا يَشَاءُ ۚ سُبْحَانَهُ ۖ هُوَ اللَّهُ الْوَاحِدُ الْقَهَّارُ</p>
                             <p class="italic transliteration">Law arāda-llāhu an yattakhidha waladan laṣṭafā mimmā yakhluqu mā yashāʾ, subḥānahu huwa-llāhu-l-wāḥidu-l-qahhār.</p>
                             <p class="translation">"Had Allah willed to take a son, He could have chosen from what He creates whatever He wills. Glory be to Him! He is Allah, the One, the Prevailing."</p>
-                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 39:4</cite>
+                            <cite class="text-sm text-gray-500">- Qur'an 39:4</cite>
                         </blockquote>
                     </div>
-                    <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                    <div class="premise-card">
                         <p class="font-semibold text-gray-800">Premise 2: A Factual Fulfillment</p>
                         <p class="text-gray-600 mb-2">The second premise comes from Sūrat Āl ʿImrān, which states as a fact that God did choose (`iṣṭifā`) Maryam. The verse reads:</p>
                            <blockquote class="quran-callout">
                             <p class="rtl font-amiri text-xl" lang="ar">وَإِذْ قَالَتِ الْمَلَائِكَةُ يَا مَرْيَمُ إِنَّ اللَّهَ اصْطَفَاكِ وَطَهَّرَكِ وَاصْطَفَاكِ عَلَىٰ نِسَاءِ الْعَالَمِينَ</p>
                             <p class="italic transliteration">Wa-idh qālati-l-malāʾikatu yā Maryamu inna-llāha iṣṭafāki wa ṭahharaki wa-ṣṭafāki ʿalā nisāʾi-l-ʿālamīn.</p>
                             <p class="translation">"And [mention] when the angels said, 'O Maryam, indeed Allah has chosen you and purified you and chosen you above the women of the worlds.'"</p>
-                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 3:42</cite>
+                            <cite class="text-sm text-gray-500">- Qur'an 3:42</cite>
                         </blockquote>
                     </div>
-                    <div class="p-4 border-l-4 border-[#B99C6B] bg-amber-50 rounded-r-lg">
-                        <p class="font-semibold text-[#B99C6B]">Conclusion: A Divine Son</p>
+                    <div class="conclusion-card">
+                        <p class="font-semibold text-[#8A6D3B]">Conclusion: A Divine Son</p>
                         <p class="text-gray-700">Therefore, the argument concludes, Maryam's selection was the fulfillment of the condition for sonship, and Jesus is that chosen, divine son.</p>
                     </div>
                 </div>
                 <p class="text-gray-600">The following four-part analysis will demonstrate that this syllogism is untenable from a linguistic, doctrinal, logical, and historical perspective.</p>
             </section>
 
-            <div class="mb-8 border-b border-gray-200">
+            <div class="mb-8 border-b border-[#E7E0D1]">
                 <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
                     <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic" role="tab" aria-controls="linguistic" aria-selected="true">1. The Linguistic Proof</button>
                     <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal" role="tab" aria-controls="doctrinal" aria-selected="false">2. The Doctrinal Proof</button>
@@ -135,13 +197,13 @@
                 <div id="linguistic" class="tab-pane active" role="tabpanel" aria-labelledby="linguistic-tab">
                     <p class="mb-6 text-gray-600">Language is the battlefield for this argument. The polemic hinges on a misunderstanding of key Arabic terms. By showing how words like `law`, `iṣṭifā`, and `ittikhādh` are used in the Qur'an and classical Arabic, we can dismantle the entire syllogism at its root.</p>
                     <div id="linguistic-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="linguistic-1">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Function of `Law` (لَوْ): The Particle of Impossibility</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="linguistic-1">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>In Arabic grammar, the particle `لَوْ` (law) is not a simple conditional "if." It introduces a counterfactual statement, a scenario that is impossible or contrary to reality. Its function is to negate the premise by showing the absurdity of its consequence. It is akin to the English phrase "if only" used to express an impossible wish, such as "If only pigs could fly."</p>
@@ -149,17 +211,17 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example</h5>
                                         <p class="text-gray-700 mb-2">The authoritative lexicon `Lisān al-`Arab` defines the function of `law` with exacting clarity. Pre-Islamic poetry, the pinnacle of Arabic eloquence, often uses `law` this way, providing a cultural key to Qur'anic rhetoric. For instance, the poet Imru' al-Qais uses `law` to lament the death of a beloved. He is not speculating about a possibility, but expressing the pain of a reality that cannot be changed, a soul fragmented by grief that cannot die a single, simple death. His use of `law` signals a wish so impossible that it underscores the depth of his despair.</p>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2 quote-block">
+                                        <blockquote class="quran-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">لَوْ: حَرْفٌ يَقْتَضِي امْتِناعَ ما يَلِيهِ واسْتِلْزامَهُ لِتالِيهِ</p>
                                             <p class="italic transliteration">Law: ḥarfun yaqtaḍī imtināʿa mā yalīhi wa-istilzāmahu li-tālīhi.</p>
                                             <p class="translation">"`Law`: A particle that necessitates the impossibility of what follows it, and its necessary connection to what comes after."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Lisān al-`Arab</cite>
+                                            <cite class="text-sm text-gray-500">- Lisān al-`Arab</cite>
                                         </blockquote>
-                                        <blockquote class="border-l-4 border-[#B99C6B] pl-4 my-2 quote-block">
+                                        <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">فَلَوْ أَنَّهَا نَفْسٌ تَمُوتُ سَوِيَّةً ... وَلَكِنَّهَا نَفْسٌ تَسَاقَطُ أَنْفُسَا</p>
                                             <p class="italic transliteration">Fa-law ʾannahā nafsun tamūtu sawiyyatan ... wa-lakinnahā nafsun tasāqaṭu ʾanfusā.</p>
                                             <p class="translation">"If only (`law`) it were one soul that died at once, but it is a soul from which other souls fall away."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Mu`allaqa of Imru' al-Qais</cite>
+                                            <cite class="text-sm text-gray-500">- Mu`allaqa of Imru' al-Qais</cite>
                                         </blockquote>
                                            <p class="text-gray-700 mt-3">In these lines, Imru’ al-Qais voices the agony of enduring multiple waves of grief. He longs for a single, merciful end to suffering, yet knows such an end is impossible. A modern parallel is someone saying, “If only I could pause time and stay here forever,” or “If only I could go back and undo what happened.” The statement communicates yearning for what reality cannot grant.</p>
                                     </div>
@@ -174,13 +236,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="linguistic-2">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: `Iṣṭifā'` vs. `Ittikhādh`</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="linguistic-2">
-                                <div class="p-4 border-t border-gray-200 grid md:grid-cols-2 gap-8">
+                                <div class="p-4 border-t border-[#E7E0D1] grid md:grid-cols-2 gap-8">
                                     <div class="space-y-4">
                                         <h4 class="text-xl font-bold font-amiri text-center">Iṣṭifā' (اِصْطِفَاء)</h4>
                                         <div class="analysis-section">
@@ -188,11 +250,11 @@
                                             <p class="text-gray-700 mb-2">The term `Iṣṭifā'` denotes an act of divine selection that honors a creature for its purity or for a specific, noble task, without altering its fundamental nature. Think of a jeweler selecting the purest diamond from a pile; the jeweler does not create its purity but recognizes and elevates it. This is what `iṣṭifā` means when God selects Maryam: honoring her purity and entrusting her with a sacred mission.</p>
                                             <h5 class="analysis-heading mt-4">Example</h5>
                                             <p class="text-gray-700 mb-2">`Lisān al-`Arab` explains this by connecting the verb to its root concept of purity (`ṣ-f-w`):</p>
-                                            <blockquote class="border-l-4 border-gray-300 pl-4 my-2 quote-block">
+                                            <blockquote class="quran-callout">
                                                 <p class="rtl font-amiri text-xl" lang="ar">الصَّفْوُ: خلوص الشيء من الكدر... واصطفاه: اختاره.</p>
                                                 <p class="italic transliteration">Al-Ṣafw: khulūṣu ash-shayʾi min al-kadar... wa-ṣṭafāhu: ikhtārahū.</p>
                                                 <p class="translation">"Al-Ṣafw: The freedom of a thing from any impurity... and `iṣṭafāhu` means he chose him."</p>
-                                                <cite class="text-sm text-gray-500 block mt-2">- Lisān al-`Arab</cite>
+                                                <cite class="text-sm text-gray-500">- Lisān al-`Arab</cite>
                                             </blockquote>
                                             <p class="text-gray-700 mt-4">A modern parallel might be someone recognizing a student for exceptional character and appointing them to represent their school at a global event. The appointment does not change the student’s humanity; it recognizes and entrusts them with a noble role.</p>
                                             <h5 class="analysis-heading mt-4">Application</h5>
@@ -208,7 +270,7 @@
                                             <p class="text-gray-700 mb-2">The term `Ittikhādh` refers to an act of taking something for oneself, often to fulfill a need or purpose. It carries a sense of adoption or transformation, where the thing taken is placed into a new role or status it did not previously have. In Qur'anic theology, this distinction is crucial: when scripture rejects the notion that God “takes a son,” it denies that He could ever adopt or designate someone out of need, since the All-Sufficient has no lack or deficiency.</p>
                                             <h5 class="analysis-heading mt-4">Example</h5>
                                             <p class="text-gray-700 mb-2">The authoritative lexicon `Lisān al-`Arab` explains this sense of designation or transformation, derived from the root `ʾ-kh-dh` (to take):</p>
-                                            <blockquote class="border-l-4 border-gray-300 pl-4 my-2 quote-block">
+                                            <blockquote class="quran-callout">
                                                 <p class="rtl font-amiri text-xl" lang="ar">واتَّخَذْتُه وليّاً أَي صَيَّرْتُه. وقوله تعالى: واتَّخَذَ الله إِبراهيمَ خَلِيلاً؛ أَي صَيَّرَه خَلِيلاً</p>
                                                 <p class="italic transliteration">Wa-ittakhadhtuhu waliyyan ʾay ṣayyartuhu. Wa-qawluhu taʿālā: Wa-ittakhadha-llāhu Ibrāhīma khalīlan; ʾay ṣayyarahu khalīlan.</p>
                                                 <p class="translation">"And `ittakhadhtuhu waliyyan` means I <strong>made</strong> him a friend or ally. And the statement of the Exalted: `And Allah took (`ittakhadha`) Ibrāhīm as an intimate friend (`khalīl`)`; meaning, He <strong>made</strong> him an intimate friend."</p>
@@ -222,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="md:col-span-2 p-4 mt-4 bg-gray-50 rounded-lg">
-                                    <h5 class="analysis-heading text-lg text-center text-[#B99C6B]">Synthesis of Lexical Proof</h5>
+                                    <h5 class="analysis-heading text-lg text-center text-[#8A6D3B]">Synthesis of Lexical Proof</h5>
                                     <p class="text-gray-700">The polemical argument unravels when examined through the precision of Qur’anic vocabulary. The two verbs at its core, `iṣṭifā` (divine selection) and `ittikhādh` (adoption or taking), occupy entirely different conceptual worlds. The first signifies God’s recognition of purity, a gracious honoring without altering the nature of the chosen servant. The second implies taking something for one’s own purpose or need, a concept incompatible with God’s absolute self-sufficiency.</p>
                                     <p class="text-gray-700 mt-3">The Christian syllogism depends on collapsing these two verbs into a single meaning, yet the Qur’an itself never conflates them. When Maryam is described as *muṣṭafā* (chosen), it is a statement of her purity and the noble task entrusted to her. When the Qur’an speaks of *ittikhādh walad* (taking a son), it frames the phrase as a counterfactual impossibility, introduced by `law` and immediately followed by divine transcendence: “Glory be to Him!” (39:4). These verbal choices are deliberate and polemical, exposing the flaw at the heart of the argument.</p>
                                     <p class="text-gray-700 mt-3">By tracing the Qur’an’s own lexicon, the argument for divine sonship collapses. The language of honor cannot be repurposed into the language of need. The Qur’anic response is not subtle accommodation but decisive refutation, dismantling the notion of divine offspring at the very level of words themselves.</p>
@@ -233,19 +295,19 @@
                 </div>
 
                 <div id="doctrinal" class="tab-pane hidden" role="tabpanel" aria-labelledby="doctrinal-tab">
-                    <div class="mb-6 p-4 bg-amber-50 border-l-4 border-[#B99C6B] rounded-r-lg">
-                        <h3 class="font-semibold text-lg text-[#B99C6B]">Why This Matters: The Doctrinal Proof</h3>
-                        <p class="text-gray-700">Even if the linguistic nuances were misunderstood, Shi'i theology itself blocks any notion of divine sonship. The teachings of the Ahl al-Bayt (a) clarify God’s nature, the purpose of miracles, and the function of divine will, demonstrating that God’s act of choosing Maryam was an honor, never a change in His essence or a partnership with creation.</p>
+                    <div class="thesis-box mb-6">
+                        <h3 class="font-semibold text-lg text-[#8A6D3B]">Why This Matters: The Doctrinal Proof</h3>
+                        <p class="text-gray-700">Even if the linguistic nuances were misunderstood, Shi'i theology itself blocks any notion of divine sonship. The teachings of the Ahl al-Bayt <span class="honorific">﵈</span> clarify God’s nature, the purpose of miracles, and the function of divine will, demonstrating that God’s act of choosing Maryam was an honor, never a change in His essence or a partnership with creation.</p>
                     </div>
                     <div id="doctrinal-accordion" class="space-y-4">
                         <!-- Principle 1 -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-1">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 1: Qur'an 39:4 as Verse of Invalidation (`Ibṭāl`)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="doctrinal-1">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">Early Shi'i tafsir treats Qur'an 39:4 as a direct rebuttal to Christian claims of divine sonship rather than as an allowance for such an idea. Tafsīr al-Qummī records that this verse was revealed as a response to their assertion, presenting a rhetorical stance: even if one were to imagine the claim for the sake of argument, the logic would still collapse upon itself. This style of reasoning not only refutes the claim but also shows its impossibility in light of God’s perfection.</p>
@@ -257,7 +319,7 @@
                                             <p class="rtl font-amiri text-xl" lang="ar">هو ما قالت النصارى ان المسيح ابن الله... فقال الله عز وجل إبطالا له... وجواب هؤلاء الذين زعموا ذلك في سورة الزمر في قوله : لو أراد الله ان يتخذ ولدا لاصطفى مما يخلق ما يشاء سبحانه.</p>
                                             <p class="italic transliteration">Huwa mā qālati-n-naṣārā anna-l-masīḥa ibnu-llāh... fa-qāla-llāhu ʿazza wa jalla ibṭālan lahu... wa jawābu hāʾulāʾi-lladhīna zaʿamū dhālika fī Sūrati-z-Zumar fī qawlihi: Law arāda-llāhu an yattakhidha waladan laṣṭafā mimmā yakhluqu mā yashāʾu subḥānahu.</p>
                                             <p class="translation">"This refers to the Christians saying that the Messiah is the son of God. So Allah, the Mighty and Majestic, responded in <strong>invalidation (`ibṭālan`)</strong> and provided the <strong>answer (`jawāb`)</strong> in Sūrat al-Zumar: <strong>'Had Allah willed to take a son, He could have chosen from what He creates whatever He wills. Glory be to Him!'</strong>"</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-Qummī, Vol. 2, p. 246</cite>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-Qummī, Vol. 2, p. 246</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">This statement functions like a parent correcting a misunderstanding: imagine someone claims a teacher favors one child as their own. The teacher replies, “If I ever took a student as my own child—which I do not—I would choose from my students as I please.” The framing exposes the claim as baseless while affirming the teacher’s impartiality and authority. In the Qur’anic verse, this rhetorical move affirms God’s transcendence, cutting off the very possibility of divine offspring.</p>
                                     </div>
@@ -274,13 +336,13 @@
                         </div>
 
                         <!-- Principle 2 -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-2">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 2: The Virgin Birth as a Sign (`Āyah`)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="doctrinal-2">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The Qur'an presents Jesus's miraculous birth not as proof of divine parenthood, but as a deliberate sign of God's boundless creative power and mercy. This context reframes the miracle away from lineage and toward divine action: a demonstration that God can create in any manner He wills, without implying family or partnership.</p>
@@ -292,13 +354,13 @@
                                             <p class="rtl font-amiri text-xl" lang="ar">وَلِنَجْعَلَهُ آيَةً لِلنَّاسِ وَرَحْمَةً مِنَّا</p>
                                             <p class="italic transliteration">Wa li-najʿalahu āyatan li-n-nāsi wa raḥmatan minnā</p>
                                             <p class="translation">"...And that We may make him a <strong>sign (`āyah`)</strong> for the people and a mercy from Us."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 19:21</cite>
+                                            <cite class="text-sm text-gray-500">- Qur'an 19:21</cite>
                                         </blockquote>
                                         <blockquote class="quran-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إِنَّ مَثَلَ عِيسَىٰ عِندَ اللَّهِ كَمَثَلِ آدَمَ ۖ خَلَقَهُ مِن تُرَابٍ ثُمَّ قَالَ لَهُ كُن فَيَكُونُ</p>
                                             <p class="italic transliteration">Inna mathala ʿĪsā ʿinda-llāhi ka-mathali Ādama; khalaqahu min turābin thumma qāla lahu kun fa-yakūn.</p>
                                             <p class="translation">"Indeed, the <strong>example of Jesus</strong> to Allah is <strong>like that of Adam</strong>. He created him from dust; then He said to him, 'Be,' and he was."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 3:59</cite>
+                                            <cite class="text-sm text-gray-500">- Qur'an 3:59</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">To make this clearer, consider a modern parallel: when someone climbs Everest without oxygen, we call it a sign of human endurance, not evidence that the climber is superhuman. Likewise, the virgin birth signals divine omnipotence, not divine parentage. The miracle is about what God can do, not about creating a new kind of godhood.</p>
                                     </div>
@@ -315,13 +377,13 @@
                         </div>
 
                         <!-- Principle 3 -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-3">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 3: Divine Will in Shi‘i Theology (Kitāb al-Tawḥīd)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="doctrinal-3">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">Shaykh al-Ṣadūq, in <em>Kitāb al-Tawḥīd</em>, highlights two distinct dimensions of God’s will. This insight preserves divine simplicity: God’s attributes remain united with His essence, avoiding any notion that God’s eternal nature changes when He acts within creation.</p>
@@ -333,18 +395,18 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example</h5>
-                                        <p class="mb-2 text-gray-600">Imam al-Ṣādiq (a) clarified this principle in narrations preserved by Shaykh al-Ṣadūq:</p>
+                                        <p class="mb-2 text-gray-600">Imam al-Ṣādiq <span class="honorific">﵇</span> clarified this principle in narrations preserved by Shaykh al-Ṣadūq:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">قِيلَ لِأَبِي عَبْدِ اللَّهِ (ع): أَرَادَ اللَّهُ شَيْئًا فَكَانَ؟ قَالَ: مَا أَرَادَ اللَّهُ شَيْئًا إِلَّا وَقَالَ لَهُ كُنْ فَيَكُونُ.</p>
                                             <p class="italic transliteration">Qīla li-Abī ʿAbdillāh (ʿa): Arāda Allāhu shayʾan fa-kāna? Qāla: Mā arāda Allāhu shayʾan illā wa qāla lahu kun fa-yakūn.</p>
-                                            <p class="translation">“It was said to Imam al-Ṣādiq (a): ‘When Allah wills something, does it then occur?’ He replied: ‘Allah does not will a thing except that He says to it: Be, and it is.’”</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Kitāb al-Tawḥīd, Bāb al-Irādah</cite>
+                                            <p class="translation">“It was said to Imam al-Ṣādiq <span class="honorific">﵇</span>: ‘When Allah wills something, does it then occur?’ He replied: ‘Allah does not will a thing except that He says to it: Be, and it is.’”</p>
+                                            <cite class="text-sm text-gray-500">- Kitāb al-Tawḥīd, Bāb al-Irādah</cite>
                                         </blockquote>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إِنَّ اللَّهَ لَا يُوصَفُ بِإِرَادَةٍ حَادِثَةٍ وَلَكِنْ يُوصَفُ بِأَنَّهُ لَمْ يَزَلْ مُرِيداً.</p>
                                             <p class="italic transliteration">Inna Allāha lā yūṣafu bi-irādah ḥādithah walākin yūṣafu bi-annahū lam yazal murīdan.</p>
                                             <p class="translation">“Allah is not described as having a will that arises anew; rather He is described as having always been willing.”</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Kitāb al-Tawḥīd, Bāb Ṣifāt al-Dhāt</cite>
+                                            <cite class="text-sm text-gray-500">- Kitāb al-Tawḥīd, Bāb Ṣifāt al-Dhāt</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">To visualize this, consider a master architect: their lifelong vision for building is intrinsic, but the decision to construct a specific bridge at a specific time is actional. The bridge does not change the architect’s essence; it expresses their enduring vision in a moment of time. Likewise, God’s intrinsic will remains eternal, while His actional will manifests in particular creative acts like the virgin birth of Jesus.</p>
                                     </div>
@@ -361,13 +423,13 @@
                         </div>
 
                         <!-- Principle 4 -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-4">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 4: Status of `ʿIbād Mukramūn` (Honored Servants)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="doctrinal-4">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The Qur'an clarifies the true status of those mistakenly called "sons" or "partners" of God, such as angels, Jesus, or other revered figures. It designates them as `ʿibād mukramūn` (honored servants), emphasizing their <strong>created nature and their absolute subservience to God</strong>. Furthermore, it clarifies that their ability to intercede (`shafāʿah`) is not an inherent right but a conditional privilege granted by God, dependent on His approval and the spiritual state of the one being interceded for.</p>
@@ -379,21 +441,21 @@
                                             <p class="rtl font-amiri text-xl" lang="ar">وَقَالُوا اتَّخَذَ الرَّحْمَٰنُ وَلَدًا ۗ سُبْحَانَهُ ۚ بَلْ عِبَادٌ مُّكْرَمُونَ ۝ لَا يَسْبِقُونَهُ بِالْقَوْلِ وَهُم بِأَمْرِهِ يَعْمَلُونَ ۝ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يَشْفَعُونَ إِلَّا لِمَنِ ارْتَضَىٰ وَهُم مِّنْ خَشْيَتِهِ مُشْفِقُونَ</p>
                                             <p class="italic transliteration">Wa qālū ittakhadha al-Raḥmānu waladan ۗ subḥānahu ۚ bal ʿibādun mukramūn ۝ lā yasbiqūnahu bil-qawli wa hum bi-amrihi yaʿmalūn ۝ yaʿlamu mā bayna aydīhim wa mā khalfahum wa lā yashfaʿūna illā li-man irtaḍā wa hum min khashyatihi mushfiqūn</p>
                                             <p class="translation">"And they say, 'The Most Merciful has taken a son.' Exalted is He! Rather, they are [but] honored servants. They do not precede Him in speech, and they act [only] by His command. He knows what is [present] before them and what will be after them, and they do not intercede except for one whom He approves, and they are from fear of Him apprehensive."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 21:26-28</cite>
+                                            <cite class="text-sm text-gray-500">- Qur'an 21:26-28</cite>
                                         </blockquote>
                                         <p class="mb-2 text-gray-600">`Tafsīr al-Qummī` clarifies the target of this verse:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">هو ما قالت النصارى إن المسيح ابن الله وما قالت اليهود عزير ابن الله وقالوا في الأئمة عليهم السلام ما قالوا فقال الله سبحانه سبحانه أنفة له بل عباد مكرمون يعني هؤلاء الذين زعموا أنهم ولد الله</p>
                                             <p class="italic transliteration">Huwa mā qālati-n-naṣārā inna-l-masīḥa ibnu-llāh wa mā qālati-l-yahūdu ʿUzayr ibnu-llāh wa qālū fī-l-aʾimmati ʿalayhimu-s-salāmu mā qālū fa-qāla-llāhu subḥānahu subḥānahu anfatan lahu bal ʿibādun mukramūn yaʿnī hāʾulāʾi-lladhīna zaʿamū annahum waladu-llāh.</p>
-                                            <p class="translation">"This is what the Christians said, that the Messiah is the son of God, and what the Jews said, that Uzayr is the son of God, and what they said about the Imams (a) what they said. So Allah, glory be to Him, said, in disdain for it: 'Rather, they are honored servants,' meaning those who claimed they were the children of God."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-Qummī (from Tafsīr al-Ṣāfī, Vol. 3, p. 335)</cite>
+                                            <p class="translation">"This is what the Christians said, that the Messiah is the son of God, and what the Jews said, that Uzayr is the son of God, and what they said about the Imams <span class="honorific">﵈</span> what they said. So Allah, glory be to Him, said, in disdain for it: 'Rather, they are honored servants,' meaning those who claimed they were the children of God."</p>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-Qummī (from Tafsīr al-Ṣāfī, Vol. 3, p. 335)</cite>
                                         </blockquote>
-                                        <p class="mb-2 text-gray-600">Regarding intercession, Imam al-Kazim (a) (via Imam al-Riḍā (a)) clarifies the condition for `shafāʿah`:</p>
+                                        <p class="mb-2 text-gray-600">Regarding intercession, Imam al-Kazim <span class="honorific">﵇</span> (via Imam al-Riḍā <span class="honorific">﵇</span>) clarifies the condition for `shafāʿah`:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">قال إنما شفاعتي لأهل الكباير من أمتي فأما المحسنون منهم فما عليهم من سبيل قيل يا بن رسول الله صلى الله عليه وآله كيف يكون الشفاعة لأهل الكبائر والله تعالى يقول ولا يشفعون إلا لمن ارتضى ومن يرتكب الكبيرة لا يكون مرتضى فقال ما من مؤمن يرتكب ذنبا إلا سائه ذلك وندم عليه . وقال النبي صلى الله عليه وآله كفى بالندم توبة وقال من سرته حسنة وساءته سيئة فهو مؤمن فمن لم يندم على ذنب يرتكبه فليس بمؤمن ولم تجب له الشفاعة وكان ظالما والله تعالى ذكره يقول ما للظالمين من حميم ولا شفيع يطاع فقيل له يا ابن رسول الله وكيف لا يكون مؤمنا من لم يندم على ذنب يرتكبه فقال ما من أحد يرتكب كبيرة من المعاصي وهو يعلم أن سيعاقب عليها إلا ندم على ما ارتكب ومتى ندم كان تائبا مستحقا للشفاعة ومتى لم يندم عليها كان مصرا والمصر لا يغفر له لأنه غير مؤمن بعقوبة ما ارتكب ولو كان مؤمنا بالعقوبة لندم وقد قال النبي صلى الله عليه</p>
                                             <p class="italic transliteration">Qāla innamā shafāʿatī li-ahli-l-kabāʾiri min ummatī fa-ammā al-muḥsinūna minhum fa-mā ʿalayhim min sabīl. Qīla yā bna Rasūli-llāhi ṣallā-llāhu ʿalayhi wa ālihi kayfa takūnu-sh-shafāʿatu li-ahli-l-kabāʾiri wa-llāhu taʿālā yaqūlu wa lā yashfaʿūna illā li-mani-rtaḍā wa man yartakibu-l-kabīrata lā yakūnu murtaḍan? Fa-qāla mā min muʾminin yartakibu dhanban illā sāʾahu dhālika wa nadima ʿalayh. Wa qāla-n-nabiyyu ṣallā-llāhu ʿalayhi wa ālihi kafā bi-n-nadami tawbah. Wa qāla man sarrathu ḥasanatun wa sāʾathu sayyiʾatun fa-huwa muʾmin. Fa-man lam yandim ʿalā dhanbin yartakibuhu fa-laysa bi-muʾmin wa lam tajib lahu-sh-shafāʿatu wa kāna ẓāliman. Wa-llāhu taʿālā dhikruhu yaqūlu mā li-ẓ-ẓālimīna min ḥamīm wa lā shafīʿin yuṭāʿ. Fa-qīla lahu yā bna Rasūli-llāhi wa kayfa lā yakūnu muʾminan man lam yandim ʿalā dhanbin yartakibuhu? Fa-qāla mā min aḥadin yartakibu kabīratan min al-maʿāṣī wa huwa yaʿlamu anna sa-yuʿāqabu ʿalayhā illā nadima ʿalā mā irtakab wa matā nadima kāna tāʾiban mustaḥiqan li-sh-shafāʿah. Wa matā lam yandim ʿalayhā kāna muṣirran wa-l-muṣirru lā yughfaru lahu li-annahū ghayru muʾminin bi-ʿuqūbati mā irtakab. Wa law kāna muʾminan bi-l-ʿuqūbati la-nadim. Wa qad qāla-n-nabiyyu ṣallā-llāhu ʿalayhi: "No major sin with seeking forgiveness, and no minor sin with persistence."</p>
-                                            <p class="translation">"He (the Prophet) said: 'Indeed, my intercession is for the perpetrators of major sins among my nation. As for the good-doers among them, there is no way against them.' It was said: 'O son of the Messenger of Allah, how can intercession be for the perpetrators of major sins when Allah, the Exalted, says: "And they do not intercede except for one whom He approves," and one who commits a major sin is not approved?' He said: 'There is no believer who commits a sin except that he feels bad about it and regrets it. And the Prophet (s) said: "Regret is sufficient repentance." And he said: "Whoever is pleased by his good deed and displeased by his bad deed, he is a believer." So whoever does not regret a sin he commits is not a believer, and intercession is not obligatory for him, and he is an oppressor. And Allah, Exalted is His remembrance, says: "For the wrongdoers there will be no devoted friend and no intercessor [who will be] obeyed." It was said to him: 'O son of the Messenger of Allah, how can one who does not regret a sin he commits not be a believer?' He said: 'No one commits a major sin while knowing that he will be punished for it except that he regrets what he committed. And whenever he regrets, he is repentant and worthy of intercession. And whenever he does not regret it, he is persistent [in sin], and the persistent one is not forgiven because he is not a believer in the punishment for what he committed. If he were a believer in the punishment, he would regret it. And the Prophet (s) said: "No major sin with seeking forgiveness, and no minor sin with persistence."'"</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-Ṣāfī, Vol. 3, p. 336 (from Al-Tawḥīd and Al-Khiṣāl)</cite>
+                                            <p class="translation">"He (the Prophet) said: 'Indeed, my intercession is for the perpetrators of major sins among my nation. As for the good-doers among them, there is no way against them.' It was said: 'O son of the Messenger of Allah, how can intercession be for the perpetrators of major sins when Allah, the Exalted, says: "And they do not intercede except for one whom He approves," and one who commits a major sin is not approved?' He said: 'There is no believer who commits a sin except that he feels bad about it and regrets it. And the Prophet <span class="honorific">ﷺ</span> said: "Regret is sufficient repentance." And he said: "Whoever is pleased by his good deed and displeased by his bad deed, he is a believer." So whoever does not regret a sin he commits is not a believer, and intercession is not obligatory for him, and he is an oppressor. And Allah, Exalted is His remembrance, says: "For the wrongdoers there will be no devoted friend and no intercessor [who will be] obeyed." It was said to him: 'O son of the Messenger of Allah, how can one who does not regret a sin he commits not be a believer?' He said: 'No one commits a major sin while knowing that he will be punished for it except that he regrets what he committed. And whenever he regrets, he is repentant and worthy of intercession. And whenever he does not regret it, he is persistent [in sin], and the persistent one is not forgiven because he is not a believer in the punishment for what he committed. If he were a believer in the punishment, he would regret it. And the Prophet <span class="honorific">ﷺ</span> said: "No major sin with seeking forgiveness, and no minor sin with persistence."'"</p>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-Ṣāfī, Vol. 3, p. 336 (from Al-Tawḥīd and Al-Khiṣāl)</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
@@ -409,13 +471,13 @@
                         </div>
 
                         <!-- Principle 5: The Absolute Denial of Divine Sonship (Ittikhādh Walad) -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-5">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 5: The Absolute Denial of Divine Sonship (`Ittikhādh Walad`)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="doctrinal-5">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The concept of God "taking a son" (`ittikhādh walad`) is fundamentally rejected in Islamic doctrine, as it implies a deficiency, need, or partnership that is incompatible with God's absolute self-sufficiency (`Al-Ghanī`) and unique oneness (`Tawḥīd`). This rejection is not merely a denial of physical procreation but a comprehensive theological stance against any form of association that compromises God's transcendent nature.</p>
@@ -427,68 +489,68 @@
                                             <p class="rtl font-amiri text-xl" lang="ar">مَا كَانَ لِلَّهِ أَن يَتَّخِذَ مِن وَلَدٍ ۖ سُبْحَانَهُ ۚ إِذَا قَضَىٰ أَمْرًا فَإِنَّمَا يَقُولُ لَهُ كُن فَيَكُونُ</p>
                                             <p class="italic transliteration">Mā kāna lillāhi an yattakhidha min waladin ۖ subḥānahu ۚ idhā qaḍā amran fa-innamā yaqūlu lahu kun fa-yakūn</p>
                                             <p class="translation">"It is not befitting for Allah to take a son. Exalted is He! When He decrees a matter, He only says to it, 'Be,' and it is."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Qur'an 19:35</cite>
+                                            <cite class="text-sm text-gray-500">- Qur'an 19:35</cite>
                                         </blockquote>
-                                        <p class="mb-2 text-gray-600">This denial is further reinforced by narrations from the Ahl al-Bayt. Imam al-Baqir (a), commenting on Qur'an 17:111 (`وقل الحمد لله الذي لم يتخذ ولدا ولم يكن له شريك في الملك ولم يكن له ولي من الذل وكبره تكبيرا`), clarifies the meaning of God having no `walī min al-dhull` (guardian from humiliation):</p>
+                                        <p class="mb-2 text-gray-600">This denial is further reinforced by narrations from the Ahl al-Bayt. Imam al-Baqir <span class="honorific">﵇</span>, commenting on Qur'an 17:111 (`وقل الحمد لله الذي لم يتخذ ولدا ولم يكن له شريك في الملك ولم يكن له ولي من الذل وكبره تكبيرا`), clarifies the meaning of God having no `walī min al-dhull` (guardian from humiliation):</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">لم يذل فيحتاج إلى ولي فينصره.</p>
                                             <p class="italic transliteration">Lam yadhillu fa-yaḥtāju ilā walīyin fa-yanṣuruhu.</p>
                                             <p class="translation">"He was not humiliated so as to need a guardian to help Him."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-Qummī, Vol. 2, p. 30</cite>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-Qummī, Vol. 2, p. 30</cite>
                                         </blockquote>
-                                        <p class="mb-2 text-gray-600">This profound theological point is also captured in a supplication taught by Imam al-Sadiq (a):</p>
+                                        <p class="mb-2 text-gray-600">This profound theological point is also captured in a supplication taught by Imam al-Sadiq <span class="honorific">﵇</span>:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">والحمد لله الذي لم يتخذ ولدا ولم يكن له شريك في الملك ولم يكن له ولى من الذل وكبره تكبيرا</p>
                                             <p class="italic transliteration">Wal-ḥamdu lillāhi alladhī lam yattakhidh waladan wa lam yakun lahu sharīkun fī al-mulk wa lam yakun lahu walīyun min al-dhull wa kabbirhu takbīrā</p>
                                             <p class="translation">"And praise be to Allah, who has not taken a son, and has no partner in [His] dominion, nor any protector out of weakness; and magnify Him with [all] magnificence."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-ʿAyyāshī, Vol. 2, p. 320</cite>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-ʿAyyāshī, Vol. 2, p. 320</cite>
                                         </blockquote>
-                                        <p class="mb-2 text-gray-600">Imam al-Sadiq (a) further articulates the implications of denying sonship:</p>
+                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> further articulates the implications of denying sonship:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">الحمد لله الذي لم يلد فيورث ولم يولد فيشارك.</p>
                                             <p class="italic transliteration">Al-ḥamdu lillāhi alladhī lam yalid fa-yūrath wa lam yūlad fa-yushārak.</p>
                                             <p class="translation">"Praise be to Allah who neither begets, so that He may inherit, nor is begotten, so that He may have a partner."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Al-Tawḥīd (from Biḥār al-Anwār, Vol. 3, p. 256)</cite>
+                                            <cite class="text-sm text-gray-500">- Al-Tawḥīd (from Biḥār al-Anwār, Vol. 3, p. 256)</cite>
                                         </blockquote>
-                                        <p class="mb-2 text-gray-600">The Prophet Muhammad (s) himself, when faced with claims of sonship, responded with a strong affirmation of God's transcendence, as interpreted by Ali ibn Ibrahim (Qummi) regarding Qur'an 43:81 (`قل إن كان للرحمن ولد فأنا أول العابدين`):</p>
+                                        <p class="mb-2 text-gray-600">The Prophet Muhammad <span class="honorific">ﷺ</span> himself, when faced with claims of sonship, responded with a strong affirmation of God's transcendence, as interpreted by Ali ibn Ibrahim (Qummi) regarding Qur'an 43:81 (`قل إن كان للرحمن ولد فأنا أول العابدين`):</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">يعني أول الآنفين له أن يكون له ولد.</p>
                                             <p class="italic transliteration">Yaʿnī awwalu al-ʾānifīna lahu an yakūna lahu walad.</p>
                                             <p class="translation">"Meaning, the first to disdain/reject that He has a son."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr Ali ibn Ibrahim (from Biḥār al-Anwār, Vol. 3, p. 256)</cite>
+                                            <cite class="text-sm text-gray-500">- Tafsīr Ali ibn Ibrahim (from Biḥār al-Anwār, Vol. 3, p. 256)</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">This interpretation, found in Tafsīr al-Qummī, describes the Prophet's (s) response as an emphatic rejection. While the explicit term "suspension of the impossible upon the impossible" (`taʿlīq al-muḥāl bi-al-muḥāl`) is not used by al-Qummī for this specific verse, the exegetical move implies impossibility. The Prophet (s) is depicted as being foremost in rejecting the notion of God having a son, thereby signaling that even the hypothetical premise cannot stand.</p>
+                                        <p class="text-gray-700 mt-3">This interpretation, found in Tafsīr al-Qummī, describes the Prophet's <span class="honorific">ﷺ</span> response as an emphatic rejection. While the explicit term "suspension of the impossible upon the impossible" (`taʿlīq al-muḥāl bi-al-muḥāl`) is not used by al-Qummī for this specific verse, the exegetical move implies impossibility. The Prophet <span class="honorific">ﷺ</span> is depicted as being foremost in rejecting the notion of God having a son, thereby signaling that even the hypothetical premise cannot stand.</p>
                                         <p class="text-gray-700 mt-3">Later Shi'i scholars further elaborate on this. `Allāma al-Majlisī, in <em>Biḥār al-Anwār</em> (Vol. 3, p. 256), quotes al-Qummī verbatim and comments briefly, framing it as an emphatic negation:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">هَذَا تَنْزِيهٌ وَإِبْطَالٌ لِدَعْوَاهُمْ، لَا تَصْدِيقٌ بِهَا</p>
                                             <p class="italic transliteration">Hādhā tanzīhun wa ibṭālun li-daʿwāhum, lā taṣdīqun bihā</p>
                                             <p class="translation">"This is [an expression of] transcendence and invalidation of their claim, not affirmation of it."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Biḥār al-Anwār, Vol. 3, p. 256</cite>
+                                            <cite class="text-sm text-gray-500">- Biḥār al-Anwār, Vol. 3, p. 256</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">Similarly, al-Ṭabrisī, in <em>Majmaʿ al-Bayān</em> on Qur'an 43:81, frames the conditional as `tanazzul` (descending to the opponent’s claim), which is functionally identical to `taʿlīq al-muḥāl bi-al-muḥāl` but without explicitly naming it:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">المعنى: إن كان ما تقولون حقاً – وحاشاه – فأنا أول من يوحده وينزهه</p>
                                             <p class="italic transliteration">Al-maʿnā: In kāna mā taqūlūna ḥaqqan — wa ḥāshāhu — fa-anā awwalu man yuwaḥḥiduhu wa yunazzihuhu</p>
                                             <p class="translation">"Meaning: If what you say were true — and far exalted is He [from that] — I would be the first to declare His unity and transcend Him."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Majmaʿ al-Bayān, Vol. 9, p. 89</cite>
+                                            <cite class="text-sm text-gray-500">- Majmaʿ al-Bayān, Vol. 9, p. 89</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">While the specific phrase `taʿlīq al-muḥāl bi-al-muḥāl` appears later in logical and rhetorical discussions (e.g., in works like Sharḥ al-Bāb al-Ḥādī ʿAshar by ʿAllāma al-Ḥillī and ʿAqāʾid al-Mufīd in discussions of divine attributes like the impossibility of corporeality or sonship), the underlying rhetorical device of negating an impossible condition is clearly present and recognized in meaning throughout Shi'i exegesis, even if not explicitly labeled by that term in early commentaries on this particular verse.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Application</h5>
-                                        <p class="text-gray-700">These doctrinal proofs, stemming directly from the Qur'an and the teachings of the Ahl al-Bayt (a), unequivocally demonstrate that `ittikhādh walad` is an impossible attribute for God. The denial is rooted in God's <strong>absolute self-sufficiency</strong>, His <strong>lack of need for a partner or heir</strong>, and His <strong>utter transcendence beyond human limitations of procreation or reliance</strong>. The very act of "taking" implies a need, which is antithetical to God's perfection.</p>
+                                        <p class="text-gray-700">These doctrinal proofs, stemming directly from the Qur'an and the teachings of the Ahl al-Bayt <span class="honorific">﵈</span>, unequivocally demonstrate that `ittikhādh walad` is an impossible attribute for God. The denial is rooted in God's <strong>absolute self-sufficiency</strong>, His <strong>lack of need for a partner or heir</strong>, and His <strong>utter transcendence beyond human limitations of procreation or reliance</strong>. The very act of "taking" implies a need, which is antithetical to God's perfection.</p>
                                         <p class="text-gray-700 mt-3">Furthermore, as articulated by Shi'i scholars, if the act of "taking a son" were attributed to God, it would imply that created beings could influence or participate in God's dominion, which is also rejected. As Sharīf al-Murtaḍā states:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">ولو كان اتّخاذهم الولد فعل اللّه كان قد اتّخذ ولدا، ولو كان قد فعل عباده فعله كان له شريك في الملك، تعالى عن ذلك.</p>
                                             <p class="italic transliteration">Wa law kāna ittikhādhuhum al-walad fiʿla Allāh kāna qad ittakhadha waladan, wa law kāna qad faʿala ʿibāduhu fiʿlahu kāna lahu sharīkun fī al-mulk, taʿālā ʿan dhālik.</p>
                                             <p class="translation">"If their taking of a son were God's act, He would have taken a son, and if His servants' actions were His actions, He would have a partner in dominion, exalted is He above that."</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Tafsīr al-Sharīf al-Murtaḍā (from Biḥār al-Anwār, Vol. 9, p. 145)</cite>
+                                            <cite class="text-sm text-gray-500">- Tafsīr al-Sharīf al-Murtaḍā (from Biḥār al-Anwār, Vol. 9, p. 145)</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">This highlights the doctrinal impossibility of `ittikhādh walad` from the perspective of God's <strong>absolute sovereignty and lack of partners</strong>. Therefore, any argument positing divine sonship based on a misinterpretation of `iṣṭifā'` or `ittikhādh` is fundamentally flawed from an Islamic theological standpoint.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-gray-800">The concept of God "taking a son" is unequivocally rejected in Islamic doctrine due to its implications of divine need, partnership, and limitation. The Qur'an and the teachings of the Ahl al-Bayt (a) firmly establish God's <strong>absolute self-sufficiency and unique oneness</strong>, rendering any form of `ittikhādh walad` as a theological impossibility and a grave deviation from pure monotheism (`Tawḥīd`).</p>
+                                        <p class="font-semibold text-gray-800">The concept of God "taking a son" is unequivocally rejected in Islamic doctrine due to its implications of divine need, partnership, and limitation. The Qur'an and the teachings of the Ahl al-Bayt <span class="honorific">﵈</span> firmly establish God's <strong>absolute self-sufficiency and unique oneness</strong>, rendering any form of `ittikhādh walad` as a theological impossibility and a grave deviation from pure monotheism (`Tawḥīd`).</p>
                                     </div>
                                 </div>
                             </div>
@@ -510,19 +572,19 @@
                 </div>
 
                 <div id="logical" class="tab-pane hidden" role="tabpanel" aria-labelledby="logical-tab">
-                    <h3 class="font-serif text-2xl font-bold mb-2 text-[#B99C6B]">3. The Logical Proof</h3>
+                    <h3 class="font-serif text-2xl font-bold mb-2 text-[#8A6D3B]">3. The Logical Proof</h3>
                     <p class="mb-6 text-gray-600">Beyond the textual and doctrinal evidence, the polemical argument fails on basic reasoning. Multiple logical fallacies underlie its claims, each revealing a flaw in the way premises are connected to the conclusion. Below is a structured breakdown of these fallacies with explanations, relatable examples, and applications to the Qur'anic debate.</p>
                 
                     <div id="logical-accordion" class="space-y-4">
                 
                         <!-- Fallacy 1: Equivocation -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-1">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">I. Fallacy of Ambiguity: Equivocation</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                             <div class="accordion-content" id="logical-1">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">Equivocation occurs when a single term is used with two distinct meanings in an argument, creating a false impression of logical connection. The conclusion appears valid only because the same word is repeated, though its meaning has shifted.</p>
@@ -544,13 +606,13 @@
                         </div>
                 
                         <!-- Fallacy 2: Affirming the Consequent -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-2">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">II. Formal Fallacy: Affirming the Consequent</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                             <div class="accordion-content" id="logical-2">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>The fallacy of affirming the consequent assumes that because a certain result is true (Q), its supposed cause (P) must also be true. This fails logically since many different causes could produce the same result.</p>
@@ -572,13 +634,13 @@
                         </div>
                 
                         <!-- Fallacy 3: False Analogy -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-3">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">III. False Analogy</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                             <div class="accordion-content" id="logical-3">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">A false analogy arises when two unlike things are compared as if they were parallel, leading to faulty conclusions. Similarities are overstated while critical differences are ignored.</p>
@@ -600,13 +662,13 @@
                         </div>
                 
                         <!-- Fallacy 4: Circular Reasoning -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-4">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">IV. Circular Reasoning (Begging the Question)</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                             <div class="accordion-content" id="logical-4">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">Circular reasoning happens when an argument’s conclusion is assumed in its premises. The claim is taken for granted rather than proven, making the reasoning self-reinforcing but empty.</p>
@@ -628,13 +690,13 @@
                         </div>
                 
                         <!-- Fallacy 5: Straw Man -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-5">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">V. Straw Man</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                             <div class="accordion-content" id="logical-5">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">The straw man fallacy misrepresents an opposing argument to make it easier to attack. Instead of addressing the actual claim, it distorts it into a weaker version and refutes that instead.</p>
@@ -659,32 +721,32 @@
                 </div>
 
                 <div id="historical" class="tab-pane hidden" role="tabpanel" aria-labelledby="historical-tab">
-                    <h3 class="font-serif text-2xl font-bold mb-2 text-[#B99C6B]">4. The Historical Proof</h3>
+                    <h3 class="font-serif text-2xl font-bold mb-2 text-[#8A6D3B]">4. The Historical Proof</h3>
                     <p class="mb-6 text-gray-600">The Qur'an’s denial of divine sonship is not a later theological development but rooted in events during the Prophet’s lifetime. Early Islamic encounters with Christian communities, especially the delegation from Najran, provide the clearest lens to understand verses 3:42, 3:59, and 39:4. These verses were revealed as direct responses to live debates about Jesus’s nature and birth, reframing claims of divinity into affirmations of servitude and miraculous signs of God’s power.</p>
                 
                     <div id="historical-accordion" class="space-y-4">
                         <!-- Najran Encounter -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="historical-1">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Encounter with the Christians of Najran</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="historical-1">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
-                                        <p>The delegation of Najran, composed of prominent Christian scholars and leaders, traveled to Medina to debate the Prophet Muhammad (s) regarding Jesus’s nature. Their claim centered on his fatherless birth as evidence of divine sonship. The Prophet’s response and the subsequent revelation of several key Qur’anic verses form one of the earliest and clearest historical contexts for these passages.</p>
+                                        <p>The delegation of Najran, composed of prominent Christian scholars and leaders, traveled to Medina to debate the Prophet Muhammad <span class="honorific">ﷺ</span> regarding Jesus’s nature. Their claim centered on his fatherless birth as evidence of divine sonship. The Prophet’s response and the subsequent revelation of several key Qur’anic verses form one of the earliest and clearest historical contexts for these passages.</p>
                                     </div>
                 
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example</h5>
                                         <p class="mb-2 text-gray-600">Classical sources, including Tafsīr al-Qummī and al-Burhān fī Tafsīr al-Qur’ān, narrate this exchange in detail. When the Christians questioned the Prophet, asking who Jesus’s father was, he affirmed Jesus’s created nature and paralleled him with Adam, who also had no father:</p>
                 
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2 quote-block">
+                                        <blockquote class="quran-callout">
                                             <p class="rtl font-amiri text-lg" lang="ar">فقالوا له: إلى ما تدعونا؟ فقال: إلى شهادة أن لا إله إلا الله، وأني رسول الله، وأن عيسى عبد مخلوق، يأكل ويشرب ويحدث. قالوا: فمن أبوه؟... فأنزل الله: (إِنَّ مَثَلَ عِيسَى عِنْدَ اللَّه كَمَثَلِ آدَمَ)</p>
                                             <p class="italic transliteration">Fa-qālū lahu: ʾilā mā tadʿūnā? Fa-qāla: ʾilā shahādati ʾan lā ʾilāha ʾillā-llāh, wa ʾannī rasūlu-llāh, wa ʾanna ʿĪsā ʿabdun makhlūq, yaʾkulu wa yashrabu wa yuḥdithu. Qālū: Fa-man ʾabūhu?... Fa-anzala-llāhu: (ʾinna mathala ʿĪsā ʿinda-llāhi ka-mathali Ādama)</p>
                                             <p class="translation">"They said to him: 'To what do you call us?' He said: 'To the testimony that there is no god but Allah, that I am the Messenger of Allah, and that Jesus is a <strong>created servant (`ʿabdun makhlūq`)</strong>, who eats, drinks, and has bodily needs.' They said: 'Then who is his father?'... Then Allah revealed: <strong>'Indeed, the example of Jesus to Allah is like that of Adam...'</strong> (Qur'an 3:59)"</p>
-                                            <cite class="text-sm text-gray-500 block mt-2">- Al-Burhān fī Tafsīr al-Qur’ān (from Tafsīr al-Qummī)</cite>
+                                            <cite class="text-sm text-gray-500">- Al-Burhān fī Tafsīr al-Qur’ān (from Tafsīr al-Qummī)</cite>
                                         </blockquote>
                 
                                         <p class="mt-4 text-gray-700">This response dismantled the Christians’ argument by reframing miraculous birth as a sign of God’s creative command “Be!” rather than evidence of divine filiation.</p>
@@ -704,13 +766,13 @@
                         </div>
                 
                         <!-- Broader Historical Context -->
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="historical-2">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Other Early Contexts: Marian Devotion and Polemics</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content" id="historical-2">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>Beyond Najran, verses about Maryam and Jesus addressed wider Christian currents, including Marian devotion and theological disputes about Christ’s nature. Early Muslim exegetes note that Qur’an 3:42 and 39:4 confronted ideas circulating in Arabia—some tribes venerating Mary and others conflating Jesus’s miracles with divinity. These revelations established Islam’s distinct Christology from the outset.</p>
@@ -733,14 +795,14 @@
             </div>
 
             <div id="glossary-section" class="mt-12">
-                   <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                   <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                      <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
                             <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
                             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                         <div class="accordion-content" id="glossary-content">
-                            <div class="p-4 border-t border-gray-200 space-y-4">
-                                <p><strong>Ahl al-Bayt (a):</strong> Literally "People of the House," referring to the immediate family of the Prophet Muhammad. In Shi'i Islam, this specifically denotes the Prophet, his daughter Fāṭimah, her husband ʿAlī, and their descendants, the Imams, who are considered the authoritative interpreters of the Qur'an and Sunnah.</p>
+                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <p><strong>Ahl al-Bayt <span class="honorific">﵈</span>:</strong> Literally "People of the House," referring to the immediate family of the Prophet Muhammad. In Shi'i Islam, this specifically denotes the Prophet, his daughter Fāṭimah, her husband ʿAlī, and their descendants, the Imams, who are considered the authoritative interpreters of the Qur'an and Sunnah.</p>
                                 <p><strong>Kalām:</strong> Islamic scholastic theology; a discipline that uses rational argumentation to explain and defend the tenets of faith.</p>
                                 <p><strong>Mubāhalah:</strong> A form of spiritual arbitration mentioned in the Qur'an where two disputing parties pray to invoke God's curse upon the one who is lying. The famous event occurred between the Prophet and the Christians of Najran, where the Prophet brought only ʿAlī, Fāṭimah, Ḥasan, and Ḥusayn as his "selves," "women," and "sons."</p>
                                 <p><strong>Shirk:</strong> The sin of associating partners with God, considered the most severe transgression in Islam. For example, saying ‘God adopted a son’ is shirk because it assumes God has needs, which are incompatible with His absolute Oneness.</p>
@@ -751,12 +813,15 @@
                     </div>
             </div>
 
-            <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-                <h4 class="font-serif text-2xl font-bold mb-3 text-[#3D4451]">Final Verdict</h4>
-                <p class="max-w-3xl mx-auto text-lg text-gray-600">
-                    The argument for divine sonship based on Qur'an 39:4 and 3:42 fails on every scholarly metric. It is linguistically unsound due to its conflation of distinct terms. It is doctrinally heretical, reversing the explicit purpose of the verses and collapsing the fundamental distinction between God's intrinsic and actional will. It is logically invalid, relying on formal fallacies. And it is historically untenable, contradicting the established position of the Prophet Muhammad (s) himself. Lady Maryam (a) was chosen not to bear a son <strong>for</strong> God, but to bear a Sign <strong>from</strong> God. Her selection elevates her as a paragon of purity and submission, a witness to God's absolute power and indivisible Oneness (`Tawḥīd`).
-                </p>
-                   <p class="text-sm text-gray-500 mt-4">For deeper study on the theological principles discussed, consult *Kitāb al-Tawḥīd* by Shaykh al-Ṣadūq.</p>
+            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700">
+                        The argument for divine sonship based on Qur'an 39:4 and 3:42 fails on every scholarly metric. It is linguistically unsound due to its conflation of distinct terms. It is doctrinally heretical, reversing the explicit purpose of the verses and collapsing the fundamental distinction between God's intrinsic and actional will. It is logically invalid, relying on formal fallacies. And it is historically untenable, contradicting the established position of the Prophet Muhammad <span class="honorific">ﷺ</span> himself. Lady Maryam <span class="honorific">﵍</span> was chosen not to bear a son <strong>for</strong> God, but to bear a Sign <strong>from</strong> God. Her selection elevates her as a paragon of purity and submission, a witness to God's absolute power and indivisible Oneness (`Tawḥīd`).
+                    </p>
+                    <p class="text-sm text-gray-500 mt-4">For deeper study on the theological principles discussed, consult *Kitāb al-Tawḥīd* by Shaykh al-Ṣadūq.</p>
+                </div>
             </footer>
         </main>
     </div>
@@ -823,8 +888,8 @@
         });
     </script>
 
-    <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-        <p class="text-sm text-gray-500">© 2025 Theological Library · All Rights Reserved</p>
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
 </body>
 </html>

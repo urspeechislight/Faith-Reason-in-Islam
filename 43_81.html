@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A linguistic and theological analysis of Qur'an 43:81, showing the verse rejects rather than permits divine sonship.">
+    <meta property="og:title" content="Analysis of Qur'an 43:81: Does It Allow Divine Sonship?">
+    <meta property="og:description" content="A linguistic and theological analysis of Qur'an 43:81, showing the verse rejects rather than permits divine sonship.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/43_81.html">
     <title>Analysis of Qur’an 43:81: Does It Allow Divine Sonship?</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +19,25 @@
             background-color: #FDFBF7;
             color: #3D4451;
         }
+        main p {
+            line-height: 1.7;
+        }
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
-        .font-arabic {
+        .font-amiri {
             font-family: 'Amiri', serif;
         }
         .tab.active {
             border-color: #A43820;
             color: #A43820;
             background-color: #FDFBF7;
+        }
+        .accordion-header {
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #FAF6EF;
         }
         .accordion-header svg {
             transition: transform 0.3s ease;
@@ -41,12 +55,51 @@
             text-align: right;
         }
         .analysis-section {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .analysis-heading {
             font-weight: 700;
             color: #3D4451;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #A43820;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
         }
         .quote-original {
             font-family: 'Amiri', serif;
@@ -71,40 +124,44 @@
             color: #A43820;
             margin-top: 0.5rem;
         }
-        .text-left {
-            text-align: left;
-        }
     </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto px-4 py-8 md:py-12">
-        <header class="text-center mb-12">
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-2">A Linguistic & Theological Analysis</h1>
-            <p class="text-md md:text-lg text-gray-500">Does Qur’an 43:81 Allow for Divine Sonship?</p>
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+        <nav class="mb-10">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#A43820]">&larr; Faith &amp; Reason in Islam</a>
+        </nav>
+
+        <header class="mb-12">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#A43820] mb-3">Quranic Analysis</p>
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">A Linguistic & Theological Analysis</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Does Qur’an 43:81 Allow for Divine Sonship?</p>
+            <hr class="mt-10 border-[#E7E0D1]">
         </header>
 
-        <section id="argument" class="mb-12 p-6 bg-white rounded-lg shadow-sm border border-gray-200 max-w-4xl mx-auto text-left">
+        <main>
+        <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
             <h2 class="font-serif text-2xl font-bold mb-4 text-[#A43820]">The Christian Claim</h2>
             <p class="text-gray-600">Some Christians say Qur’an 43:81 suggests God could have a son, like Jesus. Here’s their argument:</p>
             <div class="space-y-4 mb-8">
-                <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                <div class="premise-card">
                     <p class="font-semibold text-gray-800">Premise 1: The Verse Suggests a Son</p>
                     <p class="text-gray-600">Qur’an 43:81 says, “If the All-Merciful had a child, I’d be the first to worship,” implying it’s possible God could have a son.</p>
-                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                    <blockquote class="quran-callout">
                         <p class="quote-original rtl">قُلْ إِن كَانَ لِلرَّحْمَٰنِ وَلَدٌ فَأَنَا أَوَّلُ الْعَابِدِينَ</p>
                         <p class="quote-translit">Qul in kāna lil-Raḥmāni waladun fa-anā awwalu al-ʿābidīn</p>
                         <p class="quote-translation">“Say: If the All-Merciful had a child, then I would be the first to worship” (Qur’an 43:81)</p>
                     </blockquote>
                 </div>
-                <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                <div class="premise-card">
                     <p class="font-semibold text-gray-800">Premise 2: Worship Implies Acceptance</p>
                     <p class="text-gray-600">The word “worship” (<strong>ʿābidīn</strong>) means accepting the child as divine, supporting the idea of Jesus as God’s son.</p>
                 </div>
-                <div class="p-4 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
+                <div class="premise-card">
                     <p class="font-semibold text-gray-800">Premise 3: Fits Christian Belief</p>
                     <p class="text-gray-600">This matches the Christian view that Jesus is God’s son, part of the Trinity.</p>
                 </div>
-                <div class="p-4 border-l-4 border-[#A43820] bg-red-50 rounded-r-lg">
+                <div class="conclusion-card">
                     <p class="font-semibold text-[#A43820]">Conclusion</p>
                     <p class="text-gray-700">Qur’an 43:81 supports the possibility of God having a son, aligning with Christian theology.</p>
                 </div>
@@ -112,7 +169,7 @@
             <p class="text-gray-600">This analysis shows the Christian claim misreads the verse. Qur’an 43:81 uses a special Arabic style called <strong>al-sharṭ al-mumteni‘</strong> (impossible condition) to reject the idea of God having a child, targeting Meccan pagans and Christians. We’ll use language, Islamic teachings, history, and logic to prove this, showing the Christian view doesn’t make sense.</p>
         </section>
 
-        <div class="mb-8 border-b border-gray-200 max-w-4xl mx-auto">
+        <div class="mb-8 border-b border-[#E7E0D1]">
             <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
                 <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic">1. Language Proof 📜</button>
                 <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal">2. Islamic Teaching Proof 📖</button>
@@ -121,16 +178,16 @@
             </nav>
         </div>
 
-        <div id="tab-content" class="max-w-4xl mx-auto">
+        <div id="tab-content">
             <div id="linguistic" class="tab-pane active">
                 <div id="linguistic-accordion" class="space-y-4">
-                    <div class="accordion-item bg-white border border-gray-200 rounded-lg open">
+                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg open">
                         <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Language Analysis: Meaning of <strong>al-sharṭ al-mumteni‘</strong> and <strong>ʿābidīn</strong></h4>
                             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                         <div class="accordion-content" style="max-height: 1000px;">
-                            <div class="p-4 border-t border-gray-200 space-y-4">
+                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Words Matter</h5>
                                     <p>To understand Qur’an 43:81, we need to know what its words mean in Arabic, especially <strong>al-sharṭ al-mumteni‘</strong> (impossible condition) and <strong>ʿābidīn</strong> (worshippers or rejectors).</p>
@@ -164,12 +221,12 @@
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Word Meanings in Arabic</h5>
                                     <p>In Arabic, <strong>ʿābidīn</strong> can mean “worshippers” or “rejectors,” depending on context. <strong>Al-sharṭ al-mumteni‘</strong> is a style that says something’s impossible to shut down a bad idea.</p>
-                                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                    <blockquote class="hadith-callout">
                                         <p class="quote-original rtl">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
                                         <p class="quote-translit">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
                                         <p class="quote-translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per Lisān al-ʿArab)</p>
                                     </blockquote>
-                                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                    <blockquote class="quran-callout">
                                         <p class="quote-original rtl">قَالَ إِنِّي لَا يَقْتُلُنِي اللَّهُ إِنْ شَاءَ</p>
                                         <p class="quote-translit">Qāla innī lā yaqtulunī Allāhu in shā’a</p>
                                         <p class="quote-translation">“He said: Surely Allah will not kill me if He wills” (Qur’an 2:258)</p>
@@ -188,20 +245,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                         <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Grammar and Syntax: How the Verse Works</h4>
                             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                         <div class="accordion-content">
-                            <div class="p-4 border-t border-gray-200 space-y-4">
+                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Sentence Structure</h5>
                                     <p>The way Qur’an 43:81 is built shows it’s rejecting the idea of God having a child, not saying it’s possible.</p>
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Similar Qur’anic Sentences</h5>
-                                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                    <blockquote class="quran-callout">
                                         <p class="quote-original rtl">أَوَلَيْسَ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ بِقَادِرٍ عَلَىٰ أَن يَخْلُقَ مِثْلَهُم ۚ بَلَىٰ</p>
                                         <p class="quote-translit">Awa-laysa alladhī khalaqa as-samāwāti wa-l-arḍa bi-qādirin ʿalā an yakhluqa mithlahum balā</p>
                                         <p class="quote-translation">“Is not He who created the heavens and the earth able to create the like of them? Yes, indeed!” (Qur’an 36:81)</p>
@@ -220,13 +277,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                         <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Comparing Words: Old Arabic Usage</h4>
                             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                         <div class="accordion-content">
-                            <div class="p-4 border-t border-gray-200 space-y-4">
+                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Words in Context</h5>
                                     <p>Looking at how words like <strong>ʿābidīn</strong> and “if” were used in old Arabic helps us understand Qur’an 43:81.</p>
@@ -234,7 +291,7 @@
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Old Arabic Poetry and Texts</h5>
                                     <p>Old Arabic books say <strong>ʿābidīn</strong> can mean “rejectors,” and “if” can mean something’s impossible in religious arguments.</p>
-                                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                    <blockquote class="hadith-callout">
                                         <p class="quote-original rtl">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
                                         <p class="quote-translit">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
                                         <p class="quote-translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per al-Muḥīṭ fī al-Lugha)</p>
@@ -254,27 +311,28 @@
                         </div>
                     </div>
                 </div>
+            </div>
                 <div id="doctrinal" class="tab-pane hidden">
                     <div id="doctrinal-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Qur’anic Consistency: Fitting with Other Verses</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Qur’an’s Unity</h5>
                                         <p>The Qur’an’s verses should agree with each other. Does Qur’an 43:81 fit with other verses about God’s oneness?</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example: Verses on God’s Oneness</h5>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">قُلْ هُوَ اللَّهُ أَحَدٌ... لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
                                             <p class="quote-translit">Qul huwa Allāhu aḥad... lam yalid wa-lam yūlad</p>
                                             <p class="quote-translation">“Say: He is Allah, the One... He neither begets nor is begotten” (Qur’an 112:1–4)</p>
                                         </blockquote>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="quran-callout">
                                             <p class="quote-original rtl">وَقَالُوا اتَّخَذَ الرَّحْمَٰنُ وَلَدًا ۗ سُبْحَانَهُ</p>
                                             <p class="quote-translit">Wa-qālū ittakhadha ar-Raḥmānu waladan subḥānahu</p>
                                             <p class="quote-translation">“They say: The All-Merciful has taken a son. Glory be to Him!” (Qur’an 19:88–89)</p>
@@ -292,20 +350,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Beliefs: God’s Oneness and the Prophet</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Shi‘i Teachings</h5>
                                     <p>Shi‘i Muslims believe God is one and above human traits, and the Prophet Muhammad has special knowledge as the first creation.</p>
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Shi‘i Teachings on God</h5>
-                                    <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                    <blockquote class="hadith-callout">
                                         <p class="quote-original rtl">الحمد لله الذي لم يلد فيورث ولم يولد فيشارك</p>
                                         <p class="quote-translit">Al-ḥamdu lillāhi alladhī lam yalid fayūrath wa-lam yūlad fayushārik</p>
                                         <p class="quote-translation">“Praise be to Allah, who neither begot, lest He be inherited, nor was begotten, lest He be rivaled” (Imām al-Ṣādiq, Bihār al-Anwār)</p>
@@ -323,20 +381,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Explanations: Early Muslim Views</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Early Muslim Thoughts</h5>
                                         <p>How early Muslims understood Qur’an 43:81 shows its real meaning, before later debates.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example: Early Muslim Scholars</h5>
-                                        <blockquote class="border-l-4 border-gray-300 pl-4 my-2">
+                                        <blockquote class="hadith-callout">
                                             <p class="quote-original rtl">أَوَّلُ الْعَابِدِينَ أي الجاحدين</p>
                                             <p class="quote-translit">Awwalu al-ʿābidīn ay al-jāḥidīn</p>
                                             <p class="quote-translation">“The first of the worshippers—meaning the first of the rejectors” (Imām ʿAlī, Tafsīr ʿAlī ibn Ibrāhīm)</p>
@@ -356,15 +414,18 @@
                         </div>
                     </div>
                 </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="historical" class="tab-pane hidden">
                     <div id="historical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Meccan Setting: The Verse’s Background</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Mecca’s Debates</h5>
                                         <p>Qur’an 43:81 was revealed in Mecca, where people argued about God’s nature.</p>
@@ -386,13 +447,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Early Reactions: How Muslims Understood It</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: First Muslims</h5>
                                         <p>Early Muslims’ views on Qur’an 43:81 show what it meant at the time.</p>
@@ -414,13 +475,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Old Writings: Outside Evidence</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Writings from the Time</h5>
                                         <p>Old texts from Arabia and Christian communities show what people believed when Qur’an 43:81 was revealed.</p>
@@ -446,13 +507,13 @@
                 </div>
                 <div id="logical" class="tab-pane hidden">
                     <div id="logical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a Straw Man</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Fair Arguments</h5>
                                         <p>A straw man is when you misrepresent someone’s view to make it easier to attack. Does Qur’an 43:81 fairly address Christian claims?</p>
@@ -474,13 +535,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-gray-200 rounded-lg">
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a False Choice</h4>
                                 <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <div class="accordion-content">
-                                <div class="p-4 border-t border-gray-200 space-y-4">
+                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Real Options</h5>
                                         <p>A false choice says there are only two options when there are more. Does Qur’an 43:81 create a false choice?</p>
@@ -506,13 +567,17 @@
                 </div>
             </div>
 
-            <footer class="text-center mt-16 pt-8 border-t border-gray-200 max-w-4xl mx-auto text-left">
-                <h4 class="font-serif text-2xl font-bold mb-3 text-[#3D4451]">Final Verdict</h4>
-                <p class="text-lg text-gray-600">
+            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#A43820] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700">
                     The Christian claim that Qur’an 43:81 supports God having a son like Jesus is wrong. The verse uses <strong>al-sharṭ al-mumteni‘</strong>, an Arabic style that says the idea is impossible, as scholars like al-Zamakhsharī explain. <strong>ʿābidīn</strong> means “rejectors,” not worshippers, per old Arabic texts (Lisān al-ʿArab). Shi‘i teachings say the Prophet was the first creation (nūr Muḥammadī), so he’d know God has no child and reject it. Other Qur’anic verses (112:1–4, 19:88–89) and early Muslims like Imām ʿAlī agree, rejecting pagan and Christian claims. The Meccan setting and old writings confirm this. Logically, the verse fairly and clearly rejects sonship, not supports it. Christians misread it by ignoring its language and context, relying on later Trinitarian ideas that don’t fit.
                 </p>
+                </div>
             </footer>
         </main>
+    </div>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -581,8 +646,8 @@
             });
         </script>
 
-        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
-            <p class="text-sm text-gray-500">© 2025 Theological Library · All Rights Reserved</p>
+        <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+            <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
         </footer>
     </body>
 </html>
