@@ -29,8 +29,8 @@
             font-family: 'Amiri', serif;
         }
         .tab.active {
-            border-color: #A43820;
-            color: #A43820;
+            border-color: #B99C6B;
+            color: #8A6D3B;
             background-color: #FDFBF7;
         }
         .accordion-header {
@@ -97,31 +97,13 @@
         }
         .conclusion-card {
             background-color: #F8F1E2;
-            border: 1px solid #A43820;
+            border: 1px solid #B99C6B;
             border-radius: 0.5rem;
             padding: 1rem 1.25rem;
         }
-        .quote-original {
-            font-family: 'Amiri', serif;
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        .quote-original.greek {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        .quote-translit {
-            font-style: italic;
-            color: #6b7280;
-            margin-bottom: 0.25rem;
-        }
-        .quote-translation {
-            color: #374151;
-        }
         .challenge-question {
             font-weight: 600;
-            color: #A43820;
+            color: #8A6D3B;
             margin-top: 0.5rem;
         }
     </style>
@@ -129,11 +111,11 @@
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
         <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#A43820]">&larr; Faith &amp; Reason in Islam</a>
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
         </nav>
 
         <header class="mb-12">
-            <p class="text-sm font-semibold tracking-widest uppercase text-[#A43820] mb-3">Quranic Analysis</p>
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Quranic Analysis</p>
             <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">A Linguistic & Theological Analysis</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Does Qur’an 43:81 Allow for Divine Sonship?</p>
             <hr class="mt-10 border-[#E7E0D1]">
@@ -141,16 +123,16 @@
 
         <main>
         <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
-            <h2 class="font-serif text-2xl font-bold mb-4 text-[#A43820]">The Christian Claim</h2>
+            <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Christian Claim</h2>
             <p class="text-gray-600">Some Christians say Qur’an 43:81 suggests God could have a son, like Jesus. Here’s their argument:</p>
             <div class="space-y-4 mb-8">
                 <div class="premise-card">
                     <p class="font-semibold text-gray-800">Premise 1: The Verse Suggests a Son</p>
                     <p class="text-gray-600">Qur’an 43:81 says, “If the All-Merciful had a child, I’d be the first to worship,” implying it’s possible God could have a son.</p>
                     <blockquote class="quran-callout">
-                        <p class="quote-original rtl">قُلْ إِن كَانَ لِلرَّحْمَٰنِ وَلَدٌ فَأَنَا أَوَّلُ الْعَابِدِينَ</p>
-                        <p class="quote-translit">Qul in kāna lil-Raḥmāni waladun fa-anā awwalu al-ʿābidīn</p>
-                        <p class="quote-translation">“Say: If the All-Merciful had a child, then I would be the first to worship” (Qur’an 43:81)</p>
+                        <p class="rtl font-amiri text-xl" lang="ar">قُلْ إِن كَانَ لِلرَّحْمَٰنِ وَلَدٌ فَأَنَا أَوَّلُ الْعَابِدِينَ</p>
+                        <p class="italic transliteration">Qul in kāna lil-Raḥmāni waladun fa-anā awwalu al-ʿābidīn</p>
+                        <p class="translation">“Say: If the All-Merciful had a child, then I would be the first to worship” (Qur’an 43:81)</p>
                     </blockquote>
                 </div>
                 <div class="premise-card">
@@ -162,7 +144,7 @@
                     <p class="text-gray-600">This matches the Christian view that Jesus is God’s son, part of the Trinity.</p>
                 </div>
                 <div class="conclusion-card">
-                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                    <p class="font-semibold text-gray-800">Conclusion</p>
                     <p class="text-gray-700">Qur’an 43:81 supports the possibility of God having a son, aligning with Christian theology.</p>
                 </div>
             </div>
@@ -171,22 +153,22 @@
 
         <div class="mb-8 border-b border-[#E7E0D1]">
             <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic">1. Language Proof 📜</button>
-                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal">2. Islamic Teaching Proof 📖</button>
-                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="historical">3. Historical Proof 🏛️</button>
-                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="logical">4. Logical Proof 🧠</button>
+                <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="linguistic" role="tab" aria-controls="linguistic" aria-selected="true">1. Language Proof</button>
+                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="doctrinal" role="tab" aria-controls="doctrinal" aria-selected="false">2. Islamic Teaching Proof</button>
+                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="historical" role="tab" aria-controls="historical" aria-selected="false">3. Historical Proof</button>
+                <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="logical" role="tab" aria-controls="logical" aria-selected="false">4. Logical Proof</button>
             </nav>
         </div>
 
         <div id="tab-content">
-            <div id="linguistic" class="tab-pane active">
+            <div id="linguistic" class="tab-pane active" role="tabpanel">
                 <div id="linguistic-accordion" class="space-y-4">
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg open">
+                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                         <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Language Analysis: Meaning of <strong>al-sharṭ al-mumteni‘</strong> and <strong>ʿābidīn</strong></h4>
                             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" style="max-height: 1000px;">
+                        <div class="accordion-content">
                             <div class="p-4 border-t border-[#E7E0D1] space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Words Matter</h5>
@@ -222,14 +204,14 @@
                                     <h5 class="analysis-heading">Example: Word Meanings in Arabic</h5>
                                     <p>In Arabic, <strong>ʿābidīn</strong> can mean “worshippers” or “rejectors,” depending on context. <strong>Al-sharṭ al-mumteni‘</strong> is a style that says something’s impossible to shut down a bad idea.</p>
                                     <blockquote class="hadith-callout">
-                                        <p class="quote-original rtl">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
-                                        <p class="quote-translit">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
-                                        <p class="quote-translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per Lisān al-ʿArab)</p>
+                                        <p class="rtl font-amiri text-xl" lang="ar">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
+                                        <p class="italic transliteration">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
+                                        <p class="translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per Lisān al-ʿArab)</p>
                                     </blockquote>
                                     <blockquote class="quran-callout">
-                                        <p class="quote-original rtl">قَالَ إِنِّي لَا يَقْتُلُنِي اللَّهُ إِنْ شَاءَ</p>
-                                        <p class="quote-translit">Qāla innī lā yaqtulunī Allāhu in shā’a</p>
-                                        <p class="quote-translation">“He said: Surely Allah will not kill me if He wills” (Qur’an 2:258)</p>
+                                        <p class="rtl font-amiri text-xl" lang="ar">قَالَ إِنِّي لَا يَقْتُلُنِي اللَّهُ إِنْ شَاءَ</p>
+                                        <p class="italic transliteration">Qāla innī lā yaqtulunī Allāhu in shā’a</p>
+                                        <p class="translation">“He said: Surely Allah will not kill me if He wills” (Qur’an 2:258)</p>
                                     </blockquote>
                                 </div>
                                 <div class="analysis-section">
@@ -238,7 +220,7 @@
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">The words <strong>ʿābidīn</strong> and <strong>al-sharṭ al-mumteni‘</strong> show Qur’an 43:81 rejects God having a child, not supports it, making the Christian view wrong.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81 say God could have a child, when Arabic experts like al-Zamakhsharī say it’s an impossible condition?</p>
                                 </div>
@@ -259,9 +241,9 @@
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Similar Qur’anic Sentences</h5>
                                     <blockquote class="quran-callout">
-                                        <p class="quote-original rtl">أَوَلَيْسَ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ بِقَادِرٍ عَلَىٰ أَن يَخْلُقَ مِثْلَهُم ۚ بَلَىٰ</p>
-                                        <p class="quote-translit">Awa-laysa alladhī khalaqa as-samāwāti wa-l-arḍa bi-qādirin ʿalā an yakhluqa mithlahum balā</p>
-                                        <p class="quote-translation">“Is not He who created the heavens and the earth able to create the like of them? Yes, indeed!” (Qur’an 36:81)</p>
+                                        <p class="rtl font-amiri text-xl" lang="ar">أَوَلَيْسَ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ بِقَادِرٍ عَلَىٰ أَن يَخْلُقَ مِثْلَهُم ۚ بَلَىٰ</p>
+                                        <p class="italic transliteration">Awa-laysa alladhī khalaqa as-samāwāti wa-l-arḍa bi-qādirin ʿalā an yakhluqa mithlahum balā</p>
+                                        <p class="translation">“Is not He who created the heavens and the earth able to create the like of them? Yes, indeed!” (Qur’an 36:81)</p>
                                     </blockquote>
                                 </div>
                                 <div class="analysis-section">
@@ -270,7 +252,7 @@
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">The sentence structure of Qur’an 43:81, as al-Rāzī shows, uses <strong>al-sharṭ al-mumteni‘</strong> to reject God having a child, not support it.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81’s grammar show God could have a child, when al-Rāzī says “if” means it’s impossible?</p>
                                 </div>
@@ -292,9 +274,9 @@
                                     <h5 class="analysis-heading">Example: Old Arabic Poetry and Texts</h5>
                                     <p>Old Arabic books say <strong>ʿābidīn</strong> can mean “rejectors,” and “if” can mean something’s impossible in religious arguments.</p>
                                     <blockquote class="hadith-callout">
-                                        <p class="quote-original rtl">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
-                                        <p class="quote-translit">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
-                                        <p class="quote-translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per al-Muḥīṭ fī al-Lugha)</p>
+                                        <p class="rtl font-amiri text-xl" lang="ar">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
+                                        <p class="italic transliteration">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
+                                        <p class="translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per al-Muḥīṭ fī al-Lugha)</p>
                                     </blockquote>
                                 </div>
                                 <div class="analysis-section">
@@ -303,7 +285,7 @@
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">Old Arabic usage shows <strong>ʿābidīn</strong> means “rejectors” and “if” means impossible, proving Qur’an 43:81 rejects divine sonship.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81 use <strong>ʿābidīn</strong> to mean accepting a son, when old Arabic texts say it means rejecting?</p>
                                 </div>
@@ -312,7 +294,7 @@
                     </div>
                 </div>
             </div>
-                <div id="doctrinal" class="tab-pane hidden">
+                <div id="doctrinal" class="tab-pane hidden" role="tabpanel">
                     <div id="doctrinal-accordion" class="space-y-4">
                         <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
@@ -328,14 +310,14 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example: Verses on God’s Oneness</h5>
                                         <blockquote class="quran-callout">
-                                            <p class="quote-original rtl">قُلْ هُوَ اللَّهُ أَحَدٌ... لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
-                                            <p class="quote-translit">Qul huwa Allāhu aḥad... lam yalid wa-lam yūlad</p>
-                                            <p class="quote-translation">“Say: He is Allah, the One... He neither begets nor is begotten” (Qur’an 112:1–4)</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">قُلْ هُوَ اللَّهُ أَحَدٌ... لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
+                                            <p class="italic transliteration">Qul huwa Allāhu aḥad... lam yalid wa-lam yūlad</p>
+                                            <p class="translation">“Say: He is Allah, the One... He neither begets nor is begotten” (Qur’an 112:1–4)</p>
                                         </blockquote>
                                         <blockquote class="quran-callout">
-                                            <p class="quote-original rtl">وَقَالُوا اتَّخَذَ الرَّحْمَٰنُ وَلَدًا ۗ سُبْحَانَهُ</p>
-                                            <p class="quote-translit">Wa-qālū ittakhadha ar-Raḥmānu waladan subḥānahu</p>
-                                            <p class="quote-translation">“They say: The All-Merciful has taken a son. Glory be to Him!” (Qur’an 19:88–89)</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">وَقَالُوا اتَّخَذَ الرَّحْمَٰنُ وَلَدًا ۗ سُبْحَانَهُ</p>
+                                            <p class="italic transliteration">Wa-qālū ittakhadha ar-Raḥmānu waladan subḥānahu</p>
+                                            <p class="translation">“They say: The All-Merciful has taken a son. Glory be to Him!” (Qur’an 19:88–89)</p>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
@@ -344,7 +326,7 @@
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">Qur’an 43:81 fits with other verses rejecting divine children, showing the Christian claim is wrong.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81 support God having a child, when verses like 112:1–4 clearly reject it?</p>
                                 </div>
@@ -364,9 +346,9 @@
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Example: Shi‘i Teachings on God</h5>
                                     <blockquote class="hadith-callout">
-                                        <p class="quote-original rtl">الحمد لله الذي لم يلد فيورث ولم يولد فيشارك</p>
-                                        <p class="quote-translit">Al-ḥamdu lillāhi alladhī lam yalid fayūrath wa-lam yūlad fayushārik</p>
-                                        <p class="quote-translation">“Praise be to Allah, who neither begot, lest He be inherited, nor was begotten, lest He be rivaled” (Imām al-Ṣādiq, Bihār al-Anwār)</p>
+                                        <p class="rtl font-amiri text-xl" lang="ar">الحمد لله الذي لم يلد فيورث ولم يولد فيشارك</p>
+                                        <p class="italic transliteration">Al-ḥamdu lillāhi alladhī lam yalid fayūrath wa-lam yūlad fayushārik</p>
+                                        <p class="translation">“Praise be to Allah, who neither begot, lest He be inherited, nor was begotten, lest He be rivaled” (Imām al-Ṣādiq, Bihār al-Anwār)</p>
                                     </blockquote>
                                 </div>
                                 <div class="analysis-section">
@@ -375,7 +357,7 @@
                                 </div>
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">Shi‘i teachings, as Dunn’s parallel shows, confirm Qur’an 43:81 rejects divine sonship, not supports it.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81 fit with Christian sonship, when Shi‘i teachings say God can’t have a child?</p>
                                 </div>
@@ -395,9 +377,9 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Example: Early Muslim Scholars</h5>
                                         <blockquote class="hadith-callout">
-                                            <p class="quote-original rtl">أَوَّلُ الْعَابِدِينَ أي الجاحدين</p>
-                                            <p class="quote-translit">Awwalu al-ʿābidīn ay al-jāḥidīn</p>
-                                            <p class="quote-translation">“The first of the worshippers—meaning the first of the rejectors” (Imām ʿAlī, Tafsīr ʿAlī ibn Ibrāhīm)</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">أَوَّلُ الْعَابِدِينَ أي الجاحدين</p>
+                                            <p class="italic transliteration">Awwalu al-ʿābidīn ay al-jāḥidīn</p>
+                                            <p class="translation">“The first of the worshippers—meaning the first of the rejectors” (Imām ʿAlī, Tafsīr ʿAlī ibn Ibrāhīm)</p>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
@@ -406,7 +388,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                    <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                    <p class="font-semibold text-gray-800">Conclusion</p>
                                     <p class="text-gray-700">Early Muslim views, as Hagner’s parallel shows, confirm Qur’an 43:81 rejects divine sonship.</p>
                                     <p class="challenge-question">Where does Qur’an 43:81 support sonship, when early Muslims like Imām ʿAlī said it means rejecting?</p>
                                 </div>
@@ -417,7 +399,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="historical" class="tab-pane hidden">
+                <div id="historical" class="tab-pane hidden" role="tabpanel">
                     <div id="historical-accordion" class="space-y-4">
                         <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
@@ -440,7 +422,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                        <p class="font-semibold text-gray-800">Conclusion</p>
                                         <p class="text-gray-700">The Meccan setting shows Qur’an 43:81 rejects divine children, not supports them.</p>
                                         <p class="challenge-question">Where does Qur’an 43:81 support sonship, when its Meccan context rejects pagan and Christian claims?</p>
                                     </div>
@@ -468,7 +450,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                        <p class="font-semibold text-gray-800">Conclusion</p>
                                         <p class="text-gray-700">Early Muslim views confirm Qur’an 43:81 rejects divine sonship, not supports it.</p>
                                         <p class="challenge-question">Where does Qur’an 43:81 support sonship, when early Muslims like Mujāhid said it means rejecting?</p>
                                     </div>
@@ -496,7 +478,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                        <p class="font-semibold text-gray-800">Conclusion</p>
                                         <p class="text-gray-700">Old texts show Qur’an 43:81 rejects divine sonship, not supports it.</p>
                                         <p class="challenge-question">Where does Qur’an 43:81 support sonship, when old texts show it rejects pagan and Christian claims?</p>
                                     </div>
@@ -505,7 +487,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="logical" class="tab-pane hidden">
+                <div id="logical" class="tab-pane hidden" role="tabpanel">
                     <div id="logical-accordion" class="space-y-4">
                         <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
@@ -528,7 +510,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                        <p class="font-semibold text-gray-800">Conclusion</p>
                                         <p class="text-gray-700">Qur’an 43:81 fairly rejects Christian sonship, avoiding a straw man.</p>
                                         <p class="challenge-question">Where does Qur’an 43:81 misrepresent Christian sonship, when it directly addresses their claim?</p>
                                     </div>
@@ -556,7 +538,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Conclusion</h5>
-                                        <p class="font-semibold text-[#A43820]">Conclusion</p>
+                                        <p class="font-semibold text-gray-800">Conclusion</p>
                                         <p class="text-gray-700">Qur’an 43:81 avoids a false choice by clearly rejecting divine sonship, not suggesting it’s possible.</p>
                                         <p class="challenge-question">Where does Qur’an 43:81 offer sonship as a choice, when it uses <strong>al-sharṭ al-mumteni‘</strong> to reject it?</p>
                                     </div>
@@ -569,7 +551,7 @@
 
             <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
-                    <div class="w-12 h-1 bg-[#A43820] mb-6 rounded-full"></div>
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
                     <p class="text-lg text-gray-700">
                     The Christian claim that Qur’an 43:81 supports God having a son like Jesus is wrong. The verse uses <strong>al-sharṭ al-mumteni‘</strong>, an Arabic style that says the idea is impossible, as scholars like al-Zamakhsharī explain. <strong>ʿābidīn</strong> means “rejectors,” not worshippers, per old Arabic texts (Lisān al-ʿArab). Shi‘i teachings say the Prophet was the first creation (nūr Muḥammadī), so he’d know God has no child and reject it. Other Qur’anic verses (112:1–4, 19:88–89) and early Muslims like Imām ʿAlī agree, rejecting pagan and Christian claims. The Meccan setting and old writings confirm this. Logically, the verse fairly and clearly rejects sonship, not supports it. Christians misread it by ignoring its language and context, relying on later Trinitarian ideas that don’t fit.
@@ -579,72 +561,67 @@
         </main>
     </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const tabs = document.querySelectorAll('.tab');
-                const panes = document.querySelectorAll('.tab-pane');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const panes = document.querySelectorAll('.tab-pane');
 
-                function resetAccordions(pane) {
-                    const accordionItems = pane.querySelectorAll('.accordion-item');
-                    accordionItems.forEach(item => {
-                        item.classList.remove('open');
-                        const content = item.querySelector('.accordion-content');
-                        content.style.maxHeight = '0px';
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const target = e.currentTarget.dataset.target;
+
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
                     });
-                }
+                    e.currentTarget.classList.add('active');
+                    e.currentTarget.setAttribute('aria-selected', 'true');
 
-                function initializeAccordions(pane) {
-                    const accordionItems = pane.querySelectorAll('.accordion-item');
-                    accordionItems.forEach(item => {
-                        const header = item.querySelector('.accordion-header');
-                        const content = item.querySelector('.accordion-content');
-                        const newHeader = header.cloneNode(true);
-                        header.parentNode.replaceChild(newHeader, header);
-
-                        newHeader.addEventListener('click', () => {
-                            const isOpen = item.classList.contains('open');
-                            const parentAccordion = item.closest('.space-y-4');
-                            parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                                if (i !== item) {
-                                    i.classList.remove('open');
-                                    i.querySelector('.accordion-content').style.maxHeight = '0px';
-                                }
-                            });
-
-                            if (!isOpen) {
-                                item.classList.add('open');
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                            } else {
-                                item.classList.remove('open');
-                                content.style.maxHeight = '0px';
-                            }
-                        });
-                    });
-                }
-
-                initializeAccordions(document.querySelector('.tab-pane.active'));
-
-                tabs.forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        const target = tab.dataset.target;
-                        tabs.forEach(t => t.classList.remove('active'));
-                        tab.classList.add('active');
-
-                        panes.forEach(pane => {
-                            if (pane.id === target) {
-                                pane.classList.remove('hidden');
-                                pane.classList.add('active');
-                                initializeAccordions(pane);
-                            } else {
-                                pane.classList.add('hidden');
-                                pane.classList.remove('active');
-                                resetAccordions(pane);
-                            }
-                        });
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
                     });
                 });
             });
-        </script>
+
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
+                    if (parentAccordion) {
+                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
+                            if (i !== item) {
+                               i.classList.remove('open');
+                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                               i.querySelector('.accordion-content').style.maxHeight = '0px';
+                            }
+                        });
+                    }
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        header.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('open');
+                        header.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0px';
+                    }
+                });
+            });
+        });
+    </script>
 
         <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
             <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
