@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Investigation of the narration attributing to Imam Ali the words 'do not marry al-Hasan, he is a mutallaq': chain analysis, arithmetic refutation, and the principle of al-rushd fi khilafihim.">
+    <meta name="keywords" content="Imam al-Hasan, mutallaq, al-Waqidi, Ibn Sa'd, hadith fabrication, al-rushd fi khilafihim, Maqbula Umar b. Hanzala, Shia hadith methodology">
+    <meta property="og:title" content="Do Not Marry al-Hasan: A Fabricated Narration">
+    <meta property="og:description" content="Investigation of the narration attributing to Imam Ali the words 'do not marry al-Hasan, he is a mutallaq': chain analysis, arithmetic refutation, and the principle of al-rushd fi khilafihim.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/hasan-mitlaq.html">
+    <title>Do Not Marry al-Hasan: A Fabricated Narration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        main p {
+            line-height: 1.7;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        .tab.active {
+            border-color: #B99C6B;
+            color: #8A6D3B;
+            background-color: #FDFBF7;
+        }
+        .accordion-header {
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #FAF6EF;
+        }
+        .accordion-header svg {
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-header svg {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .thesis-box {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .conclusion-box {
+            border: 1px solid #B99C6B;
+            background-color: #F8F1E2;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <nav class="mb-10">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
+        </nav>
+
+        <header class="mb-12">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith Analysis</p>
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Do Not Marry al-Hasan: A Fabricated Narration</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Chain criticism, arithmetic evidence, and the principle of al-rushd fi khilafihim applied to the "mutallaq" report</p>
+            <hr class="mt-10 border-[#E7E0D1]">
+        </header>
+
+        <main>
+            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">Background</h5>
+                    <p class="mb-4 text-gray-600">A report found in Ibn Sa'd's <em>Tabaqat</em> (d. 230 AH) claims that Imam Ali <span class="honorific">﵇</span> stood on the minbar in Kufa and told the people not to marry their daughters to his son al-Hasan <span class="honorific">﵇</span>, calling him a <em>mutallaq</em> (frequent divorcer). The report circulated widely in Sunni biographical literature and the wife count inflated from 6 to 70 to 300 across subsequent compilers. The narration also appears in Shia primary collections, including al-Kafi, which complicates any simple dismissal.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 1: The Chain Passes Through al-Waqidi</p>
+                        <p class="text-gray-600 mb-2">Every variant of the narration in Ibn Sa'd passes through Muhammad b. Umar al-Waqidi (d. 207 AH), graded by Sunni consensus as a liar, fabricator, and abandoned narrator.</p>
+                        <blockquote class="hadith-callout">
+                            <p class="rtl font-amiri text-xl" lang="ar">سكتوا عنه وتركه أحمد وابن نمير</p>
+                            <p class="italic transliteration">Sakatu 'anhu wa-taraka-hu Ahmad wa-Ibn Numayr.</p>
+                            <p class="translation">"They remained silent about him; Ahmad and Ibn Numayr abandoned him."</p>
+                            <cite class="text-sm text-gray-500">- Al-Bukhari, grading al-Waqidi, cited in Ibn 'Asakir, Tarikh Madinat Dimashq, Vol. 54</cite>
+                        </blockquote>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 2: The Numbers Are Arithmetically Impossible</p>
+                        <p class="text-gray-600">The inflated wife counts (70, 90, 250, 300) would have produced hundreds of children. Genealogical sources record only 15. Ibn Sa'd's own biography names 6 wives and 4 concubine-mothers.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 3: A Methodological Principle Applies</p>
+                        <p class="text-gray-600">The principle of <em>al-rushd fi khilafihim</em> (right guidance lies in opposing them), established in multiple Shia narrations from Imam al-Sadiq <span class="honorific">﵇</span> and Imam al-Rida <span class="honorific">﵇</span>, directs maximum suspicion toward reports that are popular among the Mukhalifeen and damaging to the Ahl al-Bayt <span class="honorific">﵈</span>.</p>
+                    </div>
+                    <div class="conclusion-card">
+                        <p class="font-semibold text-gray-800">Conclusion: Fabricated on Multiple Independent Grounds</p>
+                        <p class="text-gray-700">The narration fails on six independent counts: chain deficiency (al-Waqidi), unknown narrators, arithmetic impossibility, argument from silence, theological implausibility, and contradiction with documented character evidence.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mb-8 border-b border-[#E7E0D1]">
+                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
+                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-base md:text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="true">1. The Narration and Its Chain</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. The Numbers Problem</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. Scholarly Refutations</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. The Shia Corpus Dilemma</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. Right Guidance in Opposition</button>
+                </nav>
+            </div>
+
+            <div id="tab-content">
+                <!-- TAB 1: THE NARRATION AND ITS CHAIN -->
+                <div id="tab1" class="tab-pane active" role="tabpanel">
+                    <p class="mb-6 text-gray-600">The report appears in Ibn Sa'd's <em>Tabaqat</em> as a cluster of three related narrations. Every variant passes through a single narrator whose reliability was destroyed by the greatest Sunni hadith critics.</p>
+                    <div id="tab1-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Three Variants in Ibn Sa'd</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab1-1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Ibn Sa'd groups three reports together in his biography of Imam al-Hasan <span class="honorific">﵇</span>. The first records Ali's <span class="honorific">﵇</span> concern about tribal enmity. The second contains the public prohibition. The third characterizes al-Hasan <span class="honorific">﵇</span> as a frequent divorcer whom every wife loved.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Public Prohibition (Hadith 111)</h5>
+                                        <p class="mb-2 text-gray-600">The core narration reads:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">يا أهل الكوفة ، لا تزوجوا الحسن بن علي فإنه رجل مطلاق فقال رجل من همدان : والله لنزوجنه ، فما رضي أمسك وما كره طلق</p>
+                                            <p class="italic transliteration">Ya ahl al-Kufa, la tazawwiju al-Hasan b. Ali fa-innahu rajul mutallaq. Fa-qala rajul min Hamdan: wallahi la-nuzawwijannahu, fa-ma radiya amsaka wa-ma kariha tallaqa.</p>
+                                            <p class="translation">"O people of Kufa, do not marry [your daughters to] al-Hasan b. Ali, for he is a man who divorces frequently." A man from Hamdan said: "By God, we will marry [our daughters] to him. What pleases him he keeps, and what he dislikes he divorces."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Sa'd, Tabaqat, Tarjamat al-Hasan, hadith 111 (ed. al-Tabataba'i, Qum)</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Tribal Concern (Hadith 110)</h5>
+                                        <p class="mb-2 text-gray-600">A parallel report frames the concern in political terms:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">ما زال الحسن بن علي يتزوج ويطلق حتى خشيت أن يكون يورثنا عداوة في القبائل</p>
+                                            <p class="italic transliteration">Ma zala al-Hasan b. Ali yatazawwaju wa-yutalliqu hatta khashitu an yakuna yuwarithuna 'adawatan fi al-qaba'il.</p>
+                                            <p class="translation">"Al-Hasan b. Ali kept marrying and divorcing until I feared it would bring us enmity among the tribes."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Sa'd, Tabaqat, Tarjamat al-Hasan, hadith 110</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">All three variants share the same chain: Ibn Sa'd from Muhammad b. Umar [al-Waqidi] from Hatim b. Isma'il from Ja'far b. Muhammad [al-Sadiq] <span class="honorific">﵇</span> from his father [al-Baqir] <span class="honorific">﵇</span> from Ali <span class="honorific">﵇</span>. The sole source is al-Waqidi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Al-Waqidi: Unanimously Rejected</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab1-2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Muhammad b. Umar al-Waqidi (d. 207 AH) was a prolific historian and qadi of Baghdad. His erudition was never in question. His truthfulness was demolished by every major Sunni hadith critic.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Ahmad b. Hanbal</h5>
+                                        <p class="mb-2 text-gray-600">Ahmad b. Hanbal, the founder of the Hanbali school, called al-Waqidi a liar and accused him of fabricating hadith:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">هو كذاب</p>
+                                            <p class="italic transliteration">Huwa kadhdhab.</p>
+                                            <p class="translation">"He is a liar."</p>
+                                            <cite class="text-sm text-gray-500">- Ahmad b. Hanbal, cited in Ibn 'Asakir, Tarikh Madinat Dimashq, Vol. 54</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Shafi'i</h5>
+                                        <p class="mb-2 text-gray-600">Al-Shafi'i, founder of the Shafi'i school, dismissed al-Waqidi's entire corpus:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">كتب الواقدي كذب</p>
+                                            <p class="italic transliteration">Kutub al-Waqidi kadhb.</p>
+                                            <p class="translation">"Al-Waqidi's books are lies."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Shafi'i, cited in Ibn 'Asakir, Tarikh Madinat Dimashq, Vol. 54</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Yahya b. Ma'in</h5>
+                                        <p class="mb-2 text-gray-600">Yahya b. Ma'in, one of the greatest hadith critics, gave two devastating verdicts:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">الواقدي ليس بشئ</p>
+                                            <p class="italic transliteration">Al-Waqidi laysa bi-shay'.</p>
+                                            <p class="translation">"Al-Waqidi is nothing."</p>
+                                            <cite class="text-sm text-gray-500">- Yahya b. Ma'in, cited in Ibn 'Asakir, Tarikh Madinat Dimashq, Vol. 54</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">Yahya b. Ma'in also estimated that al-Waqidi forged 20,000 hadiths in the name of the Messenger of Allah <span class="honorific">ﷺ</span>. Muslim b. al-Hajjaj (compiler of Sahih Muslim) graded him "abandoned in hadith" (matruk al-hadith). Abu Hatim al-Razi said "not trustworthy" (laysa bi-thiqa).</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">The grades are unanimous: matruk (abandoned), kadhdhab (liar), muttaham (accused of fabrication). No Sunni scholar of hadith accepts al-Waqidi as a reliable narrator. He was famous for fabricating chains and inserting himself into narrations he never heard.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Second Chain: Unknown Narrators</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab1-3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The third variant (hadith 112) uses a different chain: al-Waqidi from Ali b. Umar from his father from Ali b. al-Husayn <span class="honorific">﵇</span>. The problem is that Ali b. Umar and his father are completely unknown.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Dhahabi's Verdict</h5>
+                                        <p class="mb-2 text-gray-600">The Qom-era editorial footnote in Ibn Sa'd's text cites al-Dhahabi's <em>Mizan al-I'tidal</em> (3/148) on this narrator:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">علي بن عمر الدمشقي ، عن أبيه ، وعنه بقية ، لا يدرى من هو؟!</p>
+                                            <p class="italic transliteration">Ali b. Umar al-Dimashqi, 'an abihi, wa-'anhu Buqayya, la yudra man huwa?!</p>
+                                            <p class="translation">"Ali b. Umar al-Dimashqi, from his father, from him Bukayr. Nobody knows who he is!"</p>
+                                            <cite class="text-sm text-gray-500">- Al-Dhahabi, Mizan al-I'tidal, 3/148, cited in Ibn Sa'd, editorial footnote (87)</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Both Ali b. Umar and his father are majhul (unknown). They appear nowhere else in hadith literature. A narration whose chain contains a fabricator (al-Waqidi) followed by two unknown narrators cannot serve as evidence for any claim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TAB 2: THE NUMBERS PROBLEM -->
+                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">A defining feature of this fabrication is the progressive inflation of al-Hasan's <span class="honorific">﵇</span> wife count across sources. What began as a report of several marriages grew to absurd proportions.</p>
+                    <div id="tab2-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Escalation: 6 to 300</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab2-1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Al-Qarashi's <em>Hayat al-Imam al-Hasan</em> traces how the wife count escalated across sources. Each generation of compilers added to the number.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Escalation Table</h5>
+                                        <p class="text-gray-600 mb-2">The progression is as follows:</p>
+                                        <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                                            <li><strong>6 to 10 wives:</strong> Ibn Sa'd's own biographical section. Al-Mada'ini (in Ibn Abi al-Hadid 16/21). This is the historical baseline.</li>
+                                            <li><strong>70 wives:</strong> Al-Mada'ini (d. 225 AH), a narrator accused of lying (<em>muttaham bil-kidhb</em>). Transmitted via Ibn Abi al-Hadid.</li>
+                                            <li><strong>90 wives:</strong> Ibn Sa'd marginal note. Astarabadi, <em>al-Barahin al-Qati'a</em>. Escalation.</li>
+                                            <li><strong>250 wives:</strong> Abu Talib al-Makki, <em>Qut al-Qulub</em>. Further escalation.</li>
+                                            <li><strong>300 wives:</strong> Al-Maliki, <em>al-Fusul al-Muhimma</em>, citing the escalation chain. Absurd.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Sources of Fabrication</h5>
+                                        <p class="text-gray-600">Al-Hasani (<em>Sira al-A'imma</em>) identifies three principal sources: Ali b. Abd Allah al-Mada'ini (d. 225 AH), al-Shiblanji, and Abu Talib al-Makki (<em>Qut al-Qulub</em>). Al-Dhahabi identified Awanah b. al-Hakam, one of al-Mada'ini's key informants, as a known Umayyad propagandist.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">كان يضع الأخبار لبني أمية</p>
+                                            <p class="italic transliteration">Kana yada'u al-akhbara li-Bani Umayya.</p>
+                                            <p class="translation">"He used to fabricate reports for the Umayyads."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Dhahabi on Awanah b. al-Hakam, cited in al-Hasani, Sira al-A'imma, Vol. 1</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Political Origin</h5>
+                                        <p class="mb-2 text-gray-600">Al-Maliki (<em>al-Fusul al-Muhimma</em>) traces the fabrication to its political origin:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">إن هذه الأباطيل قد افتعلها المنصور الدوانيقي وأخذها عنه المؤرّخون</p>
+                                            <p class="italic transliteration">Inna hadhihi al-abatila qad ifta'ala-ha al-Mansur al-Dawaniqi wa-akhadha-ha 'anhu al-mu'arrikhun.</p>
+                                            <p class="translation">"These fabrications were invented by [Caliph] al-Mansur al-Dawaniqi, and the historians took them from him."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Maliki, al-Fusul al-Muhimma, Vol. 2</cite>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Arithmetic Refutation</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab2-2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The Qom editorial on Ibn Sa'd's text makes the simplest and most devastating argument.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Arithmetic</h5>
+                                        <p class="text-gray-600">Ibn Sa'd's own biography, in the opening section listing al-Hasan's <span class="honorific">﵇</span> children, names only <strong>6 free wives and 4 concubine-mothers</strong>, producing <strong>15 children</strong> (5 sons and 10 daughters). This is entirely normal for a man of his era and social standing, comparable to his father Ali <span class="honorific">﵇</span>, who had a similar number of wives and children.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Qom Editorial</h5>
+                                        <p class="mb-2 text-gray-600">The footnote on Ibn Sa'd's text states:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">فلو كان أحصن سبعين امرأة أو تسعين لكان أولاده يعدون بالمئات</p>
+                                            <p class="italic transliteration">Fa-law kana ahsana sab'ina imra'atan aw tis'ina la-kana awladuhu ya'udduna bil-mi'at.</p>
+                                            <p class="translation">"If he had really married seventy or ninety women, his children would number in the hundreds."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Sa'd, Tarjamat al-Hasan, editorial footnote (87) by Sayyid Abd al-Aziz al-Tabataba'i</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The genealogical record (Ibn Habib's <em>al-Muhabbar</em>, d. 245 AH) lists only <strong>three sons-in-law</strong> for al-Hasan <span class="honorific">﵇</span>. The claim of 300 wives producing 15 children requires a biological impossibility.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">If 70, 90, or 300 wives were real, there would be hundreds of descendants recorded across the genealogical literature. There are 15. The numbers are fabricated.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TAB 3: SCHOLARLY REFUTATIONS -->
+                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">Shia scholars across centuries have rejected this narration on multiple grounds. The arguments range from chain criticism to the argument from silence to character evidence.</p>
+                    <div id="tab3-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Argument from Silence</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab3-1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The Qom editorial on Ibn Sa'd's text raises perhaps the most telling historical point. If al-Hasan <span class="honorific">﵇</span> had truly been marrying and divorcing at the rate of 70 to 300 wives, Mu'awiya, who actively sought al-Hasan's faults, never used it as ammunition.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Silence</h5>
+                                        <p class="mb-2 text-gray-600">The editorial states:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">فطيلة حياته لم نر معاوية ولا واحدا من زبانيته عاب الحسن بذلك ولا بكته بشئ من هذا القبيل وهو الذي كان يتسقط عثرات الحسن فلم يجد فيه ما يشينه</p>
+                                            <p class="italic transliteration">Fa-tilata hayatihi ma ra'ayna Mu'awiya wala wahidan min zubaniyyatihi abba al-Hasana bidhalika wala bakkata-hu bi-shay' min hadha al-qabil wa-huwa alladhi kana yatasqitu athrati al-Hasan fa-lam yajid fihi ma yushinuhu.</p>
+                                            <p class="translation">"During his entire life, we never saw Mu'awiya or any of his henchmen reproach al-Hasan for this, even though Mu'awiya was actively seeking out al-Hasan's faults and found nothing to shame him with."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Sa'd, Tarjamat al-Hasan, editorial footnote (87)</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The Damascus court, which employed professional poets and propagandists against Ali's <span class="honorific">﵇</span> family, never raised this charge during al-Hasan's <span class="honorific">﵇</span> lifetime. The stories appeared only decades later.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">An enemy who scoured al-Hasan's <span class="honorific">﵇</span> life for faults and found nothing to exploit. If the marriages had been excessive, Mu'awiya would have used the charge. He did not, because the charge did not exist.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Character Evidence</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab3-2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Multiple independent descriptions of al-Hasan's <span class="honorific">﵇</span> character directly contradict the "mutallaq" image.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Ibn Sa'd's Own Testimony</h5>
+                                        <p class="mb-2 text-gray-600">Ibn Sa'd's biography, the same text that preserves the "mutallaq" narration, also records:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">كان الحسن حليما ، كريما ، ورعا ، ذا سكينة ووقار وحشمة ، ما سمعت منه كلمة فحش قط</p>
+                                            <p class="italic transliteration">Kana al-Hasan haliman, kariman, wara'an, dha sakina wa-waqar wa-hashama, ma sami'tu minhu kalimata fahshin qatt.</p>
+                                            <p class="translation">"Al-Hasan was forbearing, generous, pious, possessing serenity, dignity, and gravitas. No one ever heard an obscene word from him."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Sa'd, Tabaqat, Tarjamat al-Hasan, hadiths 1-25</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Documented Divorces</h5>
+                                        <p class="text-gray-600">The historical record documents only three divorces. One was to Umm Kulthum. One was to a woman from Banu Shayban. One was to the Asadiyya, whom al-Hasan <span class="honorific">﵇</span> took back after she said "a small consolation from a departing lover" (<em>mata' qalil min habib mufariq</em>). A story of that emotional depth contradicts the image of a careless divorcer.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Generosity Toward Divorced Wives</h5>
+                                        <p class="text-gray-600">Ibn Sa'd records that al-Hasan <span class="honorific">﵇</span> sent each divorced wife generous financial gifts: 10,000 dirhams and containers of honey as a parting gift (<em>mut'a</em>). This is the behavior of a man who honored the women he parted with, not one who discarded them carelessly.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Every independent description of al-Hasan <span class="honorific">﵇</span> emphasizes forbearance, generosity, and piety. The few documented divorces show emotional depth and generous treatment of former wives. The "mutallaq" label contradicts the entire character record.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Scholarly Rejections</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab3-3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Karim (al-Rawd al-Nadhir)</h5>
+                                        <p class="text-gray-600">Calls the narration one of "the blatant lies and fabrications" (<em>al-akadhib wa-l-maftirat al-sariha</em>) attributed to Imam Ali <span class="honorific">﵇</span>. He argues that whatever multiple marriages occurred were driven by legitimate shar'i circumstances, and that hostile historians inflated the numbers.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Qarashi (Hayat al-Imam al-Hasan)</h5>
+                                        <p class="mb-2 text-gray-600">Frames the report as a deliberate smear campaign:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">والصقوا بسيرته الوضاءة انه كان كثير الزواج، والطلاق... والسبب في ذلك كله هو الحط من شأنه، والتقليل من أهميته</p>
+                                            <p class="italic transliteration">Wa-al-saqu bisiratihi al-wadda'i'i annahu kana kathira al-zawaj, wa-l-talaq... wa-al-sabab fi dhalika kullihi huwa al-hattu min sha'nihi, wa-al-taqilul min ahammiyyatihi.</p>
+                                            <p class="translation">"They smeared his radiant biography with the claim that he was a frequent marrier and divorcer. The whole purpose was to diminish his stature and importance."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Qarashi, Hayat al-Imam al-Hasan, Vol. 1, p. 1431</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">He notes that Taha Husayn, the modern Egyptian literateur, uncritically propagated these reports "as established facts" without investigating the chain.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Hasani (Sira al-A'imma)</h5>
+                                        <p class="mb-2 text-gray-600">Identifies the political context of the fabrication:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">المدائني والواقدي وغيرهما من المؤرخين القدامى قد كتبوا التاريخ في ظل الحكومات التي كانت تناهض أهل البيت</p>
+                                            <p class="italic transliteration">Al-Mada'ini wa-l-Waqidi wa-gharuhuma min al-mu'arrikhin al-qudama' qad katabu al-tarikha fi zill al-hukumat allati kanat tunahidu Ahl al-Bayt.</p>
+                                            <p class="translation">"Al-Mada'ini, al-Waqidi, and other early historians wrote history in the shadow of governments that were hostile to the Ahl al-Bayt."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Hasani, Sira al-A'imma, Vol. 1</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Across centuries, Shia scholars have identified this narration as a political fabrication. The fabrication served to diminish al-Hasan's <span class="honorific">﵇</span> stature after his caliphate, justify the Umayyad takeover, undermine the concept of isma (infallibility), and counteract the popularity of his peace treaty.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TAB 4: THE SHIA CORPUS DILEMMA -->
+                <div id="tab4" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">The narration appears in al-Kafi itself, the most authoritative Shia hadith collection. Shia scholars cannot dismiss it as a Sunni fabrication. Their responses range from arithmetic refutation to chain criticism to the application of methodological principles.</p>
+                    <div id="tab4-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Narration in al-Kafi</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab4-1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Al-Kulayni (d. 329 AH) preserves two versions of the narration in <em>al-Kafi</em>, Vol. 6, within the chapter on divorce. A third version appears in al-Barqi's <em>al-Mahasin</em>.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Chain 1: Ibn Sinan from al-Sadiq</h5>
+                                        <p class="mb-2 text-gray-600">The first chain runs through Abd Allah b. Sinan from Imam al-Sadiq <span class="honorific">﵇</span>:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">إن عليا صلوات الله عليه قال وهو على المنبر : لا تزوجوا الحسن فإنه رجل مطلاق ، فقام رجل من همدان فقال : بلى والله لنزوجنه ، وهو ابن رسول الله وابن أمير المؤمنين فإن شاء أمسك وإن شاء طلق</p>
+                                            <p class="italic transliteration">Inna Aliyyan salawatu Allahi alayhi qala wa-huwa ala al-minbar: la tazawwiju al-Hasan fa-innahu rajul mutallaq, fa-qama rajul min Hamdan fa-qala: bala wallahi la-nuzawwijannahu, wa-huwa ibn rasuli Allah wa-ibn amir al-mu'minin fa-in shaa amsaka wa-in shaa tallaqa.</p>
+                                            <p class="translation">"Ali, peace be upon him, said while on the minbar: Do not marry al-Hasan, for he is a man who divorces frequently. A man from Hamdan stood and said: By God, we will marry him. He is the son of the Messenger of Allah and the son of the Commander of the Faithful. If he wishes he keeps, and if he wishes he divorces."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Kulayni, al-Kafi, Vol. 6, p. 54 (Kitab al-Talaq)</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Chain 2: Ibn Faddal from al-Sadiq</h5>
+                                        <p class="mb-2 text-gray-600">The second chain adds the claim of fifty divorces:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">إن الحسن بن علي طلق خمسين امرأة ، فقال علي بالكوفة فقال : يا معشر أهل الكوفة لا تنكحوا الحسن فإنه رجل مطلاق</p>
+                                            <p class="italic transliteration">Inna al-Hasan b. Ali tallaqa khamshina imra'ah, fa-qala Ali bil-Kufah fa-qala: ya ma'shara ahli al-Kufah la tankihu al-Hasan fa-innahu rajul mutallaq.</p>
+                                            <p class="translation">"Al-Hasan b. Ali divorced fifty women. Ali said in Kufa: O people of Kufa, do not marry al-Hasan, for he is a man who divorces frequently."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Kulayni, al-Kafi, Vol. 6, p. 56</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Chain 3: The Consultation (al-Mahasin)</h5>
+                                        <p class="mb-2 text-gray-600">Al-Barqi preserves a version where Ali <span class="honorific">﵇</span> gives private advice instead of a public proclamation:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">أتى رجل أمير المؤمنين عليا فقال له : جئتك مستشيرا إن الحسن والحسين وعبد الله بن جعفر خطبوا إلي فقال أمير المؤمنين : المستشار مؤتمن . أما الحسن فإنه مطلاق للنساء ، ولكن زوجها الحسين ، فإنه خير لابنتك</p>
+                                            <p class="italic transliteration">Ata rajul amir al-mu'minin Aliyyan fa-qala lahu: ji'tuka mustashiran inna al-Hasan wa-l-Husayn wa-Abd Allah b. Ja'far khatabu ilayya fa-qala amir al-mu'minin: al-mustashar mu'atthaman. Amma al-Hasan fa-innahu mutallaq lil-nisa', wa-lakin zawwijha al-Husayn fa-innahu khayr li-bintik.</p>
+                                            <p class="translation">"A man came to the Commander of the Faithful, Ali, and said: I have come to you for consultation. Al-Hasan, al-Husayn, and Abd Allah b. Ja'far have all proposed to me. The Commander of the Faithful said: The one consulted is entrusted. As for al-Hasan, he is a frequent divorcer of women. But marry her to al-Husayn, for that is better for your daughter."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Barqi, al-Mahasin, p. 601</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">These narrations were reproduced in Bihar al-Anwar (volumes 43 and 44) by al-Majlisi and in Jami Ahadith al-Shi'a (volume 22) by al-Burujirdi. The presence of the report in Shia primary collections means the rejection must come through other means.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Majlisi's Refutation</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab4-2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Al-Majlisi provides the most detailed rebuttal within the Shia tradition in his footnote to <em>Bihar al-Anwar</em>, Vol. 44. He traces the inflated count to Abu Talib al-Makki, a weak narrator.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Weakness of Abu Talib al-Makki</h5>
+                                        <p class="mb-2 text-gray-600">Al-Majlisi identifies the origin of the 250/300 count:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">اشتهر عنه أنه تزوج ثلاث مائة امرأة ، والأصل في ذلك ما ذكره أبو طالب المكي في قوت القلوب كما نقله ابن شهرآشوب فأرسله المؤرخون إرسال المسلمات ونقلوا ذلك في كتبهم بلا تثبت وتحقيق ، مع كون الرجل ضعيف الرواية ، ليس بثبت ولا ثقة</p>
+                                            <p class="italic transliteration">Ishtahara anhu annahu tazawwaja thalath mi'ah imra'ah, wa-l-asl fi dhalika ma dhakara-hu Abu Talib al-Makki fi Qut al-Qulub kama naqala-hu Ibn Shahr Ashub fa-arsala-hu al-mu'arrikhun irsal al-musallamat wa-naqalu dhalika fi kutubihim bala tathabbut wa-tahqiq, ma'a kawn al-rajul da'if al-riwaya, laysa bi-thabat wa-la thiqa.</p>
+                                            <p class="translation">"It became famous about him that he married 300 women. The origin of that is what Abu Talib al-Makki mentioned in Qut al-Qulub, as transmitted by Ibn Shahr Ashub. The historians then circulated it as established fact without investigation or verification, despite the man being weak in narration, neither reliable nor trustworthy."</p>
+                                            <cite class="text-sm text-gray-500">- Al-Majlisi, Bihar al-Anwar, Vol. 44, footnote on hadith 27</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Arithmetic Argument</h5>
+                                        <p class="text-gray-600">Al-Majlisi then makes the arithmetic argument. If al-Hasan <span class="honorific">﵇</span> had married 250 or 300 women, there would necessarily be more than 200 offspring at minimum. He estimates the real number at between 20 to 30 women and argues the "mutallaq" label arose because al-Hasan <span class="honorific">﵇</span> was never seen with more than four free wives at a time, so he had to divorce one to marry another. Since this was unusual for his time, he became known as a <em>mutallaq</em>, and then the general public exaggerated it wildly.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Majlisi's position: the Kafi narrations have a factual basis (al-Hasan <span class="honorific">﵇</span> married and divorced more than usual because of the four-wife limit), but the inflated numbers are fabricated by a weak narrator and circulated without verification.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Al-Muhsini's Assessment</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab4-3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">Al-Muhsini takes a notably different approach from Majlisi. He considers the Kafi chains reliable (<em>mu'tabar</em>) and accepts a factual basis for the report.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">His Position</h5>
+                                        <p class="text-gray-600">He considers the 250/300 count "obvious exaggeration" but accepts that al-Hasan <span class="honorific">﵇</span> married and divorced more than usual. His position is that the narrations have a correct origin in the aggregate. The core of the report (that Ali <span class="honorific">﵇</span> expressed concern) may reflect a real historical moment, but the numbers were wildly inflated by later compilers.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">The diversity of scholarly responses to the Kafi narrations shows that Shia scholars do not dismiss the report reflexively. They engage with it through chain criticism, arithmetic evidence, and methodological principles, reaching conclusions that range from partial acceptance of a factual core to outright rejection of the entire report.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TAB 5: RIGHT GUIDANCE IN OPPOSITION -->
+                <div id="tab5" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">A well-established principle in Shia hadith methodology holds that when a report is popular among the Mukhalifeen and serves an anti-Ahl al-Bayt agenda, the truth lies in its opposite. The principle is called <em>al-rushd fi khilafihim</em>: right guidance lies in opposing them.</p>
+                    <div id="tab5-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Maqbula of Umar b. Hanzala</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab5-1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The foundational source is the Maqbula of Umar b. Hanzala, recorded in <em>al-Kafi</em> (Vol. 1, p. 67) and al-Tusi's <em>Tahdhib</em> (Vol. 6, p. 301). It is called "maqbula" because the Shia scholarly community received it with acceptance (<em>qubul</em>).</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Core Instruction</h5>
+                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> gave a hierarchy of tie-breakers for conflicting reports. When all other criteria are exhausted, the final criterion is:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">ما خالف العامة ففيه الرشاد</p>
+                                            <p class="italic transliteration">Ma khalafa al-amma fa-fihi al-rushd.</p>
+                                            <p class="translation">"What contradicts the general public, in it is right guidance."</p>
+                                            <cite class="text-sm text-gray-500">- Imam al-Sadiq, Maqbula of Umar b. Hanzala, al-Kafi, Vol. 1, p. 67</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The Imam <span class="honorific">﵇</span> further instructed: if both reports agree with the al-amma, look to what their judges and rulers prefer, leave that, and take the other. If both agree with their judges, then wait until you meet your Imam, "for standing at the threshold of doubt is better than plunging into destruction."</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">The Maqbula establishes a hierarchy: first the Book and the Sunna, then scholarly consensus, then narrator reliability, then opposition to the al-amma as a final tie-breaker.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Parallel Narrations</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab5-2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The principle appears in multiple independent narrations from Imam al-Sadiq <span class="honorific">﵇</span> and Imam al-Rida <span class="honorific">﵇</span> across different Shia collections.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Marfua of Zurara</h5>
+                                        <p class="mb-2 text-gray-600">Ibn Abi Jumhur al-Ahsa'i transmits in <em>Ghawali al-La'ali</em> from al-Allama, raised to Zurara, who asked Imam al-Baqir <span class="honorific">﵇</span> about conflicting hadiths:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">انظر ما وافق منهما العامة فاتركه وخذ بما خالف فان الحق فيما خالفهم</p>
+                                            <p class="italic transliteration">Uzur ma wafaqa minhuma al-amma fa-udrukuhu wa-khudh bi-ma khalafa fa-inna al-haqqa fi ma khalafahum.</p>
+                                            <p class="translation">"Look at what agrees with the general public, leave it, and take what contradicts them. For the truth lies in what contradicts them."</p>
+                                            <cite class="text-sm text-gray-500">- Imam al-Baqir, Marfua of Zurara, Ghawali al-La'ali (via al-Allama)</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Imam al-Rida's Instruction</h5>
+                                        <p class="mb-2 text-gray-600">Ibn Babawayh records in Uyun al-Akhbar a striking version from Imam al-Rida <span class="honorific">﵇</span>:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">ايت قاضي البلد فما أفتاك بشئ فخذ بخلافه فان الرشد في خلافه</p>
+                                            <p class="italic transliteration">I'ti qadi al-balad fa-ma aftaka bi-shay' fa-khudh bi-khilafihi fa-inna al-rushda fi khilafihi.</p>
+                                            <p class="translation">"Go to the qadi of the town. Whatever he gives you a fatwa on, take the opposite, for right guidance lies in his opposite."</p>
+                                            <cite class="text-sm text-gray-500">- Imam al-Rida, Ibn Babawayh, Uyun al-Akhbar, Vol. 2, p. 20</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Rawandi Narration</h5>
+                                        <p class="mb-2 text-gray-600">Al-Qutb al-Rawandi transmits from Imam al-Sadiq <span class="honorific">﵇</span> the most explicit version:</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">إذا ورد عليكم حديثان مختلفان فاعرضوهما على كتاب الله ، فما وافق كتاب الله فخذوه وما خالف كتاب الله فردوه وان لم تجدوهما في كتاب الله فاعرضوهما على أخبار العامة ، فما وافق أخبارهم فذروه وما خالف أخبارهم فخذوه</p>
+                                            <p class="italic transliteration">Idha warada alaykum hadithani mukhtalifani fa-ariduhuma ala kitabi Allah, fa-ma wafaqa kitaba Allah fa-khudhuhu wa-ma khalafa kitaba Allah fa-rudduhu wa-in lam tajiduhuma fi kitabi Allah fa-ariduhuma ala akhbari al-amma, fa-ma wafaqa akhbarahum fa-dhuruha wa-ma khalafa akhbarahum fa-khudhuhu.</p>
+                                            <p class="translation">"If two conflicting hadiths come to you, present them to the Book of Allah. What agrees with the Book of Allah, take it. What contradicts the Book of Allah, reject it. If you do not find them in the Book of Allah, then present them to the reports of the general public. What agrees with their reports, discard it. What contradicts their reports, take it."</p>
+                                            <cite class="text-sm text-gray-500">- Imam al-Sadiq, al-Qutb al-Rawandi, cited in Wasa'il al-Shi'a, Vol. 18, p. 84</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Six independent narrations from Imam al-Sadiq <span class="honorific">﵇</span> and Imam al-Rida <span class="honorific">﵇</span> establish the same principle across different Shia collections. The principle is not a blanket rejection of all Sunni reports. It is a murajjih (tie-breaker) used when other criteria are exhausted.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Application to the Mutallaq Narration</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab5-3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The application of this principle to the "mutallaq" narration is one of the clearest cases imaginable.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Four Converging Grounds</h5>
+                                        <p class="text-gray-600">The report satisfies every condition for maximum suspicion under the principle:</p>
+                                        <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                                            <li>The "mutallaq" label is overwhelmingly popular in the Sunni corpus. It appears in Ibn Sa'd, Ibn Asakir, Ibn Abi al-Hadid, Abu Talib al-Makki, al-Shiblanji, and virtually every Sunni biographical source.</li>
+                                            <li>It serves the anti-Ahl al-Bayt <span class="honorific">﵈</span> narrative by diminishing al-Hasan <span class="honorific">﵇</span>, the Prophet's <span class="honorific">ﷺ</span> grandson whom he called "sayyid shabab ahl al-janna" (master of the youth of Paradise).</li>
+                                            <li>The Sunni version has a weak chain (al-Waqidi) and arithmetic problems (300 wives with no corresponding children).</li>
+                                            <li>There is an argument from silence: Mu'awiya never raised the charge during al-Hasan's <span class="honorific">﵇</span> lifetime.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">By the principle of al-rushd fi khilafihim, the opposite position should be preferred: al-Hasan <span class="honorific">﵇</span> was a man of exemplary character whose marriages were few and motivated by legitimate reasons. The principle provides an additional independent ground for rejection, on top of the chain, arithmetic, and historical arguments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-4">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Scholarly Debate About the Principle</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="tab5-4">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Introduction</h5>
+                                        <p class="text-gray-600">The principle itself is not uncontested within Shia scholarship. Several major scholars have debated its scope, its chain reliability, and its proper application.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Khurāsānī (Kifayat al-Usul)</h5>
+                                        <p class="text-gray-600">Al-Khurāsānī analyzes four possible interpretations of why contradicting the amma is a valid murajjih: (a) it is a ta'abbudi instruction that must be followed without understanding the reason, (b) it reflects the intrinsic goodness of opposing them, (c) truth is ghalib (predominant) in what contradicts them, or (d) reports that agree with them are suspected of being taqiyya-motivated distortions. The fourth interpretation is the most widely adopted: reports aligning with Sunni positions may have been distorted under taqiyya or political pressure.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Khu'i</h5>
+                                        <p class="text-gray-600">Al-Khu'i discusses the principle extensively and treats it as a valid tie-breaker. He cautions against dogmatic application, noting that the principle operates within the specific framework of resolving conflicting reports, not as a standalone method for evaluating individual narrations.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Al-Isfahani (contemporary)</h5>
+                                        <p class="text-gray-600">Al-Isfahani argues that the principle should be applied narrowly. He makes the critical observation that "not a single narration of 'take what contradicts the amma' has a sound chain" (lim tasihh ay riwaya min riwayat al-akhdh bi-ma khalafa al-amma sanadan). Even al-Rawandi's narration, which al-Sadr graded as sahih, is disputed. Despite this, the principle remains widely accepted in Shia jurisprudence as a valid murajjih.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Conclusion</h5>
+                                        <p class="font-semibold text-gray-800">Despite ongoing debate about the principle's chain and scope, its application to the "mutallaq" narration remains compelling. The convergence of five independent grounds (chain weakness, arithmetic impossibility, argument from silence, character evidence, and the al-rushd fi khilafihim principle) makes this one of the strongest cases for rejection in the hadith literature.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="glossary-section" class="mt-12">
+                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                        <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content" id="glossary-content">
+                        <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <p><strong>Mutallaq:</strong> A man who divorces frequently. The term comes from the Arabic root t-l-q, meaning to release or set free. In the context of this narration, it carries a pejorative sense of someone who marries and discards women carelessly.</p>
+                            <p><strong>Al-Waqidi:</strong> Muhammad b. Umar al-Waqidi (d. 207 AH), a prolific historian and qadi of Baghdad. Unanimously rejected as a hadith narrator by Sunni critics (Ahmad b. Hanbal, al-Shafi'i, Yahya b. Ma'in, Muslim, al-Bukhari) for fabricating chains and forging hadiths.</p>
+                            <p><strong>Matruk:</strong> "Abandoned." A technical grade in hadith criticism meaning that scholars have unanimously abandoned narrating from this person due to established fabrications or persistent lying.</p>
+                            <p><strong>Majhul:</strong> "Unknown." A narrator who appears in only one or two chains and about whom no biographical information exists. Reports from majhul narrators are not accepted as evidence.</p>
+                            <p><strong>Murajjih:</strong> A "preponderant" or tie-breaker. In Shia hadith methodology, a criterion used to prefer one report over another when they conflict. The principle of al-rushd fi khilafihim is one such murajjih.</p>
+                            <p><strong>Al-rushd fi khilafihim:</strong> "Right guidance lies in opposing them." A principle established in multiple Shia narrations directing that when a report is popular among the Mukhalifeen (the general Sunni public), the truth is more likely found in its opposite.</p>
+                            <p><strong>Al-amma:</strong> "The general public." In Shia hadith terminology, this refers to the Sunni majority. The term appears throughout the narrations establishing the al-rushd fi khilafihim principle.</p>
+                            <p><strong>Maqbula:</strong> "Accepted." A narration that the Shia scholarly community received with unanimous acceptance. The Maqbula of Umar b. Hanzala is the foundational source for the hierarchy of tie-breakers in Shia hadith methodology.</p>
+                            <p><strong>Taqiyya:</strong> Religious dissimulation under threat. One interpretation of the al-rushd fi khilafihim principle is that reports agreeing with Sunni positions may have been issued under taqiyya and thus do not reflect the true teaching of the Imams <span class="honorific">﵈</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700">The "do not marry al-Hasan, he is a mutallaq" narration is fabricated on six independent grounds: the chain passes through al-Waqidi (a unanimous liar by Sunni consensus), the second chain contains unknown narrators, the inflated wife counts (70 to 300) are arithmetically impossible given the 15 documented children, Mu'awiya never raised the charge during al-Hasan's <span class="honorific">﵇</span> lifetime, the report contradicts every independent description of al-Hasan's <span class="honorific">﵇</span> character, and the principle of al-rushd fi khilafihim directs maximum suspicion toward reports that are popular among the Mukhalifeen and damaging to the Ahl al-Bayt <span class="honorific">﵈</span>. The narration is a product of the anti-Ahl al-Bayt <span class="honorific">﵈</span> historiographical school that operated under Umayyad and early Abbasid patronage.</p>
+                    <p class="text-sm text-gray-500 mt-4">Sources: Ibn Sa'd, Tabaqat (ed. al-Tabataba'i, Qum); Ibn Asakir, Tarikh Madinat Dimashq, Vol. 54; Al-Kulayni, al-Kafi, Vol. 6; Al-Majlisi, Bihar al-Anwar, Vols. 43-44; Al-Qarashi, Hayat al-Imam al-Hasan; Al-Hasani, Sira al-A'imma; Al-Maliki, al-Fusul al-Muhimma; Al-Khurāsānī, Kifayat al-Usul; Al-Khu'i, al-Ra'y al-Sadid.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const target = e.currentTarget.dataset.target;
+
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    e.currentTarget.classList.add('active');
+                    e.currentTarget.setAttribute('aria-selected', 'true');
+
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
+                    if (parentAccordion) {
+                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
+                            if (i !== item) {
+                               i.classList.remove('open');
+                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                               i.querySelector('.accordion-content').style.maxHeight = '0px';
+                            }
+                        });
+                    }
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        header.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('open');
+                        header.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0px';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
+    </footer>
+</body>
+</html>
