@@ -36,23 +36,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -189,15 +172,14 @@
                 <!-- TAB 1: THE DISPUTE -->
                 <div id="tab1" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">Why did Ali <span class="honorific">﵇</span>, the first to believe in the Prophet <span class="honorific">ﷺ</span>, not rise with the sword when the khilafa was settled upon another at the Saqifa? His own sermon sharpens the puzzle: he declared the mantle his by right, and then described lowering a curtain over it.</p>
-                    <div id="tab1-accordion" class="space-y-4">
+                    <div id="tab1-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Puzzle Stated</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The Shaqshaqiyya sermon is the most celebrated address in Nahj al-Balagha. In it, Ali <span class="honorific">﵇</span> declared that the man who donned the mantle of the caliphate knew full well that Ali's place in it was the pivot of the millstone, and yet that he lowered a curtain between himself and the office, caught between two choices: to strike with a hand cut off from helpers, or to endure a blind darkness in which the old would wither and the young grow grey.</p>
@@ -224,13 +206,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">What Would Falsify the Thesis</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The thesis would fall if the record showed that Ali <span class="honorific">﵇</span> ever conceded the khilafa to another as a matter of right, or that he refrained from claiming it when a claim cost him nothing, or that his own explanation pointed to incapacity alone.</p>
@@ -249,15 +230,14 @@
                 <!-- TAB 2: THE HOUSE'S EXPLANATION -->
                 <div id="tab2" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The Imams of Ali's <span class="honorific">﵇</span> House preserved their own account of those days. In that account, the reason for the stayed hand is named without ambiguity, placed on Ali's <span class="honorific">﵇</span> own tongue at the most charged hour of that year.</p>
-                    <div id="tab2-accordion" class="space-y-4">
+                    <div id="tab2-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Confrontation at al-Baqi</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">After Fatima's <span class="honorific">﵍</span> death in Jumada al-Akhira of the eleventh year, Ali <span class="honorific">﵇</span> buried her secretly at night and concealed her grave among forty fresh ones. When the community resolved to dig up the graves to find hers, Ali <span class="honorific">﵇</span> came out to al-Baqi in anger, wearing the yellow cloak he put on in calamity, leaning on his sword Dhu al-Fiqar. When Umar pressed the matter, Ali seized him, threw him to the ground, and spoke the sentence on which this whole study turns.</p>
@@ -284,13 +264,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Foretold Trial</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The House also preserved the Prophet's own warning that a fitna was coming after him. Sulaym ibn Qays relates that Ali <span class="honorific">﵇</span> reported hearing the Messenger of God <span class="honorific">ﷺ</span> declare a warning about the trials that would follow, naming them by name.</p>
@@ -323,15 +302,14 @@
                 <!-- TAB 3: THE PROPHET'S CHARGE -->
                 <div id="tab3" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The earliest book-layer of the tradition answers plainly: the patience was executed under an older command.</p>
-                    <div id="tab3-accordion" class="space-y-4">
+                    <div id="tab3-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Conditional Command</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">Sulaym ibn Qays records Ali <span class="honorific">﵇</span> recounting a private conversation with the Prophet <span class="honorific">ﷺ</span> about what was coming. Ali asked what he should do when the community turned away. The Prophet's answer was a conditional charge, governed by a circumstance.</p>
@@ -358,13 +336,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Station of Harun</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The Prophet <span class="honorific">ﷺ</span> named Ali's <span class="honorific">﵇</span> station outright: he stood as Harun stood to Musa. And the Quran records what Harun did when he found the Children of Israel worshipping the Calf in his brother's absence. The analogy is the key to the whole charge.</p>
@@ -387,15 +364,14 @@
                 <!-- TAB 4: ALI'S OWN VERDICT -->
                 <div id="tab4" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The Shaqshaqiyya gives us Ali's <span class="honorific">﵇</span> own verdict on his forbearance, delivered from the pulpit in his own voice.</p>
-                    <div id="tab4-accordion" class="space-y-4">
+                    <div id="tab4-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">A Thorn in the Eye</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The sermon's most haunting passage describes the patience itself. Ali <span class="honorific">﵇</span> said he was patient, and the metaphors he chose are wounds: a mote in the eye and a bone in the throat.</p>
@@ -422,13 +398,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Rider of the Unbroken Camel</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">Ali <span class="honorific">﵇</span> compared the caliphate itself to an unbroken she-camel. The image captures the double bind: whatever the rightful holder does, the beast will hurt him or hurt those around him.</p>
@@ -461,15 +436,14 @@
                 <!-- TAB 5: SERVICE AND SCRIPTURE -->
                 <div id="tab5" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The man who declared his right usurped was the same man to whom the holders of that office returned again and again, in private perplexity and in open court, whenever the law outran their knowledge of it.</p>
-                    <div id="tab5-accordion" class="space-y-4">
+                    <div id="tab5-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Woman Spared from Stoning</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">A woman came to Umar and confessed to fornication. Umar ordered her stoned. Ali <span class="honorific">﵇</span> intervened with a deduction from two verses of the Quran, the kind of reasoning that only mastery of the Book could produce on the spot.</p>
@@ -496,13 +470,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Verse of the Trial</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The Quran warns of a fitna whose fire does not respect the line between guilty and innocent. Ibn al-Arabi, the Maliki jurist of Seville, treats the verse as a problem of legal theology and asks the simplest question: what is the fitna the believers are told to fear?</p>
@@ -530,13 +503,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Verse of the Promise</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-3">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-3">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">Against the warning stands the promise: God has pledged succession in the earth to those who believe and do righteous deeds. The commentators of the House read this verse as a specific designation.</p>
@@ -569,15 +541,14 @@
                 <!-- TAB 6: THE SHARED LEDGER -->
                 <div id="tab6" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The raw facts were never the property of one side. Long before the argument over meaning hardened, the record itself had been written into books that neither camp could disown.</p>
-                    <div id="tab6-accordion" class="space-y-4">
+                    <div id="tab6-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Testimony of Miqdad</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">During the shura that selected Uthman, Miqdad looked upon what had befallen the Prophet's <span class="honorific">ﷺ</span> household and spoke. His words are preserved by al-Naqdi in al-Anwar al-'Alawiyya, carrying the report through Sulaym ibn Qays.</p>
@@ -604,13 +575,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Boundary of Forbearance</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">The forbearance had a boundary, and the boundary is the final proof that it was obedience to a charge. Ibn Abi al-Hadid, the Mu'tazili commentator on Nahj al-Balagha, poses the obvious objection: if restraint preserved Islam at the Saqifa, why did Ali not extend the same restraint to the people of the Camel and to Muawiya?</p>
@@ -644,13 +614,12 @@
 
             <!-- GLOSSARY -->
             <div id="glossary-section" class="mt-12">
-                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                    <div class="p-4 border-b border-[#E7E0D1]">
                         <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="accordion-content" id="glossary-content">
-                        <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                    <div id="glossary-content">
+                        <div class="p-4 space-y-4">
                             <p><strong>Saqifa:</strong> The portico of the Banu Sa'ida where the community gathered to settle the succession after the Prophet's <span class="honorific">ﷺ</span> death.</p>
                             <p><strong>Khilafa:</strong> The caliphate; the office of successor to the Prophet <span class="honorific">ﷺ</span> in temporal and religious leadership.</p>
                             <p><strong>Shaqshaqiyya:</strong> The most celebrated sermon in Nahj al-Balagha, named for Ali's <span class="honorific">﵇</span> own comparison of its speech to a camel's foam that wells up and then subsides.</p>
@@ -699,37 +668,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header'); // aria-controls: set in HTML
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false'); // aria-controls: set in HTML
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 

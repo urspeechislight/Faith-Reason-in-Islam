@@ -30,23 +30,6 @@
             font-size: 0.75em;
             line-height: 1;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -165,48 +148,44 @@
                 <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Commentary</h2>
                 <div class="space-y-4">
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec3-1">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">The Cosmic Stack</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec3-1">
+                        <div id="sec3-1">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">The chain of supports (earth on angel, angel on rock, rock on bull, bull on whale, whale on water, water on air, air on darkness) is one of the most discussed passages in classical cosmology. The entities described carry animal names to make immense cosmic realities graspable. Many classical scholars treated these as symbolic descriptions of cosmic forces rather than literal animals.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec3-2">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">The Darkness That Stops the Trail</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec3-2">
+                        <div id="sec3-2">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">The cosmology ends at darkness, and what lies beneath it is sealed off from any created mind. This is a humility clause built into the narration. The Imam takes the listener up to the edge of what can be known, then closes the door.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec3-3">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Why the Throne Appears Twice</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec3-3">
+                        <div id="sec3-3">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">The first passage, in Part 2, tells how the Throne came to exist from the Prophet's light. The second passage, here in Part 3, tells what the Throne is made of in terms of divine qualities: Grace and Justice. One answers "from what," the other answers "of what."</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec3-4">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Kneaded Into the Clay of the Prophet</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec3-4">
+                        <div id="sec3-4">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">Before Adam, the moral and intellectual substances of creation are mixed into the very material of the Prophet's being. He is the original carrier of every good quality, and everything good that appears later in human souls is drawn from that same kneading.</p>
                             </div>
@@ -224,37 +203,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 </body>

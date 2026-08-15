@@ -30,23 +30,6 @@
             font-size: 0.75em;
             line-height: 1;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -159,24 +142,22 @@
                 <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Commentary</h2>
                 <div class="space-y-4">
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec6-1">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">All of Paradise Falls Silent</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec6-1">
+                        <div id="sec6-1">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">When Adam raises his head to speak at the succession ceremony, every sound in Paradise stops. The angels stop their glorification. The wings fold. The rivers stop running. The transmission of the prophetic light from one bearer to the next is treated as a cosmic event the whole universe leans in to witness.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="sec6-2">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">The First Written Succession Document</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="sec6-2">
+                        <div id="sec6-2">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                 <p class="text-gray-700">Adam writing the pledge to Seth, with angelic witnesses and a divine seal, establishes the practice of recording succession in writing. Authority is not just spoken. It is documented, witnessed, and sealed. The document itself (the wasiyya) would pass from heir to heir alongside the light, serving as tangible proof of the chain of designation.</p>
                             </div>
@@ -194,37 +175,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 </body>

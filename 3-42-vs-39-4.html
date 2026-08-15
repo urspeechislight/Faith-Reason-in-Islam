@@ -43,23 +43,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -196,14 +179,13 @@
             <div id="tab-content">
                 <div id="linguistic" class="tab-pane active" role="tabpanel" aria-labelledby="linguistic-tab">
                     <p class="mb-6 text-gray-600">Language is the battlefield for this argument. The polemic hinges on a misunderstanding of key Arabic terms. By showing how words like `law`, `iṣṭifā`, and `ittikhādh` are used in the Qur'an and classical Arabic, we can dismantle the entire syllogism at its root.</p>
-                    <div id="linguistic-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="linguistic-1">
+                    <div id="linguistic-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Function of `Law` (لَوْ): The Particle of Impossibility</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="linguistic-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="linguistic-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>In Arabic grammar, the particle `لَوْ` (law) is not a simple conditional "if." It introduces a counterfactual statement, a scenario that is impossible or contrary to reality. Its function is to negate the premise by showing the absurdity of its consequence. It is akin to the English phrase "if only" used to express an impossible wish, such as "If only pigs could fly."</p>
@@ -236,12 +218,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="linguistic-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: `Iṣṭifā'` vs. `Ittikhādh`</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="linguistic-2">
+                            <div id="linguistic-2">
                                 <div class="p-4 border-t border-[#E7E0D1] grid md:grid-cols-2 gap-8">
                                     <div class="space-y-4">
                                         <h4 class="text-xl font-bold font-amiri text-center">Iṣṭifā' (اِصْطِفَاء)</h4>
@@ -299,15 +280,14 @@
                         <h3 class="font-semibold text-lg text-[#8A6D3B]">Why This Matters: The Doctrinal Proof</h3>
                         <p class="text-gray-700">Even if the linguistic nuances were misunderstood, Shi'i theology itself blocks any notion of divine sonship. The teachings of the Ahl al-Bayt <span class="honorific">﵈</span> clarify God’s nature, the purpose of miracles, and the function of divine will, demonstrating that God’s act of choosing Maryam was an honor, never a change in His essence or a partnership with creation.</p>
                     </div>
-                    <div id="doctrinal-accordion" class="space-y-4">
+                    <div id="doctrinal-cards" class="space-y-4">
                         <!-- Principle 1 -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 1: Qur'an 39:4 as Verse of Invalidation (`Ibṭāl`)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="doctrinal-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="doctrinal-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">Early Shi'i tafsir treats Qur'an 39:4 as a direct rebuttal to Christian claims of divine sonship rather than as an allowance for such an idea. Tafsīr al-Qummī records that this verse was revealed as a response to their assertion, presenting a rhetorical stance: even if one were to imagine the claim for the sake of argument, the logic would still collapse upon itself. This style of reasoning not only refutes the claim but also shows its impossibility in light of God’s perfection.</p>
@@ -336,13 +316,12 @@
                         </div>
 
                         <!-- Principle 2 -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 2: The Virgin Birth as a Sign (`Āyah`)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="doctrinal-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="doctrinal-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The Qur'an presents Jesus's miraculous birth not as proof of divine parenthood, but as a deliberate sign of God's boundless creative power and mercy. This context reframes the miracle away from lineage and toward divine action: a demonstration that God can create in any manner He wills, without implying family or partnership.</p>
@@ -377,13 +356,12 @@
                         </div>
 
                         <!-- Principle 3 -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 3: Divine Will in Shi‘i Theology (Kitāb al-Tawḥīd)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="doctrinal-3">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="doctrinal-3">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">Shaykh al-Ṣadūq, in <em>Kitāb al-Tawḥīd</em>, highlights two distinct dimensions of God’s will. This insight preserves divine simplicity: God’s attributes remain united with His essence, avoiding any notion that God’s eternal nature changes when He acts within creation.</p>
@@ -423,13 +401,12 @@
                         </div>
 
                         <!-- Principle 4 -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 4: Status of `ʿIbād Mukramūn` (Honored Servants)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="doctrinal-4">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="doctrinal-4">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The Qur'an clarifies the true status of those mistakenly called "sons" or "partners" of God, such as angels, Jesus, or other revered figures. It designates them as `ʿibād mukramūn` (honored servants), emphasizing their <strong>created nature and their absolute subservience to God</strong>. Furthermore, it clarifies that their ability to intercede (`shafāʿah`) is not an inherent right but a conditional privilege granted by God, dependent on His approval and the spiritual state of the one being interceded for.</p>
@@ -471,13 +448,12 @@
                         </div>
 
                         <!-- Principle 5: The Absolute Denial of Divine Sonship (Ittikhādh Walad) -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="doctrinal-5">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Principle 5: The Absolute Denial of Divine Sonship (`Ittikhādh Walad`)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="doctrinal-5">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="doctrinal-5">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="mb-2 text-gray-600">The concept of God "taking a son" (`ittikhādh walad`) is fundamentally rejected in Islamic doctrine, as it implies a deficiency, need, or partnership that is incompatible with God's absolute self-sufficiency (`Al-Ghanī`) and unique oneness (`Tawḥīd`). This rejection is not merely a denial of physical procreation but a comprehensive theological stance against any form of association that compromises God's transcendent nature.</p>
@@ -575,16 +551,15 @@
                     <h3 class="font-serif text-2xl font-bold mb-2 text-[#8A6D3B]">3. The Logical Proof</h3>
                     <p class="mb-6 text-gray-600">Beyond the textual and doctrinal evidence, the polemical argument fails on basic reasoning. Multiple logical fallacies underlie its claims, each revealing a flaw in the way premises are connected to the conclusion. Below is a structured breakdown of these fallacies with explanations, relatable examples, and applications to the Qur'anic debate.</p>
                 
-                    <div id="logical-accordion" class="space-y-4">
+                    <div id="logical-cards" class="space-y-4">
                 
                         <!-- Fallacy 1: Equivocation -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">I. Fallacy of Ambiguity: Equivocation</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
-                            <div class="accordion-content" id="logical-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="logical-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">Equivocation occurs when a single term is used with two distinct meanings in an argument, creating a false impression of logical connection. The conclusion appears valid only because the same word is repeated, though its meaning has shifted.</p>
@@ -606,13 +581,12 @@
                         </div>
                 
                         <!-- Fallacy 2: Affirming the Consequent -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">II. Formal Fallacy: Affirming the Consequent</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
-                            <div class="accordion-content" id="logical-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="logical-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>The fallacy of affirming the consequent assumes that because a certain result is true (Q), its supposed cause (P) must also be true. This fails logically since many different causes could produce the same result.</p>
@@ -634,13 +608,12 @@
                         </div>
                 
                         <!-- Fallacy 3: False Analogy -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">III. False Analogy</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
-                            <div class="accordion-content" id="logical-3">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="logical-3">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">A false analogy arises when two unlike things are compared as if they were parallel, leading to faulty conclusions. Similarities are overstated while critical differences are ignored.</p>
@@ -662,13 +635,12 @@
                         </div>
                 
                         <!-- Fallacy 4: Circular Reasoning -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">IV. Circular Reasoning (Begging the Question)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
-                            <div class="accordion-content" id="logical-4">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="logical-4">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">Circular reasoning happens when an argument’s conclusion is assumed in its premises. The claim is taken for granted rather than proven, making the reasoning self-reinforcing but empty.</p>
@@ -690,13 +662,12 @@
                         </div>
                 
                         <!-- Fallacy 5: Straw Man -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="logical-5">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">V. Straw Man</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
-                            <div class="accordion-content" id="logical-5">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="logical-5">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-700 mb-2">The straw man fallacy misrepresents an opposing argument to make it easier to attack. Instead of addressing the actual claim, it distorts it into a weaker version and refutes that instead.</p>
@@ -724,15 +695,14 @@
                     <h3 class="font-serif text-2xl font-bold mb-2 text-[#8A6D3B]">4. The Historical Proof</h3>
                     <p class="mb-6 text-gray-600">The Qur'an’s denial of divine sonship is not a later theological development but rooted in events during the Prophet’s lifetime. Early Islamic encounters with Christian communities, especially the delegation from Najran, provide the clearest lens to understand verses 3:42, 3:59, and 39:4. These verses were revealed as direct responses to live debates about Jesus’s nature and birth, reframing claims of divinity into affirmations of servitude and miraculous signs of God’s power.</p>
                 
-                    <div id="historical-accordion" class="space-y-4">
+                    <div id="historical-cards" class="space-y-4">
                         <!-- Najran Encounter -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="historical-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Encounter with the Christians of Najran</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="historical-1">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="historical-1">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>The delegation of Najran, composed of prominent Christian scholars and leaders, traveled to Medina to debate the Prophet Muhammad <span class="honorific">ﷺ</span> regarding Jesus’s nature. Their claim centered on his fatherless birth as evidence of divine sonship. The Prophet’s response and the subsequent revelation of several key Qur’anic verses form one of the earliest and clearest historical contexts for these passages.</p>
@@ -766,13 +736,12 @@
                         </div>
                 
                         <!-- Broader Historical Context -->
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="historical-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Other Early Contexts: Marian Devotion and Polemics</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="historical-2">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div id="historical-2">
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p>Beyond Najran, verses about Maryam and Jesus addressed wider Christian currents, including Marian devotion and theological disputes about Christ’s nature. Early Muslim exegetes note that Qur’an 3:42 and 39:4 confronted ideas circulating in Arabia—some tribes venerating Mary and others conflating Jesus’s miracles with divinity. These revelations established Islam’s distinct Christology from the outset.</p>
@@ -795,13 +764,12 @@
             </div>
 
             <div id="glossary-section" class="mt-12">
-                   <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                     <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                   <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                     <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content" id="glossary-content">
-                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                        <div id="glossary-content">
+                            <div class="p-4 space-y-4">
                                 <p><strong>Ahl al-Bayt <span class="honorific">﵈</span>:</strong> Literally "People of the House," referring to the immediate family of the Prophet Muhammad. In Shi'i Islam, this specifically denotes the Prophet, his daughter Fāṭimah, her husband ʿAlī, and their descendants, the Imams, who are considered the authoritative interpreters of the Qur'an and Sunnah.</p>
                                 <p><strong>Kalām:</strong> Islamic scholastic theology; a discipline that uses rational argumentation to explain and defend the tenets of faith.</p>
                                 <p><strong>Mubāhalah:</strong> A form of spiritual arbitration mentioned in the Qur'an where two disputing parties pray to invoke God's curse upon the one who is lying. The famous event occurred between the Prophet and the Christians of Najran, where the Prophet brought only ʿAlī, Fāṭimah, Ḥasan, and Ḥusayn as his "selves," "women," and "sons."</p>
@@ -854,37 +822,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-                    
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 

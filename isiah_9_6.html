@@ -36,23 +36,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -170,14 +153,13 @@
 
             <div id="tab-content">
                 <div id="linguistic" class="tab-pane active" role="tabpanel">
-                    <div id="linguistic-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                    <div id="linguistic-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Active Verb Vayikra: God as the Namer</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The Hebrew verb <span class="font-hebrew"><strong>וַיִּקְרָא</strong></span> (<strong>vayikra</strong>, “and he called”) is in the active voice, requiring a subject, typically God in biblical naming contexts. Christian translations render it passively (“he will be called”) to apply divine titles to the child, but this lacks grammatical support. The correct passive form would be <span class="font-hebrew">יִקָּרֵא</span> (yikkare).</p>
@@ -202,13 +184,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: El Gibbor as Metaphorical</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The term <span class="font-hebrew"><strong>אֵל גִּבּוֹר</strong></span> (<strong>El Gibbor</strong>) can mean "Mighty God," but <span class="font-hebrew">אֵל</span> (El) fundamentally means "power" or "might" and is used metaphorically for powerful humans, reflecting heroic strength, not ontological divinity. Pro-deity claims that this term is exclusively divine are overstated, as biblical, lexical, and regional evidence supports its non-divine flexibility.</p>
@@ -233,13 +214,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Lexical Meanings: Avi-Ad as Royal Hyperbole</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The title <span class="font-hebrew"><strong>אֲבִי־עַד</strong></span> (<strong>Avi-Ad</strong>, “Everlasting Father”) is best understood as royal hyperbole for a lasting reign, meaning "father of the age," not a claim of literal divinity. This is especially problematic for Trinitarian theology, which distinguishes the Son from the Father.</p>
@@ -268,14 +248,13 @@
                 </div>
 
                 <div id="doctrinal" class="tab-pane hidden" role="tabpanel">
-                    <div id="doctrinal-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                    <div id="doctrinal-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Radical Monotheism in Isaiah</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Isaiah’s uncompromising monotheism, emphasizing YHWH as the sole God, precludes a divine Messiah, as a second divine figure would contradict the text’s core theology.</p>
@@ -300,13 +279,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Theophoric Naming and Royal Ideology</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Theophoric names in ancient Israel include divine elements (e.g., <span class="font-hebrew">אֵל</span> / El, <span class="font-hebrew">יָהוּ</span> / Yahu) to attribute qualities to God, not to deify the bearer, fitting Isaiah 9:6’s royal context.</p>
@@ -335,13 +313,12 @@
                 </div>
 
                 <div id="logical" class="tab-pane hidden" role="tabpanel">
-                     <div id="logical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                     <div id="logical-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Presumption & Context</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
+                            <div>
                                 <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-[#8A6D3B] mb-2">Anachronism: Imposing Trinitarian Concepts</h5>
@@ -364,12 +341,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Ambiguity & Inconsistency</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
+                            <div>
                                 <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-[#8A6D3B] mb-2">Equivocation on El</h5>
@@ -386,12 +362,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Fallacies of Relevance</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
+                            <div>
                                 <div class="p-4 border-t border-[#E7E0D1] space-y-6">
                                     <div class="analysis-section">
                                         <h5 class="font-bold text-[#8A6D3B] mb-2">Suppressed Evidence (Cherry Picking)</h5>
@@ -412,14 +387,13 @@
                 </div>
 
                 <div id="historical" class="tab-pane hidden" role="tabpanel">
-                    <div id="historical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                    <div id="historical-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Assyrian Crisis Context (734–701 BCE)</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Isaiah 7-12’s prophecies address the Syro-Ephraimite and Assyrian crises, making a contemporary king like Hezekiah the primary referent, not a future divine Messiah. The text’s immediate historical focus and hyperbolic language align with celebrating a human king’s role in divine deliverance.</p>
@@ -444,13 +418,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Context of Isaiah 7, 9, and 11</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Linking Isaiah 7’s “Emmanuel” to Isaiah 9 and 11’s figures implies multiple divine births, creating theological inconsistency for the pro-deity view.</p>
@@ -479,14 +452,13 @@
                 </div>
                 
                 <div id="textual" class="tab-pane hidden" role="tabpanel">
-                    <div id="textual-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                    <div id="textual-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Septuagint and Targum Interpretations</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>Early Jewish translations (Septuagint, Targum Jonathan) avoid deifying the child, reflecting a non-divine understanding in pre-Christian communities.</p>
@@ -510,13 +482,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">New Testament Silence and Typological Usage</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">1. Description</h5>
                                         <p>The absence of Isaiah 9:6 citations in the New Testament, despite its supposed centrality to Jesus’ divinity, and the typological use of related texts, question its divine significance.</p>
@@ -681,37 +652,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 

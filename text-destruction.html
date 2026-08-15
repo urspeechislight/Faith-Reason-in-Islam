@@ -34,23 +34,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -189,16 +172,15 @@
                     <section class="mb-8 p-6 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part One: Destruction by External Enemies</h2>
 
-                        <div id="external-accordion" class="space-y-4">
+                        <div id="external-cards" class="space-y-4">
 
                             <!-- Antiochus IV -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Antiochus IV Epiphanes and the First Recorded Destruction (167 BCE)</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The earliest recorded destruction of sacred texts in the biblical tradition comes from the Maccabean crisis. In 167 BCE, Antiochus IV Epiphanes, the Seleucid ruler, launched a systematic campaign to suppress Jewish religious practice. He issued decrees outlawing circumcision, Sabbath observance, and the reading of the Torah. He desecrated the Temple in Jerusalem by erecting an altar to Zeus Olympios and sacrificing pigs on it.</p>
                                         <blockquote class="quran-callout">
                                             <p class="text-gray-700 italic">"The books of the law that they found they tore to pieces and burned with fire. Anyone found possessing the book of the covenant was condemned to death by royal decree."</p>
@@ -215,13 +197,12 @@
                             </div>
 
                             <!-- 4 Ezra -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">4 Ezra and the Memory of Catastrophic Textual Loss</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The fourth book of Ezra, a Jewish apocalyptic work composed near the end of the first century CE, looks back on the history of textual destruction and attributes to it a near total loss:</p>
                                         <blockquote class="quran-callout">
                                             <p class="text-gray-700 italic">"Your law has been burned."</p>
@@ -235,13 +216,12 @@
                             </div>
 
                             <!-- Babylonian destruction -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Babylonian Destruction of the Temple (586 BCE)</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The Babylonian destruction of the First Temple in 586 BCE is the earlier and more devastating precedent. When Nebuchadnezzar's forces captured Jerusalem, razed the Temple, and deported the Judean elite to Babylon, the sacred texts stored in the Temple complex were among the casualties.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"It is quite likely that the author of 2 Maccabees believed that all of the sacred books in the temple, not just the Pentateuch, were destroyed."</p>
@@ -254,13 +234,12 @@
                             </div>
 
                             <!-- Diocletian -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Diocletian Persecution: The Major Episode (303 CE)</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The Diocletian persecution is the single most consequential episode of text destruction in Christian history. McDonald devotes an entire section of The Biblical Canon to it, titled "Burning Sacred Books" (pp.1367-1410). The persecution began in February 303 CE, when the emperor Diocletian issued edicts ordering the suppression of Christianity. The first edict ordered the destruction of churches, the burning of scriptures, and the stripping of legal privileges from Christians.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"Diocletian insisted that no blood be shed, but demanded that all Christian churches be destroyed and that their sacred Scriptures be burned."</p>
@@ -295,16 +274,15 @@
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part Two: Suppression by the Institutional Church Itself</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">If external enemies destroyed texts from without, the institutional church destroyed and suppressed texts from within. The story of the church's own role in shaping its textual record is less dramatic than the story of persecution, but it is more systematic and ultimately more consequential. It happened over centuries, through a combination of imperial action, episcopal decree, and the quiet force of institutional neglect.</p>
 
-                        <div id="institutional-accordion" class="space-y-4">
+                        <div id="institutional-cards" class="space-y-4">
 
                             <!-- Constantine -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Constantine's Burning of Heretical Writings</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The conversion of Constantine reversed the dynamic. Where Diocletian had burned Christian scriptures, Constantine burned the writings of those he judged heretical. The Council of Nicaea in 325 CE declared the <em>homoousion</em> orthodox and condemned Arius. But Constantine did not stop at theological definition. He enforced his judgments with the power of the state.</p>
                                         <blockquote class="quran-callout">
                                             <p class="text-gray-700 italic">"Those whose doctrines were not in keeping with the orthodoxy of the day were banished into exile, their writings burned, and their meeting places confiscated."</p>
@@ -325,13 +303,12 @@
                             </div>
 
                             <!-- Successors & Justinian -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Continuation Under Successors and the Justinianic Consolidation</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Constantine's policy did not end with his death. His successors continued and intensified the practice. The Emperor Theodosius I, in his Edict of Thessalonica of 380 CE, declared Nicene Christianity to be the only legitimate religion of the empire. The state now had a theological position, and it enforced it with the full apparatus of imperial power.</p>
                                         <p class="text-gray-600 leading-relaxed">The Emperor Justinian I (527-565 CE) brought the full apparatus of the Roman legal system to bear on theological conformity. His <em>Corpus Juris Civilis</em> included provisions against heretics: assemblies forbidden, meeting places confiscated, teachers silenced. His policy toward non-Chalcedonian communities led to the schism that persists to this day between the Eastern Orthodox and the Oriental Orthodox churches.</p>
                                         <p class="text-gray-600 leading-relaxed">Justinian's reign also saw the closure of the pagan Academy of Athens in 529 CE. When an institution is closed by the state, the texts associated with it cease to be transmitted through normal institutional channels. Survival becomes dependent on accident.</p>
@@ -341,13 +318,12 @@
                             </div>
 
                             <!-- Rabbinic burning -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Rabbinic Burning of Christian Books</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Text burning was not practised only by the Christian community. The rabbinic tradition records a parallel practice. The Tosefta, a compendium of rabbinic law compiled around the third century CE, contains a ruling on the treatment of Christian texts:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"The books of the Evangelists and the books of the minim they do not save from the fire."</p>
@@ -364,13 +340,12 @@
                             </div>
 
                             <!-- Marcion -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Marcion's Works: Lost or Destroyed</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Marcion of Sinope, active in Rome around 144 CE, produced the first known attempt to define a closed Christian canon: an edited Gospel of Luke and ten letters of Paul. He rejected the Hebrew Bible entirely. He was the most formidable theological opponent the second-century church faced — wealthy, articulate, organized, with a parallel church structure across the Roman Empire.</p>
                                         <p class="text-gray-600 leading-relaxed">Marcion's own writings have not survived. Not a single page of his major work, the <em>Antitheses</em>, is extant.</p>
                                         <blockquote class="hadith-callout">
@@ -383,13 +358,12 @@
                             </div>
 
                             <!-- Tatian -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Tatian's Diatessaron: Suppressed</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Tatian, a pupil of Justin Martyr, composed the <em>Diatessaron</em> around 170 CE — a single continuous gospel narrative woven from the four canonical gospels. For approximately two centuries, it was the standard gospel text in the Syriac-speaking churches. Then it was suppressed because its author fell into disrepute for his later Encratite views.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"The Diatessaron was eventually suppressed by the Roman Catholic and Eastern Orthodox churches because its author was viewed as a heretic."</p>
@@ -401,13 +375,12 @@
                             </div>
 
                             <!-- Athanasius -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Athanasius's Condemnation of Apocrypha (367 CE)</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The thirty-ninth Festal Letter of Athanasius, bishop of Alexandria, issued in 367 CE, is a watershed document. It contains the first surviving complete list of the twenty-seven books of the New Testament. But the letter does more than list the accepted books. It condemns everything else:</p>
                                         <blockquote class="quran-callout">
                                             <p class="text-gray-700 italic">"They are an invention of heretics, who write them when they choose, bestowing upon them their approbation, and assigning to them a date, that so, using them as ancient writings, they may find occasion to lead astray the simple."</p>
@@ -429,16 +402,15 @@
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part Three: The Mechanism of Suppression</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">The destruction of texts by persecution and the suppression by the institutional church explain why certain categories of literature disappeared. But they do not, by themselves, explain the full extent of the loss. Many texts that were never explicitly targeted still vanished. The mechanism is more subtle and, in its own way, more thoroughgoing than dramatic episodes of book burning.</p>
 
-                        <div id="mechanisms-accordion" class="space-y-4">
+                        <div id="mechanisms-cards" class="space-y-4">
 
                             <!-- Schneemelcher -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Schneemelcher's Five Channels of Survival</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Wilhelm Schneemelcher, editor of the standard reference work <em>New Testament Apocrypha</em>, provides the most lucid account: the suppression of non-conforming texts was not primarily the result of active book burning. It was the result of institutional neglect. The mechanism operated through three stages: (1) canon closure cut off the means of transmission, (2) imperial unification made exclusion permanent, and (3) survival became accidental and marginal.</p>
                                         <p class="text-gray-600 leading-relaxed">Schneemelcher identifies five channels through which non-canonical texts survived:</p>
                                         <div class="space-y-3 mt-4">
@@ -468,13 +440,12 @@
                             </div>
 
                             <!-- Ehrman's Six Mechanisms -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Ehrman's Six Mechanisms of Textual Corruption</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Bart Ehrman's <em>The Orthodox Corruption of Scripture</em> documents a different kind of suppression: not the elimination of entire texts but the alteration of individual passages within texts that survived. Scribes altered the wording to make it conform to orthodox theology.</p>
                                         <div class="space-y-3 mt-4">
                                             <div class="p-3 bg-gray-50 rounded">
@@ -512,13 +483,12 @@
                             </div>
 
                             <!-- Demographic displacement -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Suppression by Demographic Displacement</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Non-conforming manuscripts were not individually hunted down and destroyed. They simply stopped being copied. The communities that valued them were suppressed, dispersed, or absorbed. Without a community to maintain the cycle of copying, the manuscripts perished.</p>
                                         <p class="text-gray-600 leading-relaxed">The orthodox communities, backed by imperial favour after Constantine, continued to grow. Their monasteries became centres of textual production. Their scriptoria produced the great codices — Sinaiticus, Vaticanus, Alexandrinus — that became the basis of the received text. Their bishops commissioned official Bibles, like the fifty codices ordered by Constantine from Eusebius.</p>
                                         <p class="text-gray-600 leading-relaxed">The result is demographic displacement in the manuscript record. Orthodox manuscripts outnumber heterodox manuscripts not because orthodox scribes wrote more but because orthodox communities survived and heterodox ones did not. The ratio does not reflect the original demographics of Christianity. It reflects the demographics of survival.</p>
@@ -537,42 +507,39 @@
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part Four: The Timeline — Before, During, or After Canonization?</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">The destruction and suppression of texts happened in all three periods. But the most critical phase falls within a narrow window.</p>
 
-                        <div id="timeline-accordion" class="space-y-4">
+                        <div id="timeline-cards" class="space-y-4">
 
                             <!-- Before canonization -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Before Canonization: The External Persecutions</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The destruction under Antiochus IV (167 BCE), the Babylonian catastrophe (586 BCE), and the Diocletian persecution (303 CE) all occurred before the New Testament canon was fixed. The canon, as a closed list of twenty-seven books, does not exist before Athanasius's Festal Letter of 367 CE. Before that date, the boundaries of Christian scripture were fluid. The Diocletian persecution destroyed whatever was in the churches it targeted — and it certainly included texts that were later judged non-canonical, because at the time there was no canonical list to distinguish "scripture" from "non-scripture."</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- During canonization -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">During Canonization: Imperial Suppression</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Constantine's reign (306-337 CE) overlaps with the critical formative period. The burning of heretical writings removed texts from circulation at exactly the moment when the canon was being formed. The texts that were destroyed were not texts that had already been formally excluded. They were texts associated with theological positions declared heretical. The suppression was prior to canonical exclusion. By the time Athanasius wrote his Festal Letter in 367, the texts associated with defeated theological positions had already been substantially reduced by four decades of imperial suppression.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- After canonization -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">After Canonization: Systematic Non-Copying</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Athanasius's Festal Letter of 367 CE declared everything outside the twenty-seven-book canon to be heretical fabrication. A text that was not in the canon was not read in church, not taught in the catechumenate, not copied in the monastic scriptoria. The physical manuscripts, once they stopped being copied, had a lifespan measured in centuries at most.</p>
                                         <p class="text-gray-600 leading-relaxed">Papyrus deteriorates within two to three centuries in damp climates. Parchment lasts longer but is subject to reuse — scribes scraped old texts from parchment to write new ones (palimpsests). Without continuous institutional support, a text simply disappeared.</p>
                                     </div>
@@ -580,13 +547,12 @@
                             </div>
 
                             <!-- The Critical Window -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Critical Window: 303–367 CE</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <div class="grid md:grid-cols-2 gap-4">
                                             <div class="p-4 bg-[#F8F1E2] border border-[#E9DCC3] rounded-lg">
                                                 <p class="font-semibold text-[#8A6D3B]">303 CE</p>
@@ -612,13 +578,12 @@
                             </div>
 
                             <!-- OT Canon fluidity -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Old Testament Canon Fluidity and the Case of 1 Enoch</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The Old Testament canon itself was not fixed in the first century. The Hebrew Bible existed in two major forms: the shorter Palestinian Hebrew canon and the longer Greek Septuagint. The Dead Sea Scrolls show that even in the first century BCE, the Hebrew text existed in multiple forms.</p>
                                         <p class="text-gray-600 leading-relaxed">1 Enoch illustrates the problem: it is quoted in the New Testament Epistle of Jude (vv.14-15) as authoritative scripture. Tertullian defended its inspiration. Yet it was eventually excluded from both the Jewish and Christian canons. In the West, it was lost for over a millennium. The Ethiopian Orthodox Church alone retained it. The complete text survived only in Ethiopic (Ge'ez) translation.</p>
                                         <p class="text-gray-600 leading-relaxed">The inclusion of 1 Clement and Barnabas in Codex Sinaiticus (c.350 CE) alongside the canonical books shows that at least one major centre of textual production still treated these texts as scripture in the mid-fourth century. Within a generation of Athanasius's letter, they would be classified as non-canonical. Within a few centuries, they would cease to be copied. The transition from scripture to non-scripture was a decision, not a recognition.</p>
@@ -636,16 +601,15 @@
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part Five: How Much Divergence Actually Existed?</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">The argument of this note depends on the claim that the early Christian textual landscape was significantly more diverse than the surviving record suggests. If the non-conforming texts that were destroyed were merely minor variants, their loss would be of little consequence. But the evidence indicates that the diversity was substantial.</p>
 
-                        <div id="divergence-accordion" class="space-y-4">
+                        <div id="divergence-cards" class="space-y-4">
 
                             <!-- McDonald's evidence -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">McDonald's Evidence: Irenaeus Alone on Four Gospels</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">At Oxyrhynchus alone, the remains include seven copies of the Shepherd of Hermas, three of the Gospel of Thomas, two of the Gospel of Mary, and two of the Gospel of Peter. If a single provincial centre had this many copies of non-canonical texts, the distribution across the Christian world must have been far more extensive.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"Early Christianity appears to have been much less united and much more diversified than we have thought."</p>
@@ -670,13 +634,12 @@
                             </div>
 
                             <!-- Serapion -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Serapion of Antioch and the Gospel of Peter</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">Serapion was bishop of Antioch around 190-211 CE. He initially permitted the use of the Gospel of Peter in the churches of Rhossus. When he later discovered that it contained teachings diverging from the emerging rule of faith — specifically a docetic Christology — he withdrew permission.</p>
                                         <p class="text-gray-600 leading-relaxed">The episode is revealing: the Gospel of Peter was in liturgical use in a church under one of the most important sees in Christendom. Its removal was not the result of careful evaluation of historical pedigree. It was a theological judgment, made after the fact.</p>
                                         <blockquote class="hadith-callout">
@@ -688,13 +651,12 @@
                             </div>
 
                             <!-- Regional variation -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Regional Variation: The Canons That Did Not Converge</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The twenty-seven-book New Testament did not become universal overnight. Different regions maintained different collections for centuries:</p>
                                         <div class="grid md:grid-cols-3 gap-4 mt-4">
                                             <div class="p-4 border border-[#E7E0D1] rounded-lg">
@@ -716,13 +678,12 @@
                             </div>
 
                             <!-- What survived -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">What Survived, and How It Reveals What Was Lost</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The surviving non-canonical texts are the exception, not the rule. Their survival was accidental and marginal:</p>
                                         <div class="space-y-3 mt-4">
                                             <div class="p-3 bg-gray-50 rounded">
@@ -757,16 +718,15 @@
                         <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Part Six: Implications for the Islamic Argument</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">The preceding sections establish a historical case: the surviving textual record of early Christianity has been filtered through a process that systematically favoured one theological position. This has direct implications for the Islamic claim that Jesus predicted Ahmad.</p>
 
-                        <div id="islamic-accordion" class="space-y-4">
+                        <div id="islamic-cards" class="space-y-4">
 
                             <!-- McDonald's admission -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">McDonald's Explicit Admission</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <blockquote class="hadith-callout">
                                             <p class="text-gray-700 italic">"Only a small portion of the total number of ancient written documents is known today. Many were destroyed by the enemies of the church, and some were destroyed by Christians themselves in heresy hunts."</p>
                                             <cite class="text-sm text-gray-500 block mt-2">— McDonald, The Biblical Canon (2017), p.1643</cite>
@@ -781,13 +741,12 @@
                             </div>
 
                             <!-- The argument from filtered evidence -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Five Filters: The Argument from Filtered Evidence</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <div class="space-y-3">
                                             <div class="p-3 bg-[#F3F5F7] border border-[#DFE4EA] rounded-lg">
                                                 <p class="font-semibold text-[#3D4451]">1. Imperial Persecution</p>
@@ -815,13 +774,12 @@
                             </div>
 
                             <!-- The structural analogy -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Structural Asymmetry: Torah vs. Gospel</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The filter hypothesis predicts an asymmetry in the surviving textual record. Imam al-Rida's arguments from the Torah rest on passages that survive in every Hebrew Bible today: Isaiah 21:7, Habakkuk 3:3, Deuteronomy 33:2, Deuteronomy 18:18. These passages survive because the Jewish community, which controlled the transmission of the Hebrew Bible, had no theological motive to remove them.</p>
                                         <p class="text-gray-600 leading-relaxed">The Imam's arguments from the Gospel rest on passages that do not survive in any canonical manuscript. The filter hypothesis predicts exactly this distribution: Torah passages survive where the custodians had no motive to remove them; Gospel passages do not survive where the custodians did have a motive.</p>
                                         <p class="text-gray-600 leading-relaxed">The asymmetry is structural, not accidental. The Torah was controlled by a community that disputed the interpretation but not the presence of these passages. The Gospel was controlled by a community for whom a prediction of Muhammad would have been theologically catastrophic.</p>
@@ -830,13 +788,12 @@
                             </div>
 
                             <!-- Three objections -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">Three Objections Considered</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="font-semibold text-[#3D4451]">Objection 1: If the filter was effective, why did non-conforming texts survive at all?</p>
                                         <p class="text-gray-600 leading-relaxed">The surviving non-conforming texts survived through accident: burial in jars, preservation in sand, translation into remote languages, quotation by hostile opponents. These channels are narrow and unpredictable. The survival of some non-conforming texts proves the filter existed, not that it caught everything. The exception proves that survival required extraordinary circumstances — not that every significant text found its extraordinary circumstance.</p>
                                         <hr class="border-[#E7E0D1] my-4">
@@ -850,13 +807,12 @@
                             </div>
 
                             <!-- Epistemic status -->
-                            <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                                <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false">
+                            <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                                <div class="p-4 border-b border-[#E7E0D1]">
                                     <h4 class="text-lg font-semibold text-[#3D4451]">The Epistemic Status of the Argument</h4>
-                                    <svg class="w-6 h-6 text-gray-500 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
-                                <div class="accordion-content">
-                                    <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                                <div>
+                                    <div class="p-4 space-y-4">
                                         <p class="text-gray-600 leading-relaxed">The argument is not circular. It does not assert that the prediction was suppressed. It asserts that the silence of the surviving record cannot disprove the prediction, because the record has been filtered. The suppression hypothesis cannot be ruled out, because the mechanisms are documented: imperial edicts, eyewitness accounts, canonical decrees, and material evidence of texts that survived only through accident.</p>
                                         <p class="text-gray-600 leading-relaxed">The proper analogy is to a criminal trial where the key evidence has been tampered with. If the police have tampered with the evidence, the jury cannot use the evidence to reach a verdict, even if the evidence as it now stands points toward innocence. The jury does not conclude guilt. It concludes that it cannot tell, because the evidence is compromised. The Islamic argument says: the surviving evidence cannot establish that the prediction was not there.</p>
                                         <p class="text-gray-600 leading-relaxed">The Islamic position is best stated as a double claim. <strong>First</strong>, the surviving textual record has been filtered through a theological conformist process. <strong>Second</strong>, the silence of the surviving record is exactly what the filter hypothesis predicts, and therefore cannot be taken as independent evidence against the prediction. The first claim is a historical fact. The second is a logical consequence of the first.</p>
@@ -990,26 +946,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    item.classList.toggle('open');
-
-                    if (!isOpen) {
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 </body>

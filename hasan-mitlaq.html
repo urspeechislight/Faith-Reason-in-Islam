@@ -39,23 +39,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -196,14 +179,13 @@
                 <!-- TAB 1: THE NARRATION AND ITS CHAIN -->
                 <div id="tab1" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The report appears in Ibn Sa'd's <em>Tabaqat</em> as a cluster of three related narrations. Every variant passes through a single narrator whose reliability was destroyed by the greatest Sunni hadith critics.</p>
-                    <div id="tab1-accordion" class="space-y-4">
+                    <div id="tab1-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Three Variants in Ibn Sa'd</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-1">
+                            <div id="tab1-1">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -237,12 +219,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Al-Waqidi: Unanimously Rejected</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-2">
+                            <div id="tab1-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -287,12 +268,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Second Chain: Unknown Narrators</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-3">
+                            <div id="tab1-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -322,14 +302,13 @@
                 <!-- TAB 2: THE NUMBERS PROBLEM -->
                 <div id="tab2" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">A defining feature of this fabrication is the progressive inflation of al-Hasan's <span class="honorific">﵇</span> wife count across sources. What began as a report of several marriages grew to absurd proportions.</p>
-                    <div id="tab2-accordion" class="space-y-4">
+                    <div id="tab2-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Escalation: 6 to 300</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-1">
+                            <div id="tab2-1">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -370,12 +349,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Arithmetic Refutation</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-2">
+                            <div id="tab2-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -410,14 +388,13 @@
                 <!-- TAB 3: SCHOLARLY REFUTATIONS -->
                 <div id="tab3" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">Shia scholars across centuries have rejected this narration on multiple grounds. The arguments range from chain criticism to the argument from silence to character evidence.</p>
-                    <div id="tab3-accordion" class="space-y-4">
+                    <div id="tab3-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Argument from Silence</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-1">
+                            <div id="tab3-1">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -442,12 +419,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Character Evidence</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-2">
+                            <div id="tab3-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -479,12 +455,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Scholarly Rejections</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-3">
+                            <div id="tab3-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Karim (al-Rawd al-Nadhir)</h5>
@@ -525,14 +500,13 @@
                 <!-- TAB 4: THE SHIA CORPUS DILEMMA -->
                 <div id="tab4" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">The narration appears in al-Kafi itself, the most authoritative Shia hadith collection. Shia scholars cannot dismiss it as a Sunni fabrication. Their responses range from arithmetic refutation to chain criticism to the application of methodological principles.</p>
-                    <div id="tab4-accordion" class="space-y-4">
+                    <div id="tab4-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Narration in al-Kafi</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-1">
+                            <div id="tab4-1">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -576,12 +550,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Majlisi's Refutation</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-2">
+                            <div id="tab4-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -609,12 +582,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Al-Muhsini's Assessment</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-3">
+                            <div id="tab4-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -638,14 +610,13 @@
                 <!-- TAB 5: RIGHT GUIDANCE IN OPPOSITION -->
                 <div id="tab5" class="tab-pane hidden" role="tabpanel">
                     <p class="mb-6 text-gray-600">A well-established principle in Shia hadith methodology holds that when a report is popular among the Mukhalifeen and serves an anti-Ahl al-Bayt agenda, the truth lies in its opposite. The principle is called <em>al-rushd fi khilafihim</em>: right guidance lies in opposing them.</p>
-                    <div id="tab5-accordion" class="space-y-4">
+                    <div id="tab5-cards" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Maqbula of Umar b. Hanzala</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-1">
+                            <div id="tab5-1">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -670,12 +641,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Parallel Narrations</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-2">
+                            <div id="tab5-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -719,12 +689,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Application to the Mutallaq Narration</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-3">
+                            <div id="tab5-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -748,12 +717,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Scholarly Debate About the Principle</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-4">
+                            <div id="tab5-4">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
@@ -784,12 +752,11 @@
             </div>
 
             <div id="glossary-section" class="mt-12">
-                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                    <div class="p-4 border-b border-[#E7E0D1]">
                         <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="accordion-content" id="glossary-content">
+                    <div id="glossary-content">
                         <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                             <p><strong>Mutallaq:</strong> A man who divorces frequently. The term comes from the Arabic root t-l-q, meaning to release or set free. In the context of this narration, it carries a pejorative sense of someone who marries and discards women carelessly.</p>
                             <p><strong>Al-Waqidi:</strong> Muhammad b. Umar al-Waqidi (d. 207 AH), a prolific historian and qadi of Baghdad. Unanimously rejected as a hadith narrator by Sunni critics (Ahmad b. Hanbal, al-Shafi'i, Yahya b. Ma'in, Muslim, al-Bukhari) for fabricating chains and forging hadiths.</p>
@@ -844,37 +811,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 

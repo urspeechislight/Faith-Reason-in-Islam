@@ -33,23 +33,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -162,14 +145,13 @@
 
         <div id="tab-content">
             <div id="linguistic" class="tab-pane active" role="tabpanel">
-                <div id="linguistic-accordion" class="space-y-4">
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                <div id="linguistic-cards" class="space-y-4">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Language Analysis: Meaning of <strong>al-sharṭ al-mumteni‘</strong> and <strong>ʿābidīn</strong></h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content">
-                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                        <div>
+                            <div class="p-4 space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Words Matter</h5>
                                     <p>To understand Qur’an 43:81, we need to know what its words mean in Arabic, especially <strong>al-sharṭ al-mumteni‘</strong> (impossible condition) and <strong>ʿābidīn</strong> (worshippers or rejectors).</p>
@@ -227,13 +209,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Grammar and Syntax: How the Verse Works</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content">
-                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                        <div>
+                            <div class="p-4 space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Sentence Structure</h5>
                                     <p>The way Qur’an 43:81 is built shows it’s rejecting the idea of God having a child, not saying it’s possible.</p>
@@ -259,13 +240,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="p-4 border-b border-[#E7E0D1]">
                             <h4 class="text-lg font-semibold text-[#3D4451]">Comparing Words: Old Arabic Usage</h4>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
-                        <div class="accordion-content">
-                            <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                        <div>
+                            <div class="p-4 space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Words in Context</h5>
                                     <p>Looking at how words like <strong>ʿābidīn</strong> and “if” were used in old Arabic helps us understand Qur’an 43:81.</p>
@@ -295,14 +275,13 @@
                 </div>
             </div>
                 <div id="doctrinal" class="tab-pane hidden" role="tabpanel">
-                    <div id="doctrinal-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                    <div id="doctrinal-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Qur’anic Consistency: Fitting with Other Verses</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Qur’an’s Unity</h5>
                                         <p>The Qur’an’s verses should agree with each other. Does Qur’an 43:81 fit with other verses about God’s oneness?</p>
@@ -332,13 +311,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Beliefs: God’s Oneness and the Prophet</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                 <div class="analysis-section">
                                     <h5 class="analysis-heading">Introduction: Shi‘i Teachings</h5>
                                     <p>Shi‘i Muslims believe God is one and above human traits, and the Prophet Muhammad has special knowledge as the first creation.</p>
@@ -363,13 +341,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Explanations: Early Muslim Views</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Early Muslim Thoughts</h5>
                                         <p>How early Muslims understood Qur’an 43:81 shows its real meaning, before later debates.</p>
@@ -400,14 +377,13 @@
                     </div>
                 </div>
                 <div id="historical" class="tab-pane hidden" role="tabpanel">
-                    <div id="historical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                    <div id="historical-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Meccan Setting: The Verse’s Background</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Mecca’s Debates</h5>
                                         <p>Qur’an 43:81 was revealed in Mecca, where people argued about God’s nature.</p>
@@ -429,13 +405,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Early Reactions: How Muslims Understood It</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: First Muslims</h5>
                                         <p>Early Muslims’ views on Qur’an 43:81 show what it meant at the time.</p>
@@ -457,13 +432,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Old Writings: Outside Evidence</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Writings from the Time</h5>
                                         <p>Old texts from Arabia and Christian communities show what people believed when Qur’an 43:81 was revealed.</p>
@@ -488,14 +462,13 @@
                     </div>
                 </div>
                 <div id="logical" class="tab-pane hidden" role="tabpanel">
-                    <div id="logical-accordion" class="space-y-4">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                    <div id="logical-cards" class="space-y-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a Straw Man</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Fair Arguments</h5>
                                         <p>A straw man is when you misrepresent someone’s view to make it easier to attack. Does Qur’an 43:81 fairly address Christian claims?</p>
@@ -517,13 +490,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a False Choice</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content">
-                                <div class="p-4 border-t border-[#E7E0D1] space-y-4">
+                            <div>
+                                <div class="p-4 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction: Real Options</h5>
                                         <p>A false choice says there are only two options when there are more. Does Qur’an 43:81 create a false choice?</p>
@@ -589,37 +561,6 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
         });
     </script>
 
