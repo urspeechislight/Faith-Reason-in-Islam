@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=SBL+Hebrew&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Scholarly Neutrals (Off-white #FDFBF7, Dark Slate #3D4451, Accent #B99C6B decorative / #8A6D3B text) -->
     <style>
         body {
@@ -29,6 +29,13 @@
         }
         .font-amiri {
             font-family: 'Amiri', serif;
+        }
+        .font-hebrew {
+            font-family: 'SBL Hebrew', serif;
+            direction: rtl;
+            text-align: right;
+            font-size: 1.15rem;
+            line-height: 1.9;
         }
         .honorific {
             font-family: 'Scheherazade New', 'Amiri', serif;
@@ -58,6 +65,24 @@
             padding: 1.25rem 1.5rem;
             margin-top: 0.75rem;
             margin-bottom: 0.75rem;
+        }
+        .bible-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .bible-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .bible-original {
+            font-style: italic;
+            color: #4B5261;
         }
         .hadith-callout .rtl, .quran-callout .rtl {
             line-height: 2.1;
@@ -106,7 +131,7 @@
         <header class="mb-12">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Historical Analysis</p>
             <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">The Majlis at Marw: Imam al-Rida Before the Scholars of Every Creed</h1>
-            <p class="text-md md:text-lg text-gray-600 max-w-2xl">The interfaith debates at al-Ma'mun's court, preserved in the narration of al-Hasan ibn Muhammad al-Nufali, with the Arabic grounding attached as commentary</p>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">The narration of al-Hasan ibn Muhammad al-Nufali as recorded in al-Saduq (d.381 AH), Uyun Akhbar al-Rida, vol.1, chapter 12, and al-Majlisi, Bihar al-Anwar, vol.14, with the Arabic grounding attached as commentary</p>
             <hr class="mt-10 border-[#E7E0D1]">
         </header>
 
@@ -174,7 +199,11 @@
 
             <p class="divine-speech">"If I bring you a man who can read the Gospel and recite for you the mention of Muhammad <span class="honorific">ﷺ</span>, his family, and his people, will you believe?"</p>
 
-            <p class="mt-4 text-gray-700">The prelate murmured his assent. Two men from outside the Imam's <span class="honorific">﵇</span> faith were now standing answerable to the same text: Nastas the Roman, who had the third book of the Gospel by heart, and the Exilarch, who read the Gospel and confirmed it by his life. The terms left no middle ground:</p>
+            <p class="mt-4 text-gray-700">The prelate murmured:</p>
+
+            <p class="divine-speech">"That is sound."</p>
+
+            <p class="mt-4 text-gray-700">Two men from outside the Imam's <span class="honorific">﵇</span> faith were now standing answerable to the same text: Nastas the Roman, who had the third book of the Gospel by heart, and the Exilarch, who read the Gospel and confirmed it by his life. The terms left no middle ground:</p>
 
             <p class="divine-speech">"Open the third book. If you find in it the mention of Muhammad, his family, and his people, then testify on my behalf. And if you find no such mention, do not testify for me."</p>
 
@@ -202,11 +231,11 @@
 
             <p class="mt-6 text-gray-700">The saying rests on a logic the assembly could weigh. Ascending belongs to the one who descended, and to him alone, with a single exception marked out by two titles: the Rider of the Camel, identified by the sign his people knew, and the Seal of the Prophets, fixed at the end of the prophetic line. Put into the mouth of Jesus <span class="honorific">﵇</span>, the saying folds the prophet of the Arabs into the Gospel's own horizon.</p>
 
-            <p class="mb-4 text-gray-700">The debate then climbed from the text to the doctrines built above it, and each examination ended with the doctrine failing on its own terms. If Jesus <span class="honorific">﵇</span> was God, for whom did he fast in the wilderness for forty days, and to whom did he pray in the garden and on the mountain and in the hours before his arrest? A God who hungers and supplicates stands in need of something beyond himself, and need is the mark of the creature. The acts that filled every page of the Gospel, the weeping, the exhaustion, the cry of abandonment from the cross, were the acts of one who worshiped God, and whatever worships cannot itself be the object of worship. The Trinity, defended in its most rigorous form, fell into a dilemma with no exit: if the three persons were real and the substance stood over them, the count of eternal realities reached four; if the persons were absorbed into an undivided simplicity, the distinctions dissolved, and the suffering of the Son became the suffering of the Father. The title Word of God, read at its plain sense, recorded the manner of a creation by command, the divine "Be" that brings a servant into being, with no transfer of essence from the Speaker to the spoken. The miracles bore the signature of prophethood: the clay bird flew by God's leave, and power borrowed for the moment presupposes its owner. And the sonship founded on singular gifting had been dissolved by Jesus <span class="honorific">﵇</span> himself, in words the Gospel preserved, when he extended the title of Father to men who held none of his distinction:</p>
+            <p class="mb-4 text-gray-700">The debate then climbed from the text to the doctrines built above it, and each examination ended with the doctrine failing on its own terms. If Jesus <span class="honorific">﵇</span> was God, for whom did he fast in the wilderness for forty days, and to whom did he pray in the garden and on the mountain and in the hours before his arrest? A God who hungers and supplicates stands in need of something beyond himself, and need is the mark of the creature. The acts that filled every page of the Gospel, the weeping, the exhaustion, the cry of abandonment from the cross, were the acts of one who worshiped God, and whatever worships cannot itself be the object of worship. The Trinity, defended in its most rigorous form, fell into a dilemma with no exit: if the three persons were real and the substance stood over them, the count of eternal realities reached four; if the persons were absorbed into an undivided simplicity, the distinctions dissolved, and the suffering of the Son became the suffering of the Father. The title Word of God, read at its plain sense, recorded the manner of a creation by command, the divine "Be" that brings a servant into being, with no transfer of essence from the Speaker to the spoken. The miracles bore the signature of prophethood: the clay bird flew by God's leave, and power borrowed for the moment presupposes its owner. And the sonship founded on singular gifting had been dissolved by Jesus <span class="honorific">﵇</span> himself, in words the Gospel preserved:</p>
 
-            <p class="divine-speech">"I go to my Father and your Father."</p>
+            <p class="divine-speech">"I am ascending to my Father and your Father, to my God and your God." (John 20:17)</p>
 
-            <p class="mt-4 text-gray-700">Adam had come into being without father or mother, a stronger claim on the same ground. The Christians fell silent:</p>
+            <p class="mt-4 text-gray-700">He had extended the title of Father to men who held none of his distinction. Adam had come into being without father or mother, a stronger claim on the same ground. The Christians fell silent:</p>
 
             <p class="divine-speech">"We have never seen, this day, anyone so practiced in argument and disputation. We will look into our affairs."</p>
 
@@ -267,7 +296,7 @@
                 </div>
             </div>
 
-            <p class="mb-4 text-gray-700">The last voice fell silent, and the great hall of Marw held its breath. The Catholicos had heard his own Gospel turned against him and had confessed its testimony to the Prophet <span class="honorific">ﷺ</span>. The Exilarch had conceded the words of Habakkuk and could not answer the word "like you" in his own scripture. The high priest of the fire temples had watched his flame reduced to a created, perishable thing and his two principles collapse into one. The elder of the Sabians had fallen silent before the unity he had sought all his life, and then he had spoken the shahada. The account comes down through the narration of al-Hasan ibn Muhammad al-Nufali, who sat through every exchange and recorded what he witnessed: a descendant of the Prophet <span class="honorific">ﷺ</span> moving through the Torah, the Gospel, and the reasoning of natural theology with the same authority, answering each disputant in the idiom of his own scripture before the man had finished forming his objection. They had arrived expecting to examine the Imam <span class="honorific">﵇</span>. What they received was an examination of everything they had brought with them.</p>
+            <p class="mb-4 text-gray-700">The last voice fell silent, and the great hall of Marw held its breath. The Catholicos had heard his own Gospel turned against him and had confessed its testimony to the Prophet <span class="honorific">ﷺ</span>. The Exilarch had conceded the words of Habakkuk and could not answer the word "like you" in his own scripture. The high priest of the fire temples had watched his flame reduced to a created, perishable thing and his two principles collapse into one. The elder of the Sabians had fallen silent before the unity he had sought all his life, and then he had spoken the shahada. The account comes down through the narration of al-Hasan ibn Muhammad al-Nufali, who sat through every exchange and recorded what he witnessed; al-Saduq (d.381 AH) records it in Uyun Akhbar al-Rida, vol.1, chapter 12, and al-Majlisi (d.1110 AH) transmits it in Bihar al-Anwar, vol.14: a descendant of the Prophet <span class="honorific">ﷺ</span> moving through the Torah, the Gospel, and the reasoning of natural theology with the same authority, answering each disputant in the idiom of his own scripture before the man had finished forming his objection. They had arrived expecting to examine the Imam <span class="honorific">﵇</span>. What they received was an examination of everything they had brought with them.</p>
 
             <p class="mb-4 text-gray-700">Al-Ma'mun sat through it all, and whatever his designs, he could not fail to recognize what the gathering had proven. The elevation of the Imam <span class="honorific">﵇</span> to the heir apparency had served several ends at once, and the debate was its ornament: the public spectacle of interfaith disputation above, the political enclosure beneath. The caliph's design could not contain what the event itself revealed. A gathering staged to showcase the Imam's <span class="honorific">﵇</span> learning had demonstrated something beyond learning: the House of Muhammad <span class="honorific">ﷺ</span> carried the accumulated inheritance of every prophetic tradition, and the inheritance behaved like a living knowledge, spoken from its source, belonging to no school and drawing on no single book. For the school that preserved the narration, the hall at Marw was a verse made visible:</p>
 
@@ -282,6 +311,21 @@
             <section class="mb-8">
                 <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Commentary</h2>
                 <div class="space-y-4">
+
+                    <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                        <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="c20">
+                            <h4 class="text-lg font-semibold text-[#3D4451]">The Source of the Narration</h4>
+                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content" id="c20">
+                            <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                <p class="text-gray-700">The story rests on a single eyewitness chain. Al-Hasan ibn Muhammad al-Nufali, a companion of the Imam <span class="honorific">﵇</span> present at Marw, narrated what he saw and heard, and his account is the backbone every later version transmits.</p>
+                                <p class="text-gray-700"><strong>The primary record:</strong> al-Saduq (d.381 AH), Uyun Akhbar al-Rida, vol.1, chapter 12, the chapter of the Imam's <span class="honorific">﵇</span> debates with the holders of the religions. The debate with Imran al-Sabi stands in the same author's al-Tawhid (pp.430-443), and his refutation of the fire priests in al-Tawhid (pp.430-432). Al-Majlisi (d.1110 AH) gathers the strands in Bihar al-Anwar, vol.14 (p335 for the Torah and Gospel citations, including the Rider of the Camel saying and the extended Paraclete).</p>
+                                <p class="text-gray-700"><strong>The relayed editions cited in the cards below:</strong> al-Astarabadi (Shari'atmadar) (d.1263 AH), al-Barahin al-Qati'a, vol.03, pp.88-92; Baqir Sharif al-Qurashi (d.1433 AH), vol.01, p138; al-Sayyid 'Ali 'Ashur, vol.15, p103; al-Qummi (d.1359 AH), Muntaha al-Amal, vol.02, p466; Ahmad Qazi Zahidi Gulpaigani, p180; al-Majma' al-'Alami li-Ahl al-Bayt, A'lam al-Hidaya, vol.10, p186.</p>
+                                <p class="text-gray-700"><strong>The Bible quotations:</strong> the Greek Gospel text is quoted from the Elzevir Textus Receptus (1624), the Hebrew Bible from the Westminster Leningrad Codex, and the Arabic Bible from the Smith and Van Dyck translation (1865). Each quotation carries its citation beneath it.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
                         <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="c1">
@@ -335,16 +379,44 @@
                                     <p class="translation">"The Catholicos asked: 'What do you say concerning the prophethood of Jesus and his scriptures? Do you deny any of it?' Al-Rida <span class="honorific">﵇</span> replied: 'I affirm the prophethood of Jesus, his book, and the glad tidings he gave to his people, which the disciples themselves confirmed. And I disbelieve in the prophethood of any Jesus who does not affirm the prophethood of Muhammad <span class="honorific">ﷺ</span> and his book, and who gave his people no glad tidings of him.'"</p>
                                     <cite class="text-sm text-gray-500">- Muhammad Ja'far al-Astarabadi (Shari'atmadar) (d.1263 AH), al-Barahin al-Qati'a fi Sharh Tajrid al-'Aqa'id al-Sati'a, vol.03, p88</cite>
                                 </blockquote>
-                                <p class="text-gray-700">Behind the distinction stood the promise the surviving text still carried. The Paraclete discourses of the Fourth Gospel were read as its last echo:</p>
-                                <blockquote class="hadith-callout">
-                                    <p class="translation">"And I will ask the Father, and he will give you another Paraclete, that he may be with you forever... When the Paraclete comes, whom I will send to you from the Father, the Spirit of truth who proceeds from the Father, he will bear witness concerning me... It is to your advantage that I go away, for if I do not go away, the Paraclete will not come to you; but if I go, I will send him to you... I have yet many things to say to you, but you cannot bear them now. When he, the Spirit of truth, comes, he will guide you into all truth; for he will not speak from himself, but whatever he hears he will speak... He will glorify me, because he will take what is mine and declare it to you."</p>
-                                    <cite class="text-sm text-gray-500">- The Gospel of John, 14:16, 15:26, 16:7-14</cite>
+                                <p class="text-gray-700">Behind the distinction stood the promise the surviving text still carried, the farewell discourses of the Fourth Gospel, quoted here in the Greek text, the Arabic of the Van Dyck Bible, and English:</p>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">Kai egō erōtēsō ton patera, kai allon paraklēton dōsei hymin, hina menē meth' hymōn eis ton aiōna.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">وَأَنَا أَطْلُبُ مِنَ الآبِ فَيُعْطِيكُمْ مُعَزِّيًا آخَرَ لِيَمْكُثَ مَعَكُمْ إِلَى الأَبَدِ،</p>
+                                    <p class="translation">"And I will ask the Father, and he will give you another Comforter, that he may remain with you forever."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 14:16; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
                                 </blockquote>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">Ho de paraklētos, to pneuma to hagion, ho pempsei ho patēr en tō onomati mou, ekeinos hymas didaxei panta kai hypomnēsei hymas panta ha eipon hymin.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">وَأَمَّا الْمُعَزِّي، الرُّوحُ الْقُدُسُ، الَّذِي سَيُرْسِلُهُ الآبُ بِاسْمِي، فَهُوَ يُعَلِّمُكُمْ كُلَّ شَيْءٍ، وَيُذَكِّرُكُمْ بِكُلِّ مَا قُلْتُهُ لَكُمْ.</p>
+                                    <p class="translation">"But the Comforter, the Holy Spirit, whom the Father will send in my name, he will teach you all things and remind you of everything I said to you."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 14:26; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">Hotan de elthē ho paraklētos hon egō pempō hymin para tou patros, to pneuma tēs alētheias ho para tou patros ekporeuetai, ekeinos marturēsei peri emou.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">«وَمَتَى جَاءَ الْمُعَزِّي الَّذِي سَأُرْسِلُهُ أَنَا إِلَيْكُمْ مِنَ الآبِ، رُوحُ الْحَقِّ، الَّذِي مِنْ عِنْدِ الآبِ يَنْبَثِقُ، فَهُوَ يَشْهَدُ لِي.</p>
+                                    <p class="translation">"And when the Comforter comes, whom I will send to you from the Father, the Spirit of truth who goes out from the Father, he will bear witness concerning me."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 15:26; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">All' egō tēn alētheian legō hymin: sympherei hymin hina egō apelthō; ean gar mē apelthō, ho paraklētos ouk eleusetai pros hymas; ean de poreuthō, pempō auton pros hymas. Kai elthōn ekeinos elegxei ton kosmon peri hamartias kai peri dikaiosynēs kai peri kriseōs... Eti polla echō hymin legein, all' ou dynasthe bastazein arti. Hotan de elthē ekeinos, to pneuma tēs alētheias, odēgēsei hymas eis pasan tēn alētheian; ou gar lalēsei aph' heautou, all' hosa an akousē lalēsei kai ta erchomena anaggelei hymin. Ekeinos eme doxasei, hoti ek tou emou lēmpsetai kai anaggelei hymin.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">لكِنِّي أَقُولُ لَكُمُ الْحَقَّ: إِنَّهُ خَيْرٌ لَكُمْ أَنْ أَنْطَلِقَ، لأَنَّهُ إِنْ لَمْ أَنْطَلِقْ لاَ يَأْتِيكُمُ الْمُعَزِّي، وَلكِنْ إِنْ ذَهَبْتُ أُرْسِلُهُ إِلَيْكُمْ. وَمَتَى جَاءَ ذَاكَ يُبَكِّتُ الْعَالَمَ عَلَى خَطِيَّةٍ وَعَلَى بِرّ وَعَلَى دَيْنُونَةٍ... «إِنَّ لِي أُمُورًا كَثِيرَةً أَيْضًا لأَقُولَ لَكُمْ، وَلكِنْ لاَ تَسْتَطِيعُونَ أَنْ تَحْتَمِلُوا الآنَ. وَأَمَّا مَتَى جَاءَ ذَاكَ، رُوحُ الْحَقِّ، فَهُوَ يُرْشِدُكُمْ إِلَى جَمِيعِ الْحَقِّ، لأَنَّهُ لاَ يَتَكَلَّمُ مِنْ نَفْسِهِ، بَلْ كُلُّ مَا يَسْمَعُ يَتَكَلَّمُ بِهِ، وَيُخْبِرُكُمْ بِأُمُورٍ آتِيَةٍ. ذَاكَ يُمَجِّدُنِي، لأَنَّهُ يَأْخُذُ مِمَّا لِي وَيُخْبِرُكُمْ.</p>
+                                    <p class="translation">"But I tell you the truth: it is to your advantage that I go away, for if I do not go away, the Comforter will not come to you; but if I go, I will send him to you. And when he comes, he will convict the world concerning sin and righteousness and judgment... I still have many things to say to you, but you cannot bear them now. And when that one comes, the Spirit of truth, he will guide you into all the truth, for he will not speak from himself, but whatever he hears he will speak, and he will declare to you the things that are coming. That one will glorify me, because he will take what is mine and declare it to you."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 16:7-8, 12-14; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <p class="text-gray-700">The tradition of the Imam's <span class="honorific">﵇</span> school carried an extended form of the same promise:</p>
                                 <blockquote class="hadith-callout">
                                     <p class="translation">"The Son of the Virtuous Woman is going, and the Paraclete is coming after him. He will lighten the burdens, he will expound to you all things, and he will bear witness to me just as I bore witness to you. I came to you with parables, and he will come to you with the interpretation."</p>
                                     <cite class="text-sm text-gray-500">- The extended Paraclete formulation, cited by Imam al-Rida <span class="honorific">﵇</span>, Bihar al-Anwar, vol.14, p335</cite>
                                 </blockquote>
-                                <p class="text-gray-700">Read as testimony, the details point toward a messenger: his coming is conditional on Jesus's <span class="honorific">﵇</span> departure, he hears what he did not originate and speaks what he heard, he expounds and interprets and bears witness. The standard Christian identification of the Paraclete with the Holy Spirit fails on the same Gospel's chronology, since the Fourth Gospel itself records Jesus <span class="honorific">﵇</span> breathing the Holy Spirit upon his disciples before his ascension (John 20:22). A figure whose coming is conditional on departure cannot be one who had already arrived.</p>
+                                <p class="text-gray-700">Read as testimony, the details point toward a messenger: his coming is conditional on Jesus's <span class="honorific">﵇</span> departure, he hears what he did not originate and speaks what he heard, he expounds and interprets and bears witness. Against this, the Christian identification of the Comforter with the Holy Spirit rests on the naming in John 14:26 above; and the same Gospel's own chronology blocks it. Before his ascension, Jesus <span class="honorific">﵇</span> had already breathed the Spirit upon his disciples:</p>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">Kai touto eipōn enephysēsen kai legei autois: Labete pneuma hagion.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">وَلَمَّا قَالَ هذَا نَفَخَ وَقَالَ لَهُمُ:«اقْبَلُوا الرُّوحَ الْقُدُسَ.</p>
+                                    <p class="translation">"And when he had said this, he breathed on them and said to them: Receive the Holy Spirit."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 20:22; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <p class="text-gray-700">The Spirit, on the Christian scriptures' own showing, was already present and active throughout the ministry. A figure whose coming is conditional on departure cannot be one who had already arrived.</p>
                             </div>
                         </div>
                     </div>
@@ -526,7 +598,14 @@
                                     <p class="translation">"The Christians fell silent, and they said: We have never seen, this day, anyone so practiced in argument and disputation. We will look into our affairs."</p>
                                     <cite class="text-sm text-gray-500">- Mahdi Muntazar al-Qa'im, Isa al-Masih fi al-Ahadith al-Mushtaraka bayna al-Sunna wa-l-Shi'a, p75</cite>
                                 </blockquote>
-                                <p class="text-gray-700">The ground of the title, singular gifting, fails on two flanks. Adam came into being without a father and without a mother, a stronger claim on the same criterion, and no church calls him the Son of God. And Jesus <span class="honorific">﵇</span> himself extended the title of Father to men who held none of his singular distinction. Perhaps, the argument continues, he meant what the words say on their face: I go to Adam and to Noah; God raises me to them and gathers me with them, and Adam is my father and your father. The selection that was to reserve sonship to one man had been spoken by that man himself over a whole congregation.</p>
+                                <p class="text-gray-700">The ground of the title, singular gifting, fails on two flanks. Adam came into being without a father and without a mother, a stronger claim on the same criterion, and no church calls him the Son of God. And Jesus <span class="honorific">﵇</span> himself extended the title of Father to men who held none of his singular distinction, in the verse the Gospel preserves:</p>
+                                <blockquote class="bible-callout">
+                                    <p class="bible-original">Legei autē ho Iēsous: Mē mou haptou, oupō gar anabebēka pros ton patera mou; poreuou de pros tous adelphous mou kai eipe autois: Anabainō pros ton patera mou kai patera hymōn kai theon mou kai theon hymōn.</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">قَالَ لَهَا يَسُوعُ:«لاَ تَلْمِسِينِي لأَنِّي لَمْ أَصْعَدْ بَعْدُ إِلَى أَبِي. وَلكِنِ اذْهَبِي إِلَى إِخْوَتِي وَقُولِي لَهُمْ:إِنِّي أَصْعَدُ إِلَى أَبِي وَأَبِيكُمْ وَإِلهِي وَإِلهِكُمْ».</p>
+                                    <p class="translation">"Jesus said to her: Do not cling to me, for I have not yet ascended to my Father; but go to my brothers and say to them: I am ascending to my Father and your Father, to my God and your God."</p>
+                                    <cite class="text-sm text-gray-500">- The Gospel of John, 20:17; Greek: Elzevir Textus Receptus (1624); Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <p class="text-gray-700">Perhaps, the argument continues, he meant what the words say on their face: I go to Adam and to Noah; God raises me to them and gathers me with them, and Adam is my father and your father. The selection that was to reserve sonship to one man had been spoken by that man himself over a whole congregation.</p>
                             </div>
                         </div>
                     </div>
@@ -563,14 +642,29 @@
                         </div>
                         <div class="accordion-content" id="c14">
                             <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
-                                <p class="text-gray-700">The Torah passages the Imam <span class="honorific">﵇</span> pressed on the Exilarch, all of them extant in every Hebrew Bible today:</p>
-                                <blockquote class="hadith-callout">
-                                    <p class="translation">Deuteronomy 18:18, where God tells Moses: "I will raise up a prophet from among their brethren like you, and I will put My words in his mouth." The brethren of Israel are the Ishmaelites. Isaiah 21:7 describes two riders: "He saw two riders, one on a donkey and one on a camel." The rider on the donkey is Jesus <span class="honorific">﵇</span>; the rider on the camel is Muhammad <span class="honorific">ﷺ</span>. Habakkuk 3:3 reads: "The Holy One came from Paran, and the heavens were filled with the glorification of Ahmad."</p>
-                                    <cite class="text-sm text-gray-500">- The Imam's <span class="honorific">﵇</span> Torah citations, Bihar al-Anwar, vol.14, p335</cite>
+                                <p class="text-gray-700">The Torah passages the Imam <span class="honorific">﵇</span> pressed on the Exilarch, quoted in the Hebrew text, the Arabic of the Van Dyck Bible, and English. All of them are extant in every Hebrew Bible today:</p>
+                                <blockquote class="bible-callout">
+                                    <p class="font-hebrew" lang="he">נָבִ֨יא אָקִ֥ים לָהֶ֛ם מִקֶּ֥רֶב אֲחֵיהֶ֖ם כָּמֹ֑וךָ וְנָתַתִּ֤י דְבָרַי֙ בְּפִ֔יו וְדִבֶּ֣ר אֲלֵיהֶ֔ם אֵ֖ת כָּל־אֲשֶׁ֥ר אֲצַוֶּֽנּוּ׃</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">أُقِيمُ لَهُمْ نَبِيًّا مِنْ وَسَطِ إِخْوَتِهِمْ مِثْلَكَ، وَأَجْعَلُ كَلاَمِي فِي فَمِهِ، فَيُكَلِّمُهُمْ بِكُلِّ مَا أُوصِيهِ بِهِ.</p>
+                                    <p class="translation">"I will raise up for them a prophet from among their brethren, like you, and I will put My words in his mouth, and he shall speak to them all that I command him."</p>
+                                    <cite class="text-sm text-gray-500">- Deuteronomy 18:18; Hebrew: Westminster Leningrad Codex; Arabic: Smith and Van Dyck (1865)</cite>
                                 </blockquote>
+                                <blockquote class="bible-callout">
+                                    <p class="font-hebrew" lang="he">וְרָ֣אָה רֶ֗כֶב צֶ֚מֶד פָּרָשִׁ֔ים רֶ֥כֶב חֲמֹ֖ור רֶ֣כֶב גָּמָ֑ל וְהִקְשִׁ֥יב קֶ֖שֶׁב רַב־קָֽשֶׁב׃</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">فَرَأَى رُكَّابًا أَزْوَاجَ فُرْسَانٍ. رُكَّابَ حَمِيرٍ. رُكَّابَ جِمَال. فَأَصْغَى إِصْغَاءً شَدِيدًا،</p>
+                                    <p class="translation">"And he saw a chariot, a pair of horsemen, a rider on a donkey, a rider on a camel; and he listened intently, with great attention."</p>
+                                    <cite class="text-sm text-gray-500">- Isaiah 21:7; Hebrew: Westminster Leningrad Codex; Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <blockquote class="bible-callout">
+                                    <p class="font-hebrew" lang="he">אֱלֹ֙והַ֙ מִתֵּימָ֣ן יָבֹ֔וא וְקָדֹ֥ושׁ מֵֽהַר־פָּארָ֖ן סֶ֑לָה כִּסָּ֤ה שָׁמַ֙יִם֙ הֹודֹ֔ו וּתְהִלָּתֹ֖ו מָלְאָ֥ה הָאָֽרֶץ׃</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">اَللهُ جَاءَ مِنْ تِيمَانَ، وَالْقُدُّوسُ مِنْ جَبَلِ فَارَانَ. سِلاَهْ. جَلاَلُهُ غَطَّى السَّمَاوَاتِ، وَالأَرْضُ امْتَلأَتْ مِنْ تَسْبِيحِهِ.</p>
+                                    <p class="translation">"God came from Teman, and the Holy One from Mount Paran. Selah. His splendor covered the heavens, and the earth was full of His praise."</p>
+                                    <cite class="text-sm text-gray-500">- Habakkuk 3:3; Hebrew: Westminster Leningrad Codex; Arabic: Smith and Van Dyck (1865)</cite>
+                                </blockquote>
+                                <p class="text-gray-700">The Exilarch's concession, recorded in the same narration:</p>
                                 <blockquote class="hadith-callout">
                                     <p class="translation">"Habakkuk did say that, and we do not deny his words."</p>
-                                    <cite class="text-sm text-gray-500">- The Exilarch's concession, recorded in the majlis narration, Bihar al-Anwar, vol.14, p335</cite>
+                                    <cite class="text-sm text-gray-500">- The Exilarch's concession in the narration of al-Nufali, in al-Saduq, Uyun Akhbar al-Rida, vol.1, ch.12; al-Majlisi, Bihar al-Anwar, vol.14, p335</cite>
                                 </blockquote>
                                 <p class="text-gray-700">The "like you" reply closed the academic defense. Every prophet after Moses <span class="honorific">﵇</span> who came from Israel was already of Israel, so the likeness would distinguish no one; the verse points to a lawgiver who stands to his people as Moses <span class="honorific">﵇</span> stood to his. Joshua brought no new law; David and Solomon ruled within the Torah; Isaiah and Jeremiah carried no fresh revelation of law. The one truly like Moses <span class="honorific">﵇</span> came with a book and a law from outside Israel, from the line of the firstborn of Abraham who had been sent away, whose descendants dwelt in Paran, the very wilderness from which Habakkuk said the Holy One would shine forth. Isaac was the father of Israel and Ishmael his brother, and a prophet raised from among a brother's descendants comes from the line sent into the wilderness, from no other tribe of Israel. The rider on the donkey had entered Jerusalem mounted on an ass, as every tradition of the Peoples of the Book acknowledged, and the figure who rode forth on a camel and established a revelation that spread from one horizon to the next was one alone.</p>
                             </div>
