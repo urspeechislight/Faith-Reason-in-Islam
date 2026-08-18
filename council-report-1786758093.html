@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council Report — tear-and-pool.html Quality Gate</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#FAFAF8;color:#2A2E37;margin:0;padding:2rem 1rem;line-height:1.6}
+.wrap{max-width:820px;margin:0 auto}
+h1{font-size:1.6rem;margin-bottom:.2rem}
+h2{font-size:1.15rem;margin-top:2rem;border-bottom:1px solid #E3E0D8;padding-bottom:.4rem}
+.dim{display:grid;grid-template-columns:1fr auto;gap:.5rem;background:#fff;border:1px solid #E3E0D8;border-radius:8px;padding:1rem 1.25rem;margin:.5rem 0}
+.dim b{font-size:1.05rem}
+.score{font-size:1.4rem;font-weight:700;color:#8A6D3B}
+.advisor{background:#fff;border:1px solid #E3E0D8;border-radius:8px;margin:.5rem 0}
+.advisor>button{all:unset;display:flex;justify-content:space-between;width:100%;box-sizing:border-box;padding:1rem 1.25rem;font-weight:600;cursor:pointer}
+.advisor>div{display:none;padding:0 1.25rem 1.1rem;color:#4A4F58;font-size:.95rem}
+.advisor.open>div{display:block}
+.tag{display:inline-block;font-size:.75rem;background:#F3EFE6;color:#8A6D3B;border-radius:99px;padding:.15rem .6rem;margin-left:.5rem}
+.verdict{background:#fff;border-left:4px solid #B99C6B;border-radius:8px;padding:1.25rem 1.5rem}
+.fixed{color:#3E7A3E;font-weight:600}
+footer{margin-top:2.5rem;font-size:.85rem;color:#8A8577;border-top:1px solid #E3E0D8;padding-top:1rem}
+ul{padding-left:1.2rem}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Council Verdict — tear-and-pool.html</h1>
+<p style="color:#6B6660">Quality gate for <a href="https://urspeechislight.github.io/Faith-Reason-in-Islam/tear-and-pool.html">The Tear and the Pool</a> · 5 advisors · 5 peer reviewers · chairman synthesis</p>
+
+<div class="verdict">
+<p><b>Where the council agreed (converged independently):</b></p>
+<ul>
+<li><b>Isnad silence</b> (5/5 advisors): the six transmitters recited, never graded, on a site branded Faith &amp; Reason.</li>
+<li><b>"The two of them" undefined</b> (4/5): the narration's final clause identifies the condemned man, and no card named who.</li>
+<li><b>c7's argument from silence</b> (4/5): "The denial implies its contrast" leans 44:29's silence past what it carries.</li>
+<li><b>c9's garbled debt sentence</b>, c12's misanchoring, missing glosses (wilāyah, Tasnīm, Nāṣibīs), 42:23 asserted as settled, and the uncited ḥawḍ parallel.</li>
+</ul>
+<p><b>Where the council clashed:</b> c9 as flipped negation (Contrarian, Expansionist, seat 3) vs deliberate anti-merit clause (First Principles, Outsider, seats 1-2). Resolution: the sentence was garbled either way and was rewritten outright. The Contrarian's divine-speech styling flag verified true but matches site convention; kept.</p>
+<p><b>Blind spots the reviews caught:</b> the closing epilogue re-asserting the "exact" 108:1 correspondence as the final word; the missing Tasnīm verse (83:27); the absent narration Arabic (unresolvable this run: corpus host down).</p>
+<p><b>Outcome:</b> <span class="fixed">14 fixes applied and verified</span> (28/28 Arabic blocks byte-exact against the Uthmani API; structural validator clean). Rerun council pending.</p>
+</div>
+
+<h2>Advisor scores (round 1)</h2>
+<div class="dim"><b>Readability</b><span class="score">7-9</span></div>
+<div class="dim"><b>Comprehensiveness</b><span class="score">5-8</span></div>
+<div class="dim"><b>Persuasiveness</b><span class="score">5-7.5</span></div>
+<div class="dim"><b>Difficulty-to-escape</b><span class="score">3-6.5</span></div>
+
+<h2>Advisor responses</h2>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">The Contrarian <span>+</span></button><div>R7 C5 P5 E3. Unglossed terms; "the two" never explained; zero chain grading; c2 substitution overclaim; c10 "exact"; c7 silence-inference; escape via the imprecation and Q 9:100 / ḥawḍ counters; c9 flipped negation.</div></div>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">The First Principles Thinker <span>+</span></button><div>R9 C7 P6 E5. Consistency is not entailment; c11 concedes "echo"; demands authenticity assessment; al-Aṣamm unrated; 42:23 contested; escape through the isnad door.</div></div>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">The Expansionist <span>+</span></button><div>R9 C7 P7.5 E6. Three movements without cards (tasbīḥ, graded drink, the refusal); c8 non-sequitur; c11 eisegesis of 76:21; c13's mirror is the sharpest weapon; preempt "who are the two" there.</div></div>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">The Outsider <span>+</span></button><div>R7 C7 P6 E4. Glyphs unglossed; Tasnīm skipped though the narration names it; "may Allah increase your thirst" untouched; exits at c2's settled 42:23 and c1's decorative chain.</div></div>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">The Executor <span>+</span></button><div>R8 C8 P7.5 E6.5. c12 misanchored; 6:132 for the graded drink; c5 "image of impossibility"; ḥawḍ citations as free win; full Monday fix list.</div></div>
+
+<h2>Peer review highlights</h2>
+<div class="advisor"><button onclick="this.parentNode.classList.toggle('open')">Five seats, three questions each <span>+</span></button><div>Strongest: E (3 seats) and C (2 seats), both verified against the page. Biggest blind spot: B, floating above reader-facing failures. All-missed: the closing epilogue's re-assertion, translation fidelity, the audience question, and the narration's absent Arabic. One seat's claim that proportion lacked a card was corrected by the chairman (c10 handled it; a dedicated callout was added anyway).</div></div>
+
+<footer>Council run 1786758093 · 2026-08-18 · Subject: tear-and-pool.html · Full transcript: council-transcript-1786758093.md</footer>
+</div></body>
+</html>
