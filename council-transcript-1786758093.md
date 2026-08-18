@@ -51,3 +51,13 @@ Score the page (a narration page: Kamil al-Ziyarat no. 6 narration + 13 Qur'an-c
 **Recommendation applied (14 edits, all vault/API-grounded, none invented):** c1 isnad honesty note + honorific gloss + Nāṣibī gloss; c2 substitution fix + 42:23 rival-reading acknowledgment; c5 wilāyah gloss + "image of impossibility"; c7 inference labeled and garbled sentence rewritten; c8 explicit inference statement; c9 debt sentence rewritten; c10 "exact" removed + 6:132 graded-drink callout; c11 83:27 Tasnīm callout + eisegesis softened to read-together; c12 Pool-scene lead-in + ḥawḍ parallel; c13 names "the two" + criterion framing; closing attribution. New verses 6:132 and 83:27 fetched from the Uthmani API and byte-verified; one transcription divergence (6:132) caught by the gate and corrected from API bytes; one litotes in a new translation ("not unaware") caught and fixed. Validator: clean (Final Verdict exception per narration-page type).
 
 **One thing to do first:** push the fixes and re-run the council for 9+ verification.
+
+---
+
+# Round 2 (post-fix) — abbreviated
+
+**Scores:** Readability 9-9.5 · Comprehensiveness 8-9 · Persuasiveness 7-9 · Escape 6-8.5. All dimensions improved over round 1.
+
+**Round-2 catches fixed (9 edits, all API-grounded):** c2's false "either reading" sentence (reward tied to household fails on the kinship-general reading); c8's not-disobedient/obedient flip (now claims only "no disobedience"); c7 now states and answers the idiom-of-neglect counterreading; c5 concedes 33:4's zihar/adoption context and marks the use as extension; c10 distinguishes the Qur'an's deed-degrees from the narration's love-degrees; Karbala itself narrated once in c3; "Imam" and the death date glossed in c1; vessels (Qur'an 76:15-16) and musk (Qur'an 83:26) callouts added to c11. 30/30 Arabic blocks byte-exact; validator clean.
+
+**Not pursued (user direction):** 9+ threshold and the difficulty-to-escape dimension are debate-page standards; this narration page ships without them. Round-2 suggestions left on the table: Sahih Muslim's Ja'far-weeping precedent (needs corpus), the hawd double-edge preempt, the c13 Qur'anic-bridge objection (all escape-oriented).
