@@ -39,22 +39,32 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
+        .commentary-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
+            transition: max-height 0.35s ease-in-out;
+        }
+        .commentary-accordion .chevron {
+            transition: transform 0.3s ease;
+        }
+        .commentary-accordion.open .chevron {
+            transform: rotate(180deg);
+        }
+        .commentary-toggle {
+            transition: background-color 0.2s ease;
+        }
+        .commentary-toggle:hover {
+            background-color: #FAF6EF;
+        }
+        .comment-anchor {
+            font-size: 0.75rem;
+            color: #8A6D3B;
+        }
+        .comment-anchor:hover {
+            text-decoration: underline;
+        }
+        .commentary-card {
+            scroll-margin-top: 7rem;
         }
         .rtl {
             direction: rtl;
@@ -191,13 +201,12 @@
                     <p class="mb-6 text-gray-600">The Imami tradition does not file this event away as a stray memory. Al-Kafi gives it a chapter of its own, and the chapter's verdict comes from the Imam of the age himself.</p>
                     <div id="tab1-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">A Chapter with a Title, and a Word That Settles Character</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The First Hadith</h5>
                                         <p class="mb-2 text-gray-600">The chapter's first hadith carries the assessment of Imam Ja'far al-Sadiq <span class="honorific">﵇</span>, and its one word for the event has carried the school's position ever since:</p>
@@ -206,19 +215,32 @@
                                             <p class="translation">"Ali ibn Ibrahim transmits, from his father, from Ibn Abi Umayr, from Hisham ibn Salim and Hammad, by way of Zurara: Abu Abdullah, peace be upon him, was asked about the marriage of Umm Kulthum, and he said: that was a union seized from us by force."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d.329 AH), al-Kafi, al-Furu', vol.5, p.346, Book of Marriage, chapter on the marriage of Umm Kulthum, no.1</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The chain deserves attention, because the polemic treats this report as an embarrassment. Ali ibn Ibrahim and his father Ibrahim ibn Hashim, Ibn Abi Umayr, Hisham ibn Salim, Hammad ibn Uthman, Zurara ibn A'yan: these are pillars of the school's transmission. And the word they carry is ghasb. In the jurists' language, ghasb is not a mood or a slur. It is the legal category for taking what belongs to another by force against the owner's will. The Imam <span class="honorific">﵇</span> was asked about a marriage, and he answered with the name of a crime.</p>
+                                            <p class="mt-1"><a href="#c1" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c1" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Chain and the Word It Carries</p>
+                                                        <p class="text-gray-700">The chain deserves attention, because the polemic treats this report as an embarrassment. Ali ibn Ibrahim and his father Ibrahim ibn Hashim, Ibn Abi Umayr, Hisham ibn Salim, Hammad ibn Uthman, Zurara ibn A'yan: these are pillars of the school's transmission. And the word they carry is ghasb. In the jurists' language, ghasb is not a mood or a slur. It is the legal category for taking what belongs to another by force against the owner's will. The Imam <span class="honorific">﵇</span> was asked about a marriage, and he answered with the name of a crime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Second Hadith: the Threat That Produced the Contract</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report</h5>
                                         <p class="mb-2 text-gray-600">Muhammad ibn Abi Umayr transmits it from Hisham ibn Salim, from the Imam <span class="honorific">﵇</span>:</p>
@@ -227,19 +249,32 @@
                                             <p class="translation">"Muhammad ibn Abi Umayr transmits, from Hisham ibn Salim, from Abu Abdullah, peace be upon him. He said: when the proposal was made, the Commander of the Faithful told him: she is a child. Umar then went to meet al-Abbas and said to him: what is the matter with me, is something wrong with me? Al-Abbas asked: and what is that? He replied: I proposed to your nephew's daughter and he turned me away. By God, I will ruin the well of Zamzam, I will leave you no honor standing without demolishing it, I will set up two witnesses against him testifying that he stole, and I will have his right hand cut off. Al-Abbas came to Ali and told him, and asked him to place the matter in his hands, and Ali placed it in his hands."</p>
                                             <cite class="text-sm text-gray-500">- Imam Ja'far al-Sadiq <span class="honorific">﵇</span>, in al-Kulayni (d.329 AH), al-Kafi, al-Furu', vol.5, p.346, chapter on the marriage of Umm Kulthum, no.2</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Four facts in this text undercut the willing-marriage reading. First, Ali's <span class="honorific">﵇</span> recorded answer is a refusal on the girl's age: sabiyya, a child. Second, the refused suitor did not return to the father. He escalated to the family elder, al-Abbas. Third, his oath names the method: ruin Zamzam, demolish Banu Hashim's honors, two purchased witnesses, the cutting of Ali's <span class="honorific">﵇</span> right hand. Fourth, the outcome is delegation under threat: Ali <span class="honorific">﵇</span> handed the matter to al-Abbas because contracting it himself had become impossible. A father who wishes to give his daughter negotiates her dowry. A father who cannot safely refuse hands the papers to his uncle.</p>
+                                            <p class="mt-1"><a href="#c2" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c2" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Four Facts in the Text</p>
+                                                        <p class="text-gray-700">Four facts in this text undercut the willing-marriage reading. First, Ali's <span class="honorific">﵇</span> recorded answer is a refusal on the girl's age: sabiyya, a child. Second, the refused suitor did not return to the father. He escalated to the family elder, al-Abbas. Third, his oath names the method: ruin Zamzam, demolish Banu Hashim's honors, two purchased witnesses, the cutting of Ali's <span class="honorific">﵇</span> right hand. Fourth, the outcome is delegation under threat: Ali <span class="honorific">﵇</span> handed the matter to al-Abbas because contracting it himself had become impossible. A father who wishes to give his daughter negotiates her dowry. A father who cannot safely refuse hands the papers to his uncle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Retrieval: Two Chains in al-Kafi, One in al-Tusi</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Two Chains</h5>
                                         <p class="mb-2 text-gray-600">Al-Majlisi records both transmissions together:</p>
@@ -254,19 +289,32 @@
                                             <p class="translation">"Al-Husayn ibn Sa'id transmits, from al-Nadr ibn Suwayd, from Hisham ibn Salim, from Sulayman ibn Khalid, who said: I asked Abu Abdullah, peace be upon him, about a woman whose husband had died: where should she observe her waiting period, in her husband's house or wherever she wishes? He said: wherever she wishes. Then he said: when Umar died, Ali, peace be upon him, came to Umm Kulthum, took her by the hand, and brought her to his house."</p>
                                             <cite class="text-sm text-gray-500">- al-Tusi (d.460 AH), Tahdhib al-Ahkam, vol.8, p.161, no.558</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Ali <span class="honorific">﵇</span> did not wait out the customary periods. The Imam of the age describes him arriving on the day of death, taking the girl by the hand, and walking her out. A widowed daughter returning home is ordinary. A father who reclaims her within the hour is ending an arrangement, and the same canon's word for how that arrangement began was seizure.</p>
+                                            <p class="mt-1"><a href="#c3" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c3" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Reading the Retrieval</p>
+                                                        <p class="text-gray-700">Ali <span class="honorific">﵇</span> did not wait out the customary periods. The Imam of the age describes him arriving on the day of death, taking the girl by the hand, and walking her out. A widowed daughter returning home is ordinary. A father who reclaims her within the hour is ending an arrangement, and the same canon's word for how that arrangement began was seizure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab1-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The School Graded These Reports Sound</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab1-4">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab1-4">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Gradings</h5>
                                         <p class="mb-2 text-gray-600">Al-Majlisi, the school's great examiner of chains, graded both hadiths of the chapter good, as al-Amili records:</p>
@@ -287,10 +335,24 @@
                                             <p class="translation">"This last report, like the second, is sound in its chain. And God knows best."</p>
                                             <cite class="text-sm text-gray-500">- Mirza Jawad al-Tabrizi (d.1427 AH), Zulamat Fatima al-Zahra', p.40</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Beyond the graders, the report's spread confirms its standing: al-Hurr al-Amili carries both hadiths in Wasa'il al-Shia, al-Fayd al-Kashani in al-Wafi, al-Majlisi reproduces the chapter in Mir'at al-Uqul, and al-Attardi compiles them in Masnad al-Imam al-Sadiq. The polemic that calls this narration obscure is describing a text the Imami curriculum has copied for eleven centuries.</p>
+                                            <p class="mt-1"><a href="#c4" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c4" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Spread Beyond the Graders</p>
+                                                        <p class="text-gray-700">Beyond the graders, the report's spread confirms its standing: al-Hurr al-Amili carries both hadiths in Wasa'il al-Shia, al-Fayd al-Kashani in al-Wafi, al-Majlisi reproduces the chapter in Mir'at al-Uqul, and al-Attardi compiles them in Masnad al-Imam al-Sadiq. The polemic that calls this narration obscure is describing a text the Imami curriculum has copied for eleven centuries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
                     </div>
@@ -300,13 +362,12 @@
                     <p class="mb-6 text-gray-600">Before seeking outside corroboration, the al-Kafi narration deserves to be weighed on its own text: what it asserts, what it declines to assert, and whether it coheres with what else the school holds.</p>
                     <div id="tab2-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">What the Text Asserts, and What It Refuses to Assert</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Inventory of Assertions</h5>
                                         <p class="text-gray-600">List what the Shia narrations actually assert. A proposal was made to Ali <span class="honorific">﵇</span>. His answer was a refusal on the girl's age: she is a child. The refused suitor went over the father's head to the family elder and swore an oath naming three instruments: the ruin of Zamzam, the demolition of the family's honors, and two manufactured witnesses to send Ali's <span class="honorific">﵇</span> hand to the block. Ali <span class="honorific">﵇</span> handed the matter to al-Abbas, and the contract was performed by another hand. When Umar died, Ali <span class="honorific">﵇</span> came, took the girl by the hand, and brought her home.</p>
@@ -319,13 +380,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">A Coercion Protocol, Not a Courtship</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Sequence the Text Preserves</h5>
                                         <p class="text-gray-600">A voluntary marriage has a shape every reader knows: proposal, negotiation, dowry, a contract the father performs, a public blessing. The al-Kafi text preserves the inverse of each element. The proposal meets refusal. Negotiation is replaced by escalation to the family elder. The father's one recorded speech is a ground of rejection, and his one recorded action is transferring authority out of his own hands, to the man the suitor had just terrorized. The contract, on this text, was concluded by al-Abbas under a threat the same narration preserves word for word.</p>
@@ -338,13 +398,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Coherence with the Law of Necessity</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Objection the Matn Must Answer</h5>
                                         <p class="text-gray-600">If the girl was the Imam's <span class="honorific">﵇</span> daughter and the marriage occurred, how could an infallible guardian have any part in it. The school answered with the doctrine the Qur'an itself lays down for coercion, and its jurists located the answer in the threat the Imam's <span class="honorific">﵇</span> narration preserved.</p>
@@ -375,19 +434,32 @@
                                             <p class="translation">"The correct answer is that this occurred by way of taqiyya and necessity. There is nothing strange in it, for many forbidden things are transformed by necessity and become obligations. Moreover, the sound reports establish that the Prophet, God's blessings upon him and his family, had informed the Commander of the Faithful and all the Imams, peace be upon them, of the wrongs that would be done to them and of what they must do when those wrongs came."</p>
                                             <cite class="text-sm text-gray-500">- al-Majlisi (d.1111 AH), Bihar al-Anwar, vol.42, p.111</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The coherence runs both ways. The doctrine of necessity explains how a coerced contract could stand outwardly, and the narration's threat clause explains why the doctrine was needed here, and nowhere else in the Imam's <span class="honorific">﵇</span> family record. A matn that fits the school's law this exactly is not a scribal accident.</p>
+                                            <p class="mt-1"><a href="#c5" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c5" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Coherence Runs Both Ways</p>
+                                                        <p class="text-gray-700">The coherence runs both ways. The doctrine of necessity explains how a coerced contract could stand outwardly, and the narration's threat clause explains why the doctrine was needed here, and nowhere else in the Imam's <span class="honorific">﵇</span> family record. A matn that fits the school's law this exactly is not a scribal accident.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab2-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The School Read Its Own Text with Precision</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab2-4">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab2-4">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Al-Majlisi's Reading of the Word</h5>
                                         <p class="mb-2 text-gray-600">The Husayn Encyclopedia preserves al-Majlisi's gloss on ghuṣibnāhu together with its own analysis:</p>
@@ -396,10 +468,24 @@
                                             <p class="translation">"His saying, peace be upon him, 'a union seized from us outwardly,' and the fact that the seizing of the union is tied to the soundness of the claimed marriage, means: it was a union seized from us, and this does not entail that the marriage actually occurred, once the seizure is predicated upon its occurrence in outward fact. This is what al-Majlisi indicated in Mir'at al-Uqul with his words: the meaning is, it was seized from us outwardly and in the people's estimation, if that story is even true."</p>
                                             <cite class="text-sm text-gray-500">- Mawsu'at al-Imam al-Husayn, vol.11, p.816, transmitting al-Majlisi's Mir'at al-Uqul</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Note what this reading does. The Imam's <span class="honorific">﵇</span> word is kept in full force without being converted into an affirmation that a true marriage existed. Seizure is predicated of what appeared and what people claimed, and the school's commentator refuses to squeeze an affirmation out of a condemnation. The report's evidentiary value is its character verdict, not a record of a valid contract.</p>
+                                            <p class="mt-1"><a href="#c6" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c6" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">What the Reading Accomplishes</p>
+                                                        <p class="text-gray-700">Note what this reading does. The Imam's <span class="honorific">﵇</span> word is kept in full force without being converted into an affirmation that a true marriage existed. Seizure is predicated of what appeared and what people claimed, and the school's commentator refuses to squeeze an affirmation out of a condemnation. The report's evidentiary value is its character verdict, not a record of a valid contract.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
                     </div>
@@ -409,13 +495,12 @@
                     <p class="mb-6 text-gray-600">Every version of the event, Shia and Sunni, agrees on one fact the polemic needs to hide: the girl was young. Her age and her name each expose something the marriage narrative cannot survive.</p>
                     <div id="tab3-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Arithmetic of Her Age</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Dates</h5>
                                         <p class="mb-2 text-gray-600">If the bride was Fatima's <span class="honorific">﵍</span> daughter, the dates set a floor. Fatima <span class="honorific">﵍</span> died in Ramadan of 11 AH; the proposal is placed in 17 AH. A daughter of hers was therefore at most six at the contract, and the arithmetic alone cannot push her past her early teens. What settles the question is the age-class testimony of the opponents' own biographers. The death date is recorded by al-Suyuti in his collection on Fatima <span class="honorific">﵍</span>:</p>
@@ -445,7 +530,7 @@
                                             <p class="translation">"Such, too, is what al-Zarqani the Maliki, one of the scholars of the general public, related: that Umar died while still married to her, before she had reached puberty."</p>
                                             <cite class="text-sm text-gray-500">- al-Zarqani (d.1122 AH), Sharh al-Mawahib, as preserved in Abha al-Midad, vol.2, p.231</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Set the statements in a row: a girl not yet pubescent at the proposal; a marriage in year seventeen, six years after her mother's death in year eleven; and a Sunni biographer's statement that Umar died before her puberty. The age-class reports converge from independent strands: Ibn Sa'd's lam tablugh at the contract, Ali's <span class="honorific">﵇</span> sabiyya in both corpora, Abd al-Razzaq's girl still at play, al-Zarqani's before-puberty at Umar's death. Honesty requires the next step: the same Ibn Sa'd also transmits, in the same entry, that she bore Umar two children, and Abd al-Razzaq's editorial voice states a birth. The two age-classes cannot both be true of one woman. The contradiction does not resolve; it fractures the corpus that carries it, and the fracture lands on the polemic's side: the age-class it needs, a marriageable woman, is the one class no early age-statement asserts, while the child statements recur across strands that never cite one another.</p>
+                                            <p class="mt-1"><a href="#c7" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Timeline, Assembled</h5>
@@ -493,19 +578,36 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <p class="text-gray-700 mt-3">Read by rows, the matrix measures the suitor against the girl: a caliph the bride's own recorded word calls an old man, demanding a child of at most six. Read by columns, it exposes the record: the corpus that fixes her last possible birth-year, her prepubescence at the contract and at Umar's death, also transmits her motherhood, her same-hour death in Umar's reign, and her living voice in 61 AH. No Shia premise enters the table. The dates alone frame the question the next two sections answer: her age-class, and the identity of a girl whose name the traditions cannot fix.</p>
+                                            <p class="mt-1"><a href="#c8" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c7" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Age-Class Convergence</p>
+                                                        <p class="text-gray-700">Set the statements in a row: a girl not yet pubescent at the proposal; a marriage in year seventeen, six years after her mother's death in year eleven; and a Sunni biographer's statement that Umar died before her puberty. The age-class reports converge from independent strands: Ibn Sa'd's lam tablugh at the contract, Ali's <span class="honorific">﵇</span> sabiyya in both corpora, Abd al-Razzaq's girl still at play, al-Zarqani's before-puberty at Umar's death. Honesty requires the next step: the same Ibn Sa'd also transmits, in the same entry, that she bore Umar two children, and Abd al-Razzaq's editorial voice states a birth. The two age-classes cannot both be true of one woman. The contradiction does not resolve; it fractures the corpus that carries it, and the fracture lands on the polemic's side: the age-class it needs, a marriageable woman, is the one class no early age-statement asserts, while the child statements recur across strands that never cite one another.</p>
+                        </div>
+                        <div id="c8" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Reading the Matrix</p>
+                                                        <p class="text-gray-700">Read by rows, the matrix measures the suitor against the girl: a caliph the bride's own recorded word calls an old man, demanding a child of at most six. Read by columns, it exposes the record: the corpus that fixes her last possible birth-year, her prepubescence at the contract and at Umar's death, also transmits her motherhood, her same-hour death in Umar's reign, and her living voice in 61 AH. No Shia premise enters the table. The dates alone frame the question the next two sections answer: her age-class, and the identity of a girl whose name the traditions cannot fix.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Sunna of the Kunya: Earned by a Son</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Imam's <span class="honorific">﵇</span> Statement of the Rule</h5>
                                         <p class="mb-2 text-gray-600">The bride's appellation, Umm Kulthum, mother of Kulthum, is a kunya, the Arabic parent-of form. The Imams <span class="honorific">﵈</span> themselves state how it is normally acquired:</p>
@@ -526,19 +628,32 @@
                                             <p class="translation">"She bore the Messenger of God al-Qasim, and by him he was given his kunya... And these are the children of al-Abbas ibn Abd al-Muttalib: al-Fadl, and by him he was given his kunya."</p>
                                             <cite class="text-sm text-gray-500">- al-Tabarani (d.360 AH), al-Ahad wa-al-Mathani, vol.5, p.380; Ibn Hazm (d.456 AH), Jamharat Ansab al-Arab, p.25</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Uthman's case is decisive. His kunya was a live index of a living child; when the boy Abdullah died, the community re-kunya'd him. A kunya is earned at a son's cradle and can be un-earned at his grave. Any woman bearing the kunya Umm Kulthum either had a child named Kulthum or received the appellation from those who named her.</p>
+                                            <p class="mt-1"><a href="#c9" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c9" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Earned at a Cradle, Un-earned at a Grave</p>
+                                                        <p class="text-gray-700">Uthman's case is decisive. His kunya was a live index of a living child; when the boy Abdullah died, the community re-kunya'd him. A kunya is earned at a son's cradle and can be un-earned at his grave. Any woman bearing the kunya Umm Kulthum either had a child named Kulthum or received the appellation from those who named her.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Canon on the Kunya of the Young</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Hadith of Ma'mar ibn Khuthaym</h5>
                                         <blockquote class="hadith-callout">
@@ -546,23 +661,36 @@
                                             <p class="translation">"Ma'mar ibn Khuthaym relates: Abu Ja'far, peace be upon him, said to me: what is your kunya? I said: I have not yet taken a kunya; I have no child, no wife, no servant girl. He said: and what prevents you from that? I said: a report reached us from Ali, peace be upon him: whoever takes a kunya while he has no family, he is Abu Ja'far. Abu Ja'far, peace be upon him, said: away with it, that is not a saying of Ali, peace be upon him. We do kunya our children in their small years, fearing the taunt that might otherwise attach to them."</p>
                                             <cite class="text-sm text-gray-500">- Imam Muhammad al-Baqir <span class="honorific">﵇</span>, in al-Kulayni (d.329 AH), al-Kafi, vol.6, p.19, as compiled in Majallat Turathuna, vol.17, p.49</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Two facts stand in this hadith. The exception: the Imams' <span class="honorific">﵈</span> household did kunya its children young, as a shield against taunts, so a child's kunya is normal in that house. The rule: a kunya belongs, by sunna, to one who has a household. Both converge on the point this case needs: whether a child's kunya is earned by a son or conferred protectively, it arrives by other people's mouths. A kunya worn by the young is a designation, not a biography. It certifies no child, no marriage, no motherhood, no lineage.</p>
+                                            <p class="mt-1"><a href="#c10" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Application to the Bride</h5>
-                                        <p class="text-gray-700">Apply this to the girl at issue. Prepubescent at the proposal, she had no son named Kulthum, no child, no household. Umm Kulthum was not a kunya she had earned; it was a name conferred by the adults around her. That matters once it is asked who supplies the identification in each narration: in the Imami texts the Imam <span class="honorific">﵇</span> uses the bare name Umm Kulthum with no lineage attached, and the lineage arrives only from the man making the demand.</p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c10" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Rule and Its Exception</p>
+                                                        <p class="text-gray-700">Two facts stand in this hadith. The exception: the Imams' <span class="honorific">﵈</span> household did kunya its children young, as a shield against taunts, so a child's kunya is normal in that house. The rule: a kunya belongs, by sunna, to one who has a household. Both converge on the point this case needs: whether a child's kunya is earned by a son or conferred protectively, it arrives by other people's mouths. A kunya worn by the young is a designation, not a biography. It certifies no child, no marriage, no motherhood, no lineage.</p>
+                                                        <p class="text-gray-700">Apply this to the girl at issue. Prepubescent at the proposal, she had no son named Kulthum, no child, no household. Umm Kulthum was not a kunya she had earned; it was a name conferred by the adults around her. That matters once it is asked who supplies the identification in each narration: in the Imami texts the Imam <span class="honorific">﵇</span> uses the bare name Umm Kulthum with no lineage attached, and the lineage arrives only from the man making the demand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-3b">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Lexicon's Own Filing: What Umm Kulthum Means</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-3b">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-3b">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Root in the Lexica</h5>
                                         <p class="mb-2 text-gray-600">Al-Jawhari's entry for the root k-l-th-m runs:</p>
@@ -577,7 +705,7 @@
                                             <p class="translation">"Al-Kulthum: the elephant. And a mukalthama girl: beautiful in the circles of her face, possessing two cheeks whose smoothness keeps them company, without the sullen heaviness of ugliness attaching to them. (And a mukaltham face: round, abundant in flesh, with the like of a walnut of flesh in it.) It is said: the compact, curly, rounded one. It is said: it is near to jahm, only narrower than it and more pleasing. And Kulthum: a man. And Umm Kulthum: a woman."</p>
                                             <cite class="text-sm text-gray-500">- Ibn Sida (d.458 AH), al-Muhkam wa-al-Muhit al-A'zam, vol.7, p.169, root k-l-th-m</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The lexica share one center: kalthama is the gathering of flesh in the face, cheeks full enough to draw the face's circles, beautiful so long as it stops short of jahuma, the sullen heaviness full faces slide into. Around it ring three senses: the beautiful full-cheeked woman; the elephant, gathered flesh on four legs (Ibn Sida); and the gathered silk at the head of a banner (al-Sahib ibn Abbad, al-Muhit, vol.6, p.376). One idea of rounded fullness underlies all three.</p>
+                                            <p class="mt-1"><a href="#c11" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Beauty Word of Grown Fullness</h5>
@@ -593,23 +721,40 @@
                                             <p class="translation">"Shimir said: Abu Ubayd said, in the description of the Prophet: 'he was not mukallatham', for he was not round of face; rather he was smooth-contoured. Shimir said: the mukallatham of faces is the short of jaw, the protruding of brow, the round of face; al-Nihaya adds: together with lightness of flesh."</p>
                                             <cite class="text-sm text-gray-500">- al-Zabidi (d.1205 AH), Taj al-Arus, vol.17, p.224, quoting Shimir from Abu Ubayd, with the addition of al-Nihaya (Ibn al-Athir, d.606 AH), vol.4, p.196</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The cross-root evidence agrees: the lion is called mukhath'am, and al-Zabidi glosses it by this root, a mukhath'am face is a mukaltham face (Taj al-Arus, vol.16, p.194). And the name was never confined to women: the most famous bearer is a man, the Muallaqa poet Amr ibn Kulthum; the companions include Kulthum ibn al-Husayn Abu Ruhm al-Ghifari, who fought at Uhud, and Kulthum ibn Hadm al-Ansari, in whose Quba house the Prophet <span class="honorific">ﷺ</span> first lodged (Taj al-Arus, vol.17, p.224). Kulthum is a name Arab men carried, defined by the lexicon as gathered fullness.</p>
+                                            <p class="mt-1"><a href="#c12" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Consequence for the Appellation</h5>
-                                        <p class="text-gray-700">Three facts converge from inside the opponents' own lexical tradition. First, the dictionaries close their root entries by filing the appellation itself: Umm Kulthum is "a woman's kunya" (al-Jawhari) and "a woman" (Ibn Sida). They register a standing female appellation of the language, not a certificate that a bearer mothered a son. Second, the root's whole field, drawn cheeks, Shabib's udders, the elephant's mass, is grown fullness. A prepubescent girl wearing it wears a name her body has not grown into: the conferred kunya of the preceding section, written in the lexicon's own ink. Third, since Kulthum was also a man's given name, even the mother-of form implies nothing about the bearer's children. The lexicon refuses to do what the polemic needs: identify a bride.</p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c11" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">One Center, Three Senses</p>
+                                                        <p class="text-gray-700">The lexica share one center: kalthama is the gathering of flesh in the face, cheeks full enough to draw the face's circles, beautiful so long as it stops short of jahuma, the sullen heaviness full faces slide into. Around it ring three senses: the beautiful full-cheeked woman; the elephant, gathered flesh on four legs (Ibn Sida); and the gathered silk at the head of a banner (al-Sahib ibn Abbad, al-Muhit, vol.6, p.376). One idea of rounded fullness underlies all three.</p>
+                        </div>
+                        <div id="c12" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Consequence for the Appellation</p>
+                                                        <p class="text-gray-700">The cross-root evidence agrees: the lion is called mukhath'am, and al-Zabidi glosses it by this root, a mukhath'am face is a mukaltham face (Taj al-Arus, vol.16, p.194). And the name was never confined to women: the most famous bearer is a man, the Muallaqa poet Amr ibn Kulthum; the companions include Kulthum ibn al-Husayn Abu Ruhm al-Ghifari, who fought at Uhud, and Kulthum ibn Hadm al-Ansari, in whose Quba house the Prophet <span class="honorific">ﷺ</span> first lodged (Taj al-Arus, vol.17, p.224). Kulthum is a name Arab men carried, defined by the lexicon as gathered fullness.</p>
+                                                        <p class="text-gray-700">Three facts converge from inside the opponents' own lexical tradition. First, the dictionaries close their root entries by filing the appellation itself: Umm Kulthum is "a woman's kunya" (al-Jawhari) and "a woman" (Ibn Sida). They register a standing female appellation of the language, not a certificate that a bearer mothered a son. Second, the root's whole field, drawn cheeks, Shabib's udders, the elephant's mass, is grown fullness. A prepubescent girl wearing it wears a name her body has not grown into: the conferred kunya of the preceding section, written in the lexicon's own ink. Third, since Kulthum was also a man's given name, even the mother-of form implies nothing about the bearer's children. The lexicon refuses to do what the polemic needs: identify a bride.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab3-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Name the Report Never Proves</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab3-4">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab3-4">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Her Name: One Tradition Says Fatima, the Other Says Zaynab</h5>
                                         <p class="mb-2 text-gray-600">What was the girl's own name? Here the two traditions collide outright, and neither answer is the bare name Umm Kulthum the marriage reports trade on.</p>
@@ -625,7 +770,7 @@
                                             <p class="translation">"Ibn Kathir and others, listing the wives of Umar, include Umm Kulthum, who is Malika bint Jarwal, and among his children they count also Zayd the Elder, Zayd the Younger, Hafsa, Ruqayya, Zaynab, and Fatima."</p>
                                             <cite class="text-sm text-gray-500">- al-Sayyid Ja'far Murtada al-Amili (d.1441 AH), Zulamat Umm Kulthum, p.126, transmitting Ibn Kathir</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Add a third holder, Umm Kulthum bint Abu Bakr, the stepdaughter raised in Ali's <span class="honorific">﵇</span> house through Asma bint Umays, and the name stops identifying anyone. Three women of that appellation moved through the same two households in the same two decades, and chroniclers who could not keep their Zayds apart, the same lists name a Zayd the Elder and a Zayd the Younger by one father, were not going to keep their Umm Kulthums apart.</p>
+                                            <p class="mt-1"><a href="#c13" class="comment-anchor">&darr; commentary</a></p>
                                         <p class="mb-2 mt-4 text-gray-600">The Imami answer dissolves the given name altogether. Al-Mufid's listing in al-Irshad makes the appellation a kunya, and the woman beneath it a Zaynab al-Sughra. Muhsin al-Amin, reading that listing closely, recorded what it entails:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">فدلّ كلامه على أنّ المسماة بزينب من بنات أمير المؤمنين عليه السّلام ثلاث : إحداهن تسمّى الكبرى وأمها فاطمة بنت رسول اللّه صلّى اللّه عليه وآله وسلم ، واثنتان تسميان بزينب الصغرى ، والمائز بينهما : أنّ إحداهن تكنّى أم كلثوم وأمها فاطمة أيضا ، والثانية لا تكنى بأم كلثوم وأمها غير فاطمة عليها السّلام . وليس فيهن من تسمّى أم كلثوم ولا تسمى بزينب ، فأم كلثوم عنده كنية لا اسم</p>
@@ -638,14 +783,32 @@
                                             <p class="translation">"Al-Turayhi said in his book Takmilat al-Rijal: this Umm Kulthum is a kunya for Zaynab the Younger, daughter of the Commander of the Faithful. She was with her brother al-Husayn at Karbala. And the well-known position among the scholars is that Umar ibn al-Khattab married her by seizure, as al-Sayyid al-Murtada insisted and maintained in a treatise he composed on this question. And it is the sounder position, for the reports are widespread."</p>
                                             <cite class="text-sm text-gray-500">- al-Shaykh Fakhr al-Din al-Turayhi (d.1085 AH), Takmilat al-Rijal, as quoted in al-Sayyid Ja'far Murtada al-Amili (d.1441 AH), Zulamat Umm Kulthum, pp.77-78</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The conflict stands exposed. Hisham ibn Ammar, on the Sunni side, resolves the bride into Fatima, a second Fatima in a household whose mother already bore the name. Al-Mufid, on the Imami side, resolves her into Zaynab the Younger and denies that any daughter of the house carried Umm Kulthum as a given name at all. The two corrections cannot both describe the bride of year seventeen, and they do not need to: each independently breaks the bare name as an identifier. And behind al-Mufid's listing stands the al-Mufid of the Sarawi answers, who had already ruled the marriage report unproven on its chains (section 7). The genealogist who records the public story is the jurist who refused to certify it.</p>
+                                            <p class="mt-1"><a href="#c14" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Consequence for the Marriage Reports</h5>
-                                        <p class="text-gray-700">A bare name, carried by a child too young to have earned it and shared by at least three women of the same households, cannot identify a bride for doctrinal purposes. Something else must do the identifying, and in the marriage narratives that something is always the same: the demand, and later the announcement, of the man who wanted the Prophet's <span class="honorific">ﷺ</span> kinship attached to himself. The next section weighs his identifying word.</p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c13" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">A Name That Floats Between Women</p>
+                                                        <p class="text-gray-700">Add a third holder, Umm Kulthum bint Abu Bakr, the stepdaughter raised in Ali's <span class="honorific">﵇</span> house through Asma bint Umays, and the name stops identifying anyone. Three women of that appellation moved through the same two households in the same two decades, and chroniclers who could not keep their Zayds apart, the same lists name a Zayd the Elder and a Zayd the Younger by one father, were not going to keep their Umm Kulthums apart.</p>
+                        </div>
+                        <div id="c14" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Two Traditions, Two Brides</p>
+                                                        <p class="text-gray-700">The conflict stands exposed. Hisham ibn Ammar, on the Sunni side, resolves the bride into Fatima, a second Fatima in a household whose mother already bore the name. Al-Mufid, on the Imami side, resolves her into Zaynab the Younger and denies that any daughter of the house carried Umm Kulthum as a given name at all. The two corrections cannot both describe the bride of year seventeen, and they do not need to: each independently breaks the bare name as an identifier. And behind al-Mufid's listing stands the al-Mufid of the Sarawi answers, who had already ruled the marriage report unproven on its chains (section 7). The genealogist who records the public story is the jurist who refused to certify it.</p>
+                                                        <p class="text-gray-700">A bare name, carried by a child too young to have earned it and shared by at least three women of the same households, cannot identify a bride for doctrinal purposes. Something else must do the identifying, and in the marriage narratives that something is always the same: the demand, and later the announcement, of the man who wanted the Prophet's <span class="honorific">ﷺ</span> kinship attached to himself. The next section weighs his identifying word.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
                     </div>
@@ -655,13 +818,12 @@
                     <p class="mb-6 text-gray-600">The identification of the bride as the daughter of Ali <span class="honorific">﵇</span> by Fatima <span class="honorific">﵍</span> enters this story through one mouth, and the law of testimony has something to say about that mouth.</p>
                     <div id="tab4-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">One Oath, Four Vices</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Oath</h5>
                                         <p class="mb-2 text-gray-600">The pivot of the whole question is the threat clause of the al-Kafi narration. Read it not as atmosphere but as an inventory of character, clause by clause:</p>
@@ -670,19 +832,32 @@
                                             <p class="translation">"By God, I will ruin the well of Zamzam, and I will leave you no honor standing without demolishing it, and I will set up two witnesses against him testifying that he stole, and I will have his right hand cut off."</p>
                                             <cite class="text-sm text-gray-500">- Umar ibn al-Khattab, in the narration of Imam Ja'far al-Sadiq <span class="honorific">﵇</span>, al-Kafi, al-Furu', vol.5, p.346, no.2, quoted in full in section 1</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Clause by clause. Two witnesses to a theft Ali <span class="honorific">﵇</span> never committed: testimony manufactured to order, which is lying, kadhb. The amputation of an innocent man's hand: engineered mutilation, which is sinfulness, ithm. The ruin of Zamzam and the family's honors: treachery against sanctities, ghadr. And the plan's architecture, a false accusation clothed in legal form to conceal a seizure: deceit, khiyana. Liar, sinful, treacherous, deceitful. The first two are the law's stated disqualifiers, the false witness and the fasiq of 49:6 and the jurists' consensus; all four belong to the family of corrupted integrity, the adala a witness must possess.</p>
+                                            <p class="mt-1"><a href="#c15" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c15" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Clause by Clause: Four Vices</p>
+                                                        <p class="text-gray-700">Clause by clause. Two witnesses to a theft Ali <span class="honorific">﵇</span> never committed: testimony manufactured to order, which is lying, kadhb. The amputation of an innocent man's hand: engineered mutilation, which is sinfulness, ithm. The ruin of Zamzam and the family's honors: treachery against sanctities, ghadr. And the plan's architecture, a false accusation clothed in legal form to conceal a seizure: deceit, khiyana. Liar, sinful, treacherous, deceitful. The first two are the law's stated disqualifiers, the false witness and the fasiq of 49:6 and the jurists' consensus; all four belong to the family of corrupted integrity, the adala a witness must possess.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Law That Voids Such Testimony</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Introduction</h5>
                                         <p class="text-gray-600">None of this is Shia invention, and the standard applies even at its loosest setting. The Qur'an's rule governs precisely the case at hand, a report: if a corrupt man brings you a report, naba', verify it. That is the epistemic rule for historical transmission, the category this whole question lives in; the jurists' witness rules are its stricter courtroom form. At the Qur'anic rung, the bride's identification riding on Umar's word requires independent verification, and none from the giving side exists. At the juristic rung, a man who announces fabricated testimony forfeits adala outright. No rung of the opponents' own law compels belief in his identifying word.</p>
@@ -712,19 +887,32 @@
                                             <p class="translation">"Al-Kulayni, by way of Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Hisham ibn Salim, from Abu Abdullah, peace be upon him, who said: the false witness's two feet shall not move from their place until the Fire becomes obligatory for him."</p>
                                             <cite class="text-sm text-gray-500">- Imam Ja'far al-Sadiq <span class="honorific">﵇</span>, in al-Attardi (d.1435 AH), Masnad al-Imam al-Sadiq, vol.18, p.248, from al-Kafi, Book of Testimony</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">On the Prophet's <span class="honorific">ﷺ</span> word, the false witness does not step away from his testimony before the Fire is his due. That is the moral weight of the oath's first clause. The jurists' consensus that a fasiq's testimony is rejected does the rest: a man who swears he can produce two witnesses against an innocent man, to have his hand cut off, has announced in his own voice the exact crime that voids a witness, and he bundled it with three more disqualifying vices.</p>
+                                            <p class="mt-1"><a href="#c16" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c16" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Moral Weight of the Oath</p>
+                                                        <p class="text-gray-700">On the Prophet's <span class="honorific">ﷺ</span> word, the false witness does not step away from his testimony before the Fire is his due. That is the moral weight of the oath's first clause. The jurists' consensus that a fasiq's testimony is rejected does the rest: a man who swears he can produce two witnesses against an innocent man, to have his hand cut off, has announced in his own voice the exact crime that voids a witness, and he bundled it with three more disqualifying vices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Now Ask Who Identifies the Bride</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Lineage Claim Rides on One Voice</h5>
                                         <p class="text-gray-700">Return to the al-Kafi text with the law of testimony in hand, and ask the question the polemic never asks: whose word makes the girl out to be Ali's <span class="honorific">﵇</span> daughter by Fatima <span class="honorific">﵍</span>? The chapter heading says tazwij Umm Kulthum, a bare name. The Imam's <span class="honorific">﵇</span> answer says a union was seized, a character verdict. Ali's <span class="honorific">﵇</span> own speech says innaha sabiyya, she is a child, a word about age, not lineage. The only place the demand's genealogy appears is Umar's mouth: khaṭabtu ila ibni akhika, I proposed to your nephew's daughter. Within the narration the polemic itself invokes, the identification rests on the word of the man who swears, in the same breath, that he will manufacture two witnesses. The scope of the claim is exact: the opponents' identifications live in the opponents' own corpus, and that corpus cannot keep its subject alive, dead, mother, childless, or uniquely named.</p>
@@ -738,13 +926,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab4-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Objectors, Answered</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab4-4">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab4-4">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Objection One: It Was Only Pressure Talk</h5>
                                         <p class="text-gray-600">The first objection concedes the words but discounts them: the threat was bluster spoken to move al-Abbas. The reply is that the law of testimony does not grade threats by sincerity. A witness is rejected for fisq, open defiance of the law, whether or not the defiance matured into an act. A man who swears he can produce two false witnesses against Ali <span class="honorific">﵇</span> has committed open defiance in the swearing. The court he himself ran would strike a witness for the oath alone. The narration does not need Umar to have carried out the threat; it needs only his demonstrated readiness, and he supplied that under God's name.</p>
@@ -769,13 +956,12 @@
                     <p class="mb-6 text-gray-600">A report in the most canonical Sunni collection preserves what Ali <span class="honorific">﵇</span> and al-Abbas thought of Umar's truthfulness, in Umar's own telling.</p>
                     <div id="tab5-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Scene: the Estate of the Prophet <span class="honorific">ﷺ</span></h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Text</h5>
                                         <p class="mb-2 text-gray-600">Al-Abbas opens the session with a demand for judgment against the opposing party in language so harsh that the commentators themselves struggled with it, since its outward sense describes the man standing beside him:</p>
@@ -795,13 +981,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Commentators’ Difficulty with the Words</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Al-Nawawi's Difficulty</h5>
                                         <p class="mb-2 text-gray-600">In his commentary on the passage, al-Nawawi transmits al-Maziri and al-Qadi Iyad's struggle with it:</p>
@@ -810,19 +995,32 @@
                                             <p class="translation">"This phrasing as it stands is not fitting to al-Abbas in its outward sense, and far be it from Ali that any of these descriptions should be in him, let alone all of them. We do not assert infallibility except for the Prophet, God's blessings upon him and his family. But we are commanded to think well of the Companions all together and to deny every vice of them; and when the ways of interpreting it are closed, we attribute the lie to its transmitters."</p>
                                             <cite class="text-sm text-gray-500">- al-Nawawi (d.676 AH), Sharh Sahih Muslim, vol.12, p.72, transmitting al-Maziri and al-Qadi Iyad</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Notice what the commentary concedes: the report's outward sense has al-Abbas describing Ali <span class="honorific">﵇</span> with the four vices before witnesses, and the words are unbearable in that sense. It cannot delete the report, because it is in the Sahih. So it blames the transmitters, or elides the words into an implied conditional. The words themselves stay on the page, in every printing.</p>
+                                            <p class="mt-1"><a href="#c17" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c17" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">What the Commentary Concedes</p>
+                                                        <p class="text-gray-700">Notice what the commentary concedes: the report's outward sense has al-Abbas describing Ali <span class="honorific">﵇</span> with the four vices before witnesses, and the words are unbearable in that sense. It cannot delete the report, because it is in the Sahih. So it blames the transmitters, or elides the words into an implied conditional. The words themselves stay on the page, in every printing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab5-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Why the Parallel Matters Here</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab5-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab5-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Four Words, Side by Side</h5>
                                         <p class="text-gray-600">Set the two texts side by side. The al-Kafi threat displays lying (the manufactured witnesses), sinfulness (the engineered amputation), treachery (the ruin of Zamzam and the honors), deceit (the accusation clothed in legal form). And in the opponents' own Sahih, Umar testifies in his own voice to what Ali <span class="honorific">﵇</span> and al-Abbas laid at his and Abu Bakr's door: kadhib, ithm, ghadr, khiyana, ra'aytumani kadhiban athiman ghadiran kha'ina, you two deemed me liar, sinful, treacherous, deceitful. Four vices in the threat. The same four in the family's verdict.</p>
@@ -842,13 +1040,12 @@
                     <p class="mb-6 text-gray-600">The coercion reading does not rest on the Shia corpus alone. The opponents' own books, from the earliest compilations onward, transmit the same sequence: refusal, pressure, and a bride who resisted with her hands. A word on grading: these Sunni reports vary in standing, and some transmitters, like al-Darwardi and Abd al-Rahman ibn Zayd, are disputed. The argument does not rest on their soundness but on their existence. This is the memory the opponents' own corpus preserved, and the polemic that cites the marriage cannot disown the coercion clauses that travel inside the very reports it needs.</p>
                     <div id="tab6-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Abd al-Razzaq (d.211 AH): Three Chains, One Resisting Girl</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Chains of Ibn Uyayna and Ibn Jurayj</h5>
                                         <blockquote class="hadith-callout">
@@ -856,27 +1053,43 @@
                                             <p class="translation">"Abd al-Razzaq, from Ibn Uyayna, from Amr ibn Dinar, from Abu Ja'far, who said: Umar proposed to Ali for his daughter, and Ali said: she is young. Word was brought to Umar: he only says that to put you off and prevent the match. He said: then speak to him for me. So they spoke to Ali, and Ali said: I will send her to you; if you are pleased with her, she is your wife. So he sent her to him. Umar went to her and uncovered her shin, and she cried: let go! Were it not that you are the Commander of the Faithful, I would have struck your neck. And Abd al-Razzaq, from Ibn Jurayj, who said: I heard al-A'mash say: Umar ibn al-Khattab proposed to Ali for his daughter, and Umar said to him: there is nothing in you except your withholding of her. He said: I shall send her to you; if you are pleased, she is your wife, and I have already given her to you in marriage. So she was adorned and sent to him. He said: I am pleased, and he took hold of her shin, and she declared: by God, were you not the Commander of the Faithful, I would have struck your eye."</p>
                                             <cite class="text-sm text-gray-500">- Abd al-Razzaq al-San'ani (d.211 AH), al-Musannaf, vol.6, p.163, nos.10352-10353</cite>
                                         </blockquote>
+                                            <p class="mt-1"><a href="#c19" class="comment-anchor">&darr; commentary</a></p>
                                         <p class="mb-2 text-gray-600">Note the chain of the first report: Amr ibn Dinar from Abu Ja'far. That Abu Ja'far is Muhammad ibn Ali al-Baqir <span class="honorific">﵇</span>, the Imam, the son of the bride's supposed brother. And then Ma'mar's chain:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">عبد الرزاق عن معمر عن أيوب عن عكرمة قال : تزوج عمر بن الخطاب أم كلثوم بنت علي بن أبي طالب ، وهي جارية تلعب مع الجواري ، فجاء إلى أصحابه فدعوا له بالبركة فقال : إني لم أتزوج من نشاط بي ، ولكن سمعت رسول الله ﵌ يقول : إن كل سبب ونسب منقطع يوم القيامة إلا سببي ونسبي ، فأحببت أن يكون بيني وبين نبي الله ﵌ سبب ونسب</p>
                                             <p class="translation">"Abd al-Razzaq, from Ma'mar, from Ayyub, from Ikrima, who said: Umar ibn al-Khattab married Umm Kulthum bint Ali ibn Abi Talib while she was a young girl who played with the other girls. He came to his companions and they blessed him, and he said to them: I did not marry out of high spirits. But I heard the Messenger of God say: every tie and every lineage is severed on the Day of Resurrection except my tie and my lineage, and I wanted there to be between me and the Prophet of God a tie and a lineage."</p>
                                             <cite class="text-sm text-gray-500">- Abd al-Razzaq al-San'ani (d.211 AH), al-Musannaf, vol.6, pp.163-164, no.10354</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Read what the chains hold. The father's word for the girl is small, and the observers gloss his motive at once: he only says that to prevent the match. The suitor does not negotiate with the father; he has the father lobbied. And the girl's own voice survives in two versions: spare him only because he is the Commander of the Faithful, or she would have struck his neck, or his eye. This is the conduct of a terrified child, recorded by the earliest extant compilation, through chains the Sunni tradition reveres: Ibn Uyayna, Amr ibn Dinar, Ibn Jurayj, al-A'mash, Ma'mar, Ayyub, Ikrima. No Shia hand touched these texts.</p>
-                                        <h5 class="analysis-heading">The Giving Verb, Met Head On</h5>
-                                        <p class="mb-2 text-gray-600">One clause of the al-A'mash version must be met head on, because the polemic reads it aloud: "and I have already given her to you in marriage," wa-qad ankahuka. The verb is contractual, and on its face it is the polemic's best word. Three answers weigh it. First, within its own chain the verb marks where resistance stopped: the report opens with Ali's <span class="honorific">﵇</span> refusal, the suitor presses, and the gloss, he only says that to prevent the match, shows the refusal being read as evasion until it was abandoned. The verb records that a contract occurred; it certifies nothing about its voluntariness, and the fiqh of coercion exists to classify exactly this act. Second, al-Mufid (section 7) catalogued that the versions contradict one another on this very point, some having Ali <span class="honorific">﵇</span> contract, some al-Abbas, some only after threat, some willingly, and ruled the contradiction invalidating: the ankahuka strand is one voice in a mutually exclusive set. Third, the school's answer to an outward contract performed under threat is taqiyya, the dispensation of 16:106, under which the outward act stands and the inner fact is not inferred from it. A reader who grants the verb grants the act's occurrence, and the act's character is fixed by everything else in the record.</p>
+                                            <p class="mt-1"><a href="#c18" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c18" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">What the Chains Hold</p>
+                                                        <p class="text-gray-700">Read what the chains hold. The father's word for the girl is small, and the observers gloss his motive at once: he only says that to prevent the match. The suitor does not negotiate with the father; he has the father lobbied. And the girl's own voice survives in two versions: spare him only because he is the Commander of the Faithful, or she would have struck his neck, or his eye. This is the conduct of a terrified child, recorded by the earliest extant compilation, through chains the Sunni tradition reveres: Ibn Uyayna, Amr ibn Dinar, Ibn Jurayj, al-A'mash, Ma'mar, Ayyub, Ikrima. No Shia hand touched these texts.</p>
+                        </div>
+                        <div id="c19" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Giving Verb, Met Head On</p>
+                                                        <p class="text-gray-600">One clause of the al-A'mash version must be met head on, because the polemic reads it aloud: "and I have already given her to you in marriage," wa-qad ankahuka. The verb is contractual, and on its face it is the polemic's best word. Three answers weigh it. First, within its own chain the verb marks where resistance stopped: the report opens with Ali's <span class="honorific">﵇</span> refusal, the suitor presses, and the gloss, he only says that to prevent the match, shows the refusal being read as evasion until it was abandoned. The verb records that a contract occurred; it certifies nothing about its voluntariness, and the fiqh of coercion exists to classify exactly this act. Second, al-Mufid (section 7) catalogued that the versions contradict one another on this very point, some having Ali <span class="honorific">﵇</span> contract, some al-Abbas, some only after threat, some willingly, and ruled the contradiction invalidating: the ankahuka strand is one voice in a mutually exclusive set. Third, the school's answer to an outward contract performed under threat is taqiyya, the dispensation of 16:106, under which the outward act stands and the inner fact is not inferred from it. A reader who grants the verb grants the act's occurrence, and the act's character is fixed by everything else in the record.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Ibn Sa'd (d.230 AH): the Tabaqat Chains</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Chains</h5>
                                         <blockquote class="hadith-callout">
@@ -884,19 +1097,32 @@
                                             <p class="translation">"Abd al-Warith related to us, from Qasim, from al-Kushani, from Ibn Abi Umar, from Sufyan, from Amr ibn Dinar, from Muhammad ibn Ali: Umar ibn al-Khattab proposed to Ali for his daughter Umm Kulthum, and he mentioned her smallness to him. It was said to him: he has refused you! So he returned to the attack. Ali said to him: I will send her to you; if you are pleased, she is your wife. So she was sent to him, and he uncovered her shin, and she said: enough! By God, were you not the Commander of the Faithful, I would have slapped your eye. And Ibn Wahb mentioned, from Abd al-Rahman ibn Zayd ibn Aslam, from his father, from his grandfather: that Umar ibn al-Khattab married Umm Kulthum bint Ali ibn Abi Talib."</p>
                                             <cite class="text-sm text-gray-500">- Ibn Sa'd (d.230 AH), al-Tabaqat al-Kubra, as preserved in al-Milani, Khabar Tazwij Umm Kulthum min Umar, p.24</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The chain again terminates at Muhammad ibn Ali, the Imam al-Baqir <span class="honorific">﵇</span>: the family's own transmission of the family's own event, carried in the opponents' biographical dictionary. The matn again pairs the father's mention of her smallness with the suitor's escalation, fa-ʿawadahu, he returned to the attack, and the girl's fury. And Ibn Sa'd's entry on the marriage, quoted in section 3, states her age-class in plain terms: a girl who had not reached puberty, who remained with him until he was killed.</p>
+                                            <p class="mt-1"><a href="#c20" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c20" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Family's Chain in the Tabaqat</p>
+                                                        <p class="text-gray-700">The chain again terminates at Muhammad ibn Ali, the Imam al-Baqir <span class="honorific">﵇</span>: the family's own transmission of the family's own event, carried in the opponents' biographical dictionary. The matn again pairs the father's mention of her smallness with the suitor's escalation, fa-ʿawadahu, he returned to the attack, and the girl's fury. And Ibn Sa'd's entry on the marriage, quoted in section 3, states her age-class in plain terms: a girl who had not reached puberty, who remained with him until he was killed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Al-Zubayr ibn Bakkar (d.256 AH) and Ibn Abd al-Barr (d.463 AH): "An Evil Old Man"</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report</h5>
                                         <blockquote class="hadith-callout">
@@ -904,19 +1130,32 @@
                                             <p class="translation">"Umar proposed for Umm Kulthum bint Ali, peace be upon him, and Ali said to him: she is young. He said: give her to me in marriage, O Abu al-Hasan, for I watch over her honor as no one watches. Ali said: I will send her to you; if you are pleased with her, I will give her to you in marriage. So he sent her to him with a cloak, and told her: say to him, this is the cloak you spoke of to me. She told him that, and he said: say to him, I am pleased with it, may God be pleased with you, and he placed his hand upon her shin. She said to him: you would do this? Were it not that you are the Commander of the Faithful, I would have broken your nose. Then she came to her father and told him what had happened, and said: you have sent me to an evil old man."</p>
                                             <cite class="text-sm text-gray-500">- al-Zubayr ibn Bakkar (d.256 AH), as preserved in Ibn Abi al-Hadid (d.656 AH), Sharh Nahj al-Balagha, vol.12, p.106</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Ibn Abd al-Barr's al-Isti'ab entry carries the same narrative down the same steps, the smallness, the plea, the cloak, the hand on the shin, the broken-nose threat, the father's answer to his daughter, "he is your husband," and then the announcement in the mosque with its forty-thousand dowry, the children Zayd and Ruqayya, and the same-hour death of mother and son; Ibn al-Athir's Usd al-Ghaba repeats it all. At the center of these versions stands the bride's own summary of the arrangement. She called him shaykh su', an evil old man, and no version records her taking the words back.</p>
+                                            <p class="mt-1"><a href="#c21" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c21" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Bride's Verdict</p>
+                                                        <p class="text-gray-700">Ibn Abd al-Barr's al-Isti'ab entry carries the same narrative down the same steps, the smallness, the plea, the cloak, the hand on the shin, the broken-nose threat, the father's answer to his daughter, "he is your husband," and then the announcement in the mosque with its forty-thousand dowry, the children Zayd and Ruqayya, and the same-hour death of mother and son; Ibn al-Athir's Usd al-Ghaba repeats it all. At the center of these versions stands the bride's own summary of the arrangement. She called him shaykh su', an evil old man, and no version records her taking the words back.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-4">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Al-Dulabi (d.310 AH): Aqil's Fury and the Whip</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-4">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-4">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report of Aslam</h5>
                                         <blockquote class="hadith-callout">
@@ -924,19 +1163,32 @@
                                             <p class="translation">"Habib, the scribe of Malik ibn Anas, transmits, from Abd al-Aziz al-Darwardi, from Zayd ibn Aslam, from his father, a client of Umar ibn al-Khattab, who said: Umar proposed to Ali ibn Abi Talib for Umm Kulthum, and Ali consulted al-Abbas, Aqil, and al-Hasan. Aqil flew into a rage and said to Ali: the days and months add nothing to you but blindness in your affair. By God, if you do this, ruin will surely come, and ruin will surely come. Ali said to al-Abbas: by God, there is no sincere counsel in what he says; it is Umar's whip that has driven him to what you see."</p>
                                             <cite class="text-sm text-gray-500">- al-Dulabi (d.310 AH), al-Dhurriyya al-Tahira, p.160, no.210</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Read the household scene this chain records. Aqil ibn Abi Talib, the family's marriage consultant and the professional genealogist of Quraysh, curses the proposal to Ali's <span class="honorific">﵇</span> face and prophesies ruin twice over. And Ali <span class="honorific">﵇</span> explains the fury to al-Abbas: by God, there is no sincere counsel in what he says; it is Umar's whip that has driven him to what you see. In one sentence the Imam <span class="honorific">﵇</span> names the instrument that governed the family's deliberations. A household consulting about a bridegroom does not need to explain anyone's panic by the suitor's whip.</p>
+                                            <p class="mt-1"><a href="#c22" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c22" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Whip in the Room</p>
+                                                        <p class="text-gray-700">Read the household scene this chain records. Aqil ibn Abi Talib, the family's marriage consultant and the professional genealogist of Quraysh, curses the proposal to Ali's <span class="honorific">﵇</span> face and prophesies ruin twice over. And Ali <span class="honorific">﵇</span> explains the fury to al-Abbas: by God, there is no sincere counsel in what he says; it is Umar's whip that has driven him to what you see. In one sentence the Imam <span class="honorific">﵇</span> names the instrument that governed the family's deliberations. A household consulting about a bridegroom does not need to explain anyone's panic by the suitor's whip.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-5">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Abu Nu'aym (d.430 AH): the Deleted Clause</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-5">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-5">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Comparison, Documented</h5>
                                         <p class="mb-2 text-gray-600">Al-Milani set the two transmissions side by side:</p>
@@ -945,19 +1197,32 @@
                                             <p class="translation">"But Abu Nu'aym al-Isfahani transmitted this report from Zayd ibn Aslam from his father, and he deleted from it Aqil's opposition and Umar's whip. And this is his wording: from Zayd ibn Aslam, from his father, who said: Umar ibn al-Khattab summoned Ali ibn Abi Talib and spoke to him in secret. Then Ali rose and came to the portico and found al-Abbas, Aqil, and al-Husayn, and consulted them about marrying Umm Kulthum to Umar."</p>
                                             <cite class="text-sm text-gray-500">- Abu Nu'aym al-Isfahani (d.430 AH), Hilyat al-Awliya, vol.2, p.34, as compared in al-Milani, al-Rasa'il al-Ashr, p.460, and Khabar Tazwij Umm Kulthum, p.56</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Two transmissions, one chain, and the later, widely circulated one has lost exactly two things: Aqil's furious opposition and the mention of Umar's whip. What survives in the Hilya instead is a smoother opening: the Caliph summoned Ali <span class="honorific">﵇</span> and spoke to him privately. The comparison of two printings establishes the surgery; no Shia theory was needed to detect it. When a tradition's transmitters prune the whip out of the story, they have conceded what the whip was doing in it.</p>
+                                            <p class="mt-1"><a href="#c23" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c23" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Surgery, Documented</p>
+                                                        <p class="text-gray-700">Two transmissions, one chain, and the later, widely circulated one has lost exactly two things: Aqil's furious opposition and the mention of Umar's whip. What survives in the Hilya instead is a smoother opening: the Caliph summoned Ali <span class="honorific">﵇</span> and spoke to him privately. The comparison of two printings establishes the surgery; no Shia theory was needed to detect it. When a tradition's transmitters prune the whip out of the story, they have conceded what the whip was doing in it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-6">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">Al-Muhibb al-Tabari (d.694 AH): the Betrothal Ali <span class="honorific">﵇</span> Invoked</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-6">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-6">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report of Ja'far from His Father</h5>
                                         <blockquote class="hadith-callout">
@@ -965,19 +1230,32 @@
                                             <p class="translation">"And from Ja'far ibn Muhammad, from his father: Umar ibn al-Khattab, God be pleased with him, proposed to Ali for Umm Kulthum. Umar said: will you give her to me in marriage? Ali said: I have set her aside for my nephew Ja'far. Umar said: give her to me in marriage; by God, no one watches over her affair as I watch. So Ali gave her to him in marriage."</p>
                                             <cite class="text-sm text-gray-500">- al-Muhibb al-Tabari (d.694 AH), Dhakha'ir al-Uqba fi Manaqib Dhawi al-Qurba, vol.2, p.267</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">This is the Imams' <span class="honorific">﵈</span> own family account, Ja'far al-Sadiq <span class="honorific">﵇</span> from his father al-Baqir <span class="honorific">﵇</span>, carried in a Sunni book of the family's merits. And it records Ali <span class="honorific">﵇</span> doing what a father does when he wants to refuse without saying no: the girl is spoken for, set aside for Ja'far's son. The demand comes back with an oath, and with the same verb of watching over her, arsada, that the Isti'ab version carries. The groom's insistence on guarding her honor, in a story where his hand is on her shin, is the corpus's least self-aware sentence. The same author's page records the bride's own word: were it not for the Commander of the Faithful, I would have struck your eyes.</p>
+                                            <p class="mt-1"><a href="#c24" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c24" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">A Prior Claim Overridden</p>
+                                                        <p class="text-gray-700">This is the Imams' <span class="honorific">﵈</span> own family account, Ja'far al-Sadiq <span class="honorific">﵇</span> from his father al-Baqir <span class="honorific">﵇</span>, carried in a Sunni book of the family's merits. And it records Ali <span class="honorific">﵇</span> doing what a father does when he wants to refuse without saying no: the girl is spoken for, set aside for Ja'far's son. The demand comes back with an oath, and with the same verb of watching over her, arsada, that the Isti'ab version carries. The groom's insistence on guarding her honor, in a story where his hand is on her shin, is the corpus's least self-aware sentence. The same author's page records the bride's own word: were it not for the Commander of the Faithful, I would have struck your eyes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-7">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Chain of al-Hasan ibn al-Hasan: the Family Refuses Again</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-7">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-7">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report</h5>
                                         <blockquote class="hadith-callout">
@@ -985,19 +1263,32 @@
                                             <p class="translation">"Abu al-Husayn ibn Bishran relates, from Dalaj ibn Ahmad, from Musa ibn Harun, from Sufyan ibn Waki ibn al-Jarrah, from Ruh ibn Ubada, from Ibn Jarir, from Ibn Abi Mulayka, from al-Hasan ibn al-Hasan, from his father: Umar ibn al-Khattab proposed to Ali for Umm Kulthum, and Ali said to him: she is too young for that. Umar said: I heard the Messenger of God say: every tie and every lineage is severed on the Day of Resurrection except my tie and my lineage, and I wanted there to be for me a tie and a lineage through the Messenger of God. So Ali said to al-Hasan and al-Husayn: give your uncle in marriage. They said: she is a woman of the women; she chooses for herself. And Ali rose in anger."</p>
                                             <cite class="text-sm text-gray-500">- al-Hasan ibn al-Hasan, from his father Imam al-Hasan <span class="honorific">﵇</span>, as transmitted in al-Faruq, p.88</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">This chain reaches the event through Imam al-Hasan <span class="honorific">﵇</span> himself, the bride's supposed full brother, and what it records is a family shutting every door in sequence. The father: she is too young. When pressed, he turns not to the suitor but to his sons: you two handle your uncle's marriage, a father's way of refusing to be the hand. And the sons answer by insisting that the choice is hers: takhtaru li-nafsiha, she chooses for herself. Agency is the one thing no version of the event grants her: nobody asks her, and every announcement scene that survives is Umar's. And Ali <span class="honorific">﵇</span> rose in anger. A willing giving has nowhere to stand in this chain, and this chain is the family's.</p>
+                                            <p class="mt-1"><a href="#c25" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c25" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Family Shuts Every Door</p>
+                                                        <p class="text-gray-700">This chain reaches the event through Imam al-Hasan <span class="honorific">﵇</span> himself, the bride's supposed full brother, and what it records is a family shutting every door in sequence. The father: she is too young. When pressed, he turns not to the suitor but to his sons: you two handle your uncle's marriage, a father's way of refusing to be the hand. And the sons answer by insisting that the choice is hers: takhtaru li-nafsiha, she chooses for herself. Agency is the one thing no version of the event grants her: nobody asks her, and every announcement scene that survives is Umar's. And Ali <span class="honorific">﵇</span> rose in anger. A willing giving has nowhere to stand in this chain, and this chain is the family's.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-8">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Verdict of a Chain-Examiner</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-8">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-8">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">His Conclusion</h5>
                                         <blockquote class="hadith-callout">
@@ -1005,19 +1296,32 @@
                                             <p class="translation">"And al-Abbas gave her in marriage. Al-Abbas contracted the marriage after these preliminaries. As for the books of the other party, the threat was present there, and the insistence, and the returning again and again upon Ali, all of this was present; except that this particular piece, the threat itself, we find in our narration from al-Sadiq, peace be upon him. This narration is in al-Kafi, in the Book of Marriage."</p>
                                             <cite class="text-sm text-gray-500">- al-Sayyid Ali al-Husayni al-Milani, Muhadarat fi al-I'tiqadat, vol.2, p.281</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">That is the state of the evidence, and this study has filled in the items behind every clause. The refusal, the pressure, the insistence, the returning again and again upon Ali <span class="honorific">﵇</span>: in the Sunni books. The threat in words, the seizure verdict, the retrieval: in al-Kafi. Neither corpus carries a willing giving that survives its own record. The willing-giving versions are one strand of the contradictory set Mufid catalogued, and they travel beside the refusal and pressure strands in the same books. The willing giving exists as a conclusion only in the polemic that stitches the threatening party's announcements onto a family record of refusal.</p>
+                                            <p class="mt-1"><a href="#c26" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c26" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The State of the Evidence</p>
+                                                        <p class="text-gray-700">That is the state of the evidence, and this study has filled in the items behind every clause. The refusal, the pressure, the insistence, the returning again and again upon Ali <span class="honorific">﵇</span>: in the Sunni books. The threat in words, the seizure verdict, the retrieval: in al-Kafi. Neither corpus carries a willing giving that survives its own record. The willing-giving versions are one strand of the contradictory set Mufid catalogued, and they travel beside the refusal and pressure strands in the same books. The willing giving exists as a conclusion only in the polemic that stitches the threatening party's announcements onto a family record of refusal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab6-9">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">A Closing Check on the Timeline</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab6-9">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab6-9">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Oration of 61 AH</h5>
                                         <blockquote class="hadith-callout">
@@ -1025,10 +1329,24 @@
                                             <p class="translation">"The oration of Lady Umm Kulthum bint Ali to the people of Kufa after the killing of al-Husayn, peace be upon him. When al-Husayn ibn Ali, peace be upon him, was killed and the women were brought from Karbala into Kufa, their women began beating themselves and tearing their garments over him. Ali ibn al-Husayn, peace be upon him, raised his head and said in a faint voice, worn thin by illness: O people of Kufa, you weep over us, so who killed us other than you."</p>
                                             <cite class="text-sm text-gray-500">- Ibn Tayfur (d.280 AH), Balaghat al-Nisa', as preserved in Jumharat Khutab al-Arab, vol.2, p.130</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The entry belongs to the year 61 AH, thirty-eight years after Umar's death. The reader may take the report either way. If the Karbala speaker was the woman of this marriage, then the reports that had her die with her son in Umar's own reign are false, and the notices that survived are the false ones. If she was another woman of the same appellation, then the name is proven to float between women even within a single family, and no marriage report built on the bare name can identify anyone. Whichever door the reader takes, something the polemic cites has just died: the reading that saves the standard identification pays for it with the same-hour death notices, exposed as fabrication; the reading that keeps those notices pays with the reliability of the name itself.</p>
+                                            <p class="mt-1"><a href="#c27" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c27" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">The Ending That Will Not Settle</p>
+                                                        <p class="text-gray-700">The entry belongs to the year 61 AH, thirty-eight years after Umar's death. The reader may take the report either way. If the Karbala speaker was the woman of this marriage, then the reports that had her die with her son in Umar's own reign are false, and the notices that survived are the false ones. If she was another woman of the same appellation, then the name is proven to float between women even within a single family, and no marriage report built on the bare name can identify anyone. Whichever door the reader takes, something the polemic cites has just died: the reading that saves the standard identification pays for it with the same-hour death notices, exposed as fabrication; the reading that keeps those notices pays with the reliability of the name itself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
                     </div>
@@ -1038,13 +1356,12 @@
                     <p class="mb-6 text-gray-600">How the Imami school distributed itself across the reports, what would falsify the position taken here, and what the cumulative record leaves standing.</p>
                     <div id="tab7-accordion" class="space-y-4">
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab7-1">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Four Positions of the School</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab7-1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab7-1">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Catalogue</h5>
                                         <p class="mb-2 text-gray-600">Shaykh Abd Allah al-Bahrani's survey, noting first the treatises of denial and then the positions:</p>
@@ -1053,19 +1370,32 @@
                                             <p class="translation">"Shaykh Muhammad Jawad al-Balaghi, who died in 1352 AH, composed a treatise: the marriage of Umm Kulthum, daughter of the Commander of the Faithful, peace be upon him, and the denial that it occurred... And here four positions appear on this question. The first: that Umar ibn al-Khattab married Umm Kulthum bint Ali ibn Abi Talib, peace be upon him, with his full consent and without any pressure whatsoever; the scholars of the general public hold this position. The second: that this marriage did occur in fact, but as the result of pressures Umar ibn al-Khattab exercised upon the Imam Ali ibn Abi Talib, God's peace upon him; he even threatened him that he would do what he would do unless he gave him Umm Kulthum in marriage, so the Imam, peace be upon him, was compelled to give her in marriage to Umar while loathing it. The greater number of our scholars hold this position."</p>
                                             <cite class="text-sm text-gray-500">- Shaykh Abd Allah al-Bahrani (d.1130 AH), al-Awalim: al-Sayyida al-Zahra, vol.2, p.450</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The remaining two positions complete the map: outright denial that any marriage occurred, the position of al-Balaghi's treatise and of al-Sayyid Nasir al-Husayn al-Lakhnawi, each of whom composed a book to that effect, and the position that the woman taken was another Umm Kulthum altogether, a stepdaughter or a substitute. The positions are sequential defenses, not rival dogmas: if nothing occurred, the polemic dies at the gate; if something occurred, the Imam's <span class="honorific">﵇</span> word and the threat clause fix its character; if the bride's very identity is unsettleable, the polemic has no bride to build on. Each position independently destroys the claim of willing consent.</p>
+                                            <p class="mt-1"><a href="#c28" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c28" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">Sequential Defenses, Not Rival Dogmas</p>
+                                                        <p class="text-gray-700">The remaining two positions complete the map: outright denial that any marriage occurred, the position of al-Balaghi's treatise and of al-Sayyid Nasir al-Husayn al-Lakhnawi, each of whom composed a book to that effect, and the position that the woman taken was another Umm Kulthum altogether, a stepdaughter or a substitute. The positions are sequential defenses, not rival dogmas: if nothing occurred, the polemic dies at the gate; if something occurred, the Imam's <span class="honorific">﵇</span> word and the threat clause fix its character; if the bride's very identity is unsettleable, the polemic has no bride to build on. Each position independently destroys the claim of willing consent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab7-2">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Falsification Condition, and Mufid's Catalogue of Contradictions</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab7-2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab7-2">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Al-Mufid's Examination</h5>
                                         <blockquote class="hadith-callout">
@@ -1073,19 +1403,32 @@
                                             <p class="translation">"Al-Shaykh al-Mufid, may God hallow his spirit, said in his answer to the Sarawi questions: the report concerning the Commander of the Faithful, peace be upon him, giving his daughter to Umar is not established, and its line of transmission runs through al-Zubayr ibn Bakkar, who was not trusted in transmission. And the report itself is contradictory: sometimes it is related that the Commander of the Faithful conducted the contract for his daughter himself, sometimes that al-Abbas conducted it on his behalf, sometimes that no contract occurred except after a threat from Umar and intimidation of Banu Hashim, and sometimes that it occurred through choice and preference. And this contradiction is of the kind that invalidates the report."</p>
                                             <cite class="text-sm text-gray-500">- al-Shaykh al-Mufid (d.413 AH), al-Masa'il al-Sarawiyya, in his treatise Tazwij Ali ibnatahu min Umar, p.14</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Mufid wrote as a chain-examiner of the opponents' material, and the polemic has never answered him at his level. It cannot even state which of the mutually exclusive contract scenes it means to defend: the father's own contract, the uncle's after threat, the willing union of the announcement scenes, or the bride who was never asked. A report whose basic plot cannot settle is not a foundation for doctrine.</p>
+                                            <p class="mt-1"><a href="#c29" class="comment-anchor">&darr; commentary</a></p>
                                     </div>
                                 </div>
                             </div>
+            <div class="commentary-accordion border-t border-[#E7E0D1]">
+                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
+                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="commentary-content">
+                    <div class="px-4 pb-4 space-y-3">
+                        <div id="c29" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
+                            <p class="text-sm font-semibold text-[#3D4451]">A Report Whose Plot Cannot Settle</p>
+                                                        <p class="text-gray-700">Mufid wrote as a chain-examiner of the opponents' material, and the polemic has never answered him at his level. It cannot even state which of the mutually exclusive contract scenes it means to defend: the father's own contract, the uncle's after threat, the willing union of the announcement scenes, or the bride who was never asked. A report whose basic plot cannot settle is not a foundation for doctrine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
 
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="tab7-3">
+                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 border-b border-[#E7E0D1]">
                                 <h4 class="text-lg font-semibold text-[#3D4451]">The Committed Position and Its Scope</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
-                            <div class="accordion-content" id="tab7-3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <div id="tab7-3">
+                                <div class="p-4 md:p-6 space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">What This Study Holds</h5>
                                         <p class="text-gray-600">Three theses have been established, each sufficient against the polemic and together decisive. First, the Imami narration of coercion is soundly graded, multiply transmitted, and precise: a refusal on the ground of age, a threat oath displaying the four vices that void testimony, a delegation under duress, and a retrieval that closed the affair the hour the threatener died. Second, the identification of the bride as Fatima's <span class="honorific">﵍</span> daughter is absent from the Imami texts and rests, in the opponents' texts, on the demand and the announcement of the interested party, whose own canon preserves the four-fault verdict on his truthfulness from the mouths of Ali <span class="honorific">﵇</span> and al-Abbas themselves. Third, the opponents' own chains corroborate everything the Shia corpus asserts about the manner of the event: the small girl, the refusal, the escalation, the family's terror of the whip, the girl's resistance, and the redaction that removed the embarrassing clauses.</p>
@@ -1105,13 +1448,12 @@
 
             <!-- GLOSSARY -->
             <div id="glossary-section" class="mt-12">
-                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                <div class="bg-white border border-[#E7E0D1] rounded-lg">
+                    <div class="p-4 border-b border-[#E7E0D1]">
                         <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </div>
-                    <div class="accordion-content" id="glossary-content">
-                        <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                    <div id="glossary-content">
+                        <div class="p-4 md:p-6 space-y-4">
                             <p><strong>Kunya:</strong> an Arabic appellation of the form "father of" or "mother of." By the sunna as the Imams <span class="honorific">﵈</span> state it, normally earned by having a child, most often the eldest son.</p>
                             <p><strong>Ghasb:</strong> seizure, taking what belongs to another by force against the owner's will. The Imam's <span class="honorific">﵇</span> verb in the al-Kafi chapter is ghuṣibnahu, "it was seized from us."</p>
                             <p><strong>Adala:</strong> the integrity a witness must possess for his testimony to be accepted. Fisq, open sin, destroys it.</p>
@@ -1172,37 +1514,56 @@
                 });
             });
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
+            const commentaryToggles = document.querySelectorAll('.commentary-toggle');
 
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
+            commentaryToggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const acc = btn.closest('.commentary-accordion');
+                    const content = acc.querySelector('.commentary-content');
+                    const isOpen = acc.classList.contains('open');
+                    if (isOpen) {
+                        acc.classList.remove('open');
+                        btn.setAttribute('aria-expanded', 'false');
                         content.style.maxHeight = '0px';
+                    } else {
+                        acc.classList.add('open');
+                        btn.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
                     }
                 });
             });
+
+            function openCommentaryTarget(id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                const acc = el.closest('.commentary-accordion');
+                if (!acc) return;
+                if (!acc.classList.contains('open')) {
+                    acc.classList.add('open');
+                    acc.querySelector('.commentary-toggle').setAttribute('aria-expanded', 'true');
+                    const content = acc.querySelector('.commentary-content');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+                setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+            }
+
+            document.querySelectorAll('a.comment-anchor').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const id = a.getAttribute('href').slice(1);
+                    history.replaceState(null, '', '#' + id);
+                    openCommentaryTarget(id);
+                });
+            });
+
+            window.addEventListener('hashchange', () => {
+                const h = location.hash.slice(1);
+                if (h.startsWith('c')) openCommentaryTarget(h);
+            });
+
+            if (location.hash.startsWith('#c')) {
+                openCommentaryTarget(location.hash.slice(1));
+            }
         });
     </script>
 
