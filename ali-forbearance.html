@@ -174,6 +174,11 @@
                                 <p class="text-gray-700">Ali <span class="honorific">﵇</span> weighed his claim against the survival of Islam and found the faith heavier. A war over the Prophet's <span class="honorific">ﷺ</span> mantle would have burned the religion to its roots before it could be won.</p>
                             </div>
                         </div>
+                        <div class="mt-8 pt-6 border-t border-[#E7E0D1]">
+                            <div class="w-12 h-1 bg-[#B99C6B] mb-5 rounded-full"></div>
+                            <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                            <p class="text-lg text-gray-700">His silence preserved the religion his sword would have shattered. His restraint carried a community still unready for his rule, and Islam survived Saqifa because the man entitled to fight chose to preserve the community. The protest continued through the withheld pledge, nightly rounds, shura refusal, and the pulpit of Kufa. The sword remained sheathed until helpers appeared. His patience was the composure of the appointed, who knew whose promise would have the final word. When the wrong became the community's, the same fidelity that held his hand led him to draw his sword.</p>
+                        </div>
                     </section>
                 </div>
                 <!-- TAB 1: THE DISPUTE -->
@@ -1160,7 +1165,19 @@ Abu Bakr said, &ldquo;If you will not pledge allegiance, I will not force you.&r
             </div>
 
             <!-- GLOSSARY -->
-                        <div id="glossary-section" class="mt-10">
+                        <div id="tab-nav" class="mt-8 flex justify-between items-center">
+                <button id="nav-prev" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E7E0D1] bg-white text-sm font-medium text-gray-600 hover:text-[#8A6D3B] hover:border-[#B99C6B] transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span id="nav-prev-label">Back</span>
+                </button>
+                <span id="nav-position" class="text-sm text-gray-400"></span>
+                <button id="nav-next" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E7E0D1] bg-white text-sm font-medium text-gray-600 hover:text-[#8A6D3B] hover:border-[#B99C6B] transition-colors">
+                    <span id="nav-next-label">Next</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <div id="glossary-section" class="mt-10">
                 <div class="bg-white border border-[#E7E0D1] rounded-lg">
                     <button id="glossary-master" class="w-full flex justify-between items-center p-3.5" aria-expanded="false">
                         <h4 class="text-base font-semibold text-[#3D4451]">Glossary of Key Terms</h4>
@@ -1261,13 +1278,6 @@ Abu Bakr said, &ldquo;If you will not pledge allegiance, I will not force you.&r
                 </div>
             </div>
 
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
-                <div class="max-w-3xl">
-                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
-                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
-                    <p class="text-lg text-gray-700">His silence preserved the religion his sword would have shattered. His restraint carried a community still unready for his rule, and Islam survived Saqifa because the man entitled to fight chose to preserve the community. The protest continued through the withheld pledge, nightly rounds, shura refusal, and the pulpit of Kufa. The sword remained sheathed until helpers appeared. His patience was the composure of the appointed, who knew whose promise would have the final word. When the wrong became the community's, the same fidelity that held his hand led him to draw his sword.</p>
-                </div>
-            </footer>
         </main>
     </div>
 
@@ -1310,6 +1320,33 @@ Abu Bakr said, &ldquo;If you will not pledge allegiance, I will not force you.&r
             gMaster.setAttribute('aria-expanded', String(!open));
             gIcon.classList.toggle('rotate-180', !open);
         });
+        // bottom prev/next navigation
+        const navTabs = Array.from(document.querySelectorAll('.tab'));
+        const navPrev = document.getElementById('nav-prev');
+        const navNext = document.getElementById('nav-next');
+        function activateTab(idx) {
+            if (idx >= 0 && idx < navTabs.length) navTabs[idx].click();
+        }
+        function currentIdx() {
+            return navTabs.findIndex(t => t.classList.contains('active'));
+        }
+        function refreshNav() {
+            const i = currentIdx();
+            navPrev.disabled = i <= 0;
+            navPrev.classList.toggle('opacity-40', 'pointer-events-none' && i <= 0);
+            navPrev.classList.toggle('pointer-events-none', i <= 0);
+            navNext.disabled = i >= navTabs.length - 1;
+            navNext.classList.toggle('opacity-40', i >= navTabs.length - 1);
+            navNext.classList.toggle('pointer-events-none', i >= navTabs.length - 1);
+            document.getElementById('nav-prev-label').textContent = i > 0 ? navTabs[i-1].textContent.trim() : 'Back';
+            document.getElementById('nav-next-label').textContent = i < navTabs.length - 1 ? navTabs[i+1].textContent.trim() : 'Next';
+            document.getElementById('nav-position').textContent = (i+1) + ' of ' + navTabs.length;
+        }
+        navPrev.addEventListener('click', () => activateTab(currentIdx() - 1));
+        navNext.addEventListener('click', () => activateTab(currentIdx() + 1));
+        navTabs.forEach(t => t.addEventListener('click', refreshNav));
+        refreshNav();
+
         document.querySelectorAll('.glossary-toggle').forEach(btn => {
             btn.addEventListener('click', () => {
                 const def = btn.nextElementSibling;
