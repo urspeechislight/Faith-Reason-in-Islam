@@ -1160,24 +1160,103 @@ Abu Bakr said, &ldquo;If you will not pledge allegiance, I will not force you.&r
             </div>
 
             <!-- GLOSSARY -->
-            <div id="glossary-section" class="mt-12">
+                        <div id="glossary-section" class="mt-10">
                 <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="p-4 border-b border-[#E7E0D1]">
-                        <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                    </div>
-                    <div id="glossary-content">
-                        <div class="p-4 space-y-4">
-                            <p><strong>Shura:</strong> the consultative assembly. The six-man council Umar appointed to choose his successor; Ali's challenge before it is quoted in Tab 2.</p>
-                            <p><strong>Muhajirun and Ansar:</strong> the Meccan emigrants who followed the Prophet <span class="honorific">ﷺ</span> to Medina, and the Medinans who received them; the two blocs whose notables decided the Saqifa affair.</p>
-                            <p><strong>The brother of Taym:</strong> Abu Bakr, of the clan of Taym. The forty-men report names him by clan, the Arabic convention for the powerful.</p>
-                            <p><strong>Al-Ukhaynis:</strong> a man so named in the Prophet's <span class="honorific">ﷺ</span> warning preserved by Sulaym; the identification is the tradition's, not this study's.</p>
-                            <p><strong>Mawla:</strong> master, patron, the one with rightful authority. The Ghadir declaration, whomsoever I am mawla of, Ali is his mawla, is carried in the collections of both camps.</p>
-                            <p><strong>Saqifa:</strong> The portico of the Banu Sa'ida where the community gathered to settle the succession after the Prophet's <span class="honorific">ﷺ</span> death.</p>
-                            <p><strong>Khilafa:</strong> The caliphate; the office of successor to the Prophet <span class="honorific">ﷺ</span> in temporal and religious leadership.</p>
-                            <p><strong>Shaqshaqiyya:</strong> The most celebrated sermon in Nahj al-Balagha, named for Ali's <span class="honorific">﵇</span> own comparison of its speech to a camel's foam that wells up and then subsides.</p>
-                            <p><strong>Fitna:</strong> Trial, civil strife; a testing that engulfs both the wrongdoers and the innocent.</p>
-                            <p><strong>Imam:</strong> The divinely appointed successor to the Prophet <span class="honorific">ﷺ</span> in the teaching of the People of the House.</p>
-                        </div>
+                    <button id="glossary-master" class="w-full flex justify-between items-center p-3.5" aria-expanded="false">
+                        <h4 class="text-base font-semibold text-[#3D4451]">Glossary of Key Terms</h4>
+                        <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linecap="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="glossary-panel" class="hidden border-t border-[#E7E0D1] px-4 py-2">
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Shura</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the consultative assembly; the six-man council Umar appointed to choose his successor</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Muhajirun and Ansar</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the Meccan emigrants who followed the Prophet <span class="honorific">ﷺ</span> to Medina, and the Medinans who received them</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">The brother of Taym</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">Abu Bakr, of the clan of Taym; the Arabic convention of naming the powerful by clan</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Al-Ukhaynis</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">a man named in the Prophet’s <span class="honorific">ﷺ</span> warning preserved by Sulaym</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Mawla</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">master, patron, the one with rightful authority; the word used in the Ghadir declaration</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Saqifa</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the portico of the Banu Sa’ida where the community settled the succession after the Prophet’s <span class="honorific">ﷺ</span> death</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Khilafa</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the caliphate; the office of successor to the Prophet <span class="honorific">ﷺ</span> in temporal and religious leadership</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Shaqshaqiyya</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the most celebrated sermon in Nahj al-Balagha, named for its foam that wells up and subsides</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Fitna</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">trial, civil strife; a testing that engulfs both wrongdoers and the innocent</p>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#E7E0D1] py-1.5">
+                                <button class="glossary-toggle w-full flex justify-between items-center text-left" aria-expanded="false">
+                                    <span class="font-semibold text-sm text-[#3D4451]">Imam</span>
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="glossary-def hidden pl-1 pr-4 pb-2">
+                                    <p class="text-sm text-gray-600">the divinely appointed successor to the Prophet <span class="honorific">ﷺ</span> in the teaching of the People of the House</p>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -1220,6 +1299,26 @@ Abu Bakr said, &ldquo;If you will not pledge allegiance, I will not force you.&r
                 });
             });
 
+
+        // glossary accordion
+        const gMaster = document.getElementById('glossary-master');
+        const gPanel = document.getElementById('glossary-panel');
+        const gIcon = gMaster.querySelector('svg');
+        gMaster.addEventListener('click', () => {
+            const open = !gPanel.classList.contains('hidden');
+            gPanel.classList.toggle('hidden', open);
+            gMaster.setAttribute('aria-expanded', String(!open));
+            gIcon.classList.toggle('rotate-180', !open);
+        });
+        document.querySelectorAll('.glossary-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const def = btn.nextElementSibling;
+                const icon = btn.querySelector('svg');
+                const open = !def.classList.contains('hidden');
+                def.classList.toggle('hidden', open);
+                btn.setAttribute('aria-expanded', String(!open));
+                icon.classList.toggle('rotate-180', !open);
+            });
         });
     </script>
 
