@@ -101,7 +101,7 @@
             <hr class="mt-10 border-[#E7E0D1]">
         </header>
 
-        <main>
+        <main data-category="narration">
             <section class="mb-8">
                 <p class="mb-4 text-lg text-gray-700">Imam Ali ibn Abi Talib <span class="honorific">﵇</span> continued:</p>
 
@@ -176,6 +176,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
         });
+    </script>
+
+    <script>
+    (function () {
+        function openHash() {
+            var id = decodeURIComponent(location.hash.slice(1));
+            if (!id) return;
+            var el = document.getElementById(id);
+            if (!el) return;
+            var pane = el.closest('.tab-pane') || el.closest('.accordion-item');
+            if (pane && pane.classList.contains('tab-pane')) {
+                var btn = document.querySelector('[data-target="' + pane.id + '"]');
+                if (btn) btn.click();
+            }
+            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
+        }
+        window.addEventListener('hashchange', openHash);
+        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+    })();
     </script>
 </body>
 </html>
