@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic skeptics dated the isnād, the chain of transmitters behind every hadith, to about 800 CE. The classical sources, Sunni and Shia, place its birth in Kūfa in the 680s: the six pivot transmitters, the fitna reports, and the forgery waves themselves presuppose the chains.">
+    <meta name="keywords" content="isnād, isnad, hadith, transmission, Schacht, Wansbrough, Juynboll, Ibn Sīrīn, al-Mukhtār, Kūfa, rijāl, hadith criticism, al-Nakhaʿī, Ibn al-Mubārak, Kaysāniyya">
+    <meta property="og:title" content="Why the Isnād Cannot Be a Second-Century Invention">
+    <meta property="og:description" content="Academic skeptics dated the isnād to about 800 CE. The classical sources, Sunni and Shia, place its birth in Kūfa in the 680s, and the forgers themselves show the chains were already there.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/isnad-origin.html">
+    <title>Why the Isnād Cannot Be a Second-Century Invention</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        main p {
+            line-height: 1.7;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        .tab.active {
+            border-color: #B99C6B;
+            color: #8A6D3B;
+            background-color: #FDFBF7;
+        }
+        .accordion-header {
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #FAF6EF;
+        }
+        .accordion-header svg {
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-header svg {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <nav class="mb-10">
+            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
+        </nav>
+
+        <header class="mb-12">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith Authenticity Analysis</p>
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Why the Isnād Cannot Be a Second-Century Invention</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Academic skeptics dated the chains of transmission behind every hadith to about 800 CE. The earliest reports put the birth of the isnād in Kūfa in the 680s, and the forgers themselves show the chains were already there.</p>
+            <hr class="mt-10 border-[#E7E0D1]">
+        </header>
+
+        <main data-category="debate">
+            <!-- INTRO CARD -->
+            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">The Charge</h5>
+                    <p class="mb-4 text-gray-600">Every report of a saying of the Prophet Muhammad <span class="honorific">ﷺ</span> travels with a chain of named transmitters, the isnād: a collector heard it from a teacher, who heard it from an earlier teacher, who heard it from a Companion of the Prophet <span class="honorific">ﷺ</span>. Twentieth-century skeptics dated that apparatus very late. Joseph Schacht placed its regular use after the civil war of 744-750 CE and dismissed the most famous early report about it as spurious. John Wansbrough called the chain a formal innovation of the early ninth century. Norman Calder pushed the whole system later still. On those readings, the men who filled the hadith books with chains were building, and inhabiting, a fiction.</p>
+                </div>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">What the Sources Say</h5>
+                    <p class="mb-4 text-gray-600">The classical sources keep a different memory, and they keep it in reports short enough to check. The first great critic, ʿAlī b. al-Madīnī (d. 234 AH), counted the men the chains turn on, and all of them were dead by 148 AH. Two early authorities, one Basran and one Kūfan, remembered that asking about transmitters began with a crisis in the 60s AH. Al-Mukhtār's partisans in Kūfa appear in Sunni and Shia memory alike as the first forgers, and the first schism inside the Imāmiyya is dated to that same decade.</p>
+                </div>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">The Shape of the Evidence</h5>
+                    <p class="mb-4 text-gray-600">Four lines of evidence carry the argument. The convergence of the chains on six dead men sets a ceiling that no late-invention theory can reach. The fitna reports set the floor in the 680s CE. The documented forgery waves remove the escape of invention, since a forged chain presupposes a public that checks chains. The Shia book-culture of the same century, with its four hundred chain-connected notebooks, supplies a control from a rival tradition that had every reason to keep its own chronology.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 1: Six Dead Men Hold Up the Oldest Layer</p>
+                        <p class="text-gray-600 mb-2">ʿAlī b. al-Madīnī, the greatest critic of the generation before al-Bukhārī, said the isnād turns on six men. Those six taught in Medina, Mecca, Basra, and Kūfa, and the last of them died in 148 AH (765 CE). Every later collection, compiled by rival camps in rival cities, preserves chains that meet at their teaching careers. An institution invented in the second century would carry the fingerprint of its invention: one place, one circle, one generation. The six spread across four cities and five decades, and the fingerprint is missing.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 2: The First Questions Came in the Days of al-Mukhtār</p>
+                        <p class="text-gray-600 mb-2">Two reports, on two independent chains, from two cities, answer the question of when people began to ask who was transmitting. Muḥammad b. Sīrīn of Basra (d. 110 AH) said that nobody asked about the isnād until the fitna, the second civil war, broke out, and that from then on people demanded to be told the names of a transmitter's men. Ibrāhīm al-Nakhaʿī of Kūfa (d. c. 96 AH) said it more precisely: the questioning began in the days of al-Mukhtār, whose messianic revolt ruled Kūfa in 66-67 AH (685-687 CE).</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 3: The Forgers Presuppose the Chains</p>
+                        <p class="text-gray-600 mb-2">ʿAbd Allāh b. al-Mubārak of Marw (d. 181 AH) called the isnād part of the religion, and his transmitter ʿAbdān preserved the setting: the saying was uttered about the zindīq forgers of hadith. A Companion-era Kūfan, Rifāʿa b. Shadād, remembered standing at al-Mukhtār's side until the man's lying became clear to him. Fabrication attacks a trust system that must already exist, and the sources date the forgery waves and the demand for named transmitters to the same decades.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 4: The Shia Books Keep the Same Clock</p>
+                        <p class="text-gray-600 mb-2">Imami heresiography names the Kaysāniyya, the partisans of al-Mukhtār, as the first group to break away inside the Imāmiyya. Al-Mufīd (d. 413 AH) counted four hundred notebooks, the uṣūl, that the Imāmiyya composed from the time of ʿAlī <span class="honorific">﵇</span> to the time of al-Ḥasan al-ʿAskarī <span class="honorific">﵇</span> (d. 260 AH), and early Imami scholars judged a report trustworthy partly by its presence in those books with chains connected to the Imams <span class="honorific">﵈</span>. A rival community, with its own books and its own memory, preserves the same decade as the birth of scrutiny.</p>
+                    </div>
+                    <div class="conclusion-card">
+                        <p class="font-semibold text-[#8A6D3B]">Conclusion: The Isnād Was Already Old When the Second Century Began</p>
+                        <p class="text-gray-700">Premise 1 sets the ceiling: the chains converge on teachers dead by 148 AH, so the practice of naming teachers is older than their fame. Premises 2 and 4 set the floor in the 60s AH: two rival communities date the first scrutiny of transmitters to the decade of al-Mukhtār. Premise 3 closes the remaining exit, because fabrication targets a trust system that must already stand. Ceiling and floor meet in the decades after 60 AH (680 CE), in Kūfa, and the second-century-invention thesis survives only by discarding the reports that carry those dates.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE FACTS -->
+            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">What Each Source Claims, and How Firmly</h5>
+                    <div class="premise-card overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-left">
+                                    <th class="py-2 pr-4 font-semibold">Claim</th>
+                                    <th class="py-2 pr-4 font-semibold">Actor</th>
+                                    <th class="py-2 pr-4 font-semibold">Date</th>
+                                    <th class="py-2 pr-4 font-semibold">Place</th>
+                                    <th class="py-2 pr-4 font-semibold">Source</th>
+                                    <th class="py-2 pr-4 font-semibold">Qualifier</th>
+                                    <th class="py-2 font-semibold">Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The isnād was first asked about in al-Mukhtār's days</td>
+                                    <td class="py-2 pr-4">Ibrāhīm al-Nakhaʿī</td>
+                                    <td class="py-2 pr-4">66-67 AH</td>
+                                    <td class="py-2 pr-4">Kūfa</td>
+                                    <td class="py-2 pr-4">Ibn Ḥanbal, al-ʿIlal, v3, p. 380, no. 5674</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t1c3">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Nobody asked about the isnād until the fitna broke out</td>
+                                    <td class="py-2 pr-4">Muḥammad b. Sīrīn</td>
+                                    <td class="py-2 pr-4">before d. 110 AH</td>
+                                    <td class="py-2 pr-4">Basra</td>
+                                    <td class="py-2 pr-4">Ibn Ḥanbal, al-ʿIlal, v2, p. 559, no. 3641</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t1c2">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Kūfan obituaries dated deaths by al-Mukhtār's days</td>
+                                    <td class="py-2 pr-4">Kūfan transmitters</td>
+                                    <td class="py-2 pr-4">66-67 AH</td>
+                                    <td class="py-2 pr-4">Kūfa</td>
+                                    <td class="py-2 pr-4">Ibn Ḥanbal, Musnad, v4, p. 78</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t1c3">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The isnād turns on six men, then twelve</td>
+                                    <td class="py-2 pr-4">ʿAlī b. al-Madīnī</td>
+                                    <td class="py-2 pr-4">c. 220 AH</td>
+                                    <td class="py-2 pr-4">Baghdad</td>
+                                    <td class="py-2 pr-4">al-Dhahabī, Siyar, v9, p. 200</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t2c1">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The isnād is part of the religion; said about zindīq forgers</td>
+                                    <td class="py-2 pr-4">ʿAbd Allāh b. al-Mubārak</td>
+                                    <td class="py-2 pr-4">before d. 181 AH</td>
+                                    <td class="py-2 pr-4">Marw</td>
+                                    <td class="py-2 pr-4">al-Tirmidhī, Sunan, v5, p. 396; Ibn Ḥibbān, al-Majrūḥīn, v1, p. 47; al-Khaṭīb, Tārīkh Baghdād, v7, p. 102</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t3c1">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">First group to break away inside the Imāmiyya: al-Mukhtār's party</td>
+                                    <td class="py-2 pr-4">al-Qummī, relayed by al-Majlisī</td>
+                                    <td class="py-2 pr-4">4th-11th c. record of 66-67 AH</td>
+                                    <td class="py-2 pr-4">Qum</td>
+                                    <td class="py-2 pr-4">al-Majlisī, Biḥār al-anwār, v37, p. 3</td>
+                                    <td class="py-2 pr-4">attributed</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t4c1">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Four hundred chain-connected uṣūl composed before 260 AH</td>
+                                    <td class="py-2 pr-4">al-Mufīd</td>
+                                    <td class="py-2 pr-4">4th-11th c. record</td>
+                                    <td class="py-2 pr-4">Baghdad</td>
+                                    <td class="py-2 pr-4">Sharḥ uṣūl al-Kāfī, v1, p. 117</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t4c2">&#8599;</a></td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Al-Nakhaʿī avoided ʿAlī's companions as informants</td>
+                                    <td class="py-2 pr-4">Ibrāhīm al-Nakhaʿī</td>
+                                    <td class="py-2 pr-4">c. 96 AH</td>
+                                    <td class="py-2 pr-4">Kūfa</td>
+                                    <td class="py-2 pr-4">Ibn ʿAdī, al-Kāmil, v5, p. 225</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#t4c3">&#8599;</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB NAV -->
+            <div class="mb-8 border-b border-[#E7E0D1]">
+                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
+                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="true">1. The Claim on Trial</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. Six Men the Chains Turn On</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. The Forgers Prove the Chains</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. Kūfa's Second Witness</button>
+                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. What Stays Open</button>
+                </nav>
+            </div>
+
+            <div id="tab-content">
+                <div id="tab1" class="tab-pane active" role="tabpanel">
+                    <p class="mb-6 text-gray-600">The case against the isnād was built by scholars who worked from the same books that carry it. Their dating came from reading the silence of the earliest sources. Two reports break that silence, and both put a date and a city on the first questioning of transmitters.</p>
+                    <div id="tab1-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">What the Skeptics Claimed</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t1c1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> Schacht, The Origins of Muhammadan Jurisprudence (1950); Wansbrough, Quranic Studies (1977); Calder, Studies in Early Muslim Jurisprudence (1993)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> the isnād is a late formal invention, from the mid-second century at the earliest to about 815 CE at the latest</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Charge at Full Strength</h5>
+                                        <p class="mb-2 text-gray-600">In 1950, Joseph Schacht argued that the regular use of chains began only after the third civil war, the one that ended Umayyad rule in 750 CE, and that the famous report of Ibn Sīrīn about the fitna was itself a later invention. He attached one quiet qualification: he saw no reason to date the regular practice of using chains earlier than the beginning of the second century AH. That concession already grants a working system of chains by about 720 CE, and every piece of evidence assembled here pushes further back than Schacht's concession.</p>
+                                        <p class="mb-2 text-gray-600">John Wansbrough went further in 1977. He treated the chain as a formal device of legal and exegetical literature, an innovation he placed after about 815 CE. Norman Calder placed the professional book-culture that used chains in the ninth century. A 2018 study by Pavel Pavlovitch in Al-Qantara surveyed the whole debate and landed earlier than all of them: the first corroborative attribution to past authorities belongs to the aftermath of al-Mukhtār's revolt in Kūfa, 66-67 AH (685-687 CE).</p>
+                                        <p class="text-gray-600">The late-dating case rests on an argument from silence. Fully formed chains surface in books from the late second and third centuries, and the first century left almost no books of any kind. The argument treats the accident of survival as the boundary of practice.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Why Silence Is Weak Evidence Here</h5>
+                                        <p class="mb-2 text-gray-600">A missing record proves a missing institution only where records should exist. The first century produced a handful of surviving compilations, on any subject, from the whole caliphate. The same books that stay silent about chains in one chapter speak about them in another: the fitna reports, the count of the six pivot transmitters, and the forgery notices all sit inside books the skeptics themselves mined.</p>
+                                        <p class="text-gray-600">That matters because the skeptics never claimed the chains were forged by the collectors who wrote the surviving books. Their claim is about an earlier, invisible generation. The evidence below names that generation, and it is a generation the skeptics can see.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The skeptical case deserves its strongest form, and it receives one here. Its own founding concession, Schacht's, already places regular chains in the early second century. The primary sources answer the remaining question, when the asking began, with a date and a city.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibn Sīrīn Says: Name Your Men</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t1c2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> Aḥmad b. Ḥanbal (d. 241), al-ʿIlal wa-maʿrifat al-rijāl, v2, p. 559, no. 3641</p>
+                                        <p class="text-sm"><strong>Speaker:</strong> Muḥammad b. Sīrīn of Basra (d. 110 AH)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> nobody asked about the isnād until the fitna broke out</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Report</h5>
+                                        <p class="mb-2 text-gray-600">Ibn Ḥanbal records the report on a chain that runs from his father, through Muḥammad b. al-Ṣabbāḥ, Ismāʿīl b. Zakariyyāʾ, and ʿĀṣim al-Aḥwal, up to Ibn Sīrīn. The wording predates the polished version in the introduction to Muslim's Ṣaḥīḥ, which carries the same report.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">أخبرنا محمد بن الصباح قال حدثنا إسماعيل عن عاصم الأحول عن بن سيرين قال كانوا لا يسألون عن الاسناد فلما وقعت الفتنة قالوا سموا لنا رجالكم فينظر إلى أهل السنة فيؤخذ حديثهم وإلى أهل البدع فلا يؤخذ حديثهم</p>
+                                            <p class="italic transliteration">Akhbaranā Muḥammad b. al-Ṣabbāḥ qāla ḥaddathanā Ismāʿīl ʿan ʿĀṣim al-Aḥwal ʿan Ibn Sīrīn qāla: kānū lā yasʾalūna ʿan al-isnād, fa-lammā waqaʿat al-fitna qālū: summū lanā rijālakum, fa-yunẓaru ilā ahl al-sunna fa-yuʾkhadhu ḥadīthuhum, wa-yunẓaru ilā ahl al-bidʿa fa-lā yuʾkhadhu ḥadīthuhum.</p>
+                                            <p class="translation">"Muḥammad b. al-Ṣabbāḥ informed us, saying: Ismāʿīl told us, from ʿĀṣim al-Aḥwal, from Ibn Sīrīn, who said: they used to ask nothing about the chain of transmission. When the fitna broke out, they said: name your men for us. Then the tradition of the people of the sunna was looked at and accepted, and the tradition of the people of innovation was looked at and left alone."</p>
+                                            <cite class="text-sm text-gray-500">- Aḥmad b. Ḥanbal (d. 241 AH), al-ʿIlal wa-maʿrifat al-rijāl, vol. 2, p. 559, no. 3641</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The report describes a system switching on. Before the crisis, a transmitter's word traveled on trust. After it, the community demanded the names behind the words, and sorted the bearers into two piles: the people of inherited practice and the people of innovation.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Which Fitna</h5>
+                                        <p class="mb-2 text-gray-600">The word fitna names upheaval in general, and the sources use it for each of the first three civil wars. Ibn Sīrīn was born in 33 AH, too late to remember the first war, and died in 110 AH, decades before the third. The second civil war, 64-73 AH (683-692 CE), is the war the earliest sources most often call the fitna, and Gautier Juynboll argued on those grounds that Ibn Sīrīn meant exactly that war.</p>
+                                        <p class="text-gray-600">Al-Tirmidhī's later version adds the phrase in the earliest time, which pushes the reading toward the first war and toward a more flattering chronology. The addition looks like the work of a tradition that wanted an earlier origin. The older wording in Ibn Ḥanbal carries no such phrase, and its bare fitna points to the war of Ibn al-Zubayr, within which al-Mukhtār's revolt was the ideological shock.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Why the Report Cuts Against Invention</h5>
+                                        <p class="mb-2 text-gray-600">A forger building the authority of chains gains nothing from a report whose opening clause says the early Muslims asked nothing about them. The sentence concedes a whole era of no scrutiny. Historians call a witness like this an admission against interest, and it belongs to the class of evidence they trust most.</p>
+                                        <p class="text-gray-600">The report also serves the argument of Tab 4. The people it screens out, the followers of innovation, lived in exactly the milieu that al-Mukhtār's movement created in Kūfa, and both traditions remember that milieu as the source of the first forged hadiths.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The wording of a report can be later than its content, and Tab 5 weighs that question honestly. The parts of this report that embarrass the hadith institution are precisely the parts a forger would never write.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibrāhīm al-Nakhaʿī Dates the First Questions</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t1c3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> Ibn Ḥanbal, al-ʿIlal wa-maʿrifat al-rijāl, v3, p. 380, no. 5674</p>
+                                        <p class="text-sm"><strong>Chain:</strong> Aḥmad's father, from Jābir b. Nūḥ (d. 183), from al-Aʿmash (d. 148), from Ibrāhīm al-Nakhaʿī (d. c. 96)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> the asking about the isnād began in the days of al-Mukhtār</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Report</h5>
+                                        <p class="mb-2 text-gray-600">Ibn Ḥanbal preserves a second, independent memory of the same turning point, this one from Kūfa and this one with a name attached to the crisis.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">حدثني أبي قال حدثنا جابر بن نوح قال أخبرنا الأعمش عن إبراهيم قال إنما سئل عن الاسناد أيام المختار</p>
+                                            <p class="italic transliteration">Ḥaddathanī abī qāla: ḥaddathanā Jābir b. Nūḥ qāla: akhbaranā al-Aʿmash ʿan Ibrāhīm qāla: innamā suʾila ʿan al-isnād ayyām al-Mukhtār.</p>
+                                            <p class="translation">"My father told me, saying: Jābir b. Nūḥ told us, saying: al-Aʿmash informed us, from Ibrāhīm, who said: it was only in the days of al-Mukhtār that people began to be asked about the chain of transmission."</p>
+                                            <cite class="text-sm text-gray-500">- Aḥmad b. Ḥanbal (d. 241 AH), al-ʿIlal wa-maʿrifat al-rijāl, vol. 3, p. 380, no. 5674</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">Four words carry the whole argument: ayyām al-Mukhtār, the days of al-Mukhtār. The Basran report of Ibn Sīrīn names a war. The Kūfan report names the man, the city, and the year.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Man and the Moment</h5>
+                                        <p class="mb-2 text-gray-600">Ibrāhīm al-Nakhaʿī was the leading jurist of Kūfa in his generation. His family had fought for ʿAlī <span class="honorific">﵇</span> at Ṣiffīn, and he grew up in a city saturated with ʿAlid loyalism and with its counterfeit. Al-Mukhtār took Kūfa in 66 AH on a program of vengeance for al-Ḥusayn <span class="honorific">﵇</span>, proclaiming Muḥammad b. al-Ḥanafiyya the awaited Mahdī, and lost the city to Muṣʿab b. al-Zubayr within two years.</p>
+                                        <p class="text-gray-600">The chain that carries the memory is Kūfan end to end, and it names the event from inside living memory. Al-Aʿmash, the link below Ibrāhīm, was born around 61 AH, inside the revolt's own decade. Jābir b. Nūḥ heard from al-Aʿmash in Kūfa and died there in 183 AH.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">A Calendar the Kūfans Kept</h5>
+                                        <p class="mb-2 text-gray-600">The Musnad shows how Kūfan memory used the revolt as a calendar marker, without explanation, for the death of an elderly transmitter who had seen the Prophet <span class="honorific">ﷺ</span>.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">عن قيس بن عائذ قال رأيت رسول الله <span class="honorific">﵌</span> يخطب على ناقة خرماء وعبد حبشي ممسك بخطامها وهلك قيس أيام المختار</p>
+                                            <p class="italic transliteration">ʿan Qays b. ʿĀʾidh qāla: raʾaytu rasūla Allāh ṣallā llāhu ʿalayhi wa-ālihi yakhtubu ʿalā nāqiqa kharmāʾ wa-ʿabd ḥabashī mumassik bi-khiṭāmihā, wa-halaka Qays ayyām al-Mukhtār.</p>
+                                            <p class="translation">"From Qays b. ʿĀʾidh, who said: I saw the Messenger of Allah <span class="honorific">ﷺ</span> preaching on a slit-eared camel, with an Abyssinian slave holding its bridle. Qays died in the days of al-Mukhtār."</p>
+                                            <cite class="text-sm text-gray-500">- Aḥmad b. Ḥanbal (d. 241 AH), Musnad, vol. 4, p. 78</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The death notice leans on the revolt the way people lean on a shared date: everyone knew when al-Mukhtār's days were. A jurist of the same city could use the same marker for a scholarly turning point and expect to be understood.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">A Kūfan witness, carried on a Kūfan chain, dates the birth of isnād-scrutiny to a Kūfan event one generation after it happened. A later forger with a free hand would have chosen a safer date, closer to the Prophet <span class="honorific">ﷺ</span> and further from a checkable, sectarian decade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">The collectors of the third century did not preserve stray names. They preserved convergence: chains that meet, again and again, on the same small set of teachers. The first critic to count that convergence was ʿAlī b. al-Madīnī, and his count gives the whole argument its skeleton.</p>
+                    <div id="tab2-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t2c1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Six the Chains Turn On</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t2c1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> al-Dhahabī (d. 748), Siyar aʿlām al-nubalāʾ, v9, p. 200, from ʿAlī b. al-Madīnī (d. 234); also al-Rāmahurmuzī (d. 360), al-Muḥaddith al-fāṣil, no. 894</p>
+                                        <p class="text-sm"><strong>Claim:</strong> all isnāds converge on six transmitters, whose knowledge then passed to twelve</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Count</h5>
+                                        <p class="mb-2 text-gray-600">ʿAlī b. al-Madīnī was the teacher of al-Bukhārī and the most feared critic of transmitters in his generation. He went through the chains of everything he knew and counted where they meet.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">نظرت ، فإذا الاسناد يدور على ستة ، ثم صار علمهم إلى اثني عشر نفسا</p>
+                                            <p class="italic transliteration">Naẓartu fa-idhā al-isnād yadūru ʿalā sittatin, thumma ṣāra ʿilmuhum ilā ithnay ʿashara nafsan.</p>
+                                            <p class="translation">"I looked, and the isnād turns on six. Then their knowledge passed to twelve persons."</p>
+                                            <cite class="text-sm text-gray-500">- al-Dhahabī (d. 748 AH), Siyar aʿlām al-nubalāʾ, vol. 9, p. 200, from ʿAlī b. al-Madīnī (d. 234 AH); cf. al-Rāmahurmuzī (d. 360 AH), al-Muḥaddith al-fāṣil, no. 894</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">A man who spent his life grading transmitters performed a census of the tradition and found a spine. Modern database methods redrew his map and found the same spine.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Six, City by City</h5>
+                                        <p class="mb-2 text-gray-600">The introduction to the Zayed Foundation edition of Mālik's Muwaṭṭa preserves Ibn al-Madīnī's list with the cities and the death dates.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">نظرت فإذا الإسناد يدور على ستة : فلأهل المدينة : - ابن شهاب وهو محمد بن مسلم بن عبد اللّه بن شهاب ، ويكنى أبا بكر ، مات سنة أربع وعشرين ومائة . ولأهل مكة : - عمرو بن دينار : مولى جمح ، ويكنى أبا محمد ، مات سنة ست وعشرين ومائة . ولأهل البصرة : - قتادة بن دعامة السدوسي ، وكنيته أبو الخطاب ، مات سنة سبع عشرة ومائة . - ويحيى بن أبي كثير ، ويكنى أبا نصر ، مات سنة اثنتين وثلاثين ومائة باليمامة</p>
+                                            <p class="italic transliteration">Naẓartu fa-idhā al-isnād yadūru ʿalā sittatin: li-ahl al-Madīna Ibn Shihāb wa-huwa Muḥammad b. Muslim b. ʿAbd Allāh b. Shihāb, wa-yuknā Abā Bakr, māta sana arbaʿ wa-ʿishrīn wa-miʾa. Wa-li-ahl Makka ʿAmr b. Dīnār, mawlā Jumaḥ, wa-yuknā Abā Muḥammad, māta sana sitt wa-ʿishrīn wa-miʾa. Wa-li-ahl al-Baṣra Qatāda b. Diʿāma al-Sudūsī, wa-kunyatuhu Abū al-Khaṭṭāb, māta sana sabʿ ʿashra wa-miʾa, wa-Yaḥyā b. Abī Kathīr, wa-yuknā Abā Naṣr, māta sana ithnatayn wa-thalāthīn wa-miʾa bi-l-Yamāma.</p>
+                                            <p class="translation">"I looked, and the isnād turns on six. For the people of Medina: Ibn Shihāb, who is Muḥammad b. Muslim b. ʿAbd Allāh b. Shihāb, kunya Abū Bakr, died in the year 124. For the people of Mecca: ʿAmr b. Dīnār, client of the Banū Jumaḥ, kunya Abū Muḥammad, died in the year 126. For the people of Basra: Qatāda b. Diʿāma al-Sudūsī, kunya Abū al-Khaṭṭāb, died in the year 117, and Yaḥyā b. Abī Kathīr, kunya Abū Naṣr, died in the year 132 in al-Yamāma."</p>
+                                            <cite class="text-sm text-gray-500">- Mālik b. Anas (d. 179 AH), al-Muwaṭṭa, Zayed Foundation edition, vol. 1, p. 32, edition introduction quoting ʿAlī b. al-Madīnī</cite>
+                                        </blockquote>
+                                        <p class="mb-2 text-gray-600">The list continues with the two Kūfans: Abū Isḥāq al-Sabīʿī (d. 127) and al-Aʿmash (d. 148). The map is complete: one neck per city for Medina, Mecca, and Basra, two for the largest city of hadith, Kūfa.</p>
+                                        <p class="text-gray-600">Every death date falls inside 117-148 AH, which is 735-765 CE. These men taught the collectors' teachers. Al-Bukhārī and Muslim sit three handshakes below them at most.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Convergence Means</h5>
+                                        <p class="mb-2 text-gray-600">Draw the chains of the canonical books as a tree, with each collector at the bottom and each original speaker at the top, and the branches keep meeting at particular necks. A dense bundle of chains through one teacher points to a real career of teaching: students who traveled, remembered, and named him. Modern scholars call such a teacher a common link.</p>
+                                        <p class="text-gray-600">The bundle shape is the point. A forger invents single strands, one chain reaching from his pen to a famous name, because a forger cannot coordinate dozens of independent students in four cities. Ibn al-Madīnī counted bundles, and bundles are what a school system produces.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The chains of the third-century books converge on teaching careers that ended by 148 AH. Whatever the chains are, they were already being built, used, and remembered while the six were alive; the practice cannot begin after its own convergence points.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t2c2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Why a Late Invention Cannot Fake Convergence</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t2c2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> structural reading of the canonical collections; Juynboll, Encyclopedia of Canonical Hadith (2007)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> convergence of the width Ibn al-Madīnī counted cannot be manufactured after the six were dead</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Arithmetic of an Invention</h5>
+                                        <p class="mb-2 text-gray-600">Set the invention of the chains at 100-120 AH, the earliest date any serious skeptic still needs, and the arithmetic stops working. The six pivots were already teaching and already famous inside those very years: Qatāda died in 117, al-Zuhrī in 124. The inventors would have to be the pivots' own students, inserting fabricated chains into the lessons of teachers who were alive, famous, and surrounded by other students who knew what their teachers actually said.</p>
+                                        <p class="text-gray-600">Then the conspiracy has to hold across every later collection. The collectors of the third century belonged to rival camps who branded each other's transmitters liars, and each camp preserved the same necks. Rivalry is the worst possible environment for a shared forgery, because rivals check each other's sources.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Rival Books, Same Necks</h5>
+                                        <p class="mb-2 text-gray-600">The Shia collections keep the same Kūfan necks. Al-Aʿmash's name runs by the hundreds through the chains of the Shia corpus, including the riwāʾī tafsir and the works around al-Kāfī, because the Imams <span class="honorific">﵈</span> taught in the same Kūfa whose transmitters the Sunni six-pivot map describes. A community that rejected the caliphate's religious authority kept the same convergence points in the same city.</p>
+                                        <p class="text-gray-600">Short chains carry the rest of the weight. Muslim (d. 261) reaches the generation of Qatāda through two intermediate teachers at most, and the same is true of al-Tirmidhī and al-Dārimī toward al-Aʿmash's circle. A practice remembered within two handshakes is a practiced practice; nobody misremembers the invention of a system they watched their own teachers use.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Oldest Firm Neck</h5>
+                                        <p class="text-gray-600">Gautier Juynboll, the most systematic skeptic the chains ever faced, mapped the bundles himself and traced the earliest common link he could verify anywhere in the canonical material: Abū al-ʿĀliya al-Riyāḥī of Basra, dead in 93 AH. Juynboll doubted almost everything the chains claimed for their own contents, and his own method still placed functioning bundles in the first century. The strongest hostile reading of the evidence and the traditional reading agree on the century; they disagree about the claims.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">Convergence is the signature of a school system and the opposite of a forgery's signature. The ceiling it sets holds at 148 AH for the dense bundles, and the oldest verified neck reaches into the 90s AH. Every late-invention thesis has to live above that ceiling, where no evidence lives with it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">Fabrication is documented inside the same books that carry the chains. That documentation is the strongest witness for the chains, because a forged chain presupposes a public that checks chains.</p>
+                    <div id="tab3-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibn al-Mubārak Defends an Old Rule</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t3c1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> al-Tirmidhī (d. 279), Sunan, v5, p. 396, no. 4053; Ibn Ḥibbān (d. 354), al-Majrūḥīn, v1, p. 47; al-Khaṭīb al-Baghdādī (d. 463), Tārīkh Baghdād, v7, p. 102</p>
+                                        <p class="text-sm"><strong>Speaker:</strong> ʿAbd Allāh b. al-Mubārak of Marw (d. 181 AH)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> the isnād is part of the religion; without it anyone could say anything</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Saying in Three Books</h5>
+                                        <p class="mb-2 text-gray-600">ʿAbd Allāh b. al-Mubārak was a scholar, merchant, and frontier volunteer from Marw in Khurāsān, famous for both piety and critical standards. His one-line defense of the chain entered three independent books, from the Sunan of al-Tirmidhī to the heresiography of Ibn Ḥibbān.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">حدثنا محمد بن علي بن الحسن قال : سمعت عبدان يقول قال عبد الله بن المبارك : " الاسناد عندي من الدين لولا الاسناد لقال من شاء ما شاء ، فإذا قيل له من حدثك يبقى "</p>
+                                            <p class="italic transliteration">Ḥaddathanā Muḥammad b. ʿAlī b. al-Ḥasan qāla: samiʿtu ʿAbdān yaqūlu qāla ʿAbd Allāh b. al-Mubārak: al-isnād ʿindī min al-dīn, law-lā al-isnād la-qāla man shāʾa mā shāʾa, fa-idhā qīla lahu man ḥaddathaka baqiya.</p>
+                                            <p class="translation">"Muḥammad b. ʿAlī b. al-Ḥasan told us, saying: I heard ʿAbdān say: ʿAbd Allāh b. al-Mubārak said: the chain of transmission is part of the religion for me. Without the chain, whoever wished could say whatever he wished. When a man is asked who told you, he stops."</p>
+                                            <cite class="text-sm text-gray-500">- al-Tirmidhī (d. 279 AH), Sunan, vol. 5, p. 396, no. 4053</cite>
+                                        </blockquote>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">حدثنا محمد بن عبد الرحمن قال : حدثنا الحسين بن الفرج قال : حدثنا عبدان بن عثمان قال : سمعت ابن المبارك يقول : الاسناد من الدين ، لولا الاسناد لقال من شاء ما شاء</p>
+                                            <p class="italic transliteration">Ḥaddathanā Muḥammad b. ʿAbd al-Raḥmān qāla: ḥaddathanā al-Ḥusayn b. al-Faraj qāla: ḥaddathanā ʿAbdān b. ʿUthmān qāla: samiʿtu Ibn al-Mubārak yaqūlu: al-isnād min al-dīn, law-lā al-isnād la-qāla man shāʾa mā shāʾa.</p>
+                                            <p class="translation">"Muḥammad b. ʿAbd al-Raḥmān told us, saying: al-Ḥusayn b. al-Faraj told us, saying: ʿAbdān b. ʿUthmān told us, saying: I heard Ibn al-Mubārak say: the chain of transmission belongs to the religion. Without the chain, whoever wished could say whatever he wished."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Ḥibbān (d. 354 AH), Kitāb al-Majrūḥīn, vol. 1, p. 47</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The line below Ibn al-Mubārak passes through ʿAbdān of Nishapur in every version, which anchors the wording to Ibn al-Mubārak's own classroom. Above ʿAbdān, the chains diverge into three different collectors in three different cities.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Setting of the Saying</h5>
+                                        <p class="mb-2 text-gray-600">Al-Khaṭīb al-Baghdādī preserves the same line with the answer to one question: against whom was it said?</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">قال : حدثنا أبو الموجه ، قال : حدثنا عبدان ، قال : سمعت عبد الله ، يقول : الإسناد عندي من الدين ، لولا الإسناد لقال من شاء ما شاء ، ولكن إذا قيل له : من حدثك ؟ بقي ، قال عبدان : ذكر هذا عند ذكر الزنادقة ، وما يضعون من الأحاديث</p>
+                                            <p class="italic transliteration">Qāla: ḥaddathanā Abū al-Mūjja qāla: ḥaddathanā ʿAbdān qāla: samiʿtu ʿAbd Allāh yaqūlu: al-isnād ʿindī min al-dīn, law-lā al-isnād la-qāla man shāʾa mā shāʾa, wa-lākin idhā qīla lahu man ḥaddathaka baqiya. Qāla ʿAbdān: dhukira hādhā ʿan dhikr al-zanādiqa wa-mā yaḍaʿūna min al-aḥādīth.</p>
+                                            <p class="translation">"He said: Abū al-Mūjja told us, saying: ʿAbdān told us, saying: I heard ʿAbd Allāh say: the chain of transmission is part of the religion for me. Without the chain, whoever wished could say whatever he wished; but when a man is asked who told you, he stops. ʿAbdān said: this was said regarding the zanādiqa and the hadiths they forge."</p>
+                                            <cite class="text-sm text-gray-500">- al-Khaṭīb al-Baghdādī (d. 463 AH), Tārīkh Baghdād, vol. 7, p. 102</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The gloss names the adversary. The saying was minted for a specific threat: heretics forging prophetic reports. That setting turns the slogan into evidence, because a defense defends something standing.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What a Defense Presupposes</h5>
+                                        <p class="mb-2 text-gray-600">Ibn al-Mubārak does not introduce the chain to his hearers or explain how it works. He assumes the chain as the religion's ordinary furniture and states why removing it would be catastrophic. A norm described as part of the religion by 181 AH, under active attack from forgers, was being maintained that year.</p>
+                                        <p class="text-gray-600">Maintenance implies earlier construction. Whoever repaired and defended the system in the generation of Ibn al-Mubārak inherited it, and the inheritance had to cross the six pivots of Tab 2, whose careers end in 148 AH.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The forgery wave that skeptics cite as the chains' reason for being is attested inside the same books as the chains, dated to the same era, and answered by the chains. The war and the weapon appear together, which is what a real origin looks like.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Rifāʿa Stood at the Liar's Side</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t3c2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> Ibn Ḥanbal, Musnad, Risāla edition, v39, p. 106</p>
+                                        <p class="text-sm"><strong>Speaker:</strong> Rifāʿa b. Shadād, Kūfan of the first generation</p>
+                                        <p class="text-sm"><strong>Claim:</strong> al-Mukhtār's lying became clear to the men around him</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Report</h5>
+                                        <p class="mb-2 text-gray-600">A man who had joined al-Mukhtār's court remembers the moment the man's mendacity became undeniable, and the hadith that stopped his hand.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">حَدَّثَنَا بَهْزٌ ، حَدَّثَنَا حَمَّادُ بْنُ سَلَمَةَ ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ ، عَنْ رِفَاعَةَ بْنِ شَدَّادٍ ، قَالَ : كُنْتُ أَقُومُ عَلَى رَأْسِ الْمُخْتَارِ ، فَلَمَّا تَبَيَّنَتْ لِي كِذَابَتُهُ ، هَمَمْتُ ايْمُ اللَّهِ أَنْ أَسُلَّ سَيْفِي ، فَأَضْرِبَ عُنُقَهُ ، حَتَّى تَذَكَّرْتُ حَدِيثًا حَدَّثَنِيهِ عَمْرُو بْنُ الْحَمِقِ قَالَ : سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ : " مَنْ آمَنَ رَجُلًا عَلَى نَفْسِهِ فَقَتَلَهُ ، أُعْطِيَ لِوَاءَ الْغَدْرِ يَوْمَ الْقِيَامَةِ "</p>
+                                            <p class="italic transliteration">Ḥaddathanā Bahz, ḥaddathanā Ḥammād b. Salama, ʿan ʿAbd al-Malik b. ʿUmayr, ʿan Rifāʿa b. Shadād qāla: kuntu aqūmu ʿalā raʾs al-Mukhtār, fa-lammā tabayyanat lī kadhābatuhu hamamtu aymu llāhi an asulla sayfī fa-aḍriba ʿunuqahu, ḥattā tadhakkartu ḥadīthan ḥaddathanīhi ʿAmr b. al-Ḥāmiq qāla: samiʿtu rasūla Allāh ṣallā llāhu ʿalayhi wa-sallam yaqūlu: man āmana rajulan ʿalā nafsihi fa-qatalahu uʿṭiya liwāʾ al-ghadri yawm al-qiyāma.</p>
+                                            <p class="translation">"Bahz told us, saying: Ḥammād b. Salama told us, from ʿAbd al-Malik b. ʿUmayr, from Rifāʿa b. Shadād, who said: I used to stand at al-Mukhtār's side. When his lying became clear to me, I resolved, by God, to draw my sword and strike his neck. Then I remembered a hadith that ʿAmr b. al-Ḥāmiq had told me. He said: I heard the Messenger of Allah <span class="honorific">ﷺ</span> say: whoever grants a man security and then kills him will be handed the banner of treachery on the Day of Resurrection."</p>
+                                            <cite class="text-sm text-gray-500">- Aḥmad b. Ḥanbal (d. 241 AH), Musnad, Risāla edition, vol. 39, p. 106</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Two Things the Memory Keeps</h5>
+                                        <p class="mb-2 text-gray-600">First, Kūfa preserved an eyewitness verdict on al-Mukhtār's honesty, from a man who had served close enough to kill him, and the verdict is unsoftened. The community that remembered al-Mukhtār remembered him as a liar in religious matters.</p>
+                                        <p class="mb-2 text-gray-600">Second, the memory itself travels on a chain and ends in the Prophet's <span class="honorific">ﷺ</span> own words. The book that carries the news of al-Mukhtār's mendacity is organized by the very institution whose first stirrings his era produced. The tradition kept its enemies' names as carefully as its own.</p>
+                                        <p class="text-gray-600">One further detail circulates in the literature: al-Jūzajānī (d. 259) reports in the introduction to Aḥwāl al-rijāl that al-Mukhtār paid a thousand dinars to anyone who would spread traditions serving his cause. The book sits outside the corpus used here, and the detail rests on the citation in the 2018 Al-Qantara study; the eyewitness verdict of Rifāʿa, which the corpus does carry, is the load-bearing witness.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                        <h5 class="analysis-heading">What Follows</h5>
+                        <p class="font-semibold text-gray-800">The patron of Kūfa's first forgery wave was remembered, by name and from inside his own court, as a liar. The demand for named transmitters begins in the same city and the same decade. Enemy and remedy share an address.</p>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Forgers Need Something to Forge</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t3c3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Claim:</strong> a forged chain presupposes a public that checks chains, so the forgery record is evidence for the institution, against its lateness</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Logic of Parasitism</h5>
+                                        <p class="mb-2 text-gray-600">A forged attribution has value only where attribution is checked. A forger who mints a fake chain for a market that ignores chains wastes his money, because an unchecked chain certifies nothing. Counterfeit money circulates only where real money does, and a forged certificate moves only in a world that honors certificates.</p>
+                                        <p class="text-gray-600">The sources document the counterfeiting. The zanādiqa of ʿAbdān's gloss, the Mukhtārīs of Kūfa, and the later ghulāt who exaggerated the status of ʿAlī <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span> appear across the rijāl literature as the standing forgers of prophetic and ʿAlid material. Every one of those groups is remembered attacking the chain system from outside it.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Cause and Response Share a Timeline</h5>
+                                        <p class="mb-2 text-gray-600">Set the two columns side by side. In the first column stand the forgery waves: al-Mukhtār's patronage in 66-67 AH, the zanādiqa campaigns of the second century, the ghulāt of Kūfa after them. In the second stands the response: Ibn Sīrīn's demand for names after the fitna, al-Nakhaʿī's dating of the questions to al-Mukhtār's days, Ibn al-Mubārak's defense of the chain against the zanādiqa, and, by Juynboll's own estimate, systematic criticism of transmitters at work by about 130 AH.</p>
+                                        <p class="text-gray-600">The columns line up row by row, and the order is the causal one. The lie arrives first, the demand for names follows, and the apparatus hardens across the second century. If the chain had been invented around 100 AH or later, the forgery notices would sit decades before any concern with attribution anywhere in the record. The corpus shows the two arriving together, in every city that keeps records.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The history of lying about the Prophet <span class="honorific">ﷺ</span> and the history of checking who tells it are, in the sources, one history on one timeline. The forgery record offered as proof of the chains' lateness is the strongest witness for their earliness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="tab4" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">The Shia community had its own transmission system, its own books, and its own memory of al-Mukhtār. Where that independent tradition touches the question of origins, it keeps the same clock as the Sunni reports.</p>
+                    <div id="tab4-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The First Split Inside the Shia</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t4c1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> al-Ṣadūq (d. 381), Man lā yaḥḍuruhu al-faqīh, v4, p. 543; al-Majlisī (d. 1111), Biḥār al-anwār, v37, p. 3, from al-Qummī</p>
+                                        <p class="text-sm"><strong>Claim:</strong> the Kaysāniyya, the partisans of al-Mukhtār, were the first group to break away inside the Imāmiyya</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Two Definitions of the Kaysāniyya</h5>
+                                        <p class="mb-2 text-gray-600">Al-Ṣadūq defines the sect in his manual of law and sects; al-Majlisī relays al-Qummī's heresiography. Both identify it with al-Mukhtār's movement.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">الكيسانية : قوم قالوا بامامة محمد بن الحنفية بعد أبي عبد الله الحسين <span class="honorific">﵇</span> وفي الصحاح هم صنف من الروافض وهم أصحاب المختار بن أبي عبيدة يقال : إن لقبه كان كيسان</p>
+                                            <p class="italic transliteration">Al-Kaysāniyya: qawm qālū bi-imāmati Muḥammad b. al-Ḥanafiyya baʿda Abī ʿAbd Allāh al-Ḥusayn ʿalayhi al-salām, wa-fī al-ṣiḥāḥ hum ṣinf min al-Rāwafiḍ wa-hum aṣḥāb al-Mukhtār b. Abī ʿUbayda, yuqālu inna laqabahu kāna Kaysān.</p>
+                                            <p class="translation">"The Kaysāniyya: people who asserted the imamate of Muḥammad b. al-Ḥanafiyya after Abū ʿAbd Allāh al-Ḥusayn <span class="honorific">﵇</span>. In the sound books they are one group of the Rāfiḍa, the partisans of al-Mukhtār b. Abī ʿUbayda; his nickname, it is said, was Kaysān."</p>
+                                            <cite class="text-sm text-gray-500">- al-Ṣadūq (d. 381 AH), Man lā yaḥḍuruhu al-faqīh, vol. 4, p. 543</cite>
+                                        </blockquote>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">فأول من شذ عن الحق من فرق الامامية الكيسانية وهم أصحاب المختار ، وإنما سميت بهذا الاسم لان المختار كان اسمه أولا الكيسان</p>
+                                            <p class="italic transliteration">Fa-awwalu man shadhdha ʿan al-ḥaqq min firaq al-Imāmiyya al-Kaysāniyya wa-hum aṣḥāb al-Mukhtār, wa-innamā summiyat bi-hādhā al-ism li-anna al-Mukhtār kāna ismuhu awwalan al-Kaysān.</p>
+                                            <p class="translation">"The first to swerve from the truth among the branches of the Imāmiyya were the Kaysāniyya, the partisans of al-Mukhtār. The group bears this name because al-Mukhtār's original name was Kaysān."</p>
+                                            <cite class="text-sm text-gray-500">- al-Majlisī (d. 1111 AH), Biḥār al-anwār, vol. 37, p. 3, from al-Qummī</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Why the Split Mattered</h5>
+                                        <p class="mb-2 text-gray-600">Al-Mukhtār's revolt was a theological rupture wearing a political uniform. He proclaimed Muḥammad b. al-Ḥanafiyya, a son of ʿAlī <span class="honorific">﵇</span>, to be the awaited Mahdī, gathered around himself men the later tradition calls extremists, and split the ʿAlid wing of the Hāshimid house into camps.</p>
+                                        <p class="text-gray-600">For a community whose whole identity is loyalty to the Imam of each generation, the first group to assert an Imam outside that line is the first schism. That is exactly the slot the Imami heresiographers give the partisans of al-Mukhtār: first to swerve, before every later sect.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Same Decade in Two Traditions</h5>
+                                        <p class="mb-2 text-gray-600">The Sunni reports of Tab 1 date the first scrutiny of transmitters to the fitna decade and name al-Mukhtār. The Imami heresiographers, writing in different books for different purposes, name his party as the first split from their own line of Imams <span class="honorific">﵈</span>.</p>
+                                        <p class="text-gray-600">Neither tradition had a reason to import the other's framing. One cares about who transmits; the other cares about who leads. The two memories touch at a single point, the decade of 66-67 AH, and independent witnesses that agree on a date are the raw material of historical argument.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">The community with the least to gain from a Sunni chronology of hadith criticism preserves the same fault line in the same decade. The dating of the first scrutiny does not hang on one tradition's memory alone; it stands on two that barely speak to each other.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Four Hundred Books with Chains</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t4c2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> al-Mufīd (d. 413), as quoted in Ṣadr al-Mutaʾallihīn, Sharḥ uṣūl al-Kāfī, v1, p. 117; al-Ḥurr al-ʿĀmilī (d. 1104), Wasāʾil al-shīʿa, v30, p. 198</p>
+                                        <p class="text-sm"><strong>Claim:</strong> the Imāmiyya composed four hundred chain-connected notebooks before 260 AH, and judged reports by their presence in them</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Count of al-Mufīd</h5>
+                                        <p class="mb-2 text-gray-600">Al-Mufīd, the head of the Imami school of Baghdad, counted the community's foundational notebooks and dated their span.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">صنف الامامية من عهد أمير المؤمنين <span class="honorific">﵇</span> إلى عهد أبى محمد الحسن العسكري <span class="honorific">﵇</span> أربعمائة كتاب تسمى الأصول</p>
+                                            <p class="italic transliteration">Ṣannafat al-Imāmiyya min ʿahd amīr al-muʾminīn ʿalayhi al-salām ilā ʿahd Abī Muḥammad al-Ḥasan al-ʿAskarī ʿalayhi al-salām arbaʿumiʾa kitāb tusammā al-uṣūl.</p>
+                                            <p class="translation">"The Imāmiyya compiled, from the era of the Commander of the Faithful <span class="honorific">﵇</span> to the era of Abū Muḥammad al-Ḥasan al-ʿAskarī <span class="honorific">﵇</span>, four hundred books called the uṣūl."</p>
+                                            <cite class="text-sm text-gray-500">- al-Mufīd (d. 413 AH), as quoted in Ṣadr al-Mutaʾallihīn, Sharḥ uṣūl al-Kāfī, vol. 1, p. 117</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">An uṣūl was the notebook of a single author: the reports he himself heard, with the names of those he heard them from, built up under the Imams <span class="honorific">﵈</span> of his lifetime. Four hundred such notebooks, ending with the death of the eleventh Imam in 260 AH, describe a community that wrote everything down and signed everything.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">How the Early Shia Judged a Report</h5>
+                                        <p class="mb-2 text-gray-600">Al-Ḥurr al-ʿĀmilī records the working standard of the early Imami scholars, the mutaqaddimūn, for what made a report sound.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">منها : وجوده في كثير من الأصول الأربعمائة التي نقلوها عن مشايخهم بطرقهم المتصلة بأصحاب العصمة ، وكانت متداولة في تلك الأعصار مشتهرة بينهم اشتهار الشمس في رائعة النهار</p>
+                                            <p class="italic transliteration">Minhā: wujūduhu fī kathīrin min al-uṣūl al-arbaʿumiʾa allatī naqalūhā ʿan mashāyikhihim bi-ṭuruqihim al-muttaṣila bi-aṣḥāb al-ʿiṣma, wa-kānat mutadāwalatan fī tilka al-aʿṣār mushtaharatan baynahum ishtihār al-shams fī rāʾiʿat al-nahār.</p>
+                                            <p class="translation">"Among them is its presence in many of the four hundred uṣūl, which they transmitted from their teachers with their chains connected to the companions of the infallible ones; those books circulated in those ages and were famous among them like the fame of the sun in the bright of day."</p>
+                                            <cite class="text-sm text-gray-500">- al-Ḥurr al-ʿĀmilī (d. 1104 AH), Wasāʾil al-shīʿa, vol. 30, p. 198</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">The standard runs through chains and books: a report earned trust by sitting in the notebooks, with a line of named transmitters reaching the companions of the Imams <span class="honorific">﵈</span>. Al-Kulaynī (d. 329) built al-Kāfī by extracting from exactly that material, and later scholars still measured reports against it.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">An Independent Control</h5>
+                                        <p class="mb-2 text-gray-600">The Imami transmission world answers the obvious objection to everything in Tabs 1-3: that Sunni sources might be telling one story in one voice. Here is a second world, with its own books, its own criteria, its own memory, and its own reasons to contradict the first. It keeps records in chains, judges by chains, and dates its first internal catastrophe to al-Mukhtār.</p>
+                                        <p class="text-gray-600">The mutaqaddimūn did not borrow the Sunni chain apparatus, because their notebooks predate the Sunni books that carry it. Chain-consciousness was the common air of second-century Kūfa, breathed by communities that agreed on theology and disagreed on nearly everything else.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">A rival tradition, building its own authentication system in the same city and century, leaves the Sunni chronology nowhere to stand as an invention. The isnād was the shared infrastructure of both communities' scholarship before either wrote the books that preserve it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Assayer of Hadith</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t4c3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Source:</strong> Ibn ʿAdī al-Jurjānī (d. 365), al-Kāmil fī ḍuʿafāʾ al-rijāl, v5, p. 225</p>
+                                        <p class="text-sm"><strong>Speaker:</strong> Ibrāhīm al-Nakhaʿī (d. c. 96 AH)</p>
+                                        <p class="text-sm"><strong>Claim:</strong> he avoided the companions of ʿAlī as informants, on suspicion</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Question He Was Asked</h5>
+                                        <p class="mb-2 text-gray-600">Ibrāhīm al-Nakhaʿī, the man who dated the first isnād-questions to al-Mukhtār's days, kept a hard rule about his own sources, and the critics preserved the exchange that reveals it.</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">ثنا عيسى بن المسيب قال : قيل لإبراهيم أو قيل يا أبا عمران أدركت أصحاب علي وأصحاب عبد الله فأخذت بقول أصحاب عبد الله وتركت قول أصحاب علي قال أتهم أصحاب علي</p>
+                                            <p class="italic transliteration">Thanā ʿĪsā b. al-Musayyab qāla: qīla li-Ibrāhīm aw qīla yā Abā ʿAmrān adrakta aṣḥāb ʿAlī wa-aṣḥāb ʿAbd Allāh fa-akhadhta bi-qawli aṣḥāb ʿAbd Allāh wa-tarakta qawla aṣḥāb ʿAlī, qāla: atthamu aṣḥāb ʿAlī.</p>
+                                            <p class="translation">"ʿĪsā b. al-Musayyab told us, saying: it was said to Ibrāhīm, or it was said: Abū ʿAmrān, you met the companions of ʿAlī and the companions of ʿAbd Allāh, yet you took the position of the companions of ʿAbd Allāh and left the position of the companions of ʿAlī. He said: I suspect the companions of ʿAlī."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn ʿAdī al-Jurjānī (d. 365 AH), al-Kāmil fī ḍuʿafāʾ al-rijāl, vol. 5, p. 225</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">A Method That Matches the Moment</h5>
+                                        <p class="mb-2 text-gray-600">The answer cost Ibrāhīm something. His own family had fought for ʿAlī <span class="honorific">﵇</span> at Ṣiffīn, and the school of ʿAlī <span class="honorific">﵇</span> carried the legacy his household lived by. He screened its transmitters anyway, and said why in one word: suspicion.</p>
+                                        <p class="mb-2 text-gray-600">His reason sits in the air of his city. Kūfa after al-Mukhtār was the marketplace of forged ʿAlid material, and a Kūfan jurist who took reports from ʿAlid circles without checking names was buying from the counterfeiter's stall. The later critics ranked Ibrāhīm's mursal reports, the ones that stop at a Successor, among the strongest of their kind, exactly because he chose his men.</p>
+                                        <p class="text-gray-600">The same page of Ibn ʿAdī grades another Kūfan transmitter of ʿAlid material, ʿĀṣim b. Ḍamra, as unfit for citation, because so much of what he reported from ʿAlī <span class="honorific">﵇</span> was his alone and uncorroborated by the reliable. One page of one critical book preserves both the rule and its application.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                        <h5 class="analysis-heading">What Follows</h5>
+                        <p class="font-semibold text-gray-800">The chronology and the personality corroborate each other. The report that dates the birth of isnād-scrutiny to al-Mukhtār's days comes from a man whose entire documented method is the scrutiny of transmitters, applied circle by circle, in the city where the forgery began.</p>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="tab5" class="tab-pane hidden" role="tabpanel">
+                    <p class="mb-6 text-gray-600">Three questions stay open. Stating them plainly does not weaken the dating of the institution; it marks the line between what the evidence proves and what it leaves uncertain.</p>
+                    <div id="tab5-accordion" class="space-y-4">
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c1">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Layer Below the Six</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t5c1">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Open question:</strong> whether individual Companion-level ascriptions inside full chains are historically accurate</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Where the Argument Stops</h5>
+                                        <p class="mb-2 text-gray-600">The convergence evidence secures one thing firmly: the practice of naming teachers, in bulk, reaching up to the generation of the six pivots. Below that generation stands a further question, and honesty requires drawing the line precisely. When a chain names a Companion as its head, is that name an authentic memory of transmission or a later completion?</p>
+                                        <p class="mb-2 text-gray-600">That layer is where the modern scholarly fight actually lives. Harald Motzki's study of the Muṣannaf of ʿAbd al-Razzāq found the use of chains rising steadily across the first century and established by the second; his opponents read the same curves as evidence of construction. The fight is legitimate, and a corpus of books from the third century and later cannot settle it by itself.</p>
+                                        <p class="text-gray-600">What the layer does not contain is support for the late-invention thesis. Even the skeptics who contest Motzki's lower layers concede functioning chains around and above the pivots' generation, because the collectors' own chains force the concession. The open question is about accuracy inside the chains, and the closed one is about the existence of the chains.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">Conceding the open layer costs the argument nothing, because the thesis defended here is about the institution, its century, and its city. The six pivots and the 680s floor carry that thesis without touching the disputed layer beneath them.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c2">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">One Strand Is Still One Strand</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t5c2">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Open question:</strong> whether the verbatim wording of the fitna report of Ibn Sīrīn is his, or a later Baghdadi composition</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Bottleneck</h5>
+                                        <p class="mb-2 text-gray-600">The 2018 Al-Qantara study assembles every known chain of the fitna report and finds them converging on one man: Ismāʿīl b. Zakariyyāʾ, a Kūfan who taught in Baghdad and died in 173 AH. Above him the strands thin into single lines. The corpus agrees with the shape of the bottleneck: Ibn Ḥanbal's chain reaches the report through Muḥammad b. al-Ṣabbāḥ from Ismāʿīl, and Ibn Maʿīn, the great critic, is on record that Ismāʿīl was its transmitter.</p>
+                                        <p class="mb-2 text-gray-600">A bottleneck reads two ways. It can mean one faithful student preserving a report his peers neglected, which happens constantly in transmission. It can mean one originator putting his own saying into a dead man's mouth, which also happens. Ibn Maʿīn's testimony strengthens the bottleneck, and with it both readings at once.</p>
+                                        <p class="text-gray-600">The verbatim wording of the fitna report should therefore be held lightly, and the argument above holds it that way. Its load rests on the triple agreement documented in the other tabs: a Kūfan report with a different chain, a Shia heresiographical clock, and the structural ceiling of the six. None of those three depends on Ibn Sīrīn's exact words.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">Granting the bottleneck its full skeptical weight removes one witness and leaves the case standing. The dating of the institution never leaned on this report alone, which is the difference between an argument and a slogan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c3">
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Words Are Younger Than the Practice</h4>
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <div class="accordion-content" id="t5c3">
+                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                    <div class="premise-card space-y-1">
+                                        <p class="text-sm"><strong>Open question:</strong> whether the paired labels in the fitna report are older than third-century theology</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">The Terminological Objection</h5>
+                                        <p class="mb-2 text-gray-600">The fitna report sorts transmitters with a paired formula: the people of the sunna against the people of innovation. That pairing smells of the theological catalogues of the third century, and the 2018 study leans on the scent, arguing the whole report was coined after the vocabulary was. John Nawas has shown that the label upholder of the sunna surfaces in the second century and spreads in the third.</p>
+                                        <p class="mb-2 text-gray-600">The objection has real force against the wording, and the wording has already been set aside in the previous item. Against the dating of the institution it has little to say, because the concept outruns the formula in the record. Speeches placed at the battle of Ṣiffīn, in 37 AH, already oppose killing the sunna and reviving innovation, in the chronicles of al-Ṭabarī and al-Balādhurī, loci preserved in the 2018 study and outside the corpus used here.</p>
+                                        <p class="text-gray-600">Phrases crystallize after the realities they name; that is the ordinary history of every technical vocabulary. And the two anchors that carry the dating argued here, the days of al-Mukhtār report and the Kaysāniyya schism, use no such pairing at all. The institution's birthday is recorded in words that nobody dates late.</p>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">What Follows</h5>
+                                        <p class="font-semibold text-gray-800">A late formula proves a late formula. The evidence for the early practice of the isnād was never the formula, and the strongest dating witnesses work without it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLOSSARY -->
+            <div id="glossary-section" class="mt-12">
+                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
+                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
+                        <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content" id="glossary-content">
+                        <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            <p><strong>isnād (plural asānīd):</strong> the chain of named transmitters attached to a report, running from the writer of the book back to the original speaker. The word comes from the verb sanada, to lean something on a support: the report leans on its chain.</p>
+                            <p><strong>matn:</strong> the text of a report, the words attributed to the original speaker. The isnād carries the matn; criticism examines both.</p>
+                            <p><strong>Successor (tābiʿī, plural tābiʿūn):</strong> a Muslim of the generation after the Companions, who learned from Companions of the Prophet <span class="honorific">ﷺ</span> without having seen the Prophet <span class="honorific">ﷺ</span> himself.</p>
+                            <p><strong>rijāl criticism:</strong> the evaluation of transmitters (rijāl, the men of the chains) by name, checking their reliability, their meetings with their teachers, and their doctrine. Books of rijāl are the biographical dictionaries of the transmitters.</p>
+                            <p><strong>fitna:</strong> literally a trial or smelting of metal; in the sources of the first two centuries it is the standing word for civil war and communal upheaval.</p>
+                            <p><strong>mursal (plural marāsīl):</strong> a report whose chain skips the Companion and stops at a Successor; weak in form, though the marāsīl of careful transmitters were ranked above those of careless ones.</p>
+                            <p><strong>common link:</strong> in modern analysis, the transmitter at whose teaching career the chains of many later collectors meet. A dense bundle of chains through one teacher points to a real career of teaching, and the common links of the canonical books are the six men of Tab 2.</p>
+                            <p><strong>zindīq (plural zanādiqa):</strong> a heretic or dualist hostile to Islam; in hadith criticism, a byword for the deliberate forger of prophetic reports.</p>
+                            <p><strong>ghulāt (singular ghālī):</strong> extremists who exaggerated the religious status of ʿAlī <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span>; both Sunni and Shia orthodoxy reject them.</p>
+                            <p><strong>Kaysāniyya:</strong> the followers of al-Mukhtār who held the imamate of Muḥammad b. al-Ḥanafiyya, son of ʿAlī <span class="honorific">﵇</span>, and awaited his return; the first sect to split from the Imāmi line.</p>
+                            <p><strong>uṣūl (al-uṣūl al-arbaʿumiʾa):</strong> the four hundred foundational notebooks of early Imami hadith, each usually the collection of one author's reports from the Imams <span class="honorific">﵈</span>, composed before the minor occultation of 260 AH.</p>
+                            <p><strong>ahl al-sunna and ahl al-bidʿa:</strong> the people of inherited practice and the people of innovation; a paired label for acceptable and unacceptable transmitters whose wording belongs to the theological vocabulary of the second and third centuries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hash-open script -->
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var item = el.closest('.accordion-item');
+                    if (item) {
+                        var pane = item.closest('.tab-pane');
+                        if (pane) {
+                            var btn = document.querySelector("[data-target='" + pane.id + "']");
+                            if (btn) btn.click();
+                        }
+                        var header = item.querySelector('.accordion-header');
+                        var content = item.querySelector('.accordion-content');
+                        if (header && content && !item.classList.contains('open')) {
+                            document.querySelectorAll('.accordion-item.open').forEach(function (o) {
+                                if (o !== item) {
+                                    o.classList.remove('open');
+                                    o.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                                    o.querySelector('.accordion-content').style.maxHeight = '0px';
+                                }
+                            });
+                            item.classList.add('open');
+                            header.setAttribute('aria-expanded', 'true');
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        }
+                    }
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+
+            <!-- FINAL VERDICT -->
+            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700 mb-4">The isnād was an old institution before the second century closed, and the late-invention thesis explains the evidence only by discarding it. The chains converge on six teachers dead by 148 AH, spread over four cities, remembered by rival collections that agreed on little else; convergence of that width cannot be manufactured after their deaths. Two independent traditions, Kūfan Sunni and Imami Shia, date the first questioning of transmitters to the decade of al-Mukhtār, 66-67 AH (685-687 CE). The forgery waves that made such questioning necessary are dated to those same years by both camps, and a system built to answer forgeries cannot be younger than the forgeries it answers.</p>
+                    <p class="text-lg text-gray-700">What remains open is narrower than the skeptics claimed: the reliability of individual names below the six pivots, and the exact wording of the famous report of Ibn Sīrīn. The institution itself stands inside the first century, in Kūfa, born from the crisis that al-Mukhtār's revolt created.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const target = e.currentTarget.dataset.target;
+
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    e.currentTarget.classList.add('active');
+                    e.currentTarget.setAttribute('aria-selected', 'true');
+
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+
+                header.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+
+                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
+                    if (parentAccordion) {
+                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
+                            if (i !== item) {
+                               i.classList.remove('open');
+                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                               i.querySelector('.accordion-content').style.maxHeight = '0px';
+                            }
+                        });
+                    }
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        header.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('open');
+                        header.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0px';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
+    </footer>
+</body>
+</html>
