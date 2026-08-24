@@ -35,28 +35,6 @@
             font-size: 0.75em;
             line-height: 1;
         }
-        .tab.active {
-            border-color: #B99C6B;
-            color: #8A6D3B;
-            background-color: #FDFBF7;
-        }
-        .accordion-header {
-            transition: background-color 0.2s ease;
-        }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
         .rtl {
             direction: rtl;
             text-align: right;
@@ -132,21 +110,68 @@
             border-radius: 0.5rem;
             padding: 1.5rem;
         }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Exegetical Analysis</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Why the Prophet Forbade What God Made Lawful</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">Why the Prophet Forbade What God Made Lawful</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Quran 66:1 as oath, self-denial, and release: the evidence from the lexicons, the poets, and the hadith of the Ahl al-Bayt <span class="honorific">﵈</span></p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab0" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Language</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. The Quran and the</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. The Scholarly Dis</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
 
         <main data-category="debate">
             <!-- THESIS -->
@@ -157,7 +182,7 @@
                 </div>
             </section>
 
-            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
                 <p class="text-sm text-gray-500 mb-6">Every row links into the section carrying the detail. The Qualifier column preserves how firmly the page's sources state each claim.</p>
                 <div class="analysis-section">
@@ -275,18 +300,11 @@
             </section>
 
             <!-- TAB NAV -->
-            <div class="mb-8 border-b border-[#E7E0D1]">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="tab0" role="tab" aria-controls="tab0" aria-selected="true">Overview</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="false">1. The Language</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. The Quran and the Hadith</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. The Scholarly Discussion</button>
-                </nav>
-            </div>
-
             <div id="tab-content">
                 <!-- TAB 0: OVERVIEW -->
-                <div id="tab0" class="tab-pane active" role="tabpanel">
+                <section id="tab0" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Overview</h2>
+
                     <section class="p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                         <div class="analysis-section">
                             <h5 class="analysis-heading">The Question the Sura Opens With</h5>
@@ -334,10 +352,12 @@
                             </div>
                         </div>
                     </section>
-                </div>
+                </section>
 
                 <!-- TAB 1: THE LANGUAGE -->
-                <div id="tab1" class="tab-pane hidden" role="tabpanel">
+                <section id="tab1" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Language</h2>
+
                     <p class="mb-6 text-gray-600">The dispute turns on two verbs: tuḥarrimu, you forbid, from the root h-r-m, and aḥalla, God made lawful, from h-l-l. The lexicons give the anatomy of both roots, and the pre-Islamic poets show them alive in ordinary speech, long before any creed had a stake in this verse. The witnesses stand in the open below; the running analysis that binds them sits in the Commentary at the end of the tab.</p>
 
                     <h3 class="section-heading">The Root That Bars</h3>
@@ -451,13 +471,10 @@
 
                     <!-- COMMENTARY for this tab -->
                     <div id="commentary-tab1" class="commentary-group mt-8">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="commentary-content-tab1">
-                                <h4 class="font-serif text-xl font-bold text-[#3D4451]">Commentary</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="commentary-content-tab1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                        <article id="commentary-content-tab1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Commentary</h3>
+>
                             <div class="analysis-section">
                                 <h5 class="analysis-heading">The Verbs Track the Person</h5>
                                 <p class="text-gray-700">Halal and haram in Arabic mark a person's access to a thing, and Antara's couplet proves it by contradiction. The woman is figured as a wild cow of the chase. The first hemistich addresses her from the standpoint of the man who lawfully has her: for him the hunt is over, since the lawful thing is the attained thing, with nothing left to pursue. The second hemistich, in the same breath, gives her the opposite standing from the poet's own. Nothing in the woman changed between the two halves; the verbs record two men's access to one object, and no listener of the age took the poet for a legislator. Now lay Quran 66:1 over the couplet. The verse says the Prophet <span class="honorific">ﷺ</span> barred what God made lawful for you, the relational form, God's permission addressed to one man, and the same man's barring of himself. Two standings over one object: God's open knot, and the Prophet's <span class="honorific">ﷺ</span> closed one. The question of the verse is put to the second standing only; the first, what God made lawful, the verse treats as fixed and untroubled from beginning to end.</p>
@@ -475,13 +492,14 @@
                                 <p class="text-gray-700">Behind the lexicon's gloss stands the caravan: the loads come off the animals, the hobbles come off the legs, the tent ropes go slack. The camp is named for the act of untying, and to settle, in Arabic, is to untie; the language cannot describe arrival except as release. When the Quran wants a word for a thing open to use it takes it from this root, and the same derivation produces the verb of 66:2 that undoes an oath: taḥillat al-aymān is the root's own settled term for the untying of a sworn knot, in continuous use since before Islam. The everyday words for spouse belong to the same family: the lawful wife and the lawful husband are the people whose knot stands open to each other. Al-Raghib hears the verb of 66:1 as a question about the Prophet's <span class="honorific">ﷺ</span> own declaration over a thing, a pronouncing of prohibition, which is precisely the shape the hadith give the act: a declaration, and an oath upon it. A declaration binds the declarer; it reaches no one else, and it touches the thing's standing before God not at all, because the standing belongs to the God who opened it. Read with both roots, the sura's opening pair is one physics seen twice: a knot God left open, and the same cord pulled shut by a hand, and the same cord coming open again through the release of oaths.</p>
                             </div>
                                 </div>
-                            </div>
-                        </div>
+                            </article>
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 2: THE QURAN AND THE HADITH -->
-                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                <section id="tab2" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. The Quran and the Hadith</h2>
+
                     <p class="mb-6 text-gray-600">The Quran sorts every act of forbidding into three registers, and it assigns the Prophet <span class="honorific">ﷺ</span> to none of the ones that carry blame. Once the registers are clear, the hadith of the Ahl al-Bayt <span class="honorific">﵈</span> fix which act the verse addressed: an oath, with its release already legislated.</p>
 
                     <h3 class="section-heading">The Verse and the Release That Follows It</h3>
@@ -574,13 +592,10 @@
 
                     <!-- COMMENTARY for this tab -->
                     <div id="commentary-tab2" class="commentary-group mt-8">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="commentary-content-tab2">
-                                <h4 class="font-serif text-xl font-bold text-[#3D4451]">Commentary</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="commentary-content-tab2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                        <article id="commentary-content-tab2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Commentary</h3>
+>
                             <div class="analysis-section">
                                 <h5 class="analysis-heading">The Three Registers and the Grammar of the Verse</h5>
                                 <p class="text-gray-700">The same forbidding verb runs through three registers in the Quran, and the middle one must be read with care, because it carries a prohibition. In 5:87 ordinary believers are told not to forbid themselves the good things God made lawful. The address there is a command against the act, and the blame it names falls on the excess that follows the abstention: do not transgress. What the verse prohibits is treating God's permissions as a thing a man may lock away from himself; it does not name the self-barring itself a sin against God's authority, and it does not charge its addressees with forgery. In 10:59 the question did God authorize you defines a different crime outright: forgery, legislating where God had not, framed for a people who declared foods forbidden as a ruling. Place 66:1 between them. The verse's grammar is the self-directed barring of 5:87's world, a man closing something on himself; and the authorization question of 10:59, the forgery charge, is never put to the Prophet <span class="honorific">ﷺ</span> anywhere in the Book. Two consequences follow. A reading that takes 66:1 as an accusation of legislating against God must import the forgery register, which the verse does not carry. And the 5:87 parallel cuts against the Prophet in one respect that candor requires naming: addressed to anyone else, the act would draw that verse's prohibition. What dissolves the asymmetry is not privilege but the two institutions the Qur'an itself keeps apart. The vow to abstain is the permitted oath institution that 66:2 itself legislates for and names, tahillat aymānikum; what 5:87 prohibits is the locking away of God's permissions as though what God opened were barred. The Prophet's recorded act belongs to the first institution by its form, a sworn personal abstention cleared on the oath's scale, and never to the second by any record. The interruption came from heaven in the oath's own channel, and the amends that followed are the oath's own amends.</p>
@@ -606,13 +621,14 @@
                                 <p class="text-gray-700">The Imam's <span class="honorific">﵇</span> ruling on the ordinary man is that his declaration accomplishes nothing: no divorce enters upon it, and no amends. Its only content is a lie, he claims that what God made lawful for him is forbidden. Read the severity carefully, because it locates the sin with precision: the sin of a false tahrim is the attribution, the assertion that what God made lawful is barred. The abstention itself harms no one in law. Zurara's objection then supplies the test case, and the answer separates the two acts the Prophet <span class="honorific">ﷺ</span> performed. He forbade his bondswoman Marya to himself, and he swore that he would not approach her. The amends were laid upon him only for the oath, and nothing was laid upon him for the forbidding. The silence must be read with precision, because the reading cuts both ways, and candor reads it both ways. In Zurara's case the same silence, no amends for the tahrim, accompanies an explicit verdict of lie; so the absence of amends by itself proves nothing either way, and the Imam's severity there is the measure of what a claiming tahrim is. What separates the Prophet's <span class="honorific">ﷺ</span> act from the Imam's hypothetical liar is therefore not the silence but the record around it: the Qur'an's own sequel. Zurara's liar is condemned out of his own mouth, he claims that what God made lawful is forbidden; and nothing in any record of 66:1 puts such a claim in the Prophet's <span class="honorific">ﷺ</span> mouth, while the Qur'an itself classifies what he did perform under the oath's name and settles it with the oath's amends, closing with forgiveness and mercy rather than the monstrous word it speaks over the zihar. The classification, not the silence, carries the conclusion: the Qur'an itself sorted the act into the oath channel, and an oath claims nothing about God's law.</p>
                             </div>
                                 </div>
-                            </div>
-                        </div>
+                            </article>
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 3: THE SCHOLARLY DISCUSSION -->
-                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                <section id="tab3" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. The Scholarly Discussion</h2>
+
                     <p class="mb-6 text-gray-600">The exegetes of the school put the sin question to the verse directly and answer it in set terms. Their verdicts hold across both variant occasions of the sura, and the one flag of caution in the corpus concerns the political details of the occasion report, never its legal core.</p>
 
                     <h3 class="section-heading">Al-Jaza'iri: No Indication of Sin</h3>
@@ -651,13 +667,10 @@
 
                     <!-- COMMENTARY for this tab -->
                     <div id="commentary-tab3" class="commentary-group mt-8">
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="commentary-content-tab3">
-                                <h4 class="font-serif text-xl font-bold text-[#3D4451]">Commentary</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="commentary-content-tab3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                        <article id="commentary-content-tab3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Commentary</h3>
+>
                             <div class="analysis-section">
                                 <h5 class="analysis-heading">The Scholarly Verdict and Where Blame Falls</h5>
                                 <p class="text-gray-700">Al-Jaza'iri makes three moves. First, a direct ruling in the negative: there is in it no indication that a sin occurred from him. Second, the reason: a man's forbidding to himself one of his wives or some pleasure, for a cause or without one, is free of ugliness. Third, the genre of the verse's question: it may have come forth in the mode of sympathy, for a man who went to great lengths to please his wives and bore the hardship of it. His parallel makes the grammar plain: a man who pleases one wife by divorcing another may be asked why did you do that, though the act is free of ugliness. The question why interrogates motive and cost; it does not convict. And the variant occasions change nothing: whether the thing barred was Marya or a honey drink, the vow-form carries the amends and the tahrim itself carries nothing. The sura's own structure agrees on where fault is laid: the repentance verse addresses the two wives who carried a confidence abroad, and the backing verse arrays God, Gabriel, Ali <span class="honorific">﵇</span> named as the salih of the believers, and the angels behind the Prophet <span class="honorific">ﷺ</span>.</p>
@@ -683,10 +696,9 @@
                                 <p class="font-semibold text-gray-800">Consider the sequence the sources give. A personal abstention occurs, under oath. Revelation intervenes at once, before the abstention can settle into precedent, and the intervention takes the form of a question about motive and an exit through the release of oaths, with the amends that are the oath's own remedy: feeding ten poor people. The community thereby learns, inside the sura itself, that no vow of any man, the Prophet's <span class="honorific">ﷺ</span> own included, can narrow what God has left open; the record publishes the episode together with its correction, and nothing is carved away. The sura closes its address over the Prophet <span class="honorific">ﷺ</span> with forgiveness and mercy, and turns its severity on the two wives and the scheming. That is what protection looks like in action on the school's reading: an abstention corrected within two verses, a community taught the limits of vows, and mercy sealing the address.</p>
                             </div>
                                 </div>
-                            </div>
-                        </div>
+                            </article>
                     </div>
-                </div>
+                </section>
             </div>
 
             <!-- GLOSSARY (open, not an accordion) -->
@@ -706,99 +718,78 @@
             </section>
 
             <!-- FINAL VERDICT -->
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
                     <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
                     <p class="text-lg text-gray-700">At Quran 66:1 the Prophet <span class="honorific">ﷺ</span> issued no ruling and broke none. He barred a lawful thing from himself under oath, and the God who had already ordained the release of oaths invited him into it, and he entered it, feeding ten poor persons, a mudd each. The verbs of the verse were the poets' verbs before they were the jurists': Antara's gazelle is lawful to one man and forbidden to another in the same breath, and the poets barred, guarded, and surveyed partitions without ever issuing one. The Imam's <span class="honorific">﵇</span> ruling fixes that grammar in law: the tahrim of a man binds only the man, and where it presumes to recast what God made lawful, the presumption is a lie. The Prophet's <span class="honorific">ﷺ</span> forbidding presumed nothing; he abstained, he swore, and he was released. The blame of the sura falls on two wives who carried a confidence abroad, and the address that opened with a question closes over the Prophet <span class="honorific">ﷺ</span> with forgiveness and mercy. On the school's reading the verse is the protection at work: revelation intervened the moment a private abstention threatened to read as precedent, and the lesson it published stands for everyone after him, that no vow of any man, the Prophet's <span class="honorific">ﷺ</span> own included, can narrow what God has left open.</p>
                 </div>
             </footer>
-        </main>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab');
-            const panes = document.querySelectorAll('.tab-pane');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const target = e.currentTarget.dataset.target;
-
-                    tabs.forEach(t => {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    e.currentTarget.classList.add('active');
-                    e.currentTarget.setAttribute('aria-selected', 'true');
-
-                    panes.forEach(pane => {
-                        if (pane.id === target) {
-                            pane.classList.remove('hidden');
-                            pane.classList.add('active');
-                        } else {
-                            pane.classList.add('hidden');
-                            pane.classList.remove('active');
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
                         }
                     });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
                 });
-            });
-
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, .commentary-group');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
-        });
-    </script>
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
+                        }
+                    });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+        </main>
+    </div>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
 
-    <script>
-    (function () {
-        function openHash() {
-            var id = decodeURIComponent(location.hash.slice(1));
-            if (!id) return;
-            var el = document.getElementById(id);
-            if (!el) return;
-            var pane = el.closest('.tab-pane') || el.closest('.accordion-item');
-            if (pane && pane.classList.contains('tab-pane')) {
-                var btn = document.querySelector('[data-target="' + pane.id + '"]');
-                if (btn) btn.click();
-            }
-            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
-        }
-        window.addEventListener('hashchange', openHash);
-        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
-    })();
-    </script>
-</body>
+    </body>
 </html>

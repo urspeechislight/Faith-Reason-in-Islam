@@ -100,24 +100,52 @@
             font-weight: 700;
             color: #8A6D3B;
         }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10 flex justify-between items-center">
-            <a href="light-of-prophet.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; The Light of the Prophet</a>
-            <div class="flex gap-4">
-                <a href="light-of-prophet-7.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Previous: Part 7</a>
-            </div>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith of the Light</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">The Full Genealogy</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">The Full Genealogy</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">All forty-two generations from Adam to Muhammad <span class="honorific">ﷺ</span>, traced through Bihar al-Anwar Volume 15.</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+            </nav>
+        </div>
 
         <main data-category="narration">
             <section class="mb-8">
@@ -258,6 +286,43 @@
 
                 </div>
             </section>
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
+                        }
+                    });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
         </main>
 
         <footer class="mt-16 pt-8 border-t border-[#E7E0D1]">
@@ -270,23 +335,5 @@
         });
     </script>
 
-    <script>
-    (function () {
-        function openHash() {
-            var id = decodeURIComponent(location.hash.slice(1));
-            if (!id) return;
-            var el = document.getElementById(id);
-            if (!el) return;
-            var pane = el.closest('.tab-pane') || el.closest('.accordion-item');
-            if (pane && pane.classList.contains('tab-pane')) {
-                var btn = document.querySelector('[data-target="' + pane.id + '"]');
-                if (btn) btn.click();
-            }
-            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
-        }
-        window.addEventListener('hashchange', openHash);
-        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
-    })();
-    </script>
-</body>
+    </body>
 </html>

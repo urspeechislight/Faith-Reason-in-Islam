@@ -106,21 +106,61 @@
             border-radius: 0.5rem;
             padding: 1.5rem;
         }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith Analysis</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Do Not Marry al-Hasan: A Fabricated Narration</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">Do Not Marry al-Hasan: A Fabricated Narration</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Chain criticism, arithmetic evidence, and the principle of al-rushd fi khilafihim applied to the "mutallaq" report</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab0" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Narration and</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. The Numbers Problem</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. Scholarly Refutat</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. The Shia Corpus D</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. Right Guidance in</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
 
         <main data-category="debate">
             <!-- THESIS -->
@@ -131,7 +171,7 @@
                 </div>
             </section>
 
-            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
                 <p class="text-sm text-gray-500 mb-6">Every row links into the section carrying the detail. The Qualifier column preserves how firmly the page's sources state each claim.</p>
                 <div class="analysis-section">
@@ -248,20 +288,11 @@
                 </div>
             </section>
 
-            <div class="mb-8 border-b border-[#E7E0D1]">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-base md:text-lg" data-target="tab0" role="tab" aria-controls="tab0" aria-selected="true">Overview</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="false">1. The Narration and Its Chain</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. The Numbers Problem</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. Scholarly Refutations</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. The Shia Corpus Dilemma</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. Right Guidance in Opposition</button>
-                </nav>
-            </div>
-
             <div id="tab-content">
                 <!-- TAB 0: OVERVIEW -->
-                <div id="tab0" class="tab-pane active" role="tabpanel">
+                <section id="tab0" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Overview</h2>
+
                     <section class="p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                         <div class="analysis-section">
                             <h5 class="analysis-heading">What the Report Claims</h5>
@@ -292,9 +323,11 @@
                             </div>
                         </div>
                     </section>
-                </div>
+                </section>
                 <!-- TAB 1: THE NARRATION AND ITS CHAIN -->
-                <div id="tab1" class="tab-pane hidden" role="tabpanel">
+                <section id="tab1" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Narration and Its Chain</h2>
+
                     <p class="mb-6 text-gray-600">The report appears in Ibn Sa'd's <em>Tabaqat</em> as a cluster of three related narrations. Every variant passes through a single narrator whose reliability was destroyed by the greatest Sunni hadith critics.</p>
                     <div id="tab1-cards" class="space-y-4">
 
@@ -414,10 +447,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 2: THE NUMBERS PROBLEM -->
-                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                <section id="tab2" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. The Numbers Problem</h2>
+
                     <p class="mb-6 text-gray-600">A defining feature of this fabrication is the progressive inflation of al-Hasan's <span class="honorific">﵇</span> wife count across sources. What began as a report of several marriages grew to absurd proportions.</p>
                     <div id="tab2-cards" class="space-y-4">
 
@@ -500,10 +535,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 3: SCHOLARLY REFUTATIONS -->
-                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                <section id="tab3" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. Scholarly Refutations</h2>
+
                     <p class="mb-6 text-gray-600">Shia scholars across centuries have rejected this narration on multiple grounds. The arguments range from chain criticism to the argument from silence to character evidence.</p>
                     <div id="tab3-cards" class="space-y-4">
 
@@ -612,10 +649,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 4: THE SHIA CORPUS DILEMMA -->
-                <div id="tab4" class="tab-pane hidden" role="tabpanel">
+                <section id="tab4" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. The Shia Corpus Dilemma</h2>
+
                     <p class="mb-6 text-gray-600">The narration appears in al-Kafi itself, the most authoritative Shia hadith collection. Shia scholars cannot dismiss it as a Sunni fabrication. Their responses range from arithmetic refutation to chain criticism to the application of methodological principles.</p>
                     <div id="tab4-cards" class="space-y-4">
 
@@ -722,10 +761,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 5: RIGHT GUIDANCE IN OPPOSITION -->
-                <div id="tab5" class="tab-pane hidden" role="tabpanel">
+                <section id="tab5" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">5. Right Guidance in Opposition</h2>
+
                     <p class="mb-6 text-gray-600">A well-established principle in Shia hadith methodology holds that when a report is popular among the Mukhalifeen and serves an anti-Ahl al-Bayt agenda, the truth lies in its opposite. The principle is called <em>al-rushd fi khilafihim</em>: right guidance lies in opposing them.</p>
                     <div id="tab5-cards" class="space-y-4">
 
@@ -865,7 +906,7 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
             </div>
 
             <div id="glossary-section" class="mt-12">
@@ -889,7 +930,7 @@
                 </div>
             </div>
 
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
                     <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
@@ -897,61 +938,49 @@
                     <p class="text-sm text-gray-500 mt-4">Sources: Ibn Sa'd, Tabaqat (ed. al-Tabataba'i, Qum); Ibn Asakir, Tarikh Madinat Dimashq, Vol. 54; Al-Kulayni, al-Kafi, Vol. 6; Al-Majlisi, Bihar al-Anwar, Vols. 43-44; Al-Qarashi, Hayat al-Imam al-Hasan; Al-Hasani, Sira al-A'imma; Al-Maliki, al-Fusul al-Muhimma; Al-Khurāsānī, Kifayat al-Usul; Al-Khu'i, al-Ra'y al-Sadid.</p>
                 </div>
             </footer>
-        </main>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab');
-            const panes = document.querySelectorAll('.tab-pane');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const target = e.currentTarget.dataset.target;
-
-                    tabs.forEach(t => {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    e.currentTarget.classList.add('active');
-                    e.currentTarget.setAttribute('aria-selected', 'true');
-
-                    panes.forEach(pane => {
-                        if (pane.id === target) {
-                            pane.classList.remove('hidden');
-                            pane.classList.add('active');
-                        } else {
-                            pane.classList.add('hidden');
-                            pane.classList.remove('active');
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
                         }
                     });
-                });
-            });
-
-        });
-    </script>
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+        </main>
+    </div>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
 
-    <script>
-    (function () {
-        function openHash() {
-            var id = decodeURIComponent(location.hash.slice(1));
-            if (!id) return;
-            var el = document.getElementById(id);
-            if (!el) return;
-            var pane = el.closest('.tab-pane') || el.closest('.accordion-item');
-            if (pane && pane.classList.contains('tab-pane')) {
-                var btn = document.querySelector('[data-target="' + pane.id + '"]');
-                if (btn) btn.click();
-            }
-            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
-        }
-        window.addEventListener('hashchange', openHash);
-        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
-    })();
-    </script>
-</body>
+    </body>
 </html>

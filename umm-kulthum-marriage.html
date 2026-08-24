@@ -45,17 +45,6 @@
             color: #8A6D3B;
             background-color: #FDFBF7;
         }
-        .commentary-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease-in-out;
-        }
-        .commentary-accordion .chevron {
-            transition: transform 0.3s ease;
-        }
-        .commentary-accordion.open .chevron {
-            transform: rotate(180deg);
-        }
         .commentary-toggle {
             transition: background-color 0.2s ease;
         }
@@ -135,25 +124,66 @@
             border-radius: 0.5rem;
             padding: 1.5rem;
         }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith Analysis &middot; The Seizure Narration</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Umm Kulthum and Umar: The Seizure and the Fabricated Identification</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">Umm Kulthum and Umar: The Seizure and the Fabricated Identification</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Shia sources describe it as a seizure. Sunni sources document the coercion. The bride's identity rests on the word of the man who said he would fabricate witnesses.</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#argument" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Name Umm Kult</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. What the School's</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. Readings of the S</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. The Claim Examined</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. Their Own Books</a>
+                <a href="#tab6" class="navlink text-sm md:text-base py-3 flex-shrink-0">6. The Verdict of th</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
 
         <main data-category="debate">
             <!-- INTRO CARD -->
-            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="argument" class="content-section mb-12 mt-8 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
                 <div class="analysis-section">
                     <h5 class="analysis-heading">The Charge and the Six Steps</h5>
@@ -189,7 +219,7 @@
                 </div>
             </section>
 
-            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
                 <p class="text-sm text-gray-500 mb-6">Every row links into the section carrying the detail. The Qualifier column preserves how firmly the page's sources state each claim.</p>
                 <div class="analysis-section">
@@ -307,20 +337,11 @@
             </section>
 
             <!-- TAB NAV -->
-            <div class="mb-8 border-b border-[#E7E0D1]">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-base md:text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="true">1. The Name Umm Kulthum</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. What the School's Reports Establish</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. Readings of the Seizure</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. The Claim Examined</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. Their Own Books</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab6" role="tab" aria-controls="tab6" aria-selected="false">6. The Verdict of the School</button>
-                </nav>
-            </div>
-
             <div id="tab-content">
 
-                <div id="tab1" class="tab-pane active" role="tabpanel">
+                <section id="tab1" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Name Umm Kulthum</h2>
+
                     <p class="mb-6 text-gray-600">Before examining any report, the name itself must be settled. Classical dictionaries and poets define what Umm Kulthum means. The sunna of the kunya, a teknonymic name, fixes how such an appellation is acquired. The record shows the name was borne by several women of the same households at once. This section fixes the term. Everything after builds on it.</p>
                     <div id="tab1-cards" class="space-y-4">
 
@@ -354,20 +375,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c9" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">Earned at a Cradle, Un-earned at a Grave</p>
                                                         <p class="text-gray-700">Uthman's case is decisive. His kunya was a live index of a living child. When the boy Abdullah died, the community re-kunya'd him. A kunya is earned at a son's cradle. It can be un-earned at his grave. Any woman bearing the kunya Umm Kulthum either had a child named Kulthum. Or she received the appellation from those who named her.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -390,21 +405,15 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c10" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Rule and Its Exception</p>
                                                         <p class="text-gray-700">Two facts stand in this hadith. The exception: the Imams' <span class="honorific">﵈</span> household did kunya its children young, as a shield against taunts. So a child's kunya is normal in that house. The rule: a kunya belongs, by sunna, to one who has a household. Both converge on the point this case needs. Whether a child's kunya is earned by a son or conferred protectively, it arrives by other people's mouths. A kunya worn by the young is a designation, not a biography. It certifies no child, no marriage, no motherhood, no lineage.</p>
                                                         <p class="text-gray-700">Apply this to the girl at issue. Prepubescent at the proposal, she had no son named Kulthum. She had no child, no household. Umm Kulthum was not a kunya she had earned. It was a name conferred by the adults around her. That matters once it is asked who supplies the identification in each narration. In the Imami texts the Imam <span class="honorific">﵇</span> uses the bare name Umm Kulthum with no lineage attached. The lineage arrives only from the man making the demand.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -452,13 +461,9 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c11" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">One Word, Three Uses</p>
                                                         <p class="text-gray-700">All the dictionary entries point at one simple idea: gathered, rounded fullness. The word kalthama means flesh gathering in the face. Cheeks fill out until the face shows its circles. The dictionaries insist this fullness is beautiful, but only up to a point. It must not slide into jahuma, a heavy, scowling look. Full cheeks on a young woman bring praise. Too much fullness on the wrong face is a flaw.</p>
@@ -471,14 +476,14 @@
                                                         <p class="text-gray-700">Put the three findings side by side. They decide what the appellation can prove. First, the dictionaries end their entries by filing the name itself. Umm Kulthum is "a woman's kunya" (al-Jawhari) and "a woman" (Ibn Sida). They treat it as a fixed name of the language, like a surname. It is not a certificate that the bearer had a baby boy named Kulthum. Second, everything the word means belongs to grown fullness. Full cheeks, the poet's line about a grown woman's body, the elephant's mass. A little girl who had not yet reached puberty carried a name that describes a mature body she did not yet have. That matches the earlier finding that children in that household were given kunyas protectively, by the adults around them. The name was conferred on her, not earned by her. Third, since men were named Kulthum too, even the mother-of form tells us nothing certain about her children. The name, on its own, cannot identify a bride. And the polemic needs it to do exactly that.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                <section id="tab2" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. What the School's Reports Establish</h2>
+
                     <p class="mb-6 text-gray-600">The Imami case does not need to prove what the polemic imagines. It needs only what the school's own reports carry. A woman of the name Umm Kulthum was taken to Umar's house under coercion. Umar died. The Imam <span class="honorific">﵇</span> retrieved her the same hour. On the school's early authorities, Umar died before the union was ever consummated. No lineage claim is needed. No willing giving is asserted. None of the reports makes one.</p>
                     <div id="tab2-cards" class="space-y-4">
 
@@ -524,20 +529,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c1" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Chain and the Word It Carries</p>
                                                         <p class="text-gray-700">The chain deserves attention. The polemic treats this report as an embarrassment. Ali ibn Ibrahim and his father Ibrahim ibn Hashim. Ibn Abi Umayr. Hisham ibn Salim. Hammad ibn Uthman. Zurara ibn A'yan. These are pillars of the school's transmission. And the word they carry is ghasb. In the jurists' language, ghasb is not a mood or a slur. It is the legal category for taking what belongs to another by force against the owner's will. The Imam <span class="honorific">﵇</span> was asked about a marriage. He answered with the name of a crime.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -558,20 +557,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c2" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">Four Facts in the Text</p>
                                                         <p class="text-gray-700">Four facts in this text undercut the willing-marriage reading. First, Ali's <span class="honorific">﵇</span> recorded answer is a refusal on the girl's age. He calls her sabiyya, a child. Second, the refused suitor did not return to the father. He escalated to the family elder, al-Abbas. Third, his oath names the method. Ruin Zamzam. Demolish Banu Hashim's honors. Two purchased witnesses. The cutting of Ali's <span class="honorific">﵇</span> right hand. Fourth, the outcome is delegation under threat. Ali <span class="honorific">﵇</span> handed the matter to al-Abbas because contracting it himself had become impossible. A father who wishes to give his daughter negotiates her dowry. A father who cannot safely refuse hands the papers to his uncle.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -598,13 +591,9 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c3" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">Reading the Retrieval</p>
                                                         <p class="text-gray-700">Ali <span class="honorific">﵇</span> did not wait out the customary periods. The Imam of the age describes him arriving on the day of death, taking the girl by the hand, and walking her out. A widowed daughter returning home is ordinary. A father who reclaims her within the hour is ending an arrangement. The same canon's word for how that arrangement began was seizure.</p>
@@ -628,8 +617,6 @@
                             <p class="text-gray-700">Their own corpus documents Umar pursuing the name Umm Kulthum in that household twice. It documents the lineage motive steering which one he got. So the retrieval certifies guardianship over someone called Umm Kulthum. Which someone, the bare name cannot fix. Every branch the record offers shows the same two figures: a guardian and a dependent. The branches are: daughter by another mother, ward, stepdaughter, or the claimed daughter of Fatima <span class="honorific">﵍</span> herself. On no branch does the scene yield a willing marriage. The question the polemic needs the hadith to answer is whose daughter was willingly given. That is a question the hadith never addresses.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -692,20 +679,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c4" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Spread Beyond the Graders</p>
                                                         <p class="text-gray-700">Beyond the graders, the report's spread confirms its standing. Al-Hurr al-Amili carries both hadiths in Wasa'il al-Shia. Al-Fayd al-Kashani carries them in al-Wafi. Al-Majlisi reproduces the chapter in Mir'at al-Uqul. And al-Attardi compiles them in Masnad al-Imam al-Sadiq. The polemic that calls this narration obscure is describing a text the Imami curriculum has copied for eleven centuries.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -727,9 +708,11 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                <section id="tab3" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. Readings of the Seizure</h2>
+
                     <p class="mb-6 text-gray-600">What does it mean to say the union was a farj seized, ghusibnahu? The word is a legal category. The school read it with precision. The Qur'an itself models how a word of taking and covering can name what a people assigned rather than what a prophet did. This section reads the seizure three ways.</p>
                     <div id="tab3-cards" class="space-y-4">
 
@@ -791,20 +774,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c5" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Coherence Runs Both Ways</p>
                                                         <p class="text-gray-700">The coherence runs both ways. The doctrine of necessity explains how a coerced contract could stand outwardly. The narration's threat clause explains why the doctrine was needed here, and nowhere else in the Imam's <span class="honorific">﵇</span> family record. A matn that fits the school's law this exactly is not a scribal accident.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -825,20 +802,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c6" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">What the Reading Accomplishes</p>
                                                         <p class="text-gray-700">Note what this reading does. The Imam's <span class="honorific">﵇</span> word is kept in full force. It is not converted into an affirmation that a true marriage existed. Seizure is predicated of what appeared and what people claimed. The school's commentator refuses to squeeze an affirmation out of a condemnation. The report's evidentiary value is its character verdict. It is not a record of a valid contract.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -865,9 +836,11 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <div id="tab4" class="tab-pane hidden" role="tabpanel">
+                <section id="tab4" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. The Claim Examined</h2>
+
                     <p class="mb-6 text-gray-600">The Sunni claim is that Fatima's <span class="honorific">﵍</span> daughter was willingly given. The claim says the giving proves warm ties and accepted legitimacy. Set against the dates, the contradictions, and the name-conflict inside their own corpus, the claim loses every leg it stands on.</p>
                     <div id="tab4-cards" class="space-y-4">
 
@@ -958,13 +931,9 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c7" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Age-Class Convergence</p>
                                                         <p class="text-gray-700">Set the statements in a row. A girl not yet pubescent at the proposal. A marriage in year seventeen, six years after her mother's death in year eleven. A Sunni biographer's statement that Umar died before her puberty. The age-class reports converge from independent strands. Ibn Sa'd's lam tablugh at the contract. Ali's <span class="honorific">﵇</span> sabiyya in both corpora. Abd al-Razzaq's girl still at play. Al-Zarqani's before-puberty at Umar's death. Honesty requires the next step. The same Ibn Sa'd also transmits, in the same entry, that she bore Umar two children. Abd al-Razzaq's editorial voice states a birth. The two age-classes cannot both be true of one woman. The contradiction does not resolve. It fractures the corpus that carries it. The fracture lands on the polemic's side. The age-class it needs, a marriageable woman, is the one class no early age-statement asserts. The child statements recur across strands that never cite one another.</p>
@@ -974,8 +943,6 @@
                                                         <p class="text-gray-700">Read by rows, the matrix measures the suitor against the girl. A caliph the bride's own recorded word calls an old man, demanding a child of at most six. Read by columns, it exposes the record. The corpus that fixes her last possible birth-year also transmits her prepubescence at the contract and at Umar's death. It also transmits her motherhood, her same-hour death in Umar's reign, and her living voice in 61 AH. No Shia premise enters the table. The dates alone frame the question the next two sections answer. Her age-class, and the identity of a girl whose name the traditions cannot fix.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1019,13 +986,9 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c13" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">A Name That Floats Between Women</p>
                                                         <p class="text-gray-700">Add a third holder, Umm Kulthum bint Abu Bakr. She is the stepdaughter raised in Ali's <span class="honorific">﵇</span> house through Asma bint Umays. The name stops identifying anyone. Three women of that appellation moved through the same two households in the same two decades. Chroniclers who could not keep their Zayds apart, the same lists name a Zayd the Elder and a Zayd the Younger by one father, were not going to keep their Umm Kulthums apart.</p>
@@ -1037,8 +1000,6 @@
                                                         <p class="text-gray-700">A bare name, carried by a child too young to have earned it and shared by at least three women of the same households, cannot identify a bride for doctrinal purposes. Something else must do the identifying. In the marriage narratives that something is always the same. The demand, and later the announcement, of the man who wanted the Prophet's <span class="honorific">ﷺ</span> kinship attached to himself. The next section weighs his identifying word.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1058,26 +1019,22 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c29" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">A Report Whose Plot Cannot Settle</p>
                                                         <p class="text-gray-700">Mufid wrote as a chain-examiner of the opponents' material. The polemic has never answered him at his level. It cannot even state which of the mutually exclusive contract scenes it means to defend. The options include: the father's own contract, the uncle's after threat, the willing union of the announcement scenes, or the bride who was never asked. A report whose basic plot cannot settle is not a foundation for doctrine.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <div id="tab5" class="tab-pane hidden" role="tabpanel">
+                <section id="tab5" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">5. Their Own Books</h2>
+
                     <p class="mb-6 text-gray-600">The Sunni narrative also requires friendship. Ali <span class="honorific">﵇</span> the contented counselor, Umar the beloved in-law. The opponents' own books refuse the picture. Their earliest chains carry the coercion. Their own Sahih carries Ali's <span class="honorific">﵇</span> and al-Abbas's verdict on Umar's truthfulness. And their transmitters were caught deleting the whip from the story.</p>
                     <div id="tab5-cards" class="space-y-4">
 
@@ -1157,13 +1114,9 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c18" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">What the Chains Hold</p>
                                                         <p class="text-gray-700">Read what the chains hold. The father's word for the girl is small. The observers gloss his motive at once. He only says that to prevent the match. The suitor does not negotiate with the father. He has the father lobbied. And the girl's own voice survives in two versions. Spare him only because he is the Commander of the Faithful. Or she would have struck his neck, or his eye. This is the conduct of a terrified child. It was recorded by the earliest extant compilation. The chains are ones the Sunni tradition reveres. Ibn Uyayna, Amr ibn Dinar, Ibn Jurayj, al-A'mash, Ma'mar, Ayyub, Ikrima. No Shia hand touched these texts.</p>
@@ -1173,8 +1126,6 @@
                                                         <p class="text-gray-600">One clause of the al-A'mash version must be met head on. The polemic reads it aloud: "and I have already given her to you in marriage," wa-qad ankahuka. The verb is contractual. On its face it is the polemic's best word. Three answers weigh it. First, within its own chain the verb marks where resistance stopped. The report opens with Ali's <span class="honorific">﵇</span> refusal. The suitor presses. The gloss, he only says that to prevent the match, shows the refusal being read as evasion until it was abandoned. The verb records that a contract occurred. It certifies nothing about its voluntariness. The fiqh of coercion exists to classify exactly this act. Second, al-Mufid (section 5) catalogued that the versions contradict one another on this very point. Some have Ali <span class="honorific">﵇</span> contract. Some have al-Abbas. Some are only after threat. Some are willing. He ruled the contradiction invalidating. The ankahuka strand is one voice in a mutually exclusive set. Third, the school's answer to an outward contract performed under threat is taqiyya. It is the dispensation of 16:106. Under it the outward act stands and the inner fact is not inferred from it. A reader who grants the verb grants the act's occurrence. The act's character is fixed by everything else in the record.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1194,20 +1145,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c20" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Family's Chain in the Tabaqat</p>
                                                         <p class="text-gray-700">The chain again terminates at Muhammad ibn Ali, the Imam al-Baqir <span class="honorific">﵇</span>. This is the family's own transmission of the family's own event. It is carried in the opponents' biographical dictionary. The matn again pairs the father's mention of her smallness with the suitor's escalation, fa-'awadahu, he returned to the attack. And the girl's fury is recorded. And Ibn Sa'd's entry on the marriage, quoted in section 4, states her age-class in plain terms. A girl who had not reached puberty. She remained with him until he was killed.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1227,20 +1172,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c21" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Bride's Verdict</p>
                                                         <p class="text-gray-700">Ibn Abd al-Barr's al-Isti'ab entry carries the same narrative down the same steps. The smallness, the plea, the cloak, the hand on the shin, the broken-nose threat. The father's answer to his daughter: "he is your husband." Then comes the announcement in the mosque with its forty-thousand dowry. The children Zayd and Ruqayya. The same-hour death of mother and son. Ibn al-Athir's Usd al-Ghaba repeats it all. At the center of these versions stands the bride's own summary of the arrangement. She called him shaykh su', an evil old man. No version records her taking the words back.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1260,20 +1199,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c22" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Whip in the Room</p>
                                                         <p class="text-gray-700">Read the household scene this chain records. Aqil ibn Abi Talib curses the proposal to Ali's <span class="honorific">﵇</span> face. He is the family's marriage consultant and the professional genealogist of Quraysh. He prophesies ruin twice over. And Ali <span class="honorific">﵇</span> explains the fury to al-Abbas. By God, there is no sincere counsel in what he says. It is Umar's whip that has driven him to what you see. In one sentence the Imam <span class="honorific">﵇</span> names the instrument that governed the family's deliberations. A household consulting about a bridegroom does not need to explain anyone's panic by the suitor's whip.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1294,20 +1227,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c23" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Surgery, Documented</p>
                                                         <p class="text-gray-700">Two transmissions, one chain. The later, widely circulated one has lost exactly two things. Aqil's furious opposition and the mention of Umar's whip. What survives in the Hilya instead is a smoother opening. The Caliph summoned Ali <span class="honorific">﵇</span> and spoke to him privately. The comparison of two printings establishes the surgery. No Shia theory was needed to detect it. When a tradition's transmitters prune the whip out of the story, they have conceded what the whip was doing in it.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1327,20 +1254,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c24" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">A Prior Claim Overridden</p>
                                                         <p class="text-gray-700">This is the Imams' <span class="honorific">﵈</span> own family account. Ja'far al-Sadiq <span class="honorific">﵇</span> from his father al-Baqir <span class="honorific">﵇</span>, carried in a Sunni book of the family's merits. It records Ali <span class="honorific">﵇</span> doing what a father does when he wants to refuse without saying no. The girl is spoken for. She is set aside for Ja'far's son. The demand comes back with an oath. It comes with the same verb of watching over her, arsada, that the Isti'ab version carries. The groom's insistence on guarding her honor, in a story where his hand is on her shin, is the corpus's least self-aware sentence. The same author's page records the bride's own word. Were it not for the Commander of the Faithful, I would have struck your eyes.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1360,20 +1281,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c25" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Family Shuts Every Door</p>
                                                         <p class="text-gray-700">This chain reaches the event through Imam al-Hasan <span class="honorific">﵇</span> himself. He is the bride's supposed full brother. What it records is a family shutting every door in sequence. The father: she is too young. When pressed, he turns not to the suitor but to his sons. You two handle your uncle's marriage. That is a father's way of refusing to be the hand. And the sons answer by insisting that the choice is hers. Takhtaru li-nafsiha, she chooses for herself. Agency is the one thing no version of the event grants her. Nobody asks her. Every announcement scene that survives is Umar's. And Ali <span class="honorific">﵇</span> rose in anger. A willing giving has nowhere to stand in this chain. This chain is the family's.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1393,20 +1308,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c26" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The State of the Evidence</p>
                                                         <p class="text-gray-700">That is the state of the evidence. This study has filled in the items behind every clause. The refusal, the pressure, the insistence, the returning again and again upon Ali <span class="honorific">﵇</span>. These are in the Sunni books. The threat in words, the seizure verdict, the retrieval. These are in al-Kafi. Neither corpus carries a willing giving that survives its own record. The willing-giving versions are one strand of the contradictory set Mufid catalogued. They travel beside the refusal and pressure strands in the same books. The willing giving exists as a conclusion only in the polemic. That polemic stitches the threatening party's announcements onto a family record of refusal.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1426,20 +1335,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c27" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Ending That Will Not Settle</p>
                                                         <p class="text-gray-700">The entry belongs to the year 61 AH, thirty-eight years after Umar's death. The reader may take the report either way. If the Karbala speaker was the woman of this marriage, then the report that had her die with her son is false. The notices that survived are the false ones. If she was another woman of the same appellation, then the name is proven to float between women even within a single family. No marriage report built on the bare name can identify anyone. Whichever door the reader takes, something the polemic cites has just died. The reading that saves the standard identification pays for it with the same-hour death notices, exposed as fabrication. The reading that keeps those notices pays with the reliability of the name itself.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1460,20 +1363,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c15" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">Clause by Clause: Four Vices</p>
                                                         <p class="text-gray-700">Clause by clause. Two witnesses to a theft Ali <span class="honorific">﵇</span> never committed. Testimony manufactured to order. That is lying, kadhb. The amputation of an innocent man's hand. Engineered mutilation. That is sinfulness, ithm. The ruin of Zamzam and the family's honors. Treachery against sanctities, ghadr. And the plan's architecture. A false accusation clothed in legal form to conceal a seizure. That is deceit, khiyana. Liar, sinful, treacherous, deceitful. The first two are the law's stated disqualifiers. The false witness and the fasiq of 49:6 and the jurists' consensus. All four belong to the family of corrupted integrity. That is the adala a witness must possess.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1515,20 +1412,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c16" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">The Moral Weight of the Oath</p>
                                                         <p class="text-gray-700">On the Prophet's <span class="honorific">ﷺ</span> word, the false witness does not step away from his testimony before the Fire is his due. That is the moral weight of the oath's first clause. The jurists' consensus that a fasiq's testimony is rejected does the rest. A man who swears he can produce two witnesses against an innocent man, to have his hand cut off, has announced in his own voice the exact crime that voids a witness. He bundled it with three more disqualifying vices.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1616,20 +1507,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c17" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">What the Commentary Concedes</p>
                                                         <p class="text-gray-700">Notice what the commentary concedes. The report's outward sense has al-Abbas describing Ali <span class="honorific">﵇</span> with the four vices before witnesses. The words are unbearable in that sense. It cannot delete the report, because it is in the Sahih. So it blames the transmitters. Or it elides the words into an implied conditional. The words themselves stay on the page, in every printing.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1651,9 +1536,11 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <div id="tab6" class="tab-pane hidden" role="tabpanel">
+                <section id="tab6" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">6. The Verdict of the School</h2>
+
                     <p class="mb-6 text-gray-600">How the Imami school distributed itself across the reports, what would falsify the position taken here, and what the cumulative record leaves standing.</p>
                     <div id="tab6-cards" class="space-y-4">
 
@@ -1713,20 +1600,14 @@
                                     </div>
                                 </div>
                             </div>
-            <div class="commentary-accordion border-t border-[#E7E0D1]">
-                <button class="commentary-toggle w-full flex justify-between items-center p-4 text-left" aria-expanded="false" type="button">
-                    <span class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B]">Commentary</span>
-                    <svg class="w-5 h-5 text-gray-400 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="commentary-content">
-                    <div class="px-4 pb-4 space-y-3">
+            <div class="border-t border-[#E7E0D1] pt-4 mt-6">
+                <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Commentary</p>
+
                         <div id="c28" class="commentary-card bg-[#FDFBF7] border border-[#E7E0D1] rounded-lg p-4 space-y-3">
                             <p class="text-sm font-semibold text-[#3D4451]">Sequential Defenses, Not Rival Dogmas</p>
                                                         <p class="text-gray-700">The remaining two positions complete the map. Outright denial that any marriage occurred. That is the position of al-Balaghi's treatise and of al-Sayyid Nasir al-Husayn al-Lakhnawi. Each composed a book to that effect. And the position that the woman taken was another Umm Kulthum altogether. A stepdaughter or a substitute. The positions are sequential defenses, not rival dogmas. If nothing occurred, the polemic dies at the gate. If something occurred, the Imam's <span class="honorific">﵇</span> word and the threat clause fix its character. If the bride's very identity is unsettleable, the polemic has no bride to build on. Each position independently destroys the claim of willing consent.</p>
                         </div>
                     </div>
-                </div>
-            </div>
                         </div>
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
@@ -1749,7 +1630,7 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
             </div>
 
             <!-- GLOSSARY -->
@@ -1779,7 +1660,7 @@
             </div>
 
             <!-- FINAL VERDICT -->
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
                     <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
@@ -1789,89 +1670,45 @@
                     <p class="text-sm text-gray-500 mt-4">Primary sources: al-Kafi, al-Furu', vol.5, p.346 and vol.6, pp.115-116; al-Tusi, Tahdhib al-Ahkam, vol.8, p.161; Sahih Muslim, Kitab Fada'il al-Sahaba, the report of Malik ibn Aws; Abd al-Razzaq, al-Musannaf, vol.6, p.163; Ibn Sa'd, al-Tabaqat al-Kubra; al-Dulabi, al-Dhurriyya al-Tahira, p.160; Abu Nu'aym, Hilyat al-Awliya, vol.2, p.34; al-Muhibb al-Tabari, Dhakha'ir al-Uqba, vol.2, p.267; Ibn Abd al-Barr, al-Isti'ab; al-Zubayr ibn Bakkar via Ibn Abi al-Hadid, Sharh Nahj al-Balagha, vol.12, p.106.</p>
                 </div>
             </footer>
-        </main>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab');
-            const panes = document.querySelectorAll('.tab-pane');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const target = e.currentTarget.dataset.target;
-
-                    tabs.forEach(t => {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    e.currentTarget.classList.add('active');
-                    e.currentTarget.setAttribute('aria-selected', 'true');
-
-                    panes.forEach(pane => {
-                        if (pane.id === target) {
-                            pane.classList.remove('hidden');
-                            pane.classList.add('active');
-                        } else {
-                            pane.classList.add('hidden');
-                            pane.classList.remove('active');
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
                         }
                     });
-                });
-            });
-
-            const commentaryToggles = document.querySelectorAll('.commentary-toggle');
-
-            commentaryToggles.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const acc = btn.closest('.commentary-accordion');
-                    const content = acc.querySelector('.commentary-content');
-                    const isOpen = acc.classList.contains('open');
-                    if (isOpen) {
-                        acc.classList.remove('open');
-                        btn.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    } else {
-                        acc.classList.add('open');
-                        btn.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    }
-                });
-            });
-
-            function openCommentaryTarget(id) {
-                const el = document.getElementById(id);
-                if (!el) return;
-                const acc = el.closest('.commentary-accordion');
-                if (!acc) return;
-                if (!acc.classList.contains('open')) {
-                    acc.classList.add('open');
-                    acc.querySelector('.commentary-toggle').setAttribute('aria-expanded', 'true');
-                    const content = acc.querySelector('.commentary-content');
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-                setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
-            }
-
-            document.querySelectorAll('a.comment-anchor').forEach(a => {
-                a.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const id = a.getAttribute('href').slice(1);
-                    history.replaceState(null, '', '#' + id);
-                    openCommentaryTarget(id);
-                });
-            });
-
-            window.addEventListener('hashchange', () => {
-                const h = location.hash.slice(1);
-                if (h.startsWith('c')) openCommentaryTarget(h);
-            });
-
-            if (location.hash.startsWith('#c')) {
-                openCommentaryTarget(location.hash.slice(1));
-            }
-        });
-    </script>
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+        </main>
+    </div>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>

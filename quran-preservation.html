@@ -107,21 +107,61 @@
             border-radius: 0.5rem;
             padding: 1.5rem;
         }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Quranic Integrity</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">The Preserved Quran</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">The Preserved Quran</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Do the Shia believe the Quran was corrupted? What do their own sources, their scholars, and their Imams say about the text between the two covers?</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab0" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Question of T</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. The Word Mushaf</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. The Scribal Error</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. The Chain of Tran</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. The Scholarly Ver</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
 
         <main data-category="debate">
             <!-- THESIS -->
@@ -132,7 +172,7 @@
                 </div>
             </section>
 
-            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
                 <p class="text-sm text-gray-500 mb-6">Every row links into the section carrying the detail. The Qualifier column preserves how firmly the page's sources state each claim.</p>
                 <div class="analysis-section">
@@ -250,20 +290,11 @@
             </section>
 
             <!-- TAB NAV -->
-            <div class="mb-8 border-b border-[#E7E0D1]">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-base md:text-lg" data-target="tab0" role="tab" aria-controls="tab0" aria-selected="true">Overview</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="false">1. The Question of Tahrif</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. The Word Mushaf</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. The Scribal Error Test</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. The Chain of Transmission</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-base md:text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. The Scholarly Verdict</button>
-                </nav>
-            </div>
-
             <div id="tab-content">
                 <!-- TAB 0: OVERVIEW -->
-                <div id="tab0" class="tab-pane active" role="tabpanel">
+                <section id="tab0" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Overview</h2>
+
                     <section class="p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                         <div class="analysis-section">
                             <p class="mb-4 text-gray-600">A charge circulates against the Shia: that their hadith books contain narrations implying the Quran was altered, and therefore the Shia hold the present text to be incomplete. The charge is stated at its strongest: early Shia collections, especially al-Kulayni's <em>al-Kafi</em>, do carry reports in which an Imam <span class="honorific">﵇</span> recites a verse differently from the standard mushaf, calls a word a scribal error, or speaks of a larger revelation. These reports exist. They are not denied. The question is what they establish.</p>
@@ -297,9 +328,11 @@
                             </div>
                         </div>
                     </section>
-                </div>
+                </section>
                 <!-- TAB 1: THE QUESTION OF TAHRIF -->
-                <div id="tab1" class="tab-pane hidden" role="tabpanel">
+                <section id="tab1" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Question of Tahrif</h2>
+
                     <p class="mb-6 text-gray-600">The Arabic word tahrif carries a range of meanings, from distortion of interpretation to textual corruption. The Imami scholarly tradition drew a sharp line between these senses and tracked the debate through five distinct historical phases.</p>
                     <div id="tab1-cards" class="space-y-4">
 
@@ -622,10 +655,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 2: THE WORD MUSHAF -->
-                <div id="tab2" class="tab-pane hidden" role="tabpanel">
+                <section id="tab2" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. The Word Mushaf</h2>
+
                     <p class="mb-6 text-gray-600">The word mushaf is a generic Arabic term meaning a bound book or codex of pages between two covers. Its specialization as a synonym for the Quranic codex was a later cultural development driven by the dominance of the Uthmanic codices.</p>
                     <div id="tab2-cards" class="space-y-4">
 
@@ -824,10 +859,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 3: THE SCRIBAL ERROR TEST -->
-                <div id="tab3" class="tab-pane hidden" role="tabpanel">
+                <section id="tab3" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. The Scribal Error Test</h2>
+
                     <p class="mb-6 text-gray-600">The strongest narration cited by proponents of tahrif is the report where Imam al-Sadiq <span class="honorific">﵇</span> calls the dual form in 5:95 a scribal error. This narration has the strongest chain of any tahrif report in the Shia corpus, running through universally trusted narrators. Tested against the Imami school's own conditions for establishing doctrine, the narration fails on multiple independent grounds.</p>
                     <div id="tab3-cards" class="space-y-4">
 
@@ -1116,10 +1153,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 4: THE CHAIN OF TRANSMISSION -->
-                <div id="tab4" class="tab-pane hidden" role="tabpanel">
+                <section id="tab4" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. The Chain of Transmission</h2>
+
                     <p class="mb-6 text-gray-600">The Quran the Shia recite today traces by a named, documented chain from the Prophet <span class="honorific">ﷺ</span> through Ali <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span> to the printed mushaf. The reading-manuals count the links by name; the manuscripts confirm the skeleton; the Shia sources carry the same collection history as the Sunni sources, without any charge of corruption.</p>
                     <div id="tab4-cards" class="space-y-4">
 
@@ -1407,10 +1446,12 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
                 <!-- TAB 5: THE SCHOLARLY VERDICT -->
-                <div id="tab5" class="tab-pane hidden" role="tabpanel">
+                <section id="tab5" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">5. The Scholarly Verdict</h2>
+
                     <p class="mb-6 text-gray-600">From al-Saduq (d. 381 AH) to al-Khoei (d. 1413 AH), the school's leading scholars affirm complete Quran preservation. Every major marja' of the 20th and 21st century has rejected textual tahrif.</p>
                     <div id="tab5-cards" class="space-y-4">
 
@@ -1630,7 +1671,7 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
             </div>
 
@@ -1658,68 +1699,56 @@
             </div>
 
             <!-- FINAL VERDICT -->
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
                     <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
                     <p class="text-lg text-gray-700">The Quran the community recites today is the complete text the Prophet <span class="honorific">ﷺ</span> received. The Imams <span class="honorific">﵈</span> are its unbroken chain. A minority of early narrators held that verses were dropped. Their reports remain in the books, never became the school's teaching, and its scholars reject them. The "scribal error" narrations are either weak in chain, interpretable as tafsir and ta'wil, or rejected outright by the principles of mu'arada and the superiority of mutawatir over akhbar ahad.</p>
                 </div>
             </footer>
-        </main>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab');
-            const panes = document.querySelectorAll('.tab-pane');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const target = e.currentTarget.dataset.target;
-
-                    tabs.forEach(t => {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    e.currentTarget.classList.add('active');
-                    e.currentTarget.setAttribute('aria-selected', 'true');
-
-                    panes.forEach(pane => {
-                        if (pane.id === target) {
-                            pane.classList.remove('hidden');
-                            pane.classList.add('active');
-                        } else {
-                            pane.classList.add('hidden');
-                            pane.classList.remove('active');
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
                         }
                     });
-                });
-            });
-
-        });
-    </script>
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+        </main>
+    </div>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
 
-    <script>
-    (function () {
-        function openHash() {
-            var id = decodeURIComponent(location.hash.slice(1));
-            if (!id) return;
-            var el = document.getElementById(id);
-            if (!el) return;
-            var pane = el.closest('.tab-pane') || el.closest('.accordion-item');
-            if (pane && pane.classList.contains('tab-pane')) {
-                var btn = document.querySelector('[data-target="' + pane.id + '"]');
-                if (btn) btn.click();
-            }
-            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
-        }
-        window.addEventListener('hashchange', openHash);
-        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
-    })();
-    </script>
-</body>
+    </body>
 </html>

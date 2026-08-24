@@ -82,38 +82,46 @@
             font-style: italic;
             color: #5B5347;
         }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
         }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
-        }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
         }
     </style>
 </head>
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
+        <header class="mb-6">
             <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">A Narration from Kamil al-Ziyarat</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">May Allah Have Mercy on Your Tears: The Promise to Those Who Grieve for al-Ḥusayn</h1>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">May Allah Have Mercy on Your Tears: The Promise to Those Who Grieve for al-Ḥusayn</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Imam Jaʿfar al-Ṣādiq <span class="honorific">﵇</span> comforts a man of Basra who could not safely visit the grave of al-Ḥusayn <span class="honorific">﵇</span> and promises him mercy for his tears and a drink from al-Kawthar. From Ibn Qulawayh (d.368 AH), Kamil al-Ziyarat, report no. 6.</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#commentary" class="navlink text-sm md:text-base py-3 flex-shrink-0">Commentary</a>
+            </nav>
+        </div>
 
         <main data-category="narration">
             <p class="mb-4 text-gray-700">Muḥammad ibn ʿAbd Allāh ibn Jaʿfar al-Ḥimyarī narrated the report from his father, from ʿAlī ibn Muḥammad ibn Sālim, from Muḥammad ibn Khālid, from ʿAbd Allāh ibn Ḥammād al-Baṣrī, from ʿAbd Allāh ibn ʿAbd al-Raḥmān al-Aṣamm, from Mismaʿ ibn ʿAbd al-Malik Kirdīn al-Baṣrī.<sup class="ml-1"><a href="#c1" class="comment-anchor text-xs font-semibold text-[#8A6D3B] no-underline hover:underline" title="Commentary: The Source of the Narration">&#9660; commentary</a></sup> Mismaʿ said:</p>
@@ -184,15 +192,14 @@
 
             <hr class="border-[#E7E0D1] my-8">
 
-            <section class="mb-8">
-                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">Commentary</h2>
-                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="commentary-all">
-                        <h4 class="text-lg font-semibold text-[#3D4451]">How Each Promise Is Grounded in the Qur'an</h4>
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="accordion-content" id="commentary-all">
-                        <div class="p-4 md:p-8">
+            <section id="commentary" class="content-section mb-12">
+                <details class="commentary bg-white border border-[#E7E0D1] rounded-lg p-4">
+                    <summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Commentary</h4></summary>
+                    <div class="pt-4 mt-4 border-t border-[#E7E0D1] space-y-6">
+<article id="commentary-all" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-8">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">How Each Promise Is Grounded in the Qur'an</h3>
+>
                 <div id="c1" class="commentary-card scroll-mt-28 pt-8 mt-8 border-t border-[#E7E0D1] first:border-t-0 first:mt-0 first:pt-0">
                     <h4 class="text-lg font-semibold text-[#3D4451] mb-4">The Source of the Narration</h4>
                     <div class="space-y-4">
@@ -485,9 +492,11 @@
                     </div>
                 </div>
                         </div>
+                    </article>
                     </div>
-                </div>
+                </details>
             </section>
+            
 
             <section class="mt-16">
                 <div class="max-w-3xl">
@@ -499,49 +508,45 @@
                     <p class="text-sm text-gray-500 mt-6">Sources: Ibn Qulawayh (Jaʿfar ibn Muḥammad ibn Qulawayh al-Qummī, d.368 AH), Kamil al-Ziyarat, no. 6, through the chain from Muḥammad ibn ʿAbd Allāh ibn Jaʿfar al-Ḥimyarī to Mismaʿ ibn ʿAbd al-Malik Kirdīn al-Baṣrī. Qur'anic Arabic is quoted verbatim from the Uthmani text; translations are the author's.</p>
                 </div>
             </section>
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
+                        }
+                    });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
         </main>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            function openItem(item) {
-                item.classList.add('open');
-                item.querySelector('.accordion-header').setAttribute('aria-expanded', 'true');
-                const content = item.querySelector('.accordion-content');
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-            function closeItem(item) {
-                item.classList.remove('open');
-                item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                item.querySelector('.accordion-content').style.maxHeight = '0px';
-            }
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                header.addEventListener('click', () => {
-                    if (item.classList.contains('open')) closeItem(item);
-                    else openItem(item);
-                });
-            });
-
-            // Hash navigation: open the commentary accordion and scroll to the target card
-            function gotoHash() {
-                const id = decodeURIComponent(location.hash.slice(1));
-                if (!id) return;
-                const target = document.getElementById(id);
-                if (!target) return;
-                const item = target.closest('.accordion-item');
-                if (item && !item.classList.contains('open')) openItem(item);
-                requestAnimationFrame(() => {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            }
-            window.addEventListener('hashchange', gotoHash);
-            gotoHash();
-        });
-    </script>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
