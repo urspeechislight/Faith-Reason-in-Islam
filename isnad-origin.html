@@ -34,27 +34,34 @@
             font-size: 0.75em;
             line-height: 1;
         }
-        .tab.active {
-            border-color: #B99C6B;
-            color: #8A6D3B;
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
             background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
         }
-        .accordion-header {
-            transition: background-color 0.2s ease;
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
         }
-        .accordion-header:hover {
-            background-color: #FAF6EF;
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
         }
-        .accordion-header svg {
-            transition: transform 0.3s ease;
-        }
-        .accordion-item.open .accordion-header svg {
-            transform: rotate(180deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary { cursor: pointer; }
+        details.glossary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
         }
         .rtl {
             direction: rtl;
@@ -116,20 +123,31 @@
 <body class="antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
 
-        <nav class="mb-10">
-            <a href="index.html" class="text-sm text-gray-500 hover:text-[#8A6D3B]">&larr; Faith &amp; Reason in Islam</a>
-        </nav>
-
-        <header class="mb-12">
-            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Hadith Authenticity Analysis</p>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-[#3D4451] mb-3">Why the Isnād Cannot Be a Second-Century Invention</h1>
+        <header class="mb-6">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-2">Hadith Authenticity Analysis</p>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">Why the Isnād Cannot Be a Second-Century Invention</h1>
             <p class="text-md md:text-lg text-gray-600 max-w-2xl">Academic skeptics dated the chains of transmission behind every hadith to about 800 CE. The earliest reports put the birth of the isnād in Kūfa in the 680s, and the forgers themselves show the chains were already there.</p>
-            <hr class="mt-10 border-[#E7E0D1]">
+            <hr class="mt-6 border-[#E7E0D1]">
         </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#argument" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Claim</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. Six Men</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. The Forgers</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. Kūfa's Witness</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. Open Questions</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
 
         <main data-category="debate">
             <!-- INTRO CARD -->
-            <section id="argument" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="argument" class="content-section mb-12 mt-8 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
                 <div class="analysis-section">
                     <h5 class="analysis-heading">The Charge</h5>
@@ -168,7 +186,7 @@
             </section>
 
             <!-- THE FACTS -->
-            <section id="facts" class="mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
                 <div class="analysis-section">
                     <h5 class="analysis-heading">What Each Source Claims, and How Firmly</h5>
@@ -273,29 +291,13 @@
                 </div>
             </section>
 
-            <!-- TAB NAV -->
-            <div class="mb-8 border-b border-[#E7E0D1]">
-                <nav class="-mb-px flex flex-wrap" aria-label="Tabs">
-                    <button class="tab active whitespace-nowrap py-4 px-2 border-b-2 font-medium text-lg" data-target="tab1" role="tab" aria-controls="tab1" aria-selected="true">1. The Claim on Trial</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab2" role="tab" aria-controls="tab2" aria-selected="false">2. Six Men the Chains Turn On</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab3" role="tab" aria-controls="tab3" aria-selected="false">3. The Forgers Prove the Chains</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab4" role="tab" aria-controls="tab4" aria-selected="false">4. Kūfa's Second Witness</button>
-                    <button class="tab whitespace-nowrap py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-lg" data-target="tab5" role="tab" aria-controls="tab5" aria-selected="false">5. What Stays Open</button>
-                </nav>
-            </div>
-
-            <div id="tab-content">
-                <div id="tab1" class="tab-pane active" role="tabpanel">
-                    <p class="mb-6 text-gray-600">The case against the isnād was built by scholars who worked from the same books that carry it. Their dating came from reading the silence of the earliest sources. Two reports break that silence, and both put a date and a city on the first questioning of transmitters.</p>
-                    <div id="tab1-accordion" class="space-y-4">
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c1">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">What the Skeptics Claimed</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t1c1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+<section id="tab1" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Claim on Trial</h2>
+                <p class="mb-8 text-gray-600">The case against the isnād was built by scholars who worked from the same books that carry it. Their dating came from reading the silence of the earliest sources. Two reports break that silence, and both put a date and a city on the first questioning of transmitters.</p>
+                <div class="space-y-10">
+<article id="t1c1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">What the Skeptics Claimed</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Schacht, The Origins of Muhammadan Jurisprudence (1950); Wansbrough, Quranic Studies (1977); Calder, Studies in Early Muslim Jurisprudence (1993)</p>
                                         <p class="text-sm"><strong>Claim:</strong> the isnād is a late formal invention, from the mid-second century at the earliest to about 815 CE at the latest</p>
@@ -316,16 +318,10 @@
                                         <p class="font-semibold text-gray-800">The skeptical case deserves its strongest form, and it receives one here. Its own founding concession, Schacht's, already places regular chains in the early second century. The primary sources answer the remaining question, when the asking began, with a date and a city.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c2">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibn Sīrīn and the Demand for Names</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t1c2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t1c2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Ibn Sīrīn and the Demand for Names</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Aḥmad b. Ḥanbal (d. 241), al-ʿIlal wa-maʿrifat al-rijāl, v2, p. 559, no. 3641</p>
                                         <p class="text-sm"><strong>Speaker:</strong> Muḥammad b. Sīrīn of Basra (d. 110 AH)</p>
@@ -356,16 +352,10 @@
                                         <p class="font-semibold text-gray-800">The wording of a report can be later than its content, and Tab 5 weighs that question honestly. The parts of this report that embarrass the hadith institution are precisely the parts a forger would never write.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t1c3">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibrāhīm al-Nakhaʿī Dates the First Questions</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t1c3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t1c3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Ibrāhīm al-Nakhaʿī Dates the First Questions</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Ibn Ḥanbal, al-ʿIlal wa-maʿrifat al-rijāl, v3, p. 380, no. 5674</p>
                                         <p class="text-sm"><strong>Chain:</strong> Aḥmad's father, from Jābir b. Nūḥ (d. 183), from al-Aʿmash (d. 148), from Ibrāhīm al-Nakhaʿī (d. c. 96)</p>
@@ -401,23 +391,16 @@
                                         <p class="font-semibold text-gray-800">A Kūfan witness, carried on a Kūfan chain, dates the birth of isnād-scrutiny to a Kūfan event one generation after it happened. A later forger with a free hand would have chosen a safer date, closer to the Prophet <span class="honorific">ﷺ</span> and further from a checkable, sectarian decade.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-
-                    </div>
-                </div>
-
-                <div id="tab2" class="tab-pane hidden" role="tabpanel">
-                    <p class="mb-6 text-gray-600">The collectors of the third century did not preserve stray names. They preserved convergence. Chains meet, again and again, on the same small set of teachers. The first critic to count that convergence was ʿAlī b. al-Madīnī, and his count gives the whole argument its skeleton.</p>
-                    <div id="tab2-accordion" class="space-y-4">
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t2c1">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Six the Chains Turn On</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t2c1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+            </section>
+            <section id="tab2" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. Six Men the Chains Turn On</h2>
+                <p class="mb-8 text-gray-600">The collectors of the third century did not preserve stray names. They preserved convergence. Chains meet, again and again, on the same small set of teachers. The first critic to count that convergence was ʿAlī b. al-Madīnī, and his count gives the whole argument its skeleton.</p>
+                <div class="space-y-10">
+<article id="t2c1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The Six the Chains Turn On</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> al-Dhahabī (d. 748), Siyar aʿlām al-nubalāʾ, v9, p. 200, from ʿAlī b. al-Madīnī (d. 234); also al-Rāmahurmuzī (d. 360), al-Muḥaddith al-fāṣil, no. 894</p>
                                         <p class="text-sm"><strong>Claim:</strong> all isnāds converge on six transmitters, whose knowledge then passed to twelve</p>
@@ -453,16 +436,10 @@
                                         <p class="font-semibold text-gray-800">The chains of the third-century books converge on teaching careers that ended by 148 AH. Whatever the chains are, they were already being built, used, and remembered while the six were alive; the practice cannot begin after its own convergence points.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t2c2">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Why a Late Invention Cannot Fake Convergence</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t2c2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t2c2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Why a Late Invention Cannot Fake Convergence</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> structural reading of the canonical collections; Juynboll, Encyclopedia of Canonical Hadith (2007)</p>
                                         <p class="text-sm"><strong>Claim:</strong> convergence of the width Ibn al-Madīnī counted cannot be manufactured after the six were dead</p>
@@ -487,16 +464,10 @@
                                         <p class="font-semibold text-gray-800">Convergence is the signature of a school system and the opposite of a forgery's signature. The ceiling it sets holds at 148 AH for the dense bundles, and the oldest verified neck reaches into the 90s AH. Every late-invention thesis has to live above that ceiling, where no evidence lives with it.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t2c3">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Notebook of Hammām</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t2c3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t2c3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The Notebook of Hammām</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Ṣaḥīfat Hammām b. Munabbih, ed. Rifʿat Fawwī ʿAbd al-Muṭallib, Maktabat al-Khānjī, Cairo; Ibn Ḥanbal, Musnad, v2, p. 312</p>
                                         <p class="text-sm"><strong>Speaker:</strong> Hammām b. Munabbih of Ṣanʿāʾ (d. 132 AH), pupil of Abū Hurayra (d. 59 AH)</p>
@@ -542,23 +513,16 @@
                                         <p class="font-semibold text-gray-800">Written transmission with named chains is attested at the pivot generation by a document the canonical tradition itself embedded and preserved. The late-invention thesis now needs the notebook to be a fiction as well, agreeing with a second fiction inside the Musnad, across a thousand years of copying.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-
-                    </div>
-                </div>
-
-                <div id="tab3" class="tab-pane hidden" role="tabpanel">
-                    <p class="mb-6 text-gray-600">Fabrication is documented inside the same books that carry the chains. That documentation is the strongest witness for the chains, because a forged chain presupposes a public that checks chains.</p>
-                    <div id="tab3-accordion" class="space-y-4">
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c1">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Ibn al-Mubārak Defends an Old Rule</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t3c1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+            </section>
+            <section id="tab3" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. The Forgers Prove the Chains</h2>
+                <p class="mb-8 text-gray-600">Fabrication is documented inside the same books that carry the chains. That documentation is the strongest witness for the chains, because a forged chain presupposes a public that checks chains.</p>
+                <div class="space-y-10">
+<article id="t3c1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Ibn al-Mubārak Defends an Old Rule</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> al-Tirmidhī (d. 279), Sunan, v5, p. 396, no. 4053; Ibn Ḥibbān (d. 354), al-Majrūḥīn, v1, p. 47; al-Khaṭīb al-Baghdādī (d. 463), Tārīkh Baghdād, v7, p. 102</p>
                                         <p class="text-sm"><strong>Speaker:</strong> ʿAbd Allāh b. al-Mubārak of Marw (d. 181 AH)</p>
@@ -599,16 +563,10 @@
                                         <p class="font-semibold text-gray-800">The forgery wave that skeptics cite as the chains' reason for being is attested inside the same books as the chains, dated to the same era, and answered by the chains. The war and the weapon appear together, which is what a real origin looks like.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c2">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Rifāʿa Stood at the Liar's Side</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t3c2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t3c2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Rifāʿa Stood at the Liar's Side</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Ibn Ḥanbal, Musnad, Risāla edition, v39, p. 106</p>
                                         <p class="text-sm"><strong>Speaker:</strong> Rifāʿa b. Shadād, Kūfan of the first generation</p>
@@ -634,16 +592,10 @@
                         <p class="font-semibold text-gray-800">The patron of Kūfa's first forgery wave was remembered, by name and from inside his own court, as a liar. The demand for named transmitters begins in the same city and the same decade. Enemy and remedy share an address.</p>
                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t3c3">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Forgers Need Something to Forge</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t3c3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t3c3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Forgers Need Something to Forge</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Claim:</strong> a forged chain presupposes a public that checks chains, so the forgery record is evidence for the institution, against its lateness</p>
                                     </div>
@@ -662,23 +614,16 @@
                                         <p class="font-semibold text-gray-800">The history of lying about the Prophet <span class="honorific">ﷺ</span> and the history of checking who tells it are, in the sources, one history on one timeline. The forgery record offered as proof of the chains' lateness is the strongest witness for their earliness.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-
-                    </div>
-                </div>
-
-                <div id="tab4" class="tab-pane hidden" role="tabpanel">
-                    <p class="mb-6 text-gray-600">The Shia community had its own transmission system, its own books, and its own memory of al-Mukhtār. Where that independent tradition touches the question of origins, it keeps the same clock as the Sunni reports.</p>
-                    <div id="tab4-accordion" class="space-y-4">
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c1">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The First Split Inside the Shia</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t4c1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+            </section>
+            <section id="tab4" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. Kūfa's Second Witness</h2>
+                <p class="mb-8 text-gray-600">The Shia community had its own transmission system, its own books, and its own memory of al-Mukhtār. Where that independent tradition touches the question of origins, it keeps the same clock as the Sunni reports.</p>
+                <div class="space-y-10">
+<article id="t4c1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The First Split Inside the Shia</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> al-Ṣadūq (d. 381), Man lā yaḥḍuruhu al-faqīh, v4, p. 543; al-Majlisī (d. 1111), Biḥār al-anwār, v37, p. 3, from al-Qummī</p>
                                         <p class="text-sm"><strong>Claim:</strong> the Kaysāniyya, the partisans of al-Mukhtār, were the first group to break away inside the Imāmiyya</p>
@@ -712,16 +657,10 @@
                                         <p class="font-semibold text-gray-800">The community with the least to gain from a Sunni chronology of hadith criticism preserves the same fault line in the same decade. The dating of the first scrutiny does not hang on one tradition's memory alone; it stands on two that barely speak to each other.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c2">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Four Hundred Books with Chains</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t4c2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t4c2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">Four Hundred Books with Chains</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> al-Mufīd (d. 413), as quoted in Ṣadr al-Mutaʾallihīn, Sharḥ uṣūl al-Kāfī, v1, p. 117; al-Ḥurr al-ʿĀmilī (d. 1104), Wasāʾil al-shīʿa, v30, p. 198</p>
                                         <p class="text-sm"><strong>Claim:</strong> the Imāmiyya composed four hundred chain-connected notebooks before 260 AH, and judged reports by their presence in them</p>
@@ -756,16 +695,10 @@
                                         <p class="font-semibold text-gray-800">A rival tradition, building its own authentication system in the same city and century, leaves the Sunni chronology nowhere to stand as an invention. The isnād was the shared infrastructure of both communities' scholarship before either wrote the books that preserve it.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t4c3">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Assayer of Hadith</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t4c3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t4c3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The Assayer of Hadith</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Source:</strong> Ibn ʿAdī al-Jurjānī (d. 365), al-Kāmil fī ḍuʿafāʾ al-rijāl, v5, p. 225</p>
                                         <p class="text-sm"><strong>Speaker:</strong> Ibrāhīm al-Nakhaʿī (d. c. 96 AH)</p>
@@ -791,23 +724,16 @@
                         <p class="font-semibold text-gray-800">The chronology and the personality corroborate each other. The report that dates the birth of isnād-scrutiny to al-Mukhtār's days comes from a man whose entire documented method is the scrutiny of transmitters, applied circle by circle, in the city where the forgery began.</p>
                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-
-                    </div>
-                </div>
-
-                <div id="tab5" class="tab-pane hidden" role="tabpanel">
-                    <p class="mb-6 text-gray-600">Three questions stay open. Stating them plainly does not weaken the dating of the institution; it marks the line between what the evidence proves and what it leaves uncertain.</p>
-                    <div id="tab5-accordion" class="space-y-4">
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c1">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Layer Below the Six</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t5c1">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+            </section>
+            <section id="tab5" class="content-section mb-12">
+                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">5. What Stays Open</h2>
+                <p class="mb-8 text-gray-600">Three questions stay open. Stating them plainly does not weaken the dating of the institution; it marks the line between what the evidence proves and what it leaves uncertain.</p>
+                <div class="space-y-10">
+<article id="t5c1" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The Layer Below the Six</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Open question:</strong> whether individual Companion-level ascriptions inside full chains are historically accurate</p>
                                     </div>
@@ -822,16 +748,10 @@
                                         <p class="font-semibold text-gray-800">Conceding the open layer costs the argument nothing, because the thesis defended here is about the institution, its century, and its city. The six pivots and the 680s floor carry that thesis without touching the disputed layer beneath them.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c2">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">One Strand Is Still One Strand</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t5c2">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t5c2" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">One Strand Is Still One Strand</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Open question:</strong> whether the verbatim wording of the two floor reports is early, or later composition</p>
                                     </div>
@@ -847,16 +767,10 @@
                                         <p class="font-semibold text-gray-800">Granting both bottlenecks their full skeptical weight removes two verbatim sentences and leaves the dating standing on structure and cross-tradition agreement. A floor that survives the loss of its own wording is load-bearing in the right place.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="t5c3">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Words Are Younger Than the Practice</h4>
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <div class="accordion-content" id="t5c3">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
+                            </article>
+                                                <article id="t5c3" class="bg-white border border-[#E7E0D1] rounded-lg">
+                            <div class="p-4 md:p-6">
+                                <h3 class="text-lg font-semibold text-[#3D4451] mb-4">The Words Are Younger Than the Practice</h3>
                                     <div class="premise-card space-y-1">
                                         <p class="text-sm"><strong>Open question:</strong> whether the paired labels in the fitna report are older than third-century theology</p>
                                     </div>
@@ -871,41 +785,33 @@
                                         <p class="font-semibold text-gray-800">A late formula proves a late formula. The evidence for the early practice of the isnād was never the formula, and the strongest dating witnesses work without it.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
+                            </article>
                     </div>
-                </div>
+            </section>
+
+            <!-- GLOSSARY: the page's single collapsible, native <details> -->
+            <div id="glossary-section" class="content-section mt-12">
+                <details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4">
+                    <summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4></summary>
+                    <div class="pt-4 mt-4 border-t border-[#E7E0D1] space-y-4">
+                        <p><strong>isnād (plural asānīd):</strong> the chain of named transmitters attached to a report, running from the writer of the book back to the original speaker. The word comes from the verb sanada, to lean something on a support, and the report leans on its chain.</p>
+                        <p><strong>Ṣaḥīfa (plural ṣuḥuf):</strong> a written sheet or notebook of hadith. The Ṣaḥīfa of Hammām b. Munabbih is the collection attributed to a pupil of Abū Hurayra, preserved as a standalone book and embedded complete in the Musnad of Ibn Ḥanbal.</p>
+                        <p><strong>matn:</strong> the text of a report, the words attributed to the original speaker. The isnād carries the matn; criticism examines both.</p>
+                        <p><strong>Successor (tābiʿī, plural tābiʿūn):</strong> a Muslim of the generation after the Companions, who learned from Companions of the Prophet <span class="honorific">ﷺ</span> without having seen the Prophet <span class="honorific">ﷺ</span> himself.</p>
+                        <p><strong>rijāl criticism:</strong> the evaluation of transmitters (rijāl, the men of the chains) by name, checking their reliability, their meetings with their teachers, and their doctrine. Books of rijāl are the biographical dictionaries of the transmitters.</p>
+                        <p><strong>fitna:</strong> literally a trial or smelting of metal; in the sources of the first two centuries it is the standing word for civil war and communal upheaval.</p>
+                        <p><strong>mursal (plural marāsīl):</strong> a report whose chain skips the Companion and stops at a Successor; weak in form, though the marāsīl of careful transmitters were ranked above those of careless ones.</p>
+                        <p><strong>common link:</strong> in modern analysis, the transmitter at whose teaching career the chains of many later collectors meet. Juynboll, who coined the term, treated dense bundles as the fingerprint of real teaching careers and reserved his suspicion for the single strand, one chain diving under a famous name with no other student confirming it. The common links of the canonical books are the six men of Tab 2.</p>
+                        <p><strong>zindīq (plural zanādiqa):</strong> a heretic or dualist hostile to Islam; in hadith criticism, a byword for the deliberate forger of prophetic reports.</p>
+                        <p><strong>ghulāt (singular ghālī):</strong> extremists who exaggerated the religious status of ʿAlī <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span>; both Sunni and Shia orthodoxy reject them.</p>
+                        <p><strong>Kaysāniyya:</strong> the followers of al-Mukhtār who held the imamate of Muḥammad b. al-Ḥanafiyya, son of ʿAlī <span class="honorific">﵇</span>, and awaited his return; the first sect to split from the Imāmi line.</p>
+                        <p><strong>uṣūl (al-uṣūl al-arbaʿumiʾa):</strong> the four hundred foundational notebooks of early Imami hadith, each usually the collection of one author's reports from the Imams <span class="honorific">﵈</span>, composed before the minor occultation of 260 AH.</p>
+                        <p><strong>ahl al-sunna and ahl al-bidʿa:</strong> the people of inherited practice and the people of innovation; a paired label for acceptable and unacceptable transmitters. The formula belongs to the theological vocabulary of the second and third centuries, while the practice of sorting transmitters it names is older; the fifth tab weighs exactly that gap between wording and practice.</p>
+                    </div>
+                </details>
             </div>
 
-            <!-- GLOSSARY -->
-            <div id="glossary-section" class="mt-12">
-                <div class="accordion-item bg-white border border-[#E7E0D1] rounded-lg">
-                    <div class="accordion-header flex justify-between items-center p-4 cursor-pointer" aria-expanded="false" aria-controls="glossary-content">
-                        <h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4>
-                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="accordion-content" id="glossary-content">
-                        <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
-                            <p><strong>isnād (plural asānīd):</strong> the chain of named transmitters attached to a report, running from the writer of the book back to the original speaker. The word comes from the verb sanada, to lean something on a support, and the report leans on its chain.</p>
-                            <p><strong>Ṣaḥīfa (plural ṣuḥuf):</strong> a written sheet or notebook of hadith. The Ṣaḥīfa of Hammām b. Munabbih is the collection attributed to a pupil of Abū Hurayra, preserved as a standalone book and embedded complete in the Musnad of Ibn Ḥanbal.</p>
-                            <p><strong>matn:</strong> the text of a report, the words attributed to the original speaker. The isnād carries the matn; criticism examines both.</p>
-                            <p><strong>Successor (tābiʿī, plural tābiʿūn):</strong> a Muslim of the generation after the Companions, who learned from Companions of the Prophet <span class="honorific">ﷺ</span> without having seen the Prophet <span class="honorific">ﷺ</span> himself.</p>
-                            <p><strong>rijāl criticism:</strong> the evaluation of transmitters (rijāl, the men of the chains) by name, checking their reliability, their meetings with their teachers, and their doctrine. Books of rijāl are the biographical dictionaries of the transmitters.</p>
-                            <p><strong>fitna:</strong> literally a trial or smelting of metal; in the sources of the first two centuries it is the standing word for civil war and communal upheaval.</p>
-                            <p><strong>mursal (plural marāsīl):</strong> a report whose chain skips the Companion and stops at a Successor; weak in form, though the marāsīl of careful transmitters were ranked above those of careless ones.</p>
-                            <p><strong>common link:</strong> in modern analysis, the transmitter at whose teaching career the chains of many later collectors meet. Juynboll, who coined the term, treated dense bundles as the fingerprint of real teaching careers and reserved his suspicion for the single strand, one chain diving under a famous name with no other student confirming it. The common links of the canonical books are the six men of Tab 2.</p>
-                            <p><strong>zindīq (plural zanādiqa):</strong> a heretic or dualist hostile to Islam; in hadith criticism, a byword for the deliberate forger of prophetic reports.</p>
-                            <p><strong>ghulāt (singular ghālī):</strong> extremists who exaggerated the religious status of ʿAlī <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span>; both Sunni and Shia orthodoxy reject them.</p>
-                            <p><strong>Kaysāniyya:</strong> the followers of al-Mukhtār who held the imamate of Muḥammad b. al-Ḥanafiyya, son of ʿAlī <span class="honorific">﵇</span>, and awaited his return; the first sect to split from the Imāmi line.</p>
-                            <p><strong>uṣūl (al-uṣūl al-arbaʿumiʾa):</strong> the four hundred foundational notebooks of early Imami hadith, each usually the collection of one author's reports from the Imams <span class="honorific">﵈</span>, composed before the minor occultation of 260 AH.</p>
-                            <p><strong>ahl al-sunna and ahl al-bidʿa:</strong> the people of inherited practice and the people of innovation; a paired label for acceptable and unacceptable transmitters. The formula belongs to the theological vocabulary of the second and third centuries, while the practice of sorting transmitters it names is older; the fifth tab weighs exactly that gap between wording and practice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- hash-open script -->
+            <!-- hash-scroll + scroll-spy scripts -->
             <script>
             (function () {
                 function openHash() {
@@ -913,37 +819,39 @@
                     if (!id) return;
                     var el = document.getElementById(id);
                     if (!el) return;
-                    var item = el.closest('.accordion-item');
-                    if (item) {
-                        var pane = item.closest('.tab-pane');
-                        if (pane) {
-                            var btn = document.querySelector("[data-target='" + pane.id + "']");
-                            if (btn) btn.click();
-                        }
-                        var header = item.querySelector('.accordion-header');
-                        var content = item.querySelector('.accordion-content');
-                        if (header && content && !item.classList.contains('open')) {
-                            document.querySelectorAll('.accordion-item.open').forEach(function (o) {
-                                if (o !== item) {
-                                    o.classList.remove('open');
-                                    o.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                                    o.querySelector('.accordion-content').style.maxHeight = '0px';
-                                }
-                            });
-                            item.classList.add('open');
-                            header.setAttribute('aria-expanded', 'true');
-                            content.style.maxHeight = content.scrollHeight + 'px';
-                        }
-                    }
-                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 250);
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
                 }
                 window.addEventListener('hashchange', openHash);
                 window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
             })();
             </script>
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {}; var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
+                        }
+                    });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
 
             <!-- FINAL VERDICT -->
-            <footer class="mt-16 pt-10 border-t border-[#E7E0D1]">
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
                 <div class="max-w-3xl">
                     <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
                     <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
@@ -951,70 +859,9 @@
                     <p class="text-lg text-gray-700">What remains open is narrower than the skeptics claimed. The reliability of individual names below the six pivots, and the exact wording of the famous report of Ibn Sīrīn. The institution itself stands inside the first century, in Kūfa, born from the crisis that al-Mukhtār's revolt created.</p>
                 </div>
             </footer>
+
         </main>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab');
-            const panes = document.querySelectorAll('.tab-pane');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    const target = e.currentTarget.dataset.target;
-
-                    tabs.forEach(t => {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    e.currentTarget.classList.add('active');
-                    e.currentTarget.setAttribute('aria-selected', 'true');
-
-                    panes.forEach(pane => {
-                        if (pane.id === target) {
-                            pane.classList.remove('hidden');
-                            pane.classList.add('active');
-                        } else {
-                            pane.classList.add('hidden');
-                            pane.classList.remove('active');
-                        }
-                    });
-                });
-            });
-
-            const accordionItems = document.querySelectorAll('.accordion-item');
-
-            accordionItems.forEach(item => {
-                const header = item.querySelector('.accordion-header');
-                const content = item.querySelector('.accordion-content');
-
-                header.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-
-                    const parentAccordion = item.closest('.space-y-4, #glossary-section');
-                    if (parentAccordion) {
-                        parentAccordion.querySelectorAll('.accordion-item').forEach(i => {
-                            if (i !== item) {
-                               i.classList.remove('open');
-                               i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                               i.querySelector('.accordion-content').style.maxHeight = '0px';
-                            }
-                        });
-                    }
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        header.setAttribute('aria-expanded', 'true');
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        item.classList.remove('open');
-                        header.setAttribute('aria-expanded', 'false');
-                        content.style.maxHeight = '0px';
-                    }
-                });
-            });
-        });
-    </script>
 
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
