@@ -121,6 +121,14 @@
             padding: 0.75rem 0.25rem;
             white-space: nowrap;
         }
+        @media (max-width: 767px) {
+            .section-nav a.navlink,
+            .section-nav a.backlink {
+                white-space: normal;
+                text-align: center;
+                line-height: 1.35;
+            }
+        }
         .section-nav a.navlink:hover { color: #8A6D3B; }
         .section-nav a.navlink[aria-current="location"] {
             color: #8A6D3B;
@@ -149,15 +157,15 @@
         </header>
 
         <div class="section-nav -mx-4 px-4">
-            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+            <nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-0" aria-label="Section navigation">
                 <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
-                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
-                <a href="#tab0" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
-                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Question of T</a>
-                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. The Word Mushaf</a>
-                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. The Scribal Error</a>
-                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. The Chain of Tran</a>
-                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. The Scholarly Ver</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3">Facts</a>
+                <a href="#tab0" class="navlink text-sm md:text-base py-3">Overview</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3">1. The Question of Tahrif</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3">2. The Word Mushaf</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3">3. The Scribal Error Test</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3">4. The Chain of Transmission</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3">5. The Scholarly Verdict</a>
                 <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
                 <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
             </nav>
@@ -168,7 +176,7 @@
             <section class="mb-8 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                 <div class="thesis-box mb-0">
                     <p class="font-semibold text-gray-800 mb-2">The Thesis</p>
-                    <p class="text-gray-700">The Imami Shia hold the Quran between the two covers to be complete and unaltered. Allah <span class="honorific">ﷻ</span> guaranteed its preservation in the first person, and the Imams <span class="honorific">﵈</span> bound their followers to the received text: recite as the people recite. The solitary reports suggesting alteration, carried on contested chains, can override neither the Quran's certainty nor the Imams' binding instruction. What those reports establish is a question of transmission, not a doctrine of corruption.</p>
+                    <p class="text-gray-700">The Imami Shia hold the Quran between the two covers to be complete and unaltered. Allah <span class="honorific">ﷻ</span> guaranteed its preservation in the first person, and the Imams <span class="honorific">﵈</span> bound their followers to the received text with one instruction, recite as the people recite. The solitary reports suggesting alteration, carried on contested chains, can override neither the Quran's certainty nor the Imams' binding instruction. What those reports establish is a question of transmission, not a doctrine of corruption.</p>
                 </div>
             </section>
 
@@ -297,24 +305,24 @@
 
                     <section class="p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
                         <div class="analysis-section">
-                            <p class="mb-4 text-gray-600">A charge circulates against the Shia: that their hadith books contain narrations implying the Quran was altered, and therefore the Shia hold the present text to be incomplete. The charge is stated at its strongest: early Shia collections, especially al-Kulayni's <em>al-Kafi</em>, do carry reports in which an Imam <span class="honorific">﵇</span> recites a verse differently from the standard mushaf, calls a word a scribal error, or speaks of a larger revelation. These reports exist. They are not denied. The question is what they establish.</p>
-                            <p class="mb-4 text-gray-600">The argument that follows is addressed to readers who accept the Quran as Allah's <span class="honorific">ﷻ</span> word and the Imams of the Ahl al-Bayt <span class="honorific">﵈</span> as authoritative interpreters. Within that framework, the school's own sources, methods, and scholars converge on one conclusion: the text between the two covers is complete and unaltered.</p>
+                            <p class="mb-4 text-gray-600">A charge circulates against the Shia, namely that their hadith books contain narrations implying the Quran was altered, and therefore the Shia hold the present text to be incomplete. The charge is stated at its strongest. Early Shia collections, especially al-Kulayni's <em>al-Kafi</em>, do carry reports in which an Imam <span class="honorific">﵇</span> recites a verse differently from the standard mushaf, calls a word a scribal error, or speaks of a larger revelation. These reports exist. They are not denied. The question is what they establish.</p>
+                            <p class="mb-4 text-gray-600">The argument that follows is addressed to readers who accept the Quran as Allah's <span class="honorific">ﷻ</span> word and the Imams of the Ahl al-Bayt <span class="honorific">﵈</span> as authoritative interpreters. Within that framework, the school's own sources, methods, and scholars converge on one conclusion. The text between the two covers is complete and unaltered.</p>
                         </div>
-                        <p class="mb-6 text-gray-600">Two premises frame the answer:</p>
+                        <p class="mb-6 text-gray-600">Two premises frame the answer.</p>
                         <div class="space-y-4">
                             <div class="premise-card">
-                                <p class="font-semibold text-gray-800">Premise 1: Allah <span class="honorific">ﷻ</span> Guarantees the Quran's Preservation</p>
+                                <p class="font-semibold text-gray-800"><strong>Premise 1:</strong> Allah <span class="honorific">ﷻ</span> Guarantees the Quran's Preservation</p>
                                 <p class="text-gray-600 mb-2">Allah <span class="honorific">ﷻ</span> attaches preservation to Himself in the first person. The promise is explicit and eternal.</p>
                                 <blockquote class="quran-callout">
-                                    <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ﴾</p>
+                                    <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ﴾</p>
                                     <p class="italic transliteration">Inna nahnu nazzalna al-dhikra wa-inna lahu la-hafizun.</p>
                                     <p class="translation">"Indeed, We sent down the Reminder, and indeed We are surely its preservers."</p>
                                     <cite class="text-sm text-gray-500">- Quran 15:9</cite>
                                 </blockquote>
                             </div>
                             <div class="premise-card">
-                                <p class="font-semibold text-gray-800">Premise 2: The Imams <span class="honorific">﵈</span> Bound Their Followers to the Received Text</p>
-                                <p class="text-gray-600 mb-2">Imam al-Sadiq <span class="honorific">﵇</span> gave a binding instruction when a man recited a variant in his presence:</p>
+                                <p class="font-semibold text-gray-800"><strong>Premise 2:</strong> The Imams <span class="honorific">﵈</span> Bound Their Followers to the Received Text</p>
+                                <p class="text-gray-600 mb-2">Imam al-Sadiq <span class="honorific">﵇</span> gave a binding instruction when a man recited a variant in his presence, saying,</p>
                                 <blockquote class="hadith-callout">
                                     <p class="rtl font-amiri text-xl" lang="ar">كف عن هذه القراءة، اقرأ كما يقرأ الناس حتى يقوم القائم</p>
                                     <p class="italic transliteration">Kuffa 'an hadhihi al-qira'ati, iqra' kama yaqra'u al-nasu hatta yaquma al-Qa'im.</p>
@@ -323,7 +331,7 @@
                                 </blockquote>
                             </div>
                             <div class="conclusion-card">
-                                <p class="font-semibold text-[#8A6D3B]">Conclusion: The Reports of Alteration Cannot Establish Doctrine</p>
+                                <p class="font-semibold text-[#8A6D3B]"><strong>Conclusion:</strong> The Reports of Alteration Cannot Establish Doctrine</p>
                                 <p class="text-gray-700">If Allah <span class="honorific">ﷻ</span> guaranteed the text and the Imams <span class="honorific">﵈</span> directed their followers to that same text, then any report attributing corruption to the Quran must overcome both. The reports suggesting alteration are solitary chains through contested narrators. They cannot override the Quran's certainty or the Imams' binding instruction.</p>
                             </div>
                         </div>
@@ -345,19 +353,19 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Lexical Definition</h5>
                                         <p class="text-gray-600">The classical Arabic dictionaries define tahrif as bending something away from its proper place. The root <em>h-r-f</em> means "edge" or "side," and the verbal noun means to incline or deflect something from its course.</p>
-                                        <p class="mb-2 text-gray-600">Ma'rifat (d. 1427 AH) opens his chapter on the linguistic definition in <em>al-Tamhid fi Ulum al-Quran</em>:</p>
+                                        <p class="mb-2 text-gray-600">Ma'rifat (d. 1427 AH) opens his chapter on the linguistic definition in <em>al-Tamhid fi Ulum al-Quran</em> with this gloss,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">التحريف بالشيء إمالته والعدول به عن موضعه إلى جانب، مأخوذ من حرف الشيء بمعنى طرفه وجانبه</p>
                                             <p class="italic transliteration">Al-taḥrīfu bi'l-shay'i imālatuhu wa'l-ʿudūlu bihi ʿan mauḍiʿihi ilā jānib, ma'khūdhun min ḥarfi al-shay'i bi-maʿnā ṭarafihi wa-jānibihi.</p>
                                             <p class="translation">"Tahrif is the inclining of a thing and the turning of it away from its proper place to a side, derived from the edge or side of a thing."</p>
-                                            <cite class="text-sm text-gray-500">- Ma'rifat (d. 1427 AH), al-Tamhid fi Ulum al-Quran, vol. 8, p. 17; verified from FTS5 corpus</cite>
+                                            <cite class="text-sm text-gray-500">- Ma'rifat (d. 1427 AH), al-Tamhid fi Ulum al-Quran, vol. 8, p. 17</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Al-Jawhari (d. 393 AH) in <em>al-Sihah</em> narrows the definition to the specific context of scripture: <em>"تَحْرِيفُ الكَلِمِ عَنْ مَوَاضِعِهِ تَغْيِيرُه"</em> ("Tahrif of words from their proper places is to change them"). Ibn Manẓur (d. 711 AH) in <em>Lisan al-Arab</em> gives the same gloss: <em>"تحريف الكلم عن مواضعه، تغييره"</em> ("Tahrif of words from their proper places is to change them"). The dictionaries define the word as changing a statement's meaning, bending it away from what the speaker intended.</p>
-                                        <p class="text-gray-700 mt-2">The Quran itself uses the word three times (4:46, 5:13, 5:41), each time accusing the People of the Book of <em>yuharrijuna al-kalima 'an mawadi'ihi</em> ("they twist the words from their proper places"). In every Quranic usage, the accusation is that the meaning was distorted through misinterpretation. The Quran never uses the word to mean physical deletion or addition of text.</p>
+                                        <p class="text-gray-700 mt-3">Al-Jawhari (d. 393 AH) in <em>al-Sihah</em> narrows the definition to the specific context of scripture. He glosses, <em>"تَحْرِيفُ الكَلِمِ عَنْ مَوَاضِعِهِ تَغْيِيرُه"</em> ("Tahrif of words from their proper places is to change them"). Ibn Manẓur (d. 711 AH) in <em>Lisan al-Arab</em> gives the same gloss. He writes, <em>"تحريف الكلم عن مواضعه، تغييره"</em> ("Tahrif of words from their proper places is to change them"). The dictionaries define the word as changing a statement's meaning, bending it away from what the speaker intended.</p>
+                                        <p class="text-gray-700 mt-2">The Quran itself uses the word three times, in Quran 4:46, Quran 5:13, and Quran 5:41, each time accusing the People of the Book of <em>yuharrijuna al-kalima 'an mawadi'ihi</em> ("they twist the words from their proper places"). In every Quranic usage, the accusation is that the meaning was distorted through misinterpretation. The Quran never uses the word to mean physical deletion or addition of text.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Seven Types</h5>
-                                        <p class="text-gray-600 mb-2">Ayatollah Ma'rifat (d. 2007) and al-Khoei classified tahrif into seven types:</p>
+                                        <p class="text-gray-600 mb-2">Ayatollah Ma'rifat (d. 2007) and al-Khoei classified tahrif into seven types.</p>
                                         <ol class="list-decimal list-inside text-gray-600 space-y-1">
                                             <li><strong>Tahrif of meaning:</strong> misinterpreting verses contrary to their intent. Universally affirmed by all Shia and Sunni scholars.</li>
                                             <li><strong>Tahrif of position:</strong> rearranging verse or surah order. Denied; the order was set by Prophetic instruction.</li>
@@ -370,11 +378,11 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Critical Binary</h5>
-                                        <p class="text-gray-600">All seven types collapse into one binary: tahrif al-nass (textual corruption) versus tahrif al-ma'na (interpretive distortion). Contemporary Shia scholarship affirms only tahrif al-ma'na, that the Quran's meaning has been distorted by misinterpretation, while denying tahrif al-nass entirely.</p>
+                                        <p class="text-gray-600">All seven types collapse into one binary. Tahrif al-nass means textual corruption. Tahrif al-ma'na means interpretive distortion. Contemporary Shia scholarship affirms only tahrif al-ma'na, that the Quran's meaning has been distorted by misinterpretation, while denying tahrif al-nass entirely.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Verdict on Each Type</h5>
-                                        <p class="font-semibold text-gray-800">The seven types collapse into a single binary, and the school's verdict on each side is clear. Tahrif of meaning is universally affirmed: every scholar agrees the Quran's interpretation has been distorted. Tahrif of text, the category that would implicate the mushaf itself, has been denied by the dominant school since al-Saduq, leaving only a historical minority in dissent.</p>
+                                        <p class="font-semibold text-gray-800">The seven types collapse into a single binary. Tahrif of meaning is universally affirmed, since every scholar agrees the Quran's interpretation has been distorted. Tahrif of text is different. It alone would implicate the mushaf itself, and the dominant school has denied it since al-Saduq, leaving only a historical minority in dissent.</p>
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +400,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The "17,000 Verses" Narration</h5>
-                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> describes a larger revelation:</p>
+                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> describes a larger revelation. He said,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن القرآن الذي جاء به جبريل إلى محمد سبعة عشر ألف آية</p>
                                             <p class="italic transliteration">Inna al-Qur'āna alladhī jā'a bihi Jibrīl ilā Muḥammad sab'ata 'ashara alfa āyah.</p>
@@ -403,33 +411,33 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">"No One Compiled the Quran Except Ali"</h5>
-                                        <p class="mb-2 text-gray-600">Imam al-Baqir <span class="honorific">﵇</span> describes Ali's <span class="honorific">﵇</span> unique compilation:</p>
+                                        <p class="mb-2 text-gray-600">Imam al-Baqir <span class="honorific">﵇</span> describes Ali's <span class="honorific">﵇</span> unique compilation. He said,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">لا يقولن أحد إنه جمع القرآن كله وما جمعه ولا حفظه كما أنزل إلا علي والأئمة من بعده</p>
                                             <p class="italic transliteration">Lā yaqūlanna aḥadun annahu jama'a al-Qur'āna kullahu wa-mā jama'ahu wa-lā ḥafaẓahu kamā unzila illā ʿAlī wa'l-a'immatu min ba'dih.</p>
                                             <p class="translation">"No one should claim that he compiled the entire Quran. No one has compiled it and memorized it as it was revealed by Allah except Ali <span class="honorific">﵇</span> and the Imams <span class="honorific">﵈</span> after him."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 1, p. 441, Hadith 607</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-2">Ali's <span class="honorific">﵇</span> compilation included the full interpretive framework: which verses abrogate which, the circumstances of revelation, and the complete tafsir. The school reads this as referring to the completeness of Ali's <span class="honorific">﵇</span> commentary, since Ali <span class="honorific">﵇</span> endorsed Uthman's codex as sufficient for salvation (see Tab 4).</p>
+                                        <p class="text-gray-700 mt-2">Ali's <span class="honorific">﵇</span> compilation included the full interpretive framework, namely which verses abrogate which, the circumstances of revelation, and the complete tafsir. The school reads this as referring to the completeness of Ali's <span class="honorific">﵇</span> commentary, since Ali <span class="honorific">﵇</span> endorsed Uthman's codex as sufficient for salvation (see Tab 4).</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">"Recite as the People Recite Until al-Qa'im Arrives"</h5>
-                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> directed a follower who recited a variant:</p>
+                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> directed a follower who recited a variant, telling him,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اقرؤوا كما يقرأ الناس حتى يقوم القائم، فإذا قام القائم قرأ كتاب الله عز وجل على وجهه وأخرج المصحف الذي كتبه علي</p>
                                             <p class="italic transliteration">Iqra'ū kamā yaqra'u al-nāsu ḥattā yaqūma al-Qā'im, fa-idhā qāma al-Qā'im qara'a kitāba Allāhi 'azza wa-jalla 'alā wajhihi wa-akhraja al-muṣḥafa alladhī katabahu ʿAlī.</p>
                                             <p class="translation">"Recite as the people recite, until al-Qa'im arrives. When al-Qa'im arrives, he will recite the Book of Allah in its proper manner and he will bring forth the Mushaf written by Ali <span class="honorific">﵇</span>."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 4, p. 452</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-2">The Imam <span class="honorific">﵇</span> turned his follower away from a private variant and back to the common text. The binding instruction operated for the entire period of the Imam's <span class="honorific">﵇</span> absence: recite as the community recites.</p>
+                                        <p class="text-gray-700 mt-2">The Imam <span class="honorific">﵇</span> turned his follower away from a private variant and back to the common text. The binding instruction operated for the entire period of the Imam's <span class="honorific">﵇</span> absence, and it was recite as the community recites.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The "Nukat wa Nutaf" Chapter</h5>
-                                        <p class="text-gray-600">Al-Kafi contains a chapter titled "Nukat wa Nutaf" (Points and Drops), spanning pages 412-432 of volume 1, with 92 reports. In these narrations, Gabriel is described as bringing down verses with insertions about Ali <span class="honorific">﵇</span> and the Ahl al-Bayt <span class="honorific">﵈</span>. For example, Q 2:23 is recited as: "If you are in doubt about what We have revealed unto our servant (concerning Ali), then produce a sura the like thereof." The school's scholars read these as tafsir (the verse concerns Ali <span class="honorific">﵇</span> by interpretation), not as evidence that the phrase "(concerning Ali)" was physically removed from the mushaf.</p>
+                                        <p class="text-gray-600">Al-Kafi contains a chapter titled "Nukat wa Nutaf" (Points and Drops), spanning pages 412-432 of volume 1, with 92 reports. In these narrations, Gabriel is described as bringing down verses with insertions about Ali <span class="honorific">﵇</span> and the Ahl al-Bayt <span class="honorific">﵈</span>. For example, Quran 2:23 is recited in these reports as, "If you are in doubt about what We have revealed unto our servant (concerning Ali), then produce a sura the like thereof." The school's scholars read these as tafsir (the verse concerns Ali <span class="honorific">﵇</span> by interpretation), not as evidence that the phrase "(concerning Ali)" was physically removed from the mushaf.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Commentary, Not a Second Quran</h5>
-                                        <p class="font-semibold text-gray-800">These narrations exist in al-Kafi. They are acknowledged by the school's scholars. The dominant reading, from al-Saduq through al-Khoei, treats them as reports of interpretive material, commentary, and variant readings that never entered the standard codex. They are solitary chains that cannot override the mutawatir text, and the Imams <span class="honorific">﵈</span> directed their followers to the common recitation in every verified practical instruction.</p>
+                                        <p class="font-semibold text-gray-800">These narrations exist in al-Kafi, and the school's scholars acknowledge them. From al-Saduq through al-Khoei, the dominant reading treats them as interpretive material, commentary, and variant readings that never entered the standard codex. Their chains are solitary, so they cannot override the mass-transmitted text. In every verified practical instruction the Imams <span class="honorific">﵈</span> pointed their followers to the common recitation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -437,7 +445,7 @@
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Nahj al-Balagha: Imam Ali's Testimony</h4>
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Imam Ali's Testimony in Nahj al-Balagha</h4>
                             </div>
                             <div id="tab1-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
@@ -446,7 +454,7 @@
                                         <p class="text-gray-600">Imam Ali's <span class="honorific">﵇</span> sermons in Nahj al-Balagha never claim the Quran is incomplete or altered. They consistently present the Quran as a complete, sufficient, and trustworthy guide.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Sermon 175: The Trustworthy Counsellor</h5>
+                                        <h5 class="analysis-heading">The Trustworthy Counsellor (Sermon 175)</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">وهذا القرآن ناصح لا يغش، ودليل لا يضل، ومحدث لا يكذب</p>
                                             <p class="italic transliteration">Wa-hādhā al-Qur'ānu nāṣiḥun lā yaghish, wa-dalīlun lā yaḍill, wa-muḥaddithun lā yakdhib.</p>
@@ -455,7 +463,7 @@
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Sermon 151: The Strong Rope</h5>
+                                        <h5 class="analysis-heading">The Strong Rope (Sermon 151)</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">خذوا بكتاب الله فإنه حبل متين، ونور مبين، وشفاء نافع، وري عاصف، وعصمة للمتمسك، ونجاة للمتعلق، لا يعوج فيقام، ولا يزيغ فيستعتب</p>
                                             <p class="italic transliteration">Khudhū bi-kitābi Allāhi fa-innahu ḥablun matīn, wa-nūrun mubīn, wa-shifā'un nāfi', wa-riyyun 'āṣif, wa-'iṣmatun li'l-mutamasik, wa-najāhun li'l-muta'alliq, lā ya'ūju fa-yuqām, wa-lā yazīghu fa-yusta'tab.</p>
@@ -487,15 +495,15 @@
                                             </div>
                                             <div>
                                                 <p class="font-semibold text-gray-700 mb-1">2. Quranic self-attestation</p>
-                                                <p class="text-gray-600 mb-2">Allah <span class="honorific">ﷻ</span> attaches the Quran's preservation to Himself. Two verses carry the weight of the argument:</p>
+                                                <p class="text-gray-600 mb-2">Allah <span class="honorific">ﷻ</span> attaches the Quran's preservation to Himself. Two verses carry the weight of the argument.</p>
                                                 <blockquote class="quran-callout">
-                                                    <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ﴾</p>
+                                                    <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ﴾</p>
                                                     <p class="italic transliteration">Innā naḥnu nazzalnā al-dhikra wa-innā lahu la-ḥāfiẓūn.</p>
                                                     <p class="translation">"Indeed, We sent down the Reminder, and indeed We are surely its preservers."</p>
                                                     <cite class="text-sm text-gray-500">- Quran 15:9</cite>
                                                 </blockquote>
                                                 <blockquote class="quran-callout">
-                                                    <p class="rtl font-amiri text-xl" lang="ar">﴿لَا يَأْتِيهِ الْبَاطِلُ مِن بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِ تَنزِيلٌ مِّنْ حَكِيمٍ حَمِيدٍ﴾</p>
+                                                    <p class="rtl font-amiri text-xl" lang="ar">﴿لَّا يَأْتِيهِ ٱلْبَٰطِلُ مِنۢ بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِۦ ۖ تَنزِيلٌۭ مِّنْ حَكِيمٍ حَمِيدٍۢ﴾</p>
                                                     <p class="italic transliteration">Lā ya'tīhi al-bāṭilu min bayni yadayhi wa-lā min khalfihi, tanzīlun min ḥakīmin ḥamīd.</p>
                                                     <p class="translation">"Falsehood cannot come to it from before it or from behind it, a revelation from One all-wise and praiseworthy."</p>
                                                     <cite class="text-sm text-gray-500">- Quran 41:42</cite>
@@ -504,17 +512,17 @@
                                             </div>
                                             <div>
                                                 <p class="font-semibold text-gray-700 mb-1">3. Hadith al-Thaqalayn</p>
-                                                <p class="text-gray-600 mb-2">The Prophet <span class="honorific">ﷺ</span> told Muslims to hold fast to the Quran and the Ahl al-Bayt <span class="honorific">﵈</span>, saying the two would never separate until they returned to him at the Pool. If the Quran were corrupted, this instruction would be self-defeating: the Prophet <span class="honorific">ﷺ</span> would have bound his community to a corrupted text alongside his family. The Mi'raj narration grounds this pairing in the divine decree itself. On the night journey, Allah <span class="honorific">ﷻ</span> revealed to the Prophet <span class="honorific">ﷺ</span> what would befall his family after him, binding the Book and the household together at the source:</p>
+                                                <p class="text-gray-600 mb-2">The Prophet <span class="honorific">ﷺ</span> told Muslims to hold fast to the Quran and the Ahl al-Bayt <span class="honorific">﵈</span>, saying the two would never separate until they returned to him at the Pool. If the Quran were corrupted, this instruction would be self-defeating, because the Prophet <span class="honorific">ﷺ</span> would have bound his community to a corrupted text alongside his family. The Mi'raj narration grounds this pairing in the divine decree itself. On the night journey, Allah <span class="honorific">ﷻ</span> revealed to the Prophet <span class="honorific">ﷺ</span> what would befall his family after him, binding the Book and the household together at the source. He said,</p>
                                                 <blockquote class="hadith-callout">
                                                     <p class="rtl font-amiri text-xl" lang="ar">قال : صدقت يا محمد إني اصطفيتك بالنبوة ، وبعثتك بالرسالة ، وامتحنت عليا بالبلاغ والشهادة إلى أمتك ، وجعلته حجة في الأرض معك وبعدك ، وهو نور أوليائي ، وولي من أطاعني ، وهو الكلمة التي ألزمتها المتقين يا محمد ، وزوجته فاطمة ، وإنه وصيك ووارثك ووزيرك ، وغاسل عورتك ، وناصر دينك ، والمقتول على سنتي وسنتك ، يقتله شقي هذه الأمة... سبقت رحمتي غضبي لك ولذريتك ، أنت مقربي من خلقي ، وأنت أميني وحبيبي ورسولي ، وعزتي وجلالي لو لقيني جميع خلقي يشكون فيك طرفة عين ، أو يبغضون صفوتي من ذريتك لأدخلنهم ناري ولا أبالي ، يا محمد علي أمير المؤمنين ، وسيد المسلمين ، وقائد الغر المحجلين إلى جنات النعيم ، أبو السبطين ، سيدي شباب أهل جنتي ، المقتولين ظلما</p>
-                                                    <p class="translation">"He said: You have spoken truly, O Muhammad. I chose you for prophethood and sent you with the message, and I tested Ali with the deliverance and the witness to your community, and made him a proof in the earth with you and after you. He is the light of My friends and the guardian of whoever obeys Me. He is the Word that I bound upon the God-conscious. O Muhammad, I joined him in marriage to Fatimah, and he is your successor, your heir, your minister, the washer of your body, the supporter of your religion, and the one killed upon my Sunna and yours: the wretched one of this community will kill him... My mercy has preceded My wrath for you and for your progeny. You are My brought-near one from My creation, My trusted one, My beloved, My messenger. By My might and My majesty, if all My creation were to meet Me doubting you for the blink of an eye, or hating the chosen ones of your progeny, I would enter them into My Fire and not care. O Muhammad, Ali is the Commander of the Faithful, the master of the Muslims, the leader of the radiant ones into the gardens of bliss, the father of the two grandsons, the two masters of the youth of My Garden, the two killed wrongfully."</p>
-                                                    <cite class="text-sm text-gray-500">- al-Majlisi (d. 1111 AH), Bihar al-Anwar, vol. 18, pp. 395-397, from al-Yaqin fi Amrat Amir al-Mu'minin; verified from FTS5 corpus</cite>
+                                                    <p class="translation">"He said, 'You have spoken truly, O Muhammad. I chose you for prophethood and sent you with the message, and I tested Ali with the deliverance and the witness to your community, and made him a proof in the earth with you and after you. He is the light of My friends and the guardian of whoever obeys Me. He is the Word that I bound upon the God-conscious. O Muhammad, I joined him in marriage to Fatimah, and he is your successor, your heir, your minister, the washer of your body, the supporter of your religion, and the one killed upon my Sunna and yours. The wretched one of this community will kill him... My mercy has preceded My wrath for you and for your progeny. You are My brought-near one from My creation, My trusted one, My beloved, My messenger. By My might and My majesty, if all My creation were to meet Me doubting you for the blink of an eye, or hating the chosen ones of your progeny, I would enter them into My Fire and not care. O Muhammad, Ali is the Commander of the Faithful, the master of the Muslims, the leader of the radiant ones into the gardens of bliss, the father of the two grandsons, the two masters of the youth of My Garden, the two killed wrongfully."</p>
+                                                    <cite class="text-sm text-gray-500">- al-Majlisi (d. 1111 AH), Bihar al-Anwar, vol. 18, pp. 395-397, from al-Yaqin fi Amrat Amir al-Mu'minin</cite>
                                                 </blockquote>
-                                                <p class="text-gray-600 mt-2">The narration establishes the pairing at the level of the divine decree: the Book given to the Prophet and the family given to the Book are one trust. Allah foretold the martyrdom of Ali and his two sons and bound the community's fate to how it treats them. A community that could not alter the Book could not separate it from the family either: the two are joined in the same breath, and the same divine protection covers both. On the night of the Mi'raj, the Prophet learned that the Quran he would leave and the family he would leave are one legacy, inseparable by decree.</p>
+                                                <p class="text-gray-600 mt-2">The narration establishes the pairing at the level of the divine decree. The Book given to the Prophet and the family given to the Book are one trust. Allah foretold the martyrdom of Ali and his two sons and bound the community's fate to how it treats them. A community that could not alter the Book could not separate it from the family either. The two are joined in the same breath, and the same divine protection covers both. On the night of the Mi'raj, the Prophet learned that the Quran he would leave and the family he would leave are one legacy, inseparable by decree.</p>
                                             </div>
                                             <div>
                                                 <p class="font-semibold text-gray-700 mb-1">4. The Imams used the Quran as criterion</p>
-                                                <p class="text-gray-600 mb-2">Imam al-Sadiq <span class="honorific">﵇</span> instructed followers to test every narration against the Quran:</p>
+                                                <p class="text-gray-600 mb-2">Imam al-Sadiq <span class="honorific">﵇</span> instructed followers to test every narration against the Quran, saying,</p>
                                                 <blockquote class="hadith-callout">
                                                     <p class="rtl font-amiri text-xl" lang="ar">إذا ورد عليكم حديثان مختلفان فاعرضوهما على كتاب الله، فما وافق كتاب الله فخذوه، وما خالف كتاب الله فردوه</p>
                                                     <p class="italic transliteration">Idhā warada ʿalaykum ḥadīthāni mukhtalifāni fa-aʿriḍūhumā ʿalā kitābi Allāh, fa-mā wāfaqa kitāba Allāhi fa-khudhūhu, wa-mā khālafa kitāba Allāhi fa-ruddūhu.</p>
@@ -525,7 +533,7 @@
                                             </div>
                                             <div>
                                                 <p class="font-semibold text-gray-700 mb-1">5. Imam Ali's silence during Uthman's compilation</p>
-                                                <p class="text-gray-600 mb-2">Ali <span class="honorific">﵇</span> openly contested the caliphs on Ghadir Khumm, Fadak, and political legitimacy. He challenged them on matters far less consequential than the corruption of Allah's <span class="honorific">ﷻ</span> Book. On the compilation of the Quran, he said:</p>
+                                                <p class="text-gray-600 mb-2">Ali <span class="honorific">﵇</span> openly contested the caliphs on Ghadir Khumm, Fadak, and political legitimacy. He challenged them on matters far less consequential than the corruption of Allah's <span class="honorific">ﷻ</span> Book. On the compilation of the Quran, he said,</p>
                                                 <blockquote class="hadith-callout">
                                                     <p class="rtl font-amiri text-xl" lang="ar">لو لم يصنعه عثمان لصنعته</p>
                                                     <p class="italic transliteration">Law lam yaṣnaʿhu ʿUthmānu la-ṣnaʿtuh.</p>
@@ -538,7 +546,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Where the Five Arguments Converge</h5>
-                                        <p class="font-semibold text-gray-800">Each argument targets a different dimension of the claim: transmission (1), divine promise (2), Prophetic instruction (3), the Imams' practical authority (4), and Ali's <span class="honorific">﵇</span> political conduct (5). The five converge on a single conclusion: the Quran between the two covers is the complete text revealed to the Prophet <span class="honorific">ﷺ</span>.</p>
+                                        <p class="font-semibold text-gray-800">Each argument targets a different dimension of the claim, transmission (1), divine promise (2), Prophetic instruction (3), the Imams' practical authority (4), and Ali's <span class="honorific">﵇</span> political conduct (5). The five converge on a single conclusion. The Quran between the two covers is the complete text revealed to the Prophet <span class="honorific">ﷺ</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -555,15 +563,15 @@
                                         <p class="text-gray-600 mb-3">The debate evolved through five distinct phases across a thousand years, each shift driven by a change in how scholars understood the relationship between hadith and reason.</p>
                                         <div class="space-y-3 text-gray-600">
                                             <p><strong>Phase 1: Early Period (3rd-4th c. AH).</strong> The earliest Imami scholars worked as collectors and preservers of hadith, and they recorded what they heard without imposing a doctrinal filter. Al-Kulayni (d. 329 AH) included tahrif narrations in al-Kafi without refuting them, because his project was preservation, not adjudication. Ali ibn Ibrahim al-Qummi's Tafsir and al-Ayyashi's Tafsir follow the same pattern. Al-Sayyari's Kitab al-Qira'at is the earliest extant Shia work implying textual changes. Belief in some form of textual alteration was common, because the rationalist tools to distinguish sound from unsound hadith had not yet been developed.</p>
-                                            <p><strong>Phase 2: The Rationalist Turn (Late 4th-5th c. AH).</strong> Once the school developed a mature theological apparatus, scholars began testing the narrations against reason, consensus, and the Quran's own claims. Al-Saduq (d. 381 AH) produced the first systematic creedal denial. Al-Mufid (d. 413 AH) took a middle position: nothing was added, but reason does not consider omission impossible. Al-Murtada (d. 436 AH) argued the strongest classical denial, and al-Tusi (d. 460 AH) closed the phase by ruling that addition is unanimously false and the sound position is no deletion either. The shift was decisive: the same narrations remained in the books, but the school now had the tools to weigh and reject them.</p>
-                                            <p><strong>Phase 3: Akhbari Revival (10th-12th c. AH).</strong> The Akhbari school rejected the rationalist apparatus of Phase 2 and returned to accepting hadith at face value, which naturally reopened the question. Fayd al-Kashani (d. 1091 AH) compiled nine pages of tahrif narrations in Tafsir al-Safi, then immediately added that the correct view of the sect is against that. Al-Majlisi (d. 1110 AH) called some traditions mutawatir in one work and akhbar ahad in another. The revival produced intense attention to the narrations, yet even its leading figures could not commit to affirming textual corruption as settled doctrine.</p>
-                                            <p><strong>Phase 4: Fasl al-Khitab (c. 1298 AH / 1881 CE).</strong> Mirza Husayn Nuri (d. 1320 AH) produced the most comprehensive pro-tahrif work ever written: over one thousand traditions across four hundred pages. The book caused immediate controversy because the school's theological consensus had already settled the question centuries earlier. Scholars at the hawza of Samarra heavily criticized it, and Khomeini reportedly called it a collection of jokes with no academic value. Nuri's project backfired: by forcing the school to confront the narrations in bulk, it triggered the most thorough refutations the question had ever received.</p>
-                                            <p><strong>Phase 5: 20th-21st Century.</strong> Every major modern marja' affirms complete Quran preservation. Tabataba'i, al-Khoei, Khomeini, Sistani, and Ma'rifat all reject textual tahrif decisively, and each has produced detailed arguments tracing the problematic narrations to weak chains or reinterpretable meanings. The thousand-year arc runs from unfiltered collection through rationalist denial, Akhbari revival, and comprehensive debate to a near-universal consensus that the text between the two covers is complete.</p>
+                                            <p><strong>Phase 2: The Rationalist Turn (Late 4th-5th c. AH).</strong> Once the school developed a mature theological apparatus, scholars began testing the narrations against reason, consensus, and the Quran's own claims. Al-Saduq (d. 381 AH) produced the first systematic creedal denial. Al-Mufid (d. 413 AH) took a middle position. Nothing was added, but reason does not consider omission impossible. Al-Murtada (d. 436 AH) argued the strongest classical denial, and al-Tusi (d. 460 AH) closed the phase by ruling that addition is unanimously false and the sound position is no deletion either. The shift was decisive. The same narrations remained in the books, but the school now had the tools to weigh and reject them.</p>
+                                            <p><strong>Phase 3: Akhbari Revival (10th-12th c. AH).</strong> The Akhbari school rejected the rationalist apparatus of Phase 2 and returned to accepting hadith at face value, which promptly reopened the question. Fayd al-Kashani (d. 1091 AH) compiled nine pages of tahrif narrations in Tafsir al-Safi, then immediately added that the correct view of the sect is against that. Al-Majlisi (d. 1110 AH) called some traditions mutawatir in one work and akhbar ahad in another. The revival produced intense attention to the narrations, yet even its leading figures could not commit to affirming textual corruption as settled doctrine.</p>
+                                            <p><strong>Phase 4: Fasl al-Khitab (c. 1298 AH / 1881 CE).</strong> Mirza Husayn Nuri (d. 1320 AH) produced the largest pro-tahrif work ever written, over one thousand traditions across four hundred pages. Controversy came at once, because the school's consensus had settled the question centuries earlier. Scholars at Samarra attacked the book, and Khomeini reportedly called it a collection of jokes with no academic value. Nuri's project backfired. By forcing the school to confront the narrations in bulk, it triggered the most thorough refutations the question had ever received.</p>
+                                            <p><strong>Phase 5: 20th-21st Century.</strong> Every major modern marja' affirms complete Quran preservation. Tabataba'i, al-Khoei, Khomeini, Sistani, and Ma'rifat all reject textual tahrif. Each traces the problematic narrations to weak chains or reinterpretable meanings. The thousand-year arc ends where it began, with a school that holds the text between the two covers complete.</p>
                                         </div>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">From Collection to Consensus</h5>
-                                        <p class="font-semibold text-gray-800">The five phases show a clear trajectory: the school began by collecting what it received, then developed the theological tools to test it, and ultimately concluded that the problematic narrations could not survive those tests. The Akhbari revival and Nuri's massive compilation each momentarily reopened the question, and each reopening produced a more thorough refutation. The thousand-year arc arrives at a near-universal consensus that the text is complete.</p>
+                                        <p class="font-semibold text-gray-800">The five phases show a clear trajectory. The school collected what it received. It then built the tools to test it, and concluded that the problematic narrations could not survive those tests. Each reopening, Akhbari or Nuri, produced a deeper refutation. A thousand years end in near-universal agreement that the text is complete.</p>
                                     </div>
                                 </div>
                             </div>
@@ -581,7 +589,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Creed</h5>
-                                        <p class="mb-2 text-gray-600">Al-Saduq wrote in his creedal treatise:</p>
+                                        <p class="mb-2 text-gray-600">Al-Saduq wrote in his creedal treatise,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اعتقادنا أن القرآن الذي أنزله الله تعالى على نبيه محمد (﵌) هو ما بين الدفتين وهو ما في أيدي الناس ليس بأكثر من ذلك. ومن نسب إلينا أنا نقول أنه أكثر من ذلك فهو كاذب</p>
                                             <p class="italic transliteration">I'tiqaduna anna al-Qur'ana alladhi anzalahu Allahu ta'ala 'ala nabiyyihi Muhammadin salla Allahu 'alayhi wa-alihi huwa ma bayna al-daffatayn wa-huwa ma fi aydi al-nasi laysa bi-akthara min dhalik. Wa-man nasaba ilayna anna naqulu annahu aktharu min dhalika fa-huwa kadhib.</p>
@@ -591,7 +599,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Between the Two Covers</h5>
-                                        <p class="font-semibold text-gray-800">Al-Saduq was the first Imami scholar to fix the complete Quran as a matter of creed, elevating it above scholarly disagreement. His formula, "what is between the two covers and what is in people's hands," became the baseline every later theologian either affirmed or refined. By branding the opposing claim a lie, he placed denial of tahrif firmly within the school's identity.</p>
+                                        <p class="font-semibold text-gray-800">Al-Saduq was the first Imami scholar to fix the complete Quran as creed, above scholarly disagreement. His formula became the baseline for every later theologian. The Quran is what is between the two covers and what is in people's hands. He called the opposing claim a lie, and denial of tahrif entered the school's identity.</p>
                                     </div>
                                 </div>
                             </div>
@@ -605,11 +613,11 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Three Grounds for Denial</h5>
-                                        <p class="text-gray-600">Al-Sharif al-Murtada (d. 436 AH) mounted the strongest classical denial of textual tahrif. He argued from three grounds: tawatur (mass transmission), rational necessity, and the rejection of solitary reports (akhbar ahad) in matters of creed.</p>
+                                        <p class="text-gray-600">Al-Sharif al-Murtada (d. 436 AH) mounted the strongest classical denial of textual tahrif. He argued from three grounds. Tawatur means mass transmission. Rational necessity stands second. The rejection of solitary reports in matters of creed stands third.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Cities Argument</h5>
-                                        <p class="mb-2 text-gray-600">Al-Murtada placed certainty in the Quran's transmission on the level of certainty about the existence of famous cities:</p>
+                                        <p class="mb-2 text-gray-600">Al-Murtada placed certainty in the Quran's transmission on the level of certainty about the existence of famous cities, writing,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن العلم بصحة نقل القرآن كالعلم بالبلدان والحوادث العظام والكتب المشهورة وأشعار العرب</p>
                                             <p class="italic transliteration">Inna al-'ilma bi-sihhati naqli al-Qur'ani ka'l-'ilmi bi'l-buldani wa'l-hawadithi al-'izami wa'l-kutubi al-mashhurati wa-ash'ari al-'arab.</p>
@@ -620,7 +628,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">As Certain as Mecca</h5>
-                                        <p class="font-semibold text-gray-800">Al-Murtada placed the Quran's textual certainty on the same epistemic footing as the reality of known cities and recorded events. No sane person doubts that Mecca exists or that great battles occurred, because the evidence is too widespread and too multiply attested to be fabricated. Al-Murtada argued the Quran's transmission carries this same self-evident force, and therefore no solitary narration can dent it.</p>
+                                        <p class="font-semibold text-gray-800">Al-Murtada put the Quran's certainty on the same footing as the existence of known cities. No sane person doubts that Mecca exists. The evidence is too widespread to fabricate. He argued that the Quran's transmission carries this same force, so no solitary narration can dent it.</p>
                                     </div>
                                 </div>
                             </div>
@@ -638,7 +646,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Classification</h5>
-                                        <p class="mb-2 text-gray-600">Al-Khoei traced roughly two-thirds of all tahrif narrations to al-Sayyari, whom he identified as corrupt in doctrine. Another quarter trace to Furat al-Kufi, absent from all early Shia rijal works. The remaining narrations, he argued, point to tahrif of meaning, of text:</p>
+                                        <p class="mb-2 text-gray-600">Al-Khoei traced roughly two-thirds of all tahrif narrations to al-Sayyari, whom he identified as corrupt in doctrine. Another quarter trace to Furat al-Kufi, absent from all early Shia rijal works. The remaining narrations, he argued, point to tahrif of meaning rather than of text. He concluded,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن حديث تحريف القرآن حديث خرافة وخيال، لا يقول به إلا من ضعف عقله، أو من لم يتأمل في أطرافه حق التأمل</p>
                                             <p class="italic transliteration">Inna haditha tahrifi al-Qur'ani hadithu khurafatin wa-khayal, la yaqulu bihi illa man da'ufa 'aqluhu, aw man lam yata'ammal fi atrafihi haqqa al-ta'ammul.</p>
@@ -648,7 +656,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Two Unreliable Sources Carry the Claim</h5>
-                                        <p class="font-semibold text-gray-800">Al-Khoei's classification dismantled the evidentiary basis of the tahrif claim at the chain level. By tracing the vast majority of narrations to two unreliable sources and showing that the remainder point to interpretive distortion, he demonstrated that the claim rests on reports whose chains and meanings have never been properly examined. The verdict reframes the debate as a failure of method, where reports were cited without investigating their foundations.</p>
+                                        <p class="font-semibold text-gray-800">Al-Khoei's classification removed the claim's evidence at the level of chains. Most narrations trace back to two unreliable sources. The rest point to interpretation, not missing text. The charge rests on reports no one had properly examined.</p>
                                     </div>
                                 </div>
                             </div>
@@ -672,28 +680,28 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">What the Root Means</h5>
-                                        <p class="text-gray-600">The root s-h-f carries the primary meaning of breadth, expanse, and flatness. Ibn Faris fixes this sense in Maqayis al-Lughah (vol. 3, p. 334): the root conveys breadth and openness. From this root comes sahifa (page, leaf, written sheet), suhuf (pages, scriptures), and the derived noun mushaf.</p>
+                                        <p class="text-gray-600">The root s-h-f carries the primary meaning of breadth, expanse, and flatness. Ibn Faris fixes this sense in Maqayis al-Lughah (vol. 3, p. 334). The root conveys breadth and openness. From this root comes sahifa (page, leaf, written sheet), suhuf (pages, scriptures), and the derived noun mushaf.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Morphology</h5>
-                                        <p class="mb-2 text-gray-600">The word mushaf is the passive participle (ism maf'ul) of the Form IV verb ashhafa, meaning to gather pages into a bound volume between covers. The passive ushifa is the direct derivation: "it was made to contain gathered pages." Ibn Manzhur's Lisan al-Arab (d. 711 AH) records the classical morphological analysis:</p>
+                                        <p class="mb-2 text-gray-600">The word mushaf is the passive participle (ism maf'ul) of the Form IV verb ashhafa, meaning to gather pages into a bound volume between covers. The passive ushifa is the direct derivation, "it was made to contain gathered pages." Ibn Manzhur's Lisan al-Arab (d. 711 AH) records the classical morphological analysis,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إنما سمي المصحف مصحفاً لأنه أُصْحِفَ، أي جُعِلَ جامعاً للصحف المكتوبة بين الدفتين. قال الفراء: يقال مُصْحَفٌ ومِصْحَفٌ كما يقال مُطْرَفٌ ومِطْرَفٌ؛ وقوله مُصْحَفٌ من أُصْحِفَ أي جُمِعَتْ فيه الصحف. استثقلت العرب الضمة في حروف فكسرت الميم، وأصلها الضمُّ.</p>
-                                            <p class="italic transliteration">Innama summiya al-mushaf mushafan li-annahu ushifa, ayy ju'ila jami'an li'l-suhuf al-maktuba bayna al-daffatayn. Qala al-Farra': yuqalu mushafun wa-mishafun kama yuqalu mutrafun wa-mitrafun; wa-qawluhu mushafun min ushifa ayy jumi'at fihi al-suhuf. istathqalat al-'arab al-dammata fi hurufin fa-kasarat al-mim, wa-asluha al-damm.</p>
-                                            <p class="translation">"It is called mushaf because it was ushifa, meaning it was made a gathering for the written pages between the two covers. Al-Farra' said: one says mushaf and mishaf, just as one says mutraf and mitraf. Mushaf is from ushifa, meaning the suhuf were gathered in it. The Arabs found the damma heavy in these letters and so broke the mim with kasra; its original is the damma."</p>
+                                            <p class="italic transliteration">Innama summiya al-mushaf mushafan li-annahu ushifa, ayy ju'ila jami'an li'l-suhuf al-maktuba bayna al-daffatayn. Qala al-Farra', yuqalu mushafun wa-mishafun kama yuqalu mutrafun wa-mitrafun; wa-qawluhu mushafun min ushifa ayy jumi'at fihi al-suhuf. istathqalat al-'arab al-dammata fi hurufin fa-kasarat al-mim, wa-asluha al-damm.</p>
+                                            <p class="translation">"It is called mushaf because it was ushifa, meaning it was made a gathering for the written pages between the two covers. Al-Farra' said, one says mushaf and mishaf, just as one says mutraf and mitraf. Mushaf is from ushifa, meaning the suhuf were gathered in it. The Arabs found the damma heavy in these letters and so broke the mim with kasra; its original is the damma."</p>
                                             <cite class="text-sm text-gray-500">- Ibn Manzhur (d. 711 AH), Lisan al-Arab, s.v. s h f</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Three Dialectal Variants</h5>
-                                        <p class="mb-2 text-gray-600">Al-Fayruzabadi's al-Qamus al-Muhit (d. 817 AH) records three vocalizations of the word, all from the same root with the same meaning:</p>
+                                        <p class="mb-2 text-gray-600">Al-Fayruzabadi's al-Qamus al-Muhit (d. 817 AH) records three vocalizations of the word, all from the same root with the same meaning,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">مُصْحَفُ ومِصْحَفُ ومَصْحَفُ من أُصْحِفَ: أي جُعِلَتْ فيه الصُّحُفُ. وصحيفةُ: الكتابُ، ج: صَحَائِفُ وصُحُفٌ. وتَصْحِيفُ: الخَطَأُ في الصَّحيفَةِ.</p>
-                                            <p class="italic transliteration">Mushafu wa-mishafu wa-mashafu min ushifa: ayy ju'ilat fihi al-suhuf. Wa-sahifatu: al-kitabu, jam': saha'ifu wa-suhuf. Wa-tashif: al-khata' fi al-sahifa.</p>
-                                            <p class="translation">"Mushaf, mishaf, and mashaf: from ushifa, meaning the suhuf were placed and gathered in it. Sahifa means a book; plural saha'if and suhuf. Tashif means an error in reading the sahifa."</p>
+                                            <p class="italic transliteration">Mushafu wa-mishafu wa-mashafu min ushifa, ayy ju'ilat fihi al-suhuf. Wa-sahifatu, al-kitabu, jam'u saha'ifan wa-suhuf. Wa-tashif, al-khata' fi al-sahifa.</p>
+                                            <p class="translation">"Mushaf, mishaf, and mashaf, all from ushifa, meaning the suhuf were placed and gathered in it. Sahifa means a book; plural saha'if and suhuf. Tashif means an error in reading the sahifa."</p>
                                             <cite class="text-sm text-gray-500">- al-Fayruzabadi (d. 817 AH), al-Qamus al-Muhit, s.v. s h f</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-2">Al-Azhari (d. 370 AH) confirms in Tahdhib al-Lugha that the word describes a container, a physical format:</p>
+                                        <p class="text-gray-700 mt-2">Al-Azhari (d. 370 AH) confirms in Tahdhib al-Lugha that the word describes a container, a physical format, writing,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إنما سمي مصحفاً لأنه جُعل وعاء للصحف المكتوبة بين الدفتين</p>
                                             <p class="italic transliteration">Innama summiya mushafan li-annahu ju'ila wi'a'an li'l-suhuf al-maktuba bayna al-daffatayn.</p>
@@ -703,7 +711,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Pages Gathered and Bound</h5>
-                                        <p class="font-semibold text-gray-800">The morphological evidence is unambiguous: mushaf is a passive participle derived from a root about breadth and flatness, meaning pages gathered and bound between covers. The classical dictionaries define the word purely as a physical object, a receptacle for written pages, with no inherent connection to divine scripture.</p>
+                                        <p class="font-semibold text-gray-800">The morphological evidence is unambiguous. Mushaf is a passive participle derived from a root about breadth and flatness, meaning pages gathered and bound between covers. The classical dictionaries define the word purely as a physical object, a receptacle for written pages, with no inherent connection to divine scripture.</p>
                                     </div>
                                 </div>
                             </div>
@@ -716,37 +724,37 @@
                             <div id="tab2-2">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Lexical Meaning: Any Bound Book</h5>
-                                        <p class="mb-2 text-gray-600">Sayyid Murtada al-Askari (d. 1428 AH) wrote a dedicated study of the word mushaf. His conclusion, from the lexical and historical evidence, is direct:</p>
+                                        <h5 class="analysis-heading">Any Bound Book by Lexicon</h5>
+                                        <p class="mb-2 text-gray-600">Sayyid Murtada al-Askari (d. 1428 AH) wrote a dedicated study of the word mushaf. His conclusion, from the lexical and historical evidence, is direct.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">وبناءً على ما ذكرنا: إنّ المصحف اسم لكلّ كتاب مجلد قرآناً كان أم غير قرآن</p>
-                                            <p class="italic transliteration">Wa-binā'an ʿalā mā dhakarnā: inna al-muṣḥafa ismun li-kulli kitābin mujallad, Qur'ānan kāna am ghayra Qur'ān.</p>
-                                            <p class="translation">"Based on what we have mentioned: the word mushaf is a name for every bound book, whether it is the Quran or something other than the Quran."</p>
-                                            <cite class="text-sm text-gray-500">- al-Askari (d. 1428 AH), al-Mushaf fi al-Riwayat wa'l-Athar, p. 10; verified from FTS5 corpus</cite>
+                                            <p class="italic transliteration">Wa-binā'an ʿalā mā dhakarnā, inna al-muṣḥafa ismun li-kulli kitābin mujallad, Qur'ānan kāna am ghayra Qur'ān.</p>
+                                            <p class="translation">"Based on what we have mentioned, the word mushaf is a name for every bound book, whether it is the Quran or something other than the Quran."</p>
+                                            <cite class="text-sm text-gray-500">- al-Askari (d. 1428 AH), al-Mushaf fi al-Riwayat wa'l-Athar, p. 10</cite>
                                         </blockquote>
                                         <p class="text-gray-700 mt-3">Al-Askari documents that the Companions themselves used mushaf in its lexical sense during the collection of the Quran. He cites al-Bukhari's report from Zayd ibn Thabit, where the early collection was called <em>ṣuḥuf</em> (loose pages), not <em>muṣḥaf</em>, until the pages were bound. The word described the physical format, not the sanctity of the content.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Quran Uses Suhuf for Earlier Scriptures</h5>
-                                        <p class="mb-2 text-gray-600">The Quran itself (87:18-19) uses the root for revelations given to Abraham and Moses, centuries before the Quranic codex:</p>
+                                        <p class="mb-2 text-gray-600">The Quran itself uses the root in Quran 87:18-19 for revelations given to Abraham and Moses, centuries before the Quranic codex,</p>
                                         <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">﴿وَإِنَّهُ لَفِي صُحُفِ الْأُولَىٰ ۝ صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ﴾</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّ هَٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ﴾</p>
                                             <p class="italic transliteration">Wa-innahu la-fī ṣuḥufi al-ūlā, ṣuḥufi Ibrāhīma wa-Mūsā.</p>
                                             <p class="translation">"And this is indeed in the scrolls of the ancients, the scrolls of Abraham and Moses."</p>
                                             <cite class="text-sm text-gray-500">- Quran 87:18-19</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The word <em>ṣuḥuf</em> was understood generically: any written pages of divine guidance, not exclusively the Quran. The Quran also uses the root in 20:133, 53:36-37, 74:52, and 81:10, each time for scriptures or written records in general.</p>
+                                        <p class="text-gray-700 mt-3">The word <em>ṣuḥuf</em> was understood generically, naming any written pages of divine guidance, not exclusively the Quran. The Quran also uses the root in 20:133, 53:36-37, 74:52, and 81:10, each time for scriptures or written records in general.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Baghdad Verse</h5>
-                                        <p class="mb-2 text-gray-600">A famous line of classical poetry, attributed to Abd al-Wahhab b. Ali (d. 422 AH) and recorded by Ibn Khallikan (d. 681 AH), Ibn Butlan (d. 455 AH), and al-Kutubi (d. 764 AH), uses mushaf for a book sitting unwanted in a heretic's house:</p>
+                                        <p class="mb-2 text-gray-600">A famous line of classical poetry, attributed to Abd al-Wahhab b. Ali (d. 422 AH) and recorded by Ibn Khallikan (d. 681 AH), Ibn Butlan (d. 455 AH), and al-Kutubi (d. 764 AH), uses mushaf for a book sitting unwanted in a heretic's house. The line reads,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">بغداد دارٌ لأهل المال طيبة / وللمفاليس دار الضنك والضيق / ظللت حيران أمشي في أزقتها / كأنني مصحف في بيت زنديق</p>
                                             <p class="italic transliteration">Baghdādu dārun li-ahl al-māli ṭayyibatun, wa-lil-mafālīsi dār al-ḍanki wa'l-ḍayq. Ẓalaltu ḥayran amshī fī aziqqatihā, ka-annanī muṣḥafun fī bayti zindīq.</p>
                                             <p class="translation">"Baghdad is a pleasant home for the wealthy; for the destitute, a house of hardship and constriction. I wandered lost, walking through its alleys, as though I were a mushaf in the house of a zindiq (heretic)."</p>
-                                            <cite class="text-sm text-gray-500">- Ibn Khallikan (d. 681 AH), Wafayat al-A'yan, vol. 3, p. 217; Ibn Butlan (d. 455 AH), Da'wat al-Atibba', p. 24; verified from FTS5 corpus</cite>
+                                            <cite class="text-sm text-gray-500">- Ibn Khallikan (d. 681 AH), Wafayat al-A'yan, vol. 3, p. 217; Ibn Butlan (d. 455 AH), Da'wat al-Atibba', p. 24</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">A <em>zindiq</em> is a heretic or free-thinker. A heretic would not keep a Quran in his house, much less prize it. The metaphor works because <em>mushaf</em> means simply a book: a book that sits unread and unwanted. The poet uses the word in its generic lexical sense.</p>
+                                        <p class="text-gray-700 mt-3">A <em>zindiq</em> is a heretic or free-thinker. A heretic would not keep a Quran in his house, much less prize it. The metaphor works because <em>mushaf</em> means simply a book, a book that sits unread and unwanted. The poet uses the word in its generic lexical sense.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Root in Pre-Islamic Poetry</h5>
@@ -754,7 +762,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Bound Book, Nothing More</h5>
-                                        <p class="font-semibold text-gray-800">The word mushaf means a bound book. The lexicons, the Quran's own usage of the root, and classical poetry all confirm this. The word's later specialization as a synonym for the Quranic codex was a cultural development driven by usage, not a change in the word's lexical meaning. When the Imams <span class="honorific">﵈</span> spoke of the "Mushaf of Fatimah" <span class="honorific">﵍</span>, they used the word in its lexical sense: a bound book belonging to Fatimah <span class="honorific">﵍</span>, containing no part of the recited Quran.</p>
+                                        <p class="font-semibold text-gray-800">The word mushaf means a bound book. The lexicons, the Quran's own usage of the root, and classical poetry all confirm this. The word's later specialization as a synonym for the Quranic codex was a cultural development driven by usage, not a change in the word's lexical meaning. When the Imams <span class="honorific">﵈</span> spoke of the "Mushaf of Fatimah" <span class="honorific">﵍</span>, they used the word in its lexical sense, a bound book belonging to Fatimah <span class="honorific">﵍</span>, containing no part of the recited Quran.</p>
                                     </div>
                                 </div>
                             </div>
@@ -768,14 +776,14 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">When the Word Narrowed</h5>
-                                        <p class="text-gray-600">The term mushaf became associated primarily with the Quran only after Uthman's compilation (25-30 AH), when the Uthmanic codices became the standard reference text. As Von Denffer notes in Ulum al-Quran (p. 36): "Suhuf stands for the sheets on which the Quran was collected in the time of Abu Bakr. Mushaf in the present context means the sheets on which the Quran was collected in the time of Uthman."</p>
+                                        <p class="text-gray-600">The term mushaf became associated primarily with the Quran only after Uthman's compilation (25-30 AH), when the Uthmanic codices became the standard reference text. As Von Denffer notes in Ulum al-Quran (p. 36), "Suhuf stands for the sheets on which the Quran was collected in the time of Abu Bakr. Mushaf in the present context means the sheets on which the Quran was collected in the time of Uthman."</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Modern Dictionary</h5>
-                                        <p class="mb-2 text-gray-600">The modern dictionary al-Mu'jam al-Wasit (Cairo Academy of Arabic Language) confirms this explicitly:</p>
+                                        <p class="mb-2 text-gray-600">The modern dictionary al-Mu'jam al-Wasit (Cairo Academy of Arabic Language) confirms this explicitly,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">المُصْحَف: مجموعٌ من الصُّحُف في مجلَّد؛ وغلب استعماله في القرآن الكريم</p>
-                                            <p class="italic transliteration">Al-mushaf: majmu'un min al-suhuf fi mujallad; wa-ghalaba istimaluhu fi al-Qur'an al-Karim.</p>
+                                            <p class="italic transliteration">Al-mushaf, majmu'un min al-suhuf fi mujallad; wa-ghalaba istimaluhu fi al-Qur'an al-Karim.</p>
                                             <p class="translation">"A collection of suhuf in a bound volume; and its usage became predominant (ghalaba) for the Holy Quran."</p>
                                             <cite class="text-sm text-gray-500">- al-Mu'jam al-Wasit (Cairo Academy of Arabic Language)</cite>
                                         </blockquote>
@@ -801,7 +809,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Verse</h5>
-                                        <p class="mb-2 text-gray-600">A poet wandering lost through Baghdad compared himself to a book sitting unread in a heretic's home:</p>
+                                        <p class="mb-2 text-gray-600">A poet wandering lost through Baghdad compared himself to a book sitting unread in a heretic's home, saying,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">بغداد دارٌ لأهل المال طيبة / وللمفاليس دار الضنك والضيق / ظللت حيران أمشي في أزقتها / كأنني مصحف في بيت زنديق</p>
                                             <p class="italic transliteration">Baghdadu dārun li-ahl al-māli tayyibatun, wa-lil-mafālīsi dār al-ḍanki wa'l-ḍayq. Zalaltu ḥayran amshī fī aziqqatihā, ka-annanī muṣḥafun fī bayti zindīq.</p>
@@ -812,7 +820,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Why the Metaphor Works</h5>
-                                        <p class="font-semibold text-gray-800">The poet's metaphor works only because mushaf means a generic book. A zindiq, by definition, rejects organized religion and would keep no Quran in his home. The verse settles the lexical question with a single image: a book sitting unread on a heretic's shelf, and the word for that book is mushaf.</p>
+                                        <p class="font-semibold text-gray-800">The poet's metaphor works only because mushaf means a generic book. A zindiq, by definition, rejects organized religion and would keep no Quran in his home. The verse settles the lexical question with a single image, a book sitting unread on a heretic's shelf, and the word for that book is mushaf.</p>
                                     </div>
                                 </div>
                             </div>
@@ -820,7 +828,7 @@
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Mushaf of Fatimah: Both Hadiths</h4>
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Both Hadiths on the Mushaf of Fatimah</h4>
                             </div>
                             <div id="tab2-6">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
@@ -829,26 +837,26 @@
                                         <p class="text-gray-600">The Imams <span class="honorific">﵈</span> kept writings the community did not have. The most famous is the Mushaf of Fatimah <span class="honorific">﵍</span>. Two narrations from al-Kafi define its contents and distinguish it from the Quran in the clearest terms.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Hadith 1: Three Times the Size, No Quran in It</h5>
-                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> explicitly distinguished the Mushaf of Fatimah <span class="honorific">﵍</span> from the Quran:</p>
+                                        <h5 class="analysis-heading">Three Times the Size, With No Quran in It</h5>
+                                        <p class="mb-2 text-gray-600">Imam al-Sadiq <span class="honorific">﵇</span> explicitly distinguished the Mushaf of Fatimah <span class="honorific">﵍</span> from the Quran. He said,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">مصحف فيه مثل قرآنكم هذا ثلاث مرات، والله ما فيه من قرآنكم حرف واحد... إنه لعلم وما هو بذاك</p>
                                             <p class="italic transliteration">Mushafun fihi mithlu qur'anikum hadha thalatha marrat, wa-Allahi ma fihi min qur'anikum harfun wahid... innahu la-'ilmun wa-ma huwa bi-dhalik.</p>
                                             <p class="translation">"A codex, in it the like of this Quran of yours three times over. And by God, in it there is not one single letter of your Quran. It is knowledge indeed, but it is not that."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 1, p. 287</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The Imam <span class="honorific">﵇</span> defines the Mushaf of Fatimah <span class="honorific">﵍</span> and empties it of Quran by explicit oath. It contains angelic communications, predictions of future events, and the names of future rulers. The word mushaf means exactly what it says lexically: a bound book.</p>
+                                        <p class="text-gray-700 mt-3">The Imam <span class="honorific">﵇</span> defines the Mushaf of Fatimah <span class="honorific">﵍</span> and empties it of Quran by explicit oath. It contains angelic communications, predictions of future events, and the names of future rulers. The word mushaf means exactly what it says lexically, a bound book.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Hadith 2: No Lawful or Unlawful, Only Future Knowledge</h5>
-                                        <p class="mb-2 text-gray-600">The second narration from the same chapter clarifies the Mushaf's <span class="honorific">﵍</span> contents:</p>
+                                        <h5 class="analysis-heading">No Lawful or Unlawful, Only Future Knowledge</h5>
+                                        <p class="mb-2 text-gray-600">The second narration from the same chapter clarifies the Mushaf's <span class="honorific">﵍</span> contents,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">أما إنه ليس فيه شيء من الحلال والحرام ولكنه فيه علم ما يكون</p>
                                             <p class="italic transliteration">Amma innahu laysa fihi shay'un min al-halali wa'l-harami wa-lakinnahu fihi 'ilmu ma yakun.</p>
                                             <p class="translation">"There is in it nothing of the lawful and unlawful (halal and haram), but it contains knowledge of what will happen."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, Kitab al-Hujja, Bab 40, Hadith 2</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The Mushaf of Fatimah <span class="honorific">﵍</span> contains no legal rulings. It is a book of private knowledge given to Fatimah <span class="honorific">﵍</span> after her father's <span class="honorific">ﷺ</span> death: predictions of future events and the names of future rulers. It is a parallel source of knowledge, not a parallel scripture for recitation.</p>
+                                        <p class="text-gray-700 mt-3">The Mushaf of Fatimah <span class="honorific">﵍</span> contains no legal rulings. It is a book of private knowledge given to Fatimah <span class="honorific">﵍</span> after her father's <span class="honorific">ﷺ</span> death, holding predictions of future events and the names of future rulers. It is a parallel source of knowledge, not a parallel scripture for recitation.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Not One Letter of the Quran</h5>
@@ -880,18 +888,17 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Report</h5>
-                                        <p class="mb-2 text-gray-600">The full chain and text, verified from the FTS5 corpus:</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">علي بن إبراهيم، عن أبيه، عن ابن أبي عمير، عن حماد بن عثمان قال: تلوت عند أبي عبد الله (<span class="honorific">﵇</span>) «ذوا عدل منكم» فقال: «ذو عدل منكم، هذا مما أخطأت فيه الكتاب»</p>
-                                            <p class="italic transliteration">'Ali b. Ibrahim, 'an abihi, 'an Ibn Abi 'Umayr, 'an Hammad b. 'Uthman qala: talawtu 'inda Abi 'Abd Allah (alayhi al-salam) "dhawa 'adlin minkum," fa-qala: "dhu 'adlin minkum, hadha mimma akhata't fihi al-kuttab."</p>
-                                            <p class="translation">"'Ali b. Ibrahim reported from his father, from Ibn Abi 'Umayr, from Hammad b. 'Uthman, who said: I recited in the presence of Abu Abd Allah (al-Sadiq <span class="honorific">﵇</span>): 'Two just persons from among you.' He said: 'A person of justice from among you. This is from what the scribes erred in.'"</p>
+                                            <p class="italic transliteration">'Ali b. Ibrahim, 'an abihi, 'an Ibn Abi 'Umayr, 'an Hammad b. 'Uthman qala, talawtu 'inda Abi 'Abd Allah (alayhi al-salam) "dhawa 'adlin minkum," fa-qala, "dhu 'adlin minkum, hadha mimma akhata't fihi al-kuttab."</p>
+                                            <p class="translation">"'Ali b. Ibrahim reported from his father, from Ibn Abi 'Umayr, from Hammad b. 'Uthman, who said, 'I recited in the presence of Abu Abd Allah <span class="honorific">﵇</span>, two just persons from among you. He answered, a person of justice from among you. This is from what the scribes erred in.'"</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 8, p. 229, Hadith 247</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The chain runs through Ibn Abi 'Umayr, one of the most universally trusted narrators in the entire Shia tradition, and Hammad b. 'Uthman, who is generally reliable. This is a stronger chain than most tahrif narrations. The rejection must therefore rest on substantive grounds: the school's conditions for establishing creed, the principle of mu'arada, the later Imam rule, and the reinterpretable nature of the phrase "the scribes erred."</p>
+                                        <p class="text-gray-700 mt-3">The chain runs through Ibn Abi 'Umayr, one of the most universally trusted narrators in the entire Shia tradition, and Hammad b. 'Uthman, who is generally reliable. This is a stronger chain than most tahrif narrations. The rejection must therefore rest on substantive grounds, the school's conditions for establishing creed, the principle of mu'arada, the later Imam rule, and the reinterpretable nature of the phrase "the scribes erred."</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Why the Chain Is Not Enough</h5>
-                                        <p class="font-semibold text-gray-800">The chain through Ibn Abi 'Umayr is stronger than most tahrif narrations, which means the rejection cannot rest on narrator weakness. The school must instead apply its substantive doctrinal conditions: the principle of mu'arada, the rule on solitary reports, and the distinction between tahrif of text and tahrif of meaning.</p>
+                                        <p class="font-semibold text-gray-800">The chain through Ibn Abi 'Umayr is stronger than most tahrif narrations, which means the rejection cannot rest on narrator weakness. The school must instead apply its substantive doctrinal conditions, the principle of mu'arada, the rule on solitary reports, and the distinction between tahrif of text and tahrif of meaning.</p>
                                     </div>
                                 </div>
                             </div>
@@ -905,18 +912,18 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">What a Solitary Report Conveys</h5>
-                                        <p class="text-gray-600">A khabar al-wahid (solitary report) is any narration that does not reach the threshold of tawatur (mass transmission). Even if every narrator in its chain is perfectly trustworthy, a solitary report conveys only zann (probability). Each narrator, however honest, can mishear, forget, conflate, or paraphrase. Only a mutawatir chain, where the sheer number of independent transmitters makes coordinated error impossible, produces yaqin (certainty).</p>
+                                        <p class="text-gray-600">A khabar al-wahid is a solitary report. It lacks tawatur, mass transmission. A solitary report carries only probability, zann. An honest narrator can still mishear or forget. Certainty, yaqin, comes only when so many independent transmitters agree that coordinated error becomes impossible.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Principle in Imami Usul</h5>
-                                        <p class="mb-2 text-gray-600">Shaykh al-Tusi (d. 460 AH), known as Shaykh al-Ta'ifa (Leader of the School), stated the principle directly in his introduction to al-Tibyan, his Quran commentary. He was addressing precisely these tahrif reports:</p>
+                                        <p class="mb-2 text-gray-600">Shaykh al-Tusi (d. 460 AH), known as Shaykh al-Ta'ifa (Leader of the School), stated the principle directly in his introduction to al-Tibyan, his Quran commentary, addressing precisely these tahrif reports. He wrote,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">رويت روايات كثيرة من جهة الخاصّة والعامّة بنقصان كثير من آي القرآن ونقل شيء منه من موضع إلى موضع، طريقها الآحاد لا توجب علماً، فالأولى الإعراض عنها وترك التشاغل بها لأنّه يمكن تأويلها</p>
                                             <p class="italic transliteration">Ruwyat riwayat kathira min jihat al-khassati wa'l-'ammati bi-nuqsani kathirin min ay al-Qur'ani wa-naqli shay'in minhu min mawdi'in ila mawdi', tariquha al-ahadu la tujibu 'ilman, fa-al-awla al-i'ridu 'anha wa-tarku al-tashaghuli biha li-annahu yumkinu ta'wiluha.</p>
                                             <p class="translation">"Many reports have been narrated, from our side and from others, claiming loss of much of the Quran's verses and the moving of parts from one place to another. Their route is single chains that yield no certainty. So the better course is to turn away from them and not busy oneself with them, since they can be interpreted."</p>
-                                            <cite class="text-sm text-gray-500">- al-Tusi (d. 460 AH), al-Tibyan, vol. 1, p. 3; verified from FTS5 corpus</cite>
+                                            <cite class="text-sm text-gray-500">- al-Tusi (d. 460 AH), al-Tibyan, vol. 1, p. 3</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Al-Tusi's ruling operates at two levels. First, he identifies the reports as akhbar ahad (single-chain), meaning each rests on a limited number of narrators. Second, he states the consequence: reports that yield no certainty cannot establish a matter of belief. The integrity of the Quran falls under Nabuwwah, the fulfillment of Allah's <span class="honorific">ﷻ</span> promise to His Messenger <span class="honorific">ﷺ</span> that He would guard the revelation. A claim that this promise was violated requires certainty. Probability cannot supply what certainty demands.</p>
+                                        <p class="text-gray-700 mt-3">Al-Tusi's ruling operates at two levels. First, he identifies the reports as akhbar ahad (single-chain), meaning each rests on a limited number of narrators. Second, he states the consequence. Reports that yield no certainty cannot establish a matter of belief. The integrity of the Quran falls under Nabuwwah, the fulfillment of Allah's <span class="honorific">ﷻ</span> promise to His Messenger <span class="honorific">ﷺ</span> that He would guard the revelation. A claim that this promise was violated requires certainty. Probability cannot supply what certainty demands.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Probability Cannot Supply Certainty</h5>
@@ -928,53 +935,70 @@
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Mu'arada: Contradiction with the Quran</h4>
+                                <h4 class="text-lg font-semibold text-[#3D4451]">Two Reports and One Book</h4>
                             </div>
                             <div id="tab3-3">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Measure Every Report Against the Quran</h5>
-                                        <p class="text-gray-600">The Imami school possesses a principle that stands above all others in the science of hadith authentication: every report, no matter how strong its chain, must be measured against the Quran. The Imam who reportedly said "the scribes erred" is the same Imam who told his followers to reject anything that contradicts the Book of Allah.</p>
+                                        <h5 class="analysis-heading">Hammad's Report Does Not Stand Alone</h5>
+                                        <p class="text-gray-600">The report about Hammad sits in al-Kafi beside the school's own account of how the Quran came down. Read the way the tahrif charge wants it read, as proof of corruption, it collides head-on with those neighboring reports. The Imami rule for exactly this situation comes from Imam al-Sadiq <span class="honorific">﵇</span> himself, who said,</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Rule</h5>
-                                        <p class="mb-2 text-gray-600">The foundational Shia principle of mu'arada, preserved in al-Kafi and verified from the FTS5 corpus:</p>
                                         <blockquote class="hadith-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">إذا ورد عليكم حديثان مختلفان فاعرضوهما على كتاب الله، فما وافق كتاب الله فخذوه، وما خالف كتاب الله فردوه</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">إذا ورد عليكم حديثان مختلفان فاعرضوهما على كتاب الله، فما وافق كتاب الله فخذوه وما خالف كتاب الله فردوه</p>
                                             <p class="italic transliteration">Idha warada 'alaykum hadithani mukhtalifani fa-a'riduhuma 'ala kitabi Allah, fa-ma wafaqa kitaba Allah fa-khudhuhu, wa-ma khalafa kitaba Allah fa-rudduhu.</p>
                                             <p class="translation">"When two differing reports come to you, present them to the Book of Allah. Accept that which agrees with the Book of Allah, and reject that which contradicts it."</p>
-                                            <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi; verified from FTS5 corpus</cite>
+                                            <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 1, p. 56; al-Hurr al-Amili, Wasa'il al-Shia, vol. 27, p. 118</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
+                                        <h5 class="analysis-heading">What the Same Chapter Teaches</h5>
+                                        <p class="text-gray-600">Open al-Kafi's chapter on the Quran and the doctrine stated there is unambiguous. Zurara heard it from Imam al-Baqir <span class="honorific">﵇</span>, who said,</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">إنّ القرآن واحد نزل من عند واحد، ولكنّ الاختلاف يجيء من قبل الرواة</p>
+                                            <p class="italic transliteration">Inna al-Qur'ana wahidun nazala min 'indi wahidin, wa-lakinna al-ikhtilafa ya'ti min qibali al-ruwah.</p>
+                                            <p class="translation">"The Quran is one. It came down from One, but differences come from the transmitters."</p>
+                                            <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 2, p. 630, Hadith 12</cite>
+                                        </blockquote>
+                                        <p class="text-gray-600 mt-3">A few lines later, al-Fudayl b. Yasar, one of the school's most trusted narrators, put the rival claim directly to Imam al-Sadiq <span class="honorific">﵇</span>, and the answer closes the door,</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">قلت لأبي عبد الله (<span class="honorific">﵇</span>): إنّ الناس يقولون إنّ القرآن نزل على سبعة أحرف. فقال: كذبوا أعداء الله، ولكنه نزل على حرف واحد من عند الواحد</p>
+                                            <p class="italic transliteration">Qultu li-Abi 'Abd Allah (alayhi al-salam), Inna al-nasa yaquluna inna al-Qur'ana nazala 'ala sab'ati ahruf. Fa-qala, Kadhabu a'daa Allahi, wa-lakinnahu nazala 'ala harfin wahidin min 'indi al-Wahid.</p>
+                                            <p class="translation">"I said to Abu Abd Allah <span class="honorific">﵇</span>, 'People say the Quran came down in seven forms.' The Imam replied, 'The enemies of Allah lie. It came down in one form from the One.'"</p>
+                                            <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 2, p. 630, Hadith 13</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">This is a sahih chain reporting a denial of multiple readings in stronger terms than any tahrif report affirms them. If Hammad's report meant that revelation itself was corrupted, it would contradict this sahih doctrine from the same book. The arbitration rule sends that conflict to the Book of Allah.</p>
+                                    </div>
+                                    <div class="analysis-section">
                                         <h5 class="analysis-heading">The Three Verses</h5>
-                                        <p class="text-gray-600">The claim that the written Quran contains an uncorrected scribal error directly contradicts three explicit, muhkam, mutawatir verses:</p>
-                                        <p class="text-gray-600 mt-2"><strong>Quran 15:9:</strong> Allah <span class="honorific">ﷻ</span> attaches preservation to Himself. If scribes introduced an error that persisted for 1,400 years, the promise was broken.</p>
+                                        <p class="text-gray-600">A reading of Hammad's report that puts an uncorrected error inside the written Quran collides with three explicit, muhkam, mutawatir verses.</p>
+                                        <p class="text-gray-600 mt-2"><strong>Quran 15:9</strong> attaches preservation to Allah <span class="honorific">ﷻ</span> Himself. If scribes introduced an error that persisted for fourteen centuries, the promise was broken.</p>
                                         <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ﴾</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ﴾</p>
                                             <p class="italic transliteration">Inna nahnu nazzalna al-dhikra wa-inna lahu la-hafizun.</p>
                                             <p class="translation">"Indeed, We sent down the Reminder, and indeed We are surely its preservers."</p>
                                             <cite class="text-sm text-gray-500">- Quran 15:9</cite>
                                         </blockquote>
-                                        <p class="text-gray-600 mt-2"><strong>Quran 41:42:</strong> A scribal error is falsehood that entered the text from behind it. The verse declares this impossible.</p>
+                                        <p class="text-gray-600 mt-2"><strong>Quran 41:42</strong> declares falsehood incapable of reaching the text, from before it or from behind it. A scribal error is exactly such a falsehood.</p>
                                         <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">﴿لَا يَأْتِيهِ الْبَاطِلُ مِن بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِ تَنزِيلٌ مِّنْ حَكِيمٍ حَمِيدٍ﴾</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">﴿لَّا يَأْتِيهِ ٱلْبَٰطِلُ مِنۢ بَيْنِ يَدَيْهِ وَلَا مِنْ خَلْفِهِۦ ۖ تَنزِيلٌۭ مِّنْ حَكِيمٍ حَمِيدٍۢ﴾</p>
                                             <p class="italic transliteration">La ya'tihi al-batilu min bayni yadayhi wa-la min khalfihi, tanzilun min hakimin hamid.</p>
                                             <p class="translation">"Falsehood does not come to it from before it or from behind it, a revelation from One all-wise and praiseworthy."</p>
                                             <cite class="text-sm text-gray-500">- Quran 41:42</cite>
                                         </blockquote>
-                                        <p class="text-gray-600 mt-2"><strong>Quran 75:16-18:</strong> Allah <span class="honorific">ﷻ</span> took personal responsibility for the collection. The scribal-error claim implies the collection was imperfect.</p>
+                                        <p class="text-gray-600 mt-2"><strong>Quran 75:16-18</strong> has Allah <span class="honorific">ﷻ</span> take personal responsibility for the collection. The scribal-error claim implies the collection came out imperfect.</p>
                                         <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ ۖ فَإِذَا قَرَأْنَاهُ فَاتَّبِعْ قُرْآنَهُ﴾</p>
+                                            <p class="rtl font-amiri text-xl" lang="ar">﴿إِنَّ عَلَيْنَا جَمْعَهُۥ وَقُرْءَانَهُۥ فَإِذَا قَرَأْنَٰهُ فَٱتَّبِعْ قُرْءَانَهُۥ﴾</p>
                                             <p class="italic transliteration">Inna 'alayna jam'ahu wa-qur'anah, fa-idha qara'nahu fa-ttabi' qur'anah.</p>
                                             <p class="translation">"It is for Us to collect it and to promulgate it. But when We have promulgated it, follow its recital."</p>
-                                            <cite class="text-sm text-gray-500">- Quran 75:16-18</cite>
+                                            <cite class="text-sm text-gray-500">- Quran 75:17-18</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The Imam can contradict the Quran, because the Imam's own instruction was to reject anything that contradicts the Quran. If a report attributed to the Imam appears to contradict the Quran, the report must be reinterpreted or rejected.</p>
+                                        <p class="text-gray-700 mt-3">The Imam cannot contradict the Quran, because his own instruction was to reject whatever contradicts it. If a report attributed to him appears to contradict the Book, the report is reinterpreted or set down, never the Book.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Quran Testifies for Itself</h5>
-                                        <p class="font-semibold text-gray-800">The scribal-error narration fails contact with the Quran's own self-testimony. Three explicit verses promise preservation, declare falsehood incapable of reaching the text, and assign collection itself to Allah <span class="honorific">ﷻ</span>. Since the Imam who reportedly identified the scribal error is the same Imam who instructed his followers to reject whatever contradicts the Book, the report must yield to the principle it itself depends upon.</p>
+                                        <h5 class="analysis-heading">Two Reports, One Verdict</h5>
+                                        <p class="font-semibold text-gray-800">Set the pair before the Book and only one of them survives. Hammad's report, read as a claim about the revealed text, breaks against ﴿إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ﴾, against 41:42, and against 75:16-18. The completion reports from the same chapter agree with all three. Under the Imam's <span class="honorific">﵇</span> own arbitration rule, the report that agrees with the Book is taken and the one that contradicts it is returned.</p>
                                     </div>
                                 </div>
                             </div>
@@ -982,28 +1006,45 @@
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Tahrif of Meaning, and Ibn Ashtah's Framework</h4>
+                                <h4 class="text-lg font-semibold text-[#3D4451]">What the Correction Meant</h4>
                             </div>
                             <div id="tab3-4">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">A Recognized Early Idiom</h5>
-                                        <p class="text-gray-600">The phrase "the scribes erred" was a recognized idiom in early Islamic discourse. Ibn Abbas <span class="honorific">﵁</span> used the identical phrase about multiple verses, and the Sunni scholarly consensus is that he meant the scribes chose one valid reading over another. The same framework applies to the Imam's <span class="honorific">﵇</span> statement about 5:95.</p>
+                                        <h5 class="analysis-heading">The School Read Its Own Report</h5>
+                                        <p class="text-gray-600">The Imami tradition never treated Hammad's report as evidence of a corrupted Quran. Its greatest commentators read the Imam's <span class="honorific">﵇</span> words in two ways that both leave the revealed text untouched. One reading is interpretive. The other concerns the writing on the page, and the recited revelation stands apart from it.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Ibn Ashtah's Framework</h5>
-                                        <p class="mb-2 text-gray-600">Ibn Ashtah explained what "the scribes erred" meant in the Sunni framework, in Kitab al-Masahif:</p>
+                                        <h5 class="analysis-heading">The Interpretive Reading</h5>
+                                        <p class="mb-2 text-gray-600">Al-Fayd al-Kashani (d. 1091 AH), the compiler of al-Wafi, comments on this very report,</p>
                                         <blockquote class="hadith-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">أخطئوا أي في اختيار الأولى من الأحرف السبعة لجمع الناس عليه، لا أن الذي كتبوا من ذلك خطأ لا يجوز</p>
-                                            <p class="italic transliteration">Akhata'u ayyan fi ikhtiyari al-ula min al-ahruf al-sab'ati li-jam'i al-nasi 'alayhi, la anna alladhi katabu min dhalika khata'un la yajuz.</p>
-                                            <p class="translation">"They erred, meaning in choosing the first of the seven ahruf to gather people upon, not that what they wrote is an error that is impermissible."</p>
-                                            <cite class="text-sm text-gray-500">- Ibn Ashtah, Kitab al-Masahif; preserved in Abu Shahba (d. 1402 AH), al-Mudkhal, p. 475</cite>
+                                            <p class="rtl font-amiri text-xl" lang="ar">لعلّ المراد أنه أُريد بذي العدل في الآية الإمام المعصوم</p>
+                                            <p class="italic transliteration">La'allha al-muradu annahu urida bidhi al-'adli fi al-ayati al-Imamu al-Ma'sum.</p>
+                                            <p class="translation">"This may mean that the just person in the verse is the infallible Imam."</p>
+                                            <cite class="text-sm text-gray-500">- al-Fayd al-Kashani (d. 1091 AH), al-Wafi, vol. 26, p. 422</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The framework is clear: "the scribes erred" meant the community settled on a reading that obscures the deeper meaning. The same idiom applies to the Imam's <span class="honorific">﵇</span> statement about 5:95: the community's reading of "two just persons" obscures the verse's true referent, the divinely appointed arbiters of justice.</p>
+                                        <p class="text-gray-700 mt-3">On this reading the Imam <span class="honorific">﵇</span> corrected an interpretation, not a consonant. The verse's ruling stands exactly as written. What the Imam identified is who counts as the just arbiter, and the school's tafsir answers that he is the appointed Imam. Al-Majlisi records the same reading in Mir'at al-'Uqul.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Choosing Among Valid Readings</h5>
-                                        <p class="font-semibold text-gray-800">The phrase "the scribes erred" belonged to a recognized idiom in early Islamic discourse, meaning the community settled on a reading that obscures deeper meaning. Ibn Ashtah's framework shows that this language referred to choosing among valid readings. Applied to the Imam's <span class="honorific">﵇</span> statement about 5:95, the idiom points to tahrif of meaning: the community's reading of "two just persons" conceals the verse's true referent.</p>
+                                        <h5 class="analysis-heading">The Writing on the Page</h5>
+                                        <p class="mb-2 text-gray-600">Allamah al-Tabataba'i (d. 1402 AH) takes the Imam's phrase about the scribes at its word and asks what "the book of the mushaf" covers, answering,</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">لفظ الكتاب بضم الكاف وتشديد التاء المنقوطة، جمع كاتب يريدان <span class="honorific">﵉</span> كتاب المصحف</p>
+                                            <p class="italic transliteration">Lafzu al-kitab, bi-dammi al-kafi wa-tashdidi al-ta'i al-mannuta, jam'u katibin, yuridani kitaba al-mushaf.</p>
+                                            <p class="translation">"The word 'kitab', with its kaf carrying a damma and its ta doubled, is the plural of 'katib', meaning a writer. He means the two words to point to one thing, the written copy of the Mushaf."</p>
+                                            <cite class="text-sm text-gray-500">- al-Tabataba'i (d. 1402 AH), al-Bayan fi Tafsir al-Qur'an, vol. 3, p. 336</cite>
+                                        </blockquote>
+                                        <p class="text-gray-700 mt-3">Al-Mazandarani (d. 1081 AH) adds a decisive observation. The singular reading was not a stray suggestion. It was the recitation of the Imams themselves,</p>
+                                        <blockquote class="hadith-callout">
+                                            <p class="rtl font-amiri text-xl" lang="ar">كان ذو عدلٍ بلفظ المفرد، والتثنية من غلطهم، وقد نسب الشيخ الطبرسي في مجمع البيان المفردَ إلى قراءة أبي جعفر وأبي عبد الله عليهما السلام</p>
+                                            <p class="italic transliteration">Kana dhu 'adlin bilafzi al-mufrad, wa-al-tathniyatu min ghalatihim, wa-qad nasaba al-Shaykhhu al-Tabarsi fi Majma'i al-Bayan al-mufrada ila qira'ati Abi Ja'farin wa-Abi Abd Allah alayhima al-salam.</p>
+                                            <p class="translation">"It was 'a just person' in the singular. They were wrong to use the dual. In Majma al-Bayan, Shaykh al-Tabarsi attributed the singular reading to Abu Jafar and Abu Abd Allah."</p>
+                                            <cite class="text-sm text-gray-500">- al-Mazandarani (d. 1081 AH), Sharh Furu' al-Kafi, vol. 5, p. 199</cite>
+                                        </blockquote>
+                                    </div>
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-heading">Neither Reading Touches the Text</h5>
+                                        <p class="font-semibold text-gray-800">Both readings leave the revealed Quran whole. The interpretive reading corrects who the verse names. The scribal reading corrects how the codex spelled one word, while the recitation carried down from the Prophet <span class="honorific">ﷺ</span>, the recitation the Imams <span class="honorific">﵈</span> themselves used, stays singular and sound. A difference in the rendering of scribes is not corruption of what Allah <span class="honorific">ﷻ</span> sent down, and the school's own exegetes say so in these very terms.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1022,7 +1063,7 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Opposite Instruction</h5>
                                         <p class="text-gray-600">The "scribal error" narration is attributed to Imam al-Sadiq <span class="honorific">﵇</span> (d. 148 AH). No later Imam, from al-Kazim (d. 183 AH) through al-Askari (d. 260 AH), ever recited 5:95 differently from the standard text or claimed it contained a scribal error. The later Imams consistently endorsed the standard codex.</p>
-                                        <p class="text-gray-600 mt-2">Furthermore, Imam al-Sadiq <span class="honorific">﵇</span> himself, in a separate well-known report, gave the opposite instruction. When a man recited a Quranic word differently from common practice, the Imam <span class="honorific">﵇</span> said:</p>
+                                        <p class="text-gray-600 mt-2">Furthermore, Imam al-Sadiq <span class="honorific">﵇</span> himself, in a separate well-known report, gave the opposite instruction. When a man recited a Quranic word differently from common practice, the Imam <span class="honorific">﵇</span> said,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اقرؤوا كما يقرأ الناس</p>
                                             <p class="italic transliteration">Iqra'u kama yaqra'u al-nas.</p>
@@ -1053,11 +1094,11 @@
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Tabataba'i Strategic Test</h5>
                                         <p class="text-gray-600">Allamah Tabataba'i (al-Mizan, vol. 12, pp. 104-111) posed a devastating question. If the Quran had genuinely been altered by the caliphs or their scribes, with verses about the wilaya of Ali <span class="honorific">﵇</span> systematically removed, this would have been the single most powerful weapon in the Imams' <span class="honorific">﵈</span> da'wah. It would have proven beyond doubt that the caliphal establishment was so corrupt it tampered even with the Word of Allah <span class="honorific">ﷻ</span>.</p>
-                                        <p class="text-gray-600 mt-2">The Imams <span class="honorific">﵈</span> argued from within the existing text. They extracted the merits of Ahl al-Bayt <span class="honorific">﵈</span> from the verses as they stand, using tafsir and ta'wil to draw out meanings already present. They said: "This verse, as written, refers to Ali <span class="honorific">﵇</span>." They never said: "The caliphs deleted the verse about Ali's <span class="honorific">﵇</span> authority." Shia scholars who criticized the burning of Quran manuscripts by the third caliph never alleged textual corruption as part of that criticism. If tahrif had occurred, the burning of the codices would have been the moment to expose it. No scholar made that charge.</p>
+                                        <p class="text-gray-600 mt-2">The Imams <span class="honorific">﵈</span> argued from within the existing text. They extracted the merits of Ahl al-Bayt <span class="honorific">﵈</span> from the verses as they stand, using tafsir and ta'wil to draw out meanings already present. They said, "This verse, as written, refers to Ali <span class="honorific">﵇</span>." They never said, "The caliphs deleted the verse about Ali's <span class="honorific">﵇</span> authority." Shia scholars who criticized the burning of Quran manuscripts by the third caliph never alleged textual corruption as part of that criticism. If tahrif had occurred, the burning of the codices would have been the moment to expose it. No scholar made that charge.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Why No Corrected Mushaf Ever Appeared</h5>
-                                        <p class="font-semibold text-gray-800">The scribal-error claim is internally incoherent: it explains no Imam <span class="honorific">﵇</span> produced a corrected mushaf, and it explains why every Imam <span class="honorific">﵇</span> derived rulings from the standard text. The Tabataba'i test adds the strategic dimension: if the text were genuinely altered, the Imams <span class="honorific">﵈</span> would have made this their central argument against the caliphs. They argued from the existing text instead.</p>
+                                        <p class="font-semibold text-gray-800">The scribal-error claim is internally incoherent. It explains why no Imam <span class="honorific">﵇</span> produced a corrected mushaf, and it explains why every Imam <span class="honorific">﵇</span> derived rulings from the standard text. The Tabataba'i test adds the strategic dimension. If the text were genuinely altered, the Imams <span class="honorific">﵈</span> would have made this their central argument against the caliphs. They argued from the existing text instead.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1065,88 +1106,64 @@
 
                         <div class="bg-white border border-[#E7E0D1] rounded-lg">
                             <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Ibn Abbas Sunni Parallels</h4>
+                                <h4 class="text-lg font-semibold text-[#3D4451]">The Phrase on Sunni Ground</h4>
                             </div>
                             <div id="tab3-7">
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Ibn Abbas Said It First</h5>
-                                        <p class="text-gray-600">The "scribal error" claim is unique to Shia sources. Ibn Abbas <span class="honorific">﵁</span>, the most prominent exegete among the Companions, used the identical phrase "error of the scribe" about four other verses in reports authenticated by al-Hakim on the conditions of Bukhari and Muslim. This proves the motif was a shared early Islamic idiom, a distinctly Shia doctrine of tahrif.</p>
+                                        <h5 class="analysis-heading">Not a Shia Phrase</h5>
+                                        <p class="text-gray-600">The claim appears on both sides of the split, and this matters for how it gets read. Ibn Abbas <span class="honorific">﵁</span> was the most prominent exegete among the Companions. He used the identical phrase about other verses, in reports carried in Sunni collections and authenticated by al-Hakim on the conditions of Bukhari and Muslim. Whatever the phrase meant on his lips, it could not mean lost revelation, because the school that preserves his words holds the Quran complete.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">First: Quran 24:27, "tasta'nisu"</h5>
+                                        <h5 class="analysis-heading">Quran 24:27, "Tasta'nisu"</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">عن ابن عباس، قال في قوله تعالى «حَتَّى تَسْتَأْنِسُوا وَتُسَلِّمُوا عَلَى أَهْلِهَا»: هي من خطأ الكاتب. وإنما هي: حتى تستأذنوا وتسلموا</p>
-                                            <p class="italic transliteration">'An Ibn 'Abbas, qala fi qawlihi ta'ala "hatta tasta'nisu wa-tusallimu 'ala ahliha": hiya min khata' al-katib. Wa-innama hiya: hatta tasta'dhinu wa-tusallim.</p>
-                                            <p class="translation">"Ibn Abbas said regarding the verse 'until you seek permission and greet': It is from the error of the scribe. It should be: until you seek authorization (tasta'dhinu) and greet."</p>
+                                            <p class="italic transliteration">'An Ibn 'Abbas, qala fi qawlihi ta'ala "hatta tasta'nisu wa-tusallimu 'ala ahliha", hiya min khata' al-katib. Wa-innama hiya, hatta tasta'dhinu wa-tusallim.</p>
+                                            <p class="translation">"Ibn Abbas said regarding the verse 'until you seek permission and greet' that it comes from the error of the scribe, and that it should read 'until you seek authorization (tasta'dhinu) and greet.'"</p>
                                             <cite class="text-sm text-gray-500">- Recorded by al-Tabari in his Tafsir; authenticated by al-Hakim; Ma'rifat (d. 2007), al-Tamhid, vol. 1, p. 370</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Second: Quran 17:23, "wa-qada"</h5>
+                                        <h5 class="analysis-heading">Quran 17:23, "Wa-Qada"</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">أنزل الله هذا الحرف على لسان نبيكم «ووصى ربك أن لا تعبدوا إلا إياه» فالتصقت إحدى الواوين بالصاد، فقرأ الناس «وَقَضَى رَبُّكَ»</p>
                                             <p class="italic transliteration">Anzala Allahu hadha al-harf 'ala lisani nabiyyikum "wa-wassa rabbuka an la ta'budu illa iyyahu" fa-l-tasiqat ihda al-wawayni bi'l-sad, fa-qara'a al-nasu "wa-qada rabbuka."</p>
-                                            <p class="translation">"Allah sent down this letter on the tongue of your Prophet: 'And your Lord enjoined (wa-wassa).' One of the waws stuck to the sad, and the people read it as 'And your Lord decreed (wa-qada).' Ibn Abbas added: If it had been revealed as qada, no one would have associated partners with Allah."</p>
+                                            <p class="translation">"Allah sent down this letter on the tongue of your Prophet, 'And your Lord enjoined (wa-wassa).' One of the waws stuck to the sad, and the people read it as 'And your Lord decreed (wa-qada).' Ibn Abbas added that if it had been revealed as qada, no one would have associated partners with Allah."</p>
                                             <cite class="text-sm text-gray-500">- Recorded by Abu 'Ubayd; Ma'rifat (d. 2007), al-Tamhid, vol. 1, p. 368</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Third: Quran 24:35, "nurihi"</h5>
+                                        <h5 class="analysis-heading">Quran 24:35, "Nurihi"</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">عن ابن عباس في قوله «مثل نوره كمشكاة» قال: هو خطأ من الكاتب، هو أعظم من ذلك، هو مثل نور المؤمن</p>
-                                            <p class="italic transliteration">'An Ibn 'Abbas fi qawlihi "mithlu nurihi ka-mishkat" qala: huwa khata'un min al-katib, huwa a'zam min dhalik, huwa mithlu nuri al-mu'min.</p>
-                                            <p class="translation">"Ibn Abbas said about 'the likeness of His light is like a niche': It is an error from the scribe. It is greater than that: it is 'the likeness of the light of the believer (nur al-mu'min).'"</p>
+                                            <p class="italic transliteration">'An Ibn 'Abbas fi qawlihi "mithlu nurihi ka-mishkat" qala, huwa khata'un min al-katib, huwa a'zam min dhalik, huwa mithlu nuri al-mu'min.</p>
+                                            <p class="translation">"Ibn Abbas said about 'the likeness of His light is like a niche' that it is an error from the scribe, and greater than that, 'the likeness of the light of the believer (nur al-mu'min).'"</p>
                                             <cite class="text-sm text-gray-500">- Abu Shahba (d. 1402 AH), al-Mudkhal li-Dirasat al-Quran, p. 475</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Fourth: A Second Report on 24:27</h5>
+                                        <h5 class="analysis-heading">A Second Report on Quran 24:27</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">قرأ ابن عباس: حتى تستأذنوا، فقال رجل: ألا أراه إلا حتى تستأنسوا، فقال ابن عباس: ذاك من خطأ الكاتب</p>
-                                            <p class="italic transliteration">Qara'a Ibn 'Abbas: hatta tasta'dhinu, fa-qala rajul: ala arahu illa hatta tasta'nisu, fa-qala Ibn 'Abbas: dhalika min khata' al-katib.</p>
-                                            <p class="translation">"Ibn Abbas read: 'until you seek authorization (tasta'dhinu).' A man said: I see it as 'until you feel at ease (tasta'nisu).' Ibn Abbas said: That is from the error of the scribe."</p>
+                                            <p class="italic transliteration">Qara'a Ibn 'Abbas hatta tasta'dhinu, fa-qala rajul, ala arahu illa hatta tasta'nisu, fa-qala Ibn 'Abbas, dhalika min khata' al-katib.</p>
+                                            <p class="translation">"Ibn Abbas read 'until you seek authorization (tasta'dhinu).' A man said he saw it only as 'until you feel at ease (tasta'nisu).' Ibn Abbas answered that this comes from the error of the scribe."</p>
                                             <cite class="text-sm text-gray-500">- Abu Shahba (d. 1402 AH), al-Mudkhal li-Dirasat al-Quran, p. 475</cite>
                                         </blockquote>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">A Sunni Motif, Borrowed</h5>
-                                        <p class="font-semibold text-gray-800">The "scribal error" motif originated in the Sunni corpus, attributed to Ibn Abbas <span class="honorific">﵁</span> about four different verses, authenticated by al-Hakim on the conditions of Bukhari and Muslim. The phrase "error of the scribe" was a Sunni-originated concept that entered Shia discourse through cross-pollination. The al-Kafi narration about 5:95 uses the exact same framework as these Ibn Abbas reports.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">The Sunni Cross-Pollination</h4>
-                            </div>
-                            <div id="tab3-8">
-                                <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Every Reader Reads It the Same</h5>
-                                        <p class="text-gray-600">No Sunni source has any variant reading, error claim, or alternative interpretation for "dhawa adlin minkum" (5:95). All seven canonical readers, all ten canonical readers, and even the irregular readings read the verse identically. The claim of scribal error for this verse exists only in Shia sources.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Motif in the Sunni Corpus</h5>
-                                        <p class="text-gray-600">The phrase "the scribes erred" does appear in the Sunni corpus, attributed to Ibn Abbas <span class="honorific">﵁</span> about four other verses (24:27, 17:23, 24:35), authenticated by al-Hakim on the conditions of Bukhari and Muslim. The Sunni corpus also contains substantial narrations suggesting textual incompleteness: the Stoning Verse (al-Bukhari, vol. 8, p. 209), the Suckling Verse (Sahih Muslim), Surah al-Ahzab reportedly equal in length to Surah al-Baqarah, and Ibn Mas'ud's Mushaf without al-Fatiha, al-Falaq, or al-Nas.</p>
-                                        <p class="text-gray-600 mt-2">Sunni scholars handle these through naskh al-tilawah (abrogation of recitation by Prophetic authority): the verses were genuinely revealed, recited, and then their recitation was withdrawn during the Prophet's <span class="honorific">ﷺ</span> lifetime. This is categorically different from post-Prophetic scribal corruption.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Khilaf al-Ammah</h5>
-                                        <p class="mb-2 text-gray-600">The Imami school possesses a principle for resolving conflicting narrations, taught by Imam al-Sadiq <span class="honorific">﵇</span> himself:</p>
+                                        <h5 class="analysis-heading">Their Framework, Not Ours</h5>
+                                        <p class="mb-2 text-gray-600">Sunni doctrine explains these reports through the seven ahruf, the claim that the Quran came down on seven modes of recitation. Within that framework, Ibn Ashtah explains what Ibn Abbas's <span class="honorific">﵁</span> phrase meant. He wrote,</p>
                                         <blockquote class="hadith-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">إذا ورد عليكم حديثان مختلفان فاعرضوهما على كتاب الله، فما وافق كتاب الله فخذوه وما خالف كتاب الله فردوه، فإن لم تجدوهما في كتاب الله فاعرضوهما على أخبار العامة، فما وافق أخبارهم فذروه وما خالف أخبارهم فخذوه</p>
-                                            <p class="italic transliteration">Idha warada 'alaykum hadithani mukhtalifani fa-a'riduhuma 'ala kitabi Allah, fa-ma wafaqa kitaba Allah fa-khudhuhu wa-ma khalafa kitaba Allah fa-rudduhu, fa-in lam tajiduhuma fi kitabi Allah fa-a'riduhuma 'ala akhbari al-'ammati, fa-ma wafaqa akhbarahum fa-dharuhu wa-ma khalafa akhbarahum fa-khudhuhu.</p>
-                                            <p class="translation">"When two differing reports come to you, present them to the Book of Allah. Accept that which agrees with the Book of Allah, and reject that which contradicts it. If you find them in the Book of Allah, then present them to the reports of the general public (the Sunnis): abandon that which agrees with their reports, and take that which contradicts their reports."</p>
-                                            <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 1, p. 56; al-Hurr al-Amili, Wasa'il al-Shia, vol. 27, p. 118</cite>
+                                            <p class="rtl font-amiri text-xl" lang="ar">أخطئوا أي في اختيار الأولى من الأحرف السبعة لجمع الناس عليه، لا أن الذي كتبوا من ذلك خطأ لا يجوز</p>
+                                            <p class="italic transliteration">Akhata'u ayyan fi ikhtiyari al-ula min al-ahruf al-sab'ati li-jam'i al-nasi 'alayhi, la anna alladhi katabu min dhalika khata'un la yajuz.</p>
+                                            <p class="translation">"They erred, meaning in choosing the first of the seven ahruf to gather people upon, not that what they wrote is an error that is impermissible."</p>
+                                            <cite class="text-sm text-gray-500">- Ibn Ashtah, Kitab al-Masahif; preserved in Abu Shahba (d. 1402 AH), al-Mudkhal, p. 475</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The dominant Sunni position on 5:95 is unanimous: the verse reads dhawa adlin minkum with no variant. The khilaf al-ammah principle operates within fiqh (jurisprudential disputes where two Imami narrations conflict), and the integrity of the Book of Allah <span class="honorific">ﷻ</span> is a matter of usul al-din (foundational creed). The principle override the first tier (the Quran's promise of preservation), and it manufacture a textual variant against the universal Muslim reading.</p>
-                                        <p class="text-gray-700 mt-2">The "scribes erred" motif itself originated in the Sunni corpus with Ibn Abbas <span class="honorific">﵁</span>. Accepting it means importing a Sunni-originated framing. The khilaf al-ammah principle exists to flag and filter precisely this kind of cross-pollination from the dominant school.</p>
+                                        <p class="text-gray-700 mt-3">This is their accounting, and it stays theirs. The Imami school does not hold the seven-ahruf doctrine. Imam al-Sadiq <span class="honorific">﵇</span> called its core claim a lie in the sahih report quoted above. What the Sunni material establishes is narrower and still useful. In its own home setting, the phrase "the scribes erred" never carried a charge of lost revelation. It marked a choice among readings all parties held valid.</p>
                                     </div>
                                     <div class="analysis-section">
-                                        <h5 class="analysis-heading">Creed, Not Fiqh</h5>
-                                        <p class="font-semibold text-gray-800">The scribal-error motif originated in the Sunni corpus, attributed to Ibn Abbas <span class="honorific">﵁</span>, and entered Shia collections through cross-pollination from the broader Islamic discourse. The principle of khilaf al-ammah exists to flag and filter this kind of infiltration, and the integrity of the Book is a creedal matter, not a fiqhi dispute where the principle operates.</p>
+                                        <h5 class="analysis-heading">One Phrase, Two Doctrines</h5>
+                                        <p class="font-semibold text-gray-800">The phrase "error of the scribe" appears on both sides of the split, attached to Ibn Abbas <span class="honorific">﵁</span> in Sunni reports and to Imam al-Sadiq <span class="honorific">﵇</span> in Hammad's report. On Sunni ground it works inside the seven-ahruf doctrine, marking a choice among sanctioned modes. On Imami ground there are no seven modes to choose among, so the phrase must be read within the school's own frame, and that frame, taught in sahih reports, holds one revelation delivered intact. Either way the phrase never testifies to a corrupted Quran.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1174,18 +1191,18 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Chain</h5>
-                                        <p class="mb-2 text-gray-600">Al-Dhahabi (d. 748 AH), a master reciter, records his own chain in Ma'rifat al-Qurra' al-Kibar:</p>
+                                        <p class="mb-2 text-gray-600">Al-Dhahabi (d. 748 AH), a master reciter, records his own chain in Ma'rifat al-Qurra' al-Kibar,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">فإني قرأت القرآن كله على أبي القاسم سحنون المالكي... عن السامري، عن الأشناني، عن عبيد بن الصباح، عن حفص، عن عاصم، عن أبي عبد الرحمن السلمي، عن علي</p>
                                             <p class="italic transliteration">Fa-inni qara'tu al-Qur'ana kullahu 'ala Abi al-Qasim Sahnun al-Maliki... 'an al-Samiri, 'an al-Ashnani, 'an 'Ubayd b. al-Sabbah, 'an Hafs, 'an 'Asim, 'an Abi 'Abd al-Rahman al-Sulami, 'an 'Ali.</p>
                                             <p class="translation">"I recited the whole Quran to Abu al-Qasim Sahnun al-Maliki. The chain runs back through al-Samiri, from al-Ashnani, from Ubayd ibn al-Sabbah, from Hafs, from Asim, from Abu Abd al-Rahman al-Sulami, from Ali <span class="honorific">﵇</span>."</p>
                                             <cite class="text-sm text-gray-500">- al-Dhahabi (d. 748 AH), Ma'rifat al-Qurra' al-Kibar, vol. 1, p. 210</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The chain runs up from Hafs through Asim and al-Sulami to Ali ibn Abi Talib <span class="honorific">﵇</span>. Al-Sulami read the whole Quran to four companions: Uthman, Ali <span class="honorific">﵇</span>, Zayd ibn Thabit, and Ubayy ibn Ka'b. The load-bearing link on the Shia reading is al-Sulami's recital to Ali <span class="honorific">﵇</span>.</p>
+                                        <p class="text-gray-700 mt-3">The chain runs up from Hafs through Asim and al-Sulami to Ali ibn Abi Talib <span class="honorific">﵇</span>. Al-Sulami read the whole Quran to four companions, Uthman, Ali <span class="honorific">﵇</span>, Zayd ibn Thabit, and Ubayy ibn Ka'b. The load-bearing link on the Shia reading is al-Sulami's recital to Ali <span class="honorific">﵇</span>.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Link Through Ali</h5>
-                                        <p class="font-semibold text-gray-800">The recited text reaches the Prophet <span class="honorific">ﷺ</span> through a named, documented chain of oral recital, and the load-bearing link for the Shia reading is al-Sulami's transmission from Ali <span class="honorific">﵇</span>. Each link in the chain represents a full recitation of the entire Quran verified by the teacher before the student. This is an unbroken line of performance, preserved by the same discipline that produced the qira'at.</p>
+                                        <p class="font-semibold text-gray-800">The recited text reaches the Prophet <span class="honorific">ﷺ</span> through a named chain of oral recital. For the Shia reading the load-bearing link is al-Sulami's transmission from Ali <span class="honorific">﵇</span>. Each link represents a full recitation of the entire Quran verified by the teacher before the student. This is an unbroken line of performance, kept alive by the discipline that produced the qira'at.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1203,22 +1220,22 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Testimony</h5>
-                                        <p class="mb-2 text-gray-600">From al-Kafi:</p>
+                                        <p class="mb-2 text-gray-600">Al-Kafi carries the report.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">ما نزلت على رسول الله آية من القرآن إلا أقرأنيها وأملاها علي فكتبتها بخطي، وعلمني تأويلها وتفسيرها، وناسخها ومنسوخها، ومحكمها ومتشابهها</p>
                                             <p class="italic transliteration">Ma nuzila 'ala Rasul Allah ayatun min al-Qur'an illa aqra'aniha wa-amleha 'alayya fa-katabtuha bi-khatti, wa-'allamani ta'wilaha wa-tafsiraha, wa-nasikhaha wa-mansukhaha, wa-muhkamaha wa-mutashabihaha.</p>
                                             <p class="translation">"No verse of the Quran came down upon the Messenger of God <span class="honorific">ﷺ</span> without his reciting it to me and dictating it to me. I wrote it in my own hand. He taught me its interpretation and its explanation, its abrogating and its abrogated, its clear and its ambiguous."</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 1, p. 112</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Ali's <span class="honorific">﵇</span> additions to his personal codex were commentary: marking which verses abrogate which. The content of the reports agrees that the Imam gathered the Quran in a gathering that we today call commentary (al-Askari, Riwayat al-Madrasatayn, vol. 3, p. 200).</p>
+                                        <p class="text-gray-700 mt-3">Ali's <span class="honorific">﵇</span> additions to his personal codex were commentary, marking which verses abrogate which. The content of the reports agrees that the Imam gathered the Quran in a gathering that we today call commentary (al-Askari, Riwayat al-Madrasatayn, vol. 3, p. 200).</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Prophet's Placement Method</h5>
-                                        <p class="mb-2 text-gray-600">The order of the Quranic text was set during the Prophet's <span class="honorific">ﷺ</span> lifetime, by his own instruction:</p>
+                                        <p class="mb-2 text-gray-600">The order of the Quranic text was set during the Prophet's <span class="honorific">ﷺ</span> lifetime, by his own instruction, as the report tells,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن رسول الله صلى الله عليه وآله كان مما يأتي عليه الزمان ينزل عليه من السور ذوات العدد، وكان إذا أنزل عليه الشيء يدعو بعض من يكتب عنده، يقول: ضعوا هذا في السورة التي يذكر فيها كذا وكذا</p>
-                                            <p class="italic transliteration">Inna Rasula Allahi sallá Allahu 'alayhi wa-alih kana mimma ya'ti 'alayhi al-zaman yunazzalu 'alayhi min al-suwar dhawat al-'adad, wa-kana idha unzila 'alayhi al-shay' yad'u ba'da man yaktubu 'indahu, yaqul: da'u hadha fi al-surati allati yudhkaru fiha kadha wa-kadha.</p>
-                                            <p class="translation">"There would come upon the Messenger of God <span class="honorific">ﷺ</span> a time when suras of several verses were being sent down to him. When something came down, he would call one of those who wrote for him. He would say: 'Place this in the sura in which such and such is mentioned.'"</p>
+                                            <p class="italic transliteration">Inna Rasula Allahi sallá Allahu 'alayhi wa-alih kana mimma ya'ti 'alayhi al-zaman yunazzalu 'alayhi min al-suwar dhawat al-'adad, wa-kana idha unzila 'alayhi al-shay' yad'u ba'da man yaktubu 'indahu, yaqul, da'u hadha fi al-surati allati yudhkaru fiha kadha wa-kadha.</p>
+                                            <p class="translation">"There would come upon the Messenger of God <span class="honorific">ﷺ</span> a time when suras of several verses were being sent down to him. When something came down, he would call one of those who wrote for him. He would say, 'Place this in the sura in which such and such is mentioned.'"</p>
                                             <cite class="text-sm text-gray-500">- al-Askari, al-Qur'an al-Karim wa Riwayat al-Madrasatayn, vol. 1, p. 211</cite>
                                         </blockquote>
                                     </div>
@@ -1242,7 +1259,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Ali's Oath and Collection</h5>
-                                        <p class="mb-2 text-gray-600">After the Prophet's <span class="honorific">ﷺ</span> death, Ali <span class="honorific">﵇</span> swore an oath to gather the Quran before resuming normal life. The report is preserved in Bihar al-Anwar:</p>
+                                        <p class="mb-2 text-gray-600">After the Prophet's <span class="honorific">ﷺ</span> death, Ali <span class="honorific">﵇</span> swore an oath to gather the Quran before resuming normal life. Bihar al-Anwar preserves the report,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">فلما توفي رسول الله <span class="honorific">ﷺ</span> اشتغلت بدفنه والفراغ من شأنه، ثم آليت يميناً أني لا أرتدي إلا للصلاة وجمع القرآن</p>
                                             <p class="italic transliteration">Falammā tawaffā Rasūlu Allāhi ṣallā Allāhu 'alayhi wa-ālihi ishtaghaltu bi-dafnihi wa'l-farāghi min shānihi, thumma ālaytu yamīnan annī lā artadī illā li'l-ṣalāti wa-jam'i al-Qur'ān.</p>
@@ -1253,7 +1270,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Zayd's Gathering Under Abu Bakr</h5>
-                                        <p class="mb-2 text-gray-600">The same collection narrative that Sunnis transmit sits inside the Shia sources. Zayd ibn Thabit describes the gathering:</p>
+                                        <p class="mb-2 text-gray-600">The same collection narrative that Sunnis transmit sits inside the Shia sources. Zayd ibn Thabit describes the gathering, saying,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">فتتبعت القرآن أجمعه من الرقاع والعسب واللخاف وصدور الرجال</p>
                                             <p class="italic transliteration">Fatabbaʿtu al-Qur'āna ajmaʿuhu min al-riqāʿi wa'l-ʿusbi wa'l-lakhāfi wa-ṣudūri al-rijāl.</p>
@@ -1263,14 +1280,14 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Uthman's Standardization and Ali's Endorsement</h5>
-                                        <p class="mb-2 text-gray-600">Al-Majlisi records Uthman's standardization in Bihar al-Anwar:</p>
+                                        <p class="mb-2 text-gray-600">Al-Majlisi records Uthman's standardization in Bihar al-Anwar,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">جمع عثمان الناس على قراءة زيد بن ثابت، وكتب المصاحف، فبعث بواحد منها إلى الكوفة وبواحد إلى البصرة وإلى كل من الشام ومكة واليمن والبحرين بواحد، وأمسك في المدينة مصحفاً كانوا يقولون له الإمام</p>
                                             <p class="italic transliteration">Jamaʿa ʿUthmānu al-nāsa ʿalā qirā'ati Zayd b. Thābit, wa-kataba al-maṣāḥifa, fa-baʿatha bi-wāḥidin minhā ilā al-Kūfati wa-bi-wāḥidin ilā al-Baṣrati wa-ilā kullin min al-Shāmi wa-Makkata wa'l-Yamani wa'l-Baḥrayni bi-wāḥid, wa-amsaka fī al-Madīnati muṣḥafan kānū yaqūlūna lahu al-Imām.</p>
                                             <p class="translation">"Uthman gathered the people upon the reading of Zayd ibn Thabit and wrote the codices. He sent one to Kufa, one to Basra, and one each to Syria, Mecca, Yemen, and Bahrain. He kept in Medina a codex they used to call the Imam."</p>
                                             <cite class="text-sm text-gray-500">- al-Majlisi (d. 1111 AH), Bihar al-Anwar, vol. 31, p. 211</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Ali <span class="honorific">﵇</span> endorsed the standardization:</p>
+                                        <p class="text-gray-700 mt-3">Ali <span class="honorific">﵇</span> endorsed the standardization, saying,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">لو لم يصنعه عثمان لصنعته</p>
                                             <p class="italic transliteration">Law lam yaṣnaʿhu ʿUthmānu la-ṣnaʿtuh.</p>
@@ -1280,7 +1297,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">No Charge Against Any Participant</h5>
-                                        <p class="font-semibold text-gray-800">The Shia sources carry the same collection narrative as the Sunni sources: Ali's <span class="honorific">﵇</span> oath, Zayd's gathering from scattered materials, Uthman's standardization, and Ali's <span class="honorific">﵇</span> explicit endorsement. Each stage is documented in the Shia hadith literature without any charge of corruption against any participant.</p>
+                                        <p class="font-semibold text-gray-800">The Shia sources carry the same collection narrative as the Sunni sources, Ali's <span class="honorific">﵇</span> oath, Zayd's gathering from scattered materials, Uthman's standardization, and Ali's <span class="honorific">﵇</span> explicit endorsement. Each stage is documented in the Shia hadith literature without any charge of corruption against any participant.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1300,8 +1317,8 @@
                                         <h5 class="analysis-heading">Imam al-Baqir on Quran Unity</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">عن أبي جعفر عليه السلام قال: إن القرآن واحد نزل من عند واحد ولكن الاختلاف يجيئ من قبل الرواة</p>
-                                            <p class="italic transliteration">'An Abi Ja'far alayhi al-salam qala: Inna al-Qur'ana wahid nazala min 'inda wahid wa-lakin al-ikhtilaf yaji' min qabli al-ruwat.</p>
-                                            <p class="translation">"Imam al-Baqir <span class="honorific">﵇</span> said: The Quran is one; it came down from One. But the variance comes from the transmitters."</p>
+                                            <p class="italic transliteration">'An Abi Ja'far alayhi al-salam qala, Inna al-Qur'ana wahid nazala min 'inda wahid wa-lakin al-ikhtilaf yaji' min qabli al-ruwat.</p>
+                                            <p class="translation">"Imam al-Baqir <span class="honorific">﵇</span> said, 'The Quran is one. It came down from One. But the variance comes from the transmitters.'</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 2, p. 630</cite>
                                         </blockquote>
                                     </div>
@@ -1309,11 +1326,11 @@
                                         <h5 class="analysis-heading">Imam al-Sadiq on the Received Text</h5>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">سألت أبا عبد الله عليه السلام عن تنزيل القرآن قال: اقرؤوا كما علمتم</p>
-                                            <p class="italic transliteration">Sa'altu Aba 'Abd Allah alayhi al-salam 'an tanzili al-Qur'an qala: Iqra'u kama 'ullimtum.</p>
-                                            <p class="translation">"I asked Abu Abd Allah about the revelation of the Quran. He answered: 'Recite as you were taught.'"</p>
+                                            <p class="italic transliteration">Sa'altu Aba 'Abd Allah alayhi al-salam 'an tanzili al-Qur'an qala, Iqra'u kama 'ullimtum.</p>
+                                            <p class="translation">"I asked Abu Abd Allah about the revelation of the Quran, and he answered, 'Recite as you were taught.'"</p>
                                             <cite class="text-sm text-gray-500">- al-Kulayni (d. 329 AH), al-Kafi, vol. 2, p. 631</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">This instruction is unique to the Shia sources. Sunni hadith preserves the identical Prophetic wording in Musnad Abi Ya'la (vol. 8, p. 470): iqra'u kama 'ullimtum, "Recite as you were taught." Both traditions carry the same instruction.</p>
+                                        <p class="text-gray-700 mt-3">The instruction binds the community that received it. The Sunni tradition preserves the identical Prophetic wording in Musnad Abi Ya'la (vol. 8, p. 470), iqra'u kama 'ullimtum, "Recite as you were taught." Both traditions carry the same instruction.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">One Text Received from One</h5>
@@ -1335,18 +1352,18 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Shia Position</h5>
-                                        <p class="mb-2 text-gray-600">Al-Amili stated the school's position in al-Intisar:</p>
+                                        <p class="mb-2 text-gray-600">Al-Amili stated the school's position in al-Intisar,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إنه نقل بالتواتر المفيد للعلم الذي حصل لنا من خلاله أن لا زيادة فيه ولا نقصان منه ولو حرفا واحدا وهذا هو رأي الشيعة والذي عليه المعتمد عندهم</p>
                                             <p class="italic transliteration">Innahu nuqila bi'l-tawaturi al-mufidi li'l-'ilmi alladhi hasala lana min khilalihi anna la ziyadata fihi wa-la nuqsana minhu wa-law harfan wahidan, wa-hadha huwa ra'y al-shi'ati wa-alladhi 'alayhi al-mu'tamadu 'indahum.</p>
                                             <p class="translation">"It was transmitted by mass transmission, which gives us certain knowledge that not one letter was added to it or dropped from it. This is the view of the Shia and the one they rely upon."</p>
                                             <cite class="text-sm text-gray-500">- al-Amili, al-Intisar, vol. 3, p. 314</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">The text is guarded three ways: written in the codices, preserved in the breasts, and recited on the tongues. If a page were lost, the memorizers held the text. If a memorizer erred, the pages and the crowd corrected him.</p>
+                                        <p class="text-gray-700 mt-3">The text is guarded three ways. It is written in the codices, preserved in the breasts, and recited on the tongues. If a page were lost, the memorizers held the text. If a memorizer erred, the pages and the crowd corrected him.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Three Layers Correct Each Other</h5>
-                                        <p class="font-semibold text-gray-800">The Quran was never carried by a single thread. Mass transmission placed the full text in the memory and on the tongues of so many reciters in every generation that agreement on a change was impossible. Al-Amili stated the school's position as certain knowledge: not one letter was added or dropped. Three independent layers of preservation, the codices, the memorizers, and the reciters, each correct the other.</p>
+                                        <p class="font-semibold text-gray-800">The Quran was never carried by a single thread. Mass transmission placed the full text in the memory and on the tongues of so many reciters in every generation that agreement on a change was impossible. Al-Amili stated the school's position as certain knowledge, that not one letter was added or dropped. Three independent layers of preservation, the codices, the memorizers, and the reciters, each correct the other.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1406,7 +1423,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The 1924 Cairo Colophon</h5>
-                                        <p class="mb-2 text-gray-600">The reading of Hafs became the world's standard printed text through the 1924 Cairo edition, produced by a committee under al-Azhar. Its colophon names the chain back to the Prophet <span class="honorific">ﷺ</span>:</p>
+                                        <p class="mb-2 text-gray-600">The reading of Hafs became the world's standard printed text through the 1924 Cairo edition, produced by a committee under al-Azhar. Its colophon names the chain back to the Prophet <span class="honorific">ﷺ</span>,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">كتب هذا المصحف وضبط على ما يوافق رواية حفص بن سليمان بن المغيرة الأسدي الكوفي بقراءة عاصم بن أبي النجود الكوفي التابعي، عن أبي عبد الرحمن عبد الله بن حبيب السلمي، عن عثمان بن عفان، وعلي بن أبي طالب، وزيد بن ثابت، وأبي بن كعب، عن النبي</p>
                                             <p class="italic transliteration">Kutiba hadha al-mushaf wa-dubita 'ala ma yuwafiqu riwayata Hafs b. Sulayman b. al-Mughira al-Asadi al-Kufi bi-qira'ati 'Asim b. Abi al-Nujud al-Kufi al-Tabi'i, 'an Abi 'Abd al-Rahman 'Abd Allah b. Habib al-Sulami, 'an 'Uthman b. 'Affan, wa-'Ali b. Abi Talib, wa-Zayd b. Thabit, wa-Ubayy b. Ka'b, 'an al-Nabi.</p>
@@ -1416,7 +1433,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">One Early Written Archetype</h5>
-                                        <p class="font-semibold text-gray-800">The manuscript record confirms what the chains of recital assert. The oldest surviving codices, dated by radiocarbon to the first century of Islam, carry the same consonant skeleton, and the shared spelling quirks across fourteen early manuscripts point to a single early written archetype. The 1924 Cairo colophon names the chain from Hafs through Asim and al-Sulami to four companions, including Ali <span class="honorific">﵇</span>, and from them to the Prophet <span class="honorific">ﷺ</span>.</p>
+                                        <p class="font-semibold text-gray-800">The manuscript record confirms what the chains of recital assert. The oldest surviving codices date by radiocarbon to the first century of Islam. They carry the same consonant skeleton. Fourteen early manuscripts even share spelling quirks, and shared quirks point to one early written archetype. The 1924 Cairo colophon names the chain from Hafs through Asim and al-Sulami to four companions, including Ali <span class="honorific">﵇</span>, and from them to the Prophet <span class="honorific">ﷺ</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1430,12 +1447,12 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Two Layers, One Manuscript</h5>
-                                        <p class="text-gray-600">The one manuscript cited as proof of change is the Sanaa palimpsest (DAM 01-27.1). A palimpsest is a manuscript whose original text was erased and written over. The Sanaa palimpsest has two layers: an upper text (the visible layer) and a lower text (the erased layer beneath).</p>
+                                        <p class="text-gray-600">The one manuscript cited as proof of change is the Sanaa palimpsest (DAM 01-27.1). A palimpsest is a manuscript whose original text was erased and written over. The Sanaa palimpsest has two layers. The upper text is the visible layer. The lower text is the erased layer beneath.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Finding</h5>
                                         <p class="text-gray-600">The upper text is the standard Quran. The lower text is a non-standard early codex of the kind ascribed to individual Companions. Sadeghi and Goudarzi concluded that the differences between the upper and lower texts are at the level of morphemes, words, and phrases, and at the level of sentences or verses (Der Islam 87, 2012, pp. 23, 26).</p>
-                                        <p class="text-gray-600 mt-2">The palimpsest is a physical snapshot of a Companion codex being retired in favour of the standard text. This is the standardization the sources report: Uthman gathered the people upon one reading and distributed the standard codices. The Sanaa palimpsest shows the process in action, with the standard text written over the Companion variant.</p>
+                                        <p class="text-gray-600 mt-2">The palimpsest is a physical snapshot of a Companion codex being retired in favour of the standard text. This is the standardization the sources report. Uthman gathered the people upon one reading and distributed the standard codices. The Sanaa palimpsest shows the process in action, with the standard text written over the Companion variant.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">What the Lower Text Shows</h5>
@@ -1467,7 +1484,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Creed</h5>
-                                        <p class="mb-2 text-gray-600">The full statement from al-I'tiqadat:</p>
+                                        <p class="mb-2 text-gray-600">Al-I'tiqadat carries the full statement,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اعتقادنا أن القرآن الذي أنزله الله تعالى على نبيه محمد (﵌) هو ما بين الدفتين وهو ما في أيدي الناس ليس بأكثر من ذلك. ومن نسب إلينا أنا نقول أنه أكثر من ذلك فهو كاذب</p>
                                             <p class="italic transliteration">I'tiqaduna anna al-Qur'ana alladhi anzalahu Allahu ta'ala 'ala nabiyyihi Muhammadin salla Allahu 'alayhi wa-alihi huwa ma bayna al-daffatayn wa-huwa ma fi aydi al-nasi laysa bi-akthara min dhalik. Wa-man nasaba ilayna anna naqulu annahu aktharu min dhalika fa-huwa kadhib.</p>
@@ -1477,7 +1494,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Boundary of Faith</h5>
-                                        <p class="font-semibold text-gray-800">By anchoring his creed in the physical mushaf the community already possessed, al-Saduq drew the school's first unambiguous line against textual tahrif. His choice to call the opposing claim a lie, rather than merely mistaken, signaled that the Quran's completeness was a boundary of faith. Every subsequent theologian in the school built upon this foundation, refining its arguments and affirming its conclusion.</p>
+                                        <p class="font-semibold text-gray-800">Al-Saduq anchored his creed in the physical mushaf the community already held, and so drew the school's first clear line against textual tahrif. He called the opposing claim a lie. A lie is a boundary of faith. Every theologian after him built on that foundation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1495,18 +1512,18 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Position</h5>
-                                        <p class="mb-2 text-gray-600">From al-Masa'il al-Sarawiyya and Awa'il al-Maqalat:</p>
+                                        <p class="mb-2 text-gray-600">The two positions appear in al-Masa'il al-Sarawiyya and Awa'il al-Maqalat.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">ما بين الدفتين من القرآن أكثر ما أنزل الله، وما سوى ذلك فإنه عند ولي الشرع</p>
                                             <p class="italic transliteration">Ma bayna al-daffatayn min al-Qur'an aktharu ma anzala Allahu, wa-ma siwa dhalik fa-innahu 'inda waliyyi al-shar'.</p>
                                             <p class="translation">"What is between the two covers of the Quran is the majority of the revelation. The rest is with the guardian of the Shari'a."</p>
                                             <cite class="text-sm text-gray-500">- al-Mufid (d. 413 AH), al-Masa'il al-Sarawiyya, p. 78; Awa'il al-Maqalat, section 59</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Al-Mufid affirmed that nothing was added to the Quran. He held that reason does not consider omission theoretically impossible, but resolved the question by arguing that any omissions affected Ali's <span class="honorific">﵇</span> tafsir notes and commentary, the revealed text itself. His position is distinct from both al-Saduq (who denied omission entirely) and from those who affirmed textual loss. Al-Mufid's formulation acknowledges a gap between the complete revelation and the standard codex, and locates that gap in the commentary material, in the recited verses.</p>
+                                        <p class="text-gray-700 mt-3">Al-Mufid affirmed that nothing was added to the Quran. He granted that reason cannot rule out omission in theory. In practice he located any omitted material in Ali's <span class="honorific">﵇</span> tafsir notes, not in the recited verses. His position differs from al-Saduq, who denied omission entirely.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Where the Remaining Material Sits</h5>
-                                        <p class="font-semibold text-gray-800">Al-Mufid represents the school's most theologically careful formulation. He denies addition, acknowledges the standard codex as the majority of revelation, and locates any remaining material in the commentary held by the Imams <span class="honorific">﵈</span>. His position preserves both the integrity of the recited text and the logical possibility that the Ahl al-Bayt <span class="honorific">﵈</span> possessed additional explanatory material. Later scholars like al-Murtada and al-Tusi moved from this middle position to a full denial of omission.</p>
+                                        <p class="font-semibold text-gray-800">Al-Mufid gives the school's most careful formulation. He denies addition. He accepts the standard codex as the majority of revelation. He places any remaining material in the commentary held by the Imams <span class="honorific">﵈</span>. Al-Murtada and al-Tusi later moved beyond this middle position to a full denial of omission.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1520,11 +1537,11 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Tawatur, Reason, and Solitary Reports</h5>
-                                        <p class="text-gray-600">Al-Sharif al-Murtada mounted the strongest classical denial of textual tahrif. He argued from three grounds: tawatur (mass transmission), rational necessity, and the rejection of solitary reports in matters of creed.</p>
+                                        <p class="text-gray-600">Al-Sharif al-Murtada mounted the strongest classical denial of textual tahrif. He argued from three grounds. Mass transmission stands first. Rational necessity stands second. The rejection of solitary reports in creed stands third.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Cities Argument</h5>
-                                        <p class="mb-2 text-gray-600">Al-Murtada placed certainty in the Quran's transmission on the level of certainty about the existence of famous cities:</p>
+                                        <p class="mb-2 text-gray-600">Al-Murtada placed certainty in the Quran's transmission on the level of certainty about the existence of famous cities, writing,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن العلم بصحة نقل القرآن كالعلم بالبلدان والحوادث العظام والكتب المشهورة وأشعار العرب</p>
                                             <p class="italic transliteration">Inna al-'ilma bi-sihhati naqli al-Qur'ani ka'l-'ilmi bi'l-buldani wa'l-hawadithi al-'izami wa'l-kutubi al-mashhurati wa-ash'ari al-'arab.</p>
@@ -1535,7 +1552,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Too Widespread to Fabricate</h5>
-                                        <p class="font-semibold text-gray-800">Al-Murtada placed the Quran's textual certainty on the same epistemic footing as the reality of known cities and recorded events. No sane person doubts that Mecca exists or that great battles occurred, because the evidence is too widespread and too multiply attested to be fabricated. Al-Murtada argued the Quran's transmission carries this same self-evident force, and therefore no solitary narration can dent it.</p>
+                                        <p class="font-semibold text-gray-800">Al-Murtada put the Quran's certainty on the same footing as the existence of known cities. No sane person doubts that Mecca exists. The evidence is too widespread to fabricate. He argued that the Quran's transmission carries this same force, so no solitary narration can dent it.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1549,11 +1566,11 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Dual Ruling in al-Tibyan</h5>
-                                        <p class="text-gray-600">Shaykh al-Tusi, known as Shaykh al-Ta'ifa (Leader of the School), ruled decisively in al-Tibyan. His position closed the classical phase of the debate: addition is unanimously false, and the sound position is that deletion is false as well.</p>
+                                        <p class="text-gray-600">Shaykh al-Tusi, known as Shaykh al-Ta'ifa (Leader of the School), ruled decisively in al-Tibyan. His position closed the classical phase of the debate. Addition is unanimously false, and the sound position is that deletion is false as well.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Ruling</h5>
-                                        <p class="mb-2 text-gray-600">From the introduction to al-Tibyan:</p>
+                                        <p class="mb-2 text-gray-600">His ruling comes from the introduction to al-Tibyan.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">وأما الكلام في زيادته ونقصانه فمما لا يليق به، لأن الزيادة فيه مجمع على بطلانه، والنقصان منه فالظاهر من مذهب المسلمين خلافه، وهو الأليق بالصحيح من مذهبنا</p>
                                             <p class="italic transliteration">Wa-amma al-kalamu fi ziyadatihi wa-nuqsanihi fa-mimma la yaliqu bihi, li-anna al-ziyadata fihi mujma'un 'ala butlanihi, wa'l-nuqsanu minhu fa'l-zahiru min madhhabi al-muslimina khilafuhu, wa-huwa al-aliqu bi'l-sahihi min madhabina.</p>
@@ -1563,7 +1580,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Reports That Yield No Certainty</h5>
-                                        <p class="font-semibold text-gray-800">Al-Tusi closed the classical phase of the debate with a dual ruling: addition is unanimously false, and the sound position of the school is no deletion either. His authority as Shaykh al-Ta'ifa meant this formulation carried the weight of the entire school, and every major theologian after him affirmed it. The reports indicating deletion yield no certainty, he wrote, and should be set aside.</p>
+                                        <p class="font-semibold text-gray-800">Al-Tusi closed the classical phase of the debate with a dual ruling. Addition is unanimously false, and deletion fails as well. His authority as Shaykh al-Ta'ifa meant this formulation carried the weight of the entire school, and every major theologian after him affirmed it. The reports indicating deletion yield no certainty, he wrote, and should be set aside.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1581,7 +1598,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Verdict</h5>
-                                        <p class="mb-2 text-gray-600">Al-Khoei's closing assessment of the tahrif narrations:</p>
+                                        <p class="mb-2 text-gray-600">Al-Khoei's closing assessment of the tahrif narrations follows,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">إن حديث تحريف القرآن حديث خرافة وخيال، لا يقول به إلا من ضعف عقله، أو من لم يتأمل في أطرافه حق التأمل</p>
                                             <p class="italic transliteration">Inna haditha tahrifi al-Qur'ani hadithu khurafatin wa-khayal, la yaqulu bihi illa man da'ufa 'aqluhu, aw man lam yata'ammal fi atrafihi haqqa al-ta'ammul.</p>
@@ -1591,7 +1608,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Tale Disconnected from Evidence</h5>
-                                        <p class="font-semibold text-gray-800">Al-Khoei's treatment closed the modern chapter of the debate. By classifying the narrations by chain, tracing them to their sources, and testing each against reason and the mutawatir text, he showed that the tahrif claim is a tale disconnected from both rational proof and verified transmission. His verdict carries the authority of the 20th century's leading marja', and every contemporary marja' has affirmed the same position.</p>
+                                        <p class="font-semibold text-gray-800">Al-Khoei's treatment closed the modern chapter of the debate. He classified the narrations by chain, traced them to their sources, and tested each against reason and the mass-transmitted text. The claim failed every test. His verdict carries the authority of the twentieth century's leading marja', and every contemporary marja' affirms it.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1605,27 +1622,27 @@
                                 <div class="p-4 md:p-6 border-t border-[#E7E0D1] space-y-4">
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">A Millennium of Agreement</h5>
-                                        <p class="text-gray-600">The following scholars affirm complete Quran preservation, spanning a millennium from the 4th century AH to the present:</p>
+                                        <p class="text-gray-600">The following scholars affirm complete Quran preservation, spanning a millennium from the 4th century AH to the present.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Chain of Affirmation</h5>
                                         <div class="space-y-3 text-gray-600">
-                                            <p><strong>Al-Saduq</strong> (d. 381 AH): "Whoever asserts that we claim it is greater in length than that is a liar." (al-I'tiqadat)</p>
-                                            <p><strong>Al-Mufid</strong> (d. 413 AH): "What is between the two covers is the majority of the revelation." Nothing was added. (al-Masa'il al-Sarawiyya)</p>
-                                            <p><strong>Al-Murtada</strong> (d. 436 AH): "Our belief in the completeness of the Quran is as certain as our belief in famous cities." (Jawabat al-Masa'il al-Tarabulusiyyat)</p>
-                                            <p><strong>Al-Tusi</strong> (d. 460 AH): "Complete consensus that no addition has happened; the sound position is no deletion either." (al-Tibyan)</p>
-                                            <p><strong>Al-Tabarsi</strong> (d. 548 AH): "We the Shia are opposed to this belief" of reduction or addition. (Majma' al-Bayan)</p>
-                                            <p><strong>Tabataba'i</strong> (d. 1412 AH): "The clearest proof that the Quran we have today is the same that was revealed." (al-Mizan)</p>
-                                            <p><strong>Al-Khoei</strong> (d. 1413 AH): "Whoever claims tahrif opposes the mind and rationality." (al-Bayan)</p>
-                                            <p><strong>Khomeini</strong> (d. 1409 AH): Condemned Nuri's Fasl al-Khitab; treated the existing Quran as completely authoritative in all rulings. (Kashf al-Asrar)</p>
-                                            <p><strong>Al-Muzaffar</strong> (d. 1381 AH): "This Holy Book that we recite today is the same Holy Quran which was revealed to the Holy Prophet <span class="honorific">ﷺ</span>. Anyone who claims it to be otherwise is either an evil-doer, a mere sophist, or is sadly mistaken." (Beliefs of the Shiite School)</p>
-                                            <p><strong>Ma'rifat</strong> (d. 2007): "The miraculous nature of the Quran is evidence against tahrif." (Siyanat al-Quran)</p>
-                                            <p><strong>Sistani</strong> (contemporary): "The Quran that exists in our hands is the same as that which was revealed upon Allah's <span class="honorific">ﷻ</span> messenger <span class="honorific">ﷺ</span> without addition or loss." (Ahdath al-Istiftaat al-Aqidiyya)</p>
+                                            <p><strong>Al-Saduq</strong> (d. 381 AH) wrote, "Whoever asserts that we claim it is greater in length than that is a liar." (al-I'tiqadat)</p>
+                                            <p><strong>Al-Mufid</strong> (d. 413 AH) taught, "What is between the two covers is the majority of the revelation." Nothing was added (al-Masa'il al-Sarawiyya).</p>
+                                            <p><strong>Al-Murtada</strong> (d. 436 AH) wrote, "Our belief in the completeness of the Quran is as certain as our belief in famous cities." (Jawabat al-Masa'il al-Tarabulusiyyat)</p>
+                                            <p><strong>Al-Tusi</strong> (d. 460 AH) wrote, "Complete consensus that no addition has happened; the sound position is no deletion either." (al-Tibyan)</p>
+                                            <p><strong>Al-Tabarsi</strong> (d. 548 AH) wrote, "We the Shia are opposed to this belief," meaning reduction or addition. (Majma' al-Bayan)</p>
+                                            <p><strong>Tabataba'i</strong> (d. 1412 AH) wrote, "The clearest proof that the Quran we have today is the same that was revealed." (al-Mizan)</p>
+                                            <p><strong>Al-Khoei</strong> (d. 1413 AH) wrote, "Whoever claims tahrif opposes the mind and rationality." (al-Bayan)</p>
+                                            <p><strong>Khomeini</strong> (d. 1409 AH) condemned Nuri's Fasl al-Khitab and treated the existing Quran as completely authoritative in all rulings (Kashf al-Asrar).</p>
+                                            <p><strong>Al-Muzaffar</strong> (d. 1381 AH) wrote, "This Holy Book that we recite today is the same Holy Quran which was revealed to the Holy Prophet <span class="honorific">ﷺ</span>. Anyone who claims it to be otherwise is either an evil-doer, a mere sophist, or is sadly mistaken." (Beliefs of the Shiite School)</p>
+                                            <p><strong>Ma'rifat</strong> (d. 2007) wrote, "The miraculous nature of the Quran is evidence against tahrif." (Siyanat al-Quran)</p>
+                                            <p><strong>Sistani</strong>, a contemporary marja', wrote, "The Quran that exists in our hands is the same as that which was revealed upon Allah's <span class="honorific">ﷻ</span> messenger <span class="honorific">ﷺ</span> without addition or loss." (Ahdath al-Istiftaat al-Aqidiyya)</p>
                                         </div>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Too Many Names to Overturn</h5>
-                                        <p class="font-semibold text-gray-800">The consensus chain spans an unbroken millennium from al-Saduq through every major theologian to every contemporary marja'. No significant scholar in the school's mainstream has affirmed textual tahrif since the rationalist turn, and the weight of names across ten centuries makes the position effectively irreversible. This is the same certainty al-Murtada compared to belief in the existence of famous cities: too widely attested to be overturned.</p>
+                                        <p class="font-semibold text-gray-800">The consensus chain runs without a break from al-Saduq to every contemporary marja'. Ten centuries of names carry one position. Al-Murtada compared its certainty to belief in famous cities. The evidence is too wide for any report to overturn.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1643,7 +1660,7 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Shia Source</h5>
-                                        <p class="mb-2 text-gray-600">From al-Kafi:</p>
+                                        <p class="mb-2 text-gray-600">Al-Kafi carries the report.</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اقرؤوا كما يقرأ الناس</p>
                                             <p class="italic transliteration">Iqra'u kama yaqra'u al-nas.</p>
@@ -1653,18 +1670,18 @@
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">The Sunni Parallel</h5>
-                                        <p class="mb-2 text-gray-600">The Sunni tradition preserves the identical Prophetic wording in Musnad Abi Ya'la:</p>
+                                        <p class="mb-2 text-gray-600">The Sunni tradition preserves the identical Prophetic wording in Musnad Abi Ya'la,</p>
                                         <blockquote class="hadith-callout">
                                             <p class="rtl font-amiri text-xl" lang="ar">اقرؤوا كما علمتم</p>
                                             <p class="italic transliteration">Iqra'u kama 'ullimtum.</p>
                                             <p class="translation">"Recite as you were taught."</p>
                                             <cite class="text-sm text-gray-500">- al-Mawsili (d. 307 AH), Musnad Abi Ya'la, vol. 8, p. 470</cite>
                                         </blockquote>
-                                        <p class="text-gray-700 mt-3">Both traditions carry the same instruction: the community's received text is the authoritative text. The Imam <span class="honorific">﵇</span> bound every Shia to the common codex. The Prophet <span class="honorific">ﷺ</span> bound every Muslim to what he taught. The instruction has held for fourteen centuries.</p>
+                                        <p class="text-gray-700 mt-3">Both traditions carry the same instruction. The community's received text is the authoritative text. The Imam <span class="honorific">﵇</span> bound every Shia to the common codex. The Prophet <span class="honorific">ﷺ</span> bound every Muslim to what he taught. The instruction has held for fourteen centuries.</p>
                                     </div>
                                     <div class="analysis-section">
                                         <h5 class="analysis-heading">Held for Fourteen Centuries</h5>
-                                        <p class="font-semibold text-gray-800">The binding instruction from the Imam <span class="honorific">﵇</span> turned every Shia toward the common codex, and the identical Prophetic <span class="honorific">ﷺ</span> wording preserved in the Sunni tradition shows the instruction was universal. Both traditions carry the same command: the community's received text is the authoritative text. The instruction has held for fourteen centuries because it was given at the source and preserved.</p>
+                                        <p class="font-semibold text-gray-800">The binding instruction from the Imam <span class="honorific">﵇</span> turned every Shia toward the common codex, and the identical Prophetic <span class="honorific">ﷺ</span> wording preserved in the Sunni tradition shows the instruction was universal. Both traditions carry the same command. The community's received text is the authoritative text. The instruction has held for fourteen centuries because it was given at the source and preserved.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1688,7 +1705,7 @@
                             <p><strong>Tawatur (تواتر):</strong> Mass transmission. A report carried by so many independent narrators in every generation that coordinated fabrication becomes impossible. Tawatur produces <em>yaqin</em> (certainty), as opposed to probability.</p>
                             <p><strong>Khabar al-wahid (خبر الواحد):</strong> A solitary report. Any narration that does not reach the threshold of tawatur. Even with a reliable chain, a solitary report produces only probability (<em>zann</em>), not certainty. It cannot establish matters of creed.</p>
                             <p><strong>Mu'arada (المعارضة):</strong> Comparison against the Quran. The foundational Imami principle that every report must be tested against the Quran. If a report contradicts the Quran, it is rejected regardless of its chain.</p>
-                            <p><strong>Khilaf al-ammah (خلاف العامة):</strong> Opposing the general public (the Sunni majority). A Shia principle for resolving conflicting narrations: when two reports conflict, prefer the one that contradicts the Sunni position. Applies to jurisprudential disputes, not to foundational creed.</p>
+                            <p><strong>Khilaf al-ammah (خلاف العامة):</strong> Opposing the general public (the Sunni majority). A Shia principle for resolving conflicting narrations holds that when two reports conflict in law, prefer the one that contradicts the Sunni position. Applies to jurisprudential disputes, not to foundational creed.</p>
                             <p><strong>Marja' (مرجع):</strong> A source of emulation. The highest-ranking Shia jurist whose rulings followers adopt. Contemporary maraji' include Ayatollah Sistani and others.</p>
                             <p><strong>Akhbar ahad (أخبار الآحاد):</strong> Plural of khabar al-wahid. Solitary reports.</p>
                             <p><strong>Zann (ظن):</strong> Probability or conjecture. The epistemic value of a solitary report. Insufficient for establishing creedal matters, which require certainty (<em>yaqin</em>).</p>
