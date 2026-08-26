@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How Twelver Shia scholars test a hadith before acting on it. The Quran gate, the narrator tests, the conflict ladder, and the taqiyya question, from al-Kulayni and al-Tusi to al-Khoei and al-Sistani.">
+    <meta name="keywords" content="Shia hadith authentication, khabar al-wahid, rijal, tarjih, taadul, taqiyya, al-Kafi, al-Tusi, al-Khoei, ilm al-hadith">
+    <meta property="og:title" content="Why Shia Scholars Do Not Accept Every Hadith in Their Books">
+    <meta property="og:description" content="How Twelver Shia scholars test a hadith before acting on it. The Quran gate, the narrator tests, the conflict ladder, and the taqiyya question, from al-Kulayni and al-Tusi to al-Khoei and al-Sistani.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/hadith-authentication.html">
+    <title>Why Shia Scholars Do Not Accept Every Hadith in Their Books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Scholarly Neutrals (Off-white #FDFBF7, Dark Slate #3D4451, Accent #B99C6B decorative / #8A6D3B text) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        main p {
+            line-height: 1.7;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover {
+            color: #8A6D3B;
+        }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink {
+            color: #6B7280;
+        }
+        .section-nav a.backlink:hover {
+            color: #8A6D3B;
+        }
+        .content-section {
+            scroll-margin-top: 4.5rem;
+        }
+        article {
+            scroll-margin-top: 4.5rem;
+        }
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        details.glossary summary {
+            cursor: pointer;
+        }
+        details.glossary > summary h4 {
+            display: inline;
+        }
+        @media print {
+            .section-nav { display: none; }
+            details { open: true; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-10">
+
+        <header class="mb-6">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-2">Hadith Methodology</p>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">Why Shia Scholars Do Not Accept Every Hadith in Their Books</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">The charge of contradictions was made by opponents and admitted by al-Tusi himself. The school’s answer is a testing apparatus, from the Prophet’s <span class="honorific">ﷺ</span> sermon at Mina to al-Khoei’s verdict on al-Kafi.</p>
+            <hr class="mt-6 border-[#E7E0D1]">
+        </header>
+
+        <!-- STICKY SECTION NAV: the page's jump layer. Anchor targets live
+             below; scroll-spy marks the active link with aria-current. -->
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="#argument" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#argument" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
+                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
+                <a href="#tab1" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. The Charge</a>
+                <a href="#tab2" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. The Quran Gate</a>
+                <a href="#tab3" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. When Reports Collide</a>
+                <a href="#tab4" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. The Taqiyya Question</a>
+                <a href="#tab5" class="navlink text-sm md:text-base py-3 flex-shrink-0">5. Different Answers</a>
+                <a href="#tab6" class="navlink text-sm md:text-base py-3 flex-shrink-0">6. The Authority Built</a>
+                <a href="#glossary-section" class="navlink text-sm md:text-base py-3 flex-shrink-0">Glossary</a>
+                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
+            </nav>
+        </div>
+
+        <main data-category="debate">
+            <!-- INTRO CARD: frames the argument/question under examination -->
+            
+            <section id="argument" class="content-section mb-12 mt-8 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Argument Under Examination</h2>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">The Charge</h5>
+                    <p class="mb-4 text-gray-600">The Shia hadith corpus contradicts itself, opponents said, and a wise Lord cannot command a religion whose reports collide. Shaykh al-Ta’ifa al-Tusi opened his largest work by quoting the charge in full and agreeing with its premise. Almost every report has another beside it that opposes it. The school’s answer was never denial. From the earliest collectors onward it built gates a report must pass, and its own scholars grade the collections by those gates today.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 1: The Content Faces the Quran First</p>
+                        <p class="text-gray-600 mb-2">Before any chain is weighed, the report’s content stands before the Book. The Prophet’s <span class="honorific">ﷺ</span> sermon at Mina and three reports from Imam al-Sadiq <span class="honorific">﵇</span> fix the rule. Whatever agrees with the Quran was said, whatever conflicts with it was never said, and a conflicting hadith is zukhruf, glitter with no substance. This gate is the tradition’s foundation, announced publicly and taught repeatedly.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 2: Conflicting Reports Follow a Fixed Ladder</p>
+                        <p class="text-gray-600 mb-2">The Imams were asked directly what to do with two conflicting reports, and the answers came in fixed order. The famous over the obscure, then the firmer narrator, then the report that departs from the common position, then precaution, and at the end free choice or standing down. The ladder is hadith, not jurists’ invention, and the school inherited it as an order.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 3: The Chain Faces the Narrator Science</p>
+                        <p class="text-gray-600 mb-2">Every narrator is weighed individually. Trustworthiness, not sectarian membership, is the operative test in the dominant modern school, and every proposed mass authentication has been dismantled, from the companions of consensus to the 4,000 students of al-Sadiq <span class="honorific">﵇</span>. The conclusion lands on the school’s own greatest book. The authenticity of every report in al-Kafi is not established.</p>
+                    </div>
+                    <div class="premise-card">
+                        <p class="font-semibold text-gray-800">Premise 4: The Departure Rule Has a Stated Reason</p>
+                        <p class="text-gray-600 mb-2">The most distinctive rung, preferring the report that contradicts the common position, comes with its history in the sources. The community fabricated counter rulings against Ali to break his cause, and the rule answers that campaign. Its scope is debated inside the school today, with al-Sistani’s school arguing most narrations cannot be attributed to taqiyya at all.</p>
+                    </div>
+                    <div class="conclusion-card">
+                        <p class="font-semibold text-[#8A6D3B]">Conclusion: The Book Is a Repository, Not a Verdict</p>
+                        <p class="text-gray-700">A school that admits the contradictions, commands the testing, and grades its own collections by the tests is not a school that accepts every hadith in its books. The verdict belongs to the scholar who runs the gates, and the gates were commanded by the Imams themselves.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- THE FACTS: debate/exegesis only. Derived from prose; every row
+                 anchors to its carrying article; Qualifier column mandatory
+                 (stated/reported/attributed/likely/disputed). -->
+            
+            <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
+                <p class="text-sm text-gray-500 mb-6">Every row links into the article carrying the detail.</p>
+                <div class="analysis-section">
+                    <h5 class="analysis-heading">The Methodology Reports and Statements</h5>
+                    <div class="premise-card overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-left">
+                                    <th class="py-2 pr-4 font-semibold">Claim</th>
+                                    <th class="py-2 pr-4 font-semibold">Actor</th>
+                                    <th class="py-2 pr-4 font-semibold">Date</th>
+                                    <th class="py-2 pr-4 font-semibold">Place</th>
+                                    <th class="py-2 pr-4 font-semibold">Source</th>
+                                    <th class="py-2 pr-4 font-semibold">Qualifier</th>
+                                    <th class="py-2 font-semibold">Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Almost every Shia report has another beside it that opposes it, and opponents built their attack on this.</td>
+                                    <td class="py-2 pr-4">al-Tusi, quoting the charge.</td>
+                                    <td class="py-2 pr-4">fifth century AH.</td>
+                                    <td class="py-2 pr-4">Baghdad, later Najaf.</td>
+                                    <td class="py-2 pr-4">Tahdhib al-Ahkam, vol.1, p52.</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a1">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Whatever is attributed to the Prophet that agrees with the Quran, he said; what conflicts, he never said.</td>
+                                    <td class="py-2 pr-4">the Prophet <span class="honorific">ﷺ</span>, at Mina.</td>
+                                    <td class="py-2 pr-4">the farewell period.</td>
+                                    <td class="py-2 pr-4">Mina or Mecca.</td>
+                                    <td class="py-2 pr-4">al-Ayyashi, Tafsir, via Mustadrak al-Wasa’il 17/304.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a2">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Any hadith that does not agree with the Book of Allah is zukhruf.</td>
+                                    <td class="py-2 pr-4">Imam al-Sadiq <span class="honorific">﵇</span>, in three reports.</td>
+                                    <td class="py-2 pr-4">second century AH.</td>
+                                    <td class="py-2 pr-4">Medina.</td>
+                                    <td class="py-2 pr-4">al-Ayyashi, via Mustadrak 17/304-305.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a3">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The collector of al-Kafi set three filters and admitted he knew only the least of their yield.</td>
+                                    <td class="py-2 pr-4">al-Kulayni, in his introduction.</td>
+                                    <td class="py-2 pr-4">circa 322 AH.</td>
+                                    <td class="py-2 pr-4">Baghdad.</td>
+                                    <td class="py-2 pr-4">al-Kafi, vol.1, muqaddima.</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a4">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">Between two equal arbiters or two conflicting reports, follow the more upright and more learned, then the fixed ladder.</td>
+                                    <td class="py-2 pr-4">Imam al-Sadiq <span class="honorific">﵇</span>, to Umar ibn Hanzala.</td>
+                                    <td class="py-2 pr-4">second century AH.</td>
+                                    <td class="py-2 pr-4">Medina.</td>
+                                    <td class="py-2 pr-4">al-Ihtijaj, via Mustadrak 17/302-303.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a5">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The five-step ladder, fame, reliability, departure from the common position, precaution, then choice.</td>
+                                    <td class="py-2 pr-4">Imam al-Baqir <span class="honorific">﵇</span>, to Zurarah.</td>
+                                    <td class="py-2 pr-4">early second century AH.</td>
+                                    <td class="py-2 pr-4">Medina.</td>
+                                    <td class="py-2 pr-4">Awali al-Liali, via Mustadrak 17/303.</td>
+                                    <td class="py-2 pr-4">attributed</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a6">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The departure rule exists because counter rulings were fabricated against Ali to break his cause.</td>
+                                    <td class="py-2 pr-4">Imam al-Sadiq <span class="honorific">﵇</span>.</td>
+                                    <td class="py-2 pr-4">second century AH.</td>
+                                    <td class="py-2 pr-4">Medina.</td>
+                                    <td class="py-2 pr-4">‘Ilal al-Shara’i‘, vol.2, p221.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a7">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">A stranded questioner with no Shia jurist is told to take the opposite of the city jurist’s answer.</td>
+                                    <td class="py-2 pr-4">Imam al-Rida <span class="honorific">﵇</span>, to Ali ibn Asbat.</td>
+                                    <td class="py-2 pr-4">early third century AH.</td>
+                                    <td class="py-2 pr-4">Khurasan.</td>
+                                    <td class="py-2 pr-4">‘Uyun Akhbar al-Rida, vol.1, pp248-249.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a9">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The Imam answered three questioners differently in one sitting and named delegation as the cause.</td>
+                                    <td class="py-2 pr-4">Imam al-Sadiq <span class="honorific">﵇</span>, to Musa ibn Ashim.</td>
+                                    <td class="py-2 pr-4">second century AH.</td>
+                                    <td class="py-2 pr-4">Medina.</td>
+                                    <td class="py-2 pr-4">Basa’ir al-Darajat, via Mustadrak 17/305.</td>
+                                    <td class="py-2 pr-4">reported</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a10">&#8599;</a>.</td>
+                                </tr>
+                                <tr class="border-t border-[#E7E0D1]">
+                                    <td class="py-2 pr-4">The authenticity of every report in al-Kafi is not established, some are weak, some never came from the Infallible.</td>
+                                    <td class="py-2 pr-4">al-Khoei.</td>
+                                    <td class="py-2 pr-4">twentieth century.</td>
+                                    <td class="py-2 pr-4">Najaf.</td>
+                                    <td class="py-2 pr-4">Mu‘jam Rijal al-Hadith, vol.1, p110.</td>
+                                    <td class="py-2 pr-4">stated</td>
+                                    <td class="py-2"><a class="text-[#8A6D3B] underline" href="#a12">&#8599;</a>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUMBERED CONTENT SECTIONS: fully open, one <section> per
+                 former tab, each subsection an <article> that opens with its
+                 fact card. No collapsing, no toggle JS. -->
+            <section id="tab1" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. The Charge the School Answers</h2>
+    <p class="mb-6 text-gray-600">The objection comes from outside and from inside. Opponents called the corpus self-contradictory, and the school’s own scholars agreed the reports collide. The answer was never denial. It was a testing apparatus, built early, applied for a thousand years.</p>
+<article id="a1" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">The Opponent’s Opening Was a Book Request</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Tusi (d.460 AH), Tahdhib al-Ahkam, vol.1, p52 (ed. Dar al-Kutub al-Islamiyya)</p>
+    <p class="text-sm"><strong>Speaker:</strong> al-Tusi, in his introduction</p>
+    <p class="text-sm"><strong>Dating:</strong> compiled between 414 and 436 AH</p>
+    <p class="text-sm"><strong>Claim:</strong> almost every Shia report has another beside it that opposes it, and the opponents made this their strongest attack on the school</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Admission and the Charge Together</h5>
+        <p class="mb-2 text-gray-600">Shaykh al-Ta’ifa al-Tusi opened his Tahdhib al-Ahkam with the problem stated at full strength. A colleague had challenged him over the contradictions in the Shia corpus, and al-Tusi recorded the challenge without softening it.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">ذاكرني بعض الأصدقاء أيده الله ممن أوجب حقه ( علينا ) (1) بأحاديث أصحابنا أيدهم الله ورحم السلف منهم ، وما وقع فيها من الاختلاف والتباين والمنافاة والتضاد ، حتى لا يكاد يتفق خبر إلا وبإزائه ما يضاده ولا يسلم حديث إلا وفي مقابلته ما ينافيه ، حتى جعل مخالفونا ذلك من أعظم الطعون على مذهبنا ، وتطرقوا بذلك إلى إبطال معتقدنا ، وذكروا أنه لم يزل شيوخكم السلف والخلف يطعنون على مخالفيهم بالاختلاف الذي يدينون الله تعالى به ويشنعون عليهم بافتراق كلمتهم في الفروع ، ويذكرون أن هذا مما لا يجوز أن يتعبد به الحكيم ، ولا أن يبيح العمل به العليم ، وقد وجدناكم أشد اختلافا من مخالفيكم وأكثر تباينا من مباينيكم ، ووجود هذا الاختلاف منكم مع اعتقادكم بطلان ذلك دليل على فساد الأصل حتى دخل (2) على جماعة ممن ليس لهم قوة في العلم ولا بصيرة بوجوه النظر ومعاني الألفاظ شبهة ، وكثير منهم رجع عن اعتقاد الحق لما اشتبه عليه الوجه في ذلك ، وعجز عن حل الشبهة فيه ، سمعت شيخنا أبا عبد الله أيده الله يذكر أن أبا الحسين الهاروني (3) العلوي كان يعتقد الحق ويدين بالإمامة فرجع عنها لما التبس عليه الامر في اختلفا الأحاديث وترك المذهب</p>
+    <p class="translation">A friend, may Allah support him, whose right over us I must honor, discussed the reports of our companions with me. May Allah support the living among them and have mercy on those who came before them. He spoke of the differences, contradictions, and conflicts within them. Almost every report has another beside it that opposes it. Almost every hadith has another standing against it. Our opponents have made this one of their strongest attacks on our school. They use it to invalidate our beliefs. They say, your early and later scholars always attacked their opponents for the differences in their religion. They condemned them because they divided over secondary matters. They said that a wise Lord could not command such a religion, and an All-Knowing Lord could not permit people to act by it. Yet we find that you differ more than your opponents and disagree more than those who disagree with you. Since you believe such disagreement is false, its presence among you proves that your foundation is corrupt. This doubt entered the minds of people who lacked strength in knowledge and insight into methods of reasoning and the meanings of words. Many of them abandoned the true belief because this matter confused them and they could not answer the doubt. I heard our teacher Abu Abd Allah say that Abu al-Husayn al-Haruni, an Alid, had believed in the truth and held to the doctrine of the Imamate. He left it when the conflicting hadiths confused him, and he abandoned the school.</p>
+    <cite class="text-sm text-gray-500">- al-Tusi (d.460 AH), Tahdhib al-Ahkam, vol.1, p52</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The charge here is the real one, in its strongest form, and al-Tusi wrote it himself. A wise Lord, the opponents argued, cannot command a religion whose reports contradict each other, and the presence of such contradiction among a school that condemns contradiction proves the foundation corrupt. The doubt cost real adherents. Al-Tusi names Abu al-Husayn al-Haruni, an Alid who held the Imamite doctrine and left it because the conflicting hadiths confused him. The school’s own greatest systematizer therefore opened his largest work by facing the problem. His answer was not to deny the contradictions. It was to build the machinery the record shows, and his Tahdhib and al-Istibsar are that machinery at work.</p>
+    </div>
+</article>
+</section><section id="tab2" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. The Quran Gate</h2>
+    <p class="mb-6 text-gray-600">Before any chain is examined, the content stands before the Book. The school grounds this gate in the Prophet’s own sermon and in the Imam’s repeated teaching, and its greatest collector opened his book with it.</p>
+<article id="a2" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Whatever Agrees with the Book, I Said It</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Ayyashi (d.320 AH), Tafsir, from Hisham ibn al-Hakam, as preserved in al-Nuri al-Tabrisi, Mustadrak al-Wasa’il, vol.17, p304, no.21415</p>
+    <p class="text-sm"><strong>Speaker:</strong> the Prophet <span class="honorific">ﷺ</span>, in a sermon at Mina or Mecca, relayed by Imam al-Sadiq <span class="honorific">﵇</span></p>
+    <p class="text-sm"><strong>Dating:</strong> the farewell pilgrimage period</p>
+    <p class="text-sm"><strong>Claim:</strong> whatever is attributed to the Prophet that agrees with the Quran, he said. Whatever conflicts with it, he never said</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Standard in the Prophet’s Own Words</h5>
+        <p class="mb-2 text-gray-600">The first gate any report must pass is the Book itself. The rule is attributed to the Prophet <span class="honorific">ﷺ</span> in a sermon, relayed through Hisham ibn al-Hakam from Imam al-Sadiq <span class="honorific">﵇</span>.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">محمد بن مسعود العياشي في تفسيره : عن هشام بن الحكم ، عن أبي عبد الله (<span class="honorific">﵇</span>) ، قال : " قال رسول الله (صلى الله عليه وآله) ، في خطبة بمنى أو بمكة : يا أيها الناس ، ما جاءكم عني يوافق القرآن فأنا قلته ، وما جاءكم عني لا يوافق القرآن فلم أقله " .</p>
+    <p class="translation">Muhammad ibn Masud al-Ayyashi reports in his commentary from Hisham ibn al-Hakam, from Abu Abd Allah, the Messenger of Allah said in a sermon at Mina or Mecca, people, whatever comes to you from me that agrees with the Quran, I said it. Whatever comes to you from me that does not agree with the Quran, I did not say it.</p>
+    <cite class="text-sm text-gray-500">- al-Ayyashi, Tafsir, via al-Nuri al-Tabrisi, Mustadrak al-Wasa’il, vol.17, p304</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">This is the gate the whole tradition stands on. A report attributed to the Prophet <span class="honorific">ﷺ</span> that carries a meaning the Quran contradicts is returned to its sender, whatever its chain looks like. The sermon setting matters. The rule was announced publicly, at Mina, before the whole pilgrimage, not whispered to a narrator.</p>
+    </div>
+</article>
+<article id="a3" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Zukhruf, the Glitter That Is Not Gold</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Ayyashi, Tafsir, from Muhammad ibn Muslim, Ayyub ibn al-Hurr, and Kulayb al-Asadi, via Mustadrak al-Wasa’il, vol.17, p304-305, nos.21416-21418</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Sadiq <span class="honorific">﵇</span>, in three separate reports</p>
+    <p class="text-sm"><strong>Dating:</strong> the Imam’s teaching circle in Medina</p>
+    <p class="text-sm"><strong>Claim:</strong> everything is referred back to the Book and the Sunna, and any hadith that does not agree with the Book of Allah is zukhruf, glitter without substance</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">Three Narrators, One Rule</h5>
+        <p class="mb-2 text-gray-600">The rule is not a lone line. Al-Ayyashi’s commentary carries it from three independent narrators, and al-Nuri gathered them in one chapter.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">وعن محمد بن مسلم قال : قال أبو عبد الله (<span class="honorific">﵇</span>) : " يا محمد ، ما جاءك في رواية - من بر أو فاجر - يوافق القرآن فخذ به ، وما جاءك في رواية - من بر أو فاجر - يخالف القرآن فلا تأخذ به " . [21417] 6 - وعن أيوب بن الحر قال : سمعت أبا عبد الله (<span class="honorific">﵇</span>) ، يقول : " كل شئ مردود إلى الكتاب والسنة ، وكل حديث لا يوافق القرآن فهو زخرف " . [21418] 7 - وعن كليب الأسدي قال : سمعت أبا عبد الله (<span class="honorific">﵇</span>) ، يقول : " ما أتاكم عنا من حديث لا يصدقه كتاب الله فهو زخرف (1) " .</p>
+    <p class="translation">Muhammad ibn Muslim said that Abu Abd Allah said, Muhammad, when a report reaches you from a righteous person or a sinful person, follow it if it agrees with the Quran. Do not follow it if it conflicts with the Quran. Ayyub ibn al-Hurr said, I heard Abu Abd Allah say, everything returns to the Book and the Sunnah. Every hadith that does not agree with the Quran is false adornment. Kulayb al-Asadi said, I heard Abu Abd Allah say, any hadith that comes to you from us and is not confirmed by the Book of Allah is false adornment.</p>
+    <cite class="text-sm text-gray-500">- al-Ayyashi, Tafsir, via Mustadrak al-Wasa’il, vol.17, pp304-305</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The word the Imam <span class="honorific">﵇</span> chooses is zukhruf, the ornament, the surface glitter. A contradictory hadith may sit in a book with a chain beside it, and it is still glitter, because the substance belongs to the Book. The middle report carries the widest gate of all. Whatever comes in a report, from a righteous man or a sinful one, is judged only by the Quran it agrees with or conflicts with.</p>
+    </div>
+</article>
+<article id="a4" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">The Collector Set the Rules Himself</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Kulayni (d.329 AH), al-Kafi, vol.1, muqaddima, p56</p>
+    <p class="text-sm"><strong>Speaker:</strong> the Imam, in the three principles al-Kulayni quotes</p>
+    <p class="text-sm"><strong>Dating:</strong> compiled circa 322 AH in Baghdad</p>
+    <p class="text-sm"><strong>Claim:</strong> present the reports to the Book of Allah, take what agrees and return what conflicts, leave what agrees with the opposing camp, and hold to what is unanimously agreed</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">Al-Kulayni’s Three Filters</h5>
+        <p class="mb-2 text-gray-600">The compiler of al-Kafi stated his filters in his own introduction, quoting the Imam, and then added a sentence his opponents rarely quote.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">اعرضوها على كتاب الله فما وافى كتاب الله <span class="honorific">﷿</span> فخذوه ، وما خالف كتاب الله فردوه " وقوله <span class="honorific">﵇</span> : " دعوا ما وافق القوم فإن الرشد في خلافهم " وقوله <span class="honorific">﵇</span> " خذوا بالمجمع عليه ، فإن المجمع عليه لا ريب فيه " ونحن لا نعرف من جميع ذلك إلا أقله (1) ولا نجد شيئا " أحوط ولا أوسع من رد علم ذلك كله إلى العالم <span class="honorific">﵇</span> وقبول ما وسع من الأمر فيه بقوله <span class="honorific">﵇</span> : " بأيما أخذتم من باب التسليم وسعكم " .</p>
+    <p class="translation">Present them to the Book of Allah. Take whatever agrees with the Book of Allah, and reject whatever conflicts with the Book of Allah. He also said, Leave whatever agrees with the people, for guidance lies in differing from them. He also said, Follow what is widely agreed upon, for what is widely agreed upon carries no doubt. We know only a small part of all this. We find nothing safer or broader than leaving knowledge of all of it to the Imam and accepting the latitude he gave in this matter when he said, Whichever one you follow in a spirit of submission will suffice for you.</p>
+    <cite class="text-sm text-gray-500">- al-Kulayni (d.329 AH), al-Kafi, vol.1, muqaddima</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The three filters run in order. The Quran first. Then the departure from the opposing camp. Then the unanimous. And then al-Kulayni says what the Akhbari later tradition wished he had not. Of all this, we know only the least of it. The collector who is accused of swallowing every report whole says plainly that his filters reach certainty only rarely, and that the safe course is to return the whole matter to the Imam. The introduction is a manual of doubt, not a claim of blanket authenticity.</p>
+    </div>
+</article>
+</section>
+            <section id="tab3" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. When Two Hadiths Collide</h2>
+    <p class="mb-6 text-gray-600">Conflict is the corpus’s normal condition, so the school’s Imams were asked the question directly and answered in fixed order. Reconciliation first, then the ladder, then precaution, and standing down at the end.</p>
+<article id="a5" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Two Judges, Two Rulings</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Tabrisi (d.548 AH), al-Ihtijaj, from Umar ibn Hanzala, via al-Nuri al-Tabrisi, Mustadrak al-Wasa’il, vol.17, p302-303, no.21412</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Sadiq <span class="honorific">קּ</span>, answering Umar ibn Hanzala</p>
+    <p class="text-sm"><strong>Dating:</strong> the Imam’s Medina</p>
+    <p class="text-sm"><strong>Claim:</strong> between two qualified arbiters who differ, follow the more upright, the more learned in hadith, and the more scrupulous, not the other</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Arbiter Standard</h5>
+        <p class="mb-2 text-gray-600">The conflict rules begin inside a practical dispute. Two Shia arbitrators hear a case and rule differently, and the question reaches the Imam.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">الطبرسي في الاحتجاج : عن عمر بن حنظلة ، قال : سألت أبا عبد الله (<span class="honorific">﵇</span>) ، عن رجلين من أصحابنا بينهما منازعة في دين أو ميراث ، فتحاكما إلى السلطان - إلى أن قال - فإن كان كل واحد اختار رجلا من أصحابنا فرضيا أن يكونا الناظرين في حقهما ، فاختلفا (1) فيما حكما ، فان الحكمين اختلفا في حديثكم ، قل : " إن الحكم ما حكم به أعدلهما وأفقهها في الحديث وأورعهما ، ولا يلتفت إلى ما يحكم به الآخر " قلت : فإنهما عدلان مرضيان عرفا بذلك ، لا يفضل أحدهما صاحبه ، قال : " ينظر الآن إلى ما كان من روايتهما عنا في ذلك الذي حكما ، الجمع عليه بين أصحابك فيؤخذ به من حكمهما ، ويترك الشاذ الذي ليس بمشهور عند أصحابك ، فإن المجمع عليه لا ريب فيه " - إلى أن قال - قلت : فإن كان الخبران عنكم مشهورين ، قد رواهما الثقات عنكم ، قال : " ينظر ما كان حكمه حكم الكتاب والسنة وخالف العامة فيؤخذ به ، ويترك ما خالف حكمه حكم الكتاب والسنة ووافق العامة " . قلت : جعلت فداك [أرأيت] (2) إن كان الفقيهان عرفا حكمه من الكتاب والسنة ؟ ثم وجدنا أحد الخبرين يوافق العامة ، والآخر يخالف ، بأيهما نأخذ من الخبرين ؟ قال : " ينظر إلى ما هم إليه يميلون ، فان ما خالف العامة ففيه الرشاد " قلت : جعلت فداك ، فان وافقهم الخبران جميعا ؟ قال : " انظروا إلى ما يميل إليه حكامهم وقضاتهم فاتركوه جانبا ، وخذوا بغيره " قلت : فان وافق حكامهم الخبرين جميعا ؟ قال : " إذا كان كذلك فارجه وقف عنده حتى تلقى إمامك ، فان الوقوف عند الشبهات خير من الاقتحام في الهلكات</p>
+    <p class="translation">Al-Tabrisi reports in al-Ihtijaj from Umar ibn Hanzala. He asked Abu Abd Allah about two of their companions who disputed over a debt or inheritance and took their case to the ruler. He later asked, If each man chooses one of our companions and accepts them as judges in their case, yet the two judges give different rulings because they differ over your hadiths, what should they do? Abu Abd Allah replied, Follow the ruling of the one who is more just, more learned in hadith, and more careful in religion. Do not consider the ruling of the other. Umar said, Both are just and accepted. Both are known for these qualities, and neither surpasses the other. Abu Abd Allah replied, Look at the reports from us concerning the matter they judged. Follow the ruling based on the report that your companions widely accept. Leave the isolated report that is not well known among your companions. What is widely agreed upon carries no doubt. Umar later asked, What if both reports from you are well known and trustworthy people have narrated both? Abu Abd Allah replied, Follow the one whose ruling agrees with the Book and the Sunnah and differs from the common people. Leave the one whose ruling conflicts with the Book and the Sunnah and agrees with the common people. Umar said, May I be your ransom. Suppose the two jurists know its ruling from the Book and the Sunnah, then we find that one report agrees with the common people and the other differs from them. Which report should we follow? Abu Abd Allah replied, Look at what they incline toward. Guidance lies in what differs from the common people. Umar said, May I be your ransom. What if both reports agree with them? Abu Abd Allah replied, Look at the ruling favored by their judges and legal authorities. Set it aside and follow the other report. Umar said, What if their judges agree with both reports? Abu Abd Allah replied, Delay the matter and stop at it until you meet your Imam. Stopping before doubtful matters is better than rushing into destruction.</p>
+    <cite class="text-sm text-gray-500">- al-Tabrisi, al-Ihtijaj, via Mustadrak al-Wasa’il, vol.17, pp302-303</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The Imam <span class="honorific">קּ</span> builds the ladder one rung at a time as Umar ibn Hanzala keeps raising the hard case. The two judges are equal in justice. Then the report that agrees with the Quran and departs from the common position is followed. When both reports depart from it, both are set aside until the Imam himself can be asked, because standing still at a doubt is better than charging into destruction. The rule of standing down is the school’s last resort, and it is the Imam who commands it.</p>
+    </div>
+</article>
+<article id="a6" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Zurarah’s Five Steps</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Allama al-Hilli (d.726 AH), Awali al-Liali, raising it to Zurara ibn A’yan, via al-Nuri al-Tabrisi, Mustadrak al-Wasa’il, vol.17, p303, no.21413</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Baqir <span class="honorific">קּ</span>, answering Zurarah</p>
+    <p class="text-sm"><strong>Dating:</strong> early second century AH, Medina</p>
+    <p class="text-sm"><strong>Claim:</strong> between conflicting reports, take the well known over the rare, then the more trustworthy narrator, then what departs from the common position, then precaution, then choose</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Hierarchy in the Imam’s Voice</h5>
+        <p class="mb-2 text-gray-600">The famous five-step ladder is a hadith, not a jurist’s construction. Zurarah asks the question directly and the Imam <span class="honorific">קּ</span> answers rung by rung.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">عوالي اللآلي : روى العلامة مرفوعا إلى زرارة بن أعين ، قال : سألت الباقر (<span class="honorific">﵇</span>) ، فقلت : جعلت فداك ، يأتي عنكم الخبران أو الحديثان المتعارضان ، فبأيهما آخذ ؟ فقال (<span class="honorific">﵇</span>) : " يا زرارة ، خذ بما اشتهر بين أصحابك ودع الشاذ النادر " فقلت : يا سيدي ، انهما معا مشهوران مرويان مأثوران عنكم ، فقال (<span class="honorific">﵇</span>) : " خذ بقول أعدلهما عندك ، وأوثقهما في نفسك " فقلت : إنهما معا عدلان مرضيان موثقان ، فقال (<span class="honorific">﵇</span>) : " أنظر ما وافق منهما مذهب العامة فاتركه ، وخذ بما خالفهم " قلت : ربما كانا معا موافقين لهم ، أو مخالفين ، فكيف اصنع ؟ فقال : " اذن فخذ بما فيه الحائطة لدينك ، واترك ما خالف الاحتياط " فقلت : انهما معا موافقان للاحتياط أو مخالفان له ، فكيف اصنع ؟ فقال (<span class="honorific">﵇</span>) : " إذن فتخير أحدهما فتأخذ به وتدع الأخير " وفي رواية انه (<span class="honorific">﵇</span>) قال : " إذن فارجه حتى تلقى امامك فتسأله "</p>
+    <p class="translation">Al-Allamah reports in Awali al-Liali from Zurara ibn Ayan. Zurara said, I asked al-Baqir, may I be your ransom. Two conflicting reports or hadiths come to us from you. Which one should I follow? Al-Baqir replied, Zurara, follow what is well known among your companions and leave the rare isolated report. Zurara said, My master, both are well known, narrated, and transmitted from you. Al-Baqir replied, Follow the statement of the one who is more just in your view and more trustworthy in your heart. Zurara said, Both are just, accepted, and trustworthy. Al-Baqir replied, Look at the one that agrees with the school of the common people. Leave it and follow what differs from them. Zurara said, At times both reports agree with them, or both differ from them. What should I do? He replied, Then follow what provides greater protection for your religion, and leave what conflicts with caution. Zurara said, Both may agree with caution, or both may conflict with it. What should I do? Al-Baqir replied, Then choose one of them, follow it, and leave the other. Another report says that he said, Then delay the matter until you meet your Imam and ask him.</p>
+    <cite class="text-sm text-gray-500">- Awali al-Liali, via Mustadrak al-Wasa’il, vol.17, p303</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">Fame among the companions comes first, then the firmer narrator, then the report that departs from the common position, then the precaution that fences the religion, and only then free choice. The ladder is fixed, and the jurists inherited it as an order, not a menu. When every rung fails, the Imam gives Zurarah the same last resort he gave Umar ibn Hanzala. Wait, and ask the Imam.</p>
+    </div>
+</article>
+</section><section id="tab4" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. The Taqiyya Question</h2>
+    <p class="mb-6 text-gray-600">The distinctive rung of the ladder, preferring the report that departs from the common position, has a stated reason in the sources. It answers a documented campaign of counter rulings aimed at Ali, and its scope is debated inside the school today.</p>
+<article id="a7" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Why the Departure Rule Exists</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Saduq (d.381 AH), ‘Ilal al-Shara’i‘, vol.2, p221, bab 315, no.1</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Sadiq <span class="honorific">קּ</span>, raised from Abu Ishaq al-Irjani</p>
+    <p class="text-sm"><strong>Dating:</strong> the Imam’s Medina</p>
+    <p class="text-sm"><strong>Claim:</strong> the community was commanded to take the opposite of the common position because they opposed Ali in every ruling he gave, intending to break his cause</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Reason Behind the Rule</h5>
+        <p class="mb-2 text-gray-600">The departure rule is not sectarian reflex. Al-Saduq devotes a chapter of his book of reasons to it, and the Imam <span class="honorific">קּ</span> gives the history.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">حدثنا أبي <span class="honorific">﵀</span> قال : حدثنا أحمد بن إدريس عن أبي إسحاق الإرجاني رفعه قال : قال أبو عبد الله (ع) أتدري لم أمرتم بالأخذ بخلاف ما تقول العامة ؟ فقلت : لا ندري ، فقال : ان عليا (ع) لم يكن يدين الله بدين الا خالف عليه الأمة إلى غيره إرادة لابطال أمره وكانوا يسألون أمير المؤمنين (ع) عن الشئ الذي لا يعلمونه فإذا أفتاهم جعلوا له ضدا من عندهم ليلبسوا على الناس</p>
+    <p class="translation">My father narrated from Ahmad ibn Idris, from Abu Ishaq al-Irjani, who raised the report to Abu Abd Allah. Abu Abd Allah said, Do you know why you were commanded to follow what differs from what the common people say? I said, We do not know. He replied, Ali followed no religion before Allah except that the community opposed him with another religion, seeking to destroy his cause. They would ask the Commander of the Faithful about a matter they did not know. When he gave them a ruling, they invented its opposite in order to confuse the people.</p>
+    <cite class="text-sm text-gray-500">- al-Saduq (d.381 AH), ‘Ilal al-Shara’i‘, vol.2, p221</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">Here is the engine of the whole tarjih apparatus. The opponents asked Ali <span class="honorific">קּ</span> about matters they did not know, and when he ruled, they fabricated a counter ruling from their own side to confuse the people. The departure rule is a countermeasure to documented fabrication, and it operates exactly where the fabricators operated, in the space of two competing reports. This is why the ladder in the previous section carries that rung at all.</p>
+    </div>
+</article>
+<article id="a8" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Take What the Common Camp Rejects</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Khomeini (d.1989), al-Ta‘adul wa-l-Tarjih, p192-193, gathering the reports of al-Hasan ibn al-Jahm and others from Risalat al-Qutb</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Kazim <span class="honorific">קּ</span>, answering al-Hasan ibn al-Jahm</p>
+    <p class="text-sm"><strong>Dating:</strong> late second century AH</p>
+    <p class="text-sm"><strong>Claim:</strong> when two reports conflict, take what the opposing camp rejects and avoid what they hold</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Rule in the Imam’s Answer</h5>
+        <p class="mb-2 text-gray-600">Al-Hasan ibn al-Jahm asks the Righteous Servant whether submission alone suffices, and the answer opens the conflict question itself.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">وعنها بإسناده عن الحسن بن الجهم قال : قلت للعبد الصالح : هل يسعنا فيما ورد علينا منكم إلّا التسليم لكم ؟ فقال : «لا واللَّه ، لا يسعكم إلّا التسليم لنا» . فقلت : فيروى عن أبي عبد اللَّه <span class="honorific">﵇</span> شيء ، ويروى عنه خلافه ، فبأيّهما نأخذ ؟ فقال : «خذ بما خالف القوم ، وما وافق القوم فاجتنبه</p>
+    <p class="translation">Al-Hasan ibn al-Jahm said, I asked the Righteous Servant, must we submit to you in everything that comes to us from you? He replied, By Allah, you must submit to us. I said, Something is narrated from Abu Abd Allah, and another report from him conflicts with it. Which should we follow? He replied, Follow what differs from the people. Avoid what agrees with the people.</p>
+    <cite class="text-sm text-gray-500">- al-Khomeini, al-Ta‘adul wa-l-Tarjih, pp192-193, from Risalat al-Qutb</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">Submission to the Imams <span class="honorific">רּ</span> is the frame, and the departure rule is the content given inside it. The same page of Khomeini’s monograph gathers the parallel reports, from Muhammad ibn Abd Allah before Imam al-Rida <span class="honorific">קּ</span> and from Sama‘a before Imam al-Sadiq <span class="honorific">קּ</span>, all carrying the same rule. The reason given in the first card of this section attaches the rule to conflict alone, and to nothing else the common camp says.</p>
+    </div>
+</article>
+<article id="a9" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">When No Sunni Jurist Is in Town</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Saduq (d.381 AH), ‘Uyun Akhbar al-Rida, vol.1, p248-249, no.10, the full chain of the Barqi family and others</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Rida <span class="honorific">קּ</span>, answering Ali ibn Asbat</p>
+    <p class="text-sm"><strong>Dating:</strong> early third century AH</p>
+    <p class="text-sm"><strong>Claim:</strong> when no Shia jurist is available, ask the city’s jurist and take the opposite of his answer, for the truth lies there</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Rule at Its Boldest, With Its Chain</h5>
+        <p class="mb-2 text-gray-600">The strongest form of the departure rule comes from Imam al-Rida <span class="honorific">קּ</span>, and al-Saduq records it with a five transmitter chain.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">10 - حدثنا علي بن أحمد بن عبد الله بن أحمد بن أبي عبد الله البرقي ومحمد بن موسى البرقي ومحمد بن علي ماجيلويه ومحمد بن علي بن هاشم وعلي بن عيسى المجاور <span class="honorific">﵃</span> قالوا : حدثنا علي بن محمد ماجيلويه عن أحمد بن محمد بن خالد عن أحمد بن محمد السياري عن علي بن أسباط قال : قلت للرضا <span class="honorific">﵇</span> : يحدث الامر لا أجد بدا من معرفته وليس في البلد الذي انا فيه أحد استفتيه من مواليك قال : فقال : ايت فقيه البلد فاستفته في امرك فإذا أفتاك بشئ فخذ بخلافه فإن الحق فيه</p>
+    <p class="translation">Ali ibn Ahmad ibn Abd Allah ibn Ahmad ibn Abi Abd Allah al-Barqi, Muhammad ibn Musa al-Barqi, Muhammad ibn Ali Majiluyah, Muhammad ibn Ali ibn Hashim, and Ali ibn Isa al-Mujawir narrated from Ali ibn Muhammad Majiluyah, from Ahmad ibn Muhammad ibn Khalid, from Ahmad ibn Muhammad al-Sayyari, from Ali ibn Asbat. Ali ibn Asbat said, I asked al-Rida, a matter arises that I must understand, yet no one from your followers lives in the town where I am whom I can ask for a legal ruling. He replied, Go to the jurist of that town and ask him about your matter. When he gives you a ruling, follow the opposite of it, for the truth lies there.</p>
+    <cite class="text-sm text-gray-500">- al-Saduq, ‘Uyun Akhbar al-Rida, vol.1, pp248-249</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The report addresses the stranded questioner, the man in a town with no Shia jurist to ask. The instruction is blunt, and it belongs to the same historical setting as the fabrication report in the first card of this section. Modern scholars read such reports against their context. Al-Sistani’s school argues that most narrations cannot be attributed to taqiyya at all, since the Imams <span class="honorific">רּ</span> transmitted openly anti-Sunni material throughout the same period, and the four classical arguments for pervasive taqiyya do not hold. The reports stand as they are. Their scope is what the scholars debate.</p>
+    </div>
+</article>
+</section><section id="tab5" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">5. The Imam Answered Differently</h2>
+    <p class="mb-6 text-gray-600">Not every contradiction is a problem to be explained away. The sources record the Imam giving different answers to the same question, and the school reads the difference as delegated authority working under pressure.</p>
+<article id="a10" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">Three Different Answers in One Sitting</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Saffar (d.290 AH), Basa’ir al-Darajat, from Musa ibn Ashim, via al-Nuri al-Tabrisi, Mustadrak al-Wasa’il, vol.17, p305, no.21420</p>
+    <p class="text-sm"><strong>Speaker:</strong> Imam al-Sadiq <span class="honorific">קּ</span>, to Musa ibn Ashim</p>
+    <p class="text-sm"><strong>Dating:</strong> the Imam’s Medina</p>
+    <p class="text-sm"><strong>Claim:</strong> the Imam answered three questioners differently in one sitting, then explained that what Allah delegated to Muhammad He delegated to the Imams</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Shock and Its Answer</h5>
+        <p class="mb-2 text-gray-600">Some contradictions are not scribal error. They happen inside one majlis, and a witness recorded his shock.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">محمد بن الحسن الصفار في البصائر : عن أحمد بن محمد ، عن أبيه ، عن عبد الله بن المغيرة ، عن عبد الله بن سنان ، عن موسى بن أشيم ، قال : دخلت على أبي عبد الله (<span class="honorific">﵇</span>) ، فسألته عن مسألة فأجابني ، فبينا انا جالس إذ جاءه رجل ، فسأله عنها بعينها فأجابه بخلاف ما أجابني ، ثم جاءه آخر فسأله عنها بعينها ، فأجابه بخلاف ما أجابني وأجاب صاحبي ، ففزعت من ذلك وعظم علي ، فلما خرج القوم نظر إلي فقال : " يا بن أشيم كأنك جزعت ! " قلت : جعلني الله فداك ، إنما جزعت من ثلاثة أقاويل في مسألة واحدة ، فقال : " يا ابن اشيم ، ان الله فوض إلى سليمان بن داود امر ملكه ، فقال تعالى : * (هذا عطاؤنا فامنن أو امسك بغير حساب) * (1) وفوض إلى محمد (<span class="honorific">﵌</span>) أمر دينه ، فقال : * (وما آتيكم الرسول فخذوه وما نهاكم عنه فانتهوا) * (2) وإن الله <span class="honorific">﵎</span> فوض إلى الأئمة منا وإلينا ما فوض إلى محمد (<span class="honorific">﵌</span>) ، فلا تجزع " .</p>
+    <p class="translation">Muhammad ibn al-Hasan al-Saffar reports in Basa'ir from Ahmad ibn Muhammad, from his father, from Abd Allah ibn al-Mughirah, from Abd Allah ibn Sinan, from Musa ibn Ashim. Musa said, I visited Abu Abd Allah and asked him a question. He answered me. While I was sitting there, a man came and asked him the same question. He gave him an answer different from mine. Then another man came and asked the same question. He gave him an answer different from mine and from my companion's. This alarmed me and weighed heavily on me. When the people left, he looked at me and said, Ibn Ashim, you seem distressed. I said, May Allah make me your ransom. I was distressed because you gave three different answers to one question. He replied, Ibn Ashim, Allah entrusted Solomon son of David with authority over his kingdom and said, This is Our gift. Give freely or withhold without account. He entrusted Muhammad with authority over His religion and said, Take what the Messenger gives you, and refrain from what he forbids you. Allah entrusted us, the Imams, with what He entrusted to Muhammad. Do not be distressed.</p>
+    <cite class="text-sm text-gray-500">- al-Saffar, Basa’ir al-Darajat, via Mustadrak al-Wasa’il, vol.17, p305</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">Musa ibn Ashim asks a question, receives an answer, then watches two others ask the same question and receive two different answers. The Imam <span class="honorific">קּ</span> reads his face and names the cause. What Allah delegated to Solomon He delegated to Muhammad <span class="honorific">ﷺ</span>, and what He delegated to Muhammad He delegated to the Imams <span class="honorific">רּ</span>. The varying answers are an exercise of delegated authority, this is your gift, so give or withhold. The school’s scholars add the context layer on top. A ruling matching the common position under pressure is read as taqiyya, and the later Imam’s ruling is preferred when conditions relaxed, as al-Sistani’s school argues for the transition from al-Baqir’s <span class="honorific">קּ</span> era to al-Sadiq’s <span class="honorific">קּ</span>.</p>
+    </div>
+</article>
+</section><section id="tab6" class="content-section mb-12">
+    <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">6. The Authority the School Built</h2>
+    <p class="mb-6 text-gray-600">The same tradition that admits the contradictions also claims authority for the tested report, and its modern gatekeepers state plainly what fails the test. The two positions are one position.</p>
+<article id="a11" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">The Consensus That Carried the Reports</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Tusi (d.460 AH), ‘Uddat al-Usul, quoted in al-Khoei, Mu‘jam Rijal al-Hadith, vol.1, p113</p>
+    <p class="text-sm"><strong>Speaker:</strong> al-Tusi, arguing for the authority of solitary reports</p>
+    <p class="text-sm"><strong>Dating:</strong> fifth century AH</p>
+    <p class="text-sm"><strong>Claim:</strong> the rightful community acts on these reports, asks the ruling’s source, accepts the trustworthy narrator’s book, and does not dispute this</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">From Admission to Authority</h5>
+        <p class="mb-2 text-gray-600">Al-Tusi’s answer to the charge of contradiction was never to retreat into doubt. His proof for the authority of the solitary report is the practice of the community itself.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">والذي يدل على ذلك إجماع الفرقة المحقة ، فإني ، وجدتها مجمعة على العمل بهذه الاخبار التي رووها في تصانيفهم ، ودونوها في أصولهم لا يتناكرون ذلك ولا يتدافعونه ، حتى أن واحدا منهم إذا أفتى بشئ لا يعرفونه سألوه من أين قلت هذا ؟ فإذا أحالهم إلى كتاب معروف أو أصل مشهور وروايته ، وكان راويه ثقة لا ينكر حديثه ، سكتوا وسلموا الامر في ذلك ، وقبلوا قوله . .) . وقال بعد ما ذكر جملا من الاعتراض على حجية الخبر وأجاب عنها : (ومما يدل أيضا على جواز العمل بهذه الاخبار التي أشرنا إليها ما ظهر من الفرقة المحقة من الاختلاف الصادر عن العمل بها ، فإني وجدتها مختلفة</p>
+    <p class="translation">What proves this is the consensus of the rightful community. I found that they all act on these reports, which they narrated in their books and recorded in their foundational collections. They do not reject this or dispute it. When one of them gives a ruling that the others do not know, they ask him, where did you get this? When he refers them to a known book or a famous foundational collection and its narration, and its narrator is trustworthy and his hadith is not rejected, they remain silent, leave the matter to him, and accept his statement. After mentioning several objections to the authority of reports and answering them, he said, Another proof that it is permissible to act on these reports is the disagreement that has appeared among the rightful community through acting on them. I found them differing.</p>
+    <cite class="text-sm text-gray-500">- al-Tusi, ‘Uddat al-Usul, quoted in al-Khoei, Mu‘jam Rijal al-Hadith, vol.1, p113</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">The community that recorded these reports in their books and foundations acted on them, asked after the source, and accepted the answer when it traced to a known book through a trustworthy narrator. The contradiction problem and the authority claim live in the same scholar by design. The reports carry law because the community treated them as carrying law, and the community’s practice included the testing ladder from the day it accepted them.</p>
+    </div>
+</article>
+<article id="a12" class="mb-10">
+    <h3 class="text-lg font-semibold text-[#3D4451] mb-3">The Verdict on al-Kafi</h3>
+    <div class="premise-card space-y-1 mb-4">
+    <p class="text-sm"><strong>Source:</strong> al-Khoei (d.1992), Mu‘jam Rijal al-Hadith, vol.1, p110</p>
+    <p class="text-sm"><strong>Speaker:</strong> al-Khoei, concluding his discussion of al-Kafi</p>
+    <p class="text-sm"><strong>Dating:</strong> twentieth century, Najaf</p>
+    <p class="text-sm"><strong>Claim:</strong> the authenticity of every report in al-Kafi is not established, some are undoubtedly weak, and some can be confidently judged never to have come from the Infallible</p>
+    </div>
+    <div class="analysis-section">
+        <h5 class="analysis-heading">The Modern Gatekeeper’s Conclusion</h5>
+        <p class="mb-2 text-gray-600">The most referenced modern rijal work closes its discussion of al-Kafi with one paragraph, and it is the opposite of blanket acceptance.</p>
+<blockquote class="hadith-callout">
+    <p class="rtl font-amiri text-xl" lang="ar">والمتحصل أنه لم تثبت صحة جميع روايات الكافي ، بل لا شك في أن بعضها ضعيفة ، بل إن بعضها يطمأن بعدم صدورها من المعصوم <span class="honorific">﵇</span> . والله أعلم ببواطن الأمور .</p>
+    <p class="translation">In sum, the authenticity of every report in al-Kafi has not been established. Some of its reports are undoubtedly weak. Some of them can be confidently judged never to have come from the Infallible Imam. Allah knows best what lies hidden.</p>
+    <cite class="text-sm text-gray-500">- al-Khoei, Mu‘jam Rijal al-Hadith, vol.1, p110</cite>
+</blockquote>
+        <p class="text-gray-700 mt-3">Al-Khoei required a connected chain and established trustworthiness for every narrator, one man at a time, and rejected every proposed mass authentication except for two books he later scholars debated. His conclusion about the school’s greatest collection is the clearest statement available of what the methodology means in practice. The book is a repository. The verdict belongs to the scholar who runs the tests. Al-Sistani, his student, narrowed the gates further, reading the companions of consensus as reliable only in their own persons and weighing a report’s context against the spirit of the law.</p>
+    </div>
+</article>
+</section>
+
+            <!-- GLOSSARY: the page's single collapsible, native <details> -->
+            
+            <div id="glossary-section" class="content-section mt-12">
+                <details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4">
+                    <summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Glossary of Key Terms</h4></summary>
+                    <div class="pt-4 mt-4 border-t border-[#E7E0D1] space-y-4">
+                        <p><strong>Khabar al-wahid:</strong> a report carried by a chain too few to make lying rationally impossible. It yields probability, and its authority in law is the school’s central usul question.</p>
+                        <p><strong>Tarjih:</strong> preferring one of two conflicting reports. The school’s ladder fixes the order of preference.</p>
+                        <p><strong>Ta‘adul:</strong> equipollence, when no preference can be found. The jurist then chooses freely or both reports drop.</p>
+                        <p><strong>Taqiyya:</strong> precautionary dissimulation under threat. A ruling matching the common position under pressure may be taqiyya, which is why such reports lose when they conflict.</p>
+                        <p><strong>Khilaf al-‘ammah:</strong> departure from the common position, the school’s distinctive preference rule, grounded in the fabrication campaign against Ali.</p>
+                        <p><strong>Zukhruf:</strong> glitter without substance. The Imam’s word for a hadith that conflicts with the Quran.</p>
+                        <p><strong>Wathaqa:</strong> trustworthiness, the narrator test in the dominant modern school. It asks whether the man lies, not what creed he holds.</p>
+                        <p><strong>‘Adala:</strong> justice, the stricter narrator test that includes right belief. Al-‘Allama al-Hilli’s standard, narrower than al-Khoei’s.</p>
+                        <p><strong>Mutawatir:</strong> a report carried at every level by numbers that make collective lying impossible. It yields certainty and stands above every other kind of evidence.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- hash-scroll script: anchors scroll to their target with the
+                 sticky-nav offset; narration-style <details> targets open
+                 first. Runs on hashchange and on load. -->
+            <script>
+            (function () {
+                function openHash() {
+                    var id = decodeURIComponent(location.hash.slice(1));
+                    if (!id) return;
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var details = el.closest('details');
+                    if (details) details.open = true;
+                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+                }
+                window.addEventListener('hashchange', openHash);
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+            })();
+            </script>
+
+            <!-- scroll-spy: marks the sticky-nav link whose section is in view -->
+            <script>
+            (function () {
+                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+                if (!links.length || !('IntersectionObserver' in window)) return;
+                var map = {};
+                var sections = [];
+                links.forEach(function (l) {
+                    var id = l.getAttribute('href').slice(1);
+                    var t = document.getElementById(id);
+                    if (t) { map[id] = l; sections.push(t); }
+                });
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            var l = map[e.target.id];
+                            if (l) l.setAttribute('aria-current', 'location');
+                        }
+                    });
+                }, { rootMargin: '-30% 0px -60% 0px' });
+                sections.forEach(function (t) { obs.observe(t); });
+            })();
+            </script>
+
+            <!-- CLOSING BLOCK: debate = "Final Verdict"; exegesis = "The Reading" (same shape) -->
+            
+            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
+                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
+                    <p class="text-lg text-gray-700">The school that opponents accused of swallowing contradictions is the school that wrote the tests. The Prophet’s <span class="honorific">ﷺ</span> sermon fixed the Quran gate before any chain was weighed. The Imams fixed the conflict ladder in their own answers, rung by rung, and named standing down as its last resort. The collectors stated their filters and their limits in their own introductions, and the greatest of them wrote that he knew only the least of what the filters yield. The modern gatekeepers narrowed the gates further, weighing each narrator alone and dismantling every mass authentication proposed to them, and the clearest sentence in the whole literature is al-Khoei’s verdict on the school’s greatest book. Not every report in al-Kafi is authentic. A tradition that says this about its own canon, in the voice of its own greatest rijal scholar, has answered the charge. The contradictions are real, the gates are commanded, and the book remains a repository whose verdict belongs to the scholar who runs the tests.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
+    </footer>
+</body>
+</html>
