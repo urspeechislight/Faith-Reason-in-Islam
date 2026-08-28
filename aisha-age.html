@@ -828,8 +828,8 @@
     }
     function toggle(el) {
         var chains = el.getAttribute('data-toggle').split(' ');
-        var allOn = chains.every(function (c) { return state[c]; });
-        chains.forEach(function (c) { state[c] = !allOn; });
+        var anyOn = chains.some(function (c) { return state[c]; });
+        chains.forEach(function (c) { state[c] = !anyOn; });
         apply();
     }
     toggles.forEach(function (el) {
