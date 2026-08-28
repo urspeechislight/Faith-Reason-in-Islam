@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council Report — Site Structure Framework</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FAFAF8; color: #2B3440; margin: 0; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.1rem; color: #8A6D3B; text-transform: uppercase; letter-spacing: .08em; margin-top: 2rem; }
+  .q { background: #fff; border: 1px solid #E7E0D1; border-radius: 8px; padding: 1rem 1.25rem; font-size: .95rem; color: #555; }
+  .verdict { background: #F8F1E2; border: 1px solid #B99C6B; border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .verdict h2 { margin-top: 0; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 1rem 0; }
+  .cell { background: #fff; border: 1px solid #E7E0D1; border-radius: 6px; padding: .6rem; font-size: .78rem; text-align: center; }
+  .cell.agree { border-color: #7A9B6D; background: #F1F6EE; }
+  .cell.clash { border-color: #B96B5A; background: #FBF0EE; }
+  .cell b { display: block; margin-bottom: .25rem; font-size: .82rem; }
+  details { background: #fff; border: 1px solid #E7E0D1; border-radius: 8px; padding: .9rem 1.25rem; margin-bottom: .6rem; }
+  summary { cursor: pointer; font-weight: 600; font-size: .95rem; }
+  details p, details li { font-size: .9rem; line-height: 1.65; color: #3D4451; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; line-height: 1.6; font-size: .95rem; }
+  .first { background: #3D4451; color: #F8F1E2; border-radius: 8px; padding: 1rem 1.25rem; font-size: 1rem; }
+  footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #E7E0D1; font-size: .8rem; color: #999; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LLM Council Report</h1>
+  <p class="q"><b>Question:</b> Design one concrete structural framework for the Faith &amp; Reason in Islam essays site (16 hand-edited static HTML pages, no build step) covering: opening conventions, tab-bar placement, section conventions, and missed consistency rules — across four content types (refutation essays, Quranic analysis, hadith commentary series, reference pages).</p>
+
+  <div class="verdict">
+    <h2>Council Verdict</h2>
+    <p><b>Where the council agrees:</b> One opening pattern for every page — top nav (chrome) → eyebrow → h1 → one-line subtitle → thesis box. Mid-page tab bars are a genuine failure (all five advisors, independently). Nested accordions inside tabs should be flattened (Executor, First Principles; reinforced by all five reviewers). First Principles' "rule of the count" — one thread → flowing sections; 2–3 parallel evidences → cards; 4+ siblings → tabs — was rated the single strongest rule by three of five reviewers.</p>
+    <p><b>Where the council clashes:</b> What happens to the intro when tabs move up. Executor, First Principles, and Expansionist: fold it into an "Overview" first tab. Contrarian and Outsider: never hide the intro behind a click — readers don't open tabs; keep the argument visible, tabs below it. Reviewers split 2–3 on strongest response (Executor vs. First Principles) and flagged First Principles' blind spot: elegant ontology, but buried content.</p>
+    <p><b>Blind spots caught in peer review:</b> (1) A rulebook with no enforcement drifts — the survey itself is a catalog of drift; the middle path nobody proposed is a skeleton template + per-page checklist (guardrails without a build step). (2) Nobody costed the migration or defined "done" per page. (3) No exit rule — conclusion cards should link to next reading; that's where readers leak out. (4) Tab mechanics (mobile overflow, no-JS behavior, anchors) were debated in placement but ignored in mechanics.</p>
+    <p><b>The recommendation (chairman, resolving the clash):</b> The clash dissolves by separating the <i>thesis</i> from the <i>intro</i>. The thesis box — the one must-read paragraph — stays above the tab bar, always visible, on every page. The longer intro material (background, premise cards, conclusion card) becomes the first tab, "Overview." Tab bar sits directly under the thesis box: navigation at the top, thesis never hidden, argument one click away. This honors First Principles' axiom (every page is one proposition plus evidence blocks), the Executor's element order, and the Outsider's evidence that hidden must-read content dies.</p>
+    <ul>
+      <li><b>Universal skeleton:</b> top nav → eyebrow (type label) → h1 → subtitle → thesis box → content area.</li>
+      <li><b>Content area by count:</b> 1 thread → flowing h2 sections; 2–3 parallel evidences → cards; 4+ siblings → tabs, bar directly under the thesis box, first tab "Overview."</li>
+      <li><b>Opening labels:</b> all variants ("The Argument", "The Christian Claim", etc.) retire to "Overview". Question-form h1s are allowed; the subtitle carries the one-line answer.</li>
+      <li><b>Inner accordions:</b> flatten to bold sub-headings; accordions only for optional apparatus (full chains).</li>
+      <li><b>Exit rule:</b> every page ends with conclusion + a next-reading link.</li>
+      <li><b>Enforcement:</b> a canonical skeleton template + checklist in the repo; each future page copies the skeleton.</li>
+    </ul>
+    <p class="first"><b>The one thing to do first:</b> Convert the four tabbed refutation pages (umm-kulthum-marriage, ali-forbearance, hasan-mitlaq, quran-preservation) to the new skeleton — thesis box above the tab bar, intro folded into an "Overview" first tab — starting with umm-kulthum-marriage as the reference implementation.</p>
+  </div>
+
+  <h2>Advisor Alignment</h2>
+  <div class="grid">
+    <div class="cell clash"><b>Contrarian</b>No enforcement = drift; tabs below intro; two sanctioned openings</div>
+    <div class="cell agree"><b>First Principles</b>One proposition + evidence blocks; tabs under thesis; rule of the count</div>
+    <div class="cell clash"><b>Expansionist</b>Question-h1 SEO play; per-type variants; index as asset</div>
+    <div class="cell clash"><b>Outsider</b>One plain-English opening; intro never hidden; kill tabs entirely</div>
+    <div class="cell agree"><b>Executor</b>Thesis-first everywhere; tabs under header; intro = Overview tab</div>
+  </div>
+  <p style="font-size:.85rem;color:#666">Green = aligned with the verdict's core (top tabs, single opening). Red = dissented on hiding the intro or on one-pattern. Reviewers: 3 of 5 rated First Principles strongest; 2 of 5 rated the Executor strongest.</p>
+
+  <h2>Advisor Responses</h2>
+  <details><summary>The Contrarian</summary><p>The fatal flaw is the premise: a consistency framework for a system with no enforcement mechanism. Sixteen hand-edited pages, no build step — rules will drift within three pages; the survey is itself a catalog of drift. The only durable fix is the excluded thing: a build step or shared include. Second flaw: folding the intro into an "Overview" tab buries the thesis behind a click — the first thing a reader of a refutation needs is the claim and the thesis; tabs belong below the intro. Third: opening inconsistency is partly correct behavior — question-first works for question-titled pages; sanction two openings, not one. Missed rule: no canonical rule for what the conclusion card links to next — that's where readers leak out.</p></details>
+  <details><summary>The First Principles Thinker</summary><p>The wrong question is being asked. Every page does exactly one thing — advance one proposition and marshal evidence for it; tabs, cards, callouts, tables are all evidence blocks under a thesis. One opening for all 16 pages: eyebrow → h1 → subtitle → thesis box; question-h1s are fine (a question is a thesis awaiting a verdict) but the thesis box must follow immediately. The intro IS the first evidence block, not a preamble: tab bar directly under the thesis box, intro folded into tab 1 ("Overview"). Sections by count: 1 thread → flowing h2s; 2–3 → cards; 4+ → tabs. Kill inner accordions; accordions only for optional apparatus. Nav is chrome, not content — identical on all pages.</p></details>
+  <details><summary>The Expansionist</summary><p>A latent product: corpus-grounded long-form niche-expert content is what survives the AI-content flood. One opening pattern as an asset: question-first h1 mirroring the search query, subtitle as one-sentence answer, then thesis box — snippet and LLM-citation surface. Tabs directly under the header, intro into "Overview"; give each tab pane an anchor URL and query-shaped h2 — four essays become ~20 citable arguments. Type system upward: tabs = parallel cases; cards = sequential logic; flowing = sustained argument; promote Example/Implication accordions to visible sub-headings. Biggest missed asset: the index, grouped by type with each page's thesis as its description.</p></details>
+  <details><summary>The Outsider</summary><p>Types A/B/C/D don't exist for a first-time reader. One recognizable opening every time: eyebrow, h1, one-line subtitle, then a 3–5 sentence plain-English summary — no thesis boxes or premise cards before the reader has read a word. Mid-page tabs are invisible — scrolled past twice. But folding the intro into an "Overview" tab hides the most important paragraph behind a click; most readers never open tab 2. Intro first, in full, then tab bar, then panes; or a slim jump-bar of anchor links under the header. Kill tabs entirely if possible — on a phone five tabs are an overflow mess; flowing h2s with a sticky anchor-nav are printable, searchable, JS-proof. Missed: buried translations make Arabic callouts decoration for non-Arabic readers; "isiah_9_6" is an unspellable filename.</p></details>
+  <details><summary>The Executor</summary><p>Monday morning: one opening pattern, no exceptions — thesis-first (8 of 16 pages already do it). Exact order: back-nav; eyebrow (type label); h1; one-line subtitle (absorbs question-headings); thesis box. Type B minus eyebrow; Type C moves the thesis box after the Arabic blockquote. Tabs: directly under the header, intro folded into tab 1 renamed "Overview" — verdict, not options; mid-page tabs mean readers never discover tabs 2–6. 4 pages, ~10 minutes each. Section rules: 3+ parallel evidences → tabs; one sequential argument → flowing h2s; cards only inside Overview or flowing sections; kill inner accordions, flatten to bolded lead-ins. Rename every intro section to "Overview" — one word everywhere.</p></details>
+
+  <h2>Peer Review Highlights</h2>
+  <details><summary>Strongest-response votes and blind spots</summary>
+    <ul>
+      <li><b>Strongest:</b> Executor ×2 ("the only response that respects the constraint — verdicts with exact element order, an executable plan"); First Principles ×3 ("the count rule is the only decision procedure a hand-editor can apply without judgment calls"; "dissolves the tabs-vs-intro dispute instead of arbitrating it").</li>
+      <li><b>Biggest blind spots:</b> Contrarian — true critique of enforcement, but refuses to design within the constraints. Expansionist — speculative SEO frame; tab content hidden behind JS is what extractors handle worst, undermining its own thesis; uncosted scope expansion. First Principles — its ontology buries the argument behind a click; never engages reading-behavior evidence.</li>
+      <li><b>All missed:</b> enforcement within constraints (skeleton template + checklist + lint), migration verification/rollback, tab mechanics (mobile, no-JS, anchors), and the conclusion/exit rule.</li>
+    </ul>
+  </details>
+
+  <footer>Council convened 2026-08-14 · 5 advisors · 5 peer reviewers · Subject: site structure framework, Faith &amp; Reason in Islam</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report: faith-reason-note skill redesign</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #FAFAF8; color: #2A2D33; max-width: 860px; margin: 0 auto; padding: 40px 24px; line-height: 1.6; }
+  h1 { font-size: 26px; border-bottom: 3px solid #B99C6B; padding-bottom: 10px; }
+  h2 { font-size: 19px; margin-top: 36px; color: #8A6D3B; }
+  .verdict { background: #FFF; border: 1px solid #E7E0D1; border-radius: 8px; padding: 20px 24px; margin: 16px 0; }
+  .verdict p { margin: 8px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 16px 0; }
+  .cell { background: #FFF; border: 1px solid #E7E0D1; border-radius: 6px; padding: 12px 16px; font-size: 14px; }
+  .cell b { color: #8A6D3B; }
+  details { background: #FFF; border: 1px solid #E7E0D1; border-radius: 6px; padding: 10px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; color: #3D4451; }
+  .meta { color: #777; font-size: 13px; margin-top: 40px; border-top: 1px solid #E7E0D1; padding-top: 12px; }
+  code { background: #F3F1EB; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+  ul { padding-left: 22px; }
+</style>
+</head>
+<body>
+
+<h1>Council Report</h1>
+<p><b>Question:</b> How should the /faith-reason-note skill be redesigned for per-category writing, principled thesis/verdict scoping, and opencode translation at grade 9 with the established prose bans?</p>
+
+<div class="verdict">
+<h2 style="margin-top:0">COUNCIL VERDICT</h2>
+<p><b>1. Where the council agrees.</b> The 4-way taxonomy is overfit (exegesis n=1, serial is packaging). The controlling question is binary: does the article argue a claim against an opponent. Body chunking is a second, orthogonal axis. The fixed Introduction / Example / Implication / Conclusion rhythm is deleted, not restyled. Facts surface by ordering (fact-card leads in existing tint-box classes), not new design tokens. Grade 9 governs expository prose and the site's own voice; elevated register lives only inside quotation blocks. The opencode wrapper must be generalized and tested before anything else: it is the real blocker.</p>
+<p><b>2. Where the council clashes.</b> Human-supplied category vs detection tree: resolved as detect-then-confirm (Stage 1 already shows a plan). Verdict onto exegesis: three reviewers overruled the fold; exegesis closes with "The Reading", not "Final Verdict". Local vs titan opencode: moot, opencode + terra model work locally.</p>
+<p><b>3. Blind spots the council caught.</b> Style gates cannot catch a fluent mistranslation: add a fidelity spot-check (re-read each translation against its Arabic). The polish pass will reassert Penguin register and undo grade 9 unless it honors the split. Scripture in English must come from canonical published translations, never LLM-composed. The 18 shipped pages are a free regression set for the classifier.</p>
+<p><b>4. Recommendation.</b> Three body types (debate / exegesis / narration) + serial flag. Debate: premises + Final Verdict. Exegesis: reading summary, no verdict. Narration: continuous translation + single commentary accordion; serial adds part numbering, hub and next/prev links. Four-question detection tree confirmed in the Stage 1 plan. Every accordion item leads with a fact card in existing tint classes. Translation through a generalized local <code>translate.py</code> (stdin JSON in, JSON out) with a versioned prompt card. Validator gains a category declaration check, a four-beat ban, and a Flesch-Kincaid gate (~10) on expository prose, quotes exempt.</p>
+<p><b>5. Do this first.</b> Generalize and test the translation script locally with the full constraint stack; count violations over several runs before touching the skill.</p>
+</div>
+
+<h2>Advisor positions</h2>
+<div class="grid">
+  <div class="cell"><b>Contrarian</b><br>Taxonomy is circular. Binary argue-gate. Six prohibitions obey ~3; test empirically. Scope grade 9 vs register.</div>
+  <div class="cell"><b>First Principles</b><br>Two categories + serial flag. Fact-card leads. textstat gate at ≤10. Batch one SSH round trip. Shrink the 1000-line skill.</div>
+  <div class="cell"><b>Expansionist</b><br>3 modes + serialization flag. Deterministic 4-question tree. Generalize the wrapper first. Controlled label vocabulary.</div>
+  <div class="cell"><b>Outsider</b><br>Category as invocation argument. Exegesis keeps thesis, ends "The Reading". Tables in tint-boxes. Legacy pages: decide now.</div>
+  <div class="cell"><b>Executor</b><br>Two orthogonal axes. Kill the four-beat. Key-Fact tint-box, zero new tokens. New 30-line script + versioned prompt. Ship one page per type.</div>
+</div>
+
+<h2>Peer review highlights</h2>
+<ul>
+  <li>Strongest: First Principles (3 seats), Expansionist (1), Outsider (1). Machine gates and the diagnosis that the skill's own prose rules bury facts.</li>
+  <li>Biggest blind spots: Outsider's CLI four-way split contradiction; First Principles forcing a verdict onto exegesis; Executor's lack of enforcement.</li>
+  <li>Missed by all five: translation fidelity (fluent mistranslation passes every style gate); downstream stages reasserting register; scripture through LLM at all; amending the canonical style card itself.</li>
+</ul>
+
+<details><summary>Contrarian: full response</summary>
+<p>The fatal flaw: the taxonomy is circular. You're classifying 18 artifacts produced by a broken generator, then rebuilding the generator to reproduce that taxonomy. Four categories where one has n=1 isn't a taxonomy, it's a taxonomy of noise. And an LLM agent executing a 1000-line skill will misclassify at the margins.</p>
+<p>Strip it down: the user's actual complaints are monotony and inconsistent verdicts. Both come from one bug: the skill applies debate anatomy to everything. The fix is a binary gate: does this page argue against an opposing claim? Yes: premises + verdict. No: none. Serial translation is narration plus a part number; a flag, not a branch.</p>
+<p>Second flaw: nobody has validated the translation constraint stack. Six prohibitions in one prompt; LLMs reliably obey about three. Run the wrapper with the full constraint list 5 times and count violations before redesigning.</p>
+<p>Grade 9 vs Penguin Classics: don't reconcile, scope. Grade 9 governs explanatory prose; prayers and dialogue keep register.</p>
+<p>Scannability: make it a validator check; no load-bearing name, date, or number appears only in running prose. Enforceable beats hoped-for.</p>
+</details>
+
+<details><summary>First Principles: full response</summary>
+<p>The taxonomy is overfit. Collapse to two categories: ARGUMENT (debate + exegesis) and NARRATIVE (story + serial). Serial is a flag. Thesis box and Final Verdict attach to ARGUMENT, full stop.</p>
+<p>Monotony exists because the skill mandates one rhythm; delete the mandated subheads and ship per-category HTML skeleton files. Copy-modify beats generate-from-description. The real culprit of buried facts is the skill's own prose rules: "no meta statements" plus flowing Penguin prose. Fix with ordering: every accordion item leads with a filled fact card (speaker, source, date, claim) in existing tint-box classes, prose second.</p>
+<p>Grade 9 is machine-checkable: run textstat inside the validator, gate expository blocks at ≤10, exempt tagged elevated blocks (prayers, Qur'an, Imam dialogue).</p>
+<p>The opencode call stays on titan; batch every Arabic block per article into one round trip. The actual fatal flaw is the 1000-line skill itself: move everything checkable into the Python validator; leave the skill with a decision tree, skeletons, and the translation prompt.</p>
+</details>
+
+<details><summary>Expansionist: full response</summary>
+<p>The taxonomy conflates genre with packaging. "Serial translation" isn't a category; it's a narration long enough to paginate. Compress to 3 rhetorical modes plus an orthogonal serialization flag. The n=1 exegesis page is an argument with no named opponent; don't build infrastructure for n=1.</p>
+<p>Detection must be a decision tree, not vibes: Is there an opposing claim? Is it verse-by-verse? Is it one continuous story? Is it multi-part? Category-conditional blocks enforced mechanically by the validator.</p>
+<p>The grade-9/elevated-register conflict is two different jobs. Quoted scripture, prayers, dialogue: Penguin register. All exposition and commentary: grade-9 floor, enforced with textstat, because prompt instructions alone will drift within five articles.</p>
+<p>The actual blocker is the hardcoded wrapper on titan. Step one: generalize that script (prompt via stdin, template parameter), test it once. Until that works, the redesign is fiction. For scannability: controlled label vocabulary per accordion item; validator rejects the old four-in-order pattern.</p>
+</details>
+
+<details><summary>Outsider: full response</summary>
+<p>Category detection is a fake problem. The user already knows what they're feeding the skill. Make category a required argument at invocation. An LLM classifier where exegesis has n=1 will misclassify constantly, and every misclassification poisons structure.</p>
+<p>The taxonomy is 4 by count, 3 by nature. Two axes matter: does it argue a thesis, and is it chunked. Exegesis is debate-without-an-opponent: keep the thesis box, replace "Final Verdict" with "The Reading" summary card. Serial is narration plus a chunking rule.</p>
+<p>Grade 9 resolves by scope: it governs the site's own prose (premises, commentary, verdicts). Quoted prayers, dialogue, elevated passages keep the Penguin register. That is how Penguin Classics work: plain scaffolding around preserved register.</p>
+<p>Scannability doesn't need design changes: tables and key-value lines inside existing tint-boxes. The skill file should be complete worked HTML examples, not 1000 lines of rules; LLMs copy structure from examples far better than from instructions. Unflagged risk: 18 legacy pages. Migrate them or the redesign increases inconsistency. Decide now.</p>
+</details>
+
+<details><summary>Executor: full response</summary>
+<p>The fatal flaw is the taxonomy. The real structure is two orthogonal axes: does the article argue against a claim (thesis box + Final Verdict), and how the body chunks (verse-anchored / continuous / serial chapters).</p>
+<p>Complaint 2 isn't solved by categories. Kill Introduction/Example/Implication/Conclusion in the template and vary by body type: debate items open with the contested claim in the accordion header, evidence quote, then prose; narration is continuous translated prose with anchored cards confined to commentary; serial keeps chapter-chronological flow. Complaint 1 is solved with a "Key Fact" tint-box callout at the top of accordion items. Zero new design tokens.</p>
+<p>Grade 9 governs all expository prose; elevated register survives only inside quotation blocks. Segment-aware instructions, not one global style.</p>
+<p>Translation: write a new ~30-line script that reads stdin plus a versioned prompt file; the skill references the prompt file by path. First step: ship one new page per body type, then generalize. Don't rewrite 1000 lines of skill before one page proves out.</p>
+</details>
+
+<details><summary>Peer reviews: full text</summary>
+<p><b>Seat 1.</b> Strongest B (machine gates; diagnoses that the skill's own prose rules bury facts). Blind spot D (reinstates the four-way split at the CLI; skips the translation blocker). All missed: translation fidelity; prohibitions collide with elevated register inside quoted translations.</p>
+<p><b>Seat 2.</b> Strongest B. Blind spot D (human-argument swap unflagged; no enforcement). All missed: downstream stages reasserting Penguin register; 18 pages as a free regression set.</p>
+<p><b>Seat 3.</b> Strongest D (deletes detection-failure class; flags legacy migration). Blind spot B (forces verdict onto exegesis). All missed: fidelity gates; regression replay; serial mechanics.</p>
+<p><b>Seat 4.</b> Strongest C (decision tree satisfies "detect"; wrapper named as blocker). Blind spot B (verdict-forced-onto-exegesis). All missed: fidelity; retroactive classifier validation.</p>
+<p><b>Seat 5.</b> Strongest B. Blind spot E (prompt-hoped, no enforcement). All missed: whether scripture should be LLM-translated at all; Arabic source integrity; amending the canonical style card itself.</p>
+</details>
+
+<p class="meta">2026-08-22 13:32 · Council on the /faith-reason-note skill redesign · Advisors: Contrarian, First Principles, Expansionist, Outsider, Executor · Full transcript: council-transcript-1787419938.md</p>
+
+</body>
+</html>

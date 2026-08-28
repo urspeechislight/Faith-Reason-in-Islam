@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report — ali-forbearance.html Quality Gate</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;margin:0;padding:2rem;max-width:900px;margin:0 auto;line-height:1.55}
+h1{font-size:1.6rem;margin-bottom:.2rem}
+h2{font-size:1.15rem;margin-top:2rem;border-bottom:1px solid #e5e5e5;padding-bottom:.3rem}
+.meta{color:#666;font-size:.9rem;margin-bottom:1.5rem}
+.score{display:inline-block;background:#f4f1ea;border:1px solid #ddd6c8;border-radius:8px;padding:.6rem 1rem;margin:.3rem .4rem .3rem 0;text-align:center}
+.score b{display:block;font-size:1.3rem}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+td,th{border:1px solid #e5e5e5;padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#fafafa}
+details{border:1px solid #e5e5e5;border-radius:8px;padding:.7rem 1rem;margin:.5rem 0}
+summary{cursor:pointer;font-weight:600}
+.good{color:#1a7f37}.warn{color:#9a6700}
+</style>
+</head>
+<body>
+<h1>Council Report — ali-forbearance.html Quality Gate</h1>
+<p class="meta">3 runs · 5 advisors × 3 (Contrarian, First Principles, Expansionist, Outsider, Executor) · peer review after run 1 · final live state: commit e7d05eb</p>
+
+<h2>Score trajectory</h2>
+<table>
+<tr><th>Dimension</th><th>Run 1</th><th>Run 2</th><th>Run 3</th></tr>
+<tr><td>Readability</td><td>7.4</td><td>7.2</td><td class="good">7.4</td></tr>
+<tr><td>Comprehensiveness</td><td>8.0</td><td>8.2</td><td class="good">8.3</td></tr>
+<tr><td>Persuasiveness</td><td>7.0</td><td>7.1</td><td class="good">7.6</td></tr>
+<tr><td>Difficulty-to-escape</td><td>5.8</td><td>6.4</td><td class="good">6.8</td></tr>
+<tr><td>Connectedness</td><td>6.4</td><td>6.8</td><td class="good">7.2</td></tr>
+</table>
+<p>Run 3 found <b>zero flipped negations</b> (byte-checked against the Arabic) after three had survived run 2. Structural validator OK throughout; Flesch-Kincaid 9.7 → 9.59 (ceiling 10.5). All 101 Arabic blocks byte-verified against the titan corpus across every cycle.</p>
+
+<h2>Fixes shipped per cycle</h2>
+<table>
+<tr><th>Cycle</th><th>Key changes</th></tr>
+<tr><td>1 (7aa2aaf)</td><td>New tab3-3 exhibit: Zurara/al-Sadiq (al-Tustari 4/420) + al-Baqir (Ilal al-Shara'i via al-Muhsini 2/141), both corpus-verified, giving the apostasy motive chains independent of Sulaym. Four flipped negations fixed. Two integrity slips fixed (shura/fire, dangling Umm Kulthum ref). Forty/four arithmetic made faithful to the Mustadrak text (forty pledged, four appeared). Pledge timeline reconciled. Honest audience line. Nine bridges.</td></tr>
+<tr><td>2 (1d497d1)</td><td>New tab6-1b ridda exhibit: Abu Hurayra/Umar in Bukhari 8/140 + Aisha via Ibn Ishaq (Ta'rikh al-Khamis 2/201), grounding "Arabia in that hour" in the Sunni canon. Garbled timeline sentence repaired. Fitna-gloss flipped negation fixed. Weak-chain qualifiers added to Kashf al-Yaqin (Isa b. Dawud) and al-Daylami. Ibn Abi al-Hadid labeled Mu'tazili consistently. Duplicate al-Baqi quote acknowledged. Six bridges. Ridda Facts row (stated).</td></tr>
+<tr><td>3 (e7d05eb)</td><td>Nav labels restored (were truncated mid-word in markup). Timeline chronology inversion repaired. Nine more bridges. Forty-men threshold carries the "insight of the four" point (calibre of faith, not headcount). Verse of the Promise labeled as the school's own reading, not cross-camp evidence. Miqdad source honesty. Usama attribution. Harun permanence wording.</td></tr>
+</table>
+
+<h2>Remaining known limits (convergent across advisors, unresolvable without new corpus evidence)</h2>
+<ul>
+<li><b>The conditional command itself remains Sulaym-only.</b> The motive is now multi-chained, but "fight only when helpers stand ready" survives only in the contested book plus self-disclaimed late literature. A reader who strips Sulaym downgrades the thesis from "commanded" to "prudent". No independent chain exists in the corpus; the page now says so plainly at every citation.</li>
+<li><b>The right itself is asserted, not exhibited.</b> Ghadir and the manzila are named, never given exhibits. Advisors asked for a Sunni-chained Ghadir exhibit; it belongs to a separate page (the site already carries one in the isnad-origin / light-of-prophet orbit) and this page's scope is why the sword stayed sheathed.</li>
+<li><b>The Bukhari reconciliation scene remains contested ground.</b> The page re-reads "you have spoken rightly" as the community affirming the grievance; a Sunni reads it as approving reconciliation. Both readings were staged; neither concedes.</li>
+</ul>
+
+<h2>Chairman's verdict</h2>
+<p>Termination condition applied: run 3 improved no dimension by a full point and the remaining criticisms (Sulaym dependency, Ghadir scope) are evidence problems the corpus cannot fix, not prose problems. Stopping at three runs per the skill's no-improvement rule. The page is decisively stronger than the shipped baseline: every load-bearing fact now carries its qualifier, the motive stands on independent chains, the strategic premise stands in the opponent's own canon, and the exhibit chain is bridged end to end.</p>
+
+<details><summary>Run 1 advisors (collapsed)</summary>
+<p><b>Contrarian (R7 C8 P6 D5 Cn6):</b> causal core all Sulaym; forty/four contradicts Mustadrak; ridda never exhibited; fitna gloss flipped; duplicate al-Baqi quote.</p>
+<p><b>First Principles (R8 C8 P7 D6 Cn7):</b> command single-sourced; promise-verse closes on assertion; "another account" flipped; 6+ missing bridges.</p>
+<p><b>Expansionist (R8 C8 P8 D7 Cn7):</b> Ghadir never exhibited; ridda gap; Rounds by Night underused; two integrity slips.</p>
+<p><b>Outsider (R6 C8 P7 D6 Cn6):</b> no cast list; qualifier column undefined; coerced-pledge special pleading; "years of silence" flipped.</p>
+<p><b>Executor (R8 C8 P7 D6 Cn6):</b> Premise 4 single-sourced; acceptance counter-reading never faced; "his own silence" flipped; Tabuk objection (later judged already answered by peer review).</p>
+</details>
+
+<details><summary>Peer review highlights (run 1)</summary>
+<p>Seats 1-3 and 5 verified Contrarian and Expansionist findings against the live page; seat 4 caught that the Executor's two substantive objections misfired (both pre-empted on-page). All five seats converged on the pledge-timeline contradiction and the epistemic-contract inversion as council-wide blind spots.</p>
+</details>
+
+<details><summary>Run 3 advisors (collapsed)</summary>
+<p><b>Contrarian (R7 C8 P7 D6 Cn7):</b> nav truncation caught; acceptance counter-narrative still thin; no flipped negations remain (verified).</p>
+<p><b>First Principles (R7 C8.5 P8 D6.5 Cn7):</b> load 1 fully carried; load 2 structurally carried on soft core; "insight of the four" parry untranslated in emphasis (fixed in cycle 3).</p>
+<p><b>Expansionist (R8 C9 P8 D7.5 Cn7.5):</b> both new exhibits land; glossary could carry ridda/bay'a; command still Sulaym-only.</p>
+<p><b>Outsider (R7 C9 P8 D7 Cn7):</b> story sections read like a story; night-journey and Khalid exhibits bury their load-bearing lines; 11 AH never anchored to CE.</p>
+<p><b>Executor (R8 C8 P7 D7 Cn7):</b> protest chain and motive escape-proof; Sulaym strike and Ibn Abi al-Hadid reclassification remain open hatches; promise-verse weakest exhibit (fixed by reframing in cycle 3).</p>
+</details>
+
+<p class="meta">Generated 2026-08-25 · council-transcript-1787679060.md holds the full record</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report — hadith-authentication.html Quality Gate</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;margin:0;padding:2rem;max-width:900px;margin:0 auto;line-height:1.55}
+h1{font-size:1.6rem;margin-bottom:.2rem}
+h2{font-size:1.15rem;margin-top:2rem;border-bottom:1px solid #e5e5e5;padding-bottom:.3rem}
+.meta{color:#666;font-size:.9rem;margin-bottom:1.5rem}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+td,th{border:1px solid #e5e5e5;padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#fafafa}
+details{border:1px solid #e5e5e5;border-radius:8px;padding:.7rem 1rem;margin:.5rem 0}
+summary{cursor:pointer;font-weight:600}
+.good{color:#1a7f37}
+</style>
+</head>
+<body>
+<h1>Council Report — hadith-authentication.html Quality Gate</h1>
+<p class="meta">3 runs · 5 advisors × 3 · final live state: commit 1de3f22</p>
+
+<h2>Score trajectory</h2>
+<table>
+<tr><th>Dimension</th><th>Run 1</th><th>Run 2</th><th>Run 3</th></tr>
+<tr><td>Readability</td><td>7.8</td><td>8.4</td><td class="good">8.5</td></tr>
+<tr><td>Comprehensiveness</td><td>7.1</td><td>7.6</td><td class="good">7.9</td></tr>
+<tr><td>Persuasiveness</td><td>7.4</td><td>7.7</td><td class="good">8.0</td></tr>
+<tr><td>Difficulty-to-escape</td><td>6.6</td><td>6.9</td><td class="good">6.9</td></tr>
+<tr><td>Connectedness</td><td>6.6</td><td>7.2</td><td class="good">7.8</td></tr>
+</table>
+<p>Improvement on every dimension across two fix cycles. Run 3 found <b>zero flipped negations</b> (each advisor polarity-checked the Arabic). Stopped at three runs: the remaining critiques are evidence-bound, not prose-bound, and the corpus cannot supply their fixes.</p>
+
+<h2>Fixes shipped per cycle</h2>
+<table>
+<tr><th>Cycle</th><th>Key changes</th></tr>
+<tr><td>1 (164774a)</td><td>Flipped quantifier on al-Khoei's verdict fixed at 4 sites (not-all, not none); garbled sentence repaired; 'Ilal fabrication history scoped as the jurists' reading; al-Sistani direction unified; five connectedness bridges; Premise 3 delivered (wathaqa principle, dismantling specifics); Akhbari + khabar glossary entries; two missing Facts rows.</td></tr>
+<tr><td>2 (1de3f22)</td><td>Glossary duplicate sentence fixed; Facts-row direction corrected (take what differs, not what they reject); 'Ilal row downgraded to <i>attributed</i> (mursal); the two exempted books named (Kamil al-Ziyarat, Nawadir al-Hikma); the Righteous Servant glossed; section 3 intro order claim fixed; three more bridges; verdict softened to acknowledge the gate-commands' transmission basis.</td></tr>
+</table>
+
+<h2>Remaining known limits (convergent, unresolvable without new primary evidence)</h2>
+<ul>
+<li><b>The gate-commands' own transmission.</b> The ladder (Zurarah, via Awali al-Liali) and the fabrication history ('Ilal, mursal) carry the page's lowest qualifiers, <i>attributed</i>, and the prose now says so. The community-practice argument (al-Tusi's <i>'Uddat</i>) is the tradition's own independent ground and is exhibited, but the circularity objection cannot be closed further from inside the corpus.</li>
+<li><b>No worked example.</b> Multiple advisors asked for one tarjih applied to a named pair of reports from Tahdhib/Istibsar. That exhibit exists in principle; it is a research addition, not a fix, and is the single highest-value follow-up.</li>
+<li><b>The Akhbari counterposition.</b> Held to a glossary entry; giving it a full exhibit-and-rebuttal is the second research follow-up.</li>
+<li><b>The Ibn Asbat report</b> carries no textual limiter in its own wording; the page keeps it honest with the scope-debate framing rather than inventing a containment.</li>
+</ul>
+
+<h2>Chairman's verdict</h2>
+<p>Termination condition applied: run 3's gains (Connectedness +0.6, Comprehensiveness +0.3) came from prose repairs; the residual criticisms repeat across runs unchanged because they are properties of the evidence, not the writing. The page is decisively stronger than shipped: the thesis's two loads are both carried by exhibits, the quantifier on the school's best witness is now exact, and every load-bearing claim carries its qualifier visibly.</p>
+
+<details><summary>Run 1 advisors (collapsed)</summary>
+<p><b>Contrarian (R7 C7 P7 D6 Cn6):</b> flipped quantifier on al-Khoei; garbled sentence; 'Ilal scope flip; Premise 3 undelivered; two missing Facts rows.</p>
+<p><b>First Principles (R9 C7.5 P8 D7 Cn7):</b> both loads structurally carried; circularity unaddressed; quantifier flip.</p>
+<p><b>Expansionist (R9 C7 P8 D8 Cn7):</b> worked-example gap named as the single highest-value addition.</p>
+<p><b>Outsider (R7 C7 P7 D6 Cn6):</b> front-loaded premise summary; Premise 3 promised not delivered; quantifier flip.</p>
+<p><b>Executor (R9 C7 P7 D6 Cn7):</b> three hatches tested, circularity open; Ibn Asbat chain fails own test; quantifier flip.</p>
+</details>
+
+<details><summary>Run 2 advisors (collapsed)</summary>
+<p><b>Contrarian (R8 C7 P7 D6 Cn7):</b> glossary duplicate survived; facts-row direction flip; 'Ilal qualifier inconsistency.</p>
+<p><b>First Principles (R8 C8 P7.5 D8 Cn7.5):</b> both loads carried; four remaining links implicit; khudh-bi-khilaf row flip.</p>
+<p><b>Expansionist (R9 C7 P8 D7 Cn7):</b> no flipped negation found; two books unnamed; worked example still the gap.</p>
+<p><b>Outsider (R8 C8 P7 D8 Cn7.5):</b> Righteous Servant unglossed; companions-of-consensus forward-referenced.</p>
+<p><b>Executor (R9 C8 P8 D7 Cn7):</b> gates-fail-in-practice sealed; circularity and Ibn Asbat remain.</p>
+</details>
+
+<details><summary>Run 3 advisors (collapsed)</summary>
+<p><b>Contrarian (R8.5 C8 P8 D7 Cn7.5):</b> exhibit-wording quantifier risk (facts row correct); three back-loaded links; Akhbari gap.</p>
+<p><b>First Principles (R9 C8 P9 D7 Cn8):</b> both loads carried by exhibits; Premise 3 least-exhibited; Akhbari gap.</p>
+<p><b>Expansionist (R9 C7.5 P8 D6.5 Cn7.5):</b> no flipped negation; circularity unvoiced; delegated authority has no error condition.</p>
+<p><b>Outsider (R7 C8 P7 D7 Cn8):</b> "stands before the Book before" ambiguity; Sistani sentence dense; quantifier correct.</p>
+<p><b>Executor (R9 C8 P8 D7 Cn8):</b> gates-fail-in-practice sealed; departure-rule mostly sealed; circularity ajar and unnamed; no flips.</p>
+</details>
+
+<p class="meta">Generated 2026-08-26 · transcript in council-transcript file</p>
+</body>
+</html>
