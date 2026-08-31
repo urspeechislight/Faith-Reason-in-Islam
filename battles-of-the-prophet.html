@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twenty-seven expeditions led in person between the second year after the Hijra and the ninth, with real fighting on nine fields, indexed in al-Waqidi's order with one page per expedition from Waddan to Tabuk.">
+    <meta name="keywords" content="Battles of the Prophet, Maghazi, al-Waqidi, Badr, Uhud, Khaybar, Hunayn, Tabuk, sira">
+    <title>The Battles of the Prophet | Faith &amp; Reason in Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Scholarly Neutrals (Off-white #FDFBF7, Dark Slate #3D4451, Accent #B99C6B decorative / #8A6D3B text) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        main p {
+            line-height: 1.7;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-box {
+            border: 1px solid #B99C6B;
+            background-color: #F8F1E2;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .divine-speech {
+            border-left: 3px solid #B99C6B;
+            padding-left: 1rem;
+            font-style: italic;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <header class="mb-6">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-2">Serial Hub</p>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">The Battles of the Prophet</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Twenty-seven expeditions led in person between the second year after the Hijra and the ninth, with real fighting on nine fields. One page per expedition, in the order al-Waqidi fixed.</p>
+            <hr class="mt-6 border-[#E7E0D1]">
+        </header>
+
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#chronology" class="navlink text-sm md:text-base py-3 flex-shrink-0">The Chronology</a>
+                <a href="#records" class="navlink text-sm md:text-base py-3 flex-shrink-0">What Every Page Records</a>
+                <a href="#series" class="navlink text-sm md:text-base py-3 flex-shrink-0">The Series</a>
+            </nav>
+        </div>
+
+        <main data-category="narration">
+            <section id="chronology" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Chronology</h2>
+<p class="mb-4 text-gray-700">The Prophet Muhammad <span class="honorific">ﷺ</span> led twenty-seven expeditions in person. They ran from the second year after the Hijra to the ninth. Real fighting happened on nine fields. The rest ended without a battle. Some were marches, and some were sieges that ended in surrender. Two were pilgrimages that a hostile Mecca nearly turned into war.</p>
+<p class="mb-4 text-gray-700">Al-Waqidi, who wrote the earliest full chronicle of these expeditions, closes his ordered list with a count.</p>
+
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">فكانت مغازي النبي ﵌ التي غزا بنفسه سبعاً وعشرين غزوة . وكان ما قاتل فيها تسعاً : بدر القتال وأحد والمريسيع والخندق وقريظة وخيبر والفتح وحنين والطائف . وكانت السرايا سبعاً وأربعين سرية واعتمر ثلاث عمر</p>
+<p class="translation">"The Prophet's expeditions that he led himself numbered twenty-seven. He fought in nine of them. These were Badr al-Qital, Uhud, al-Muraysi', the Trench, Qurayza, Khaybar, the Conquest, Hunayn, and al-Ta'if. The detachments numbered forty-seven, and he performed the lesser pilgrimage three times."</p>
+<cite class="text-sm text-gray-500">- al-Waqidi, al-Maghazi, vol.1, p.11, the closing count of the ordered list</cite>
+</blockquote>
+
+<p class="mb-4 text-gray-700">The nine named fields are Badr, Uhud, al-Muraysi', the Khandaq, Qurayza, Khaybar, the Conquest of Mecca, Hunayn, and al-Ta'if. The series numbers twenty-eight expeditions in all. The two pilgrimages belong in the same story, al-Hudaybiyya first and the return pilgrimage of the next year after it.</p>
+
+<div class="overflow-x-auto mt-6 mb-4">
+<table class="w-full text-sm text-left border-collapse">
+<thead><tr class="border-b-2 border-[#E7E0D1]"><th class="py-2 pr-4">Part</th><th class="py-2 pr-4">Expedition</th><th class="py-2 pr-4">When</th><th class="py-2">Fighting</th></tr></thead>
+<tbody class="divide-y divide-[#E7E0D1]">
+<tr><td>1</td><td>Waddan (al-Abwa)</td><td>Safar, 2 AH</td><td>no battle</td></tr>
+<tr><td>2</td><td>Buwat</td><td>Rabi' I, 2 AH</td><td>no battle</td></tr>
+<tr><td>3</td><td>The first Badr, in pursuit of Kurz ibn Jabir</td><td>Rabi' I, 2 AH</td><td>no battle</td></tr>
+<tr><td>4</td><td>Dhat al-Ashira</td><td>Jumada II, 2 AH</td><td>no battle</td></tr>
+<tr><td>5</td><td>Badr al-Qital</td><td>17 Ramadan, 2 AH</td><td>battle</td></tr>
+<tr><td>6</td><td>Banu Qaynuqa'</td><td>mid Shawwal, 2 AH</td><td>siege</td></tr>
+<tr><td>7</td><td>al-Sawiq</td><td>Dhu al-Hijja, 2 AH</td><td>pursuit</td></tr>
+<tr><td>8</td><td>al-Kudr, against Banu Sulaym</td><td>Muharram, 3 AH</td><td>no battle</td></tr>
+<tr><td>9</td><td>Dhat Amr, against Ghatafan</td><td>Rabi' I, 3 AH</td><td>no battle</td></tr>
+<tr><td>10</td><td>Bahran</td><td>Jumada I, 3 AH</td><td>no battle</td></tr>
+<tr><td>11</td><td><a href="uhud.html">Uhud</a></td><td>Shawwal, 3 AH</td><td>battle</td></tr>
+<tr><td>12</td><td>Hamra' al-Asad</td><td>Shawwal, 3 AH</td><td>pursuit</td></tr>
+<tr><td>13</td><td>Banu al-Nadir</td><td>Rabi' I, 4 AH</td><td>siege</td></tr>
+<tr><td>14</td><td>Badr al-Maw'id</td><td>Dhu al-Qa'da, 4 AH</td><td>no battle</td></tr>
+<tr><td>15</td><td>Dhat al-Riqa'</td><td>Muharram, 5 AH</td><td>no battle</td></tr>
+<tr><td>16</td><td>Dumat al-Jandal</td><td>Rabi' I, 5 AH</td><td>no battle</td></tr>
+<tr><td>17</td><td>al-Muraysi', against Banu al-Mustaliq</td><td>Sha'ban, 5 AH</td><td>battle</td></tr>
+<tr><td>18</td><td>al-Khandaq, the Trench</td><td>Dhu al-Qa'da, 5 AH</td><td>battle</td></tr>
+<tr><td>19</td><td>Banu Qurayza</td><td>Dhu al-Qa'da to Dhu al-Hijja, 5 AH</td><td>siege</td></tr>
+<tr><td>20</td><td>Banu Lahyan at al-Ghaba</td><td>Rabi' I, 6 AH</td><td>no battle</td></tr>
+<tr><td>21</td><td>al-Hudaybiyya</td><td>Dhu al-Qa'da, 6 AH</td><td>no battle</td></tr>
+<tr><td>22</td><td>Khaybar</td><td>Jumada II to Muharram, 7 AH</td><td>battle</td></tr>
+<tr><td>23</td><td>The return pilgrimage, Umrat al-Qadiyya</td><td>Dhu al-Qa'da, 7 AH</td><td>no battle</td></tr>
+<tr><td>24</td><td>The march against Ibn Abi al-Awja'</td><td>Dhu al-Hijja, 7 AH</td><td>no battle</td></tr>
+<tr><td>25</td><td>The Conquest of Mecca</td><td>13 Ramadan, 8 AH</td><td>battle</td></tr>
+<tr><td>26</td><td>Hunayn</td><td>Shawwal, 8 AH</td><td>battle</td></tr>
+<tr><td>27</td><td>al-Ta'if</td><td>Shawwal, 8 AH</td><td>siege</td></tr>
+<tr><td>28</td><td>Tabuk</td><td>Rajab, 9 AH</td><td>no battle</td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="mb-4 text-gray-700">The order and the dates follow al-Waqidi's list. Where the Shia chroniclers disagree with him on a date or a detail, the page for that expedition carries the disagreement and weighs it.</p>
+<p class="text-gray-700">A linked expedition name leads to its page. Pages for the remaining expeditions are being added in order. Each takes its place here as it lands, so the reader can walk the whole arc from the first march to the last.</p>
+            </section>
+
+            <section id="records" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">What Every Page Records</h2>
+<ul class="space-y-2 text-gray-700 mb-4 list-none pl-0">
+<li><strong>Battle name:</strong> the name the sources use, with its source.</li>
+<li><strong>Nature:</strong> defensive or offensive, with the reason for the label.</li>
+<li><strong>Commander:</strong> who commanded, and what role he held.</li>
+<li><strong>Context:</strong> what led to the expedition, and what followed it.</li>
+<li><strong>Major figures:</strong> the named actors on both sides.</li>
+<li><strong>Companions:</strong> who fought, and who is reported to have fled.</li>
+<li><strong>The killed:</strong> who died, and how each death moved the outcome.</li>
+<li><strong>Outcome:</strong> the tactical result and the strategic result, kept apart.</li>
+<li><strong>Prevention:</strong> whether the fighting could have been avoided, and what attempts the sources record before it.</li>
+<li><strong>Justification:</strong> a closing section weighing the expedition against the alliances and enmities of its time.</li>
+</ul>
+<p class="text-gray-700">Every claim on a page grounds in the sources. Quotes appear in Arabic exactly as the sources carry them, each with a citation and a translation. Where the record holds only a thin line about an expedition, the page says so plainly and adds nothing.</p>
+            </section>
+
+            <section id="series" class="content-section mb-8 conclusion-box">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Series</h2>
+<p class="mb-4 text-gray-700">The Sunni spine stands on five works. Al-Waqidi's al-Maghazi comes first. Ibn Hisham's al-Sira al-Nabawiyya stands beside it, with al-Suhayli's Rawd al-Unaf. Al-Tabari's Ta'rikh al-Rusul wa-l-Muluk and al-Mas'udi's Muruj al-Dhahab close the line.</p>
+<p class="text-gray-700">The Shia spine holds four works. Al-Qadi Nu'man's Sharh al-Akhbar leads them. Al-Majlisi's Bihar al-Anwar, volumes 19 to 21, stands next. Al-Qummi's Muntaha al-Amal and al-'Amili's al-Sahih min Sira al-Nabi al-A'zam follow. Each page cites what it actually uses.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    (function () {
+        function openHash() {
+            var id = decodeURIComponent(location.hash.slice(1));
+            if (!id) return;
+            var el = document.getElementById(id);
+            if (!el) return;
+            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+        }
+        window.addEventListener('hashchange', openHash);
+        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+    })();
+    </script>
+
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
+    </footer>
+</body>
+</html>
