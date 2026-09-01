@@ -77,7 +77,7 @@ DOMAIN_MAP = {
     "bible": ["3-42-vs-39-4", "isiah_9_6", "43_81", "shamoun-10-reasons",
               "text-destruction"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria"],
-    "imams": ["light-of-prophet", "majlis-al-rida", "tear-and-pool"],
+    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
 }
@@ -123,6 +123,7 @@ BLURB = {
     "ali-forbearance": "Forbearance as guardianship. Why Ali withheld his sword after the Prophet's death, from sermons, hadith, and the shared historical record.",
     "umm-kulthum-marriage": "The Shia corpus calls the marriage a seizure, the bride was a child whose kunya she never earned, and the identification of her as Ali's daughter rests on the word of the man who swore he would fabricate witnesses.",
     "ifk-maria": "The dictionaries define the band of the verse as a bonded kin circle, Hafsa's codex counted it four, and the chains from the Imams name the woman the verses exonerated as Maria the Copt.",
+    "first-and-last": "He was, and nothing else was. How the God who needs nothing made the first thing from nothing, why it was a light, and how the light returns, read through Qur'an 57:3 and the Shia corpus.",
     "light-of-prophet": "The journey of the prophetic light from before creation to the birth of Muhammad ﷺ, narrated by Imam Ali ﵇ and Imam al-Sadiq ﵇ in Bihar al-Anwar Volume 15.",
     "majlis-al-rida": "The interfaith debates at al-Ma'mun's court: the Catholicos answered from his own Gospel, the Exilarch from his own Torah, the fire priest from the fire's own nature, and the Sabian sage from reason alone.",
     "tear-and-pool": "Imam Ja'far al-Sadiq ﵇ comforts a man of Basra who could not safely visit the grave of al-Husayn ﵇ and promises him mercy for his tears and a drink from al-Kawthar. From Kamil al-Ziyarat, report no. 6.",
