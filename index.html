@@ -971,27 +971,46 @@
     var all = artsOf(d.id);
 
     var shown = all.filter(lensOf);
-    var i = 0;
-    var rows = catalog.articles.filter(function (a) { return a.domain === d.id; }).map(function (a) {
-      i++;
-      if (a.comingSoon) {
-        return '<li class="row row--soon"><div class="art rise" style="--i:' + i + '">' +
-          '<span class="art__main"><span class="art__title" style="color:var(--color-text-faint)">' + rich(a.title) + '</span>' +
-          '<p class="art__blurb">' + rich(a.blurb) + '</p></span>' +
-          '<span class="art__meta"><span class="chip chip--soon">Coming soon</span></span></div></li>';
-      }
-      if (a.series) return seriesBlock(a, i);
-      if (!lensOf(a)) return '';
-      return '<li class="row"><a class="art rise" style="--i:' + i + '" href="' + esc(a.slug) + '.html">' +
-        '<span class="art__main">' +
-          '<span class="art__title">' + rich(a.title) + '</span>' +
-          '<p class="art__blurb">' + rich(a.blurb) + '</p>' +
-          '<span class="art__meta"><span class="chip" style="--cat-c:var(--cat-' + a.category + ')">' + CAT_META[a.category].label + '</span>' +
-            '<span>' + articleMeta(a) + '</span></span>' +
-        '</span>' +
-        '<span class="ix__meta">' + icon('arrow', 14) + '</span>' +
-      '</a></li>';
-    }).join('');
+    var rows;
+    if (!shown.length && all.length) {
+      /* the lens emptied this domain: say which forms the papers run in,
+         with a way out, instead of a bare "0 of N" dead end */
+      var present = {};
+      all.forEach(function (a) { present[a.category] = (present[a.category] || 0) + 1; });
+      rows = '<li class="row"><div class="empty rise" style="--i:3">' +
+        '<p class="empty__title">No ' + esc(CAT_META[state.lens] ? CAT_META[state.lens].label : state.lens) +
+          ' papers under this domain</p>' +
+        '<p class="empty__hint">The papers here run in other forms:</p>' +
+        '<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">' +
+        Object.keys(present).map(function (c) {
+          return '<button class="empty__action" type="button" data-lens-pick="' + c + '">' +
+            (CAT_META[c] ? CAT_META[c].label : c) + ' · ' + present[c] + '</button>';
+        }).join('') +
+        '<button class="empty__action" type="button" data-lens-pick="all">All forms</button>' +
+        '</div></div></li>';
+    } else {
+      var i = 0;
+      rows = catalog.articles.filter(function (a) { return a.domain === d.id; }).map(function (a) {
+        i++;
+        if (a.comingSoon) {
+          return '<li class="row row--soon"><div class="art rise" style="--i:' + i + '">' +
+            '<span class="art__main"><span class="art__title" style="color:var(--color-text-faint)">' + rich(a.title) + '</span>' +
+            '<p class="art__blurb">' + rich(a.blurb) + '</p></span>' +
+            '<span class="art__meta"><span class="chip chip--soon">Coming soon</span></span></div></li>';
+        }
+        if (a.series) return seriesBlock(a, i);
+        if (!lensOf(a)) return '';
+        return '<li class="row"><a class="art rise" style="--i:' + i + '" href="' + esc(a.slug) + '.html">' +
+          '<span class="art__main">' +
+            '<span class="art__title">' + rich(a.title) + '</span>' +
+            '<p class="art__blurb">' + rich(a.blurb) + '</p>' +
+            '<span class="art__meta"><span class="chip" style="--cat-c:var(--cat-' + a.category + ')">' + CAT_META[a.category].label + '</span>' +
+              '<span>' + articleMeta(a) + '</span></span>' +
+          '</span>' +
+          '<span class="ix__meta">' + icon('arrow', 14) + '</span>' +
+        '</a></li>';
+      }).join('');
+    }
 
     document.getElementById('pane').innerHTML =
       '<section class="dpane">' +
@@ -1126,7 +1145,15 @@
     railSync();
     renderPane();
   }
-  function setLens(l) { state.lens = l; render(); }
+  /* switching lens resets the scope (SOL's changeLens): a lens that empties
+     the active domain must never strand the pane at "0 of N" */
+  function setLens(l) {
+    state.lens = l;
+    state.domain = null;
+    state.q = '';
+    syncHash();
+    render();
+  }
   function syncHash() {
     var h = '#/';
     if (state.domain) h = '#/domain/' + state.domain;
