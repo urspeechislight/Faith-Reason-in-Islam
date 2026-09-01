@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788217900 - The Battle of Badr</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Battle of Badr (part 5)</h1>
+<p>Report 1788217900, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship f1ae91a, council fixes 7590ff8.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>7</td><td>6</td><td>6</td><td>8</td></tr>
+<tr><td>First Principles</td><td>8.5</td><td>8.5</td><td>8.5</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>9</td><td>7</td><td>8</td><td>8</td></tr>
+<tr><td>Outsider</td><td>8</td><td>7</td><td>7</td><td>9</td></tr>
+<tr><td>Executor</td><td>9</td><td>7</td><td>8</td><td>9</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (7590ff8)</h2>
+<ul>
+<li><strong>The battle itself was skipped</strong> (all five advisors, the
+unanimous biggest gap). Fixed with Qur'an 8:9 (fetched from the Uthmani
+API, byte-verified) carrying the battle hour between the shelter and the
+closing verse, with a prose bridge on the released charge and the rout.</li>
+<li><strong>The Muslim dead were collapsed to Ubayda</strong> (Contrarian,
+Expansionist, Outsider, Executor). Fixed with a new byte-verified quote
+from al-Shirbini's al-Siraj al-Munir (vol.3, p.176, carrying Muqatil)
+naming Muhaja ibn Abd Allah the first Muslim killed at Badr, and the
+closing's casualties sentence rewritten around the fuller roll.</li>
+<li><strong>"Took captives and did not pursue slaughter" was asserted
+while the record carries executions</strong> (Contrarian, First
+Principles). The unsupported restraint claim was dropped, and the page now
+carries the Nadr ibn al-Harith execution openly, with a new byte-verified
+quote from al-Tahrani's Ma'rifa al-Imam (vol.9, p.127) citing Ibn
+Hisham's Sira vol.2, p.286. The closing names the execution plainly.</li>
+<li><strong>"Struck down by the two sons of Afra" contradicted the Ibn
+al-Jawzi quote directly beneath it</strong> (Contrarian, First
+Principles). Both the narration frame and c5 now carry the agreed report
+(Mu'adh ibn Amr and Mu'adh ibn Afra) with the variant kept in view.</li>
+<li><strong>Qur'an 59:8 is a Banu Nadir fay' verse</strong> (Contrarian,
+First Principles). The framing now says plainly what the verse is: the
+verse fixing the Emigrants' right to the spoils, quoted for its naming of
+the dispossession.</li>
+<li><strong>Prose repairs</strong>: "The second question." source artifact
+removed from the Ibn al-Arabi translation; the tangled "take the caravan,
+and the army" sentence rewritten; the ungrammatical casualties sentence
+replaced; Quraysh and the Hijra glossed; "five bloodless marches" linked
+to the series index; the strategic-outcome sentence now linked to Uhud's
+revenge march instead of asserting an unbacked wealth-flow claim; the
+Ubayda, Abu Jahl, and death-roll paragraphs gained their c4/c5 anchors;
+c1's "agree on the frame" now names the one recorded split it sits
+over.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The fourteen Muslim dead of the full counts</strong>. The
+corpus probes grounded Muhaja as first killed but not the fourteen
+figure at a citable locus; the fuller roll is recorded for a future
+session.</li>
+<li><strong>Quraysh's force size of about a thousand</strong> (First
+Principles). Not in the note's carriers; a corpus-grounded number belongs
+to a follow-up.</li>
+<li><strong>Abu Sufyan's escape and recall message</strong> (Contrarian,
+Expansionist). Not carried by the note's sources; part 7 (al-Sawiq) is
+its natural home.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK before and after fixes; style sweep clean.</li>
+<li>All 25 Arabic blocks byte-verified: 12 exact from the note's loci, 8
+extracted from the cited corpus pages (the note's transcription had
+punctuation and one recension drift), 5 fetched from the Uthmani API
+(8:5, 3:123, 59:8, and the new 8:9) and asserted as substrings.</li>
+<li>Live page verified HTTP 200 with title and the Nadr block after the
+fix push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The council's three convergent findings (the missing battle, the
+collapsed Muslim losses, the unexamined executions) each received a
+corpus-grounded addition rather than a softening, which is the standard
+this gate exists to enforce on the series' most important day. Gate
+closed with fixes verified live.</p>
+</body>
+</html>

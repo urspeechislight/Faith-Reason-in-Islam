@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788231220 - The Expedition of Hamra al-Asad</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of Hamra al-Asad (part 12)</h1>
+<p>Report 1788231220, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 283bfd6, council fixes 903772e.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>6</td><td>6</td><td>7</td></tr>
+<tr><td>First Principles</td><td>8</td><td>7</td><td>6</td><td>7</td></tr>
+<tr><td>Expansionist</td><td>8</td><td>6</td><td>6</td><td>7</td></tr>
+<tr><td>Outsider</td><td>7</td><td>8</td><td>7</td><td>7</td></tr>
+<tr><td>Executor</td><td>7</td><td>7</td><td>6</td><td>6</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (903772e)</h2>
+<ul>
+<li><strong>c3's "the tribes read the pursuit, and not the rout, as the
+measure of Medina" carried the justification on zero sources</strong>
+(all five advisors; unanimous weakest argument). c3 now argues from the
+Prophet's stated aim in al-Kharkushi's line, "pursue them until they
+hear that you have pursued them," states plainly that the carriers
+record no report of how the tribes read it, and names the mechanism,
+Ma'bad's word at al-Rawha. The closing's counterfactual is rebuilt on
+the stated aim.</li>
+<li><strong>The deterrence mechanism was never told</strong> (First
+Principles' biggest gap; Expansionist's suggested addition). Fixed with
+a new byte-verified quote from Sayyid Qutb's Fi Zilal al-Qur'an
+(vol.1, p.463) carrying the full Ma'bad episode, Abu Sufyan's resolved
+return, and Ma'bad's warning that turned him. This also corrects the
+dek's "mere news" framing, which the quotes contradicted (Contrarian's
+opposite-sentence).</li>
+<li><strong>Force size, distance, and stay length were missing</strong>
+(Contrarian, Executor). Fixed with a new quote from Abu Hayyan's
+al-Bahr al-Muhit (vol.3, p.435), two hundred men, eight miles, three
+days, and the date added to the intro.</li>
+<li><strong>Qur'an 3:174 completes the set the page called a pair</strong>
+(Expansionist). Added, fetched from the Uthmani API and verified.</li>
+<li><strong>"The one act of force was the fasting order against the
+Prophet's own command" inverted the hadith</strong> (three advisors).
+Rewritten, the men's fasting after he had told them to break it.</li>
+<li><strong>c3 was orphaned and both Qur'an callouts unanchored</strong>
+(all five). The Qur'an lead-in now anchors c2 and c3.</li>
+<li><strong>Glosses</strong> (all five in parts): Safwan identified as a
+chief of Quraysh; sijjil glossed as the baked-clay stones of punishment;
+al-Rawha glossed; Khubayb's dangling conversion given its half-sentence;
+the stray "(1)" stripped; "mauled the state" re-registered.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The captured Quraysh scouts Contrarian says the standard
+accounts include</strong>. Not in this page's carriers, and the corpus
+session surfaced no such line; adding it ungrounded is barred. Recorded
+for follow-up.</li>
+<li><strong>Abu Sufyan's challenge to Badr al-Maw'id</strong>
+(Contrarian). Belongs to part 14's page, where the rematch is the
+subject.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 7 Arabic blocks byte-verified: al-Kharkushi extracted from the
+corpus after the note's copy drifted, al-Maqrizi exact, and the three
+new additions (al-Bahr al-Muhit, Sayyid Qutb, Qur'an 3:174) extracted
+or fetched and asserted.</li>
+<li>Live page verified HTTP 200 with title and the Ma'bad block after
+the push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The council turned the campaign's thinnest page into one of its
+best-evidenced: the deterrence thesis now rests on the Ma'bad episode
+instead of an unsourced perception claim, the Prophet's stated aim
+replaces the invented strategic ledger, and the verse set is complete.
+Gate closed with fixes verified live.</p>
+</body>
+</html>

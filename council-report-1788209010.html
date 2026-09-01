@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788209010 - The Expedition of Waddan</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of Waddan (part 1)</h1>
+<p>Report 1788209010, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 46a6a75, council fixes 337daf2.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>7</td><td>6</td><td>8</td></tr>
+<tr><td>First Principles</td><td>9</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>Expansionist</td><td>9</td><td>8</td><td>6</td><td>8</td></tr>
+<tr><td>Outsider</td><td>8</td><td>8</td><td>7</td><td>7</td></tr>
+<tr><td>Executor</td><td>9</td><td>8</td><td>7</td><td>8</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (337daf2)</h2>
+<ul>
+<li><strong>The justification closing rested on two uncited premises</strong>
+(all five advisors; the unanimous weakest argument). Fixed by grounding the
+defensive-aim claim with Qur'an 22:39-40, fetched from the Uthmani API and
+byte-verified as a substring of the fetched text. The closing now states the
+refugee wrong the Qur'an itself names, quotes the permission verses, and
+leans the caravan-pressure framing on the page's own quoted "to intercept a
+caravan of Quraysh."</li>
+<li><strong>The plunder argument ignored that the caravan had already
+passed</strong> (Contrarian). Fixed: the closing now says "He came home
+without plunder and chose a defensive alliance over retaliation," and the
+narration's claim softened to the quoted "No caravan crossed his path."</li>
+<li><strong>"Sixty per Ibn Ishaq's line" misattributed</strong> (First
+Principles, Expansionist). Sixty riders come from the Maktabat al-Marja'
+block; the c4 row now says so.</li>
+<li><strong>al-Waqidi orphaned in c4</strong> (all five). The
+"eleven per al-Waqidi" dating row had no quote behind it anywhere on the
+page; dropped rather than padded.</li>
+<li><strong>Emigrants, Ansari, Hijra undefined</strong> (Contrarian, First
+Principles, Expansionist, Outsider). All three glossed at first use in the
+opening paragraph.</li>
+<li><strong>Road naming inconsistent</strong> (Outsider). Unified to "the
+caravan road to Syria" in narration, commentary, and closing.</li>
+<li><strong>Commentary card order inverted the narration order</strong>
+(Contrarian, Outsider). Cards reordered to sources, pact, banner, numbers,
+with anchor ids and narration anchors remapped; the pact paragraph also
+gained the c4 anchor for the Makhshi/Majdi name split.</li>
+<li><strong>c4's "story told from memory a century later" handed the
+Orientalist the case; "every line of transmission" overstated one
+root</strong> (Contrarian, First Principles). Both sentences rewritten:
+"The gaps sit at the edges of the story, in counts and in names. Every
+carrier agrees on the core."</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The Prophet's visit to his mother's grave at al-Abwa</strong>
+(Expansionist). Corpus-grounded but outside the vault note; recorded as a
+possible future addition rather than invented.</li>
+<li><strong>Abu al-Bakhtari al-Qurashi unidentified</strong> (Contrarian).
+The vault note carries no identification of him beyond al-Mufid's chain; a
+narrator assessment would need its own corpus session.</li>
+<li><strong>Why Quraysh and the Muslims were enemies</strong> (Outsider).
+Now partially carried by the Qur'an 22:39-40 grounding; a fuller background
+section belongs to the hub and the Badr pages.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK before and after fixes.</li>
+<li>All 10 Arabic blocks byte-verified: 5 exact against the note's verified
+loci, 4 extracted directly from corpus pages (the note's transcription had
+drifted on the pact-document and Ibn Sa'd spans), 1 fetched from the Uthmani
+API (Qur'an 22:39-40) and asserted as a substring.</li>
+<li>Live page verified HTTP 200 with title, and the Qur'an block served
+after the fix push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>Persuasiveness entered at 6-7 because the closing argued from nothing;
+the Qur'an grounding moves the load-bearing premise onto quoted scripture,
+which is exactly the site's method. Readability was already at or near bar
+and the residual jargon is now glossed. Gate closed with fixes verified
+live.</p>
+</body>
+</html>

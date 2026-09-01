@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788222440 - The Expedition of al-Sawiq</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:1rem 0}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of al-Sawiq (part 7)</h1>
+<p>Report 1788222440, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 3abbf58, council fixes 6a93e74.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>7</td><td>6</td><td>9</td></tr>
+<tr><td>First Principles</td><td>9</td><td>8</td><td>6</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>9</td><td>8</td><td>8</td><td>9</td></tr>
+<tr><td>Outsider</td><td>8</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>Executor</td><td>9</td><td>8</td><td>7</td><td>9</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (6a93e74)</h2>
+<ul>
+<li><strong>"No companion is reported to have fled" was silence offered as
+evidence, answering a charge no source raises</strong> (all five advisors).
+Dropped from c3.</li>
+<li><strong>c1's "divide only on the band and the deputy" understated
+divergences the page itself shows</strong> (four advisors; the unanimous
+opposite-sentence). c1 now names all four splits, including the vow's
+terms, oil alone or perfume and women, and the second victim, hired hand
+or ally; the intro and c2's fact card carry the vow split too.</li>
+<li><strong>"No negotiation was possible... and none is recorded" restated
+an absence as a necessity</strong> (Contrarian, Expansionist). Rewritten to
+what the record shows.</li>
+<li><strong>"The tactical ledger showed nothing" contradicted the flour
+haul its own card tallies</strong> (Expansionist, Executor). The ledger now
+shows the dumped flour and no prisoners.</li>
+<li><strong>"The city's watch had worked" claimed intelligence success
+against a raid that succeeded</strong> (Outsider). Rewritten to the
+same-day chase.</li>
+<li><strong>The Nadir collaboration hook was teased and never cashed</strong>
+(Expansionist, Outsider, Executor; biggest gap). c2 now states where the
+account came due, the Nadir expedition, part 13 of this series.</li>
+<li><strong>Anchors and prose</strong>: c4 anchor added to the Halabi
+deputy callout and c3 to the Musta'dhab name callout; the year stated in
+the intro; Emigrants glossed; the Halabi translation's "He sent"
+disambiguated to Abu Sufyan; the fragment bullet completed.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The Bukhari and Ibn Ishaq lines of this raid</strong>
+(Contrarian, First Principles). The vault note carries neither; the
+Bukhari version, in which Huyayy hosts rather than refuses, belongs to a
+dedicated corpus session before it can appear on the page.</li>
+<li><strong>An isnad assessment of al-Waqidi</strong> (Contrarian). The
+series index carries the standing note; a per-chain grading is out of
+scope for this note's carriers.</li>
+<li><strong>The pursuit's terminus</strong> (Contrarian, Executor). Not in
+the note's carriers; the corpus's Ibn Kathir line (Qarqarat al-Kadr)
+would need its own grounding.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 6 Arabic blocks byte-verified: 3 exact from the note, 3 extracted
+from the cited corpus pages (al-Waqidi's opening and both al-Halabi
+blocks, whose exact text the FTS probes initially misranked). The
+unquoted al-Baladhuri deputy claim in the vault note was dropped from the
+spine rather than carried without evidence.</li>
+<li>Live page verified HTTP 200 with title and the cashed Nadir hook after
+the push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>A small, clean page whose weaknesses were all inferential, silence
+dressed as evidence and one contradiction between the card and the haul.
+All are removed or grounded; the four source divergences are now named
+instead of smoothed. Gate closed with fixes verified live.</p>
+</body>
+</html>

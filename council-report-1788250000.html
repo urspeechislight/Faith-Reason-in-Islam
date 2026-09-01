@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788250000 - The Battle of the Trench</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Battle of the Trench (part 18)</h1>
+<p>Report 1788250000, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship f1c9e66 and 75db21a (hub row link), council
+fixes 64b036b.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>7</td><td>6</td><td>6</td></tr>
+<tr><td>First Principles</td><td>8</td><td>8</td><td>6</td><td>6</td></tr>
+<tr><td>Expansionist</td><td>7</td><td>8</td><td>8</td><td>7</td></tr>
+<tr><td>Outsider</td><td>8</td><td>9</td><td>7</td><td>7</td></tr>
+<tr><td>Executor</td><td>8</td><td>8</td><td>7</td><td>7</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (64b036b)</h2>
+<ul>
+<li><strong>The Abu al-Fida Arabic block ended mid-word while the
+translation ran on</strong> (Contrarian, First Principles, Expansionist,
+Executor). The span was extended to the corpus's sentence end, "until
+the people of the trench turned away from it filled," and the
+translation now matches it. The "what Jabir related" phrase the
+translation carried without Arabic counterpart was dropped.</li>
+<li><strong>Qur'an 33:9 is the wind's own verse and was absent</strong>
+(Executor's biggest gap; Expansionist). Fetched from the Uthmani API,
+byte-verified, and set before 33:10; the closing verse paragraph now
+anchors both.</li>
+<li><strong>"Names the buyer, the exiled Nadir, and the price" claimed
+a purchase and a price no source carries</strong> (Contrarian, First
+Principles, Outsider, Executor; the unanimous weakest argument). The
+closing now names the mover, and the "marched against no one that
+year" claim, which ignored the two marches of that same year, is
+replaced by naming both, with links, and their bloodless ends.</li>
+<li><strong>"A champion who had crossed it" contradicted the sources'
+"found no crossing"</strong> (Contrarian, First Principles). Now the
+champion who came out calling for single combat.</li>
+<li><strong>c4 had no inbound anchor, the Abu al-Fida anchor pointed at
+the wrong card, and the duel-and-wind and Qur'an blocks were
+unanchored</strong> (Contrarian, First Principles, Expansionist,
+Outsider, Executor). All four repaired: the signs to c2, the duel and
+the verses to c3, and c4 anchored at the verses' paragraph.</li>
+<li><strong>c3 opened by undercutting its own thesis</strong>
+(Expansionist, Executor). Rewritten: Amr broke the deadlock, and the
+wound inside the walls was worse than anything outside them.</li>
+<li><strong>Prose repairs</strong>: the dangling comma trimmed from the
+second al-Mazandarani block; the orphan deputy sentence removed;
+Ashja spelled correctly; "the Commander of the Faithful" glossed as
+Ali.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The Qurayza affair's narration</strong> (Outsider's biggest
+gap). Part 19 is its own page and its own record, and the closing now
+defers with the reason stated; the vault note carries no Qurayza
+material for this page.</li>
+<li><strong>Nu'aym ibn Mas'ud's counter-espionage and the Muslim force
+size</strong> (Contrarian, Expansionist). Not in the vault note's
+carriers; a follow-up corpus session could add them.</li>
+<li><strong>The duel's Sahih stratum</strong> (Contrarian). The corpus
+session surfaced the carriers quoted; the Sira stratum would need its
+own grounding.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 8 Arabic blocks byte-verified: al-Mazandarani's confederacy span
+extracted from the corpus after the note's copy drifted, al-Nu'man's
+hold order re-extracted, Abu al-Fida's heading-dating and signs spans
+extracted with the signs extended to the corpus's own sentence end, and
+Qur'an 33:9 and 33:10 fetched from the Uthmani API.</li>
+<li>The hub row link, missed in the ship commit by a row-text mismatch,
+landed in its own commit and is live.</li>
+<li>Live page verified HTTP 200 with title and the wind verse after the
+push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The council caught a truncated quote running past its Arabic, a
+purchase the sources never recorded, and a crossing the sources
+denied. All are fixed or grounded, and the wind now stands on its own
+verse. Gate closed with fixes verified live.</p>
+</body>
+</html>

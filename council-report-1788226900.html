@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788226900 - The Expedition of Dhat Amr</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of Dhat Amr (part 9)</h1>
+<p>Report 1788226900, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 57d18c9, council fixes 6b60861.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>9</td><td>7</td><td>6</td><td>8</td></tr>
+<tr><td>First Principles</td><td>9</td><td>8</td><td>6</td><td>7</td></tr>
+<tr><td>Expansionist</td><td>9</td><td>8</td><td>7</td><td>7</td></tr>
+<tr><td>Outsider</td><td>8</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>Executor</td><td>8</td><td>8</td><td>7</td><td>8</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (6b60861)</h2>
+<ul>
+<li><strong>The tent scene's decisive beats rested only on al-Amili's late
+abridgement</strong> (all five advisors). Fixed with a new byte-verified
+quote from al-Qubaysi al-Amili's Tafsir al-Bayan al-Safi (vol.2, p.401),
+which carries the scene whole, Jibril's push, the shahada, and closes
+with "and the verse came down," upgrading the scene's close and its verse
+linkage from assertion to quoted tafsir.</li>
+<li><strong>"The Qur'an set the event into a verse" had zero support</strong>
+(all five; the unanimous biggest gap). The verse paragraph now points at
+the tafsir line that ties the verse to the event, and the closing argues
+from it.</li>
+<li><strong>"Stayed the month of Safar" had no carrying quote</strong>
+(four advisors). The Ibn Kathir block is extended with the corpus's next
+sentence, "He stayed in Najd the whole of Safar or most of it, then went
+back and met no hostility," grounding the month and the bloodless close
+together.</li>
+<li><strong>"A commander with license for slaughter does not produce that
+scene" was rhetoric atop a single-source detail</strong> (all five;
+unanimous weakest argument). Dropped; the closing now reads the scene
+instead of arguing from it, and the "guest and ally" overreach is
+replaced with the text's own ending.</li>
+<li><strong>The verse paragraph's anchor opened the wrong card</strong>
+(four advisors). Moved from c3 to c2, where the verse is read; the
+al-Baladhuri guide callout gained its c3 anchor.</li>
+<li><strong>c1 claimed agreement its quotes did not carry</strong>
+(Executor). The card now states plainly which carrier holds which piece,
+including that the sword's turn belongs to the Shia lines.</li>
+<li><strong>Prose repairs</strong>: the garbled lede ("came down it a
+Muslim") fixed; the dangling "(or Hibab)" fragment and the stray "(1)"
+footnote marker removed from the Arabic; sira glossed; the "no plunder
+beyond the ground itself" contradiction fixed; the deputy-note phrase
+expanded.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The Two Sahihs' Jabir narration of the armed bedouin</strong>
+(Expansionist's suggested canonical upgrade). The corpus probes surfaced
+Shia tafsir lines and a variant tied to the 5:67 protection verse, but
+not the Sahih text at a citable locus; a hadith-database session would be
+needed. Recorded for follow-up.</li>
+<li><strong>"Did anyone follow Du'thur home?"</strong> (Outsider). No
+carrier on the page or in the probes says; the page now ends where the
+record ends.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 11 Arabic blocks byte-verified: 5 exact from the note, 5 extracted
+from the cited corpus pages (including the Ibn Kathir record under
+al-Bidaya wa-l-Nihaya 4:3, correcting the vault note's cite to a work the
+corpus does not hold under that title), and Qur'an 5:11 fetched from the
+Uthmani API, plus the new al-Qubaysi span.</li>
+<li>Live page verified HTTP 200 with title and the tafsir cite after the
+push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The page entered with the campaign's best readability scores but the
+same weakness the gate keeps catching, a load-bearing claim resting on
+the thinnest carrier. The scene's close and verse linkage now sit on a
+quoted tafsir line, the month claim on the corpus's own next sentence,
+and the closing's rhetoric on the scene itself. Gate closed with fixes
+verified live.</p>
+</body>
+</html>

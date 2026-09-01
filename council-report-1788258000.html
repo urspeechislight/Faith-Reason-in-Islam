@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788258000 - The Expedition of Banu Lahyan</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of Banu Lahyan (part 20)</h1>
+<p>Report 1788258000, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship f883806, council fixes 68480cc.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>7</td><td>6</td><td>5</td><td>6</td></tr>
+<tr><td>First Principles</td><td>8</td><td>7</td><td>6</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>7</td><td>7</td><td>6</td><td>8</td></tr>
+<tr><td>Outsider</td><td>8</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>Executor</td><td>7</td><td>7</td><td>7</td><td>8</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (68480cc)</h2>
+<ul>
+<li><strong>Four Arabic blocks were visibly truncated mid-word while their
+translations completed them, plus an orphan lemma and a verse shorter
+than its own transliteration</strong> (all five advisors). All replaced
+with full corpus spans: al-Kharkushi's line to its period, the Jabir
+prayer replaced wholesale by Ibn Sa'd's Tabaqat span that carries the
+march itself, the tribe fortified on the mountain tops, the feint to
+Usfan, the two hundred riders, and the prayer complete; and Ka'b's verse
+replaced with the full three-hemistich original from al-Suhayli, with
+the transliteration and translation extended to match. The orphan
+"قرد :" dropped.</li>
+<li><strong>"And the works treat it so" attributed a verdict no work
+makes</strong> (all five; unanimous weakest argument). The restraint
+claim now rests on the record's own ending, the feint and the homegoing
+prayer, with no pursuit.</li>
+<li><strong>"Teachers sent at the tribes' own request" inverted
+requester and killer</strong> (Contrarian's opposite sentence). Now the
+teachers were sent to tribes who asked for them and betrayed by other
+hands, with the blood laid to Lahyan.</li>
+<li><strong>"Judged two months before" contradicted the page's own
+calendar</strong> (Contrarian, First Principles). Now "months before."
+The dating split with the series index itself, al-Nadwi's after-Hudaybiyya
+against al-Waqidi's Rabi' I, is opened in a c1 note.</li>
+<li><strong>The march was a silhouette</strong> (Outsider, Contrarian).
+Ibn Sa'd's span supplies the mechanics, the heights, the feint, and the
+force size, and c2's verse commentary now matches the full verse. The
+verse callout gained its anchor, and "milch camels" re-rendered as milk
+camels.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>An al-Raji' page</strong> (Contrarian, First Principles,
+Expansionist; the biggest gap). The serial's hub table has no al-Raji'
+part, and the vault holds no note for it; the premise line stands on
+al-Nadwi's cause statement alone, recorded here as a limitation.</li>
+<li><strong>A Dhi Qard page</strong> (First Principles, Expansionist).
+Also not a hub part; the adjacency stays as stated.</li>
+<li><strong>The isnad of the Jabir report</strong> (First Principles).
+Ibn Sa'd's span carries it within his Tabaqat; a full isnad assessment
+is out of scope for a narration page.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 6 Arabic blocks byte-verified: the al-Nadwi paragraphs exact,
+and al-Kharkushi's line, Ibn Sa'd's march-and-prayer span, and Ka'b's
+full verse extracted from the corpus after the council exposed the
+note's truncations. The citation correction, the prayer re-grounded
+from al-Suhayli to Ibn Sa'd, is recorded on the page.</li>
+<li>Live page verified HTTP 200 with the mountain-tops block after the
+push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The council found the campaign's most damaged quote set, four blocks
+cut mid-word, and the corpus repairs produced a better page than the
+note it came from: the march now has its mechanics, its feint, its
+force size, and its prayer on one grounded span, and the verse answers
+in full. Gate closed with fixes verified live.</p>
+</body>
+</html>

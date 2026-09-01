@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788254000 - The Expedition Against Banu Qurayza</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition Against Banu Qurayza (part 19)</h1>
+<p>Report 1788254000, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship c6627f1, council fixes 24909e3.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>7.5</td><td>6</td><td>7.5</td></tr>
+<tr><td>First Principles</td><td>8</td><td>7</td><td>6</td><td>8</td></tr>
+<tr><td>Expansionist</td><td>8</td><td>8</td><td>7</td><td>7</td></tr>
+<tr><td>Outsider</td><td>7</td><td>7</td><td>6</td><td>7</td></tr>
+<tr><td>Executor</td><td>9</td><td>9</td><td>8</td><td>9</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (24909e3)</h2>
+<ul>
+<li><strong>The Torah war-code claim, the page's central moral move, was
+asserted by zero callouts</strong> (First Principles, Expansionist,
+Outsider, Executor; the unanimous weakest argument). Fixed with a new
+byte-verified quote from Ajwibat al-Masa'il al-Aqidiyya (p.83) carrying
+the Torah's siege law whole, offer peace, and if it makes war, strike
+the males and take the women and children as plunder, with Sa'd named as
+possibly knowing the code through the Aws alliance. c2's claim is now
+scoped to that line.</li>
+<li><strong>The chiefs-warning prevention evidence was never shown on
+this page</strong> (First Principles, Expansionist, Executor). The
+closing now attributes it to the Trench page's record, where the
+warning belongs.</li>
+<li><strong>Forfeiture was claimed for a breach that never matured</strong>
+(Contrarian, Executor's opposite sentences). "Opens a city's gate" is
+now "throws in with a besieging army," and the forfeiture is standing,
+not everything.</li>
+<li><strong>Coerced in the narration, fully agent in the closing</strong>
+(Contrarian, Outsider's opposite sentences). The closing now holds both
+truths and names the verdict as answering the choice.</li>
+<li><strong>"Had not yet laid down his arms" contradicted the quote's
+washing-his-head</strong> (First Principles). The intro now states the
+washing and the command arriving in it.</li>
+<li><strong>Jargon</strong> (Contrarian, First Principles, Expansionist,
+Outsider, Executor): "carriers" glossed as "the words the later works
+carry" at first use and reduced thereafter; the Nadir identified as the
+exiled clan who bought the confederacy; Aws, Emigrants, and the
+Hudaybiyya year glossed; Sa'd's wound introduced at first mention of
+his death; the ambiguous thousand given its referent.</li>
+<li><strong>Anchors</strong> (Contrarian, First Principles, Expansionist,
+Outsider, Executor): the premature verdict anchor removed from the
+opening, the plea and Qur'an callouts anchored, and the stale companion
+link text replaced with plain reference.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>Execution-scope evidence, the confinement criterion</strong>
+(Contrarian, Expansionist's biggest gap). No carrier on this page
+carries the criterion; it belongs to the debate page, which the
+companion link names.</li>
+<li><strong>Ka'b ibn Asad, Huyayy, and Rayhana</strong> (Contrarian,
+First Principles, Expansionist). Not in the vault note's carriers; the
+note's frame kept the Qurayza as a body, and adding actors without
+grounded material is barred.</li>
+<li><strong>The Sahih or Sira isnad stratum</strong> (Contrarian). The
+corpus session surfaced the carriers quoted; the classical stratum
+would need its own grounding session.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 8 Arabic blocks byte-verified: all 6 note blocks exact (the
+round's first all-exact page), the Torah parallel extracted from the
+corpus, and Qur'an 33:26 fetched from the Uthmani API.</li>
+<li>An unrelated uncommitted working-tree change (ifk-maria.html, a
+whole-file line-ending rewrite not made by this pipeline) blocked
+pull-rebase; the push succeeded without it and the file remains
+untouched, per the stop rule.</li>
+<li>Live page verified HTTP 200 with the Torah block after the push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The serial's most contested judgment entered with its central moral
+claim unsourced, and the corpus held the Torah line that carries it.
+The claim is now quoted, the coercion-and-choice tension is held open
+in the closing instead of smoothed, and the worst overclaims are gone.
+Gate closed with fixes verified live.</p>
+</body>
+</html>

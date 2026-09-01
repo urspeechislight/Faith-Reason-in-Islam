@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788247000 - The Expedition of al-Muraysi</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of al-Muraysi (part 17)</h1>
+<p>Report 1788247000, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 32a15ef, council fixes 8508393.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>9</td><td>8</td><td>6</td><td>9</td></tr>
+<tr><td>First Principles</td><td>9</td><td>8</td><td>7</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>8</td><td>7</td><td>7</td><td>8</td></tr>
+<tr><td>Outsider</td><td>7</td><td>8</td><td>7</td><td>8</td></tr>
+<tr><td>Executor</td><td>8</td><td>8</td><td>8</td><td>7</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (8508393)</h2>
+<ul>
+<li><strong>"An open envoy, on the record here, would have been held" was
+inference dressed as citation</strong> (all five advisors; unanimous
+weakest). The closing now presents Burayda's concealment as the record's
+own measure, not as a recorded fact about envoys.</li>
+<li><strong>"The record of the captives walking free stands against any
+charge of plunder" sat against the page's own division-of-spoils
+text</strong> (Contrarian, Expansionist, Outsider, Executor). The closing
+now states both halves plainly, the wealth taken as spoils, the captives
+freed within days, and calls the distinction the page's own.</li>
+<li><strong>"The quarrel belongs to the return camp" contradicted the
+quoted Arabic</strong> (Contrarian, First Principles; opposite sentence).
+The Arabic places it while the Messenger was camped there; c1 and c3 now
+say the camp at al-Muraysi itself.</li>
+<li><strong>"The hypocrites' affair" and "Ansar against Emigrants" went
+undefined</strong> (all five). The factions are glossed at first use, and
+the hypocrites are identified as the Medina Muslims of wavering loyalty
+whom the Qur'an names, with the affair assigned to the city after the
+return.</li>
+<li><strong>The quarrel and dating callouts were orphaned</strong>
+(First Principles, Expansionist, Outsider, Executor). Both gained their
+anchors.</li>
+<li><strong>The Ibn Sa'd parenthesis was dropped from the
+translation</strong> (Executor). Restored. The citation note's dangling
+verb completed, and c2's "wealth of the camp taken" now says taken as
+spoils, matching the record's own word.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>The hypocrites' affair itself, Ibn Ubayy and Qur'an
+63</strong> (all five advisors' biggest gap). The affair is Sura
+al-Munafiqun's own subject and no carrier on this page narrates it; a
+grounded telling needs its own corpus session, and the vault note carries
+only the two allusions the page kept. Recorded for follow-up.</li>
+<li><strong>Al-Harith's fate and casualty counts</strong> (Expansionist,
+Outsider, Executor). No carrier quoted here carries them.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK after fixes; style sweep clean.</li>
+<li>All 7 Arabic blocks byte-verified: al-Amili's abridgement, al-Kharkushi's
+line, and the dating-dispute paragraphs exact or extracted from the cited
+pages, and the full Aisha hadith re-extracted whole from al-Dhahabi after
+the serial note's copy of it was found truncated mid-word and duplicated,
+and the quarrel re-grounded in Ibn Kathir's tafsir after the note
+misattributed it to al-Dhahabi's page. Both corrections are recorded on
+the page.</li>
+<li>Live page verified HTTP 200 with title and the scoped closing after
+the push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>This round caught the campaign's worst note corruption yet: a hadith
+cut mid-word with its tail spliced under the wrong callout, and a
+misattributed quarrel. All three spans were re-grounded from the corpus,
+and the council then trimmed two closing claims that outran the record.
+Gate closed with fixes verified live.</p>
+</body>
+</html>

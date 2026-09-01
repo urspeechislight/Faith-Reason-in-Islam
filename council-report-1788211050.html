@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788211050 - The Expedition of Buwat</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The Expedition of Buwat (part 2)</h1>
+<p>Report 1788211050, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 97224cc, council fixes 42f2e5f.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>8</td><td>6</td><td>8</td></tr>
+<tr><td>First Principles</td><td>8</td><td>9</td><td>7</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>9</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>Outsider</td><td>8</td><td>9</td><td>7</td><td>9</td></tr>
+<tr><td>Executor</td><td>8</td><td>7</td><td>7</td><td>9</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (42f2e5f)</h2>
+<ul>
+<li><strong>"Umayya ibn Khalaf, who led the caravan, belonged to the hard
+core of Meccan hostility" was both uncited and half-wrong</strong> (all
+five advisors; every quoted source has him riding in the caravan, never
+leading it). Fixed: "led" corrected to "rode in", and the hostility claim
+grounded with a new byte-verified quote from al-Qastallani, Irshad al-Sari,
+vol.4, p.156, on Umayya's torture of Bilal, extracted from the corpus.</li>
+<li><strong>c1's "All lines agree... The march happened in Rabi' al-Awwal"
+was contradicted by the page's own al-Tahtawi quote</strong> (all five;
+unanimous opposite-sentence). Fixed: the date claim now rests on the core
+facts only, and the recorded month variant is kept in view.</li>
+<li><strong>The prevention paragraph never confronted "not marching"</strong>
+(Contrarian's weakest argument). Fixed: "Not marching was always possible,
+and it would have left the seizure unanswered."</li>
+<li><strong>Anchor order inverted card order</strong> (Contrarian,
+Outsider). Cards reordered to sources, why-nothing, the two Sa'ds, matching
+the order the narration meets them; anchor ids remapped and verified
+against card titles.</li>
+<li><strong>c2 ignored that Jamili, a Sunni digest, also carries Sa'd ibn
+Mu'adh as deputy</strong> (Contrarian). The deputy row now names both
+Jamili and al-Mustarshad.</li>
+<li><strong>Jargon</strong> (Contrarian, Expansionist, Outsider,
+Executor): "carriers" replaced with "later works"; Emigrants and Juhayna
+glossed at first use; "the permission verses" expanded to "the verses of
+permission to fight"; nav label aligned with the section heading.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>Why the force was Emigrants only</strong> (Contrarian,
+Executor). The vault note carries no source for it; a grounded answer would
+need its own corpus session.</li>
+<li><strong>The al-Suhayli stay sentence quoted then dropped</strong>
+(First Principles). The frame sentence already points at it; the stay
+carries no analytical weight for this march.</li>
+<li><strong>al-Waqidi and Ibn Sa'd direct</strong> (Expansionist). Not in
+the corpus behind this note's loci; the note's carriers are what the page
+quotes.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK before and after fixes; litotes/irony/pivot sweep
+clean.</li>
+<li>All 10 Arabic blocks byte-verified against the titan corpus: 6 exact
+from the note's loci, 3 extracted from Rawd al-Unaf vol.5 p.58 after FTS
+probes misranked the page, 1 page-break join (al-Tahtawi pp.286-287), and
+the new al-Qastallani span extracted from the corpus.</li>
+<li>Live page verified HTTP 200 with title, and the Umayya block served
+after the fix push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The page entered with readability near bar and the same justification
+weakness as part 1; it now carries its own on-page evidence for its one
+fresh claim (Umayya's record), corrects the overclaim the note carried, and
+keeps the recorded variant instead of smoothing it. Gate closed with fixes
+verified live.</p>
+</body>
+</html>

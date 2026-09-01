@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Council Report 1788213210 - The First Badr and the Pursuit of Kurz ibn Jabir</title>
+<style>body{font-family:Georgia,serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#333}h1,h2{color:#3D4451}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.95rem}</style>
+</head>
+<body>
+<h1>LLM Council Report - The First Badr and the Pursuit of Kurz ibn Jabir (part 3)</h1>
+<p>Report 1788213210, 31 August 2026. One round of 5 advisors; category
+narration. Commits: ship 8be9f74, council fixes 85421a6.</p>
+
+<h2>Scores (before fixes)</h2>
+<table>
+<tr><th>Advisor</th><th>R</th><th>C</th><th>P</th><th>Conn</th></tr>
+<tr><td>Contrarian</td><td>8</td><td>8</td><td>6</td><td>7</td></tr>
+<tr><td>First Principles</td><td>9</td><td>8</td><td>7</td><td>9</td></tr>
+<tr><td>Expansionist</td><td>8</td><td>7</td><td>6</td><td>7</td></tr>
+<tr><td>Outsider</td><td>7</td><td>8</td><td>6</td><td>8</td></tr>
+<tr><td>Executor</td><td>8</td><td>7</td><td>7</td><td>8</td></tr>
+</table>
+
+<h2>Convergent criticisms and fixes (85421a6)</h2>
+<ul>
+<li><strong>The deterrence claim was unsupported flourish</strong>
+("that lesson reached every tribe that watched", flagged by four
+advisors as the weakest argument). Fixed: the closing now states the show
+of intent and adds "What any tribe made of that, the sources do not say."</li>
+<li><strong>The sacred-months frame was contradicted by the page's own
+Rabi' al-Awwal dating</strong> (flagged by all five in some form). Fixed:
+the card is retitled "An Answer Above Vengeance"; its prose keeps A'lam
+al-Hidaya's reading as the source's frame, states plainly that the march
+fell in an ordinary month, and the closing no longer claims the sacred
+months shaped anything here.</li>
+<li><strong>c3's tribes-at-peace sentence had no source</strong> (four
+advisors). Dropped; replaced with a statement about the record: "No fight
+happened, and no harm on the way is recorded anywhere in the six lines
+above."</li>
+<li><strong>"the hub" was undefined jargon</strong> (all five). Now "the
+series index", linked to the hub page.</li>
+<li><strong>Kurz ibn Jabir was never identified</strong> (First
+Principles, Expansionist, Outsider). The intro now names him "a raider of
+the Fihr clan of Quraysh."</li>
+<li><strong>c2 flattened Ibn Abd al-Barr's alternative reading of Sa'd's
+errand</strong> (Outsider, Executor). The card now carries both readings.</li>
+<li><strong>The #c1 anchor sat on a paragraph with no calendar
+content</strong> (four advisors). Moved to the Ibn Sayyid al-Nas frame
+where the dating notes appear; the Sa'd detachment callout gained its c2
+anchor.</li>
+</ul>
+
+<h2>Not fixed, with reasons</h2>
+<ul>
+<li><strong>Kurz's link to the coming great Badr and the force size</strong>
+(Expansionist). The vault note carries neither; the Badr page (part 5) is
+the right home if the corpus grounds it.</li>
+<li><strong>Prev/next part links</strong> (Contrarian). The hub table
+carries serial navigation; part links will be added uniformly if the
+series adopts them.</li>
+<li><strong>Sa'd's al-Kharar detachment as this pursuit or a separate
+sariyya</strong> (Contrarian). The source itself hedges ("some said");
+the card now carries both readings rather than resolving what the sources
+leave open.</li>
+</ul>
+
+<h2>Verification</h2>
+<ul>
+<li>validate.py OK before and after fixes (it caught the comma-spliced
+card heading and an unwrapped ligature at build time, both fixed before
+ship).</li>
+<li>All 9 Arabic blocks byte-verified against the titan corpus: 8 exact
+from the note's loci, 1 (al-Waqidi) extracted from the corpus page after
+the exactness check misranked al-Maqrizi's variant.</li>
+<li>Live page verified HTTP 200 with title, and the fixed closing served
+after the push.</li>
+</ul>
+
+<h2>Chairman verdict</h2>
+<p>The page's core narration (theft, chase, lost trail) was carried by
+five independent callouts and needed no repair; the weaknesses sat in the
+interpretive frame, where the council caught a flourish, a dating
+contradiction, and an unsourced claim. All three are now either grounded
+in the record or stated as records of silence. Gate closed with fixes
+verified live.</p>
+</body>
+</html>
