@@ -17,6 +17,9 @@
   "fourbeat": 13,
   "closing": "Final Verdict"
  },
+ "abu-bakr-strikes-aisha.html": {
+  "cat": "debate"
+ },
  "ali-forbearance.html": {
   "cat": "debate",
   "tabs": true,
@@ -25,6 +28,9 @@
   "panes": 8,
   "fourbeat": 53,
   "closing": "Final Verdict"
+ },
+ "first-and-last.html": {
+  "cat": "exegesis"
  },
  "hasan-mitlaq.html": {
   "cat": "debate",
@@ -43,69 +49,6 @@
   "panes": 6,
   "fourbeat": 0,
   "closing": "Final Verdict"
- },
- "quran-preservation.html": {
-  "cat": "debate",
-  "tabs": true,
-  "n_ids": 49,
-  "acc": 0,
-  "panes": 6,
-  "fourbeat": 65,
-  "closing": "Final Verdict"
- },
- "tahrim-66-1.html": {
-  "cat": "debate",
-  "tabs": true,
-  "n_ids": 12,
-  "acc": 3,
-  "panes": 4,
-  "fourbeat": 0,
-  "closing": "Final Verdict"
- },
- "umm-kulthum-marriage.html": {
-  "cat": "debate",
-  "tabs": true,
-  "n_ids": 82,
-  "acc": 0,
-  "panes": 6,
-  "fourbeat": 1,
-  "closing": "Final Verdict"
- },
- "quran-65-4.html": {
-  "cat": "exegesis",
-  "tabs": false,
-  "n_ids": 0,
-  "acc": 0,
-  "panes": 0,
-  "fourbeat": 0,
-  "closing": "?"
- },
- "majlis-al-rida.html": {
-  "cat": "narration",
-  "tabs": false,
-  "n_ids": 21,
-  "acc": 1,
-  "panes": 0,
-  "fourbeat": 0,
-  "closing": "Commentary"
- },
- "tear-and-pool.html": {
-  "cat": "narration",
-  "tabs": false,
-  "n_ids": 14,
-  "acc": 1,
-  "panes": 0,
-  "fourbeat": 0,
-  "closing": "Commentary"
- },
- "light-of-prophet.html": {
-  "cat": "narration",
-  "tabs": false,
-  "n_ids": 0,
-  "acc": 0,
-  "panes": 0,
-  "fourbeat": 0,
-  "closing": "?"
  },
  "light-of-prophet-1.html": {
   "cat": "narration",
@@ -179,10 +122,71 @@
   "fourbeat": 0,
   "closing": "?"
  },
- "first-and-last.html": {
-  "cat": "exegesis"
+ "light-of-prophet.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 0,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "?"
  },
- "abu-bakr-strikes-aisha.html": {
-  "cat": "debate"
+ "majlis-al-rida.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 21,
+  "acc": 1,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "quran-65-4.html": {
+  "cat": "exegesis",
+  "tabs": false,
+  "n_ids": 0,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "?"
+ },
+ "quran-preservation.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 49,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 65,
+  "closing": "Final Verdict"
+ },
+ "tahrim-66-1.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 12,
+  "acc": 3,
+  "panes": 4,
+  "fourbeat": 0,
+  "closing": "Final Verdict"
+ },
+ "tear-and-pool.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 14,
+  "acc": 1,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "umm-kulthum-marriage.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 82,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 1,
+  "closing": "Final Verdict"
+ },
+ "word-and-command.html": {
+  "cat": "debate",
+  "closing": "Final Verdict"
  }
 }
