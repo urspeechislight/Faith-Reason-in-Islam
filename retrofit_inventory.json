@@ -1,185 +1,188 @@
 {
-  "3-42-vs-39-4.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 26,
-    "acc": 0,
-    "panes": 4,
-    "fourbeat": 59,
-    "closing": "Final Verdict"
-  },
-  "43_81.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 10,
-    "acc": 0,
-    "panes": 4,
-    "fourbeat": 13,
-    "closing": "Final Verdict"
-  },
-  "ali-forbearance.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 52,
-    "acc": 0,
-    "panes": 8,
-    "fourbeat": 53,
-    "closing": "Final Verdict"
-  },
-  "hasan-mitlaq.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 29,
-    "acc": 0,
-    "panes": 6,
-    "fourbeat": 28,
-    "closing": "Final Verdict"
-  },
-  "isiah_9_6.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 13,
-    "acc": 0,
-    "panes": 6,
-    "fourbeat": 0,
-    "closing": "Final Verdict"
-  },
-  "quran-preservation.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 49,
-    "acc": 0,
-    "panes": 6,
-    "fourbeat": 65,
-    "closing": "Final Verdict"
-  },
-  "tahrim-66-1.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 12,
-    "acc": 3,
-    "panes": 4,
-    "fourbeat": 0,
-    "closing": "Final Verdict"
-  },
-  "umm-kulthum-marriage.html": {
-    "cat": "debate",
-    "tabs": true,
-    "n_ids": 82,
-    "acc": 0,
-    "panes": 6,
-    "fourbeat": 1,
-    "closing": "Final Verdict"
-  },
-  "quran-65-4.html": {
-    "cat": "exegesis",
-    "tabs": false,
-    "n_ids": 0,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "?"
-  },
-  "majlis-al-rida.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 21,
-    "acc": 1,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "tear-and-pool.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 14,
-    "acc": 1,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 0,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "?"
-  },
-  "light-of-prophet-1.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 6,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-2.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 8,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-3.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 4,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-4.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 5,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-5.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 3,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-6.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 2,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-7.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 4,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "Commentary"
-  },
-  "light-of-prophet-genealogy.html": {
-    "cat": "narration",
-    "tabs": false,
-    "n_ids": 4,
-    "acc": 0,
-    "panes": 0,
-    "fourbeat": 0,
-    "closing": "?"
-  },
-  "first-and-last.html": {
-    "cat": "exegesis"
-  }
+ "3-42-vs-39-4.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 26,
+  "acc": 0,
+  "panes": 4,
+  "fourbeat": 59,
+  "closing": "Final Verdict"
+ },
+ "43_81.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 10,
+  "acc": 0,
+  "panes": 4,
+  "fourbeat": 13,
+  "closing": "Final Verdict"
+ },
+ "ali-forbearance.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 52,
+  "acc": 0,
+  "panes": 8,
+  "fourbeat": 53,
+  "closing": "Final Verdict"
+ },
+ "hasan-mitlaq.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 29,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 28,
+  "closing": "Final Verdict"
+ },
+ "isiah_9_6.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 13,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 0,
+  "closing": "Final Verdict"
+ },
+ "quran-preservation.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 49,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 65,
+  "closing": "Final Verdict"
+ },
+ "tahrim-66-1.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 12,
+  "acc": 3,
+  "panes": 4,
+  "fourbeat": 0,
+  "closing": "Final Verdict"
+ },
+ "umm-kulthum-marriage.html": {
+  "cat": "debate",
+  "tabs": true,
+  "n_ids": 82,
+  "acc": 0,
+  "panes": 6,
+  "fourbeat": 1,
+  "closing": "Final Verdict"
+ },
+ "quran-65-4.html": {
+  "cat": "exegesis",
+  "tabs": false,
+  "n_ids": 0,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "?"
+ },
+ "majlis-al-rida.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 21,
+  "acc": 1,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "tear-and-pool.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 14,
+  "acc": 1,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 0,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "?"
+ },
+ "light-of-prophet-1.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 6,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-2.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 8,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-3.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 4,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-4.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 5,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-5.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 3,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-6.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 2,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-7.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 4,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "Commentary"
+ },
+ "light-of-prophet-genealogy.html": {
+  "cat": "narration",
+  "tabs": false,
+  "n_ids": 4,
+  "acc": 0,
+  "panes": 0,
+  "fourbeat": 0,
+  "closing": "?"
+ },
+ "first-and-last.html": {
+  "cat": "exegesis"
+ },
+ "abu-bakr-strikes-aisha.html": {
+  "cat": "debate"
+ }
 }
