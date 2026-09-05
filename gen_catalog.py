@@ -78,7 +78,7 @@ DOMAIN_MAP = {
               "text-destruction", "word-and-command"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
                "abu-bakr-strikes-aisha"],
-    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool"],
+    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
 }
@@ -97,6 +97,7 @@ TITLE = {
 
 # card blurbs (fall back: first sentence of meta description)
 BLURB = {
+    "greatest-name": "The Greatest Name travels the corpus as letters of a word measured out to prophet after prophet until seventy-two letters rest with the Prophet and his family, and the drawn marks sold as the Name today descend from poems gathered five centuries after Ali.",
     "quran-preservation": "Shia sources on whether the Quran is preserved or corrupted: tahrif, the scribal error narrations, and the chain of transmission from the Prophet through Ali to the mushaf in your hands.",
     "quran-contradictions": "The Qur'an's 4:82 invites every scripture to be tested, and read by the rule the critic refuses for his own Bible the alleged contradictions resolve.",
     "borrowing": "The Qur'an records the borrowing charge and answers it with the clarity of its Arabic, and parallel is not plagiarism where no transmission chain was ever supplied.",
