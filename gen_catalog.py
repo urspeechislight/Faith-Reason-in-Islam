@@ -68,7 +68,7 @@ def battle_order():
 
 DOMAIN_MAP = {
     "quran": ["quran-preservation", "quran-contradictions", "borrowing",
-              "satanic-verses", "allah-deceiver"],
+              "satanic-verses", "allah-deceiver", "the-matter-between-two-matters"],
     "prophet": ["aisha-age", "quran-65-4", "wife-beating-4-34", "tahrim-66-1",
                 "sword-verse-9-5", "apostasy", "murdered-critics",
                 "banu-qurayza", "hudaybiyya"],
@@ -102,6 +102,7 @@ BLURB = {
     "quran-contradictions": "The Qur'an's 4:82 invites every scripture to be tested, and read by the rule the critic refuses for his own Bible the alleged contradictions resolve.",
     "borrowing": "The Qur'an records the borrowing charge and answers it with the clarity of its Arabic, and parallel is not plagiarism where no transmission chain was ever supplied.",
     "satanic-verses": "Qur'an 22:52 abolishes the whisper before it stands, and the cranes story is the other school's rejected report.",
+    "the-matter-between-two-matters": "The strongest free will objection to Islam presses one dilemma, and the lexicons fix its two horns under the names jabr and tafwid, the Imams of the Ahl al-Bayt named and damned both, and the reports carry the middle between them.",
     "allah-deceiver": "The lexicons class-index makr, the Qur'an's usage is requital against plotters, and the attack's own canon shares the grammar.",
     "aisha-age": "The age-six and age-nine reports fall on the tradition's own chronology, on chains that all lead to Kufa, on a witness the Qur'an itself questioned, and on the dolls argument's own dates.",
     "quran-65-4": "The whole dispute sits inside one clause, wa-alla'i lam yahidna. Its grammar, the classical lexicon, al-Mizan, and the Imams' law converge on women at the age of menstruation, not pre-pubescent girls.",
