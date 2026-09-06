@@ -1,732 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A linguistic and theological analysis of Qur'an 43:81, showing the verse rejects rather than permits divine sonship.">
-    <meta property="og:title" content="Analysis of Qur'an 43:81: Does It Allow Divine Sonship?">
-    <meta property="og:description" content="A linguistic and theological analysis of Qur'an 43:81, showing the verse rejects rather than permits divine sonship.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://urspeechislight.github.io/Faith-Reason-in-Islam/43_81.html">
-    <title>Analysis of Qur’an 43:81: Does It Allow Divine Sonship?</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FDFBF7;
-            color: #3D4451;
-        }
-        main p {
-            line-height: 1.7;
-        }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-amiri {
-            font-family: 'Amiri', serif;
-        }
-        .tab.active {
-            border-color: #B99C6B;
-            color: #8A6D3B;
-            background-color: #FDFBF7;
-        }
-        .rtl {
-            direction: rtl;
-            text-align: right;
-        }
-        .analysis-section {
-            margin-bottom: 1.5rem;
-        }
-        .analysis-heading {
-            font-weight: 700;
-            color: #3D4451;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        .hadith-callout {
-            background-color: #F8F1E2;
-            border: 1px solid #E9DCC3;
-            border-radius: 0.5rem;
-            padding: 1.25rem 1.5rem;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-        .quran-callout {
-            background-color: #F3F5F7;
-            border: 1px solid #DFE4EA;
-            border-radius: 0.5rem;
-            padding: 1.25rem 1.5rem;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-        .hadith-callout .rtl, .quran-callout .rtl {
-            line-height: 2.1;
-            color: #3D4451;
-        }
-        .hadith-callout cite, .quran-callout cite {
-            display: block;
-            margin-top: 0.75rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid rgba(61, 68, 81, 0.12);
-        }
-        .premise-card {
-            background-color: #F7F4EC;
-            border: 1px solid #E7E0D1;
-            border-radius: 0.5rem;
-            padding: 1rem 1.25rem;
-        }
-        .conclusion-card {
-            background-color: #F8F1E2;
-            border: 1px solid #B99C6B;
-            border-radius: 0.5rem;
-            padding: 1rem 1.25rem;
-        }
-        .challenge-question {
-            font-weight: 600;
-            color: #8A6D3B;
-            margin-top: 0.5rem;
-        }
-        .section-nav {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background-color: #FDFBF7;
-            border-bottom: 1px solid #E7E0D1;
-        }
-        .section-nav a.navlink {
-            color: #3D4451;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            padding: 0.75rem 0.25rem;
-            white-space: nowrap;
-        }
-        .section-nav a.navlink:hover { color: #8A6D3B; }
-        .section-nav a.navlink[aria-current="location"] {
-            color: #8A6D3B;
-            border-color: #B99C6B;
-        }
-        .section-nav a.backlink { color: #6B7280; }
-        .section-nav a.backlink:hover { color: #8A6D3B; }
-        .content-section, article { scroll-margin-top: 4.5rem; }
-        details.glossary summary, details.commentary summary { cursor: pointer; }
-        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
-        @media print {
-            .section-nav { display: none; }
-            details > * { display: block !important; }
-            details > summary { display: none !important; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does the Qur'an Leave the Door Open at 43:81</title>
+<meta name="description" content="The conditional of Qur'an 43:81 tested against the lexicons, the verse company, and the exegetes of both schools.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body { background: #FDFBF7; color: #2A2520; font-family: Inter, sans-serif; }
+.font-amiri { font-family: Amiri, Scheherazade New, serif; }
+.rtl { direction: rtl; text-align: right; }
+.honorific { font-family: Scheherazade New, Amiri, serif; }
+main { max-width: 56rem; margin: 0 auto; padding: 1.5rem; }
+nav.section-nav { position: sticky; top: 0; background: #FDFBF7; border-bottom: 1px solid #E7E0D1; padding: 0.5rem 1rem; display: flex; gap: 1rem; flex-wrap: wrap; z-index: 10; }
+nav.section-nav a[aria-current="location"] { color: #2A2520; font-weight: 600; }
+nav.section-nav a { color: #8A6D3B; text-decoration: none; font-size: 0.9rem; }
+h1 { font-family: Playfair Display, serif; color: #8A6D3B; font-size: 2rem; margin-top: 1.5rem; }
+h2 { font-family: Playfair Display, serif; color: #8A6D3B; font-size: 1.5rem; margin-top: 2rem; }
+.premise-card { background: #F6F1E7; border: 1px solid #E7E0D1; border-radius: 0.5rem; padding: 1rem; margin: 1.25rem 0; }
+.quran-callout, .hadith-callout { background: #F6F1E7; border-radius: 0.5rem; padding: 1.25rem; margin: 1.25rem 0; }
+.quran-callout { border-right: 4px solid #B99C6B; }
+.hadith-callout { border-right: 4px solid #B99C6B; }
+.translation { font-style: italic; margin-top: 0.75rem; }
+.cite { font-size: 0.85rem; color: #8A6D3B; margin-top: 0.75rem; }
+.facts-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.facts-table th, .facts-table td { border: 1px solid #E7E0D1; padding: 0.5rem; text-align: left; }
+.facts-table th { background: #F6F1E7; }
+.verdict-card { background: #F6F1E7; border: 1px solid #B99C6B; border-radius: 0.5rem; padding: 1.5rem; }
+footer { text-align: center; color: #8A6D3B; padding: 2rem 0; font-size: 0.85rem; }
+details summary { cursor: pointer; color: #8A6D3B; font-weight: 600; }
+a.backlink { color: #8A6D3B; }
+</style>
 </head>
-<body class="antialiased">
-    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
-        <header class="mb-6">
-            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-3">Quranic Analysis</p>
-            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">A Linguistic & Theological Analysis</h1>
-            <p class="text-md md:text-lg text-gray-600 max-w-2xl">Does Qur’an 43:81 Allow for Divine Sonship?</p>
-            <hr class="mt-6 border-[#E7E0D1]">
-        </header>
-
-        <div class="section-nav -mx-4 px-4">
-            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
-                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
-                <a href="#argument" class="navlink text-sm md:text-base py-3 flex-shrink-0">Overview</a>
-                <a href="#facts" class="navlink text-sm md:text-base py-3 flex-shrink-0">Facts</a>
-                <a href="#linguistic" class="navlink text-sm md:text-base py-3 flex-shrink-0">1. Language Proof</a>
-                <a href="#doctrinal" class="navlink text-sm md:text-base py-3 flex-shrink-0">2. Islamic Teaching </a>
-                <a href="#historical" class="navlink text-sm md:text-base py-3 flex-shrink-0">3. Historical Proof</a>
-                <a href="#logical" class="navlink text-sm md:text-base py-3 flex-shrink-0">4. Logical Proof</a>
-                <a href="#verdict" class="navlink text-sm md:text-base py-3 flex-shrink-0">Verdict</a>
-            </nav>
-        </div>
-
-        <main data-category="debate">
-        <section id="argument" class="content-section mb-12 mt-8 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
-            <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Christian Claim</h2>
-            <p class="text-gray-600">Some Christians say Qur’an 43:81 suggests God could have a son, like Jesus. Here’s their argument:</p>
-            <div class="space-y-4 mb-8">
-                <div class="premise-card">
-                    <p class="font-semibold text-gray-800">Premise 1: The Verse Suggests a Son</p>
-                    <p class="text-gray-600">Qur’an 43:81 says, “If the All-Merciful had a child, I’d be the first to worship,” implying it’s possible God could have a son.</p>
-                    <blockquote class="quran-callout">
-                        <p class="rtl font-amiri text-xl" lang="ar">قُلْ إِن كَانَ لِلرَّحْمَٰنِ وَلَدٌ فَأَنَا أَوَّلُ الْعَابِدِينَ</p>
-                        <p class="italic transliteration">Qul in kāna lil-Raḥmāni waladun fa-anā awwalu al-ʿābidīn</p>
-                        <p class="translation">“Say: If the All-Merciful had a child, then I would be the first to worship” (Qur’an 43:81)</p>
-                    </blockquote>
-                </div>
-                <div class="premise-card">
-                    <p class="font-semibold text-gray-800">Premise 2: Worship Implies Acceptance</p>
-                    <p class="text-gray-600">The word “worship” (<strong>ʿābidīn</strong>) means accepting the child as divine, supporting the idea of Jesus as God’s son.</p>
-                </div>
-                <div class="premise-card">
-                    <p class="font-semibold text-gray-800">Premise 3: Fits Christian Belief</p>
-                    <p class="text-gray-600">This matches the Christian view that Jesus is God’s son, part of the Trinity.</p>
-                </div>
-                <div class="conclusion-card">
-                    <p class="font-semibold text-gray-800">Conclusion</p>
-                    <p class="text-gray-700">Qur’an 43:81 supports the possibility of God having a son, aligning with Christian theology.</p>
-                </div>
-            </div>
-            <p class="text-gray-600">This analysis shows the Christian claim misreads the verse. Qur’an 43:81 uses a special Arabic style called <strong>al-sharṭ al-mumteni‘</strong> (impossible condition) to reject the idea of God having a child, targeting Meccan pagans and Christians. We’ll use language, Islamic teachings, history, and logic to prove this, showing the Christian view doesn’t make sense.</p>
-        </section>
-
-        <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
-            <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">The Facts</h2>
-            <p class="text-sm text-gray-500 mb-6">Every row links into the section carrying the detail. The Qualifier column preserves how firmly the page’s sources state each claim.</p>
-            <div class="analysis-section">
-                <h5 class="analysis-heading">The Verse and Its Opponents</h5>
-                <div class="premise-card overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr class="text-left">
-                                <th class="py-2 pr-4 font-semibold">Claim</th>
-                                <th class="py-2 pr-4 font-semibold">Actor</th>
-                                <th class="py-2 pr-4 font-semibold">Date</th>
-                                <th class="py-2 pr-4 font-semibold">Place</th>
-                                <th class="py-2 pr-4 font-semibold">Source</th>
-                                <th class="py-2 pr-4 font-semibold">Qualifier</th>
-                                <th class="py-2 font-semibold">Detail</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">Qur’an 43:81 was revealed in Mecca, where people argued about God’s nature</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Mecca</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">stated</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#historical">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">The Quraysh thought the angels were God’s daughters</td>
-                                <td class="py-2 pr-4">The Quraysh</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Mecca</td>
-                                <td class="py-2 pr-4">Qur’an 43:16-19</td>
-                                <td class="py-2 pr-4">stated</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#historical">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">Some Christians said Jesus was God’s son</td>
-                                <td class="py-2 pr-4">Some Christians</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Qur’an 9:30</td>
-                                <td class="py-2 pr-4">stated</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#historical">&#8599;</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="analysis-section">
-                <h5 class="analysis-heading">The Authorities the Page Cites</h5>
-                <div class="premise-card overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr class="text-left">
-                                <th class="py-2 pr-4 font-semibold">Claim</th>
-                                <th class="py-2 pr-4 font-semibold">Actor</th>
-                                <th class="py-2 pr-4 font-semibold">Date</th>
-                                <th class="py-2 pr-4 font-semibold">Place</th>
-                                <th class="py-2 pr-4 font-semibold">Source</th>
-                                <th class="py-2 pr-4 font-semibold">Qualifier</th>
-                                <th class="py-2 font-semibold">Detail</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">The “if” (in kāna) of Qur’an 43:81 is an impossible condition (al-sharṭ al-mumteni‘), so the idea of God having a child is impossible</td>
-                                <td class="py-2 pr-4">al-Zamakhsharī</td>
-                                <td class="py-2 pr-4">d. 538 AH</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">al-Kashshāf</td>
-                                <td class="py-2 pr-4">attributed</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#linguistic">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">The word ʿābidīn can mean “to disdain,” as in “I disdain to satirize Kulayb with Dārim”</td>
-                                <td class="py-2 pr-4">Ibn Manẓūr</td>
-                                <td class="py-2 pr-4">d. 711 AH</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Lisān al-ʿArab</td>
-                                <td class="py-2 pr-4">attributed</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#linguistic">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">ʿābidīn means “rejectors,” so the verse denies that God has a child</td>
-                                <td class="py-2 pr-4">Mujāhid ibn Jabr</td>
-                                <td class="py-2 pr-4">d. 104 AH</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">stated</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#historical">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">“The first of the worshippers” means “the first of the rejectors”</td>
-                                <td class="py-2 pr-4">Imām ʿAlī</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Tafsīr ʿAlī ibn Ibrāhīm</td>
-                                <td class="py-2 pr-4">attributed</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#doctrinal">&#8599;</a></td>
-                            </tr>
-                            <tr class="border-t border-[#E7E0D1]">
-                                <td class="py-2 pr-4">Prophet Muhammad was God’s first creation (nūr Muḥammadī), so he would know God has no child and reject it</td>
-                                <td class="py-2 pr-4">Prophet Muhammad</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">Not stated on the page</td>
-                                <td class="py-2 pr-4">al-Kāfī, Vol. 1, p. 442</td>
-                                <td class="py-2 pr-4">attributed</td>
-                                <td class="py-2"><a class="text-[#8A6D3B] underline" href="#doctrinal">&#8599;</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-<div id="tab-content">
-            <section id="linguistic" class="content-section mb-12">
-                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">1. Language Proof</h2>
-
-                <div id="linguistic-cards" class="space-y-4">
-                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="p-4 border-b border-[#E7E0D1]">
-                            <h4 class="text-lg font-semibold text-[#3D4451]">Language Analysis: Meaning of <strong>al-sharṭ al-mumteni‘</strong> and <strong>ʿābidīn</strong></h4>
-                        </div>
-                        <div>
-                            <div class="p-4 space-y-4">
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The Two Key Arabic Terms</h5>
-                                    <p>To understand Qur’an 43:81, we need to know what its words mean in Arabic, especially <strong>al-sharṭ al-mumteni‘</strong> (impossible condition) and <strong>ʿābidīn</strong> (worshippers or rejectors).</p>
-                                    <div class="overflow-x-auto">
-                                        <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow-sm mb-4">
-                                            <thead class="bg-gray-50">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Arabic Term</th>
-                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Transliteration</th>
-                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Meaning</th>
-                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Example Usage</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="bg-white divide-y divide-gray-200">
-                                                <tr>
-                                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">الشرط الممتنع</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500 italic">al-sharṭ al-mumteni‘</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500">Impossible condition, denying the premise</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500">“If the sun rose at night, I’d be amazed”</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">عابدين</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500 italic">ʿābidīn</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500">Worshippers or rejectors</td>
-                                                    <td class="px-6 py-4 text-sm text-gray-500">“I disdain to mock him” (al-Farazdaq)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">How Arabs Used These Words</h5>
-                                    <p>In Arabic, <strong>ʿābidīn</strong> can mean “worshippers” or “rejectors,” depending on context. <strong>Al-sharṭ al-mumteni‘</strong> is a style that says something’s impossible to shut down a bad idea.</p>
-                                    <blockquote class="hadith-callout">
-                                        <p class="rtl font-amiri text-xl" lang="ar">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
-                                        <p class="italic transliteration">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
-                                        <p class="translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per Lisān al-ʿArab)</p>
-                                    </blockquote>
-                                    <blockquote class="quran-callout">
-                                        <p class="rtl font-amiri text-xl" lang="ar">قَالَ إِنِّي لَا يَقْتُلُنِي اللَّهُ إِنْ شَاءَ</p>
-                                        <p class="italic transliteration">Qāla innī lā yaqtulunī Allāhu in shā’a</p>
-                                        <p class="translation">“He said: Surely Allah will not kill me if He wills” (Qur’an 2:258)</p>
-                                    </blockquote>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">What the Lexicons Say</h5>
-                                    <p>Harold W. Attridge notes that biblical rhetoric uses conditionals to reject false ideas, like in Qur’an 43:81. The word <strong>ʿābidīn</strong> means “rejectors” here, as old Arabic books like Lisān al-ʿArab (Ibn Manẓūr, d. 711 AH) say it can mean “to disdain.” The phrase “if… then” (<strong>in kāna</strong>) is <strong>al-sharṭ al-mumteni‘</strong>, a style that says the idea of God having a child is impossible, per al-Zamakhsharī (al-Kashshāf, d. 538 AH). A Shi‘i teaching says Prophet Muhammad was the first creation (nūr Muḥammadī, al-Kāfī, Vol. 1, p. 442), so he’d know God has no child and reject it. Christians misread “worship” as accepting a son, but the verse shuts down Meccan pagan (Qur’an 43:16–19) and Christian (Qur’an 9:30) claims.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">What the Words Prove</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">The words <strong>ʿābidīn</strong> and <strong>al-sharṭ al-mumteni‘</strong> show Qur’an 43:81 rejects God having a child, not supports it, making the Christian view wrong.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81 say God could have a child, when Arabic experts like al-Zamakhsharī say it’s an impossible condition?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="p-4 border-b border-[#E7E0D1]">
-                            <h4 class="text-lg font-semibold text-[#3D4451]">Grammar and Syntax: How the Verse Works</h4>
-                        </div>
-                        <div>
-                            <div class="p-4 space-y-4">
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">How the Sentence Is Built</h5>
-                                    <p>The way Qur’an 43:81 is built shows it’s rejecting the idea of God having a child, not saying it’s possible.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">A Verse Built the Same Way</h5>
-                                    <blockquote class="quran-callout">
-                                        <p class="rtl font-amiri text-xl" lang="ar">أَوَلَيْسَ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ بِقَادِرٍ عَلَىٰ أَن يَخْلُقَ مِثْلَهُم ۚ بَلَىٰ</p>
-                                        <p class="italic transliteration">Awa-laysa alladhī khalaqa as-samāwāti wa-l-arḍa bi-qādirin ʿalā an yakhluqa mithlahum balā</p>
-                                        <p class="translation">“Is not He who created the heavens and the earth able to create the like of them? Yes, indeed!” (Qur’an 36:81)</p>
-                                    </blockquote>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The If That Makes It Impossible</h5>
-                                    <p>Donald Hagner notes that biblical conditionals often reject bad ideas, similar to <strong>al-sharṭ al-mumteni‘</strong> in Qur’an 43:81. The word “if” (<strong>in kāna</strong>) sets up an impossible condition, as al-Rāzī (Tafsīr al-Kabīr, d. 606 AH) explains, saying God can’t have a child because it goes against His oneness. The phrase “I would be the first to reject” (<strong>fa-anā awwalu al-ʿābidīn</strong>) shows the Prophet’s authority, backed by the Shi‘i idea that he was God’s first creation (nūr Muḥammadī, al-Kāfī, Vol. 1, p. 442). The next verse, “Glory be to the Lord” (Qur’an 43:82), confirms God is above human traits like having kids.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The Structure Settles It</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">The sentence structure of Qur’an 43:81, as al-Rāzī shows, uses <strong>al-sharṭ al-mumteni‘</strong> to reject God having a child, not support it.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81’s grammar show God could have a child, when al-Rāzī says “if” means it’s impossible?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                        <div class="p-4 border-b border-[#E7E0D1]">
-                            <h4 class="text-lg font-semibold text-[#3D4451]">Comparing Words: Old Arabic Usage</h4>
-                        </div>
-                        <div>
-                            <div class="p-4 space-y-4">
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">Why Old Usage Matters</h5>
-                                    <p>Looking at how words like <strong>ʿābidīn</strong> and “if” were used in old Arabic helps us understand Qur’an 43:81.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The Poet Who Would Not Mock</h5>
-                                    <p>Old Arabic books say <strong>ʿābidīn</strong> can mean “rejectors,” and “if” can mean something’s impossible in religious arguments.</p>
-                                    <blockquote class="hadith-callout">
-                                        <p class="rtl font-amiri text-xl" lang="ar">وَأَعْبَدُ أَنْ أَهْجُو كُلَيْبًا بِدَارِمِ</p>
-                                        <p class="italic transliteration">Wa-aʿbudu an ahjū Kulayban bi-Dārim</p>
-                                        <p class="translation">“I disdain to satirize Kulayb with Dārim” (al-Farazdaq, per al-Muḥīṭ fī al-Lugha)</p>
-                                    </blockquote>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">What the Dictionaries Decide</h5>
-                                    <p>James D.G. Dunn notes that early religious texts use conditionals to reject false beliefs, like in Qur’an 43:81. Old Arabic dictionaries (Lisān al-ʿArab, al-Muḥīṭ) say <strong>ʿābidīn</strong> can mean “to reject,” and al-Zamakhsharī says “if” (<strong>in kāna</strong>) shows impossibility here. The Prophet, as the first creation (nūr Muḥammadī), would know God has no child and reject it, targeting Meccan pagans and Christians.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">What Old Arabic Shows</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">Old Arabic usage shows <strong>ʿābidīn</strong> means “rejectors” and “if” means impossible, proving Qur’an 43:81 rejects divine sonship.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81 use <strong>ʿābidīn</strong> to mean accepting a son, when old Arabic texts say it means rejecting?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-                <section id="doctrinal" class="content-section mb-12">
-                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">2. Islamic Teaching Proof</h2>
-
-                    <div id="doctrinal-cards" class="space-y-4">
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Qur’anic Consistency: Fitting with Other Verses</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Does the Verse Fit the Qur’an</h5>
-                                        <p>The Qur’an’s verses should agree with each other. Does Qur’an 43:81 fit with other verses about God’s oneness?</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Verses That Deny God a Son</h5>
-                                        <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">قُلْ هُوَ اللَّهُ أَحَدٌ... لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
-                                            <p class="italic transliteration">Qul huwa Allāhu aḥad... lam yalid wa-lam yūlad</p>
-                                            <p class="translation">“Say: He is Allah, the One... He neither begets nor is begotten” (Qur’an 112:1–4)</p>
-                                        </blockquote>
-                                        <blockquote class="quran-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">وَقَالُوا اتَّخَذَ الرَّحْمَٰنُ وَلَدًا ۗ سُبْحَانَهُ</p>
-                                            <p class="italic transliteration">Wa-qālū ittakhadha ar-Raḥmānu waladan subḥānahu</p>
-                                            <p class="translation">“They say: The All-Merciful has taken a son. Glory be to Him!” (Qur’an 19:88–89)</p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">How the Verses Agree</h5>
-                                        <p>F.F. Bruce notes that biblical conditionals reject false ideas, similar to <strong>al-sharṭ al-mumteni‘</strong> in the Qur’an. Qur’an 43:81’s “if” rejects God having a child, matching Qur’an 112:1–4 and 19:88–89, which say God doesn’t have kids. The Shi‘i teaching that the Prophet was the first creation (nūr Muḥammadī, al-Kāfī, Vol. 1, p. 442) means he’d know and reject this idea, not stubbornly deny truth (juhūd).</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The Verse Fits Its Book</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">Qur’an 43:81 fits with other verses rejecting divine children, showing the Christian claim is wrong.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81 support God having a child, when verses like 112:1–4 clearly reject it?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Beliefs: God’s Oneness and the Prophet</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">What Shi‘i Teaching Holds</h5>
-                                    <p>Shi‘i Muslims believe God is one and above human traits, and the Prophet Muhammad has special knowledge as the first creation.</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">The Imam’s Own Words</h5>
-                                    <blockquote class="hadith-callout">
-                                        <p class="rtl font-amiri text-xl" lang="ar">الحمد لله الذي لم يلد فيورث ولم يولد فيشارك</p>
-                                        <p class="italic transliteration">Al-ḥamdu lillāhi alladhī lam yalid fayūrath wa-lam yūlad fayushārik</p>
-                                        <p class="translation">“Praise be to Allah, who neither begot, lest He be inherited, nor was begotten, lest He be rivaled” (Imām al-Ṣādiq, Bihār al-Anwār)</p>
-                                    </blockquote>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">Why the Prophet Would Know</h5>
-                                    <p>James D.G. Dunn notes that early Christians saw Jesus as a human agent, not God, similar to Shi‘i views of the Prophet as God’s first creation (nūr Muḥammadī). This means he’d know God has no child and reject it, not out of stubbornness but divine truth, aligning with God’s oneness (tawḥīd).</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h5 class="analysis-heading">No Child in Shi‘i Thought</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">Shi‘i teachings, as Dunn’s parallel shows, confirm Qur’an 43:81 rejects divine sonship, not supports it.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81 fit with Christian sonship, when Shi‘i teachings say God can’t have a child?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Shi‘i Explanations: Early Muslim Views</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Earliest Readings</h5>
-                                        <p>How early Muslims understood Qur’an 43:81 shows its real meaning, before later debates.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">ʿAlī Defines the Word</h5>
-                                        <blockquote class="hadith-callout">
-                                            <p class="rtl font-amiri text-xl" lang="ar">أَوَّلُ الْعَابِدِينَ أي الجاحدين</p>
-                                            <p class="italic transliteration">Awwalu al-ʿābidīn ay al-jāḥidīn</p>
-                                            <p class="translation">“The first of the worshippers—meaning the first of the rejectors” (Imām ʿAlī, Tafsīr ʿAlī ibn Ibrāhīm)</p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">What al-Majlisī Records</h5>
-                                        <p>Donald Hagner notes early biblical exegesis rejected divine sonship, like Shi‘i scholars (al-Majlisī, Bihār al-Anwār, Vol. 3, p. 258) who say <strong>ʿābidīn</strong> means “rejectors.” This fits the Prophet’s role as the first creation, knowing God’s truth and rejecting false ideas.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The First Muslims Agreed</h5>
-                                    <p class="font-semibold text-gray-800">Conclusion</p>
-                                    <p class="text-gray-700">Early Muslim views, as Hagner’s parallel shows, confirm Qur’an 43:81 rejects divine sonship.</p>
-                                    <p class="challenge-question">Where does Qur’an 43:81 support sonship, when early Muslims like Imām ʿAlī said it means rejecting?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="historical" class="content-section mb-12">
-                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">3. Historical Proof</h2>
-
-                    <div id="historical-cards" class="space-y-4">
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Meccan Setting: The Verse’s Background</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">A City Arguing About God</h5>
-                                        <p>Qur’an 43:81 was revealed in Mecca, where people argued about God’s nature.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Who Meccans Called God’s Children</h5>
-                                        <p>The Quraysh thought angels were God’s daughters (Qur’an 43:16–19), and some Christians said Jesus was God’s son (Qur’an 9:30).</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Who the Verse Answers</h5>
-                                        <p>Harold W. Attridge notes that religious texts argue against wrong beliefs, like Qur’an 43:81 does. It uses <strong>al-sharṭ al-mumteni‘</strong> to say God having a child is impossible, targeting Meccan pagans and Christians.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Context Points to Rejection</h5>
-                                        <p class="font-semibold text-gray-800">Conclusion</p>
-                                        <p class="text-gray-700">The Meccan setting shows Qur’an 43:81 rejects divine children, not supports them.</p>
-                                        <p class="challenge-question">Where does Qur’an 43:81 support sonship, when its Meccan context rejects pagan and Christian claims?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Early Reactions: How Muslims Understood It</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Why the First Readers Matter</h5>
-                                        <p>Early Muslims’ views on Qur’an 43:81 show what it meant at the time.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Mujāhid’s Gloss on ʿābidīn</h5>
-                                        <p>Mujāhid ibn Jabr (d. 104 AH) said <strong>ʿābidīn</strong> means “rejectors,” supporting the idea that the verse denies God’s child.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Qummī Commentary Agrees</h5>
-                                        <p>Donald Hagner notes early biblical exegesis rejected divine sonship, like Shi‘i scholars (Tafsīr al-Qummī) who say Qur’an 43:81 rejects false claims. The Prophet’s role as first creation (nūr Muḥammadī) backs this up.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">One Voice From the Start</h5>
-                                        <p class="font-semibold text-gray-800">Conclusion</p>
-                                        <p class="text-gray-700">Early Muslim views confirm Qur’an 43:81 rejects divine sonship, not supports it.</p>
-                                        <p class="challenge-question">Where does Qur’an 43:81 support sonship, when early Muslims like Mujāhid said it means rejecting?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Old Writings: Outside Evidence</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">What the Neighbors Believed</h5>
-                                        <p>Old texts from Arabia and Christian communities show what people believed when Qur’an 43:81 was revealed.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">What Inscriptions and Gospels Say</h5>
-                                        <p>Thamudic inscriptions show pagans thought gods had children. Christian texts like the Gospel of John call Jesus God’s son.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Verse Answers Its World</h5>
-                                        <p>James D.G. Dunn notes early religious texts argue against wrong beliefs. Qur’an 43:81 uses <strong>al-sharṭ al-mumteni‘</strong> to reject pagan and Christian ideas of divine children, fitting the time’s debates.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Old Texts Agree</h5>
-                                        <p class="font-semibold text-gray-800">Conclusion</p>
-                                        <p class="text-gray-700">Old texts show Qur’an 43:81 rejects divine sonship, not supports it.</p>
-                                        <p class="challenge-question">Where does Qur’an 43:81 support sonship, when old texts show it rejects pagan and Christian claims?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="logical" class="content-section mb-12">
-                <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">4. Logical Proof</h2>
-
-                    <div id="logical-cards" class="space-y-4">
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a Straw Man</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">What a Straw Man Looks Like</h5>
-                                        <p>A straw man is when you misrepresent someone’s view to make it easier to attack. Does Qur’an 43:81 fairly address Christian claims?</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">How a Caricature Works</h5>
-                                        <p>Saying “evolution means humans came from monkeys” is a straw man, because that’s not what evolution says.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">Answering the Real Claim</h5>
-                                        <p>Harold W. Attridge says religious texts tackle real opponent beliefs. Qur’an 43:81 correctly targets the Christian claim of Jesus as God’s son (Qur’an 9:30) and Meccan pagan ideas, using <strong>al-sharṭ al-mumteni‘</strong> to reject them fairly.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">No Straw Man Here</h5>
-                                        <p class="font-semibold text-gray-800">Conclusion</p>
-                                        <p class="text-gray-700">Qur’an 43:81 fairly rejects Christian sonship, avoiding a straw man.</p>
-                                        <p class="challenge-question">Where does Qur’an 43:81 misrepresent Christian sonship, when it directly addresses their claim?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-[#E7E0D1] rounded-lg">
-                            <div class="p-4 border-b border-[#E7E0D1]">
-                                <h4 class="text-lg font-semibold text-[#3D4451]">Avoiding a False Choice</h4>
-                            </div>
-                            <div>
-                                <div class="p-4 space-y-4">
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">What a False Choice Is</h5>
-                                        <p>A false choice says there are only two options when there are more. Does Qur’an 43:81 create a false choice?</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">With Us or Against Us</h5>
-                                        <p>Saying “you’re either with us or against us” ignores other possibilities, like staying neutral.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">The Verse Offers No Choice</h5>
-                                        <p>James D.G. Dunn notes early Christians saw Jesus as human, not divine, like the Shi‘i view of the Prophet. Christians say Qur’an 43:81 implies God could have a son, but <strong>al-sharṭ al-mumteni‘</strong> and <strong>ʿābidīn</strong> as “rejectors” show it denies this outright, not offering a choice.</p>
-                                    </div>
-                                    <div class="analysis-section">
-                                        <h5 class="analysis-heading">No False Choice Either</h5>
-                                        <p class="font-semibold text-gray-800">Conclusion</p>
-                                        <p class="text-gray-700">Qur’an 43:81 avoids a false choice by clearly rejecting divine sonship, not suggesting it’s possible.</p>
-                                        <p class="challenge-question">Where does Qur’an 43:81 offer sonship as a choice, when it uses <strong>al-sharṭ al-mumteni‘</strong> to reject it?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <footer id="verdict" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
-                <div class="max-w-3xl">
-                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
-                    <h4 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">Final Verdict</h4>
-                    <p class="text-lg text-gray-700">
-                    The Christian claim that Qur’an 43:81 supports God having a son like Jesus is wrong. The verse uses <strong>al-sharṭ al-mumteni‘</strong>, an Arabic style that says the idea is impossible, as scholars like al-Zamakhsharī explain. <strong>ʿābidīn</strong> means “rejectors,” not worshippers, per old Arabic texts (Lisān al-ʿArab). Shi‘i teachings say the Prophet was the first creation (nūr Muḥammadī), so he’d know God has no child and reject it. Other Qur’anic verses (112:1–4, 19:88–89) and early Muslims like Imām ʿAlī agree, rejecting pagan and Christian claims. The Meccan setting and old writings confirm this. Logically, the verse fairly and clearly rejects sonship, not supports it. Christians misread it by ignoring its language and context, relying on later Trinitarian ideas that don’t fit.
-                </p>
-                </div>
-            </footer>
-            <script>
-            (function () {
-                function openHash() {
-                    var id = decodeURIComponent(location.hash.slice(1));
-                    if (!id) return;
-                    var el = document.getElementById(id);
-                    if (!el) return;
-                    var details = el.closest('details');
-                    if (details) details.open = true;
-                    setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
-                }
-                window.addEventListener('hashchange', openHash);
-                window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
-            })();
-            </script>
-            <script>
-            (function () {
-                var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
-                if (!links.length || !('IntersectionObserver' in window)) return;
-                var map = {}; var sections = [];
-                links.forEach(function (l) {
-                    var id = l.getAttribute('href').slice(1);
-                    var t = document.getElementById(id);
-                    if (t) { map[id] = l; sections.push(t); }
-                });
-                var obs = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (e) {
-                        if (e.isIntersecting) {
-                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
-                            var l = map[e.target.id];
-                            if (l) l.setAttribute('aria-current', 'location');
-                        }
-                    });
-                }, { rootMargin: '-30% 0px -60% 0px' });
-                sections.forEach(function (t) { obs.observe(t); });
-            })();
-            </script>
-        </main>
-    </div>
-
-    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
-            <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
-        </footer>
-    
-    </body>
+<body>
+<nav class="section-nav" aria-label="Sections"><a href="#argument">Overview</a><a href="#facts">Facts</a><a href="#s1">The Verse</a><a href="#s2">The Word</a><a href="#s3">The Company</a><a href="#s4">The Readings</a><a href="#s5">Lexicons</a><a href="#s6">Sunni Canon</a><a href="#comparison">Comparison</a><a href="#verdict">Final Verdict</a><a href="#glossary">Glossary</a></nav>
+<main data-category="debate" data-opponent="christian">
+<article data-category="debate">
+<h1>Does the Qur'an Leave the Door Open at 43:81</h1>
+<section id="argument"><h2>The Argument Under Examination</h2>
+<p>Christian readers sometimes quote Qur'an 43:81. They read it as an admission that God could have a son. The verse reads as a conditional. The argument runs that the door is left open. The study ahead tests that reading against the Arabic language, the verse's own context, and the exegetical record of both schools.</p>
+<p>Three facts decide the matter. First, the word rendered "worshippers" here has a second classical sense, "those who disdain." The lexicons attest it with a full verse of poetry. Second, the verse sits in a company of verses that close every door the conditional might open. Third, the earliest Ahl al-Bayt exegetes read the conditional as a device of impossibility. Major Sunni exegetes agree with that reading on their own chains.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Premise 1:</strong> The word ʿābidīn in Qur'an 43:81 is lexically capable of meaning "the disdainful" and "the deniers," on the authority of al-Jawhari and the poetry he cites.</p>
+<p class="text-sm"><strong>Premise 2:</strong> The conditional in kāna form is a recognized Arabic device for declaring something impossible, used the same way elsewhere in the Qur'an.</p>
+<p class="text-sm"><strong>Premise 3:</strong> The school's exegesis from Ali ibn Ibrahim al-Qummi onward, and the Sunni exegesis from al-Baydawi onward, converge on readings that deny any possibility of a son.</p>
+</div></section><details class="facts-fold"><summary>The Facts</summary><details class="facts-fold bg-white border border-[#E7E0D1] rounded-lg p-4 mb-12">
+<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">The Facts at a Glance</h4></summary>
+<section id="facts"><h2>The Facts</h2><table class="facts-table"><thead><tr><th>Claim</th><th>Actor</th><th>Date</th><th>Place</th><th>Source</th><th>Qualifier</th><th>Detail</th></tr></thead><tbody><tr id="f1"><td><a href="#f1">Quraysh said God took a son by way of the angels</a></td><td>Quraysh polytheists</td><td>Before 10 BH</td><td>Mecca</td><td>Qur'an 43:16-19; al-Qummi via Bihar v3</td><td>reported</td><td>The claim the chapter answers</td></tr><tr id="f2"><td><a href="#f2">The verse 43:81 was revealed against the son claim</a></td><td>Qur'an</td><td>Revelation, Meccan</td><td>Mecca</td><td>Qur'an 43:81</td><td>stated</td><td>Conditional form, jussive context</td></tr><tr id="f3"><td><a href="#f3">ʿabada means to disdain and to be angry</a></td><td>Abu Zayd al-Ansari, Abu Amr</td><td>2nd century AH</td><td>Basra</td><td>Al-Sihah v2 p67</td><td>stated</td><td>Lexicon entry with poetry</td></tr><tr id="f4"><td><a href="#f4">Al-Qummi reads 43:81 as "first of the disdainful"</a></td><td>Ali ibn Ibrahim al-Qummi</td><td>d. 329 AH</td><td>Qom</td><td>Bihar v3 p258</td><td>reported</td><td>Relay of Tafsir al-Qummi</td></tr><tr id="f5"><td><a href="#f5">Al-Baydawi reads the conditional as impossibility</a></td><td>Al-Baydawi</td><td>d. 685 AH</td><td>Shiraz</td><td>Anwar al-Tanzil v5 p97</td><td>stated</td><td>Sunni corroboration</td></tr><tr id="f6"><td><a href="#f6">Ibn Hajar reads "worshippers" as "deniers"</a></td><td>Ibn Hajar al-Asqalani</td><td>d. 852 AH</td><td>Cairo</td><td>Fath al-Bari v8 p437</td><td>stated</td><td>Cites the same poetry</td></tr></tbody></table></section></details></details><section id="s1"><h2>1. The Verse on the Table</h2>
+<p>The verse in the Uthmani text, fetched from the Qur'an API, reads as follows.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Qur'an 43:81, Uthmani text via alquran.cloud API</p>
+<p class="text-sm"><strong>Speaker:</strong> God, addressing the Prophet</p>
+<p class="text-sm"><strong>Claim:</strong> A conditional joined to a declaration of worship or disdain</p>
+</div>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">قُلْ إِن كَانَ لِلرَّحْمَٰنِ وَلَدٌۭ فَأَنَا۠ أَوَّلُ ٱلْعَٰبِدِينَ</p>
+<p class="italic transliteration">Qul in kāna li-l-raḥmāni waladun fa-anā awwalu l-ʿābidīn.</p><p class="rtl font-amiri text-xl" lang="ar">سُبْحَٰنَ رَبِّ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ رَبِّ ٱلْعَرْشِ عَمَّا يَصِفُونَ</p>
+<p class="italic transliteration">Subḥāna rabbi l-samāwāti wa-l-arḍi rabbi l-ʿarshi ʿammā yaṣifūn.</p>
+<p class="translation">Say, if the Most Merciful had a son, I would be the first of the worshippers.</p><p class="translation">Glory to the Lord of the heavens and the earth, the Lord of the Throne, above what they describe.</p>
+<cite class="text-sm text-gray-500">- Qur'an 43:81-82, Uthmani text (alquran.cloud)</cite>
+</blockquote>
+<p>The word translated "if" is in, and the verb is kāna. Together they set up a condition. The question the study answers is what kind of condition the Arabic sets up here, an open possibility or a closed door.</p></section><section id="s2"><h2>2. The Word Before the Verse</h2>
+<p>The crux is the word al-ʿābidīn. In modern reading it is taken as "worshippers." The classical lexicons record another sense for the same root, anger and disdain, and they prove it with a complete verse of the poet al-Farazdaq.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Jawhari (d. 398 AH), Al-Sihah, v2, p67</p>
+<p class="text-sm"><strong>Speaker:</strong> Abu Zayd and Abu Amr, the language authorities</p>
+<p class="text-sm"><strong>Claim:</strong> ʿabada with the doubled middle means to disdain and to be angry, and 43:81 carries that sense</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">قال الفرزدق : أولئك أحلاسي فجئني بمثلهم (2) *
+وأعبد أن أهجو كليبا بدارم -</p>
+<p class="translation">Abu Zayd said, ʿabid with vowelling of the middle means anger and disdain, and the noun is ʿabda like anafa, and he ʿabida means he disdained. Al-Farazdaq said, those are my close kin, so bring me their like, and I disdain to satirize Kulayb with Darim.</p>
+<cite class="text-sm text-gray-500">- Al-Jawhari, Al-Sihah, v2, p67</cite>
+</blockquote>
+<p>The full verse of al-Farazdaq as carried on the same page of Al-Sihah.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Farazdaq (d. 110 AH), quoted in Al-Sihah v2 p67</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Farazdaq, defending his lineage</p>
+<p class="text-sm"><strong>Claim:</strong> A complete two-hemistich verse using ʿabada in the disdain sense</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">أولئك أحلاسي فجئني بمثلهم</p>
+<p class="italic transliteration">Ulāʾika aḥlāsī fa-jiʾnī bi-mithlihim,</p><p class="rtl font-amiri text-xl" lang="ar">وأعبد أن أهجو كليبا بدارم</p>
+<p class="italic transliteration">wa-aʿbudu an ahjū Kulayban bi-Dārim.</p>
+<p class="translation">Those are my close kin, so bring me their like,</p><p class="translation">and I disdain to satirize Kulayb with Darim.</p>
+<cite class="text-sm text-gray-500">- Al-Farazdaq, in Al-Jawhari, Al-Sihah, v2, p67</cite>
+</blockquote>
+<p>The earlier published version quoted half of this verse. The full verse is restored here from the corpus bytes. Its first half carries the weight. It names the kin whose like the challenger cannot produce. The poetry and the verse use the same conditional device.</p></section><section id="s3"><h2>3. The Verse in Its Company</h2>
+<p>No verse of the Qur'an stands alone. The verses around 43:81 and the parallel passages elsewhere close the door the conditional seems to open.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Qur'an 19:88-93; 21:26; 72:3; 112:3, Uthmani API</p>
+<p class="text-sm"><strong>Speaker:</strong> God</p>
+<p class="text-sm"><strong>Claim:</strong> The son claim is answered with impossibility language throughout the canon</p>
+</div>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَٰنُ وَلَدًۭا</p>
+<p class="italic transliteration">Wa-qālū ittakhadha l-raḥmānu waladan.</p><p class="rtl font-amiri text-xl" lang="ar">وَمَا يَنۢبَغِى لِلرَّحْمَٰنِ أَن يَتَّخِذَ وَلَدًا</p>
+<p class="italic transliteration">Wa-mā yanbaghī li-l-raḥmāni an yattakhidha waladan.</p><p class="rtl font-amiri text-xl" lang="ar">إِن كُلُّ مَن فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ إِلَّآ ءَاتِى ٱلرَّحْمَٰنِ عَبْدًا</p>
+<p class="italic transliteration">In kullu man fī l-samāwāti wa-l-arḍi illā ātin li-l-raḥmāni ʿabdan.</p>
+<p class="translation">And they said, the Most Merciful has taken a son.</p><p class="translation">And it does not befit the Most Merciful to take a son.</p><p class="translation">There is no one in the heavens and the earth except that he comes to the Most Merciful as a servant.</p>
+<cite class="text-sm text-gray-500">- Qur'an 19:88, 19:92, 19:93, Uthmani text</cite>
+</blockquote>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَٰنُ وَلَدًا ۗ سُبْحَٰنَهُۥ ۚ بَلْ عِبَادٌۭ مُّكْرَمُونَ</p>
+<p class="italic transliteration">Wa-qālū ittakhadha l-raḥmānu waladan, subḥānahu, bal ʿibādun mukramūn.</p><p class="rtl font-amiri text-xl" lang="ar">وَأَنَّهُۥ تَعَٰلَىٰ جَدُّ رَبِّنَا مَا ٱتَّخَذَ صَٰحِبَةًۭ وَلَا وَلَدًا</p>
+<p class="italic transliteration">Wa-annahu taʿālā jaddu rabbinā mā ittakhadha ṣāḥbatan wa-lā waladan.</p><p class="rtl font-amiri text-xl" lang="ar">لَمْ يَلِدْ وَلَمْ يُولَدْ</p>
+<p class="italic transliteration">Lam yalid wa-lam yūlad.</p>
+<p class="translation">And they said, the Most Merciful has taken a son. Glory to Him. They are rather honored servants.</p><p class="translation">And He, exalted is the majesty of our Lord, has not taken a consort nor a son.</p><p class="translation">He did not beget, nor was He begotten.</p>
+<cite class="text-sm text-gray-500">- Qur'an 21:26; 72:3; 112:3, Uthmani text</cite>
+</blockquote>
+<p>The chapter of the Quran's own collections gather these verses under the heading of negating the son and the consort, as al-Majlisi records the block.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Majlisi (d. 1111 AH), Bihar al-Anwar, v3, p258</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Majlisi, compiling the verses of negation</p>
+<p class="text-sm"><strong>Claim:</strong> The verse block on negating son and consort, from Maryam through the Jinn chapter</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">" وقال تعالى " : قل إن كان للرحمن ولد فأنا أول العابدين * سبحان رب السماوات والأرض رب العرش عما يصفون 81 ، 82 الطور : أم له البنات ولكم البنون 39 النجم : ألكم الذكر وله الأنثى * تلك إذا قسمة ضيزى 21 ، 22 " وقال تعالى " : إن الذين لا يؤمنون بالآخرة ليسمون الملائكة تسمية الأنثى * ومالهم به من علم إن يتبعون إلا الظن وإن الظن لا يغني من الحق شيئا 27 ، 28 الجن : وأنه تعالى جد ربنا ما اتخذ صاحبة ولا ولدا 3</p>
+<p class="translation">And He, exalted said, say, if the Most Merciful had a son, I would be first of the worshippers. Glory to the Lord of the heavens and the earth, the Lord of the Throne, above what they describe. The Mountain chapter, does He have daughters and you sons. The Star chapter, do you have the male and He the female. Those are then a division unjust. And He exalted said, those who do not believe in the hereafter name the angels with the naming of the female. And the Jinn chapter, and He exalted is the majesty of our Lord, He has not taken a consort nor a son.</p>
+<cite class="text-sm text-gray-500">- Al-Majlisi, Bihar al-Anwar, v3, p258</cite>
+</blockquote>
+<p>The chapter of Maryam answers the same claim. There the heavens almost split. The chapter of the Jinn states the negation plainly. Surat al-Ikhlas closes the question with the most direct negation in the canon. Against this company, reading 43:81 as an admission of possibility makes one verse contradict the whole.</p></section><section id="s4"><h2>4. The Readings of the School</h2>
+<p>The Ahl al-Bayt record reads the verse through three main lenses. Al-Majlisi preserves all three in Bihar al-Anwar with his lexical commentary.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Ali ibn Ibrahim al-Qummi (d. 329 AH), Tafsir, relayed in Bihar v3 p258</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Qummi</p>
+<p class="text-sm"><strong>Claim:</strong> First of the disdainful, that God should have a son</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">3 - تفسير علي بن إبراهيم : قوله : قل إن كان للرحمن ولدا فأنا أول العابدين ، يعني أول الآنفين له أن يكون له ولد . (1) بيان : هذا أحد الوجوه في تأويل هذه الآية . قال الجوهري : قال أبو زيد : العبد بالتحريك : الغضب والانف ، والاسم العبدة مثل الانفة ، وقد عبد أي أنف . وقال أبو عمرو : قوله تعالى : فأنا أول العابدين من الانف والغضب انتهى .</p>
+<p class="translation">Ali ibn Ibrahim said, His saying, say if the Most Merciful had a son, I would be first of the ʿābidīn, means first of the disdainful, that He should have a son. Commentary, this is one of the faces of interpreting the verse. Al-Jawhari said, Abu Zayd said, ʿabid with the vowelled middle is anger and disdain, and the noun is ʿabda like anafa, and he ʿabida, meaning he disdained. And Abu Amr said, His saying, first of the ʿābidīn, is from disdain and anger.</p>
+<cite class="text-sm text-gray-500">- Al-Qummi, Tafsir, relayed in al-Majlisi, Bihar al-Anwar, v3, p258</cite>
+</blockquote>
+<p>Al-Majlisi then unfolds the remaining faces, including the impossibility reading that the Sunni canon would later adopt.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Majlisi (d. 1111 AH), Bayan on the Qummi relay, Bihar v3 p259</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Majlisi</p>
+<p class="text-sm"><strong>Claim:</strong> Hanging the impossible on the impossible, and the negation reading of in</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">تعليق المحال بالمحال أي ليس له ولد ، إذ لو كان له ولد لكنت أول العابدين له ، فإن النبي يكون أعلم بالله وبما يصح له ومالا يصح ، وأولى بتعظيم ما يجب تعظيمه ، ومن حق تعظيم الوالد تعظيم ولده . وثالثها : أن المعنى : إن كان له ولد في زعمكم فأنا أول العابدين لله ، الموحدين له ، المنكرين لقولكم . ورابعها : أن " إن " بمعنى " ما " للنفي ، والمعنى : ما كان للرحمن ولد ، فأنا أول العابدين لله المقرين بذلك .</p>
+<p class="translation">The second is that it belongs to hanging the impossible on the impossible, meaning He has no son, since were He to have a son I would be first of the worshippers of him, for the Prophet is most knowing of God and of what befits Him and what does not, and most entitled to magnify what must be magnified, and it is of the right of magnifying the father to magnify the son. The third is that the meaning is, if he has a son in your claim, then I am first of the worshippers of God, the ones declaring His oneness, the deniers of your saying. The fourth is that in carries the meaning of negation, so the meaning is, the Most Merciful has no son, and I am first of the worshippers of God, the ones affirming that.</p>
+<cite class="text-sm text-gray-500">- Al-Majlisi, Bihar al-Anwar, v3, p259</cite>
+</blockquote>
+<p>Two more readings complete the school's record. The Ihtijaj attributes a direct gloss to Ali himself.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Tabarsi (d. 548 AH), Al-Ihtijaj, v1, p382</p>
+<p class="text-sm"><strong>Speaker:</strong> Ali ibn Abi Talib</p>
+<p class="text-sm"><strong>Claim:</strong> First of the deniers, and the inner meaning opposes the outer</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وكذلك قوله : " إن كان للرحمن ولد فإنا أول العابدين " أي : الجاحدين والتأويل في هذا القول باطنه مضاد لظاهره .</p>
+<p class="translation">And likewise His saying, if the Most Merciful had a son then we are first of the ʿābidīn, meaning the deniers, and the interpretation in this saying is inward against the outward.</p>
+<cite class="text-sm text-gray-500">- Al-Tabarsi, Al-Ihtijaj, v1, p382</cite>
+</blockquote>
+<p>And al-Kafi's covenant chapter ties the verse to the primordial covenant, where the Prophet was first to enter the fire made cool and safe.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Kulayni (d. 329 AH), Al-Kafi, v2, p7</p>
+<p class="text-sm"><strong>Speaker:</strong> Ja'far al-Sadiq, from his father</p>
+<p class="text-sm"><strong>Claim:</strong> The Prophet was first to enter the covenant fire, therefore the verse</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">3 - علي بن إبراهيم ، عن أبيه ، عن أحمد بن محمد بن أبي نصر ، عن أبان بن عثمان عن محمد بن علي الحلبي ، عن أبي عبد الله <span class="honorific">﵇</span> قال : إن الله <span class="honorific">﷿</span> لما أراد أن يخلق آدم <span class="honorific">﵇</span> أرسل الماء على الطين ، ثم قبض قبضة فعركها ثم فرقها فرقتين بيده ثم ذرأهم فإذا هم يدبون ، ثم رفع لهم نارا فأمر أهل الشمال أن يدخلوها فذهبوا إليها فهابوها فلم يدخلوها ثم أمر أهل اليمين أن يدخلوها فذهبوا فدخلوها فأمر الله <span class="honorific">﷿</span> النار فكانت عليهم بردا وسلاما ، فلما رأى ذلك أهل الشمال قالوا : ربنا أقلنا ، فأقالهم ، ثم قال لهم : ادخلوها فذهبوا فقاموا عليها ولم يدخلوها ، فأعادهم طينا (2) وخلق منها آدم <span class="honorific">﵇</span> وقال أبو عبد الله <span class="honorific">﵇</span> : فلن يستطيع هؤلاء أن يكونوا من هؤلاء ولا هؤلاء أن يكونوا من هؤلاء . قال : فيرون أن رسول الله (<span class="honorific">﵌</span>) أول من دخل تلك النار فلذلك قوله <span class="honorific">﷿</span> : " قل إن كان للرحمن ولد</p>
+<p class="translation">Ali ibn Ibrahim, from his father, from Ahmad ibn Muhammad ibn Abi Nasr, from Aban ibn Uthman, from Muhammad ibn Ali al-Halabi, from Abu Abd Allah, who said, God, when He willed to create Adam, sent water on the clay, then grasped a grasp and kneaded it, then parted it into two portions with His hand, then scattered them, and they were crawling. Then He raised a fire for them and commanded the people of the left to enter it, and they went toward it and feared it and did not enter. Then He commanded the people of the right to enter, and they went and entered, and God commanded the fire and it became coolness and peace upon them. When the people of the left saw that they said, our Lord, retract from us, and He retracted, then He said to them, enter it, and they went and stood upon it and did not enter, so He returned them to clay and created Adam from it. And Abu Abd Allah said, these will never be able to be of those, nor those of these. He said, they consider that the Messenger of God was first of those who entered that fire, therefore His saying, say, if the Most Merciful had a son, I would be first of the ʿābidīn.</p>
+<cite class="text-sm text-gray-500">- Al-Kulayni, Al-Kafi, v2, p7</cite>
+</blockquote>
+<p>A doxology relayed from Mufaddal frames the doctrine the verse serves.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Saduq, Tawhid, relayed in Bihar v3 p258</p>
+<p class="text-sm"><strong>Speaker:</strong> Ja'far al-Sadiq, heard by Mufaddal</p>
+<p class="text-sm"><strong>Claim:</strong> Praise to God who did not beget, so an heir would inherit, and was not begotten, so a partner would share</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">2 - التوحيد : ماجيلويه ، عن عمه ، عن البرقي ، عن اليقطيني ، عن سليمان بن رشيد ، عن أبيه ، عن المفضل قال : سمعت أبا عبد الله <span class="honorific">﵇</span> يقول : الحمد لله الذي لم يلد فيورث ولم يولد فيشارك .</p>
+<p class="translation">Majilawayh, from his uncle, from al-Barqi, from al-Yaqtini, from Sulayman ibn Rashid, from his father, from al-Mufaddal, who said, I heard Abu Abd Allah saying, praise to God, who did not beget, so an heir would inherit, and was not begotten, so a partner would share.</p>
+<cite class="text-sm text-gray-500">- Al-Saduq, Tawhid, relayed in al-Majlisi, Bihar al-Anwar, v3, p258</cite>
+</blockquote></section><section id="s5"><h2>5. The Lexicons and the Variants</h2>
+<p>The Sunni lexical tradition carries the same entry. One transmitter records a Tamim variant of the proof verse.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Qurtubi (d. 671 AH), Al-Jami li-Ahkam al-Quran, v16, p121</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Qurtubi, citing Abu Zayd</p>
+<p class="text-sm"><strong>Claim:</strong> The ʿabida entry with the full Farazdaq verse and the Tamim variant</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">قال الفرزدق : أولئك أجلاسي فجئني بمثلهم * وأعبد أن أهجو كليبا بدارم وينشد أيضا :
+أولئك ناس إن هجوني هجوتهم * وأعبد أن يهجى كليب بدارم</p>
+<p class="translation">It is said, ʿabida yaʿbudu ʿabidan with the vowelled middle, when he disdained and grew angry, so he is ʿabid, and the noun is ʿabda like anafa, on the authority of Abu Zayd. Al-Farazdaq said, those are my close kin so bring me their like, and I disdain to satirize Kulayb with Darim. And it is also recited, those are a people, if they satirize me I satirize them, and I disdain that Kulayb be satirized with Darim.</p>
+<cite class="text-sm text-gray-500">- Al-Qurtubi, Al-Jami li-Ahkam al-Quran, v16, p121</cite>
+</blockquote>
+<p>Al-Bahrani transmits the gloss through the genealogy of narrators.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Bahrani (d. 1107 AH), Ghayat al-Maram, v5, p259</p>
+<p class="text-sm"><strong>Speaker:</strong> The narrator of the report</p>
+<p class="text-sm"><strong>Claim:</strong> ʿabida means he disdained, and Ibn Qutaybah recited the Tamim variant</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">قال الراوي : عبد : استنكف ، وأنشد ابن قتيبة واعبد ان تهجي تميم بدارم ، أي آنف (2) .</p>
+<p class="translation">The narrator said, ʿabida, he disdained, and Ibn Qutaybah recited, and I disdain that Tamim be satirized with Darim, meaning I am too proud.</p>
+<cite class="text-sm text-gray-500">- Al-Bahrani, Ghayat al-Maram, v5, p259</cite>
+</blockquote>
+<p>Eight centuries later Sayyid Shubbar still reads the word the same way, through the Qamus.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Sayyid Abd Allah Shubbar (d. 1242 AH), Misbah al-Anwar, v1, p550</p>
+<p class="text-sm"><strong>Speaker:</strong> Shubbar, on the report of al-Hurr al-Amili</p>
+<p class="text-sm"><strong>Claim:</strong> The worship in the report means denial, and the language scholars declared this sense, and 43:81 was read through it</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">الأوّل : أن يكون المراد بالعبادة في قوله : « لم يعبد الحقّ » الجحود والإنكار ، ويكون المعنى : من عرف الحقّ لم يجحده ولم ينكره ، وهذا المعنى صرّح به أهل اللغة كصاحب القاموس ، وبه فسّر قوله تعالى :  « قُلْ إِنْ كانَ لِلرَّحْمنِ وَلَدٌ فَأَنَا أَوَّلُ الْعابِدِينَ »  (2) ، أي الجاحدين (3) .</p>
+<p class="translation">The first is that the intent of worship in His saying, he did not worship the truth, is denial and rejection, and the meaning is, whoever knows the truth does not deny it and does not reject it, and this sense the people of language declared, like the author of the Qamus, and by it He interpreted His saying, say, if the Most Merciful had a son, I would be first of the worshippers, meaning the deniers.</p>
+<cite class="text-sm text-gray-500">- Sayyid Abd Allah Shubbar, Misbah al-Anwar, v1, p550</cite>
+</blockquote>
+<p>The later commentary layer also fixes the meaning of the throne in the verse that follows.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Majlisi (d. 1111 AH), Bihar al-Anwar, v55, p35</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Majlisi, on the arsh of 43:82</p>
+<p class="text-sm"><strong>Claim:</strong> The throne fitting this place is the throne of holiness, above likeness, examples, and sons</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">والمناسب هنا عرش التقدس والتنزه عن الأشباه والأمثال والأولاد ، فالعرش في كل مقام يراد به معنى يعلمه الراسخون في العلم .</p>
+<p class="translation">And what fits here is the throne of holiness and transcendence above likenesses, examples, and sons. The throne in every place carries a meaning the firm in knowledge know.</p>
+<cite class="text-sm text-gray-500">- Al-Majlisi, Bihar al-Anwar, v55, p35</cite>
+</blockquote></section><section id="s6"><h2>6. What the Sunni Canon Says</h2>
+<p>The Sunni exegetes themselves supply the convergence that decides the question.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Al-Baydawi (d. 685 AH), Anwar al-Tanzil, v5, p97</p>
+<p class="text-sm"><strong>Speaker:</strong> Al-Baydawi</p>
+<p class="text-sm"><strong>Claim:</strong> The conditional denies both the son and its worship, on the strongest negation</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">منكم فإن النبي صلَّى اللَّه عليه وسلم يكون أعلم باللَّه وبما يصح له وبما لا يصح له ، وأولى بتعظيم ما يوجب تعظيمه ومن تعظيم الوالد تعظيم ولده ، ولا يلزم من ذلك صحة كينونة الولد وعبادته له إذ المحال قد يستلزم المحال </p>
+<p class="translation">Say, if the Most Merciful had a son from among you, then the Prophet, peace be upon him, would be most knowing of God and of what befits Him and what does not befit Him, and most entitled to magnify what demands magnification, and of the right of magnifying the father is magnifying the son, and it does not follow from that the reality of the son and his worship, for the impossible may entail the impossible. Rather the intent is negating them both in the strongest of ways.</p>
+<cite class="text-sm text-gray-500">- Al-Baydawi, Anwar al-Tanzil, v5, p97</cite>
+</blockquote>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Ibn Hajar al-Asqalani (d. 852 AH), Fath al-Bari, v8, p437</p>
+<p class="text-sm"><strong>Speaker:</strong> Ibn Hajar, citing the exegetes</p>
+<p class="text-sm"><strong>Claim:</strong> The worshippers are the deniers of what you claimed</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وقال آخرون معناه إن كان للرحمن في قولكم ولد فأنا أول العابدين أي الكافرين بذلك والجاحدين لما قلتم والعابدين من عبد بكسر الباء يعبد بفتحها قال الشاعر أولئك قومي إن هجوني هجوتهم * وأعبد أن أهجو كليبا بدارم أي أمتنع وأخرج الطبري أيضا عن يونس بن عبد الأعلى عن بن وهب عبد معناه استنكف ثم ساق قصة عن عمر في ذلك و</p>
+<p class="translation">Others said its meaning is, if the Most Merciful has in your saying a son, then I am first of the worshippers, meaning the deniers of that and the rejecters of what you claimed. And al-ʿābidīn is from ʿabida with the broken middle, yaʿbudu with the open. The poet said, those are my people, if they satirize me I satirize them, and I disdain to satirize Kulayb with Darim, meaning I refrain.</p>
+<cite class="text-sm text-gray-500">- Ibn Hajar, Fath al-Bari, v8, p437</cite>
+</blockquote>
+<p>Al-Qummi's relay on the Maryam passage frames the doctrine the conditional serves.</p>
+<div class="premise-card">
+<p class="text-sm"><strong>Source:</strong> Ali ibn Ibrahim al-Qummi (d. 329 AH) on Qur'an 19:88-93, Bihar v3 p258</p>
+<p class="text-sm"><strong>Speaker:</strong> Ja'far al-Sadiq, to Abu Basir</p>
+<p class="text-sm"><strong>Claim:</strong> Quraysh said God took a son and the angels are female, and the answer came down</p>
+</div>
+<blockquote class="hadith-callout">
+<p class="rtl font-amiri text-xl" lang="ar">1 - تفسير علي بن إبراهيم : جعفر بن أحمد ، عن عبيد الله بن موسى ، عن الحسن بن علي بن أبي حمزة ، عن أبيه ، عن أبي بصير ، عن أبي عبد الله <span class="honorific">﵇</span> قال : قلت : قوله تعالى : " وقالوا اتخذ الرحمن ولدا " قال : هذا حيث قالت قريش : إن لله ولدا ، وإن الملائكة إناث ، فقال الله تبارك وتعالى ردا عليهم : " لقد جئتم شيئا إدا " أي عظيما " تكاد السماوات يتفطرن منه " مما قالوا : أن دعوا للرحمن ولدا ، فقال الله ﵎ : " وما ينبغي للرحمن أن يتخذ ولدا إن كل من في السماوات والأرض إلا آتي الرحمن عبدا لقد أحصاهم وعدهم عدا وكلهم آتيه يوم القيامة فردا " واحدا واحدا .</p>
+<p class="translation">Tafsir of Ali ibn Ibrahim. Ja'far ibn Ahmad, from Ubayd Allah ibn Musa, from al-Hasan ibn Ali ibn Abi Hamza, from his father, from Abu Basir, from Abu Abd Allah, who said, I said, His saying, and they said the Most Merciful has taken a son. He said, this is where Quraysh said, God has a son, and the angels are female, so God blessed and exalted said in reply to them, you have come with a monstrous thing, meaning enormous, the heavens almost split from it, from what they said, that they attributed a son to the Most Merciful. So God exalted said, and it does not befit the Most Merciful to take a son. There is no one in the heavens and the earth except that he comes to the Most Merciful as a servant. He has enumerated them and counted them a count, and all of them come to Him on the Day of Resurrection alone.</p>
+<cite class="text-sm text-gray-500">- Al-Qummi on Qur'an 19:88-93, relayed in Bihar al-Anwar, v3, p258</cite>
+</blockquote></section><section id="comparison"><h2>7. The Christian Reading Compared</h2>
+<p>The Christian claim traces to the creedal line that the Son is begotten, not made. The primary holders are the Nicene Creed of 325 CE and its revision of 381 CE. The Gospel line is John 3:16. There God gave His only Son. Those texts are not quoted from memory here, and the Bible fetch channel stays reserved for the comparison build. The creedal holders are cited below as sources, not quoted.
+<ul>
+<li>Nicene Creed (325 CE), the line <em>begotten, not made</em>, held at Nicaea. <cite class="text-sm text-gray-500">- Nicene Creed, 325 CE, <a href="https://www.newadvent.org/cathen/11049a.htm">New Advent translation</a></cite></li>
+<li>John 3:16, <em>God gave His only Son</em>, in the Gospel of John.</li>
+</ul> What the comparison will test is the device itself, whether any conditional of the form found at 43:81 asserts possibility.</p>
+<p>On the Arabic evidence assembled above, the answer is no. The lexicons give the word a disdain sense proven by a complete verse. The exegetes of both schools read the conditional as a device of negation. The surrounding canon states the negation without condition. The Christian reading of 43:81 asks the verse to carry a meaning its language, its company, and its exegetes all refuse.</p></section><section id="verdict"><h2>Final Verdict</h2>
+<div class="conclusion-card">
+<p>Qur'an 43:81 does not allow divine sonship. The conditional is a known Arabic device that hangs an impossibility on an impossibility. The word ʿābidīn carries the disdain sense in the lexicons with a full proof verse. The Ahl al-Bayt exegetes from al-Qummi to al-Majlisi read the verse as a negation of the son claim. The Sunni exegetes al-Baydawi and Ibn Hajar agree in their own canon. The verse closes the door. It does not open one.</p>
+</div></section><section id="glossary"><h2>Glossary</h2><details class="glossary-fold"><summary>Glossary</summary>
+<dl>
+<dt>ʿābidīn</dt><dd>Those who worship, or in the second classical sense, those who disdain and reject. The lexicons prove both.</dd>
+<dt>taʿlīq al-muḥāl bi-l-muḥāl</dt><dd>Hanging the impossible on the impossible. A rhetorical device that asserts negation through a conditional.</dd>
+<dt>in kāna</dt><dd>The if construction of Arabic. Where the impossibility is known, it works as plain negation.</dd>
+<dt>riwāʾi tafsīr</dt><dd>Transmission based exegesis. Commentary carried through narrated chains from the Imams.</dd>
+</dl></details></section>
+<p><a class="backlink" href="index.html">Back to the Library</a></p>
+</article>
+</main>
+<footer>© 2025 Faith &amp; Reason in Islam · All Rights Reserved</footer>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a'));
+  var sections = links.map(function (l) { return document.querySelector(l.getAttribute('href')); });
+  function onScroll() {
+    var pos = window.scrollY + 120, active = 0;
+    sections.forEach(function (s, i) { if (s && s.offsetTop <= pos) active = i; });
+    links.forEach(function (l, i) { if (i === active) l.setAttribute('aria-current', 'location'); else l.removeAttribute('aria-current'); });
+  }
+  window.addEventListener('scroll', onScroll); onScroll();
+  document.querySelectorAll('a[href^="#"]').forEach(function (lnk) {
+    lnk.addEventListener('click', function (e) {
+      var t = document.querySelector(lnk.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      var d = t.closest('details');
+      if (d) d.open = true;
+      t.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  function openHash() {
+    var h = location.hash; if (!h || h === '#') return;
+    var t = document.querySelector(h); if (!t) return;
+    var d = t.closest('details'); if (d) d.open = true;
+    t.scrollIntoView();
+  }
+  window.addEventListener('hashchange', openHash);
+  window.addEventListener('load', openHash);
+})();
+</script>
+</body>
 </html>
