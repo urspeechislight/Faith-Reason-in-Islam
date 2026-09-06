@@ -102,7 +102,7 @@ BLURB = {
     "quran-contradictions": "The Qur'an's 4:82 invites every scripture to be tested, and read by the rule the critic refuses for his own Bible the alleged contradictions resolve.",
     "borrowing": "The Qur'an records the borrowing charge and answers it with the clarity of its Arabic, and parallel is not plagiarism where no transmission chain was ever supplied.",
     "satanic-verses": "Qur'an 22:52 abolishes the whisper before it stands, and the cranes story is the other school's rejected report.",
-    "the-matter-between-two-matters": "The strongest free will objection to Islam presses one dilemma, and the lexicons fix its two horns under the names jabr and tafwid, the Imams of the Ahl al-Bayt named and damned both, and the reports carry the middle between them.",
+    "the-matter-between-two-matters": "The objection says either God determines each choice or the creature does, and either way responsibility dies, and the Imams of the Ahl al-Bayt answered with the doctrine they called a position between the two, explained here from the parable, the dialogue at Merv, the letter of five conditions, and the verses that place the choice with the human being.",
     "allah-deceiver": "The lexicons class-index makr, the Qur'an's usage is requital against plotters, and the attack's own canon shares the grammar.",
     "aisha-age": "The age-six and age-nine reports fall on the tradition's own chronology, on chains that all lead to Kufa, on a witness the Qur'an itself questioned, and on the dolls argument's own dates.",
     "quran-65-4": "The whole dispute sits inside one clause, wa-alla'i lam yahidna. Its grammar, the classical lexicon, al-Mizan, and the Imams' law converge on women at the age of menstruation, not pre-pubescent girls.",
