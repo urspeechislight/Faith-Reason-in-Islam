@@ -29,6 +29,9 @@
     "fourbeat": 53,
     "closing": "Final Verdict"
   },
+  "allah-prays.html": {
+    "cat": "debate"
+  },
   "first-and-last.html": {
     "cat": "exegesis"
   },
@@ -176,6 +179,9 @@
     "fourbeat": 0,
     "closing": "Commentary"
   },
+  "the-matter-between-two-matters.html": {
+    "cat": "debate"
+  },
   "umm-kulthum-marriage.html": {
     "cat": "debate",
     "tabs": true,
@@ -188,8 +194,5 @@
   "word-and-command.html": {
     "cat": "debate",
     "closing": "Final Verdict"
-  },
-  "the-matter-between-two-matters.html": {
-    "cat": "debate"
   }
 }

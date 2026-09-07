@@ -68,7 +68,8 @@ def battle_order():
 
 DOMAIN_MAP = {
     "quran": ["quran-preservation", "quran-contradictions", "borrowing",
-              "satanic-verses", "allah-deceiver", "the-matter-between-two-matters"],
+              "satanic-verses", "allah-deceiver", "the-matter-between-two-matters",
+              "allah-prays"],
     "prophet": ["aisha-age", "quran-65-4", "wife-beating-4-34", "tahrim-66-1",
                 "sword-verse-9-5", "apostasy", "murdered-critics",
                 "banu-qurayza", "hudaybiyya"],
@@ -104,6 +105,7 @@ BLURB = {
     "satanic-verses": "Qur'an 22:52 abolishes the whisper before it stands, and the cranes story is the other school's rejected report.",
     "the-matter-between-two-matters": "The objection says either God determines each choice or the creature does, and either way responsibility dies, and the Imams of the Ahl al-Bayt answered with the doctrine they call the matter between two extremes, explained here from the parable, the dialogue at Merv, the letter of five conditions, and the verses that place the choice with the human being.",
     "allah-deceiver": "The lexicons class-index makr, the Qur'an's usage is requital against plotters, and the attack's own canon shares the grammar.",
+    "allah-prays": "A Christian charge reads yusalluna in Qur'an 33:56 as prayer and asks why Allah prays upon the Prophet, and the lexicons, the pre-Islamic poets, and the Qur'an's own usage show the verb carries mercy, praise, and blessing.",
     "aisha-age": "The age-six and age-nine reports fall on the tradition's own chronology, on chains that all lead to Kufa, on a witness the Qur'an itself questioned, and on the dolls argument's own dates.",
     "quran-65-4": "The whole dispute sits inside one clause, wa-alla'i lam yahidna. Its grammar, the classical lexicon, al-Mizan, and the Imams' law converge on women at the age of menstruation, not pre-pubescent girls.",
     "wife-beating-4-34": "The lexicons widen the verb, the Prophet's farewell sermon bounds it, and the reports the attack quotes condemn the beating it sells.",
