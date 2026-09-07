@@ -34,7 +34,7 @@ def extract_facts(slug: str):
     ftxt = m.group(0)
     out = []
     for sec in re.findall(r'<div class="analysis-section">(.*?)(?=<div class="analysis-section">|$)', ftxt, flags=re.S):
-        hm = re.search(r'analysis-heading[^>]*>([^<]+)<', sec)
+        hm = re.search(r'analysis-heading[^>]*>([^<]+)<', sec) or re.search(r'<summary><h4[^>]*>([^<]+)</h4></summary>', sec)
         title = hm.group(1).strip() if hm else "Facts"
         rows = []
         for r in re.findall(r"<tr[^>]*>(.*?)</tr>", sec, flags=re.S):
