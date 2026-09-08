@@ -44,6 +44,21 @@
         details.glossary summary { cursor: pointer; }
         details.glossary > summary h4 { display: inline; }
         @media print { .section-nav { display: none; } details { open: true; } details > * { display: block !important; } details > summary { display: none !important; } }
+
+        .fact-entry { background-color: #FFFFFF; border: 1px solid #E7E0D1; border-radius: 0.5rem; padding: 0.25rem 1.25rem; margin-bottom: 0.75rem; }
+        .fact-entry summary { cursor: pointer; padding: 0.75rem 0; list-style: none; }
+        .fact-entry summary::-webkit-details-marker { display: none; }
+        .fact-entry summary::before { content: "\25B8\00a0"; color: #8A6D3B; }
+        .fact-entry[open] summary::before { content: "\25BE\00a0"; }
+        .fact-title { display: block; font-weight: 600; color: #3D4451; }
+        .fact-exp { display: block; color: #6B7280; font-size: 0.875rem; margin-top: 0.15rem; }
+        .fact-src { display: block; color: #8A6D3B; font-size: 0.8rem; margin-top: 0.15rem; }
+        .fact-body { padding: 0 0 1rem 1.25rem; border-top: 1px solid #EFE9DC; }
+        .fact-tools { display: flex; gap: 1rem; align-items: center; margin-top: 0.75rem; flex-wrap: wrap; }
+        .copy-btn { background-color: #F7F4EC; border: 1px solid #B99C6B; color: #3D4451; border-radius: 0.375rem; padding: 0.375rem 0.75rem; font-size: 0.8rem; cursor: pointer; }
+        .copy-btn:hover { background-color: #F8F1E2; }
+        .fact-link { color: #8A6D3B; font-size: 0.8rem; text-decoration: underline; }
+        .copy-text { display: none; }
     </style>
 </head>
 <body class="antialiased">
@@ -120,103 +135,466 @@
 
 <section id="facts" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
 <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">Evidence at a Glance</h2>
-<div class="premise-card mb-4">
-<p class="text-gray-600">In brief. The Qur'an does not require complete preservation of earlier scripture. It affirms surviving truth and accuses custodians of alteration in the same passages. Early Muslim interpretation understood Qur'an 7:157 primarily through description and recognition, not through a surviving literal name line. Muslim sources simultaneously cite surviving biblical material and accuse the same scriptural communities of alteration or concealment. Citation of surviving material does not amount to certification of an entire codex.</p>
+<div class="premise-card mb-4"><p class="text-gray-600">In brief. The Qur'an does not require complete preservation of earlier scripture. It affirms surviving truth and accuses custodians of alteration in the same passages. Early Muslim interpretation understood Qur'an 7:157 primarily through description and recognition, not through a surviving literal name line. Muslim sources simultaneously cite surviving biblical material and accuse the same scriptural communities of alteration or concealment. Citation of surviving material does not amount to certification of an entire biblical collection.</p></div>
+<p class="mb-4 text-sm text-gray-500">Each entry below is a reference card. The claim and source stay visible. Expand it for the quotation in Arabic and English, the full citation, how the evidence supports the claim, and its qualifications. The link icon gives a permanent link, and the button copies the quotation with its citation.</p>
+<details class="fact-entry" id="fact-torah-guidance">
+<summary>
+<span class="fact-title">The Qur'an calls the Torah guidance and light</span>
+<span class="fact-exp">The Torah verse the objection stands on.</span>
+<span class="fact-src">Qur'an 5:44</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The verse praises the Torah and then assigns the prophets, the rabbis, and their scholars to judge by it. The objection reads this praise as a certificate of the whole biblical collection, which the verse does not say.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">إِنَّا أَنْزَلْنَا التَّوْرَاةَ فِيهَا هُدًى وَنُورٌ</p>
+<p class="translation">&quot;Indeed, We sent down the Torah, in which was guidance and light...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 5:44</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Quoted from the clause the objection relies on. Translation ours.</p>
+<div class="copy-text" id="copy-fact-torah-guidance">إِنَّا أَنْزَلْنَا التَّوْرَاةَ فِيهَا هُدًى وَنُورٌ
+"Indeed, We sent down the Torah, in which was guidance and light..."
+Source: Qur'an 5:44
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-torah-guidance</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-torah-guidance" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-torah-guidance">Link to this entry</a>
 </div>
-<p class="mb-4 text-sm text-gray-500">Expand each heading for the complete source and evidence inventory used in this article.</p>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4 mb-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Qur'an 7:157 and Early Tafsir</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Eight exegetes of both schools gloss written as description, or description with a name</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab2">&#8599;</a></td></tr>
-</tbody></table></div>
+</div>
 </details>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4 mb-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Recognition Reports</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">No recognition account turns on a bare name line, across eleven story lines</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab4">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The reports sort into four types, explicit description, place and physical sign, continuity of revelation, and Imami written prophecy</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab4">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The Torah address to Moses <span class="honorific">﵇</span> foretells the name's effacement</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab4">&#8599;</a></td></tr>
-</tbody></table></div>
+<details class="fact-entry" id="fact-gospel-judge">
+<summary>
+<span class="fact-title">The Qur'an tells the People of the Gospel to judge by what God revealed in the Gospel</span>
+<span class="fact-exp">The Gospel verse the objection stands on.</span>
+<span class="fact-src">Qur'an 5:47</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The command to judge concerns what God revealed in the Gospel. The verse does not state that every proposition in the Christian Gospels is itself revelation.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَلْيَحْكُمْ أَهْلُ الْإِنْجِيلِ بِمَا أَنْزَلَ اللَّهُ فِيهِ</p>
+<p class="translation">&quot;Let the People of the Gospel judge by what Allah revealed in it...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 5:47</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-gospel-judge">وَلْيَحْكُمْ أَهْلُ الْإِنْجِيلِ بِمَا أَنْزَلَ اللَّهُ فِيهِ
+"Let the People of the Gospel judge by what Allah revealed in it..."
+Source: Qur'an 5:47
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-gospel-judge</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-gospel-judge" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-gospel-judge">Link to this entry</a>
+</div>
+</div>
 </details>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4 mb-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Alteration and Concealment</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The Qur'an pairs recognition with the displacement charge in the same passages</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab3">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The Medinan rabbis found the description, erased it, and misreported it</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab3">&#8599;</a></td></tr>
-</tbody></table></div>
+<details class="fact-entry" id="fact-written-with-them">
+<summary>
+<span class="fact-title">The People of the Book find the Prophet written with them in the Torah and the Gospel</span>
+<span class="fact-exp">The finding claim of Qur'an 7:157.</span>
+<span class="fact-src">Qur'an 7:157</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The verse says they find him written with them. It does not say they find a name line, and the grammar alone does not decide what the writing contained. The early commentaries answer that question.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">النَّبِيَّ الْأُمِّيَّ الَّذِي يَجِدُونَهُ مَكْتُوبًا عِنْدَهُمْ فِي التَّوْرَاةِ وَالْإِنْجِيلِ</p>
+<p class="translation">&quot;...the unlettered Prophet whom they find written with them in the Torah and the Gospel...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 7:157</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-written-with-them">النَّبِيَّ الْأُمِّيَّ الَّذِي يَجِدُونَهُ مَكْتُوبًا عِنْدَهُمْ فِي التَّوْرَاةِ وَالْإِنْجِيلِ
+"...the unlettered Prophet whom they find written with them in the Torah and the Gospel..."
+Source: Qur'an 7:157
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-written-with-them</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-written-with-them" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-written-with-them">Link to this entry</a>
+</div>
+</div>
 </details>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4 mb-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Companion Objections</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The no change verses protect decrees and promises</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab5">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Qur'an 10:94 is read counterfactually, with the asked identified as the prophets of the night journey</td><td class="py-2 pr-4">attributed</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab6">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The Injil is cited as a present, partially altered book, affirmed by the Exilarch</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab7">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Explicit Muslim accusations of alteration predate Ibn Hazm</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab8">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Qur'an 4:157 denies the killing and denies the killers' certainty</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab9">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The followers of 3:55 are, in al-Qummi's reading, Jesus's <span class="honorific">﵇</span> own generation</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab10">&#8599;</a></td></tr>
-</tbody></table></div>
+<details class="fact-entry" id="fact-recognize-sons">
+<summary>
+<span class="fact-title">The People of the Book recognize him as they recognize their own sons</span>
+<span class="fact-exp">The recognition claim of Qur'an 2:146.</span>
+<span class="fact-src">Qur'an 2:146</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The comparison fixes the certainty of the recognition. The verse does not itself state the mechanism, and the report of Abdullah ibn Salam supplies the description the recognition rested on.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">يَعْرِفُونَهُ كَمَا يَعْرِفُونَ أَبْنَاءَهُمْ</p>
+<p class="translation">&quot;Those to whom We gave the Book recognize him as they recognize their own sons...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 2:146</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-recognize-sons">يَعْرِفُونَهُ كَمَا يَعْرِفُونَ أَبْنَاءَهُمْ
+"Those to whom We gave the Book recognize him as they recognize their own sons..."
+Source: Qur'an 2:146
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-recognize-sons</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-recognize-sons" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-recognize-sons">Link to this entry</a>
+</div>
+</div>
 </details>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4 mb-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Biblical Correlates</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The like of Moses parallel is Qur'anic and performed in the opponent's own reports</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab11">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Faran is well attested within the Muslim interpretive tradition, and the claim of broader Jewish-Christian agreement requires independent evidence</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab11">&#8599;</a></td></tr>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">The Paraclete passage of the Injil is quoted to the Exilarch in the majlis</td><td class="py-2 pr-4">reported</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab7">&#8599;</a></td></tr>
-</tbody></table></div>
+<details class="fact-entry" id="fact-conceal-truth">
+<summary>
+<span class="fact-title">A group of them conceal the truth while they know</span>
+<span class="fact-exp">The concealment charge, inside the same verse as the recognition claim.</span>
+<span class="fact-src">Qur'an 2:146</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The same verse that fixes certainty of recognition charges part of the same community with knowing concealment. Recognition and concealment sit in one address.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَإِنَّ فَرِيقًا مِنْهُمْ لَيَكْتُمُونَ الْحَقَّ وَهُمْ يَعْلَمُونَ</p>
+<p class="translation">&quot;...a group of them conceal the truth while they know.&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 2:146</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-conceal-truth">وَإِنَّ فَرِيقًا مِنْهُمْ لَيَكْتُمُونَ الْحَقَّ وَهُمْ يَعْلَمُونَ
+"...a group of them conceal the truth while they know."
+Source: Qur'an 2:146
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-conceal-truth</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-conceal-truth" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-conceal-truth">Link to this entry</a>
+</div>
+</div>
 </details>
-<details class="glossary bg-white border border-[#E7E0D1] rounded-lg p-4">
-<summary><h4 class="font-serif text-xl font-bold text-[#3D4451]">Arguments Deliberately Rejected</h4></summary>
-<hr class="mt-4 mb-2 border-[#E7E0D1]">
-<div class="premise-card overflow-x-auto">
-<table class="w-full text-sm">
-<thead><tr class="text-left">
-<th class="py-2 pr-4 font-semibold">Claim</th>
-<th class="py-2 pr-4 font-semibold">Qualifier</th>
-<th class="py-2 font-semibold">Detail</th>
-</tr></thead>
-<tbody>
-<tr class="border-t border-[#E7E0D1]"><td class="py-2 pr-4">Four weak claims are excluded, machmadim, the Arabic Infancy Gospel naming, the Gospel of Barnabas, and the Baca bridge</td><td class="py-2 pr-4">stated</td><td class="py-2"><a class="text-[#8A6D3B] underline" href="#tab11">&#8599;</a></td></tr>
-</tbody></table></div>
+<details class="fact-entry" id="fact-recognized-rejected">
+<summary>
+<span class="fact-title">When what they recognized came to them, they disbelieved in it</span>
+<span class="fact-exp">Recognition followed by denial, at Qur'an 2:89.</span>
+<span class="fact-src">Qur'an 2:89</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The verse describes prior recognition and later denial. It does not by itself describe textual alteration, so the page reads it as the recognition-and-denial sequence.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">فَلَمَّا جَاءَهُمْ مَا عَرَفُوا كَفَرُوا بِهِ</p>
+<p class="translation">&quot;...when there came to them what they recognized, they disbelieved in it...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 2:89</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-recognized-rejected">فَلَمَّا جَاءَهُمْ مَا عَرَفُوا كَفَرُوا بِهِ
+"...when there came to them what they recognized, they disbelieved in it..."
+Source: Qur'an 2:89
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-recognized-rejected</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-recognized-rejected" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-recognized-rejected">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-distort-knowingly">
+<summary>
+<span class="fact-title">A group of them heard God's word and then distorted it after understanding it</span>
+<span class="fact-exp">The distortion charge of Qur'an 2:75.</span>
+<span class="fact-src">Qur'an 2:75</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The words after they had understood it, knowingly, make the distortion deliberate. The verb is tah rif, displacement of received wording or meaning.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">يَسْمَعُونَ كَلَامَ اللَّهِ ثُمَّ يُحَرِّفُونَهُ مِنْ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ</p>
+<p class="translation">&quot;...a group of them used to hear the word of Allah and then distort it after they had understood it, knowingly.&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 2:75</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-distort-knowingly">يَسْمَعُونَ كَلَامَ اللَّهِ ثُمَّ يُحَرِّفُونَهُ مِنْ بَعْدِ مَا عَقَلُوهُ وَهُمْ يَعْلَمُونَ
+"...a group of them used to hear the word of Allah and then distort it after they had understood it, knowingly."
+Source: Qur'an 2:75
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-distort-knowingly</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-distort-knowingly" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-distort-knowingly">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-tongue-twisting">
+<summary>
+<span class="fact-title">A party of them twist their tongues with the Book so it appears to be from the Book</span>
+<span class="fact-exp">The oral distortion charge of Qur'an 3:78.</span>
+<span class="fact-src">Qur'an 3:78</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The alteration here is spoken aloud, recited as though it were the Book. The page uses this verse where the corruption charge is answered as interpretation only.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">يَلْوُونَ أَلْسِنَتَهُمْ بِالْكِتَابِ لِتَحْسَبُوهُ مِنَ الْكِتَابِ وَمَا هُوَ مِنَ الْكِتَابِ وَيَقُولُونَ هُوَ مِنْ عِنْدِ اللَّهِ وَمَا هُوَ مِنْ عِنْدِ اللَّهِ وَيَقُولُونَ عَلَى اللَّهِ الْكَذِبَ وَهُمْ يَعْلَمُونَ</p>
+<p class="translation">&quot;And a party of them twist their tongues with the Book, that you may suppose it to be from the Book when it is not. And they say, it is from God, when it is not. And they speak against God the lie while they know.&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 3:78</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-tongue-twisting">يَلْوُونَ أَلْسِنَتَهُمْ بِالْكِتَابِ لِتَحْسَبُوهُ مِنَ الْكِتَابِ وَمَا هُوَ مِنَ الْكِتَابِ وَيَقُولُونَ هُوَ مِنْ عِنْدِ اللَّهِ وَمَا هُوَ مِنْ عِنْدِ اللَّهِ وَيَقُولُونَ عَلَى اللَّهِ الْكَذِبَ وَهُمْ يَعْلَمُونَ
+"And a party of them twist their tongues with the Book, that you may suppose it to be from the Book when it is not. And they say, it is from God, when it is not. And they speak against God the lie while they know."
+Source: Qur'an 3:78
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-tongue-twisting</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-tongue-twisting" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-tongue-twisting">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-none-change">
+<summary>
+<span class="fact-title">The word of your Lord is fulfilled in truth and in justice, and none can change His words</span>
+<span class="fact-exp">The no-changer verse the objection stands on.</span>
+<span class="fact-src">Qur'an 6:115</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The statement sits on God fulfilling what he decreed. In the no-changer passages examined here the protected words are the decrees and promises.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَتَمَّتْ كَلِمَةُ رَبِّكَ صِدْقًا وَعَدْلًا لَا مُبَدِّلَ لِكَلِمَاتِهِ</p>
+<p class="translation">&quot;And the word of your Lord is fulfilled, in truth and in justice. None can change His words. He is the Hearing, the Knowing.&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 6:115</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-none-change">وَتَمَّتْ كَلِمَةُ رَبِّكَ صِدْقًا وَعَدْلًا لَا مُبَدِّلَ لِكَلِمَاتِهِ
+"And the word of your Lord is fulfilled, in truth and in justice. None can change His words. He is the Hearing, the Knowing."
+Source: Qur'an 6:115
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-none-change</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-none-change" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-none-change">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-ask-readers">
+<summary>
+<span class="fact-title">If in doubt, ask those who have been reading the Book before you</span>
+<span class="fact-exp">The consultation verse, Qur'an 10:94.</span>
+<span class="fact-src">Qur'an 10:94</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">A consultation about one proposition does not certify every proposition in the books of the people consulted.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">فَإِنْ كُنْتَ فِي شَكٍّ مِمَّا أَنْزَلْنَا إِلَيْكَ فَاسْأَلِ الَّذِينَ يَقْرَءُونَ الْكِتَابَ مِنْ قَبْلِكَ</p>
+<p class="translation">&quot;So if you are in doubt concerning what We have revealed to you, ask those who have been reading the Book before you...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 10:94</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-ask-readers">فَإِنْ كُنْتَ فِي شَكٍّ مِمَّا أَنْزَلْنَا إِلَيْكَ فَاسْأَلِ الَّذِينَ يَقْرَءُونَ الْكِتَابَ مِنْ قَبْلِكَ
+"So if you are in doubt concerning what We have revealed to you, ask those who have been reading the Book before you..."
+Source: Qur'an 10:94
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-ask-readers</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-ask-readers" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-ask-readers">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-crucifixion">
+<summary>
+<span class="fact-title">They did not kill him and did not crucify him, but it was made to appear so to them</span>
+<span class="fact-exp">The crucifixion denial of Qur'an 4:157.</span>
+<span class="fact-src">Qur'an 4:157</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The verse makes two denials and then denies that the actors possessed certainty of identity. Pre-Islamic manuscripts show Christians reporting the crucifixion, and that reporting creates no contradiction inside the Qur'an.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَكِنْ شُبِّهَ لَهُمْ لَفِي شَكٍّ مِنْهُ مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ</p>
+<p class="translation">&quot;They did not kill him and did not crucify him, but it was made to appear so to them. And those who differ over it are in doubt of it, having no knowledge of it beyond following conjecture...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 4:157</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-crucifixion">وَمَا قَتَلُوهُ وَمَا صَلَبُوهُ وَلَكِنْ شُبِّهَ لَهُمْ
+"They did not kill him and did not crucify him, but it was made to appear so to them. And those who differ over it are in doubt of it, having no knowledge of it beyond following conjecture..."
+Source: Qur'an 4:157
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-crucifixion</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-crucifixion" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-crucifixion">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-followers-above">
+<summary>
+<span class="fact-title">Those who followed you above those who disbelieved, until the Day of Resurrection</span>
+<span class="fact-exp">The superiority promise of Qur'an 3:55.</span>
+<span class="fact-src">Qur'an 3:55</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">In al-Qummi's reading the followers are Jesus's own generation. An alternative classical reading takes the superiority historically, the Christians above the Jews. Neither reading certifies later Nicene doctrine.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">يَا عِيسَى إِنِّي مُتَوَفِّيكَ وَرَافِعُكَ إِلَيَّ وَمُطَهِّرُكَ مِنَ الَّذِينَ كَفَرُوا وَجَاعِلُ الَّذِينَ اتَّبَعُوكَ فَوْقَ الَّذِينَ كَفَرُوا إِلَى يَوْمِ الْقِيَامَةِ</p>
+<p class="translation">&quot;O Jesus, I am taking you and raising you to Myself, and purifying you from those who disbelieved, and placing those who followed you above those who disbelieved until the Day of Resurrection...&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 3:55</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-followers-above">يَا عِيسَى إِنِّي مُتَوَفِّيكَ وَرَافِعُكَ إِلَيَّ وَمُطَهِّرُكَ مِنَ الَّذِينَ كَفَرُوا وَجَاعِلُ الَّذِينَ اتَّبَعُوكَ فَوْقَ الَّذِينَ كَفَرُوا إِلَى يَوْمِ الْقِيَامَةِ
+"O Jesus, I am taking you and raising you to Myself, and purifying you from those who disbelieved, and placing those who followed you above those who disbelieved until the Day of Resurrection..."
+Source: Qur'an 3:55
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-followers-above</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-followers-above" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-followers-above">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-guardian">
+<summary>
+<span class="fact-title">The Qur'an calls itself a guardian over the earlier books</span>
+<span class="fact-exp">The muhaymin criterion of Qur'an 5:48.</span>
+<span class="fact-src">Qur'an 5:48</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The verse stands inside the passage the objection quotes. The page uses it as the criterion for what survives, what the earlier books carry in agreement with the Qur'an.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وَأَنْزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ</p>
+<p class="translation">&quot;And We sent down to you the Book in truth, confirming what is before it of the Book, and a guardian over it.&quot;</p>
+<cite class="text-sm text-gray-500">- Qur'an 5:48</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Translation ours.</p>
+<div class="copy-text" id="copy-fact-guardian">وَأَنْزَلْنَا إِلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِمَا بَيْنَ يَدَيْهِ مِنَ الْكِتَابِ وَمُهَيْمِنًا عَلَيْهِ
+"And We sent down to you the Book in truth, confirming what is before it of the Book, and a guardian over it."
+Source: Qur'an 5:48
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-guardian</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-guardian" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-guardian">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-erasure">
+<summary>
+<span class="fact-title">The rabbis found the Prophet's description in the Torah and erased it</span>
+<span class="fact-exp">The erasure report of the tafsir tradition.</span>
+<span class="fact-src">- Ikrima from Ibn Abbas, carried in Bihar al-Anwar v09 p67</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">Four verbs govern one object. The rabbis found the description, it was written, they erased it, and they misreported it to a delegation that asked. The knowledge survived the erasure, since the rabbis could substitute a false description.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">وفي رواية عكرمة عن ابن عباس قال : إن أحبار اليهود وجدوا صفة النبي ﷺ مكتوبة في التوراة : أكحل أعين ربعة حسن الوجه ، فمحوه من التوراة حسدا وبغيا فأتاهم نفر من قريش فقالوا : أتجدون في التوراة نبيا منا ؟ قالوا : نعم نجده طويلا أزرق سبط الشعر ذكره الواحدي بإسناده في الوسيط .</p>
+<p class="translation">&quot;"In a report of Ikrima from Ibn Abbas, the Jewish rabbis found the Prophet's description God's blessings and peace on him and his family written in the Torah, kohl eyed, of middle height, handsome of face. So they erased it from the Torah out of envy and spite.&quot;</p>
+<cite class="text-sm text-gray-500">- - Ikrima from Ibn Abbas, carried in Bihar al-Anwar v09 p67</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">This is a report preserved in Bihar al-Anwar, a seventeenth century compilation, attributed to Ikrima from Ibn Abbas. Listed as transmitted interpretation, not verified history.</p>
+<div class="copy-text" id="copy-fact-erasure">وفي رواية عكرمة عن ابن عباس قال : إن أحبار اليهود وجدوا صفة النبي ﷺ مكتوبة في التوراة : أكحل أعين ربعة حسن الوجه ، فمحوه من التوراة حسدا وبغيا فأتاهم نفر من قريش فقالوا : أتجدون في التوراة نبيا منا ؟ قالوا : نعم نجده طويلا أزرق سبط الشعر ذكره الواحدي بإسناده في الوسيط .
+""In a report of Ikrima from Ibn Abbas, the Jewish rabbis found the Prophet's description God's blessings and peace on him and his family written in the Torah, kohl eyed, of middle height, handsome of face. So they erased it from the Torah out of envy and spite."
+Source: - Ikrima from Ibn Abbas, carried in Bihar al-Anwar v09 p67
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-erasure</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-erasure" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-erasure">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-name-effacement">
+<summary>
+<span class="fact-title">The Torah bequest commanded preserving the name and foretold its effacement</span>
+<span class="fact-exp">The name-preservation report of al-Kafi.</span>
+<span class="fact-src">- al-Kulayni (d.329), al-Kafi, v08 p67, with a parallel in Bihar al-Anwar v13 p335, from Tuhaf al-Uqul</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The Imami tradition transmitted its own explanation for the absence of an explicit name. Preservation was commanded, and later effacement was foretold.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">أوصيك يا موسى وصية الشفيق المشفق بابن البتول عيسى ابن مريم صاحب الأتان والبرنس والزيت والزيتون والمحراب ، ومن بعده بصاحب الجمل الأحمر الطيب الطاهر المطهر ، فمثله في كتابك أنه مؤمن مهيمن على الكتب كلها وأنه راكع ساجد ، راغب ، راهب ، إخوانه المساكين وأنصاره قوم آخرون ويكون في زمانه أزل وزلزال وقتل ، وقلة من المال ، اسمه أحمد ، محمد الأمين من الباقين من ثلة الأولين الماضين … فمر ظلمة بني إسرائيل أن لا يدرسوا اسمه ولا يخذلوه وإنهم لفاعلون ، وحبه لي حسنة ، فأنا معه وأنا من حزبه وهو من حزبي وحزبهم الغالبون ، فتمت كلماتي لأظهرن دينه على الأديان كلها</p>
+<p class="translation">&quot;"I bequeath to you, Moses peace be upon him, the bequest of the tender and anxious one. The son of the virgin, Jesus son of Mary peace be upon him, master of the she-ass, the cloak, the oil, the olive, and the prayer niche.&quot;</p>
+<cite class="text-sm text-gray-500">- - al-Kulayni (d.329), al-Kafi, v08 p67, with a parallel in Bihar al-Anwar v13 p335, from Tuhaf al-Uqul</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Imami transmission through al-Kulayni, who died in 329 of the Hijra. Establishes the tradition's internal explanation, not external textual history.</p>
+<div class="copy-text" id="copy-fact-name-effacement">أوصيك يا موسى وصية الشفيق المشفق بابن البتول عيسى ابن مريم صاحب الأتان والبرنس والزيت والزيتون والمحراب ، ومن بعده بصاحب الجمل الأحمر الطيب الطاهر المطهر ، فمثله في كتابك أنه مؤمن مهيمن على الكتب كلها وأنه راكع ساجد ، راغب ، راهب ، إخوانه المساكين وأنصاره قوم آخرون ويكون في زمانه أزل وزلزال وقتل ، وقلة من المال ، اسمه أحمد ، محمد الأمين من الباقين من ثلة الأولين الماضين … فمر ظلمة بني إسرائيل أن لا يدرسوا اسمه ولا يخذلوه وإنهم لفاعلون ، وحبه لي حسنة ، فأنا معه وأنا من حزبه وهو من حزبي وحزبهم الغالبون ، فتمت كلماتي لأظهرن دينه على الأديان كلها
+""I bequeath to you, Moses peace be upon him, the bequest of the tender and anxious one. The son of the virgin, Jesus son of Mary peace be upon him, master of the she-ass, the cloak, the oil, the olive, and the prayer niche."
+Source: - al-Kulayni (d.329), al-Kafi, v08 p67, with a parallel in Bihar al-Anwar v13 p335, from Tuhaf al-Uqul
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-name-effacement</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-name-effacement" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-name-effacement">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-medina-settlement">
+<summary>
+<span class="fact-title">Jews settled Medina because their books described a prophet arising there</span>
+<span class="fact-exp">The settlement report attributed to Malik ibn Anas.</span>
+<span class="fact-src">- Ibn Abi Hatim al-Razi (d.327), Tafsir al-Qur'an al-Azim, v05 p190, hadith 8336</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The report ties the settlement to a description and a place, not to a bare name line.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">حدثنا محمد بن يحيي ، أنبأ العباس بن الوليد ثنا يزيد ، عن سعيد ، عن قتادة قال : الَّذِي يَجِدُونَه مَكْتُوباً عِنْدَهُمْ فِي التَّوْراةِ قال : يَجِدُونَ نَعْتَهُ وَأَمْرَهُ وَنُبُوَّتَهُ مَكْتُوباً عِنْدَهُمْ .</p>
+<p class="translation">&quot;"Ibn Abi Hatim transmitted to us, from al-Abbas ibn al-Walid, from Yazid, from Said, from Qatada, on "whom they find written with them in the Torah." They find his description, his affair, and his prophethood written with them."&quot;</p>
+<cite class="text-sm text-gray-500">- - Ibn Abi Hatim al-Razi (d.327), Tafsir al-Qur'an al-Azim, v05 p190, hadith 8336</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Attributed to Malik ibn Anas, who died in 179 of the Hijra, and carried by later transmitters. Recognition by place and description, transmitted, not verified history.</p>
+<div class="copy-text" id="copy-fact-medina-settlement">حدثنا محمد بن يحيي ، أنبأ العباس بن الوليد ثنا يزيد ، عن سعيد ، عن قتادة قال : الَّذِي يَجِدُونَه مَكْتُوباً عِنْدَهُمْ فِي التَّوْراةِ قال : يَجِدُونَ نَعْتَهُ وَأَمْرَهُ وَنُبُوَّتَهُ مَكْتُوباً عِنْدَهُمْ .
+""Ibn Abi Hatim transmitted to us, from al-Abbas ibn al-Walid, from Yazid, from Said, from Qatada, on "whom they find written with them in the Torah." They find his description, his affair, and his prophethood written with them.""
+Source: - Ibn Abi Hatim al-Razi (d.327), Tafsir al-Qur'an al-Azim, v05 p190, hadith 8336
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-medina-settlement</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-medina-settlement" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-medina-settlement">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-paraclete">
+<summary>
+<span class="fact-title">The Imam quoted the Injil's Paraclete passage to the Exilarch, who affirmed it</span>
+<span class="fact-exp">The Paraclete dialogue of Imam al-Rida.</span>
+<span class="fact-src">- al-Kulayni (d.329), al-Kafi, v03 p214, from al-Sadiq ﵇</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The Imam quotes a passage he identifies as coming from the Injil, and the person speaking with him replies that he does not deny it. The same sources charge those communities with displacing words.</p>
+<blockquote class="quran-callout">
+<p class="rtl font-amiri text-xl" lang="ar">قَالَ : « فِي التَّوْرَاةِ مَكْتُوبٌ : يَا ابْنَ آدَمَ ، تَفَرَّغْ لِعِبَادَتِي ؛ أَمْلَأْ قَلْبَكَ غِنًى وَلَا أَكِلْكَ إِلى طَلَبِكَ ، وَعَلَيَّ أَنْ أَسُدَّ فَاقَتَكَ ، وَأَمْلَأَ قَلْبَكَ خَوْفاً مِنِّي ، وَإِنْ لَاتَفَرَّغْ لِعِبَادَتِي ، أَمْلَأْ قَلْبَكَ شُغُلًا بِالدُّنْيَا ، ثُمَّ لَاأَسُدَّ فَاقَتَكَ ، وَأَكِلْكَ إِلى طَلَبِكَ</p>
+<p class="translation">&quot;"In the Torah is written, son of Adam, be vacant for My worship and I will fill your heart with richness and I leave you not to your own seeking. Upon Me is to close your want, and to fill your heart with fear of Me.&quot;</p>
+<cite class="text-sm text-gray-500">- - al-Kulayni (d.329), al-Kafi, v03 p214, from al-Sadiq ﵇</cite>
+</blockquote>
+<p class="text-gray-600 text-sm mt-2">Imami transmission of the dialogue, preserved in Bihar al-Anwar from Uyun Akhbar al-Rida.</p>
+<div class="copy-text" id="copy-fact-paraclete">قَالَ : « فِي التَّوْرَاةِ مَكْتُوبٌ : يَا ابْنَ آدَمَ ، تَفَرَّغْ لِعِبَادَتِي ؛ أَمْلَأْ قَلْبَكَ غِنًى وَلَا أَكِلْكَ إِلى طَلَبِكَ ، وَعَلَيَّ أَنْ أَسُدَّ فَاقَتَكَ ، وَأَمْلَأَ قَلْبَكَ خَوْفاً مِنِّي ، وَإِنْ لَاتَفَرَّغْ لِعِبَادَتِي ، أَمْلَأْ قَلْبَكَ شُغُلًا بِالدُّنْيَا ، ثُمَّ لَاأَسُدَّ فَاقَتَكَ ، وَأَكِلْكَ إِلى طَلَبِكَ
+""In the Torah is written, son of Adam, be vacant for My worship and I will fill your heart with richness and I leave you not to your own seeking. Upon Me is to close your want, and to fill your heart with fear of Me."
+Source: - al-Kulayni (d.329), al-Kafi, v03 p214, from al-Sadiq ﵇
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-paraclete</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-paraclete" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-paraclete">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-exegetes">
+<summary>
+<span class="fact-title">Eight early exegetes of both schools glossed written as description, or description with a name</span>
+<span class="fact-exp">The pattern of the early commentaries on 7:157.</span>
+<span class="fact-src">the table in the second section of this page</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">Al-Ayyashi and al-Kashani read name and description. Al-Tabrisi reads description. Qatada reads description, the affair, and prophethood. The report attributed to Malik adds place. None of these glosses requires the further conclusion that the entire biblical collection was textually reliable. The attributed speakers are early, and the surviving compilations are later, from the third to the seventh century of the Hijra.</p>
+<p class="text-gray-600 text-sm mt-2">Sources that mention descriptions alone differ from sources that mention both name and description. The full table sits in the second section.</p>
+<div class="copy-text" id="copy-fact-exegetes">Source: the table in the second section of this page
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-exegetes</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-exegetes" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-exegetes">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-correlates">
+<summary>
+<span class="fact-title">Biblical correlates are secondary evidence, examined for further study</span>
+<span class="fact-exp">The ranking of the biblical material.</span>
+<span class="fact-src">the eleventh section of this page</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">Answering the internal contradiction objection and establishing a historical prediction are separate tasks. The correlates, the like of Moses, Faran, Kedar, and the Paraclete, are offered as Muslim interpretive testimony ranked by strength, with the Faran claim of broader Jewish-Christian agreement requiring independent evidence.</p>
+<p class="text-gray-600 text-sm mt-2">Nothing in the case for 7:157 depends on the correlates.</p>
+<div class="copy-text" id="copy-fact-correlates">Source: the eleventh section of this page
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-correlates</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-correlates" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-correlates">Link to this entry</a>
+</div>
+</div>
+</details>
+<details class="fact-entry" id="fact-rejected">
+<summary>
+<span class="fact-title">Four claims are deliberately excluded</span>
+<span class="fact-exp">The weak exhibits the page refuses to use.</span>
+<span class="fact-src">the eleventh section of this page</span>
+</summary>
+<div class="fact-body">
+<p class="text-gray-700 mt-2">The machmadim claim reads a plural noun as a hidden name. The Arabic Infancy Gospel naming claim fails at the standard scholarly reference. The extant Gospel of Barnabas is a medieval composition. The Baca bridge appears nowhere in the Muslim sources cited here.</p>
+<p class="text-gray-600 text-sm mt-2">Each exclusion rests on the evidence for that claim.</p>
+<div class="copy-text" id="copy-fact-rejected">Source: the eleventh section of this page
+https://urspeechislight.github.io/Faith-Reason-in-Islam/whom-they-find-written.html#fact-rejected</div>
+<div class="fact-tools">
+<button class="copy-btn" data-target="copy-fact-rejected" type="button">Copy quotation and citation</button>
+<a class="fact-link" href="#fact-rejected">Link to this entry</a>
+</div>
+</div>
 </details>
 </section>
 <section id="tab1" class="content-section mb-12">
@@ -696,5 +1074,23 @@
     <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
         <p class="text-sm text-gray-500">© 2026 Faith &amp; Reason in Islam · All Rights Reserved</p>
     </footer>
+<script>
+document.addEventListener('click', function (e) {
+    var b = e.target.closest('.copy-btn');
+    if (!b) return;
+    var src = document.getElementById(b.dataset.target);
+    if (!src) return;
+    navigator.clipboard.writeText(src.textContent.trim()).then(function () {
+        b.textContent = 'Copied';
+        setTimeout(function () { b.textContent = 'Copy quotation and citation'; }, 2000);
+    });
+});
+window.addEventListener('DOMContentLoaded', function () {
+    if (location.hash.indexOf('#fact-') === 0) {
+        var d = document.querySelector(location.hash);
+        if (d && d.tagName === 'DETAILS') { d.open = true; d.scrollIntoView(); }
+    }
+});
+</script>
 </body>
 </html>
