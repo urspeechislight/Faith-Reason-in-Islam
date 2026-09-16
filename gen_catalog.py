@@ -79,7 +79,7 @@ DOMAIN_MAP = {
               "text-destruction", "word-and-command"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
                "abu-bakr-strikes-aisha"],
-    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "harut-marut-babylon"],
+    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
 }
