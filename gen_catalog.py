@@ -79,7 +79,7 @@ DOMAIN_MAP = {
               "text-destruction", "word-and-command"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
                "abu-bakr-strikes-aisha"],
-    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name"],
+    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "magic-history"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
 }
@@ -131,6 +131,7 @@ BLURB = {
     "abu-bakr-strikes-aisha": "The Ihya, the Qut al-Qulub, and Tarikh Baghdad print the day Abu Bakr struck Aisha until her mouth bled, and Qur'an 66:4 already said the two hearts deviated. The reports, the weak chains, and the verse, weighed honestly.",
     "ifk-maria": "The dictionaries define the band of the verse as a bonded kin circle, Hafsa's codex counted it four, and the chains from the Imams name the woman the verses exonerated as Maria the Copt.",
     "first-and-last": "He was, and nothing else was. How the God who needs nothing made the first thing from nothing, why it was a light, and how the light returns, read through Qur'an 57:3 and the Shia corpus.",
+    "magic-history": "The complete history of magic in the Twelver Shia corpus, from Iblis stealing words from heaven to the Dajjal and the final judgment, told in nine parts.",
     "light-of-prophet": "The journey of the prophetic light from before creation to the birth of Muhammad ﷺ, narrated by Imam Ali ﵇ and Imam al-Sadiq ﵇ in Bihar al-Anwar Volume 15.",
     "majlis-al-rida": "The interfaith debates at al-Ma'mun's court: the Catholicos answered from his own Gospel, the Exilarch from his own Torah, the fire priest from the fire's own nature, and the Sabian sage from reason alone.",
     "tear-and-pool": "Imam Ja'far al-Sadiq ﵇ comforts a man of Basra who could not safely visit the grave of al-Husayn ﵇ and promises him mercy for his tears and a drink from al-Kawthar. From Kamil al-Ziyarat, report no. 6.",
@@ -145,6 +146,10 @@ LIGHT_PARTS = sorted(
     key=lambda s: int(s.rsplit("-", 1)[1]),
 ) + (["light-of-prophet-genealogy"]
      if (REPO / "light-of-prophet-genealogy.html").exists() else [])
+
+MAGIC_PARTS = sorted(
+    (p.stem for p in REPO.glob("magic-history-[0-9].html")),
+)
 
 # entries with no file behind them yet
 EXTRAS = [
@@ -204,12 +209,14 @@ def series_part(slug: str) -> dict:
 
 
 def main() -> None:
-    catalogued = set(LIGHT_PARTS)  # serial parts ride inside their series entry
+    catalogued = set(LIGHT_PARTS) | set(MAGIC_PARTS)  # serial parts ride inside their series entry
     articles = []
     for dom in DOMAINS:
         for slug in DOMAIN_MAP.get(dom["id"], []):
             a = article(slug)
             a["domain"] = dom["id"]
+            if slug == "magic-history":
+                a["series"] = {"label": "How Magic Began and How It Ends", "parts": [series_part(p) for p in MAGIC_PARTS]}
             if slug == "light-of-prophet":
                 parts = [series_part(p) for p in LIGHT_PARTS]
                 a["series"] = {"label": "Bihar al-Anwar, Volume 15", "parts": parts}
