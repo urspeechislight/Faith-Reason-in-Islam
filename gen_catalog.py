@@ -69,7 +69,7 @@ def battle_order():
 DOMAIN_MAP = {
     "quran": ["quran-preservation", "quran-contradictions", "borrowing",
               "satanic-verses", "allah-deceiver", "the-matter-between-two-matters",
-              "allah-prays"],
+              "allah-prays", "sister-of-aaron"],
     "prophet": ["aisha-age", "quran-65-4", "wife-beating-4-34", "tahrim-66-1",
                 "sword-verse-9-5", "apostasy", "murdered-critics",
                 "banu-qurayza", "hudaybiyya"],
@@ -99,6 +99,7 @@ TITLE = {
 # card blurbs (fall back: first sentence of meta description)
 BLURB = {
     "greatest-name": "The Greatest Name appears in the school's books as letters of a word measured out to prophet after prophet until seventy-two letters rest with the Prophet and his family, and the drawn marks sold as the Name today descend from poems gathered five centuries after Ali.",
+    "sister-of-aaron": "The Quran calls Maryam the sister of Aaron because Arabic names a woman by her house, exactly as it calls Hud the brother of Ad, and the Imams\u2019 own address, the lexicons, the poets, and Luke\u2019s Gospel carry the same kinship grammar.",
     "quran-preservation": "Shia sources on whether the Quran is preserved or corrupted: tahrif, the scribal error narrations, and the chain of transmission from the Prophet through Ali to the mushaf in your hands.",
     "quran-contradictions": "The Qur'an's 4:82 invites every scripture to be tested, and read by the rule the critic refuses for his own Bible the alleged contradictions resolve.",
     "borrowing": "The Qur'an records the borrowing charge and answers it with the clarity of its Arabic, and parallel is not plagiarism where no transmission chain was ever supplied.",
