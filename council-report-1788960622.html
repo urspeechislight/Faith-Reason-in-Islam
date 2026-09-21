@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Council Report · The Greatest Name and the Seals of the Prophets · 2026-09-09</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#fff;color:#1f2937;max-width:860px;margin:0 auto;padding:32px 24px;line-height:1.55}
+  h1{font-size:1.5rem;margin:0 0 4px}
+  h2{font-size:1.1rem;margin:28px 0 8px;color:#8A6D3B}
+  .meta{color:#6b7280;font-size:.9rem;margin-bottom:20px}
+  .verdict{background:#F7F4EC;border:1px solid #E7E0D1;border-radius:8px;padding:18px 20px;margin:16px 0}
+  .pass{display:inline-block;background:#2f6b3a;color:#fff;border-radius:4px;padding:2px 8px;font-size:.8rem;margin-right:6px}
+  table{border-collapse:collapse;width:100%;font-size:.9rem}
+  th,td{border-bottom:1px solid #E7E0D1;text-align:left;padding:6px 8px}
+  th{color:#8A6D3B;font-weight:600}
+  details{border:1px solid #E7E0D1;border-radius:8px;margin:10px 0;padding:10px 14px;background:#FDFBF7}
+  summary{cursor:pointer;font-weight:600;color:#3D4451}
+  .advice{margin:10px 0 0;white-space:pre-wrap;font-size:.92rem}
+  .tag{display:inline-block;background:#EFE9DA;border-radius:4px;padding:1px 7px;font-size:.75rem;color:#6b5d3f;margin-right:6px}
+  footer{margin-top:32px;color:#9ca3af;font-size:.8rem;border-top:1px solid #E7E0D1;padding-top:12px}
+</style>
+</head>
+<body>
+<h1>Council Report · The Greatest Name and the Seals of the Prophets</h1>
+<div class="meta">2026-09-09 · 3 full rounds + closing confirmation · 5 advisors, 5 peer reviewers, chairman synthesis · page: greatest-name.html</div>
+
+<div class="verdict">
+<p><span class="pass">PASS</span> <strong>Council verdict.</strong> Final scores: readability 9.5, comprehensiveness 9, persuasiveness 9, connectedness 9&ndash;9.5, translation fidelity 9&ndash;9.5. The narration page meets the 9+ readability bar and the site's standing conventions. Every defect named across the three rounds was fixed and re-verified; the Arabic blocks were byte-verified verbatim against the titan corpus (44 of 44) independently of the council.</p>
+</div>
+
+<h2>Where the council agreed</h2>
+<p>The story is complete (all ten beats from the measured letters to the market plaques), the thesis lands on evidence at every exhibit, the forged-book template is the strongest argument on the page, and the closing card earns its verdict. Translation fidelity was scored 9&ndash;10 in every round: names, numbers, places, and sequences match, including the hesitant variant &ldquo;or the Imam said&rdquo; and both poems' distinct letter orders.</p>
+
+<h2>Where the council clashed</h2>
+<p>The Contrarian read &ldquo;The answer is consistent across every relay&rdquo; as overstatement; two peer reviewers countered that the same sentence scopes the consistency to the act. The fix adopted both readings: the page now says the three reports do not name one and the same text and agree on the act. One reviewer's &ldquo;al-Hurr al-Amili vs Ithbat al-Huda&rdquo; mismatch was a false positive: Ithbat al-Huda is al-Hurr al-Amili's own book.</p>
+
+<h2>Blind spots the peer review caught</h2>
+<p>The intro said Solomon's name was forged onto the magic book while the exhibit signs Asaf's name (real contradiction, fixed). The two poem printings swap the ha and the waw, unremarked while six-vs-seven prophets got a section (fixed, now stated). The BM mark inventory enumerated more than the &ldquo;seven marks&rdquo; it announced (regrouped to seven). A floating ligature after &ldquo;the prophets' portions alone&rdquo; (reattached). The chairman's own fix pass introduced an &ldquo;and and&rdquo; stutter that round 3 caught (fixed).</p>
+
+<h2>Fixes shipped per round</h2>
+<table>
+<tr><th>Round</th><th>Key fixes</th><th>Commits</th></tr>
+<tr><td>Redo baseline</td><td>Apparatus voice cut (honorific-ligature gloss, corpus-on-titan line), poetry transliterations removed per scripture-only rule, untranslated framing chunks translated, card honorific parity, Ilm al-Yaqin speaker corrected, glue verbs, catalog blurb de-jargoned, superseded greatest-name-seals draft deleted</td><td>e92ab9b</td></tr>
+<tr><td>R1 &rarr; R2</td><td>Intro forgery claim aligned with the Asaf exhibit, consistency claim made honest, poem letter-order variance stated, BM inventory regrouped, forward hook rebuilt on the forgery verdict, fragments finished, stand-as tell, diacritic cites normalized</td><td>ccb5f94</td></tr>
+<tr><td>R2 &rarr; R3</td><td>Asaf spelling unified, poem cross line word order, wind-earth parallel made accurate, abstractions concretized, qiblah glossed, Ibn Tawus paragraph connected back to Ezekiel</td><td>5290f4c</td></tr>
+<tr><td>R3 &rarr; close</td><td>and-and typo, fragment rejoined, read-it-slowly cut, Quran/Kufa/Shia unified, Ali ligature on the rock-legend claim, last &ldquo;corpus&rdquo; token replaced</td><td>5a160db, a9ca340</td></tr>
+</table>
+
+<h2>Advisor positions</h2>
+<details><summary>Round 1 advisors (Contrarian · First Principles · Expansionist · Outsider · Executor)</summary>
+<div class="advice">Contrarian (R 7, C 9, P 8, Conn 8, F 9): load-bearing passages unvisualizable; "consistent across every relay" overstated; single-study dependence; agate ring as padding; ha/waw swap unremarked.
+First Principles (9/9/9/9/10): page does its one job; dating chain followable; glyphs lack their own exhibit.
+Expansionist (9/9/9/9/9): steelman material already present; two unanswered hooks; BM copy undated.
+Outsider (8.5/9/9/8.5/10): "relay" undefined; intro/body forgery contradiction; no rendering of the seven marks; heading X-not-Y.
+Executor (9/9/9/9/10): fragment and telegraphic sentences; CITE-line transliteration drift; fact-card honorific gaps; floating ligature.</div></details>
+<details><summary>Round 2 verification reviewers</summary>
+<div class="advice">Readability 9 (two second-read sentences); Consistency 9 (arithmetic and cross-exhibit counts verified); Persuasiveness 9; Connectedness 9&ndash;10; Fidelity 9&ndash;9.5. New finds: wind-vs-earth parallel inaccuracy, Asaf/Asif split, cross-line pronoun, attribution-holder wording. All fixed.</div></details>
+<details><summary>Round 3 final-gate seats</summary>
+<div class="advice">Threading PASS (9.5), Fidelity PASS (9.5), Conventions PASS (9). Readability 8.5 contingent on three one-line items (doubled and, one fragment, read-it-slowly), all fixed in 5a160db. Closing confirmation seats: readability 9.5 PASS, consistency 9 PASS.</div></details>
+
+<footer>Council artifacts are untracked records that the gate ran · generated 2026-09-09 (epoch 1788960622) · LLM Council after Karpathy's methodology</footer>
+</body>
+</html>
