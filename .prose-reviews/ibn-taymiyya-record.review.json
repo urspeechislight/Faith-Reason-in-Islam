@@ -1,11 +1,11 @@
 {
  "schema": "2026-09-21.2",
  "status": "approved",
- "reviewer": "kimi (primary agent) with five-role article council, peers, and follow-up seats; transcripts council-transcript-1790048651.md et al.",
- "artifact_sha256": "ddb88fa4fc8bc439e0465da17c3d74916981b16fd2b21d399fe09bb17ebc347e",
- "baseline_sha256": "ddb88fa4fc8bc439e0465da17c3d74916981b16fd2b21d399fe09bb17ebc347e",
+ "reviewer": "kimi (primary agent); five-role article council, peers, and follow-up verification seats; transcripts council-transcript-1790048651.md and council-transcript-1790101549.md",
+ "artifact_sha256": "286df49f997f3f3676d41a18cc902f43c036760ded9d819fb3f73efcaf90c755",
+ "baseline_sha256": "286df49f997f3f3676d41a18cc902f43c036760ded9d819fb3f73efcaf90c755",
  "contract_sha256": "c2df0acadda0f9099966b32d200afdf4ca8230febf19ec25be40a9f533f1737d",
- "policy_sha256": "809eb52a8fa508c16ec52a8d28becf02ea250a023a5a6f7c1199615a19a1f4b3",
+ "policy_sha256": "149f6cd416e01cb51fc472b4c4b9509b2c37ec4cdce05cd49c136ff780c8ba23",
  "blocks": [
   {
    "kind": "description",
@@ -14,7 +14,7 @@
    "cues": [],
    "decision": "revised",
    "function": "claim",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "title",
@@ -24,8 +24,8 @@
     "process-leakage"
    ],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "evidence",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -34,7 +34,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h1",
@@ -45,7 +45,7 @@
    ],
    "decision": "keep",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -56,7 +56,7 @@
    ],
    "decision": "revised",
    "function": "claim",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -66,8 +66,8 @@
     "source-performance"
    ],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -78,7 +78,7 @@
    ],
    "decision": "revised",
    "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
@@ -87,7 +87,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -96,7 +96,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -105,7 +105,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -114,7 +114,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -122,8 +122,8 @@
    "id": "b0012",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -132,7 +132,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
@@ -141,7 +141,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -150,7 +150,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -159,7 +159,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -168,7 +168,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -177,7 +177,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -186,25 +186,25 @@
    "cues": [],
    "decision": "revised",
    "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
    "text": "The Creed in His Collected Works",
    "id": "b0020",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Source: Majmu' al-Fatawa, vol.5, pp.41, 138, 165; Majmu' al-Rasa'il wa-l-Masa'il, vol.1, p.69",
    "id": "b0021",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -213,7 +213,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -222,7 +222,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -230,17 +230,17 @@
    "id": "b0024",
    "cues": [],
    "decision": "revised",
-   "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "evidence",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "People divided into four camps when the Jahmiyya emerged, an early group that denied that God is above His creation, and he names the position he counts his own. The Salaf, the earliest generations of Muslims, and the imams hold that God is above His heavens, upon His Throne, separate from His creation, on the authority of the Book and the Sunnah. That doctrine is what the later Shafi'i verdicts itemize under corporeality and direction.",
+   "text": "People divided into four camps when the Jahmiyya emerged, an early group that denied that God is above His creation, and he names the position he counts his own. The Salaf, the earliest generations of Muslims, and the imams hold that God is above His heavens, upon His Throne, separate from His creation. The authority is the Book and the Sunnah. That doctrine is what the later Shafi'i verdicts itemize under corporeality and direction.",
    "id": "b0025",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "inference",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -248,8 +248,8 @@
    "id": "b0026",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "inference",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -258,7 +258,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -266,26 +266,26 @@
    "id": "b0028",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "inference",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
    "text": "The Ruling on Visiting Graves",
    "id": "b0029",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Source: Majmu' al-Fatawa, vol.27, pp.27, 253",
    "id": "b0030",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -294,7 +294,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -303,7 +303,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -312,7 +312,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -320,8 +320,8 @@
    "id": "b0034",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "qualification",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -329,8 +329,8 @@
    "id": "b0035",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "inference",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -339,7 +339,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -347,8 +347,8 @@
    "id": "b0037",
    "cues": [],
    "decision": "revised",
-   "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "evidence",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -357,7 +357,7 @@
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -365,8 +365,8 @@
    "id": "b0039",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
@@ -375,16 +375,16 @@
    "cues": [],
    "decision": "revised",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "Source: al-Durar al-Kamina, vol.1, pp.172-176",
+   "text": "Source: al-Durar al-Kamina, vol.1, pp.171-176",
    "id": "b0041",
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -393,7 +393,7 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
@@ -402,239 +402,248 @@
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "The chronology that follows is Ibn Hajar al-Asqalani's. It opens in Damascus with the imprisonment of the hadith master al-Mizzi, whom Ibn Taymiyya went to the prison and brought out with his own hand.",
+   "text": "The chronology that follows is Ibn Hajar al-Asqalani's. His entry opens the trouble years before the councils, with the first objection in 698 and the summons to Egypt in 705.",
    "id": "b0044",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "The judge of Damascus took the matter to the citadel. Ibn Taymiyya quarreled with him in the presence of the governor's deputy. The deputy had it proclaimed that whoever spoke on the creed would be punished, to still the disturbance. The council of Rajab 705 followed. In Ramadan came the summons to Cairo.",
+   "text": "The Damascus chain opens with the imprisonment of the hadith master al-Mizzi, whom Ibn Taymiyya went to the prison and brought out with his own hand.",
    "id": "b0045",
    "cues": [],
    "decision": "revised",
-   "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "evidence",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "Before the Maliki judge of Egypt the claim against him was read, and he would not answer it.",
+   "text": "The council at the end of Rajab followed, and the summons to Egypt came in the year 705.",
    "id": "b0046",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "The Maliki judge stated the holding, that his unbelief was established and that he must be confined if not killed. A proclamation ran over Damascus that whoever held Ibn Taymiyya's creed had forfeited his blood and property. The Hanbalis of al-Salihiyya, a quarter of Damascus, were assembled to testify against themselves that they held the creed of al-Shafi'i. Two years later, in Cairo, a deposition was drawn against him and a creed in his own handwriting was produced.",
+   "text": "Before the Maliki judge of Egypt the claim against him was read, and he would not answer it.",
    "id": "b0047",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "The Maliki judge stated the holding, that his unbelief was established and that he must be confined if not killed. A proclamation ran over Damascus that whoever held Ibn Taymiyya's creed had forfeited his blood and property. The Hanbalis of al-Salihiyya, a quarter of Damascus, were assembled to testify against themselves that they held the creed of al-Shafi'i. Two years later, in Cairo, a deposition was drawn against him and a creed in his own handwriting was produced.",
+   "id": "b0048",
+   "cues": [],
+   "decision": "revised",
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "The creed in his handwriting affirms that the Qur'an is neither letter nor sound. It affirms that the establishment over the Throne is not according to its apparent sense, and that the statement concerning descent is like the statement concerning establishment. It was the Ash'ari creed, the theology of the kalam school, and it marks how far the concession went. On the fifteenth of Rabi al-Awwal 707 the witnesses certified that he repented from whatever contradicted it, willingly by the record's own word. Later that same year the Sufis of Cairo complained to the citadel. They said he spoke against the masters of the path and taught that no aid is sought from the Prophet. He was sent back toward Syria.",
-   "id": "b0048",
+   "id": "b0049",
    "cues": [],
    "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Proceedings over the divorce ruling in Ramadan 719 tightened the ban on his legal opinions. Another council in Rajab 720 sent him to the citadel, and Ashura 721 brought release. The visitation ruling brought proceedings again in Shaban 726, the citadel again, and this time no release. He died there on the night of Monday, the twentieth of Dhu al-Qa'da 728. Safadi's couplet, which Ibn Hajar sets at the close of the chronology, was one Ibn Taymiyya himself often recited.",
-   "id": "b0049",
-   "cues": [],
-   "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
-  },
-  {
-   "kind": "p",
-   "text": "Eight poets are named, and the entry adds a great multitude beyond them. Ibn Hajar also transmits a letter on the mood of Egypt.",
    "id": "b0050",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "In the letter Ibn Hajar transmits, all of Egypt spoke against him, the judges, the shaykhs, the Sufis, the scholars, and the common people. The Hanafi judge stood excepted as his partisan and the Shafi'i as silent. Damascus differed. Its Hanafi judge Shams al-Din al-Hariri defended him and wrote a document in his praise.",
+   "text": "Eight poets are named, and the entry adds a great multitude beyond them. Ibn Hajar also transmits a letter on the mood of Egypt.",
    "id": "b0051",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "In the letter Ibn Hajar transmits, all of Egypt spoke against him, the judges, the shaykhs, the Sufis, the scholars, and the common people. The Hanafi judge stood excepted as his partisan and the Shafi'i as silent. Damascus differed. Its Hanafi judge Shams al-Din al-Hariri defended him and wrote a document in his praise.",
+   "id": "b0052",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
    "text": "The Verdicts of the Later School",
-   "id": "b0052",
+   "id": "b0053",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Source: Ibn Hajar al-Haytami, al-Fatawa al-Hadithiyya, pp.114-116, relayed in later works; al-Hisni, daf' al-shubah; Ibn Rajab al-Hanbali, relayed by al-Hisni",
-   "id": "b0053",
-   "cues": [],
-   "decision": "revised",
-   "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
-  },
-  {
-   "kind": "p",
-   "text": "Claim: the later authorities itemized his contraventions and recorded verdicts from condemnation to declared unbelief",
    "id": "b0054",
    "cues": [],
    "decision": "revised",
    "function": "data",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the later authorities itemized his contraventions and recorded verdicts from condemnation to declared unbelief",
+   "id": "b0055",
+   "cues": [],
+   "decision": "revised",
+   "function": "data",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "The later Shafi'i authority Ibn Hajar al-Haytami of Mecca (d. 974 AH), a different Ibn Hajar from the author of al-Durar al-Kamina, itemized the contraventions in his collected verdicts. The list survives in relay and is quoted here as the relayers preserve it.",
-   "id": "b0055",
+   "id": "b0056",
    "cues": [
     "process-leakage"
    ],
    "decision": "revised",
    "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "The items are the doctrine of the eternity of the world in kind and the affirmations of corporeality, direction, and transfer for God, claims that He has a body, occupies a place above, and moves. The list also holds the affirmation that God is the size of the Throne, neither smaller nor larger. The same authority's summary verdict survives in the edition of al-Subki's Shifa' al-Saqam, and the quotation names him al-Makki, which is the same Ibn Hajar al-Haytami.",
-   "id": "b0056",
-   "cues": [],
-   "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
-  },
-  {
-   "kind": "p",
-   "text": "Al-Hisni of Damascus, a century closer to the events than al-Haytami, wrote his book to answer the visitation rulings, and he writes as an open partisan of that cause. His verdict is his own position, not a finding the record establishes.",
+   "text": "The items are the doctrine of the eternity of the world in kind and the affirmations of corporeality, direction, and transfer for God. These are the claims that He has a body, occupies a place above, and moves. The list also holds the affirmation that God is the size of the Throne, neither smaller nor larger. The same authority's summary verdict survives in the edition of al-Subki's Shifa' al-Saqam, and the quotation names him al-Makki, which is the same Ibn Hajar al-Haytami.",
    "id": "b0057",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "He builds it from a run of Shafi'i authorities on the visitation, from al-Qadi Abu al-Tayyib to al-Mahamili to al-Halimi.",
+   "text": "Al-Hisni of Damascus, a century closer to the events than al-Haytami, wrote his book to answer the visitation rulings, and he writes as an open partisan of that cause. His verdict is his own position, not a finding the record establishes.",
    "id": "b0058",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "He builds it from a run of Shafi'i authorities on the visitation, from al-Qadi Abu al-Tayyib to al-Mahamili to al-Halimi.",
+   "id": "b0059",
+   "cues": [],
+   "decision": "revised",
+   "function": "evidence",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Ibn Rajab al-Hanbali, of Ibn Taymiyya's own school two generations later, is recorded by al-Hisni among those who believed him an unbeliever, and the report survives only in al-Hisni's relay. The entry continues on the following page.",
-   "id": "b0059",
+   "id": "b0060",
    "cues": [],
    "decision": "revised",
    "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "There Ibn Rajab is reported excusing al-Subki, the Shafi'i imam cited in the verdict above, for declaring him an unbeliever. Against all of this stands the obituary of al-Dhahabi, his own student, which Ibn Hajar al-Asqalani transmits.",
-   "id": "b0060",
-   "cues": [],
-   "decision": "revised",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
-  },
-  {
-   "kind": "p",
-   "text": "Al-Dhahabi concedes the learning, the memory, the courage, and the devotion, and refuses him infallibility. He disagrees with him on fundamental and subsidiary questions. He names the sharpness in debate, the anger, and the harshness toward opponents as the traits that bred enmity toward him, and adds that his opponents' petulance kept him from being a point of consensus. He defends him from the charge of trifling with religion and of lone caprice in his rulings, and closes with days of severe illness and death in the citadel. The obituary is the assessment of a student who knew him, and the enmity it names is the same enmity the record shows reaching the rulers.",
    "id": "b0061",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "explanation",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Dhahabi concedes the learning, the memory, the courage, and the devotion, and refuses him infallibility. He disagrees with him on fundamental and subsidiary questions. He names the sharpness in debate, the anger, and the harshness toward opponents as the traits that bred enmity toward him. He adds that his opponents' petulance kept him from being a point of consensus. He defends him from the charge of trifling with religion and of lone caprice in his rulings, and closes with days of severe illness and death in the citadel. The obituary is the assessment of a student who knew him, and the enmity it names is the same enmity the record shows reaching the rulers.",
+   "id": "b0062",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "h2",
    "text": "What the Record Supports",
-   "id": "b0062",
-   "cues": [],
-   "decision": "revised",
-   "function": "heading",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
-  },
-  {
-   "kind": "p",
-   "text": "He taught, in his own collected works, that God is above His heavens, upon His Throne, separate from creation and in heaven, and that the attribute is real with only the how unknown. He ruled, in the same collection, that travel to visit the graves of the prophets is disobedience. He was summoned before the judges of Egypt in 705, and it was proclaimed in Damascus that whoever held his creed forfeited blood and property. In 707 the creed from his own hand, denying the apparent sense, was produced against him in Cairo. He was imprisoned repeatedly across twenty-three years, the last confinement in 726 for the visitation ruling, and he died in the citadel in 728. The grammarian Abu Hayyan praised him in verse and then broke with him. The later authorities of the Shafi'i school itemized his contraventions and recorded verdicts up to declared unbelief, in relay, and a Hanbali of his own line is recorded, in a single relay, holding that view.",
    "id": "b0063",
    "cues": [],
    "decision": "revised",
-   "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "heading",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
-   "text": "The record also carries its qualifications. The minbar report is a traveler's eyewitness account, undated in the text of the Rihla. The 707 document exists, and its witnesses certified a repentance the record itself calls voluntary, so the motive question stays open. Ibn Taymiyya himself denounced as slander the summary form of the visitation charge, and his own volume holds both the ruling and the denial. The proclamation of 705 was issued amid the war of the judges of Cairo. And al-Dhahabi's obituary is the counterweight, a student's defense that concedes the sharpness and rejects the charge of trifling with religion.",
+   "text": "He taught, in his own collected works, that God is above His heavens, upon His Throne, separate from creation and in heaven. He taught that the attribute is real with only the how unknown. He ruled, in the same collection, that travel to visit the graves of the prophets is disobedience. He was summoned before the judges of Egypt in 705, and it was proclaimed in Damascus that whoever held his creed forfeited blood and property. In 707 the creed from his own hand, denying the apparent sense, was produced against him in Cairo. He was imprisoned repeatedly across twenty-three years, the last confinement in 726 for the visitation ruling, and he died in the citadel in 728. The grammarian Abu Hayyan praised him in verse and then broke with him. The later authorities of the Shafi'i school itemized his contraventions and recorded verdicts up to declared unbelief, in relay. A Hanbali of his own line is recorded, in a single relay, holding that view.",
    "id": "b0064",
    "cues": [],
    "decision": "revised",
    "function": "qualification",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
+  },
+  {
+   "kind": "p",
+   "text": "The record also carries its qualifications. The minbar report is a traveler's eyewitness account, undated in the text of the Rihla. The 707 document exists, and its witnesses certified a repentance the record itself calls voluntary, so the motive question stays open. Ibn Taymiyya himself denounced as slander the summary form of the visitation charge, and his own volume holds both the ruling and the denial. The proclamation of 705 was issued amid the war of the judges of Cairo. And al-Dhahabi's obituary is the counterweight, a student's defense that concedes the sharpness and rejects the charge of trifling with religion.",
+   "id": "b0065",
+   "cues": [],
+   "decision": "revised",
+   "function": "qualification",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "The record also shows Shaykh Nasr al-Manbiji inciting the ruler Baybars against him over the Ibn al-Arabi letter, and the judges of Cairo fighting their own war through his case. The councils that tried him were councils of his own tradition's judges, the confinement orders were the sultan's and the governor's, and the verdicts are the verdicts of the school's own later authorities. The career is documented by the people who wrote the history of the tradition he belonged to.",
-   "id": "b0065",
+   "id": "b0066",
    "cues": [],
    "decision": "revised",
    "function": "evidence",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   },
   {
    "kind": "p",
    "text": "Source. Compiled from al-Durar al-Kamina, the Rihla of Ibn Batuta, daf' al-shubah, Majmu' al-Fatawa, and the relayed verdicts of Ibn Hajar al-Haytami. Filed 2026-09-21.",
-   "id": "b0066",
+   "id": "b0067",
    "cues": [],
    "decision": "revised",
-   "function": "explanation",
-   "observation": "Read in the full five-role council cycle; content traced to its quoted evidence and the council dispositions applied this run."
+   "function": "qualification",
+   "observation": "Read across the full council cycles (five roles, peers, follow-ups); this cycle grounded the trials chain in quotations t26 and the extended t17, trimmed the dangling quote tails, and kept every qualification attached."
   }
  ],
  "claim_preservation": {
   "status": "passed",
-  "negation_quantifiers_attribution": "The 707 sequence now follows the source exactly (deposition, handwriting found, repentance certified voluntary); relays and single-source status flagged for Haytami and Ibn Rajab; superlatives removed; Baybars singular; proclamation dated 705.",
-  "source_alignment": "Conclusion and overview traced to quoted blocks across 25 ledger passages; the p.253 denial is now itself quoted with the consistency reading; Abu Hamid replaces the withdrawn Ibn Aqil claim."
+  "negation_quantifiers_attribution": "707 sequence per the source; relays and single-source status flagged; t16 rendered below the Arabic claim strength; the month removed where unquoted; years stated only where quoted.",
+  "source_alignment": "Every load-bearing claim now sits on a displayed quotation, including the trials chain (t26 698/705/Baybars, t17 al-Mizzi to the end-of-Rajab council, t18 the Cairo council)."
  },
  "source_verification": {
   "status": "passed",
-  "evidence": "citations.py verify green on the final master: 25 passages, including this cycle t24 (Majmu v27 p.253) and t25 (daf al-shubah p.215); five over-extended captures trimmed and re-verified verbatim."
+  "evidence": "citations.py verify green on the final master: 26 passages, including the new t26 (al-Durar v1 p.171) and the corrected t18; t09 t10 t15 t17 re-trimmed and re-verified verbatim."
  },
  "translation_fidelity": {
   "status": "passed",
-  "evidence": "translate.py clean for all 25 units; translations re-trimmed sentence-by-sentence to the trimmed Arabic (t02 t03 t04 t12 t14 t15); t24 t25 translated this cycle and council-checked."
+  "evidence": "translate.py clean for all 26 units; cycle-3 changes retranslated (t17 t26) or aligned (t09 t10 t15 t18 t19); the t16 clause weakened to match the ambiguous Arabic."
  },
  "structural_validation": {
   "status": "passed",
-  "evidence": "islamic-note validate.py OK; faith-reason-note validate.py OK (Flesch 53.3 diagnostic accepted as vocabulary-bound); selftest 102/102; handoff verify passes on 76 blocks."
+  "evidence": "islamic-note validate.py OK; faith-reason-note validate.py OK with selftest 102/102; handoff schema 3 paragraph-layout verify passes on 78 blocks."
  },
  "council": {
   "status": "passed",
-  "evidence": "Five-role article council per council-article.md: five independent advisors, five anonymized peer reviews, two follow-up verification seats, all findings dispositioned in council-transcript-1790048651.md and council-report-1790048651.html.",
-  "reviewed_artifact_sha256": "8a036db6b8738557a1e439da2eab97d92fcfab2219382048f1b6beb24c0bafdc",
+  "evidence": "Five-role article council with five anonymized peers and follow-up verification seats (cycle 2), plus the cycle-3 audit and follow-up seat (council-transcript-1790101549.md) that grounded the trials chain and trimmed the dangling quote tails; every finding dispositioned.",
+  "reviewed_artifact_sha256": "2acc444669642d225fbe6a2446776729a105023b8d3f5b2abe57afdc9c4dca63",
   "profile_sha256": "15e8f98262ca9f60cad762d6ac52c4056cd01d2c0565f8ba3177c4d5a0c57964",
   "report": {
    "advisors": [
@@ -693,7 +702,7 @@
     "D": "economy",
     "E": "reader"
    },
-   "synthesis": "Chairman synthesis: the peers rejected wholesale deletion of the sourcing paragraph and three pointer-stripping deletions, and corrected four replacement texts; the council accepted the rest. Corpus source-reviews grounded the p.253 denial (captured as t24), corrected the p.27 continuation to Abu Hamid al-Ghazali (Ibn Aqil claim withdrawn), captured the al-Hisni p.215 continuation (t25), and replaced the ungrounded editors-note claim with the report being undated. Two follow-up seats verified every fix and their two residual blockers were applied. Ship."
+   "synthesis": "Cycle 3 audited the live page against its checkout and the residual finding backlog: the t16 clause rendered no stronger than the OCR-ambiguous Arabic, the t09 and t10 dangling quote tails trimmed, the trials chain grounded in the newly captured t26 and the extended t17, the t18 ledger corrected to the slice the note displays, the unquoted month removed, and the t15 untranslated tail trimmed. The follow-up seat confirmed the fixes; its four residual blockers were applied. Ship."
   }
  },
  "cue_resolutions": [
@@ -703,7 +712,7 @@
    "kind": "process-leakage",
    "text": "Record of His Own School",
    "status": "legitimate",
-   "reason": "The title names the article method, a documentary record drawn from his own school; the phrase is the thesis, not process narration."
+   "reason": "The title names the article method, a documentary record from his own school; it is the thesis, not process narration."
   },
   {
    "id": "b0004:process-leakage:20",
@@ -711,7 +720,7 @@
    "kind": "process-leakage",
    "text": "Record of His Own School",
    "status": "legitimate",
-   "reason": "Same title phrase carried by the mapped heading block; kept as the thesis statement."
+   "reason": "The same title phrase on the mapped heading; kept as the thesis statement."
   },
   {
    "id": "b0005:process-leakage:301",
@@ -719,7 +728,7 @@
    "kind": "process-leakage",
    "text": "school's own sources",
    "status": "legitimate",
-   "reason": "The summary closes by naming the source base, the school's own sources, which is the article's claim, retained after council review."
+   "reason": "The summary names the source base, the school's own sources, which is the article's central claim; kept."
   },
   {
    "id": "b0006:source-performance:168",
@@ -727,7 +736,7 @@
    "kind": "source-performance",
    "text": "His own tradition tells a fuller story",
    "status": "legitimate",
-   "reason": "The sentence states the documentary thesis, that his own tradition records the adverse history; kept because the article then shows it."
+   "reason": "States the documentary thesis that his own tradition records the adverse history; the article then shows it; kept."
   },
   {
    "id": "b0007:process-leakage:0",
@@ -735,15 +744,15 @@
    "kind": "process-leakage",
    "text": "Every quotation below",
    "status": "legitimate",
-   "reason": "The sourcing rule paragraph is the governing evidentiary contract of a documentary investigation; kept compressed per peer review, with the relay gloss."
+   "reason": "The sourcing rule is the governing evidentiary contract of the investigation; kept compressed per peer review with the relay gloss."
   },
   {
-   "id": "b0055:process-leakage:221",
-   "block_id": "b0055",
+   "id": "b0056:process-leakage:221",
+   "block_id": "b0056",
    "kind": "process-leakage",
    "text": "quoted here as",
    "status": "legitimate",
-   "reason": "The phrase flags that the Haytami list survives only in relay, an attribution limit the reader needs; kept for fidelity."
+   "reason": "Flags that the Haytami list survives only in relay; an attribution limit the reader needs; kept for fidelity."
   }
  ],
  "semantic_review": {
@@ -752,43 +761,43 @@
    "blocks": [
     "b0006",
     "b0007",
-    "b0026",
-    "b0029",
+    "b0024",
+    "b0028",
     "b0063"
    ],
-   "evidence": "No section narrates its own moves; the surviving meta shapes are the title thesis, the sourcing contract, and the pointer sentences the council kept deliberately after peer review."
+   "evidence": "No section narrates its own moves; surviving meta shapes are the title thesis, the sourcing contract, and the deliberately kept pointer sentences."
   },
   "litotes": {
    "status": "passed",
    "blocks": [
     "b0013",
-    "b0019",
+    "b0018",
     "b0035",
     "b0048",
     "b0062"
    ],
-   "evidence": "Swept in the council prose pass; remaining negations are source-required qualifications (not obedience, no date of its own, whatever contradicted it)."
+   "evidence": "Remaining negations are source-required qualifications (not obedience, no date of its own, whatever contradicted it); no decorative understatement survives the council passes."
   },
   "decorative-contrast": {
    "status": "passed",
    "blocks": [
     "b0013",
-    "b0020",
-    "b0029",
+    "b0019",
+    "b0028",
     "b0060",
     "b0062"
    ],
-   "evidence": "The win-lose aphorism and the concessive pairs were deleted this cycle; remaining contrasts (praise then break, ruling then denial) are substantive."
+   "evidence": "Aphoristic closes and concessive pairs deleted in earlier cycles; remaining contrasts (praise then break, ruling then denial) are substantive."
   },
   "irony-and-theater": {
    "status": "passed",
    "blocks": [
+    "b0018",
     "b0019",
-    "b0020",
     "b0046",
     "b0060"
    ],
-   "evidence": "The crowd-before-judge quip was rewritten to plain sequence; no scare quotes or arch superiority remain in the close."
+   "evidence": "The crowd-before-judge quip was rewritten to plain sequence; no irony markers remain in the close."
   },
   "openings-and-repetition": {
    "status": "passed",
@@ -799,61 +808,49 @@
     "b0048",
     "b0062"
    ],
-   "evidence": "Preview and recap cycles deleted; the close states the findings once; each quotation keeps one pointer layer."
+   "evidence": "Preview and recap cycles deleted; each quotation carries one pointer; the trials chain pointer was condensed this cycle."
   },
   "first-read-clarity": {
    "status": "passed",
    "blocks": [
     "b0006",
-    "b0026",
-    "b0028",
+    "b0025",
+    "b0027",
     "b0056",
     "b0059"
    ],
-   "evidence": "Reader-seat glosses applied: four schools, Salaf, Jahmiyya, relay, istiwa, quarter, pulpit, the two Ibn Hajar names, al-Hisni at first appearance, Abu Hamid across the page break."
+   "evidence": "Reader-seat glosses stand (four schools, Salaf, Jahmiyya, relay, istiwa, quarter, pulpit, the two Ibn Hajars, al-Hisni, Abu Hamid, al-Subki); the new trials opening names the years it quotes."
   },
   "fidelity-and-attribution": {
    "status": "passed",
    "blocks": [
-    "b0029",
+    "b0028",
+    "b0033",
+    "b0035",
     "b0047",
-    "b0062",
-    "b0059",
-    "b0035"
+    "b0062"
    ],
-   "evidence": "The 707 sequence follows the source; relays and single-source status flagged; superlatives removed; verdicts attributed to their holders."
+   "evidence": "The 707 sequence follows the source; the trials chain is now quoted end to end (t26, t17, t18); relays and single-source status flagged; the unquoted Ramadan month was removed."
   }
  },
  "findings": [
   {
-   "id": "g1",
-   "finding": "707 signed-at-request framing and five related compressions.",
+   "id": "h1",
+   "finding": "Dangling quote tails (t09 istawa fragment, t10 clipped opening, t15 untranslated tail) and a mistranslation-strength clause (t16).",
    "status": "resolved",
-   "resolution": "Rewritten to the source sequence at all loci; witnesses certify repentance the record itself calls voluntary."
+   "resolution": "All trimmed at the ledger and note; translations aligned; t16 rendered no stronger than the Arabic."
   },
   {
-   "id": "g2",
-   "finding": "p.253 denial asserted without quotation; editors-note claim ungrounded.",
+   "id": "h2",
+   "finding": "Trials chain asserted outside quotation (al-Mizzi, the 705 summons, Baybars) and an unquoted month in the prose.",
    "status": "resolved",
-   "resolution": "t24 captured and quoted with the consistency reading; the editors claim replaced by the grounded fact that the report is undated."
+   "resolution": "t26 captured and quoted; t17 extended to the al-Mizzi story; t18 ledger corrected; the month removed; the restatement condensed."
   },
   {
-   "id": "g3",
-   "finding": "Quote-boundary artifacts (trailing headers, mid-word cuts, stray running header) and two duplicated passages.",
-   "status": "resolved",
-   "resolution": "Ledger captures trimmed and re-verified; Minbar and Ruling quotations deduplicated; p.173 proclamation and Egypt-letter slices made disjoint."
-  },
-  {
-   "id": "g4",
-   "finding": "Narration openers, aphorisms, preview and recap cycles across the article.",
-   "status": "resolved",
-   "resolution": "Some twenty deletions applied per council and peer review; pointers preserved where peers required."
-  },
-  {
-   "id": "g5",
-   "finding": "Flesch 53.3 against the 55 floor.",
+   "id": "h3",
+   "finding": "Flesch 53.9 against the 55 floor.",
    "status": "accepted-with-reason",
-   "resolution": "Diagnostic only; the register is bound to the subject vocabulary and the council prose pass prioritized fidelity; further splitting would degrade documentary precision."
+   "resolution": "Diagnostic; vocabulary-bound; the council passes prioritized fidelity; documented rather than degrading the record."
   }
  ],
  "scope_cues_before": [
@@ -916,12 +913,6 @@
    ]
   ],
   [
-   "b0046",
-   [
-    "not"
-   ]
-  ],
-  [
    "b0047",
    [
     "not"
@@ -930,42 +921,48 @@
   [
    "b0048",
    [
-    "not",
-    "no"
+    "not"
    ]
   ],
   [
    "b0049",
    [
+    "not",
     "no"
    ]
   ],
   [
-   "b0051",
+   "b0050",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0052",
    [
     "all"
    ]
   ],
   [
-   "b0057",
+   "b0058",
    [
     "not"
    ]
   ],
   [
-   "b0059",
+   "b0060",
    [
     "only"
    ]
   ],
   [
-   "b0060",
+   "b0061",
    [
     "all"
    ]
   ],
   [
-   "b0063",
+   "b0064",
    [
     "only"
    ]
@@ -1031,12 +1028,6 @@
    ]
   ],
   [
-   "b0046",
-   [
-    "not"
-   ]
-  ],
-  [
    "b0047",
    [
     "not"
@@ -1045,42 +1036,48 @@
   [
    "b0048",
    [
-    "not",
-    "no"
+    "not"
    ]
   ],
   [
    "b0049",
    [
+    "not",
     "no"
    ]
   ],
   [
-   "b0051",
+   "b0050",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0052",
    [
     "all"
    ]
   ],
   [
-   "b0057",
+   "b0058",
    [
     "not"
    ]
   ],
   [
-   "b0059",
+   "b0060",
    [
     "only"
    ]
   ],
   [
-   "b0060",
+   "b0061",
    [
     "all"
    ]
   ],
   [
-   "b0063",
+   "b0064",
    [
     "only"
    ]
