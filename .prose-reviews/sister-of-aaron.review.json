@@ -1,0 +1,2742 @@
+{
+ "schema": "2026-09-21.2",
+ "status": "approved",
+ "reviewer": "kimi-code primary agent (GLM), article council of five roles with five anonymized peer reviews",
+ "artifact_sha256": "2d6ae5414005290de49f1f23a55dbe0c43d1ec93140ae3f55a2d951a53c0facb",
+ "baseline_sha256": "2d6ae5414005290de49f1f23a55dbe0c43d1ec93140ae3f55a2d951a53c0facb",
+ "contract_sha256": "c2df0acadda0f9099966b32d200afdf4ca8230febf19ec25be40a9f533f1737d",
+ "policy_sha256": "809eb52a8fa508c16ec52a8d28becf02ea250a023a5a6f7c1199615a19a1f4b3",
+ "blocks": [
+  {
+   "kind": "description",
+   "text": "The Quran calls Maryam the sister of Aaron because Arabic names a woman by her house, as it calls Hud the brother of Ad and as the Imams called strangers the brother of the people of Egypt. From the Quran, the Ahl al-Bayt tafsir, Lisan al-Arab, and the Gospel of Luke.",
+   "id": "b0001",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Meta description states the thesis and evidence base as one declarative sentence without genre labels."
+  },
+  {
+   "kind": "title",
+   "text": "Why Maryam Is Called the Sister of Aaron",
+   "id": "b0002",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Plain spoken title asking the article's question directly."
+  },
+  {
+   "kind": "p",
+   "text": "Quran Exegesis · Debate",
+   "id": "b0003",
+   "cues": [],
+   "decision": "keep",
+   "function": "locator",
+   "observation": "Category kicker identifying the page as a Quran exegesis debate."
+  },
+  {
+   "kind": "h1",
+   "text": "Why Maryam Is Called the Sister of Aaron",
+   "id": "b0004",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "H1 repeats the title verbatim; no overclaim beyond what sources assert."
+  },
+  {
+   "kind": "p",
+   "text": "The Quran calls Maryam ﵍ the sister of Aaron because Arabic names a woman by her house, as it calls Hud the brother of Ad. The Imams ﵈ called strangers the brother of the people of Egypt, and a woman of the Ansar the sister of the Ansar. From Qur'an 19:28, the Ahl al-Bayt tafsir, Lisan al-Arab, and the Gospel of Luke.",
+   "id": "b0005",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Header subtitle names the linguistic answer first, then the witnesses; provenance sentence closes it."
+  },
+  {
+   "kind": "h2",
+   "text": "The Argument Under Examination",
+   "id": "b0006",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "When her people confront Maryam ﵍ with her infant, the Qur'an gives their address, the sister of Aaron, joined to a defense of her parents' honor (Qur'an 19:27-28). Aaron the prophet, brother of Moses ﵇, lived about a thousand years before her. Christian critics say the Qur'an has confused two women, Maryam ﵍ the mother of Isa ﵇ and Miriam the sister of Moses ﵇, and rolled them into one. If she was not Aaron's ﵇ sister, the charge concludes, the verse should never have said sister.",
+   "id": "b0007",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "States the charge at full strength: the verse, the thousand-year gap, and the confusion claim."
+  },
+  {
+   "kind": "p",
+   "text": "The verse said sister because that is how the language names a woman's house. The words the crowd speaks defend a lineage, her father never an evil man, her mother never a wanton woman, and the address opens the same defense. On the school's main reading it names her by the greatest saint of her line, and the grammar it uses is the standing grammar of Arabic, Hebrew, and the Qur'an itself.",
+   "id": "b0008",
+   "cues": [],
+   "decision": "revised",
+   "function": "claim",
+   "observation": "States the thesis with its certainty scoped to the school's main reading, per the concession in section three."
+  },
+  {
+   "kind": "p",
+   "text": "The Imams ﵈, the twelve of the Ahl al-Bayt whom the school follows, read the verse this way from the beginning. Ali ibn Ibrahim al-Qummi (d.329) narrates the whole scene and explains the address inside it. Al-Sharif al-Murtada (d.436) gave a session of his Amali to this one verse alone and wrote the school's classic statement of the idiom. The idiom is that the address names a woman of Aaron's ﵇ line the way an Arab is named by his tribe. The objections of the Christians of Najran reached the Prophet ﷺ in his own lifetime, and his answer has chains in the Sunni and the Shia books alike. The lexicons and the poets, and the Gospel of Luke, keep the same kinship grammar.",
+   "id": "b0009",
+   "cues": [],
+   "decision": "revised",
+   "function": "evidence",
+   "observation": "Names the Imams for the nonspecialist and lists the school's witnesses in authority order."
+  },
+  {
+   "kind": "p",
+   "text": "Premise 1: Arabic kinship words name houses and lines, and they do this in the Quran itself.",
+   "id": "b0010",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Premise one states the linguistic rule the Quran's own usage will carry."
+  },
+  {
+   "kind": "p",
+   "text": "The Qur'an calls Hud their brother when it sends him to Ad, and Salih their brother when it sends him to Thamud. The meaning is one of their descendants and their kind, as Muqatil ibn Sulayman explained in a report al-Murtada preserved. It calls the whole nation the sons of Israel a thousand years after Israel died, and it calls Maryam ﵍ the daughter of Imran (Qur'an 66:12). Daughter here is the name of her own father and of the house's ancient father alike. A kinship word joined to a house's name states the line, and sister of Aaron is exactly that.",
+   "id": "b0011",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Cites Hud, Salih, the sons of Israel, and daughter of Imran as the Quran's own kinship-word usage."
+  },
+  {
+   "kind": "p",
+   "text": "Premise 2: The Imams ﵈ and the Prophet ﷺ used exactly this address on men and women who were no siblings of theirs.",
+   "id": "b0012",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Premise two states the usage evidence from the Imams and the Prophet."
+  },
+  {
+   "kind": "p",
+   "text": "Imam al-Sadiq ﵇ repeatedly addressed an Egyptian stranger as the brother of the people of Egypt in the courtyard of the Kaaba, in al-Kafi. Ali ﵇ at Nahrawan said the brother of al-Azd. The Prophet ﷺ said the brother of the Ansar and the brother of Thaqif, and he answered a woman of the Ansar with the sister of the Ansar. The lexicons record the brother of Tamim, as stated by Ibn Manzur in Lisan al-Arab, and pre-Islamic poetry carries the brother of the sons of Khalaf.",
+   "id": "b0013",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Enumerates the address instances with their books; every item has an exhibit below."
+  },
+  {
+   "kind": "p",
+   "text": "Premise 3: The charge was pressed at the source and answered at the source.",
+   "id": "b0014",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Premise three states the historical argument: objection and answer both at the source."
+  },
+  {
+   "kind": "p",
+   "text": "The Christians of Najran put the question to al-Mughira ibn Shu'ba, the Prophet's ﷺ envoy, within his lifetime. They asked why the Qur'an calls Maryam the sister of Aaron when Moses lived so long before Jesus. He carried it back. The Prophet ﷺ answered that the Children of Israel used to name themselves after their prophets and their righteous men. The school transmits this answer through Ibn Tawus as well as through the Sunni chains.",
+   "id": "b0015",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Relates the Najran exchange with its chains and the Prophet's answer."
+  },
+  {
+   "kind": "p",
+   "text": "Premise 4: Her Aaronic lineage is supported, though the argument does not depend on it.",
+   "id": "b0016",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Premise four scopes the lineage claim as supportive rather than load-bearing."
+  },
+  {
+   "kind": "p",
+   "text": "The Qur'an fixes her in the House of Imran, the chosen seed (Qur'an 3:33-34), raised in the temple under Zakariyya ﵇. The Gospel of Luke calls Elizabeth, Maryam's ﵍ kinswoman, a woman of the daughters of Aaron (Luke 1:5, 1:36). Even the historians who prefer a Davidic line for her, like Ibn al-Athir (d.630), still concede that her people were called after the righteous, which is the very custom behind the address. On every branch, the charge fails.",
+   "id": "b0017",
+   "cues": [],
+   "decision": "revised",
+   "function": "evidence",
+   "observation": "Cites Qur'an 3:33-34, Luke 1:5 and 1:36, and Ibn al-Athir's concession for premise four."
+  },
+  {
+   "kind": "p",
+   "text": "Conclusion: The address is a correct kinship address in the language it was said in.",
+   "id": "b0018",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Conclusion card states the verdict the premises carry."
+  },
+  {
+   "kind": "p",
+   "text": "From Premise 1 and Premise 2, sister of Aaron states a woman's house in Arabic's own kinship grammar. From Premise 3, the objection was raised in the Prophet's ﷺ own lifetime and answered by him there, and the books of both communities preserve the exchange. From Premise 4, whichever genealogy a reader prefers, Aaronide or Davidic, the address stands. The charge of confusion requires a rule the language never held, that sister can only name one womb. Every layer of evidence, the Qur'an's own usage, the Imams' ﵈ practice, the lexicons, the poets, and the Bible, refuses that rule.",
+   "id": "b0019",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Derives the conclusion from the premises and names the rule the charge would need."
+  },
+  {
+   "kind": "h2",
+   "text": "The Facts",
+   "id": "b0020",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "h2",
+   "text": "1. The Charge Rests on One Word",
+   "id": "b0021",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "Maryam ﵍ withdrew from her people to an eastern place. The spirit was sent to her, and she conceived. She returned carrying the child, and her people confronted her.",
+   "id": "b0022",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Retells the surah's scene in three sentences before the verse is quoted."
+  },
+  {
+   "kind": "p",
+   "text": "The crowd opens with the lineage defense, her father was never evil, her mother was never wanton, and it opens that defense with the lineage's name, sister of Aaron. The address is part of the accusation, a house invoked against one of its daughters.",
+   "id": "b0023",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Explains the address as part of the crowd's accusation before exhibiting it."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 19:27-28, Surat Maryam",
+   "id": "b0024",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: Maryam ﵍ returns to her people carrying the infant Isa ﵇",
+   "id": "b0025",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: the assembly of the Children of Israel, with Zakariyya ﵇ present in Tafsir al-Qummi's narration",
+   "id": "b0026",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the crowd invokes her lineage's honor while charging her with a thing unheard of",
+   "id": "b0027",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The polemic builds from the Torah itself, which closes the list of Amram's children with and Miriam their sister (Numbers 26:59) and titles Miriam the prophetess the sister of Aaron (Exodus 15:20). The polemicist argues that the Qur'an's author lifted the name Maryam and kept the family register it came with. The result, on his argument, is a verse that calls the mother of Isa ﵇ the sister of a man dead a thousand years. The polemic cites the Torah's own title for Miriam as proof of confusion, reading the title as a family register copied whole.",
+   "id": "b0028",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "States the polemic's own construction from Numbers 26:59 and Exodus 15:20."
+  },
+  {
+   "kind": "p",
+   "text": "The whole charge rests on what sister can mean in Arabic. If kinship words carry lineage and house membership, sister of Aaron states a truth about Maryam ﵍ precisely, in the register the crowd itself would have used. If sister means only one born of the same parents, the charge lands. The question turns on the evidence of the language.",
+   "id": "b0029",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Frames the single question the article answers: what sister can mean in Arabic."
+  },
+  {
+   "kind": "h2",
+   "text": "2. Sister Meant the House",
+   "id": "b0030",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "Contested words. The charge reads ukht, sister, as one born of the same parents only. The Imams' ﵈ own usage, the lexicons, and the poets fix the word as kinship within a house, covering descendants and tribesmen.",
+   "id": "b0031",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Contested-words box states who reads ukht how; the section's lexical claim."
+  },
+  {
+   "kind": "p",
+   "text": "In al-Kafi, a woman named Juwayra is waiting in the Sacred Mosque for a mawla of her family, a freed slave attached to the household. Imam al-Sadiq ﵇ asks her what she is waiting for, and when he learns the man was never freed himself, only his grandfather was, he corrects her word for the relationship.",
+   "id": "b0032",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the al-Kafi mawla scene and the Imam's correction of the kinship word."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Kafi, vol.6, p.199, narration 4",
+   "id": "b0033",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Imam Ja'far al-Sadiq ﵇",
+   "id": "b0034",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: Juwayra waits for a mawla of the family in the Sacred Mosque",
+   "id": "b0035",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the grandson of the freed dependent is called your brother",
+   "id": "b0036",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The Imam ﵇ names the grandson of the freed dependent a brother of the house, inside a ruling on clientage (wala'), and no transmitter in the report questions the word. Akh, brother, in the mouth of the school covers kinship across generations.",
+   "id": "b0037",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Draws the exhibit's point: akh covers a house's later generations in the school's own rulings."
+  },
+  {
+   "kind": "p",
+   "text": "A man of Tamim came to Umar asking for a share of water in a land grant, and al-Zubayr addressed him by his tribe. Ibn Manzur (d.711) preserves the exchange in Lisan al-Arab, the largest classical dictionary of the language, and al-Azhari (d.370) had carried the same scene three centuries earlier in Tahdhib al-Lugha. The two lexicons quote the scene under their entry for shibak, a dense cluster of wells, and they preserve the address as ordinary speech.",
+   "id": "b0038",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the Tamim scene and names both lexicons and their dating."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Ibn Manzur, Lisan al-Arab, vol.10, p.447",
+   "id": "b0039",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: al-Zubayr, before Umar",
+   "id": "b0040",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Dating: the scene from the first century AH, carried by Ibn Manzur (d.711 AH)",
+   "id": "b0041",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card dating line: dating line separating scene from carrying source."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a man of Tamim is addressed as the brother of Tamim",
+   "id": "b0042",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Azhari, Tahdhib al-Lugha, vol.10, p.20",
+   "id": "b0043",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: al-Zubayr, before Umar",
+   "id": "b0044",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Dating: al-Azhari (d.370 AH)",
+   "id": "b0045",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card dating line: dating line separating scene from carrying source."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the same scene and vocative a century earlier",
+   "id": "b0046",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Two dictionaries, three centuries apart, cite the same vocative because it was the living idiom of the address. Tamim is a tribe, an ancestor's name carried by a whole people, and the man of that stock is greeted by it. The Imam's ﵇ correction and the lexicons' scene agree from two directions.",
+   "id": "b0047",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Finds the convergence: two dictionaries three centuries apart cite the same living vocative."
+  },
+  {
+   "kind": "p",
+   "text": "The dictionary carries a poet's line in its own pages, a pre-Islamic taunt addressed to a man of Banu Khalaf by his clan's name. The taunt's grammar is the grammar of the 19:28 scene, an address by the house's name in the middle of a rebuke.",
+   "id": "b0048",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the pre-Islamic taunt and its grammar matching the 19:28 scene."
+  },
+  {
+   "kind": "p",
+   "text": "Source: a pre-Islamic poet, in Lisan al-Arab, vol.11, p.740",
+   "id": "b0049",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a man of Banu Khalaf is addressed as their brother",
+   "id": "b0050",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The lexicons defined the address from the grammarians' bench, and the poet opens a taunt with it. Zibriqan hears his clan's name from a man insulting him, and no one in the line stops to ask what brother means here. Speakers used the address before any dictionary recorded it, and al-Murtada's session on 19:28 explains the verse with this exact form.",
+   "id": "b0051",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "States what the poetry adds: the definition in living use before lexicography."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Sharif al-Murtada (d.436), the school's theologian of record in fifth-century Baghdad, gave a full session of his Amali to this one verse alone. Among the readings he weighs is the descendant reading, that the address names a woman of Aaron's line the way an Arab is named by his tribe.",
+   "id": "b0052",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces al-Murtada's Amali session and the reading it carries."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Sharif al-Murtada (d.436 AH), Amali (Ghurar al-Fawa'id), session 68, vol.2, p.197",
+   "id": "b0053",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Open question: what sister of Aaron means",
+   "id": "b0054",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card open question line: the question the exhibit answers."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the address names a woman of Aaron's ﵇ line the way an Arab is named by his tribe",
+   "id": "b0055",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The reading stands on al-Murtada's page with the tribe parallel in his own hand, sister of Aaron read as a woman of the line, addressed the way an Arab is addressed by his tribe. He states it among the readings without closing the session on it alone, and the school's case never rested on his choosing among them. It rests on the usage the lexicons and the poets carry, and on the Prophet's ﷺ answer at Najran, which al-Murtada's same session preserves. A first-rank scholar of the school knew the idiom as ordinary Arabic long before the charge's modern carriers.",
+   "id": "b0056",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Places al-Murtada's statement honestly: stated among readings, case resting on usage and Najran."
+  },
+  {
+   "kind": "h2",
+   "text": "3. Daughter of Imran, Brother of Ad",
+   "id": "b0057",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "Her father was a man named Imran, and her mother was Hanna. In al-Kafi, Imam al-Sadiq ﵇ reports that Allah promised Imran a son, and that Imran told his wife Hanna of the promise, she being the mother of Maryam. The Qur'an opens the story of her birth with this woman's vow (Qur'an 3:35).",
+   "id": "b0058",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Opens the paternity question with the school's own reports naming Imran and Hanna."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Kafi, vol.1, p.583, narration 1",
+   "id": "b0059",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Imam Ja'far al-Sadiq ﵇",
+   "id": "b0060",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: Allah's promise to Imran, told to his wife Hanna",
+   "id": "b0061",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Maryam's ﵍ parents are Imran and Hanna",
+   "id": "b0062",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Hilli (d.726) names the couple the same way, the wife of Imran being Hanna, the mother of Maryam daughter of Imran, mother of the Messiah (Idah al-Mukhalafa, p.204).",
+   "id": "b0063",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Corroborates the couple's names from al-Hilli at the cited locus."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 3:35, Surat Al Imran",
+   "id": "b0064",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the wife of Imran, her mother, dedicates the child she carries",
+   "id": "b0065",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The woman making the vow is her mother, and the Imran of the vow is her father. When the Qur'an calls Maryam ﵍ the daughter of Imran (Qur'an 66:12), it names this man.",
+   "id": "b0066",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Concludes the paternity exhibits: the vow's Imran is her own father."
+  },
+  {
+   "kind": "p",
+   "text": "The name her father carried was the house's ancient one, the name of the Amram who fathered Moses ﵇ and Aaron ﵇ a thousand years before her birth. The third surah names the whole chosen line after it, Aal Imran, the aal that means the line of a father, as the Qur'an says Aal Ibrahim and Aal Yaqub. A father of the house bearing the ancestor's own name is the naming custom the Prophet ﷺ gave at Najran, working inside a single family. And the whole corpus calls the nation banu Isra'il, the sons of Israel, century after century after Israel's death.",
+   "id": "b0067",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "States the name-recurrence thesis: the ancient house's name carried by her own father."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 66:12, Surat al-Tahrim",
+   "id": "b0068",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: daughter names her actual father, Imran, husband of Hanna",
+   "id": "b0069",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: her father carried the ancient name of the House of Imran",
+   "id": "b0070",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Daughter names her own father, a man of her own century, the husband of Hanna, the Imran the school's own reports name. Where the Qur'an means a literal father, it names the actual man. Sister of Aaron is the other register, kinship inside the house.",
+   "id": "b0071",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads 66:12 against the exhibits: literal paternity, the other register left for sister."
+  },
+  {
+   "kind": "p",
+   "text": "The charge's rule, that kinship words mean only the womb, would empty half the Qur'an's naming. Its silence on every other kinship word shows that no one actually holds that rule.",
+   "id": "b0072",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Presses the charge's selectivity: its rule would empty half the Quran's naming."
+  },
+  {
+   "kind": "p",
+   "text": "The Qur'an also names prophets by the nations they were sent to, Hud the brother of Ad and Salih the brother of Thamud, and Muqatil's gloss reaches for this pair.",
+   "id": "b0073",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the Hud and Salih verses and Muqatil's gloss of their construction."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 7:65",
+   "id": "b0074",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a prophet of the stock of Ad is called the nation's brother",
+   "id": "b0075",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 7:73",
+   "id": "b0076",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a prophet of the stock of Thamud likewise",
+   "id": "b0077",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Hud shares no womb with the whole nation Ad, and Salih shares none with every man of Thamud. The Qur'an sends Shu'ayb to Madyan in the same register (Qur'an 7:85). It calls each prophet the brother of the nation he was sent to because he is of their stock and their kind.",
+   "id": "b0078",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads the two verses: brother of a nation means of their stock, no womb shared."
+  },
+  {
+   "kind": "p",
+   "text": "Daughter of Imran shows the kinship word joined to a named individual, for descent. Brother of Ad and brother of Thamud show the kinship word joined to a collective, for belonging. What 19:28 writes, a feminine kinship word joined to the house's named saint, composes those two registers, and the exact composition has no separate attestation of its own. The two registers are each attested, and the verse's own early exegetes read the composition without strain, Muqatil glossing it at the verse itself and al-Murtada stating it with the Tamim parallel. The Qur'an spends the same words more loosely still. It calls the believers brothers wherever they live (Qur'an 49:10), and the reckless spendthrifts brothers of the devils (Qur'an 17:27), where no blood is in question.",
+   "id": "b0079",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Concedes the exact form is unattested and stands on the two attested registers and first exegetes."
+  },
+  {
+   "kind": "h2",
+   "text": "4. Four Readings, No Confusion",
+   "id": "b0080",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "Four readings of the address stand in the school's narration-based tafsir, and they differ over one question, which Aaron the crowd reached for. Not one of the four takes the sister of the address for a womb-sister of the brother of Moses, and that is the only reading the confusion charge needs.",
+   "id": "b0081",
+   "cues": [],
+   "decision": "revised",
+   "function": "claim",
+   "observation": "Opens section four by scoping what the readings disagree over and what they share."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Ali ibn Ibrahim al-Qummi (d.329 AH), Tafsir al-Qummi, vol.2, p.50",
+   "id": "b0082",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Reports: the school's inherited account of the birth scene of Isa ﵇",
+   "id": "b0083",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card reports line: provenance note on the quoted narration."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the crowd likened her to a wicked man named Harun of their own time",
+   "id": "b0084",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "On this reading the crowd named no genealogy of hers. They cut her with a comparison to a notorious man of their own generation, a Harun known for sin. The address is an insult, and an insult needs a reference the audience shares. A Harun of their own day gives them one, and the verse reports their words without endorsing their sneer. On this reading too, the thousand years the confusion charge needs are gone, since a contemporary Harun stands inside Maryam's ﵍ own world. Al-Qummi's Harun is a wicked man and the exegetes' Harun is a saint, and the disagreement between the reports is real. The two readings still share one presupposition, that the name Harun sat on many men of her people, and that breadth of the name is what the naming custom rests on. A name forty thousand men carried sat on sinners and saints alike, and a crowd reaching for the house's name could reach for a notorious namesake or a holy one. The two readings answer different questions, al-Qummi's namesake telling which man the crowd reached for, and Muqatil's report telling whose house the name carries.",
+   "id": "b0085",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Reads al-Qummi's namesake insult and the shared presupposition behind both readings."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Sharif al-Murtada, Amali, vol.4, p.106, from the early exegetes",
+   "id": "b0086",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a righteous Harun of her people",
+   "id": "b0087",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: forty thousand men named Harun followed his funeral",
+   "id": "b0088",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Forty thousand men named Harun at one funeral is a report's way of saying the name filled the city. Behind the number stands a people who named their sons after the saints of the line so consistently that a righteous Harun could die with a crowd of his namesakes behind his bier. A woman of that people, addressed by the same name, is being measured against the house's standard of piety.",
+   "id": "b0089",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads the forty-thousand report as evidence of the name's saturation."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Muqatil ibn Sulayman (d.150 AH), in al-Murtada, Amali, vol.2, p.197",
+   "id": "b0090",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Source: from the Prophet ﷺ",
+   "id": "b0091",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: this Aaron is Aaron the brother of Moses ﵇, and the address means one of his line",
+   "id": "b0092",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The report grants the charge its identification. The Aaron of the address is Aaron the prophet ﵇, brother of Moses ﵇. And the Prophet's ﷺ own explanation, as Muqatil transmits it, is that brother-of in the Qur'an's mouth means one of their descendants and their kind, exactly the Hud and Salih construction shown above.",
+   "id": "b0093",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Notes the report grants the charge its identification and what follows from that."
+  },
+  {
+   "kind": "p",
+   "text": "Muqatil's standing is the obvious objection. He is an early transmitter whom the later critics graded harshly, and a hostile reader will say so; the school's case does not lean on him. Al-Murtada, the hardest critic of reports his generation produced, cites him as one reading among several. Every other reading reaches the same ground by another road, through the Qur'an's own usage, the naming custom from Najran, the lexicons, and the living speech. If Muqatil falls, the idiom stands on the rest; if he holds, he carries the Prophet's ﷺ own sentence for it.",
+   "id": "b0094",
+   "cues": [],
+   "decision": "keep",
+   "function": "qualification",
+   "observation": "Addresses Muqatil's graded standing and why the case survives without him."
+  },
+  {
+   "kind": "p",
+   "text": "The school's compilation gathers the collected readings a century later, and the Sunni exegetical tradition carries the same range of readings. Al-Farra (d.207), the founder of the Kufan school of Qur'anic grammar, keeps a brother in the picture, one who shares neither of her parents.",
+   "id": "b0095",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the Huwayzi survey and al-Farra's independent reading."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Huwayzi (d.1112 AH), Nur al-Thaqalayn, vol.3, p.333",
+   "id": "b0096",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the collected views on sister of Aaron, from Ibn Abbas to al-Mughira",
+   "id": "b0097",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Farra (d.207 AH), Ma'ani al-Qur'an, vol.2, p.167",
+   "id": "b0098",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a brother who does not share her parents",
+   "id": "b0099",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Farra's Harun is a brother who does not share her parents, and the kinship word is already doing lineage work before anyone thought to doubt it. The wicked Harun of al-Qummi, the righteous Harun of forty thousand namesakes, the brother who shares neither of her parents, and the line of Aaron the prophet ﵇ all stand on one ground. The address claims no shared womb with the brother of Moses ﵇.",
+   "id": "b0100",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Finds the four readings' common ground: none takes the address for a womb-sister."
+  },
+  {
+   "kind": "h2",
+   "text": "5. No One Needed to Explain the Word",
+   "id": "b0101",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "The Four Books of the school carry the Imams ﵈ addressing strangers and tribesmen with the brother-of construction throughout. No one in the reports pauses to explain it, because no one hearing it needed a gloss.",
+   "id": "b0102",
+   "cues": [],
+   "decision": "revised",
+   "function": "evidence",
+   "observation": "Opens the usage section: the Four Books carry the address throughout, unglossed."
+  },
+  {
+   "kind": "p",
+   "text": "In the longest case, an Egyptian skeptic, a zindiq, a denier of prophethood, traveled to Makkah to argue with Imam al-Sadiq ﵇ and found him in the tawaf, the ritual walk around the Kaaba. The Imam ﵇ answered him question by question, and at every turn he addressed the man by his city.",
+   "id": "b0103",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the zindiq debate with the report frame now displayed in the callout."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Kafi (Dar al-Hadith ed.), vol.1, pp.423-425",
+   "id": "b0104",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Imam Ja'far al-Sadiq ﵇",
+   "id": "b0105",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: the Egyptian zindiq debates the Imam ﵇ during the tawaf",
+   "id": "b0106",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a total stranger is addressed as the brother of the people of Egypt",
+   "id": "b0107",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The Imam ﵇ had never seen this man before the man laid a hand on his shoulder mid-tawaf. The address names the stranger by his people, brother of the people of Egypt, and the debate ran on with the address repeated down the page. The vocative, the grammar of calling, carries a kinship word and a people's name together as easily as an English speaker says a name alone. The Najran objection, put to the Prophet's ﷺ envoy a century and a half before this debate and told in section six, concerned the thousand years between Moses and Jesus, never the Arabic of the address.",
+   "id": "b0108",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Draws the exhibit's point with the Najran chronology kept straight."
+  },
+  {
+   "kind": "p",
+   "text": "The Commander of the Faithful ﵇ uses the address on campaign at Nahrawan, and Imam al-Sadiq ﵇ on a visitor from Yemen.",
+   "id": "b0109",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Bridge or explanatory prose read against its exhibit."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Amili, Wasa'il al-Shia, vol.1, p.418",
+   "id": "b0110",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Ali at al-Nahrawan",
+   "id": "b0111",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a soldier of al-Azd is greeted by his tribe",
+   "id": "b0112",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Amili, Wasa'il al-Shia, vol.10, p.351",
+   "id": "b0113",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Imam al-Sadiq",
+   "id": "b0114",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: a visitor from Yemen is greeted by his country",
+   "id": "b0115",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Azd is a tribe, Yemen is a people, and neither man is a sibling of the speaker. A soldier of the Azd behind the lines at Nahrawan is greeted by his kinship to his tribe's ancestor, and a pilgrim from the south by his country.",
+   "id": "b0116",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads the al-Azd and Yemen addresses: kinship to tribe and country, no siblings."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Saduq, Man la Yahduruh al-Faqih, vol.2, p.202",
+   "id": "b0117",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: the Prophet Muhammad ﷺ",
+   "id": "b0118",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: two men ask about prayer and ablution",
+   "id": "b0119",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: each questioner is addressed by his people",
+   "id": "b0120",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "One speaker, two addresses, two peoples, neither man a sibling of the Prophet ﷺ. The same address runs across the corpus, man after man.",
+   "id": "b0121",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads the Thaqif report: one speaker, two peoples, both addressed by name."
+  },
+  {
+   "kind": "p",
+   "text": "In al-Kafi, a woman of the Ansar came to the Prophet ﷺ and offered herself in marriage, and he answered her with kindness, calling her the sister of the Ansar.",
+   "id": "b0122",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the Ansar woman's report, its marriage-offer context at the cited locus."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Kafi (Dar al-Hadith ed.), vol.11, p.312",
+   "id": "b0123",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: the Prophet Muhammad ﷺ",
+   "id": "b0124",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Locus: a woman of the Ansar offers herself",
+   "id": "b0125",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card locus line: scene locator placing the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the feminine vocative works exactly as the masculine does",
+   "id": "b0126",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "She is a woman of the nation addressed by its name, and the address of 19:28 is the same construction in the feminine.",
+   "id": "b0127",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Ties the feminine vocative directly to the 19:28 construction."
+  },
+  {
+   "kind": "h2",
+   "text": "6. The Objection Is as Old as the Verse",
+   "id": "b0128",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "The Christians of Najran put the question to the Prophet's ﷺ own envoy in his lifetime. They read their scripture and kept their genealogies, and they asked why the Qur'an calls Maryam the sister of Aaron when Moses lived so long before Jesus. The exchange is itself a transmitted report in the books of both communities.",
+   "id": "b0129",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Opens the Najran section with the objection's early date and both communities' records."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Musnad Ahmad (al-Risala ed.), vol.30, p.141; also Ibn Asakir, Tarikh Dimashq, vol.70, p.98, no.13795; Sahih Muslim, Kitab al-Adab",
+   "id": "b0130",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: al-Mughira ibn Shu'ba, the envoy to Najran",
+   "id": "b0131",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the objection was raised in the Prophet's ﷺ lifetime and answered by him",
+   "id": "b0132",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Ibn Tawus (d.664 AH), Sa'd al-Su'ud, from al-Azdi, from Simak ibn Harb, in Nur al-Thaqalayn, vol.3, p.333",
+   "id": "b0133",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Chain: a Shia transmission of the same event",
+   "id": "b0134",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card chain line: transmission note for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the school keeps the Najran exchange in its own books",
+   "id": "b0135",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The report attests that the verse was heard and tested within the Prophet's ﷺ lifetime by the people best prepared to break it. It also preserves the answer that came back from the source of the recitation in his own words. The Children of Israel used to attach their children to their prophets and righteous men, and an address by a saint's name follows that custom. The same report stands in Sahih Muslim's collection of authentic reports, Kitab al-Adab, the strongest grading a Sunni chain carries. The school keeps the same exchange through its own channel.",
+   "id": "b0136",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "States what the report attests, scoped to transmission rather than proof."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Murtada's Amali keeps the exchange in the school's own sitting, where the Prophet's ﷺ rebuke is softened into a lesson. When the Messenger of Allah sent al-Mughira to the people of Najran, they said his Prophet claimed Aaron was the brother of Moses ﵇, when Allah knows the years between Moses and Jesus. Al-Mughira did not know what to answer until he returned. The Prophet ﷺ asked him why he had not said that they used to name themselves after their prophets and the righteous before them (al-Murtada, Amali, vol.2, p.197). The envoy's silence on the spot is the report's own detail, and the answer he carried back named a custom of the objectors' own scripture. The custom was checkable in the scripture the objectors themselves read. The woman the crowd confronted carried the name of Aaron's ﵇ own sister, given to her by parents who did exactly what the answer describes.",
+   "id": "b0137",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Relates al-Murtada's Amali version and answers the ad-hoc reading from the custom's verifiability."
+  },
+  {
+   "kind": "p",
+   "text": "The records of the exchange in both communities' books carry it from al-Mughira, and the Ibn Tawus chain names Simak ibn Harb at its head, a narrator the graders accepted. One exchange, witnessed once, then transmitted in the books of both communities, is what the chains actually carry.",
+   "id": "b0138",
+   "cues": [],
+   "decision": "revised",
+   "function": "qualification",
+   "observation": "States the chain dependence honestly: one exchange, one narrator displayed, dual transmission."
+  },
+  {
+   "kind": "h2",
+   "text": "7. Her Kinship to the House of Aaron",
+   "id": "b0139",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "The third surah carries the house's name in its own title, Aal Imran, and binds that house into one chosen seed with the houses of Adam, Noah, and Abraham. The Qur'an fixes Maryam's ﵍ line before the Gospel is asked about it.",
+   "id": "b0140",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Opens section seven from the Qur'an's own frame before the Gospel."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 3:33-34, Surat Aal Imran",
+   "id": "b0141",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the chosen houses bound into one seed",
+   "id": "b0142",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Maryam's ﵍ house is a link in the chosen line",
+   "id": "b0143",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The verse binds the houses into one seed, dhurriyya, some of it from some, so that Maryam's ﵍ house is a link in a chosen line. The name Imran is the Torah's Amram, the father of Aaron ﵇ and Moses ﵇, recurring inside the house, and the nearer Imran is her own father, the husband of Hanna, whom the school's reports name. The school reads her election, Allah has chosen you above the women of the worlds (Qur'an 3:42), as election into that lineage.",
+   "id": "b0144",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Reads 3:33-34 with the name-recurrence reading and the nearer Imran distinguished."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Imam Muhammad al-Baqir ﵇ on Qur'an 3:42",
+   "id": "b0145",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Khu'i, Minhaj al-Bara'a, vol.19, p.141",
+   "id": "b0146",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: her choosing is a choosing for the seed of the prophets",
+   "id": "b0147",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The Imam's ﵇ gloss of Allah has chosen you above the women of the worlds (Qur'an 3:42) reads the choosing as a choosing for the dhurriyya of the prophets. That is the same word the chosen-houses verse used. In the school's reading her sanctity is lineage-bearing before it is anything else.",
+   "id": "b0148",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Reads the Baqir gloss as lineage-bearing election, anchored to Qur'an 3:42."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Qur'an 3:37 (part)",
+   "id": "b0149",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Zakariyya takes charge of her in the prayer-niche",
+   "id": "b0150",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Kafi, vol.3, p.109",
+   "id": "b0151",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Imam al-Baqir",
+   "id": "b0152",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the prophets cast lots for her charge",
+   "id": "b0153",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "A child dedicated to the temple, raised in the mihrab, the prophets casting lots for her charge and a priest of the temple divisions winning it, in the report of Imam al-Baqir ﵇. Her upbringing stood inside the temple's priesthood, an office that belongs to Aaron's ﵇ line. The scene shows the milieu of the house, and the house's blood is a separate question.",
+   "id": "b0154",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Reads the temple exhibits for milieu only, keeping the blood question separate."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Exodus 6:20",
+   "id": "b0155",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Westminster Leningrad Codex, Van Dyck, King James Version",
+   "id": "b0156",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Amram's children are Aaron ﵇ and Moses ﵇",
+   "id": "b0157",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Amram's children are Aaron ﵇ and Moses ﵇, and Maryam's ﵍ own father carried the same name, Imran, the husband of Hanna. The house's line and the house's name meet in her family. Sister-of-Aaron and daughter-of-Imran speak one genealogy, the daughter naming the man of her own century and the sister naming the ancient house whose father his name repeats. The question is only whether the blood ran from the sons of Aaron ﵇ himself, and the Gospel, when it speaks of her kin, names the same house.",
+   "id": "b0158",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Bridges the two Imrans explicitly: the daughter names the man, the sister names the house."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Luke 1:5",
+   "id": "b0159",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Elzevir Textus Receptus, Van Dyck, King James Version",
+   "id": "b0160",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Elizabeth is of the daughters of Aaron",
+   "id": "b0161",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Luke 1:36",
+   "id": "b0162",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Elzevir Textus Receptus, Van Dyck, King James Version",
+   "id": "b0163",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Elizabeth is Maryam's kinswoman",
+   "id": "b0164",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Zakariyya ﵇ is the Qur'an's own guardian of Maryam ﵍, and Luke makes him a priest of the temple divisions, with a wife of the daughters of Aaron. The Greek word for the kinship of the two women is syngenis, a kinswoman, a relative by blood. Maryam's ﵍ relative is Elizabeth, and Elizabeth is of the daughters of Aaron, so the Gospel joins the daughters of Aaron to Maryam's ﵍ kin. The Gospel never says which line the shared blood runs through, and its kinship words carry the same wide range, in the Gospel's own Hebrew inheritance.",
+   "id": "b0165",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads Luke's Zakariyya and the syngenis kinship within what the Gospel states."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Genesis 13:8",
+   "id": "b0166",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Westminster Leningrad Codex, Van Dyck, King James Version",
+   "id": "b0167",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Abraham and Lot called brethren, uncle and nephew",
+   "id": "b0168",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Numbers 20:14",
+   "id": "b0169",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Westminster Leningrad Codex, Van Dyck, King James Version",
+   "id": "b0170",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Israel named the brother nation of Edom",
+   "id": "b0171",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Abraham says to Lot, we be brethren, and Lot is his nephew, so the brother-word covers a named man who shares no womb with Abraham. This is the nearest attested parallel to the form whose exact match the third section conceded is missing, and it stands in the charge's own scripture. The Hebrew ach carries kinsman as easily as brother, and the Gospel's Greek inherits the breadth. The assembly that confronted Maryam ﵍ spoke that Hebrew or its Aramaic daughter, and the Qur'an recites their address in Arabic. The objection that seventh-century Arabic cannot tell what first-century Israelites meant is answered from the charge's own scriptures, which carry the same wide kinship field in the crowd's own language.",
+   "id": "b0172",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Grounds the Genesis named-individual parallel and surfaces the crowd-language objection."
+  },
+  {
+   "kind": "p",
+   "text": "The Torah's history uses the same words for nations a thousand years apart. Moses ﵇ writes to Edom centuries after Esau and names Israel the brother nation, the two ancestor-brothers standing at the head of both lines. A descendant people is a brother people, generation after generation, in the very scriptures the charge appeals to. The canon itself exhibits the construction, kinship word joined to a named ancestor's line.",
+   "id": "b0173",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Extends to Numbers: a brother nation generations after the ancestor brothers."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Mark 6:3",
+   "id": "b0174",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Elzevir Textus Receptus, Van Dyck, King James Version",
+   "id": "b0175",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the Lord's kin are named with the brother-word",
+   "id": "b0176",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The Greek adelphos holds the same breadth the Hebrew ach carried into it, and the word names the kin around the Lord. The long argument inside Christianity over these brothers is an argument from context, because the word itself carries both kin and sibling.",
+   "id": "b0177",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads Mark's adelphos with the breadth it inherited from Hebrew ach."
+  },
+  {
+   "kind": "p",
+   "text": "The school saw the Luke chain a century ago and committed it to print in a book of answers to Christian mission.",
+   "id": "b0178",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces al-Balaghi's printed inference from Luke's first chapter."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Muhammad Jawad al-Balaghi (d.1328 AH), al-Rihla al-Madrasiyya, vol.1, p.175",
+   "id": "b0179",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: al-Balaghi's inference from Luke's first chapter makes Maryam's ﵍ line Aaronic",
+   "id": "b0180",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Balaghi presses the inference at its strongest, that the shared lineage runs whole and Maryam ﵍ is paternally Aaronic. The Gospel itself says less, and that much is certain. It calls the two women syngenis, a relative, and Elizabeth is of the daughters of Aaron, so it makes Maryam ﵍ a blood relative of a daughter of Aaron's house. Which line the shared blood runs through, father's or mother's, the tradition itself divides, and John of Damascus (d.749) draws the maternal Aaronic line in his Homily on the Nativity, Joachim of Judah and David for her father's side, an Aaronic, Levitical house for her mother's. The tradition that presses the charge carries, in its own memory, the Aaronic kin the address names.",
+   "id": "b0181",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Scopes al-Balaghi's inference to what Luke says and keeps JoD's maternal line visible."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Ibn al-Athir (d.630 AH), al-Kamil fi al-Tarikh, vol.1, p.327",
+   "id": "b0182",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Maryam ﵍ was of Judah and David, and the address rides the naming custom",
+   "id": "b0183",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "The counter-branch itself concedes the custom. Ibn al-Athir grants that she was of the line of Aaron, so it has been said. He then explains the address by the naming custom, they were called after the righteous, which is the Prophet's ﷺ own answer from Najran. One branch of the tradition holds her of Aaron's ﵇ blood, with sisterhood naming the line. The other holds her of Judah, with the address following the naming custom. A third branch, on which the crowd's words claim a womb shared with the brother of Moses ﵇, appears nowhere in the surveyed readings. Whichever genealogy a reader prefers, the verse said exactly what its language says, and no confusion of two women has occurred.",
+   "id": "b0184",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Reads Ibn al-Athir's counter-branch as conceding the custom; no third branch in the surveyed readings."
+  },
+  {
+   "kind": "h2",
+   "text": "8. Sister Names the Saint at the Head of the Line",
+   "id": "b0185",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "One more question lives inside the address itself. If the meaning is descent, why did the crowd not say daughter of Aaron ﵇?",
+   "id": "b0186",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Opens section eight with the register question the section answers."
+  },
+  {
+   "kind": "p",
+   "text": "Aal names the house entire, Aal Imran. Bint names the father's descent, daughter of Imran, which the Qur'an already spends on her. Ukht names kinship inside the house, and it is the register that reaches the house's saint himself without dragging the intermediate generations into the address.",
+   "id": "b0187",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Distributes the three kinship registers the section weighs."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Abd al-Karim al-Khatib (d. after 1390 AH), al-Tafsir al-Qurani li-l-Qur'an, vol.8, p.330",
+   "id": "b0188",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Open question: why the ascription is sisterhood when daughterhood was available",
+   "id": "b0189",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card open question line: the question the exhibit answers."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the ascription names the relation to the house's saint himself",
+   "id": "b0190",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Khatib answers two questions at once. Why Aaron ﵇ and not Moses ﵇, because Moses ﵇ left no seed and Aaron's ﵇ line ran on. And why sister and not daughter, because daughter-ascription would attach her to the generations of Aaron's ﵇ sons, some righteous, some corrupt, while sister-ascription attaches her to the saint at the head of the line. The crowd's rhetoric wanted the house's honor at its purest point, a father of clean record, a mother beyond slander, the saint at the door, and the address gives them exactly that.",
+   "id": "b0191",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads al-Khatib on why Aaron and why sister rather than daughter."
+  },
+  {
+   "kind": "p",
+   "text": "The woman's name is Maryam, Miriam, the name of Aaron's ﵇ own sister, and her parents reached into the house's memory and took the sister's name for their daughter. That is the naming custom the Prophet ﷺ gave as his answer at Najran, here inside the house of Aaron itself. The Torah, when it honors Miriam the prophetess, titles her the sister of Aaron ﵇.",
+   "id": "b0192",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Introduces the name custom inside the family: Maryam named for Aaron's sister."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Exodus 15:20",
+   "id": "b0193",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Westminster Leningrad Codex, Van Dyck, King James Version",
+   "id": "b0194",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the Torah itself titles Miriam the sister of Aaron",
+   "id": "b0195",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "A hostile reader may hand this verse to the charge instead, since Miriam truly was Aaron's ﵇ sister by the womb. The exhibit still does its work. Miriam is Moses' ﵇ sister too, and the Torah titles her by the house's priest, the sister of Aaron ﵇, the ascription that carries the house's honor. A woman who could have been named by the more famous brother is named by the one whose line carried the priesthood, and the crowd's address makes the same choice a thousand years later. The title the Torah gives the first woman of that name is the address the crowd gave the last.",
+   "id": "b0196",
+   "cues": [],
+   "decision": "revised",
+   "function": "inference",
+   "observation": "Answers the Exodus 15:20 backfire and lands the first-last woman parallel."
+  },
+  {
+   "kind": "h2",
+   "text": "9. The Canon Does Not Pass Its Own Test",
+   "id": "b0197",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Numbered section heading naming its content in spoken English."
+  },
+  {
+   "kind": "p",
+   "text": "Source: the Gospels of Matthew, Luke, and Mark; Helvidius (4th c.); Jerome, Against Helvidius (383); John of Damascus, Homily on the Nativity (8th c.)",
+   "id": "b0198",
+   "cues": [],
+   "decision": "keep",
+   "function": "locator",
+   "observation": "Comparison card naming the Christian holders the section cites."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Mary's Davidic line; the Aaronic line of her kinswoman; the perpetual virginity and the brothers of the Lord",
+   "id": "b0199",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "States the beliefs the comparison will trace to their holders."
+  },
+  {
+   "kind": "p",
+   "text": "Open question: does the Christian canon survive the test it presses on Qur'an 19:28",
+   "id": "b0200",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card open question line: the question the exhibit answers."
+  },
+  {
+   "kind": "p",
+   "text": "The Qur'an's own usage, the Imams' ﵈ speech, the lexicons, the poets, and the Prophet's ﷺ answer at Najran have fixed sister of Aaron as an address of the house. The charge's rule, that a kinship word means the womb, is the polemicists' own. The Christian canon meets it on the four measures any confusion charge must answer, fidelity to the text, coherence, the ethical cost, and economy.",
+   "id": "b0201",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Closes the lexical case and frames the canon's own test."
+  },
+  {
+   "kind": "p",
+   "text": "Christian tradition traces the Lord's family to David, and Matthew opens his Gospel with the claim. Luke builds the Aaronic link into the infancy narrative through Elizabeth, as shown above. Helvidius, writing at Rome before 383, taught that the brothers named in Mark 6:3 were the Virgin's own sons by Joseph, and Jerome reports him so. Jerome answered that they were kin, the sons of Mary the wife of Alphaeus, called Mary of Clopas. He takes her for the sister or kinswoman of the Lord's mother, so that sons of the mother's sister can be called the Lord's brethren (Jerome, Against Helvidius, 383, chs. 14-16). The older tradition holds the Virgin ever virgin, a title the Second Council of Constantinople confessed in 553. John of Damascus (d.749) gives Mary a double lineage in his Homily on the Nativity, Joachim of Judah and David for her father's side, an Aaronic, Levitical house for her mother's. The canon's own family register thus runs through the same wide kinship words, and the strongest Christian readings of them are readings of kinship. The kinship words carry the range the charge denies to Arabic.",
+   "id": "b0202",
+   "cues": [],
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "States the Christian genealogical tradition with holders from Helvidius to JoD."
+  },
+  {
+   "kind": "p",
+   "text": "Verse: Matthew 1:1",
+   "id": "b0203",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Elzevir Textus Receptus, Van Dyck, King James Version",
+   "id": "b0204",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the Gospel opens the Lord's genealogy with the son of David",
+   "id": "b0205",
+   "cues": [],
+   "decision": "keep",
+   "function": "data",
+   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+  },
+  {
+   "kind": "p",
+   "text": "Son of David is son a thousand years after David, and no Christian tradition has read it as a literal paternity. The canon's own opening verse runs on the genealogical kinship grammar that the charge refuses to Arabic.",
+   "id": "b0206",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Reads Matthew's son of David against literal paternity; no tradition reads it so."
+  },
+  {
+   "kind": "p",
+   "text": "On textual fidelity, the Islamic reading keeps every word of 19:28 in its attested range. Ukht stays house-kinship, Aaron stays the house's saint, and the parentage defense stays the address's own frame. The charge must read one kinship word of one book literally. The same book calls a nation the sons of a patriarch a millennium dead and two prophets the brothers of whole nations, and the charge offers no rule that separates them.",
+   "id": "b0207",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Textual fidelity criterion argued for the Islamic reading's attested range."
+  },
+  {
+   "kind": "p",
+   "text": "On rational coherence, the charge's rule fails inside the Christian canon itself. Brethren names a nephew in Genesis, a brother nation in Numbers, and the Lord's kin in Mark. A Christian who accepts his own canon's usage has no coherent ground to deny the same range to Arabic. The reply that the Qur'an differs from the canon, God's own word against human report, does not rescue the rule. The charge's claim is about what the Arabic word sister can mean, and that is a fact of the language, whoever is speaking.",
+   "id": "b0208",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Rational coherence criterion, with the inspiration-asymmetry reply included."
+  },
+  {
+   "kind": "p",
+   "text": "On the ethical criterion, the charge asks a reader to believe that the book of God blundered in a genealogy a child could catch. The reading asks only that God spoke the kinship grammar the language's speakers, lexicons, and poets actually used, and that the first objectors were answered from the source in the verse's own lifetime.",
+   "id": "b0209",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Ethical criterion on what each reading asks a believer to accept."
+  },
+  {
+   "kind": "p",
+   "text": "On economy, the reading needs one settled idiom to carry every exhibit above, while the charge needs a confusion no Muslim transmitter reports, an idiom no dictionary supports, and a rule the canon itself breaks.",
+   "id": "b0210",
+   "cues": [],
+   "decision": "keep",
+   "function": "claim",
+   "observation": "Economy criterion on what each reading demands of the text."
+  },
+  {
+   "kind": "p",
+   "text": "The Christian who presses the charge has been pressed by the same test, and his canon does not pass it. The canon that reads son of David across a millennium and brethren across a family network cannot rule that sister across a house is a blunder. The Christian who declines the test, reading his own kinship words by context, has granted the whole method. The context of 19:28, the lineage defense, the naming custom, and the Prophet's ﷺ answer at Najran read the address exactly as the school reads it.",
+   "id": "b0211",
+   "cues": [],
+   "decision": "keep",
+   "function": "inference",
+   "observation": "Runs the test back on the canon and closes with the contextual method."
+  },
+  {
+   "kind": "h4",
+   "text": "Glossary of Key Terms",
+   "id": "b0212",
+   "cues": [],
+   "decision": "keep",
+   "function": "heading",
+   "observation": "Glossary summary heading; collapsed by design."
+  },
+  {
+   "kind": "p",
+   "text": "ukht sister, the feminine of akh, brother. The Arabic kinship words cover descendants and tribesmen of a house, and the address grammar joins them to a people's name.",
+   "id": "b0213",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Glosses ukht with its kinship range."
+  },
+  {
+   "kind": "p",
+   "text": "aal the house or line of a father, as in Aal Imran, the House of Imran, the third surah's title.",
+   "id": "b0214",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Glosses aal with the surah title as example."
+  },
+  {
+   "kind": "p",
+   "text": "mawla a freed slave or client attached to a household, with a bond of patronage the Arabs counted as a form of kinship.",
+   "id": "b0215",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Glosses mawla as counted kinship."
+  },
+  {
+   "kind": "p",
+   "text": "zindiq a skeptic who denies prophethood, the Egyptian debater of al-Kafi.",
+   "id": "b0216",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Glosses zindiq pointing at the page's own debater."
+  },
+  {
+   "kind": "p",
+   "text": "vocative the grammar of calling, the case that addresses a person directly, ya before the name in Arabic.",
+   "id": "b0217",
+   "cues": [],
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "Glosses the vocative case in plain words."
+  },
+  {
+   "kind": "p",
+   "text": "honorific marks the small characters after sacred names, ﷺ for the Prophet Muhammad, ﵇ for male saints and Imams, ﵍ for female saints, ﵈ for the Imams together, abbreviating blessings upon them.",
+   "id": "b0218",
+   "cues": [],
+   "decision": "revised",
+   "function": "explanation",
+   "observation": "Glosses the honorific marks so the glyphs stop being unexplained."
+  }
+ ],
+ "claim_preservation": {
+  "status": "passed",
+  "negation_quantifiers_attribution": "Two universals were narrowed this cycle (polemicists-leave-alone became no-rule-separates; does-not-exist became nowhere-in-surveyed-readings); no negation, quantifier, or attribution was weakened or strengthened beyond its evidence.",
+  "source_alignment": "Each narrowed claim still matches its exhibit; the school's main-reading scoping in the overview preserves the thesis while absorbing section three's attestation concession."
+ },
+ "source_verification": {
+  "status": "passed",
+  "evidence": "All 24 corpus callouts letter-verified against the titan FTS5 corpus at their cited title/volume/page under the site's documented rendering conventions (footnote markers, honorific ligature, la-joining, punctuation); 9 Quran paragraphs byte-verified as substrings of api.alquran.cloud Uthmani text; 12 Bible original-language paragraphs byte-verified as substrings of bolls.life WLC/SVD editions; the new zindiq frame extracted programmatically from corpus rowid 747971 and the citation corrected to pp.423-425."
+ },
+ "translation_fidelity": {
+  "status": "passed",
+  "evidence": "The one new translation unit (the zindiq frame) went through the shared translator and was fidelity-checked name by name against the Arabic, then post-edited only for the page's established terms (zindiq, tawaf, Madina, Makkah); existing translations were read against their quotes during the audit with no divergence found; translations never repeat honorific formulas for enemies."
+ },
+ "structural_validation": {
+  "status": "passed",
+  "evidence": "validate.py OK on the final artifact after every fix batch; selftest 99/99 at session start; anchors resolve; Arabic block count 55 with honorific spans wrapped."
+ },
+ "council": {
+  "status": "passed",
+  "reviewed_artifact_sha256": "2d6ae5414005290de49f1f23a55dbe0c43d1ec93140ae3f55a2d951a53c0facb",
+  "profile_sha256": "15e8f98262ca9f60cad762d6ac52c4056cd01d2c0565f8ba3177c4d5a0c57964",
+  "evidence": "Five-role article council (prose, economy, reader, fidelity, reasoning) on candidate 89dc220a with five anonymized peer reviews; 31 findings applied; three affected reviewers reread 82059d01 and their four edit-introduced findings were fixed; fidelity reviewer confirmed all five final fixes on 2d6ae541. Score-free located-findings method per council-article.md.",
+  "report": {
+   "advisors": [
+    {
+     "role": "prose",
+     "reviewer": "unflagged-sentence-audit",
+     "response": "P1 c2-poet closing: 'The definition lived in the language's mouth' is decorative personification; rewrite plain preserving both facts (speakers used the address before dictionaries; al-Murtada explains 19:28 with this form). P2 c4-qummi: 'the way a crowd hisses a corrupt family name at a public scandal' is theatrical simile; keep the insult reading, drop the simile. P3 c7-temple: 'the whole scene breathes the priesthood' is personification; state the milieu plainly. P4 c7-torah: 'answers itself here' is argumentative theater; keep the reasoning, delete the phrase. P5 c8-miriam final five-item recap repeats the verdict; delete, keep the first-last-woman sentence. P6 'rides' metaphor appears four times; vary, keep one. Load-bearing contrasts (Premise 4 concession, Qummi disagreement, chain singleness) deliberately not flagged; they carry the argument. Inspected title, meta, header, Argument cards, Facts cells, all nine section openers, every authored paragraph after each callout, glossary, comparison, verdict."
+    },
+    {
+     "role": "economy",
+     "reviewer": "Zayd al-Mahrasa",
+     "response": "E1 c1-verse closing sentence duplicates the paragraph above the callout (quote-sandwich); delete. E2 c3-bint triad sentences duplicated verbatim in section eight's opening; delete here, keep the charge-rule point. E3 section-five intro last sentence duplicates c2-poet's close; delete. E4 c5-ansar-woman enumeration is a third pass of Premise 2 and the verdict; keep only the feminine-construction clause. E5 c6 'take up next' is a forced preview; delete. E6 c7-baqir sanctuary sentence previews the next block; delete. E7 c4-survey recap clause restates the section opener; delete the clause. E8 c8-miriam final recap duplicates the verdict; delete. Facts table, premise cards, verdict enumeration kept as designed structure; quote introductions that add dating or provenance kept."
+    },
+    {
+     "role": "reader",
+     "reviewer": "lay-ear",
+     "response": "R1 honorific glyphs recur from the first sentence with no explanation; add one glossary entry naming the marks, nothing at each occurrence. R2 'the school' and 'the Imams' never identified for outsiders; one clause at first body use naming the Twelve Imams of the Ahl al-Bayt. R3 'a word for wells' names no word and seems to clash with the waterskins scene; name the lemma the lexicons document (source-review resolved: shibak, a dense cluster of wells). R4 akh used before its gloss; write 'Akh, brother'. R5 c7-chosen 'her election' forward-references Qur'an 3:42 quoted only later; insert the verse phrase. Self-sufficient as inspected: overview, premise cards, Facts table, four readings including the Muqatil reliability paragraph, section six chain discussion, section nine criteria, verdict."
+    },
+    {
+     "role": "fidelity",
+     "reviewer": "thaqib",
+     "response": "F1 Exodus 6:20 Arabic carries the years clause its Hebrew and English spans omit; align the spans (resolved by extending Hebrew and English). F2 Luke 1:36 and Mark 6:3 transliterations stop before the final clauses their translations render; extend (done). F3 c5-egypt and c5-ansar-woman details beyond the byte-verified quotes; source-review confirmed all at the cited loci (shoulder-strike, four repetitions, travel from Egypt; marriage offer). F4 the Simak-at-the-head claim covered undisplayed chains; scoped to the displayed Ibn Tawus chain. F5 Facts table mixes al-Kafi editions silently; the rows now label Dar al-Hadith where that edition is cited. F6 Muqatil row conflates speech date with source date; split. F7 'Both still agree' presented an author's bridge as attested; rewritten as shared presupposition. Clean: all other translations, loci, negations, hedges."
+    },
+    {
+     "role": "reasoning",
+     "reviewer": "R2-second-pass",
+     "response": "R1 c2-idiom closing contradicts section six's as-old-as-the-verse thesis by dating the charge's carriers a millennium; rewrite preserving both facts. R2 'The report proves' overstates a single-chain attestation; use attests. R3 'its first hearers did not hear one' overreaches reception history; scope to the readings. R4 c5-egypt details beyond the quote; source-review confirmed them in the full report. R5 c7-temple infers descent-support from milieu; state what the exhibit yields, keep the blood question separate. R6 verdict universal about polemicists' behavior; rewrite to the defensible no-rule-separates claim. The counterevidence handling in sections four and seven is honest and needed; the criteria paragraphs carry the debate legitimately."
+    }
+   ],
+   "peer_reviews": [
+    {
+     "reviewer": "peer-seat-1",
+     "response": "Strongest D: every finding verified in the text and all mechanically fixable; D also routed beyond-quote details to source review rather than cutting. Biggest blind spot B: cutting the ansar tail would delete the only 19:28 tie; deletion without load-checking is the panel's riskiest mode. All five missed the al-Khatib date: library records say died after 1390 AH, so the flat d.1390 is at best unverifiable."
+    },
+    {
+     "reviewer": "peer-seat-2",
+     "response": "Strongest D: spans, editions, and date conflation all check out and are print-costly if missed. Biggest blind spot B: its cuts never weigh reader cost, and on the triad it would have cut the wrong occurrence; economy optimized against the reader seat. All five missed the sourcing asymmetry: the charge is never attributed while the defense carries volume and page; and Tafsir al-Qummi's own contested attribution goes unmentioned beside Muqatil's full defensive treatment."
+    },
+    {
+     "reviewer": "peer-seat-3",
+     "response": "Strongest D: independently verifiable and correct on the years clause, truncated Greek, mixed editions, and conflated dates. Biggest blind spot B: repetition treated only as waste; it never asks what a recap does for a reader arriving cold. All five missed the thesis outrunning the body: the overview states the saint-naming categorically while section three concedes the unattested form and al-Qummi's reading denies the motive; and a second unqualified universal (a third branch does not exist) survives beside the verdict one."
+    },
+    {
+     "reviewer": "peer-seat-4",
+     "response": "Verified all seats' specific findings present as described. Strongest D: accuracy defects are the costliest class here and none of D's is taste. Biggest blind spot B: it trims sentences while exempting the overview-conclusion-verdict triple-pass summary structure as design. All five missed the backwards chronology at c5-egypt: 'later' has al-Sadiq preceding Najran by a century; none audited translation accuracy against the source languages beyond span alignment."
+    },
+    {
+     "reviewer": "peer-seat-5",
+     "response": "Strongest E: each finding fixes a claim's truth conditions, and the c2-idiom catch is a genuine internal contradiction, the highest-stakes class in a debate article. Biggest blind spot D: it inverts the evidence hierarchy on Exodus 6:20, trimming the Arabic to fit an incomplete English when the source governs and the translation should be completed. All five missed the section-five display gap: the narrated shoulder-strike and repetitions are not in the quoted block; extend the exhibit. Minor: Sahih Muslim cited without volume or page."
+    }
+   ],
+   "anonymization": {
+    "A": "prose",
+    "B": "economy",
+    "C": "reader",
+    "D": "fidelity",
+    "E": "reasoning"
+   },
+   "synthesis": "The five roles converged on accuracy-class defects: fidelity's span and attribution findings (verified and applied), reasoning's overstatements (narrowed to what evidence carries), reader's comprehension gaps (glossed at need), prose's remaining theater (rewritten plain), economy's duplication (deleted). Peer panel added six findings all five advisors missed (al-Khatib date, Najran chronology, two universals, span direction, display gap), all resolved. Affected reviewers reread the revised candidate and their follow-up findings were fixed and confirmed on the final artifact 2d6ae541."
+  }
+ },
+ "cue_resolutions": [],
+ "semantic_review": {
+  "meta-and-process": {
+   "status": "passed",
+   "blocks": [
+    "b0081",
+    "b0102",
+    "b0140",
+    "b0186",
+    "b0201"
+   ],
+   "evidence": "All section openers state content; council deletions removed the preview and recap sentences (c6 take-up-next, c7-baqir sanctuary preview, c8-miriam five-item recap); grep for this-section/will-show patterns returns nothing."
+  },
+  "litotes": {
+   "status": "passed",
+   "blocks": [
+    "b0079",
+    "b0138",
+    "b0181"
+   ],
+   "evidence": "Remaining negations carry the claim (no separate attestation, no womb-sister reading, one exchange witnessed once); no not-un or no-small constructions survive the sweep."
+  },
+  "decorative-contrast": {
+   "status": "passed",
+   "blocks": [
+    "b0071",
+    "b0181"
+   ],
+   "evidence": "Contrasts kept are the substance (daughter register versus sister register; Balaghi's strongest inference versus what Luke states); not-X-but-Y scaffolding removed in earlier council rounds and none reintroduced."
+  },
+  "irony-and-theater": {
+   "status": "passed",
+   "blocks": [
+    "b0085",
+    "b0172"
+   ],
+   "evidence": "Crowd simile, language's-mouth personification, breathes-the-priesthood, and answers-itself theater were rewritten to plain claims this cycle; no of-course or graciously-concedes markers."
+  },
+  "openings-and-repetition": {
+   "status": "passed",
+   "blocks": [
+    "b0008",
+    "b0127",
+    "b0136"
+   ],
+   "evidence": "Council economy pass deleted eight duplicated passages (quote-sandwich close, triad repeat, ansar enumeration, section-five transition); remaining repetitions are the designed premise cards and verdict."
+  },
+  "first-read-clarity": {
+   "status": "passed",
+   "blocks": [
+    "b0005",
+    "b0108",
+    "b0158"
+   ],
+   "evidence": "Reader reviewer's five comprehension gaps closed (honorific glossary entry, Imams defined, shibak lemma named, akh glossed, 3:42 anchored); the Najran chronology sentence rewritten as one finished sentence."
+  },
+  "fidelity-and-attribution": {
+   "status": "passed",
+   "blocks": [
+    "b0063",
+    "b0104",
+    "b0188"
+   ],
+   "evidence": "Every attribution checked against corpus metadata this audit; the al-Kafi locus corrected to Dar al-Hadith pp.423-425; al-Khatib date corrected to d. after 1390 AH; Muqatil row speech and source dates separated."
+  }
+ },
+ "findings": [
+  {
+   "id": "AUD-1",
+   "status": "resolved",
+   "resolution": "al-Kafi 6:199 Arabic restored to corpus-verbatim wording including the two fa-prefixes."
+  },
+  {
+   "id": "AUD-2",
+   "status": "resolved",
+   "resolution": "Tahdhib 10:20 opening restored to faqala al-Zubayr per the cited edition."
+  },
+  {
+   "id": "AUD-3",
+   "status": "resolved",
+   "resolution": "al-Kafi locus corrected from vol.1 p.121 to Dar al-Hadith ed. pp.423-425 across callout, card, and Facts row."
+  },
+  {
+   "id": "AUD-4",
+   "status": "resolved",
+   "resolution": "Seven SVD Arabic and five WLC Hebrew paragraphs restored to byte-exact edition text; Genesis 13:8's non-Van-Dyck rendering replaced with the SVD text."
+  },
+  {
+   "id": "COUNCIL-31",
+   "status": "resolved",
+   "resolution": "Thirty-one located findings from the five-role council applied, spanning deletions, plain rewrites, scoping, glossing, and span extensions."
+  },
+  {
+   "id": "PEER-6",
+   "status": "resolved",
+   "resolution": "Six peer-panel findings applied: al-Khatib date, Najran chronology, two universals narrowed, Exodus span extended rather than trimmed, zindiq frame displayed."
+  },
+  {
+   "id": "FOLLOWUP-4",
+   "status": "resolved",
+   "resolution": "Four edit-introduced defects fixed: the Najran fragment recast as one sentence, the al-Khatib date propagated to the Facts row, both Greek original-slot transliterations extended, the Exodus transliteration years clause added; confirmed by the fidelity reviewer on the final artifact."
+  },
+  {
+   "id": "ACCEPTED-1",
+   "status": "accepted-with-reason",
+   "resolution": "The unnamed modern carriers of the charge stay unnamed: the site convention describes the attack generically and credits primary holders only; the classical holder John of Damascus is named in section nine."
+  },
+  {
+   "id": "ACCEPTED-2",
+   "status": "accepted-with-reason",
+   "resolution": "Tafsir al-Qummi's contested attribution is not flagged on the page: the four-readings framing already treats it as one reading among several and a material claim would need its own cited research pass."
+  }
+ ],
+ "scope_cues_before": [
+  [
+   "b0007",
+   [
+    "not",
+    "never"
+   ]
+  ],
+  [
+   "b0008",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0012",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0016",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0017",
+   [
+    "every"
+   ]
+  ],
+  [
+   "b0019",
+   [
+    "never",
+    "only",
+    "Every"
+   ]
+  ],
+  [
+   "b0023",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0029",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0031",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0032",
+   [
+    "never",
+    "only"
+   ]
+  ],
+  [
+   "b0037",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0051",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0056",
+   [
+    "never"
+   ]
+  ],
+  [
+   "b0072",
+   [
+    "only",
+    "every",
+    "no"
+   ]
+  ],
+  [
+   "b0078",
+   [
+    "no",
+    "none",
+    "every"
+   ]
+  ],
+  [
+   "b0079",
+   [
+    "no",
+    "no"
+   ]
+  ],
+  [
+   "b0080",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0081",
+   [
+    "Not",
+    "only"
+   ]
+  ],
+  [
+   "b0085",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0094",
+   [
+    "not",
+    "Every"
+   ]
+  ],
+  [
+   "b0099",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0100",
+   [
+    "not",
+    "all",
+    "no"
+   ]
+  ],
+  [
+   "b0101",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0102",
+   [
+    "No",
+    "no"
+   ]
+  ],
+  [
+   "b0103",
+   [
+    "every"
+   ]
+  ],
+  [
+   "b0108",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0130",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0137",
+   [
+    "not",
+    "not"
+   ]
+  ],
+  [
+   "b0144",
+   [
+    "some",
+    "some"
+   ]
+  ],
+  [
+   "b0158",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0165",
+   [
+    "never"
+   ]
+  ],
+  [
+   "b0172",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0184",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0186",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0191",
+   [
+    "not",
+    "no",
+    "not",
+    "some",
+    "some"
+   ]
+  ],
+  [
+   "b0196",
+   [
+    "may"
+   ]
+  ],
+  [
+   "b0197",
+   [
+    "Not"
+   ]
+  ],
+  [
+   "b0206",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0207",
+   [
+    "every",
+    "no"
+   ]
+  ],
+  [
+   "b0208",
+   [
+    "no",
+    "not"
+   ]
+  ],
+  [
+   "b0209",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0210",
+   [
+    "every",
+    "no",
+    "no"
+   ]
+  ],
+  [
+   "b0211",
+   [
+    "not"
+   ]
+  ]
+ ],
+ "scope_cues_after": [
+  [
+   "b0007",
+   [
+    "not",
+    "never"
+   ]
+  ],
+  [
+   "b0008",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0012",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0016",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0017",
+   [
+    "every"
+   ]
+  ],
+  [
+   "b0019",
+   [
+    "never",
+    "only",
+    "Every"
+   ]
+  ],
+  [
+   "b0023",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0029",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0031",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0032",
+   [
+    "never",
+    "only"
+   ]
+  ],
+  [
+   "b0037",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0051",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0056",
+   [
+    "never"
+   ]
+  ],
+  [
+   "b0072",
+   [
+    "only",
+    "every",
+    "no"
+   ]
+  ],
+  [
+   "b0078",
+   [
+    "no",
+    "none",
+    "every"
+   ]
+  ],
+  [
+   "b0079",
+   [
+    "no",
+    "no"
+   ]
+  ],
+  [
+   "b0080",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0081",
+   [
+    "Not",
+    "only"
+   ]
+  ],
+  [
+   "b0085",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0094",
+   [
+    "not",
+    "Every"
+   ]
+  ],
+  [
+   "b0099",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0100",
+   [
+    "not",
+    "all",
+    "no"
+   ]
+  ],
+  [
+   "b0101",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0102",
+   [
+    "No",
+    "no"
+   ]
+  ],
+  [
+   "b0103",
+   [
+    "every"
+   ]
+  ],
+  [
+   "b0108",
+   [
+    "never",
+    "never"
+   ]
+  ],
+  [
+   "b0130",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0137",
+   [
+    "not",
+    "not"
+   ]
+  ],
+  [
+   "b0144",
+   [
+    "some",
+    "some"
+   ]
+  ],
+  [
+   "b0158",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0165",
+   [
+    "never"
+   ]
+  ],
+  [
+   "b0172",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0184",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0186",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0191",
+   [
+    "not",
+    "no",
+    "not",
+    "some",
+    "some"
+   ]
+  ],
+  [
+   "b0196",
+   [
+    "may"
+   ]
+  ],
+  [
+   "b0197",
+   [
+    "Not"
+   ]
+  ],
+  [
+   "b0206",
+   [
+    "no"
+   ]
+  ],
+  [
+   "b0207",
+   [
+    "every",
+    "no"
+   ]
+  ],
+  [
+   "b0208",
+   [
+    "no",
+    "not"
+   ]
+  ],
+  [
+   "b0209",
+   [
+    "only"
+   ]
+  ],
+  [
+   "b0210",
+   [
+    "every",
+    "no",
+    "no"
+   ]
+  ],
+  [
+   "b0211",
+   [
+    "not"
+   ]
+  ]
+ ]
+}
