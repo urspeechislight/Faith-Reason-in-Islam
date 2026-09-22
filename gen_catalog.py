@@ -78,7 +78,7 @@ DOMAIN_MAP = {
     "bible": ["3-42-vs-39-4", "isiah_9_6", "43_81", "shamoun-10-reasons",
               "text-destruction", "word-and-command"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
-               "abu-bakr-strikes-aisha"],
+               "abu-bakr-strikes-aisha", "ibn-taymiyya-record"],
     "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "magic-history"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
@@ -94,6 +94,7 @@ TITLE = {
     "mutah-marriage": "Who Forbade Mut'ah?",
     "the-borrowed-he-goat": "The Borrowed He-Goat and the Triple Divorce",
     "facts": "The Fact Index",
+    "ibn-taymiyya-record": "Ibn Taymiyya on the Record of His Own School",
 }
 
 # card blurbs (fall back: first sentence of meta description)
@@ -131,6 +132,7 @@ BLURB = {
     "ali-forbearance": "Forbearance as guardianship. Why Ali withheld his sword after the Prophet's death, from sermons, hadith, and the shared historical record.",
     "umm-kulthum-marriage": "The Shia corpus calls the marriage a seizure, the bride was a child whose kunya she never earned, and the identification of her as Ali's daughter rests on the word of the man who swore he would fabricate witnesses.",
     "abu-bakr-strikes-aisha": "The Ihya, the Qut al-Qulub, and Tarikh Baghdad print the day Abu Bakr struck Aisha until her mouth bled, and Qur'an 66:4 already said the two hearts deviated. The reports, the weak chains, and the verse, weighed honestly.",
+    "ibn-taymiyya-record": "The school that venerated him also put him on trial: the biographical dictionaries, the traveler who sat in his mosque, his own fatwa collection, and the judges of Egypt and Damascus carry the creed incidents, the grave-visitation ruling, twenty-three years of imprisonments, and the elegies after his death in the citadel.",
     "ifk-maria": "The dictionaries define the band of the verse as a bonded kin circle, Hafsa's codex counted it four, and the chains from the Imams name the woman the verses exonerated as Maria the Copt.",
     "first-and-last": "He was, and nothing else was. How the God who needs nothing made the first thing from nothing, why it was a light, and how the light returns, read through Qur'an 57:3 and the Shia corpus.",
     "magic-history": "The complete history of magic in the Twelver Shia corpus, from Iblis stealing words from heaven to the Dajjal and the final judgment, told in nine parts.",

@@ -1,0 +1,661 @@
+{
+ "schema": "2026-09-21.1",
+ "status": "approved",
+ "reviewer": "kimi (primary agent), two-round LLM Council 2026-09-21 (5+2 seats), transcript council-transcript-1790038850.md",
+ "artifact_sha256": "cb37e8187699f1e1512a8d1dd682f6562ca70fcf102a1d1cad40ee8366735494",
+ "baseline_sha256": "cb37e8187699f1e1512a8d1dd682f6562ca70fcf102a1d1cad40ee8366735494",
+ "contract_sha256": "556add4c37d0042110cd3187ad1953d3dda2a7c8b83bdb6632ea8e55bebabfa7",
+ "blocks": [
+  {
+   "kind": "description",
+   "text": "The Sunni historians, the traveler who attended his sermons, his own fatwa collection, and the judges of Egypt and Damascus record the creed incidents, the grave-visitation rulings, imprisonments across twenty-three years, and a death in the citadel.",
+   "id": "b0001",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Meta description matches the master summary sentence for sentence; provenance claim accurate."
+  },
+  {
+   "kind": "title",
+   "text": "Ibn Taymiyya on the Record of His Own School",
+   "id": "b0002",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Title states the scope (his own school) without overclaim; no citation shape, no colon."
+  },
+  {
+   "kind": "p",
+   "text": "History and Sira · Commentary",
+   "id": "b0003",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Kicker names folder category and note category; matches frontmatter folder 07-history-and-sira."
+  },
+  {
+   "kind": "h1",
+   "text": "Ibn Taymiyya on the Record of His Own School",
+   "id": "b0004",
+   "cues": [],
+   "decision": "keep",
+   "observation": "H1 identical to master title byte for byte; single mapped block, no duplication in main."
+  },
+  {
+   "kind": "p",
+   "text": "The Sunni historians, the traveler who attended his sermons, his own fatwa collection, and the judges of Egypt and Damascus record the creed incidents, the grave-visitation rulings, imprisonments across twenty-three years, and a death in the citadel. A documentary investigation from the school's own sources.",
+   "id": "b0005",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Subtitle is the frontmatter summary verbatim; both sentences carry real content with a verb."
+  },
+  {
+   "kind": "p",
+   "text": "Taqi al-Din Ahmad ibn Taymiyya (661-728 AH) is remembered today as a renewer of the Hanbali school and the ancestor of a movement. His own tradition tells a fuller story. The biographical dictionaries, travel diaries, court records, and fatwa collections document it. The writers are the scholars who sat in his circles, judged his cases, and buried him. The talent is conceded first, in the words of his own contemporaries and students. Then the record turns. The creed incidents repeatedly put him before councils of judges. The grave-visitation ruling sent him to his final prison. There is a signed recantation of 707 and a proclamation over Damascus. Later authorities of the Shafi'i school and one Hanbali of his own line also recorded verdicts against him.",
+   "id": "b0006",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Overview paragraph: dates and range match the Durar chronology; renewer noun fixed this run."
+  },
+  {
+   "kind": "p",
+   "text": "Every quotation below is cited to a Sunni source. Where a report survives only in a relay, the relay is named. Where the record conflicts, the conflict is stated.",
+   "id": "b0007",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Sourcing statement is accurate: every quoted witness is Sunni; relays are named where used."
+  },
+  {
+   "kind": "h2",
+   "text": "The Talent Conceded",
+   "id": "b0008",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Heading names the section content in spoken English; no comma-splice or scholastic label."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Durar al-Kamina, vol.1, p.178",
+   "id": "b0009",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Card source line cites al-Durar vol.1 p.178, the page the Abu Hayyan poem occupies."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Abu Hayyan al-Andalusi, the era's foremost grammarian",
+   "id": "b0010",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Speaker line names Abu Hayyan with his standing; he was a contemporary, not a student."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: he praised Ibn Taymiyya in improvised verse, then broke with him permanently over one discourtesy about Sibawayh",
+   "id": "b0011",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Claim line matches the quoted poem and the break recounted after the Sibawayh slight."
+  },
+  {
+   "kind": "p",
+   "text": "Abu Hayyan of Granada met Ibn Taymiyya in Cairo and praised him in improvised verse. Ibn Hajar al-Asqalani preserves both the poem and what followed it in the authoritative biographical dictionary of the eighth century.",
+   "id": "b0012",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Scene-setting paragraph carries only facts the entry supplies: Cairo meeting, verse, preservation."
+  },
+  {
+   "kind": "p",
+   "text": "The poem is the measure of the man at his best. The same entry preserves the sequel. Words passed between the two men, the grammarian Sibawayh was mentioned, and Ibn Taymiyya spoke harshly of him. Abu Hayyan broke with him over that single discourtesy, crossed the verses out of his collected poems, and said he would not mention him favorably again. A mind that could win Abu Hayyan's verse could also lose him with a sentence.",
+   "id": "b0013",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Reading of the poem stays inside what the verses and the sequel state; no invented motive."
+  },
+  {
+   "kind": "h2",
+   "text": "The Minbar in Damascus",
+   "id": "b0014",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Heading names the minbar incident plainly; matches section two content."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Rihlat Ibn Batuta, vol.1, pp.316-317",
+   "id": "b0015",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Card source cites Rihla pp.316-317, both quoted pages."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Ibn Batuta, who states he was present in Damascus",
+   "id": "b0016",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Speaker line keeps the eyewitness hedge: Ibn Batuta states he was present."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: Ibn Taymiyya illustrated the divine descent from the minbar step, a Maliki jurist who objected was beaten by the crowd, and the judges' protest reached the sultan",
+   "id": "b0017",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Claim line matches the quoted report: step illustration, beaten jurist, protest to the sultan."
+  },
+  {
+   "kind": "p",
+   "text": "The traveler Ibn Batuta passed through Damascus and left a portrait in his Rihla.",
+   "id": "b0018",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Introduction of the traveler and his book adds no fact beyond the entry and the Rihla."
+  },
+  {
+   "kind": "p",
+   "text": "The portrait is double-edged, and it says so itself. Ibn Taymiyya was among the leading Hanbali jurists of Damascus, a man of great standing who spoke on the sciences. There was something wrong with his mind. Ibn Batuta then records what he says he witnessed on a Friday.",
+   "id": "b0019",
+   "cues": [],
+   "decision": "keep",
+   "observation": "The double edge is the portrait own phrase about his mind; preserved, not sharpened."
+  },
+  {
+   "kind": "p",
+   "text": "On this report, Ibn Taymiyya, preaching on the descent of God, descended one step of the minbar to illustrate the manner of the descent. The Maliki jurist Ibn al-Zahra objected from the congregation. The crowd beat the objector with hands and sandals until his turban fell. The Hanbali judge of Damascus then imprisoned the objector and had him disciplined. The Maliki and Shafi'i jurists carried the protest to the governor of Syria, Tankiz. The modern editors of the Rihla note a chronological difficulty in the report. One commentator suggested the scribe embellished it. The report stands as the traveler recorded it, with that doubt attached.",
+   "id": "b0020",
+   "cues": [],
+   "decision": "keep",
+   "observation": "The report is summarized at the strength quoted; the chronological doubt is carried later."
+  },
+  {
+   "kind": "h2",
+   "text": "The Ruling on Visiting Graves",
+   "id": "b0021",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Heading names the ruling plainly; matches section three."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Majmu' al-Fatawa, vol.27, p.27",
+   "id": "b0022",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Card source cites Majmu al-Fatawa vol.27 p.27, the page of the quoted fatwa."
+  },
+  {
+   "kind": "p",
+   "text": "Speaker: Ibn Taymiyya, citing Ibn Aqil and a group of the scholars",
+   "id": "b0023",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Speaker line names Ibn Taymiyya citing Ibn Aqil; the name truncation is disclosed in prose."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: travel to visit the graves of the prophets is disobedience, and the traveler does not shorten his prayer on that journey",
+   "id": "b0024",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Claim line restates the fatwa own logic: disobedience and no prayer shortening."
+  },
+  {
+   "kind": "p",
+   "text": "The ruling that put Ibn Taymiyya in his final prison was his own, recorded in his own collected fatwas.",
+   "id": "b0025",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Opening states the provenance: his own collected fatwas, his final prison. Accurate."
+  },
+  {
+   "kind": "p",
+   "text": "The reasoning is stated plainly. A traveler who sets out to visit the graves of the prophets believes he is performing an act of obedience, and the act is not one. Seeking nearness to God through what is not obedience is disobedience, and the prohibition entails forbiddance. Ibn Taymiyya cites earlier authorities for the ruling and notes that some later scholars permitted the travel. The Arabic excerpt breaks off inside the name of Ibn Aqil, the authority the fatwa is citing. Elsewhere in the same volume, in the passage at vol.27, p.253, he denounces as slander the summary claim that he forbids visiting the Prophet's grave and traveling to it. Both texts are his. On this record the operative ruling is the first, and the governor's dossier itemized it when the final imprisonment came.",
+   "id": "b0026",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Reasoning paragraph follows the fatwa steps in order; the p.253 denial is set beside it."
+  },
+  {
+   "kind": "p",
+   "text": "The dossier Tankiz, governor of Syria, sent to Sultan al-Nasir named the rulings as errors. The threefold divorce counted as one. The pilgrim who intends the visit of the grave does not shorten his prayer. The order that followed confined Ibn Taymiyya to the citadel of Damascus, where he remained until he died. His student Ibn Qayyim al-Jawziyya carried the same ruling to Jerusalem and Nablus, and the crowd there tried to kill him.",
+   "id": "b0027",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Dossier paragraph matches the Tankiz quote: triple divorce, visit, citadel until death."
+  },
+  {
+   "kind": "p",
+   "text": "Ibn Qayyim escaped with his life by submitting a renewed profession of Islam before a Hanbali judge. The historian Ibn Shakir al-Kutubi, whom al-Hisni introduces as one of Ibn Taymiyya's followers, records the same temper inside the movement itself.",
+   "id": "b0028",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Ibn Qayyim outcome matches the quoted al-Hisni page; renewed Islam before a Hanbali judge."
+  },
+  {
+   "kind": "p",
+   "text": "A muezzin called on the Prophet as his means to God, in the verse of the dawn call. Ibn Shakir told the muezzin that he had committed associationism, the sin of calling on other than God. A crowd then moved to behead Ibn Shakir, and his Islam was renewed for him. Al-Hisni, transmitting the historian roughly a century after the events, says the beating was severe and remarks that the follower softened the record out of regard for his teacher.",
+   "id": "b0029",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Muezzin summary keeps speakers distinct: Ibn Shakir made the charge, not Ibn Taymiyya."
+  },
+  {
+   "kind": "h2",
+   "text": "Twenty-Three Years of Trials",
+   "id": "b0030",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Heading names the twenty-three year span; matches section four chronology."
+  },
+  {
+   "kind": "p",
+   "text": "Source: al-Durar al-Kamina, vol.1, pp.172-175",
+   "id": "b0031",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Card source cites the Durar pages 172-175 that carry the whole chronology."
+  },
+  {
+   "kind": "p",
+   "text": "Chain: Ibn Hajar al-Asqalani, from the court records and the historians of Cairo and Damascus",
+   "id": "b0032",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Chain line names Ibn Hajar and his sources: court records and the two cities historians."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: proceedings in 705, 707, 719, 720, and 726, and the citadel death of 728",
+   "id": "b0033",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Claim line says proceedings, not councils, matching the Arabic verbs for 719 and 726."
+  },
+  {
+   "kind": "p",
+   "text": "The chronology is Ibn Hajar al-Asqalani's, and it begins with an act of force. The hadith master al-Mizzi was imprisoned in Damascus, and the record of al-Durar opens Ibn Taymiyya's chain of trials with what he did about it. Ibn Taymiyya went to the prison and brought him out with his own hand.",
+   "id": "b0034",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Chronology opening keeps 705 as force plus accusation, as the entry states it."
+  },
+  {
+   "kind": "p",
+   "text": "The judge of Damascus took the matter to the citadel. Ibn Taymiyya quarreled with him in the presence of the governor's deputy. The deputy had it proclaimed that whoever spoke on the creed would be punished, to still the disturbance. The council of Rajab 705 followed. In Ramadan came the summons to Cairo.",
+   "id": "b0035",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Quarrel and proclamation paragraph follows the quoted page; disturbance-stilling order kept."
+  },
+  {
+   "kind": "p",
+   "text": "Before the Maliki judge of Egypt the claim against him was read, and he would not answer it. The ruling and proclamation that followed are Ibn Hajar's to transmit.",
+   "id": "b0036",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Egypt claim paragraph adds no judge motive beyond the quoted pages."
+  },
+  {
+   "kind": "p",
+   "text": "The Maliki judge held that his disbelief was established and that he must be confined if not killed. A proclamation ran over Damascus that whoever held Ibn Taymiyya's creed had forfeited his blood and property. The Hanbalis of al-Salihiyya were assembled to testify against themselves that they held the creed of al-Shafi'i. In 707, in Cairo, Ibn Taymiyya signed the document drawn against him.",
+   "id": "b0037",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Proclamation restated at the source strength: whoever held the creed forfeited blood and property."
+  },
+  {
+   "kind": "p",
+   "text": "The signed creed affirms that the Qur'an is neither letter nor sound. It affirms that the establishment over the Throne is not according to its apparent sense, and that the statement concerning descent is like the statement concerning establishment. The creed he was made to sign was the Ash'ari one, the theology of the kalam school that his Hanbali circle opposed, and the document marks how far the concession went. The witnesses certified his repentance from whatever contradicted it. Later that same year the Sufis of Cairo complained to the citadel. They said he spoke against the masters of the path and taught that no aid is sought from the Prophet. He was sent back toward Syria. The chain then runs unbroken through Ibn Hajar's record.",
+   "id": "b0038",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Creed paragraph lists exactly the signed positions; Ashari gloss added without new claims."
+  },
+  {
+   "kind": "p",
+   "text": "Ramadan 719, the divorce ruling, and a stringent prohibition on his legal opinions. Rajab 720, another council, the citadel. 721, release. Shaban 726, the visitation ruling, the citadel again, and there he stayed until his death on the night of Monday, the twentieth of Dhu al-Qa'da 728. Ibn Hajar's informant on the mood of Egypt confirms the isolation.",
+   "id": "b0039",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Timeline paragraph keeps the year-by-year sequence and the death date as quoted."
+  },
+  {
+   "kind": "p",
+   "text": "The same entry closes its account of his death with a roll of the poets who elegized him.",
+   "id": "b0040",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Bridge to the elegists roll; no city named, matching the source silence."
+  },
+  {
+   "kind": "p",
+   "text": "Eight poets are named, and the entry adds a great multitude beyond them. Whatever the councils judged, the school's own biographical dictionary records him mourned in verse.",
+   "id": "b0041",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Eight names counted from the Arabic; multitude kept as the entry states it."
+  },
+  {
+   "kind": "p",
+   "text": "All those in Egypt, judges, shaykhs, Sufis, scholars, and the common people, spoke against him, the Hanafi excepted as his partisan, the Shafi'i as silent. In Damascus the Hanafi judge Shams al-Din al-Hariri defended him and wrote a document in his praise.",
+   "id": "b0042",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Egypt consensus summary now includes the al-Hariri defense the same quote records."
+  },
+  {
+   "kind": "h2",
+   "text": "The Verdicts of the Later School",
+   "id": "b0043",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Heading names the later-school verdicts; matches section five."
+  },
+  {
+   "kind": "p",
+   "text": "Source: Ibn Hajar al-Haytami, al-Fatawa al-Hadithiyya, pp.114-116, relayed in later works; al-Hisni, daf' al-shubah; Ibn Rajab al-Hanbali, relayed by al-Hisni",
+   "id": "b0044",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Card source names Haytami pages and both relay vehicles; relays are flagged as relays."
+  },
+  {
+   "kind": "p",
+   "text": "Claim: the later authorities itemized his contraventions and recorded verdicts from condemnation to declared unbelief",
+   "id": "b0045",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Claim line keeps the range from condemnation to declared unbelief, as the quotes state."
+  },
+  {
+   "kind": "p",
+   "text": "The later Shafi'i authority Ibn Hajar al-Haytami (d. 974 AH) itemized the contraventions in his collected verdicts. The list survives in relay and is quoted here as the relayers preserve it.",
+   "id": "b0046",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Haytami introduction dates him 974 AH and states the list survives in relay."
+  },
+  {
+   "kind": "p",
+   "text": "The items are the doctrine of the eternity of the world in kind and the affirmations of corporeality, direction, and transfer for God, the claims that He has a body, a direction, and movement. The list also holds the affirmation that God is the size of the Throne, neither smaller nor larger. The same authority's summary verdict survives in the edition of al-Subki's Shifa' al-Saqam. The quotation names him al-Makki, from his residence in Mecca, which is the same Ibn Hajar al-Haytami.",
+   "id": "b0047",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Items paragraph matches the quoted list including eternity of the world and Throne size."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Hisni of Damascus, a century closer to the events than al-Haytami, wrote his book to answer the visitation rulings, and he writes as an open partisan of that cause. His verdict is categorical, and he states it as his own verdict, not as a finding.",
+   "id": "b0048",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Al-Hisni introduction states his partisanship and keeps his verdict as his own view."
+  },
+  {
+   "kind": "p",
+   "text": "He builds it from a run of Shafi'i authorities on the visitation, from al-Qadi Abu al-Tayyib to al-Mahamili to al-Halimi. A Hanbali of the following generation held the darker view.",
+   "id": "b0049",
+   "cues": [],
+   "decision": "keep",
+   "observation": "The Shafii run on visitation is summarized from the quoted pages without invention."
+  },
+  {
+   "kind": "p",
+   "text": "Ibn Rajab al-Hanbali, of Ibn Taymiyya's own school two generations later, is recorded by al-Hisni among those who believed him an unbeliever. The entry breaks off at that point in the printed text. Against all of this stands the obituary of al-Dhahabi, his own student, which Ibn Hajar al-Asqalani transmits in full.",
+   "id": "b0050",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Ibn Rajab item stays hedged as recorded by al-Hisni, with the break-off disclosed."
+  },
+  {
+   "kind": "p",
+   "text": "Al-Dhahabi concedes the learning, the memory, the courage, and the devotion, and refuses him infallibility. He disagrees with him on fundamental and subsidiary questions. He names the sharpness in debate, the anger, and the harshness toward opponents as the traits that bred enmity toward him. He adds that his opponents' petulance kept him from being a point of consensus. He defends him from the charge of trifling with religion and of lone caprice in his rulings. He closes with his death in the citadel after a short illness. The obituary is the fairest surviving assessment by a man who knew him, and it fixes the character the councils had already met.",
+   "id": "b0051",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Dhahabi paragraph follows the obituary; petulance now matches the corpus reading."
+  },
+  {
+   "kind": "h2",
+   "text": "What the Record Supports",
+   "id": "b0052",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Closing heading names what the section does: what the record supports."
+  },
+  {
+   "kind": "p",
+   "text": "The documented facts are these. The leading linguist of the age praised him and then broke with him. He ruled, in his own collected fatwas, that travel to visit the graves of the prophets is disobedience. His student Ibn Qayyim al-Jawziyya carried the ruling to Jerusalem and Nablus, and a crowd in Nablus tried to kill him for it. He was summoned before the judges of Egypt in 705 and 707. He signed a creed recanting the apparent-sense reading of the establishment and the descent. It was proclaimed over Damascus that whoever held his creed forfeited blood and property. He was imprisoned repeatedly across twenty-three years, the last confinement in 726 for the visitation ruling, and he died in the citadel in 728. His own student and obituarist conceded the learning and named the harshness. The later authorities of the Shafi'i school itemized his contraventions, from the eternity of the world to the attribution of body and direction to God. They recorded verdicts up to declared unbelief. A Hanbali of his own line is recorded holding that view.",
+   "id": "b0053",
+   "cues": [],
+   "decision": "revised",
+   "observation": "Documented facts sentence by sentence trace to quoted blocks; singular student and Nablus fixed."
+  },
+  {
+   "kind": "p",
+   "text": "The record also carries its qualifications. The minbar report is a traveler's eyewitness account with a chronological doubt attached by its own editors. The 707 recantation exists, whatever its motive. Ibn Taymiyya himself denounced as slander the summary form of the visitation charge, and his own volume holds both the ruling and the denial. The proclamation of 705 was politics as much as creed, issued in the war of the judges of Cairo. And al-Dhahabi's obituary stands as the counterweight to the verdicts, a student's defense that concedes the faults and refuses the worst. The same entry's roll of elegists keeps the mourning on the record.",
+   "id": "b0054",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Qualifications paragraph carries every in-body hedge without dropping one."
+  },
+  {
+   "kind": "p",
+   "text": "The politics around the trials were real. The same record that confines him shows Shaykh Nasr al-Manbiji inciting the rulers against him over the Ibn al-Arabi letter. It shows the judges of Cairo fighting their own war through his case. Both things are in the sources. The councils that tried him were councils of his own tradition's judges. The confinement orders were the sultan's and the governor's, issued on those councils' findings, and the verdicts are the verdicts of the school's own later authorities. The career is documented, in the main, by the people who wrote the history of the tradition he belonged to.",
+   "id": "b0055",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Politics paragraph keeps both directions the sources give; councils and orders attributed correctly."
+  },
+  {
+   "kind": "p",
+   "text": "Source. Compiled from al-Durar al-Kamina, the Rihla of Ibn Batuta, daf' al-shubah, Majmu' al-Fatawa, and the relayed verdicts of Ibn Hajar al-Haytami. Filed 2026-09-21.",
+   "id": "b0056",
+   "cues": [],
+   "decision": "keep",
+   "observation": "Source footer names the five works actually quoted; no internal vocabulary leaked."
+  }
+ ],
+ "claim_preservation": {
+  "status": "passed",
+  "negation_quantifiers_attribution": "Every negation audited against its Arabic: creed denials, does not shorten the prayer, not one who toyed with religion, Maliki conditional ruling. Quantifiers kept (a great multitude, a large group). Every verdict attributed to its named holder; al-Hisni kept as partisan relaying his own verdict; Ibn Rajab hedged as recorded.",
+  "source_alignment": "Conclusion sentences traced one by one to quoted blocks (council round 2 Executor audit): poem and break (p.178), fatwa (27:27), Ibn Qayyim and Nablus (al-Hisni p.213), summonses (pp.172-174), recantation (p.174), proclamation (p.173), 23 years and death (p.175), Dhahabi (p.177), Haytami items (p.116), elegists (p.176)."
+ },
+ "source_verification": {
+  "status": "passed",
+  "evidence": "citations.py verify green on the final master (19 ledger passages, 42 Arabic lines byte-verified against corpus slices on titan, 2026-09-21). New t19-elegists capture verified with its locus al-Durar vol.1 p.176 rowid 4634604."
+ },
+ "translation_fidelity": {
+  "status": "passed",
+  "evidence": "translate.py mechanical checks clean for all 19 units (itr_translations.json). Manual fidelity pass corrected one misreading this run: t08 طف خصومه rendered as petulance of his opponents (was gentleness), checked against the corpus bytes. Elegists name list aligned 8/8 by council Executor seat."
+ },
+ "structural_validation": {
+  "status": "passed",
+  "evidence": "islamic-note validate.py OK on the master; faith-reason-note validate.py OK on the page with selftest 102/102; handoff.py verify passes (62 blocks, conversion text matches source). Remaining REVIEW diagnostic: Flesch 53.9 vs floor 55, accepted as vocabulary-bound for this subject matter."
+ },
+ "council": {
+  "status": "passed",
+  "evidence": "Two rounds, 5+2 seats, saved as council-transcript-1790038850.md and council-report-1790038850.html. Round 1 blocker (rendered quote artifacts) and fidelity findings fixed; round 2 clean with four polish items applied. Final scores Readability 9, Comprehensiveness 9, Persuasiveness 9, Escape 9, Connectedness 8.5."
+ },
+ "findings": [
+  {
+   "id": "f1",
+   "finding": "Rendered translations carried literal \"> >\" markers from nested markdown continuations.",
+   "status": "resolved",
+   "resolution": "Master continuations converted to proper intra-callout paragraph breaks; handoff regenerated; page re-verified with zero artifacts."
+  },
+  {
+   "id": "f2",
+   "finding": "t08 translation read طف خصومه as gentleness of his opponents, reversing the sense.",
+   "status": "resolved",
+   "resolution": "Corpus bytes re-checked; translation corrected to petulance; surrounding prose adjusted to match; translations.json updated."
+  },
+  {
+   "id": "f3",
+   "finding": "Conclusion overclaims: plural students, wrong city for the killing attempt, councils for قاموا عليه years, anthropomorphic-only enumeration.",
+   "status": "resolved",
+   "resolution": "Rewritten to the one student Ibn Qayyim, Nablus named, proceedings wording, itemized contraventions with gloss; card claim line updated to proceedings."
+  },
+  {
+   "id": "f4",
+   "finding": "Mourning counterweight absent from the record summary.",
+   "status": "resolved",
+   "resolution": "New corpus capture t19 (al-Durar vol.1 p.176 elegists roll) added as a callout with translate.py translation, wired into section four and the conclusion; no city inferred."
+  },
+  {
+   "id": "f5",
+   "finding": "Flesch Reading Ease 53.9 against the 55 floor.",
+   "status": "accepted-with-reason",
+   "resolution": "Diagnostic only; eleven long sentences were split meaning-preservingly (52.5 to 53.9); the remaining register is bound to the subject vocabulary (jurists, proclamation, visitation, biographical) and further splitting would degrade fidelity."
+  },
+  {
+   "id": "f6",
+   "finding": "Poetry hemistich separators \"* *\" and Arabic line breaks flatten in the HTML render.",
+   "status": "accepted-with-reason",
+   "resolution": "Shared handoff inline() strips paired emphasis markers by design and handoff verify enforces text equality; sibling pages (allah-prays.html) share the convention; the vault and titan master keep the corpus bytes verbatim."
+  }
+ ],
+ "scope_cues_before": [
+  [
+   "b0007",
+   [
+    "Every",
+    "only"
+   ]
+  ],
+  [
+   "b0013",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0024",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0026",
+   [
+    "not",
+    "not",
+    "some"
+   ]
+  ],
+  [
+   "b0027",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0036",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0037",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0038",
+   [
+    "not",
+    "no"
+   ]
+  ],
+  [
+   "b0042",
+   [
+    "All"
+   ]
+  ],
+  [
+   "b0048",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0050",
+   [
+    "all"
+   ]
+  ]
+ ],
+ "scope_cues_after": [
+  [
+   "b0007",
+   [
+    "Every",
+    "only"
+   ]
+  ],
+  [
+   "b0013",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0024",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0026",
+   [
+    "not",
+    "not",
+    "some"
+   ]
+  ],
+  [
+   "b0027",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0036",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0037",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0038",
+   [
+    "not",
+    "no"
+   ]
+  ],
+  [
+   "b0042",
+   [
+    "All"
+   ]
+  ],
+  [
+   "b0048",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0050",
+   [
+    "all"
+   ]
+  ]
+ ]
+}
