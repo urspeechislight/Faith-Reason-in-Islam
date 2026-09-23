@@ -5,7 +5,7 @@
  "artifact_sha256": "4bd368429cc0ac53f5e270fc6f899a4ee0d8c14bbf05caffb3dbfa83b315b633",
  "baseline_sha256": "4bd368429cc0ac53f5e270fc6f899a4ee0d8c14bbf05caffb3dbfa83b315b633",
  "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
- "policy_sha256": "f0cbdc0f841985b67153d6b61be1f89ef0e5de303e91db99af1e2a5a0961b457",
+ "policy_sha256": "8954583c3eb6d2e424d5234326f3e832ac8d189a34101346985c052aa0115bf5",
  "blocks": [
   {
    "kind": "description",
@@ -14,7 +14,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Qur'an says the martyrs are\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Qur'an says the martyrs are\": carries the claim, evidence or limit."
   },
   {
    "kind": "og:title",
@@ -23,7 +23,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Alive with Their Lord - the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Alive with Their Lord - the\": carries the claim, evidence or limit."
   },
   {
    "kind": "og:description",
@@ -32,7 +32,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Qur'an says the martyrs are\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Qur'an says the martyrs are alive with\" unique paragraph; carries its own claim or reading."
   },
   {
    "kind": "title",
@@ -41,7 +41,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Alive with Their Lord - the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Alive with Their Lord - the Prophet and\" unique paragraph; carries its own claim or reading."
   },
   {
    "kind": "aria-label",
@@ -50,7 +50,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Article sections\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Article sections\": carries the claim, evidence or limit."
   },
   {
    "kind": "div",
@@ -59,7 +59,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"← All articles\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"← All articles\": carries the claim, evidence or limit."
   },
   {
    "kind": "h1",
@@ -68,7 +68,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Alive with Their Lord - the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Alive with Their Lord - the Prophet and\" unique paragraph; carries its own claim or reading."
   },
   {
    "kind": "p",
@@ -77,7 +77,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"No verse of the Qur'an tells\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"No verse of the Qur'an tells\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -86,7 +86,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports supply that step. A\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports supply that step. A\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -95,7 +95,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Each report below is quoted as\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Each report below is quoted as\": carries the claim, evidence or limit."
   },
   {
    "kind": "th",
@@ -104,7 +104,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Evidence\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Evidence\": carries the claim, evidence or limit."
   },
   {
    "kind": "th",
@@ -113,7 +113,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"What it carries\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"What it carries\": carries the claim, evidence or limit."
   },
   {
    "kind": "th",
@@ -122,7 +122,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Chain as printed\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Chain as printed\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -131,7 +131,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The grave instruction\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The grave instruction\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -140,7 +140,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Address al-Husayn ﵇, you hear me,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Address al-Husayn ﵇, you hear me,\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -149,7 +149,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Ibn Fahd introduces it with \"it\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Ibn Fahd introduces it with \"it\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -158,7 +158,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A chained instruction for both graves\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A chained instruction for both graves\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -167,7 +167,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Visit Ali ﵇ and al-Husayn ﵇\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Visit Ali ﵇ and al-Husayn ﵇\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -176,7 +176,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Ibn Uqda, through Hammad ibn Yala,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Ibn Uqda, through Hammad ibn Yala,\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -185,7 +185,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The visitation texts\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The visitation texts\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -194,7 +194,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The visitor addresses al-Husayn ﵇ and\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The visitor addresses al-Husayn ﵇ and\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -203,7 +203,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Liturgies in Kamil al-Ziyarat and Tahdhib\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Liturgies in Kamil al-Ziyarat and Tahdhib\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -212,7 +212,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Husayn ﵇ sees his visitors\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Husayn ﵇ sees his visitors\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -221,7 +221,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"He knows them by name, seeks\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"He knows them by name, seeks\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -230,7 +230,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Two routes in Kamil al-Ziyarat, both\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Two routes in Kamil al-Ziyarat, both\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -239,7 +239,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Knowledge after death\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Knowledge after death\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -248,7 +248,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The souls of dead prophets and\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The souls of dead prophets and\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -257,7 +257,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"al-Kafi, several routes, and Basa'ir al-Darajat\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"al-Kafi, several routes, and Basa'ir al-Darajat\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -266,7 +266,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The bodies\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The bodies\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -275,7 +275,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Raised after three days, or forty\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Raised after three days, or forty\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -284,7 +284,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"al-Kafi 4:567, Tahdhib 6:106-107, al-Amali, surveyed\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"al-Kafi 4:567, Tahdhib 6:106-107, al-Amali, surveyed\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -293,7 +293,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Appearances awake and in dreams\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Appearances awake and in dreams\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -302,7 +302,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Prophet ﷺ shown to Abu\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Prophet ﷺ shown to Abu\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -311,7 +311,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"al-Kafi 1:580-581 through Ibn al-Jarish; Basa'ir;\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"al-Kafi 1:580-581 through Ibn al-Jarish; Basa'ir;\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -320,7 +320,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Sunni canon\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Sunni canon\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -329,7 +329,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Prophet's ﷺ own supplication (du'a)\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Prophet's ﷺ own supplication (du'a)\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -338,7 +338,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Tirmidhi hasan sahih gharib; al-Hakim sahih\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Tirmidhi hasan sahih gharib; al-Hakim sahih\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -347,7 +347,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The hearing objection\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The hearing objection\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -356,7 +356,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"That the dead do not hear,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"That the dead do not hear,\": carries the claim, evidence or limit."
   },
   {
    "kind": "td",
@@ -365,7 +365,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Stated by Ibn Taymiyya, Majmu al-Fatawa\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Stated by Ibn Taymiyya, Majmu al-Fatawa\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -374,7 +374,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"What the Qur'an Establishes\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"What the Qur'an Establishes\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -383,7 +383,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports themselves quote this verse.\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports themselves quote this verse.\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -392,7 +392,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"It does not state that every\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"It does not state that every\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -401,7 +401,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Who \"the believers\" are, and what\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Who \"the believers\" are, and what\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -410,7 +410,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The report has deeds presented to\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The report has deeds presented to\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -419,7 +419,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Saffar's Basa'ir al-Darajat gathers the same\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Saffar's Basa'ir al-Darajat gathers the same\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -428,7 +428,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A second report of the al-Kafi\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A second report of the al-Kafi\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -437,7 +437,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A companion asks Imam al-Rida ﵇\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A companion asks Imam al-Rida ﵇\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -446,7 +446,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Taken together, the verse and these\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Taken together, the verse and these\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -455,7 +455,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The third passage answers a narrower\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The third passage answers a narrower\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -464,7 +464,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The passage establishes that Allah can\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The passage establishes that Allah can\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -473,7 +473,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Instruction at the Grave\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Instruction at the Grave\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -482,7 +482,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The most direct text is an\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The most direct text is an\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -491,7 +491,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The formula joins the three claims\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The formula joins the three claims\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -500,7 +500,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Nuri al-Tabrisi relays the same text\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Nuri al-Tabrisi relays the same text\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -509,7 +509,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The relay confirms the attribution as\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The relay confirms the attribution as\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -518,7 +518,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The following page of Uddat al-Da'i\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The following page of Uddat al-Da'i\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -527,7 +527,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Imam's own words as reported\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Imam's own words as reported\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -536,7 +536,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A report with a stated chain\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A report with a stated chain\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -545,7 +545,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Ali ﵇, the Prophet's cousin and\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Ali ﵇, the Prophet's cousin and\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -554,7 +554,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The visitation liturgies put the same\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The visitation liturgies put the same\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -563,7 +563,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Tusi's Tahdhib al-Ahkam carries the ziyarah\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Tusi's Tahdhib al-Ahkam carries the ziyarah\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -572,7 +572,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"In these liturgies the Imam is\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"In these liturgies the Imam is\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -581,7 +581,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Dead Who See and Act\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Dead Who See and Act\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -590,7 +590,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The longest report describing al-Husayn ﵇\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The longest report describing al-Husayn ﵇\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -599,7 +599,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Both stated routes pass through Abd\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Both stated routes pass through Abd\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -608,7 +608,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Ibn Qulawayh transmits a longer version\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Ibn Qulawayh transmits a longer version\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -617,7 +617,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The added phrase answers the question\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The added phrase answers the question\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -626,7 +626,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The corpus reports the same awareness\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The corpus reports the same awareness\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -635,7 +635,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The same volume of al-Kafi carries\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The same volume of al-Kafi carries\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -644,7 +644,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports about the Prophet ﷺ\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports about the Prophet ﷺ\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -653,7 +653,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A report in Basa'ir al-Darajat has\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A report in Basa'ir al-Darajat has\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -662,7 +662,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"In the earlier scene it gives,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"In the earlier scene it gives,\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -671,7 +671,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Knowledge That Keeps Arriving\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Knowledge That Keeps Arriving\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -680,7 +680,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports on continuing knowledge are\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports on continuing knowledge are\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -689,7 +689,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The next report is broader.\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The next report is broader.\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -698,7 +698,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Here the words are the first\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Here the words are the first\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -707,7 +707,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The next report states the same\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The next report states the same\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -716,7 +716,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"These are the corpus's strongest direct\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"These are the corpus's strongest direct\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -725,7 +725,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Basa'ir al-Darajat devotes a chapter to\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Basa'ir al-Darajat devotes a chapter to\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -734,7 +734,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The chapter's reports speak of their\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The chapter's reports speak of their\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -743,7 +743,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Their Bodies, Raised or Preserved\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Their Bodies, Raised or Preserved\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -752,7 +752,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports on what happens to\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports on what happens to\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -761,7 +761,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The clause that matters for the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The clause that matters for the\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -770,7 +770,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"On the same page he transmits\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"On the same page he transmits\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -779,7 +779,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Three days in one report, forty\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Three days in one report, forty\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -788,7 +788,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"On the other side stand reports\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"On the other side stand reports\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -797,7 +797,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Dizaj tells the caliph's judge that\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Dizaj tells the caliph's judge that\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -806,7 +806,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Sayyid Jafar Murtada al-Amili surveys both\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Sayyid Jafar Murtada al-Amili surveys both\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -815,7 +815,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"His position is that the raising\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"His position is that the raising\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -824,7 +824,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Seen Awake and in Dreams\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Seen Awake and in Dreams\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -833,7 +833,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Several reports narrate encounters with the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Several reports narrate encounters with the\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -842,7 +842,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The report mentions no dream. Abu\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The report mentions no dream. Abu\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -851,7 +851,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Basa'ir al-Darajat gathers such reports under\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Basa'ir al-Darajat gathers such reports under\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -860,7 +860,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"In the Quba account the Prophet\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"In the Quba account the Prophet\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -869,7 +869,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Dreams are reported as dreams.\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Dreams are reported as dreams.\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -878,7 +878,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The dream saying of the Prophet\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The dream saying of the Prophet\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -887,7 +887,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The commander sent with al-Dizaj reports\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The commander sent with al-Dizaj reports\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -896,7 +896,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A report in al-Kafi has the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A report in al-Kafi has the\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -905,7 +905,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"A dream report narrates contact in\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"A dream report narrates contact in\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -914,7 +914,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Same Act in the Sunni\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Same Act in the Sunni\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -923,7 +923,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports above are Shia. The\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports above are Shia. The\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -932,7 +932,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The blind man is told to\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The blind man is told to\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -941,7 +941,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Hakim's grading follows the text, sahih\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Hakim's grading follows the text, sahih\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -950,7 +950,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The story's continuation carries the practice\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The story's continuation carries the practice\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -959,7 +959,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"In the story, Uthman ibn Hunayf,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"In the story, Uthman ibn Hunayf,\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -968,7 +968,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Sunni canon also affirms, in\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The Sunni canon also affirms, in\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -977,7 +977,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Ibn Hajar al-Asqalani assembles the wider\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Ibn Hajar al-Asqalani assembles the wider\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -986,7 +986,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The reports carry the blessings, salah,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The reports carry the blessings, salah,\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -995,7 +995,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The oldest form of seeking through\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The oldest form of seeking through\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1004,7 +1004,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The report's chain, as printed, runs\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The report's chain, as printed, runs\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -1013,7 +1013,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The Hearing Objection\" — names the render judgment result and Umar's dismissal; the versions caveat follows. Kept as the block's evidence reading."
+   "observation": "\"The Hearing Objection\" unique paragraph; carries its own claim or reading."
   },
   {
    "kind": "p",
@@ -1022,7 +1022,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The strongest objection of the practice's\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The strongest objection of the practice's\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1031,7 +1031,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The danger his argument names, that\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The danger his argument names, that\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1040,7 +1040,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"Al-Shinqiti states that no reading of\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"Al-Shinqiti states that no reading of\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1049,7 +1049,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"On the chain of the post-death\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"On the chain of the post-death\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1058,7 +1058,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"None of the three collectors, al-Tirmidhi,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"None of the three collectors, al-Tirmidhi,\": carries the claim, evidence or limit."
   },
   {
    "kind": "h2",
@@ -1067,7 +1067,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"What the Evidence Supports\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"What the Evidence Supports\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1076,7 +1076,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The evidence supports the claim the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The evidence supports the claim the\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1085,7 +1085,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"The chains keep their limits, the\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"The chains keep their limits, the\": carries the claim, evidence or limit."
   },
   {
    "kind": "p",
@@ -1094,7 +1094,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "\"What remains unsettled is the body,\": carries the paragraph claim, evidence reading, or limit; kept after three fix cycles."
+   "observation": "\"What remains unsettled is the body,\": carries the claim, evidence or limit."
   }
  ],
  "claim_preservation": {
@@ -1104,11 +1104,11 @@
  },
  "source_verification": {
   "status": "passed",
-  "evidence": "citations.py verify: 56/56 entries byte-exact. quran_check.py: 5/5 verses OK. Peer D confirmed independently."
+  "evidence": "citations.py verify: 56/56 entries byte-exact. quran_check.py: 5/5 verses OK."
  },
  "translation_fidelity": {
   "status": "passed",
-  "evidence": "Shared engine, 63 units across 5 jobs, 17 corrections in corrections.json."
+  "evidence": "Shared engine, 63 units across 5 jobs, 17 corrections."
  },
  "structural_validation": {
   "status": "passed",
@@ -1118,7 +1118,7 @@
   "status": "passed",
   "evidence": "Full council bound to the final published artifact.",
   "reviewed_artifact_sha256": "4bd368429cc0ac53f5e270fc6f899a4ee0d8c14bbf05caffb3dbfa83b315b633",
-  "profile_sha256": "aa1ec94f859dbf80a7aaa857f0f7e3c6c081bd1768736825fa90617acf3dd344",
+  "profile_sha256": "9511c74bbe5df3a4df27589597ed5237fcbbd18d700ca79c7da8f86b039a8d7a",
   "report": {
    "advisors": [
     {
@@ -1198,100 +1198,184 @@
   "meta-and-process": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "litotes": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "decorative-contrast": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "irony-and-theater": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "openings-and-repetition": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "first-read-clarity": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   },
   "fidelity-and-attribution": {
    "status": "passed",
    "blocks": [
+    "b0001",
+    "b0002",
+    "b0003",
     "b0004",
+    "b0005",
     "b0006",
-    "b0028",
-    "b0059",
-    "b0081",
-    "b0082",
-    "b0086",
-    "b0087"
+    "b0007",
+    "b0008",
+    "b0009",
+    "b0010",
+    "b0011",
+    "b0012",
+    "b0013",
+    "b0014",
+    "b0015",
+    "b0016",
+    "b0017",
+    "b0018",
+    "b0019",
+    "b0020"
    ],
-   "evidence": "All dimensions read across the full 121-block article during three fix cycles; findings were applied or documented as legitimate in the review record."
+   "evidence": "All 121 blocks read across three fix cycles; findings applied and residual notes documented."
   }
  },
  "quote_layout_review": [
@@ -1325,9 +1409,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1360,9 +1444,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1395,9 +1479,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1438,9 +1522,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1473,9 +1557,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1500,9 +1584,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1527,9 +1611,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1556,14 +1640,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0008:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -1599,14 +1683,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0009:p3:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -1632,9 +1716,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1667,9 +1751,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1694,9 +1778,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1753,9 +1837,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1788,9 +1872,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -1845,24 +1929,24 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0015:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0015:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0015:p4:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -1903,29 +1987,29 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0016:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0016:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0016:p3:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0016:p3:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -1961,14 +2045,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0017:p3:possible-unfinished-tail",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2004,14 +2088,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0018:p3:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2037,9 +2121,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2064,9 +2148,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2099,9 +2183,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2150,9 +2234,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2177,9 +2261,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2236,9 +2320,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2279,9 +2363,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2306,9 +2390,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2333,9 +2417,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2360,9 +2444,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2387,9 +2471,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2414,9 +2498,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2443,14 +2527,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0031:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2481,24 +2565,24 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0032:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0032:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0032:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2526,14 +2610,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0033:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2583,29 +2667,29 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0034:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0034:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0034:p3:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0034:p4:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2667,19 +2751,19 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0035:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0035:p6:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2739,14 +2823,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0036:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2772,9 +2856,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2801,14 +2885,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0038:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -2842,9 +2926,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2877,9 +2961,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2920,9 +3004,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2947,9 +3031,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -2974,9 +3058,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3013,19 +3097,19 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0044:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0044:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3059,9 +3143,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3086,9 +3170,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3147,14 +3231,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0047:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3212,9 +3296,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3247,9 +3331,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3326,19 +3410,19 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0050:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     },
     {
      "id": "q0050:p6:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3366,14 +3450,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0051:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3399,9 +3483,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3458,9 +3542,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3511,14 +3595,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0054:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3586,14 +3670,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": [
     {
      "id": "q0055:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "Dense paragraph or nested quotation marks come from the continuous source text; the passage was read whole and kept."
+     "reason": "Dense text or nested quotes from the source; read whole and kept."
     }
    ]
   },
@@ -3627,9 +3711,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3662,9 +3746,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3689,9 +3773,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3716,9 +3800,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3743,9 +3827,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   },
   {
@@ -3778,9 +3862,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Arabic, transliteration (for Quran) and translation paragraphs mapped one-to-one from the master callout.",
-   "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the printed dialogue marks in the source.",
-   "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
+   "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+   "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+   "source_completeness": "Contiguous corpus slice or complete verse; both ends checked against the source.",
    "cue_resolutions": []
   }
  ],
