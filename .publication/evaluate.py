@@ -9,7 +9,8 @@ import review
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot');a=p.parse_args()
-    evidence={'sources':[{'id':'S1','type':'synthetic evaluation source, not a historical claim','text':'The catalogue names eight poets who composed elegies for Karim. It gives no total number of elegies and does not assess the poets’ motives.'}]}
+    raw='The catalogue names eight poets who composed elegies for Karim. It gives no total number of elegies and does not assess the poets’ motives.'
+    evidence={'sources':[{'id':'S1','kind':'synthetic evaluation source, not a historical claim','citation':'Unpublished synthetic regression fixture','raw':raw,'raw_sha256':review.digest(raw)}]}
     cases={
         'prose-defects':('The catalogue is not silent about Karim. Whatever his opponents believed, its roll of elegists keeps the mourning on the record. Eight poets are named. The conclusion is a weighed reading. [Source S1]',False),
         'direct-prose':('The catalogue names eight poets who composed elegies for Karim. It gives neither a total count of the elegies nor an explanation of the poets’ motives. [Source S1]',True),
@@ -17,6 +18,7 @@ def main():
     }
     for name,(text,expected) in cases.items():
         packet={'candidate':text,'artifact_sha256':review.digest(text),'report':{},'council_sha256':review.council_digest({}),'required_disposition_ids':[],'writer_dispositions':[]}
+        evidence['artifact_sha256']=packet['artifact_sha256']
         out=a.output/name
         try:release_runner.run(packet,evidence,out,a.client);passed=True
         except ValueError:
