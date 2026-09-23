@@ -31,6 +31,9 @@ def main():
             if invocation['exit_code']:raise ValueError('Provider/configuration failure; inspect retained stderr.txt') from failure
             response=json.loads((out/'response.txt').read_text())
             if invocation['exit_code'] or response.get('status')!='blocked' or not response.get('open_findings'):raise
+            errors=json.loads((out/'validation.json').read_text())['errors']
+            if errors!=['independent release reviewer has not cleared all findings']:
+                raise ValueError('Malformed rejection cannot pass the behavioral regression: '+str(errors)) from failure
             passed=False
         if passed!=expected:raise ValueError('Behavioral regression failed: '+name)
         print('PASS:',name,'accepted' if passed else 'rejected')

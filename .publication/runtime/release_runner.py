@@ -123,7 +123,7 @@ at least twelve words. Check this response schema before returning it.
 Return blocked for any remaining defect, even if the
 writer calls it a stylistic preference. In assessment, quote the defective
 wording and say what should change. Do not edit or publish anything.
-'''+json.dumps({'policies': policies, 'packet': review_packet(packet), 'source_evidence': review_evidence(evidence)}, ensure_ascii=False)
+'''+json.dumps({'policies': policies, 'packet': review_packet(packet), 'source_evidence': review_evidence(evidence)}, ensure_ascii=False)+ '\nFINAL RESPONSE BINDING: copy these exact strings unchanged into your JSON: '+json.dumps({'artifact_sha256':packet['artifact_sha256'],'council_sha256':packet['council_sha256']})
     (output/'input.txt').write_text(prompt)
     command = [binary, '-s', '--model', 'auto', '--auto-tier', 'intelligence', '--context', 'long_context', '--available-tools', 'view', '--deny-tool', 'read',
                '--disable-builtin-mcps', '--no-custom-instructions', '--no-auto-update',

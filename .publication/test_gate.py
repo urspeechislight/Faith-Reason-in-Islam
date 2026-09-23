@@ -65,6 +65,16 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(release_runner.review_packet(packet)['candidate'],packet['candidate'])
         clean=next(row for row in fixtures if row[0]=='direct-prose')
         self.assertIn('does not assess the poets’ motives',clean[1]['candidate'])
+    def test_malformed_blocked_response_cannot_pass_behavioral_test(self):
+        def malformed(packet,bundle,out,client):
+            out.mkdir(parents=True)
+            (out/'invocation.json').write_text(json.dumps({'exit_code':0}))
+            (out/'response.txt').write_text(json.dumps({'status':'blocked','open_findings':['prose:one']}))
+            (out/'validation.json').write_text(json.dumps({'errors':['independent release reviewer has not cleared all findings','independent release response is stale for these council findings/dispositions']}))
+            raise ValueError('invalid response')
+        with tempfile.TemporaryDirectory() as directory, patch.object(sys,'argv',['evaluate','--output',directory]), patch.object(evaluate.release_runner,'run',side_effect=malformed):
+            with self.assertRaisesRegex(ValueError,'Malformed rejection'):
+                evaluate.main()
     def test_hosted_validator_uses_bundled_runtime_without_personal_install(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(Path,'home',return_value=Path(directory)):
             errors=gate.validate_article.check('<html><body><main data-category="commentary"><p>A source gives a date.</p></main></body></html>')
