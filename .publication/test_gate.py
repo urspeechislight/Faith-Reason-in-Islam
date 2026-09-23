@@ -8,6 +8,7 @@ import gate
 import evidence
 import release_runner
 import json
+import evaluate
 
 class PublicationTests(unittest.TestCase):
     def test_unmarked_html_is_still_an_article(self):
@@ -54,6 +55,14 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(projected['blocks'][0]['observation'],'Delete the adjacent empty framing.')
         self.assertEqual(projected['blocks'][1]['text'],'Earlier differing claim')
         self.assertIn('text',json.loads(packet['report']['followup_reviews'][0]['response'])['blocks'][0])
+    def test_every_actual_provider_fixture_has_valid_projection_inputs(self):
+        fixtures=list(evaluate.fixtures());self.assertEqual(len(fixtures),3)
+        for name,packet,bundle,expected in fixtures:
+            self.assertEqual(bundle['artifact_sha256'],packet['artifact_sha256'])
+            self.assertTrue(release_runner.review_evidence(bundle)['contexts'])
+            self.assertEqual(release_runner.review_packet(packet)['candidate'],packet['candidate'])
+        clean=next(row for row in fixtures if row[0]=='direct-prose')
+        self.assertIn('does not assess the poets’ motives',clean[1]['candidate'])
     def test_empty_or_unlocated_evidence_blocks(self):
         self.assertTrue(evidence.verify({'schema':1,'artifact_sha256':evidence.sha('text'),'sources':[]},'text'))
     def test_metadata_is_in_the_actual_reviewer_input(self):
