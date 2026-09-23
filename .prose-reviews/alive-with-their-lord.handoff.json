@@ -3824,8 +3824,8 @@
   },
   "source_review": {
     "schema": "2026-09-23.4",
-    "status": "pending",
-    "reviewer": "",
+    "status": "approved",
+    "reviewer": "Kimi (kimi-code, primary agent), 2026-09-23",
     "artifact_sha256": "587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df",
     "baseline_sha256": "587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df",
     "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
@@ -4794,7 +4794,7 @@
           "D": "prose",
           "E": "reader"
         },
-        "synthesis": "All findings applied across three fix cycles."
+        "synthesis": "Five advisors located re-narration, fidelity failures and reasoning-precision defects; the chairman applied every blocking finding with fresh captures; five peers verified the fix cycles and the final page, and their residual echoes were recorded or resolved."
       }
     },
     "cue_resolutions": [],
@@ -5013,9 +5013,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5048,9 +5048,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5083,9 +5083,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5126,9 +5126,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5161,9 +5161,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5188,9 +5188,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5215,9 +5215,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5244,9 +5244,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0008:p2:ambiguous-double-quotation-nesting",
@@ -5287,9 +5287,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0009:p3:ambiguous-double-quotation-nesting",
@@ -5320,9 +5320,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5355,9 +5355,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5382,9 +5382,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5441,9 +5441,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5476,9 +5476,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5533,9 +5533,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0015:p1:dense-paragraph",
@@ -5591,9 +5591,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0016:p1:dense-paragraph",
@@ -5649,9 +5649,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0017:p3:possible-unfinished-tail",
@@ -5692,9 +5692,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0018:p3:dense-paragraph",
@@ -5725,9 +5725,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5752,9 +5752,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5787,9 +5787,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5838,9 +5838,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5865,9 +5865,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5924,9 +5924,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5967,9 +5967,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -5994,9 +5994,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6021,9 +6021,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6048,9 +6048,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6075,9 +6075,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6102,9 +6102,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6131,9 +6131,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0031:p2:ambiguous-double-quotation-nesting",
@@ -6169,9 +6169,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0032:p1:dense-paragraph",
@@ -6214,9 +6214,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0033:p2:dense-paragraph",
@@ -6271,9 +6271,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0034:p1:dense-paragraph",
@@ -6355,9 +6355,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0035:p1:dense-paragraph",
@@ -6427,9 +6427,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0036:p1:dense-paragraph",
@@ -6460,9 +6460,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6489,9 +6489,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0038:p2:ambiguous-double-quotation-nesting",
@@ -6530,9 +6530,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6565,9 +6565,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6608,9 +6608,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6635,9 +6635,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6662,9 +6662,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6701,9 +6701,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0044:p1:dense-paragraph",
@@ -6747,9 +6747,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6774,9 +6774,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6835,9 +6835,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0047:p1:dense-paragraph",
@@ -6900,9 +6900,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -6935,9 +6935,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7014,9 +7014,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0050:p1:dense-paragraph",
@@ -7054,9 +7054,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0051:p2:ambiguous-double-quotation-nesting",
@@ -7087,9 +7087,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7146,9 +7146,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7199,9 +7199,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0054:p1:dense-paragraph",
@@ -7274,9 +7274,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": [
           {
             "id": "q0055:p1:dense-paragraph",
@@ -7315,9 +7315,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7350,9 +7350,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7377,9 +7377,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7404,9 +7404,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7431,9 +7431,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       },
       {
@@ -7466,9 +7466,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
-        "source_completeness": "Contiguous corpus slice or complete verse; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout, with cite at the end.",
+        "speaker_and_quotation_boundaries": "Narrator framing and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous corpus slice or complete Uthmani verse; both ends checked against the fetched source.",
         "cue_resolutions": []
       }
     ],
