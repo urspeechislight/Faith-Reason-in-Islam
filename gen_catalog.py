@@ -76,7 +76,8 @@ DOMAIN_MAP = {
     "hadith": ["isnad-origin", "hadith-authentication", "hasan-mitlaq",
                "the-borrowed-he-goat", "mutah-marriage"],
     "bible": ["3-42-vs-39-4", "isiah_9_6", "43_81", "shamoun-10-reasons",
-              "text-destruction", "word-and-command"],
+              "text-destruction", "word-and-command",
+              "the-sun-the-moon-and-twelve-stars"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
                "abu-bakr-strikes-aisha", "ibn-taymiyya-record"],
     "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "magic-history"],
@@ -95,6 +96,7 @@ TITLE = {
     "the-borrowed-he-goat": "The Borrowed He-Goat and the Triple Divorce",
     "facts": "The Fact Index",
     "ibn-taymiyya-record": "Ibn Taymiyya on the Record of His Own School",
+    "the-sun-the-moon-and-twelve-stars": "The Sun, the Moon, and Twelve Stars",
 }
 
 # card blurbs (fall back: first sentence of meta description)
@@ -141,6 +143,7 @@ BLURB = {
     "tear-and-pool": "Imam Ja'far al-Sadiq ﵇ comforts a man of Basra who could not safely visit the grave of al-Husayn ﵇ and promises him mercy for his tears and a drink from al-Kawthar. From Kamil al-Ziyarat, report no. 6.",
     "battles-of-the-prophet": "All twenty-seven expeditions the Prophet led in person, indexed in al-Waqidi's order with one page per battle from Waddan to Tabuk.",
     "facts": "Every key claim, actor, date, place, and source across the articles, gathered for debate reference. Each row links into the article carrying the detail.",
+    "the-sun-the-moon-and-twelve-stars": "Revelation’s woman clothed with the sun, Ishmael’s twelve princes, and the Bible’s reigning king of justice read against the Imams’ own reports on the sun of Qur’an 91, the count of twelve, and the Mahdi with Isa behind him.",
 }
 
 # the Light of the Prophet serial: main page + parts, in reading order
