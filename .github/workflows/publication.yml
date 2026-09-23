@@ -20,4 +20,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           "$RUNNER_TEMP/copilot/node_modules/.bin/copilot" --version
-          "$RUNNER_TEMP/copilot/node_modules/.bin/copilot" -p 'Return only this JSON object: {"reviewer_available":true}' -s --deny-tool '*'
+          "$RUNNER_TEMP/copilot/node_modules/.bin/copilot" -p 'Return only this JSON object: {"reviewer_available":true}' -s --available-tools view --deny-tool read --disable-builtin-mcps --no-custom-instructions --no-auto-update --no-ask-user
