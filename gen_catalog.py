@@ -80,7 +80,7 @@ DOMAIN_MAP = {
               "the-sun-the-moon-and-twelve-stars"],
     "history": ["ali-forbearance", "umm-kulthum-marriage", "ifk-maria",
                "abu-bakr-strikes-aisha", "ibn-taymiyya-record"],
-    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "magic-history"],
+    "imams": ["light-of-prophet", "first-and-last", "majlis-al-rida", "tear-and-pool", "greatest-name", "magic-history", "alive-with-their-lord"],
     "battles": ["battles-of-the-prophet"] + battle_order(),
     "reference": ["facts"],
 }
@@ -141,6 +141,7 @@ BLURB = {
     "light-of-prophet": "The journey of the prophetic light from before creation to the birth of Muhammad ﷺ, narrated by Imam Ali ﵇ and Imam al-Sadiq ﵇ in Bihar al-Anwar Volume 15.",
     "majlis-al-rida": "The interfaith debates at al-Ma'mun's court: the Catholicos answered from his own Gospel, the Exilarch from his own Torah, the fire priest from the fire's own nature, and the Sabian sage from reason alone.",
     "tear-and-pool": "Imam Ja'far al-Sadiq ﵇ comforts a man of Basra who could not safely visit the grave of al-Husayn ﵇ and promises him mercy for his tears and a drink from al-Kawthar. From Kamil al-Ziyarat, report no. 6.",
+    "alive-with-their-lord": "The grave instruction tells the visitor to address al-Husayn and ask him to pray to Allah, and the corpus around it reports the Imams alive, aware of their visitors, and still receiving knowledge, with the same act carried in the Sunni canon and the dead-do-not-hear objection answered from the objectors' own tafsir.",
     "battles-of-the-prophet": "All twenty-seven expeditions the Prophet led in person, indexed in al-Waqidi's order with one page per battle from Waddan to Tabuk.",
     "facts": "Every key claim, actor, date, place, and source across the articles, gathered for debate reference. Each row links into the article carrying the detail.",
     "the-sun-the-moon-and-twelve-stars": "Revelation’s woman clothed with the sun, Ishmael’s twelve princes, and the Bible’s reigning king of justice read against the Imams’ own reports on the sun of Qur’an 91, the count of twelve, and the Mahdi with Isa behind him.",
