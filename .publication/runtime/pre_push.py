@@ -17,7 +17,7 @@ def git(*args):
 def blob(revision,path):
     return git('show',revision+':'+path)
 
-def check_update(local,remote):
+def check_update(local,remote,require_release=True):
     if local==ZERO:
         return []
     if remote==ZERO:
@@ -51,10 +51,10 @@ def check_update(local,remote):
                 except subprocess.CalledProcessError:pass
             if needs_handoff:
                 receipt=json.loads(blob(local,base+'.handoff.json'))
-                handoff_errors=verify_handoff(page.decode(),receipt)
+                handoff_errors=verify_handoff(page.decode(),receipt,require_release=require_release)
                 failures.extend(handoff_errors)
                 if not handoff_errors:council_source=receipt['source_sha256']
-            failures.extend(verify(draft,baseline,review,council_source))
+            failures.extend(verify(draft,baseline,review,council_source,require_release=require_release))
             required=['structural_validation','council']
             if re.search('[\u0600-\u06ff\ufb50-\ufdff\ufe70-\ufeff]',page.decode()):
                 required+=['source_verification','translation_fidelity']
@@ -77,7 +77,11 @@ def main():
         for line in sys.stdin:
             fields=line.split()
             if len(fields)!=4:raise ValueError('invalid pre-push ref input')
-            errors.extend(check_update(fields[1],fields[3]))
+            # Enabled only after the protected hosted gate is installed. The
+            # local hook checks preparation; GitHub obtains final approval.
+            try: hosted=git('config','--get','publication.serverGate').decode().strip()=='true'
+            except subprocess.CalledProcessError: hosted=False
+            errors.extend(check_update(fields[1],fields[3],require_release=not hosted))
     except (subprocess.CalledProcessError,ValueError,OSError) as exc:
         errors.append(str(exc))
     if errors:

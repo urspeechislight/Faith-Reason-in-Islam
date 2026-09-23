@@ -212,6 +212,7 @@ def main():
     s=sub.add_parser('prepare');s.add_argument('note',type=Path);s.add_argument('receipt',type=Path)
     s.add_argument('--baseline',type=Path,help='Approved master baseline; required with --review')
     s.add_argument('--review',type=Path,help='Master review to verify and embed for publication')
+    s.add_argument('--pending-release',action='store_true',help='Prepare for hosted final review; does not approve publication')
     s=sub.add_parser('verify');s.add_argument('page',type=Path);s.add_argument('receipt',type=Path)
     a=p.parse_args()
     try:
@@ -222,11 +223,11 @@ def main():
             if a.review:
                 import review
                 baseline=json.loads(a.baseline.read_text());record=json.loads(a.review.read_text())
-                errors=review.verify(review.inspect_file(a.note),baseline,record)
+                errors=review.verify(review.inspect_file(a.note),baseline,record,require_release=not a.pending_release)
                 if errors:raise ValueError('master approval failed: '+'; '.join(errors))
-                data.update(source_baseline=baseline,source_review=record)
+                data.update(source_baseline=baseline,source_review=record,release_pending=a.pending_release)
             a.receipt.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
-            print(len(data['blocks']),'source blocks mapped; '+('verified master approval embedded' if a.review else 'preview only: no editorial approval embedded'));return 0
+            print(len(data['blocks']),'source blocks mapped; '+(('awaiting hosted release review' if a.pending_release else 'verified master approval embedded') if a.review else 'preview only: no editorial approval embedded'));return 0
         errors=verify(a.page.read_text(),json.loads(a.receipt.read_text()))
         for e in errors:print('FAIL:',e)
         print('Conversion text matches source.' if not errors else 'Conversion rejected.');return bool(errors)

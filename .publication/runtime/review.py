@@ -367,7 +367,7 @@ def release_errors(report: dict, artifact_sha256: str) -> list[str]:
     return errors
 
 
-def verify_handoff(page: str, receipt: dict) -> list[str]:
+def verify_handoff(page: str, receipt: dict, require_release: bool = True) -> list[str]:
     """A faithful conversion can reuse only an actually verified master review."""
     import handoff
     if receipt.get('schema') != 3:
@@ -380,10 +380,10 @@ def verify_handoff(page: str, receipt: dict) -> list[str]:
         return ['handoff has no verified master approval; preservation is not editorial acceptance']
     source = receipt['source_markdown']
     draft = dict(extract(source, 'md'), schema=VERSION, format='md', artifact_sha256=digest(source))
-    return ['master review: '+e for e in verify(draft, baseline, record)]
+    return ['master review: '+e for e in verify(draft, baseline, record, require_release=require_release)]
 
 
-def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str | None = None) -> list[str]:
+def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str | None = None, require_release: bool = True) -> list[str]:
     errors=[]
     for label,data in [('baseline',baseline),('review',review)]:
         if data.get('schema')!=VERSION:errors.append(label+' schema mismatch')
@@ -454,7 +454,7 @@ def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str
     if not isinstance(mapping,dict) or set(mapping)!=set('ABCDE') or set(mapping.values())!=COUNCIL_ROLES:
         errors.append('council anonymization mapping incomplete')
     if len(str(report.get('synthesis','')).split())<8:errors.append('council synthesis missing')
-    errors.extend(release_errors(report, council.get('reviewed_artifact_sha256', '')))
+    if require_release:errors.extend(release_errors(report, council.get('reviewed_artifact_sha256', '')))
     claim=review.get('claim_preservation',{})
     if claim.get('status')!='passed' or any(len(str(claim.get(k,'')).split())<5 for k in ('negation_quantifiers_attribution','source_alignment')):errors.append('claim-preservation review incomplete')
     for key in ('source_verification','translation_fidelity','structural_validation','council'):

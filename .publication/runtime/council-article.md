@@ -109,7 +109,10 @@ unsuccessful fix cycles and report the remaining issue without releasing it.
 
 ## Independent release decision
 
-Use an existing council reviewer for this final check; do not add another full
+For the hosted Faith & Reason destination, [publication.md](publication.md)
+runs this final check in GitHub Actions and captures the actual response. Do not
+run a second local release check merely to populate an approval field.
+For other destinations, use an existing council reviewer for this final check; do not add another full
 council round. The writer cannot perform or fabricate this review. Generate its
 input from the final Markdown candidate and completed council record:
 

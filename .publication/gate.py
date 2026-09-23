@@ -64,9 +64,9 @@ def packet_for(receipt, page):
 def validate_article_files(path):
     page=Path(path).read_text();base=Path('.prose-reviews')/Path(path).stem
     receipt=read(str(base)+'.handoff.json');record=read(str(base)+'.review.json');baseline=read(str(base)+'.baseline.json')
-    errors=review.verify_handoff(page,receipt)
+    errors=review.verify_handoff(page,receipt,require_release=False)
     draft=review.inspect_file(Path(path))
-    errors+=review.verify(draft,baseline,record,receipt['source_sha256'])
+    errors+=review.verify(draft,baseline,record,receipt['source_sha256'],require_release=False)
     errors+=validate_article.check(page,register=record.get('register','standard'))
     bundle=read(str(base)+'.evidence.json')
     errors+=evidence.verify(bundle,receipt['source_markdown'])
@@ -82,6 +82,9 @@ def main():
     # public text must remain generated from the article collection; no new HTML
     # filename may opt into this exception.
     try:
+        manifest=read(HERE/'runtime-manifest.json')
+        actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
+        if actual!=manifest:raise ValueError('CI runtime snapshot differs from its manifest; synchronize and test it')
         inventory=public_files.snapshot()
         assets={n:h for n,h in inventory.items() if Path(n).suffix.lower() in public_files.STATIC}
         if assets!=read(HERE/'assets.json'):raise ValueError('static assets changed; validate rendering and update the checked asset manifest')
