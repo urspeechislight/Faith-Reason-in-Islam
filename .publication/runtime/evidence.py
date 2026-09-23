@@ -8,6 +8,10 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+
+import importlib.util as _ilu
+_sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
+scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
 import re
 import sqlite3
 
@@ -24,12 +28,89 @@ def arabic_blocks(note):
     for line in note.splitlines():
         if re.match(r'^>\s*\[!', line): flush(); continue
         if line.startswith('>'):
-            content = re.sub(r'^> ?', '', line)
+            content = scripture.unmark(re.sub(r'^(?:>\s?)+', '', line))
             if AR.search(content): buf.append(content)
             elif content.strip(): flush()
         else: flush()
     flush()
     return blocks
+
+
+def covered_slices(block, quotes):
+    """Match whole captured slices in order, allowing only layout whitespace."""
+    target = flat(block)
+    normalized = [flat(q) for q in quotes]
+    for start in range(len(normalized)):
+        joined = ''
+        for end in range(start, len(normalized)):
+            joined = (joined + ' ' + normalized[end]).strip()
+            if joined == target: return set(range(start, end + 1))
+            if not target.startswith(joined): break
+    return set()
+
+
+def ledger_usage(ledger):
+    """Schema 1 remains quote-required. Schema 2 records explicit research use."""
+    schema = ledger.get('schema')
+    if schema not in (1, 2): raise ValueError('unknown citation ledger schema')
+    entries = ledger.get('passages', [])
+    ids = [entry.get('id') for entry in entries]
+    if any(not isinstance(key, str) or not key.strip() for key in ids): raise ValueError('source IDs must be nonempty strings')
+    if len(ids) != len(set(ids)): raise ValueError('duplicate evidence IDs')
+    if schema == 1:
+        if 'dispositions' in ledger or any('usage' in e for e in entries):
+            raise ValueError('research-only dispositions require citation ledger schema 2')
+        return {key: {'use': 'quotation'} for key in ids}
+    dispositions = ledger.get('dispositions')
+    if not isinstance(dispositions, dict) or set(dispositions) != set(ids):
+        raise ValueError('schema 2 requires a disposition for every source ID and no unknown IDs')
+    for key, item in dispositions.items():
+        if not isinstance(item, dict) or item.get('use') not in ('quotation', 'research-only'):
+            raise ValueError(str(key)+': disposition must be quotation or research-only')
+        if item['use'] == 'research-only' and (not isinstance(item.get('reason'), str) or not item['reason'].strip()):
+            raise ValueError(str(key)+': research-only evidence needs a reason')
+    return dispositions
+
+
+def archived_text(raw):
+    """Decode archived transport without changing its retained bytes or hash."""
+    try:
+        data = json.loads(raw)
+    except (ValueError, TypeError):
+        data = None
+    if data is not None:
+        def strings(value):
+            if isinstance(value, str): return [value]
+            if isinstance(value, list): return [s for item in value for s in strings(item)]
+            if isinstance(value, dict): return [s for item in value.values() for s in strings(item)]
+            return []
+        parts = strings(data)
+        return parts + [' '.join(parts)]
+    if re.search(r'<(?:html|body|p|div|span)\b', raw, re.I):
+        from html.parser import HTMLParser
+        class SourceText(HTMLParser):
+            def __init__(self): super().__init__(convert_charrefs=True); self.parts=[]; self.skip=0
+            def handle_starttag(self, tag, attrs):
+                if tag in ('script', 'style'): self.skip+=1
+                if tag in ('p', 'div', 'br', 'li'): self.parts.append(' ')
+            def handle_endtag(self, tag):
+                if tag in ('script', 'style'): self.skip=max(0,self.skip-1)
+                if tag in ('p', 'div', 'li'): self.parts.append(' ')
+            def handle_data(self, text):
+                if not self.skip: self.parts.append(text)
+        parser=SourceText();parser.feed(raw)
+        return [''.join(parser.parts)]
+    return [raw]
+
+
+def scripture_coverage(note, quotes):
+    """Require the displayed original, never an intermediary, in archived evidence."""
+    errors = []
+    for index, row in enumerate(scripture.markdown(note), 1):
+        original = flat(' '.join(p['text'] for p in row['paragraphs'] if p['role'] == 'original'))
+        if not original or not any(original in flat(q) for q in quotes):
+            errors.append(f'scripture {index}: displayed original is absent from archived source text')
+    return errors
 
 
 def verify(bundle, note):
@@ -41,6 +122,11 @@ def verify(bundle, note):
     ids = [s.get('id') for s in sources]
     if len(ids) != len(set(ids)): errors.append('duplicate source IDs')
     quotes = []
+    corpus_entries = [s['passage'] for s in sources if s.get('kind') == 'corpus']
+    ledger = {'schema': bundle.get('citation_ledger_schema', 1), 'passages': corpus_entries}
+    if 'citation_dispositions' in bundle: ledger['dispositions'] = bundle['citation_dispositions']
+    try: usage = ledger_usage(ledger)
+    except ValueError as exc: errors.append(str(exc)); usage = {}
     for source in sources:
         key = str(source.get('id'))
         raw = source.get('raw', '')
@@ -48,16 +134,26 @@ def verify(bundle, note):
         if not source.get('citation'): errors.append(key+': source identity/locus missing')
         if source.get('kind') == 'corpus':
             entry = source['passage']
+            if source.get('id') != entry.get('id'): errors.append(key+': source ID differs from ledger')
             if source['citation'] != entry.get('source'):errors.append(key+': displayed citation contradicts corpus metadata')
             if entry['source_sha256'] != sha(raw) or entry['quote_sha256'] != sha(entry['quote']):
                 errors.append(key+': ledger hash mismatch')
             if raw[entry['start']:entry['end']] != entry['quote']:
                 errors.append(key+': quotation differs from source slice')
             quotes.append(entry['quote'])
-        elif source.get('kind') != 'external' or not source.get('url') or not source.get('accessed'):
-            errors.append(key+': external source URL/access date missing')
+        elif source.get('kind') == 'external':
+            if not source.get('url') or not source.get('accessed'):
+                errors.append(key+': external source URL/access date missing')
+            quotes.extend(archived_text(source['raw']))
+        elif source.get('kind') != 'external':
+            errors.append(key+': unknown source kind')
     for i, block in enumerate(arabic_blocks(note), 1):
-        if flat(block) not in [flat(q) for q in quotes]: errors.append(f'Arabic block {i}: missing exact ledger slice')
+        if not covered_slices(block, quotes): errors.append(f'Arabic block {i}: missing exact ledger slice')
+    errors.extend(scripture_coverage(note, quotes))
+    for entry in corpus_entries:
+        if usage.get(entry['id'], {}).get('use') == 'quotation' and AR.search(entry['quote']):
+            if not any(flat(entry['quote']) in flat(block) for block in arabic_blocks(note)):
+                errors.append(entry['id']+': captured quotation missing from note')
     for claim in bundle.get('claims', []):
         if not claim.get('claim') or not claim.get('source_ids') or not set(claim['source_ids']) <= set(ids):
             errors.append('claim map has missing or unknown evidence')
@@ -65,7 +161,7 @@ def verify(bundle, note):
 
 
 def export(db, note, ledger, external=None, claims=None):
-    if ledger.get('schema') != 1: raise ValueError('unknown ledger schema')
+    ledger_usage(ledger)
     sources = []
     with sqlite3.connect(Path(db).resolve().as_uri()+'?mode=ro', uri=True) as connection:
         for entry in ledger['passages']:
@@ -78,6 +174,8 @@ def export(db, note, ledger, external=None, claims=None):
                             'raw':data['raw'], 'raw_sha256':sha(data['raw']), 'passage':entry})
     sources.extend(external or [])
     bundle = {'schema':1, 'artifact_sha256':sha(note), 'sources':sources, 'claims':claims or []}
+    bundle['citation_ledger_schema'] = ledger['schema']
+    if ledger['schema'] == 2: bundle['citation_dispositions'] = ledger['dispositions']
     errors = verify(bundle, note)
     if errors: raise ValueError('; '.join(errors))
     return bundle

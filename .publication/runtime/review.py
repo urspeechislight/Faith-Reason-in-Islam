@@ -18,7 +18,7 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
-VERSION = '2026-09-23.4'
+VERSION = '2026-09-23.5'
 ROOT = Path(__file__).resolve().parent
 # Validators may load this module by path from another skill directory.
 import importlib.util
@@ -232,7 +232,8 @@ def extract(source: str, fmt: str) -> dict:
     for i,b in enumerate(blocks):
         b['id']=f'b{i+1:04d}'
     return {'blocks':blocks,'quotes':quote_layout.extract(source,fmt),'protected_sha256':digest(json.dumps(protected,ensure_ascii=False)),
-            'links_sha256':digest(json.dumps(links,ensure_ascii=False))}
+            'links_sha256':digest(json.dumps(links,ensure_ascii=False)),
+            'scripture_errors':quote_layout.scripture.errors(source,fmt)}
 
 def inspect_file(path: Path) -> dict:
     data=path.read_bytes()
@@ -290,13 +291,14 @@ def council_digest(report: dict) -> str:
 
 def council_responses(report: dict) -> list[tuple[str, dict]]:
     responses = []
-    for key in ('advisors', 'peer_reviews'):
+    for key in ('advisors', 'peer_reviews', 'followup_reviews'):
         items = report.get(key, [])
         if not isinstance(items, list):
             continue
         for index, item in enumerate(items, 1):
             if isinstance(item, dict):
-                namespace = str(item.get('role', 'unknown')) if key == 'advisors' else f'peer-{index}'
+                namespace = (str(item.get('role', 'unknown')) if key == 'advisors' else
+                             f'peer-{index}' if key == 'peer_reviews' else f'followup-{index}')
                 responses.append((namespace, item))
     return responses
 
@@ -370,8 +372,8 @@ def release_errors(report: dict, artifact_sha256: str) -> list[str]:
 def verify_handoff(page: str, receipt: dict, require_release: bool = True) -> list[str]:
     """A faithful conversion can reuse only an actually verified master review."""
     import handoff
-    if receipt.get('schema') != 3:
-        return ['publication requires a version-3 handoff with explicit source roles']
+    if receipt.get('schema') not in (3,4):
+        return ['publication requires a version-3/4 handoff with explicit source roles']
     errors = handoff.verify(page, receipt)
     if errors:
         return errors
@@ -466,6 +468,7 @@ def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str
     findings=review.get('findings',[])
     if not isinstance(findings,list):errors.append('findings must be a list')
     elif any(not isinstance(x,dict) or x.get('status') not in ('resolved','accepted-with-reason') or len(str(x.get('resolution','')).split())<5 for x in findings):errors.append('unresolved editorial findings')
+    errors.extend(draft.get("scripture_errors",[]))
     return errors
 
 def main(argv=None):

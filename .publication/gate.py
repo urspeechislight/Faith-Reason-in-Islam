@@ -2,7 +2,8 @@
 """Validate the exact public tree and obtain fresh independent release decisions.
 
 Unchanged legacy pages are explicitly grandfathered, not retroactively approved.
-Only a successful main-branch run may supply reusable server review evidence.
+Reusable evidence requires a successful main ancestor, or an identical commit
+checked in a successful push run in this repository.
 """
 import argparse
 import json
@@ -32,19 +33,76 @@ def old_blob(commit,path):
     except subprocess.CalledProcessError:return None
 
 
-def prior_success():
+def eligible_prior_run(run, head, repository):
+    if run.get('conclusion')!='success' or run.get('event')!='push':return False
+    if run.get('head_repository',{}).get('full_name')!=repository:return False
+    return run.get('head_sha')==head or run.get('head_branch')=='main'
+
+
+def runtime_only_paths(names):
+    allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py',
+             '.publication/runtime-manifest.json','.github/workflows/publication.yml'}
+    return bool(names) and all(n in allowed or n.startswith('.publication/runtime/') for n in names)
+
+
+def changes(base, head='HEAD'):
+    return git('diff','--name-only',base,head).decode().splitlines()
+
+
+def completed_publication_job(data):
+    return any(job.get('conclusion')=='success' and any(
+        step.get('name')=='Validate exact public artifacts and obtain independent decisions'
+        and step.get('conclusion')=='success' for step in job.get('steps',[]))
+        for job in data.get('jobs',[]))
+
+
+def classify_event():
+    event=read(os.environ['GITHUB_EVENT_PATH']);kind=os.environ.get('GITHUB_EVENT_NAME')
+    base=None
+    if kind=='pull_request':base=event['pull_request']['base']['sha']
+    elif kind=='push':
+        base=event.get('before')
+        if not base or set(base)=={'0'}:base=git('merge-base','origin/main','HEAD').decode().strip()
+    mode='runtime' if base and runtime_only_paths(changes(base)) else 'publication'
+    with open(os.environ['GITHUB_OUTPUT'],'a') as output:output.write(f'mode={mode}\nbase={base or ""}\n')
+    print('Check mode:',mode)
+
+
+def validate_runtime_only(base):
+    if not base or not runtime_only_paths(changes(base)):
+        raise ValueError('runtime-only mode requires exclusively runtime/workflow changes')
+    names=files()
+    previous=git('ls-tree','-r','--name-only',base).decode().splitlines()
+    def protected(items):return set(public_files.public_names(items)) | {n for n in items if n.startswith('.prose-reviews/')}
+    if protected(names)!=protected(previous):raise ValueError('runtime update changed public/review inventory')
+    if any(old_blob(base,n)!=Path(n).read_bytes() for n in protected(names)):
+        raise ValueError('runtime update changed article, public asset or review bytes')
+    manifest=read(HERE/'runtime-manifest.json')
+    actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
+    if actual!=manifest:raise ValueError('CI runtime snapshot differs from manifest')
+    return {'status':'passed','mode':'runtime-only','base':base,
+            'commit':git('rev-parse','HEAD').decode().strip(),
+            'public_files':public_files.snapshot(),'article_approvals':[]}
+
+
+def prior_success(allow_older_policy=False):
     token=os.environ.get('GITHUB_TOKEN');repo=os.environ.get('GITHUB_REPOSITORY')
     if not token or not repo:return None
-    url=f'https://api.github.com/repos/{repo}/actions/workflows/publication.yml/runs?branch=main&status=success&per_page=30'
+    url=f'https://api.github.com/repos/{repo}/actions/workflows/publication.yml/runs?status=success&per_page=30'
     request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
     with urllib.request.urlopen(request,timeout=30) as response:data=json.load(response)
+    head=git('rev-parse','HEAD').decode().strip()
     for run in data['workflow_runs']:
+        if not eligible_prior_run(run,head,repo):continue
         commit=run['head_sha']
-        if commit==git('rev-parse','HEAD').decode().strip():continue
         if subprocess.run(['git','merge-base','--is-ancestor',commit,'HEAD'],stderr=subprocess.DEVNULL).returncode:continue
-        # Changed checking code/policy invalidates reuse. Legacy exceptions remain
-        # explicit in the frozen manifest, rather than manufacturing old approvals.
-        if git('diff','--name-only',commit,'HEAD','--','.publication','.github/workflows/publication.yml').strip():continue
+        # Current-policy reuse requires identical checking code. A separately labelled
+        # preservation path may retain an older approval for identical article
+        # and evidence bytes; it never approves an edited candidate.
+        if not allow_older_policy and git('diff','--name-only',commit,'HEAD','--','.publication','.github/workflows/publication.yml').strip():continue
+        jobs_request=urllib.request.Request(f'https://api.github.com/repos/{repo}/actions/runs/{run["id"]}/jobs?per_page=100',headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
+        with urllib.request.urlopen(jobs_request,timeout=30) as response:jobs=json.load(response)
+        if not completed_publication_job(jobs):continue
         return commit
     return None
 
@@ -75,9 +133,16 @@ def validate_article_files(path):
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot')
-    a=p.parse_args();a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=False)
-    names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();results=[]
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--client',default='copilot');p.add_argument('--classify',action='store_true');p.add_argument('--runtime-base')
+    a=p.parse_args()
+    if a.classify:classify_event();return 0
+    if a.output is None:p.error('--output is required')
+    a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=False)
+    if a.runtime_base:
+        result=validate_runtime_only(a.runtime_base)
+        (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+        print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
+    names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True);results=[]
     # The index generators are separate from the article review. Changes to their
     # public text must remain generated from the article collection; no new HTML
     # filename may opt into this exception.
@@ -97,8 +162,8 @@ def main():
             if review.digest(raw)==legacy.get(path):
                 results.append({'path':path,'status':'unchanged-legacy'});continue
             dependencies=[path]+['.prose-reviews/'+stem+suffix for suffix in ['.baseline.json','.review.json','.handoff.json','.evidence.json']]
-            if prior and all(Path(n).is_file() and old_blob(prior,n)==Path(n).read_bytes() for n in dependencies):
-                results.append({'path':path,'status':'reused-server-review','commit':prior});continue
+            if preserved and all(Path(n).is_file() and old_blob(preserved,n)==Path(n).read_bytes() for n in dependencies):
+                results.append({'path':path,'status':'reused-server-review' if prior else 'preserved-prior-policy-review','commit':preserved});continue
             page,receipt,bundle=validate_article_files(path)
             directory=a.output/stem;directory.mkdir()
             quote_layout.capture(Path(path).resolve(),directory/'render.json')

@@ -103,8 +103,9 @@ Resolve simple prose defects locally, then have an existing independent reviewer
 check the fixes and reread the final article for repetitions introduced by edits.
 Source or argument changes return to that stage and the affected reviewers.
 Do not rerun all five for an unchanged argument or a verified HTML conversion.
-Refresh the report to identify the exact final candidate and actual follow-up
-reviews. Never relabel an old report as a review of new text. Stop after three
+Refresh the report to identify the exact final candidate. Append actual follow-up
+responses under `followup_reviews`, with their reviewer, original input hash and
+verbatim response. The independent decision must address their findings too. Never relabel an old report as a review of new text. Stop after three
 unsuccessful fix cycles and report the remaining issue without releasing it.
 
 ## Independent release decision
@@ -161,3 +162,18 @@ decision; unchanged HTML conversion reuses the verified master decision.
 These checks detect missing, contradictory, or stale records. They do not
 authenticate a model's identity or guarantee editorial judgment. Honest retention
 of the actual responses remains required.
+
+For scripture, verify original-language-to-English fidelity without an Arabic
+intermediary. Check the displayed source edition, complete transliteration,
+and zero-to-two paired lexical terms across all three layers. Reject mismatched
+lemmas, dropped inflections, misleading English alignment or highlights used as
+substitutes for lexical evidence. Inspect source quotations inside callouts for
+visible insets and compact but legible line/paragraph spacing. A structural pass
+cannot establish translation meaning or the significance of a selected word.
+
+When a citation ledger distinguishes quotations from research-only evidence,
+inspect every research-only reason and the claim map. Confirm that omitting its
+verbatim display does not conceal a qualification or counterevidence. An Arabic
+Bible witness retained for comparison cannot verify a Greek/Hebrew original or
+serve as the intermediary for its English translation. The displayed original
+must be present in its independently identified source archive.

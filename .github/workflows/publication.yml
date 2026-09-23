@@ -17,11 +17,16 @@ jobs:
       contents: read
       actions: read
       copilot-requests: write
+    outputs:
+      mode: ${{ steps.scope.outputs.mode }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: Classify runtime-only changes
+        id: scope
+        run: python3 .publication/gate.py --classify
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -43,7 +48,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
+      - name: Verify runtime-only update preserves public artifacts
+        if: steps.scope.outputs.mode == 'runtime'
+        env:
+          RUNTIME_BASE: ${{ steps.scope.outputs.base }}
+        run: python3 .publication/gate.py --runtime-base "$RUNTIME_BASE" --output "$RUNNER_TEMP/publication-review"
       - name: Validate exact public artifacts and obtain independent decisions
+        if: steps.scope.outputs.mode == 'publication'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/gate.py --output "$RUNNER_TEMP/publication-review"
@@ -57,14 +68,15 @@ jobs:
             ${{ runner.temp }}/publication-review
           retention-days: 90
       - name: Stage checked public assets
+        if: steps.scope.outputs.mode == 'publication'
         run: python3 .publication/stage.py "$RUNNER_TEMP/publication-review/result.json" "$RUNNER_TEMP/checked-site"
       - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.scope.outputs.mode == 'publication'
         with:
           path: ${{ runner.temp }}/checked-site
   deploy:
     name: Deploy checked site
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.publication-check.outputs.mode == 'publication'
     needs: publication-check
     runs-on: ubuntu-latest
     permissions:

@@ -14,7 +14,11 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
-VERSION = 2
+import importlib.util as _ilu
+_sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
+scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
+
+VERSION = 3
 HON = set('ﷺ﵇﵍﵈﵊﵁﵀ﷻ﷿﵌')
 AR = re.compile(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff\ufb50-\ufdff\ufe70-\ufeff]')
 
@@ -28,7 +32,7 @@ def md_inline(text):
     # Markdown emphasis markers are layout, not content: normalize them the
     # same way the text-preservation receipt (handoff.inline) does, so md and
     # rendered shas agree for transliteration lines and literal-asterisk text.
-    s=re.sub(r'\*\*(.+?)\*\*',r'\1',text)
+    s=re.sub(r'\*\*(.+?)\*\*',r'\1',scripture.unmark(text))
     s=re.sub(r'(?<!\w)\*([^*]+)\*(?!\w)',r'\1',s)
     s=re.sub(r'`([^`]+)`',r'\1',s)
     return flat(s)
@@ -36,23 +40,26 @@ def md_inline(text):
 class Quotes(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.rows=[];self.q=None;self.current=None;self.caption=False
+        self.rows=[];self.q=None;self.current=None;self.caption=False;self.mk=None
     def handle_starttag(self,tag,attrs):
         attrs=dict(attrs)
         if tag=='blockquote' and attrs.get('data-content-role')=='source':
             if self.q is not None:raise ValueError('nested source blockquote needs explicit layout support')
-            self.q={'caption':'','paragraphs':[],'raw':''}
+            self.q={'caption':'','paragraphs':[],'raw':'','marks':[]}
         if self.q is not None:
             if tag=='p':self.current=''
+            if tag=='mark':self.mk={'term':attrs.get('data-term'),'text':''}
             if tag=='cite':self.caption=True
             if tag=='br' and self.current is not None:self.current+=' '
     def handle_data(self,data):
         if self.q is None:return
+        if self.mk is not None:self.mk['text']+=data
         if self.caption:self.q['caption']+=data
         elif self.current is not None:self.current+=data
         else:self.q['raw']+=data
     def handle_endtag(self,tag):
         if self.q is None:return
+        if tag=='mark' and self.mk is not None:self.q['marks'].append(self.mk);self.mk=None
         if tag=='p' and self.current is not None:
             self.q['paragraphs'].append(flat(self.current));self.current=None
         if tag=='cite':self.caption=False
@@ -74,9 +81,10 @@ def extract(source,fmt):
                 i+=1;continue
             m=None if fence else re.match(r'^>\s*\[!(info|note|tip|warning|quote)\]-?\s*(.*)',line,re.I)
             if not m:i+=1;continue
-            row={'caption':m[2],'paragraphs':[]};buf=[];i+=1
+            row={'caption':m[2],'paragraphs':[],'marks':[]};buf=[];i+=1
             while i<len(lines) and lines[i].startswith('>'):
                 content=re.sub(r'^> ?', '',lines[i])
+                row['marks'].extend({'term':m['term'],'text':m['text']} for m in scripture.runs(content))
                 if content.strip():buf.append(content)
                 elif buf:row['paragraphs'].append(md_inline(' '.join(buf)));buf=[]
                 i+=1
@@ -97,7 +105,7 @@ def extract(source,fmt):
         english=[p['text'] for p in paragraphs if p['language']!='original']
         if english and english[0].startswith(('"','“')) and english[-1].endswith(('"','”')):
             next(p for p in paragraphs if p['language']!='original')['cues'].append('outer-quotation-wrapper')
-        result.append({'id':f'q{n:04d}','caption':flat(row['caption']),'paragraphs':paragraphs})
+        result.append({'id':f'q{n:04d}','caption':flat(row['caption']),'paragraphs':paragraphs,'lexical_marks':row.get('marks',[])})
     return result
 
 def pending(quotes):
@@ -140,6 +148,13 @@ def render_errors(quotes,record,artifact_sha256,require_render=False):
         if v.get('authored_sha256') != record.get('authored_sha256') or not record.get('authored_sha256'):errors.append('rendered authored text differs from checked HTML')
         if v.get('hidden_blocks'):errors.append('mapped article text is not visibly rendered: '+', '.join(v['hidden_blocks']))
         if v.get('pseudo_text'):errors.append('CSS-generated article text is absent from the master')
+        marks=v.get('lexical_marks',[])
+        expected_marks=[m for q in quotes for m in q.get('lexical_marks',[])]
+        if isinstance(marks,list) and [{'term':m.get('term'),'text':m.get('text')} for m in marks if isinstance(m,dict)]!=expected_marks:errors.append('rendered lexical marks missing or changed')
+        if marks != [] and not isinstance(marks,list):errors.append('invalid rendered lexical marks')
+        for mark in marks if isinstance(marks,list) else []:
+            if mark.get('visible') is not True or mark.get('underline') is not True:errors.append('lexical emphasis is hidden or lacks a visible underline')
+            if mark.get('style') != ('double' if mark.get('term')=='2' else 'solid'):errors.append('lexical emphasis does not distinguish its paired term')
         rows=v.get('callouts')
         if not isinstance(rows,list) or len(rows)!=len(quotes):errors.append('rendered evidence omits source callouts');continue
         for q,row in zip(quotes,rows):
@@ -150,6 +165,9 @@ def render_errors(quotes,record,artifact_sha256,require_render=False):
                     errors.append(p['id']+' rendered text differs');continue
                 if item.get('visible') is not True or not finite(item.get('height')) or item['height']<=0:errors.append(p['id']+' not visibly rendered')
                 if not finite(item.get('gap_before')) or (index>0 and item['gap_before']<8):errors.append(p['id']+f' lacks visible paragraph spacing at {width}px')
+                if not finite(item.get('inset_px')) or item['inset_px']<10:errors.append(p['id']+' quotation lacks a visible directional inset')
+                low,high=(1.8,2.1) if item.get('language')=='ar' else (1.7,2.0) if item.get('language') in ('he','arc','syr') else (1.5,1.7)
+                if not finite(item.get('line_ratio')) or not low<=item['line_ratio']<=high:errors.append(p['id']+' quotation line spacing is outside its readable compact range')
     return errors
 
 def capture(path,output):
@@ -178,15 +196,18 @@ def capture(path,output):
                         if(s.visibility==='hidden'||s.display==='none'||Number(s.opacity)===0||/opacity\\(0(?:%|\\.0+)?\\)/.test(s.filter))return false;}
                     return !/rgba\\([^)]*,\\s*0\\)/.test(getComputedStyle(e).color);
                 }}""")
-                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
+                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,language:p.lang||(getComputedStyle(p).direction==='rtl'?'ar':'en'),line_ratio:parseFloat(getComputedStyle(p).lineHeight)/parseFloat(getComputedStyle(p).fontSize),inset_px:getComputedStyle(p).direction==='rtl'?(q.getBoundingClientRect().right-parseFloat(getComputedStyle(q).paddingRight)-p.getBoundingClientRect().right):(p.getBoundingClientRect().left-q.getBoundingClientRect().left-parseFloat(getComputedStyle(q).paddingLeft)),visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
                 hidden=page.locator('[data-note-block]').evaluate_all("els=>els.filter(e=>!window.articleVisible(e)).map(e=>e.dataset.noteBlock)")
                 pseudo=page.locator('main *').evaluate_all("""els=>els.flatMap(e=>['::before','::after'].map(p=>getComputedStyle(e,p).content)).filter(t=>t&&!['none','normal','""'].includes(t)&&/[A-Za-z0-9\\u0600-\\u06ff]/.test(t))""")
                 for row in rows:
                     for item in row['paragraphs']:item['sha256']=sha(flat(item.pop('text')))
+                lexical_marks=page.locator('main mark[data-term]').evaluate_all("els=>els.map(e=>({term:e.dataset.term,text:e.textContent,visible:window.articleVisible(e),underline:getComputedStyle(e).textDecorationLine.includes('underline'),style:getComputedStyle(e).textDecorationStyle}))")
+                expected_marks=[{'term':m['term'],'text':m['text']} for row in scripture.html(data.decode())[0] for para in row['paragraphs'] for m in para['marks']]
+                if [{'term':m['term'],'text':m['text']} for m in lexical_marks]!=expected_marks:raise ValueError('rendered lexical emphasis differs from checked source')
                 screenshot=output.with_name(output.stem+f'-{width}.png')
                 page.screenshot(path=str(screenshot),full_page=True)
                 result['viewports'].append({'width':width,'height':height,'callouts':rows,
-                    'authored_sha256':authored(page.content()),'hidden_blocks':hidden,'pseudo_text':pseudo,
+                    'lexical_marks':lexical_marks,'authored_sha256':authored(page.content()),'hidden_blocks':hidden,'pseudo_text':pseudo,
                     'overflow_px':page.evaluate('Math.max(0,document.documentElement.scrollWidth-innerWidth)'),
                     'screenshot':str(screenshot),'screenshot_sha256':sha(screenshot.read_bytes())})
         finally:browser.close()
