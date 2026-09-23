@@ -1,5 +1,5 @@
 {
-  "commit": "bb76cb4bab23c853ddfc0a66172a1ec3c3ff8aa4",
+  "commit": "2fe2c6dbef5ebf8a10812697c7236969692128d1",
   "files": {
     "3-42-vs-39-4.html": "004e936431da3c8ec3b734a68b5bd262841810c9cd94836e8653b3f29dca9b1f",
     "43_81.html": "88c87f9f788d88429c45c7383cd30c3cfa5416bc30a2c85e174ae3319e99c334",
@@ -10,6 +10,7 @@
     "al-sawiq.html": "229e85b1ff4e37a7e887aa6656f49e2861b5ea8182041b8c4a6ab32d4e3c0c4f",
     "al-taif.html": "91fae5e9c4219eaad3274ff53db884fc2498299d44ad67b70ff9105b005b3535",
     "ali-forbearance.html": "df7229c80ffd58d5c70d1573837bd32f2236c6f39e868787fc2a005bd7b259b5",
+    "alive-with-their-lord.html": "522145bf6f8514eee25ebf2c98cd690a207c82b6b69d45c916b9fb25fc351301",
     "allah-deceiver.html": "afb8746c31c8b6e7236476e3a557c067e4d7e11bb456f3072e467ee1229f2034",
     "allah-prays.html": "ee52a44c5a35d0a8540938eaabd40030d56e0ad4363362675ec93207542dfec8",
     "apostasy.html": "31b983c269d1cb14ed3ea3e01551484c8136dd60b572a2a752814c34a1dc83a4",
@@ -25,7 +26,6 @@
     "borrowing.html": "2be153f5ae3aa0829fc05b2c6e616491d7337a7b2a7c4e8aa9b3b36b82b9f41f",
     "buwat.html": "cb2b8d3bb82e72ac4ae1641d3acfae983857c3f4a1998e07e9e6df978c614933",
     "conquest-of-mecca.html": "7276955f1c074b6eaf1bc3d80021997fd8242479d84042cacb0677165f94991c",
-    "council-report-1790173406.html": "29ce6eee7237b99cba9563da7664f93131e77528ca6943bb7b1bc33e8ee2bbd4",
     "dhat-al-ashira.html": "fe2ad8fae294ca7739aa9ce78e9e3e594aae4aa95c9d3bb8f747fbde49eec88d",
     "dhat-al-riqa.html": "30212e4352c510afdd18942e3cce0d3d293376d732ddf0e702edbef4f8ecfc7e",
     "dhat-amr.html": "079b8d5075a44c49a6f60f4a3e741594f27546ab8a9ef247dc3d2e91ee23a0c3",
@@ -42,7 +42,7 @@
     "ibn-abi-al-awja.html": "65f570157a99202b3051725f05fe7f6f01662324b9ff6120d0f0b3c6e6d78a7b",
     "ibn-taymiyya-record.html": "98c9c50b2a76d6ba3a633377834a5800cac9b5edd9af3289a2f88898fc8b2296",
     "ifk-maria.html": "461010302a9158531ed702ef7add9dc6af1d74584471484da0c0ec7e08cd3721",
-    "index.html": "3595c40e6a9d097029b004b65cd85c2d86c848e6144c6e4be773252743da91f6",
+    "index.html": "60159d04a489773d4ba66de75e9ff43f31d194595e7a5accb8c1dcb50cf8974f",
     "isiah_9_6.html": "615c37123cbae69639a4fb3304e4bdefed71c5fc9e6d225c4e7ab3ea57809205",
     "isnad-origin.html": "077dceb8b2641c67dadc4b006bf5569ad6bcd112ff478085442edfb3a03d87f1",
     "khaybar.html": "eca7769c86c66f68350b5631c3d4d7afb7ba4a0b6b41aabfdd7bbf03cb930cce",
