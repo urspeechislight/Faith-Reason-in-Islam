@@ -36,6 +36,12 @@ jobs:
           echo "$RUNNER_TEMP/copilot/node_modules/.bin" >> "$GITHUB_PATH"
           python3 -m pip install playwright==1.58.0
           python3 -m playwright install --with-deps chromium
+      - name: Install shared prose toolchain into the runner home
+        run: |
+          mkdir -p "$HOME/.agents/prose" "$HOME/.agents/skills/faith-reason-note"
+          cp .publication/runtime/review.py .publication/runtime/handoff.py .publication/runtime/quote_layout.py "$HOME/.agents/prose/"
+          cp .publication/runtime/contract.md .publication/runtime/drafting.md .publication/runtime/council-article.md .publication/runtime/editorial.md .publication/runtime/paragraphs.md "$HOME/.agents/prose/"
+          cp .publication/runtime/validate_article.py "$HOME/.agents/skills/faith-reason-note/validate.py" 2>/dev/null || true
       - name: Test mechanical publication boundaries
         run: python3 .publication/test_gate.py
       - name: Exercise actual reviewer on unpublished regression cases
