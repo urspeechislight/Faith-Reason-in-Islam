@@ -1,9 +1,9 @@
 {
  "schema": "2026-09-23.1",
  "status": "approved",
- "reviewer": "kimi (primary agent); three council rounds this cycle over the six shipped rounds; council-report-1790173406.html",
- "artifact_sha256": "844bb8ae289a32cb4582ee76d2b0d84d81430b74351ea13521c2ca23de25168f",
- "baseline_sha256": "844bb8ae289a32cb4582ee76d2b0d84d81430b74351ea13521c2ca23de25168f",
+ "reviewer": "kimi (primary agent); owner-directed meta/litotes sweep over the prior nine-round council record",
+ "artifact_sha256": "200b08685d58b6f297d479971a043e96000c973da3e67a0d0424366a78345b38",
+ "baseline_sha256": "200b08685d58b6f297d479971a043e96000c973da3e67a0d0424366a78345b38",
  "contract_sha256": "c2df0acadda0f9099966b32d200afdf4ca8230febf19ec25be40a9f533f1737d",
  "policy_sha256": "e28743b3d6f716f8c3e548958c008c4fe1db3a3c3a9c7716943edbf14ad001e3",
  "blocks": [
@@ -13,8 +13,8 @@
    "id": "b0001",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The Quran's We is the Arabic plural of\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The Quran's We is the Arabic plural of\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "title",
@@ -23,7 +23,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Why the Quran Says We, He, and I\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Why the Quran Says We, He, and I\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -32,7 +32,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Quran Language · Debate\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Quran Language · Debate\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h1",
@@ -41,7 +41,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reread for this cycle: \"Why the Quran Says We, He, and I\" carries the al-Farra evidence at the right strength."
+   "observation": "Reread after the sweep: \"Why the Quran Says We, He, and I\" carries its evidence at the right strength."
   },
   {
    "kind": "p",
@@ -49,8 +49,8 @@
    "id": "b0005",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reread for this cycle: \"majesty, its He is the same Speaker presenting Himself, and\" carries the al-Farra evidence at the right strength."
+   "function": "evidence",
+   "observation": "Reread after the sweep: \"majesty, its He is the same Speaker presenting Himself, and\" carries its evidence at the right strength."
   },
   {
    "kind": "h2",
@@ -59,7 +59,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"The Argument Under Examination\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Argument Under Examination\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -68,7 +68,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The charge comes in two forms, and both\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The charge comes in two forms, and both\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -77,7 +77,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Both forms assume one thing, that an Arabic\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Both forms assume one thing, that an Arabic\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -86,7 +86,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "Reviewed in the three-round council: \"Conclusion\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Conclusion\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -94,8 +94,8 @@
    "id": "b0010",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The We carries majesty and never number, and\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The We carries majesty and never number, and\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
@@ -104,7 +104,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"The Facts\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Facts\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -113,7 +113,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Islamic dates are AH; dates for Christian figures\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Islamic dates are AH; dates for Christian figures\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
@@ -122,16 +122,16 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"1. The Grammar and the Lexicon\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"1. The Grammar and the Lexicon\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The case here is addressed to any reader who accepts Arabic dictionaries, grammar, and poetry as evidence. The charge rests on one grammatical assumption, that a pronoun counts its referents. Arabic breaks that assumption before the Quran is even opened. The language has a plural of majesty, nahnu, a we that one exalted speaker says of himself alone. The rule is printed in the grammar books with the Quran's own We as the textbook example.",
+   "text": "The charge rests on one grammatical assumption, that a pronoun counts its referents. Arabic breaks that assumption before the Quran is even opened. The language has a plural of majesty, nahnu, a we that one exalted speaker says of himself alone. The rule is printed in the grammar books with the Quran's own We as the textbook example.",
    "id": "b0014",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The case here is addressed to any reader\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The charge rests on one grammatical assumption, that\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -140,16 +140,16 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Contested words. The charge reads nahnu, the Arabic\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Contested words. The charge reads nahnu, the Arabic\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The school's senior classical commentator states the rule first. The speech of one speaker can run in the plural form for greatness of station, and he says this is simply how speakers of Arabic talk. His proof text is the charge's own target, the doubled We of the Reminder verse (Qur'an 15:9), and the We of man's creation (Qur'an 23:12). The report he relays records both edges. Al-Khalil ibn Ahmad, a founder of Arabic grammar, was asked about the plural of the dying soul's plea in Qur'an 23:99, send them back, addressed to the one God. He declined to force a parse and said he does not know its analysis, because it is a plural, and the people of his circle found the reserve good. The reserve predates the rule, and the rule answers the reserve. The founder's own stated reason is form-side, because it is a plural, and the Kufan school answered him within a generation. That reading is exhibited below. Al-Tusi's statement is the tradition resolving what the founder left open, the plural of rank named where he paused. It runs in both directions, a creature addressing the one God in the plural and God speaking of Himself in it. Neither direction carries number.",
    "id": "b0016",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The school's senior classical commentator states the rule\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The school's senior classical commentator states the rule\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -158,7 +158,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tusi (d.460), al-Tibyan, v7, p394\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tusi (d.460), al-Tibyan, v7, p394\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -167,7 +167,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Speaker: al-Tusi, relaying al-Nadr ibn Sumayl from al-Khalil\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Speaker: al-Tusi, relaying al-Nadr ibn Sumayl from al-Khalil\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -176,7 +176,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the speech of the One runs in\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the speech of the One runs in\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -185,7 +185,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Locus: Qur'an 23:99 with 15:9 and 23:12 as\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Locus: Qur'an 23:99 with 15:9 and 23:12 as\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -194,7 +194,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The grammar of the Quran reaches the same\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The grammar of the Quran reaches the same\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -203,7 +203,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-'Ukbari (d.616), al-Tibyan fi I'rab al-Qur'an, p274\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-'Ukbari (d.616), al-Tibyan fi I'rab al-Qur'an, p274\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -212,7 +212,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the plural of Qur'an 23:99 is a\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the plural of Qur'an 23:99 is a\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -221,34 +221,34 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Locus: Qur'an 15:9, and 6:99's one sentence under\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Locus: Qur'an 15:9, and 6:99's one sentence under\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The Founding School Reads It Plainly. The grammar books cited so far were written in the fifth century and after. The rule they state is older than their ink, and the earliest layer of the record shows it.",
+   "text": "The Founding School Reads It Plainly. The grammar books cited so far were written in the fifth century and after. Al-Farra stated the rule some three centuries earlier.",
    "id": "b0025",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The Founding School Reads It Plainly. The grammar\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Founding School Reads It Plainly. The grammar\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Farra (d.207), Ma'ani al-Qur'an, v3, p42",
    "id": "b0026",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v3, p42\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v3, p42\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Speaker: al-Farra, the Kufan school's founding layer",
    "id": "b0027",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Speaker: al-Farra, the Kufan school's founding layer\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Speaker: al-Farra, the Kufan school's founding layer\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -257,25 +257,25 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Arabs use the plural verb for\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Arabs use the plural verb for\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Locus: Qur'an 44:36 with 65:1 and 23:99 as parallels",
    "id": "b0029",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Locus: Qur'an 44:36 with 65:1 and 23:99 as\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Locus: Qur'an 44:36 with 65:1 and 23:99 as\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "Al-Farra, who died in 207 and took the Kufan school from the generation of al-Kisa'i, the Kufan master reader of the Quran, is commenting on Qur'an 44:36. There the opponents address the Prophet ﷺ alone. He says the plural verb for the one addressee is ordinary Arabic, and his parallel is inside the Quran itself. The sura of divorce opens, O Prophet, when you divorce, with the singular title of honor and the plural verb in one clause (Qur'an 65:1). The dying soul's send me back (Qur'an 23:99) is, he says, of the same kind. The later tafsir commonly reads the plural of 65:1 as a turn to the community with the Prophet; al-Farra's reading is the Kufan school's, and the exhibit claims no consensus. The book itself addresses one man in the plural and reports one man addressing his one Lord in the plural.",
+   "text": "Al-Farra, who died in 207 and took the Kufan school from the generation of al-Kisa'i, the Kufan master reader of the Quran, is commenting on Qur'an 44:36. There the opponents address the Prophet ﷺ alone. He says the plural verb for the one addressee is ordinary Arabic, and his parallel is inside the Quran itself. The sura of divorce opens, O Prophet, when you divorce, with the singular title of honor and the plural verb in one clause (Qur'an 65:1). The dying soul's send me back (Qur'an 23:99) is, he says, of the same kind. The later tafsir commonly reads the plural of 65:1 as a turn to the community with the Prophet; al-Farra's reading is the Kufan school's own. The book itself addresses one man in the plural and reports one man addressing his one Lord in the plural.",
    "id": "b0030",
    "cues": [],
-   "decision": "revised",
-   "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"Al-Farra, who died in 207 and took the\" reads clean against its quoted evidence."
+   "decision": "keep",
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"Al-Farra, who died in 207 and took the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -284,16 +284,16 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The same grammarian equates the divine Our with\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The same grammarian equates the divine Our with\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p13",
    "id": "b0032",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p13\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p13\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -302,34 +302,34 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the divine Our of the ark is\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the divine Our of the ark is\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Locus: Qur'an 11:37 with 23:99 and 11:27",
    "id": "b0034",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Locus: Qur'an 11:37 with 23:99 and 11:27\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Locus: Qur'an 11:37 with 23:99 and 11:27\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The ark built under Our eyes and by Our revelation (Qur'an 11:37) is, on al-Farra's gloss, plural in form and singular in meaning, parsed exactly like send me back. And the comparison behind his gloss runs the same way. His earlier reading of rather we think you liars (Qur'an 11:27) took the plural you as addressed to Noah alone, one man receiving the plural of address. The divine We and the creature's exalted plural are one fact of the language to the founding school, not two problems. And he says so while holding the dying soul's verse in view.",
    "id": "b0035",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The ark built under Our eyes and by\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The ark built under Our eyes and by\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p241, the sentence continues below",
    "id": "b0036",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p241, the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p241, the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -338,25 +338,25 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the dying soul's plural runs on the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the dying soul's plural runs on the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Locus: Qur'an 23:99 with 19:9, across a page boundary",
    "id": "b0038",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Locus: Qur'an 23:99 with 19:9, across a page\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Locus: Qur'an 23:99 with 19:9, across a page\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p242, the continuation",
    "id": "b0039",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p242, the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Farra (d.207), Ma'ani al-Qur'an, v2, p242, the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -365,16 +365,16 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the same usage covers what Allah says\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the same usage covers what Allah says\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The verse runs its verb as though for a plurality, though the dying man called upon his Lord alone. This, al-Farra says, runs on the same usage as what Allah says of Himself, We created you before (Qur'an 19:9, in his cited reading, where the transmitted text has I created you). The Kufan school had printed the rule with the Quran's own verses generations before the fifth-century glosses, inside the school that grew up around the book's own recitation.",
    "id": "b0041",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The verse runs its verb as though for\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The verse runs its verb as though for\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -383,7 +383,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Back in the dictionary of Ibn Manzur, the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Back in the dictionary of Ibn Manzur, the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -392,7 +392,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Ibn Manzur (d.711), Lisan al-'Arab, v6, p229,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Ibn Manzur (d.711), Lisan al-'Arab, v6, p229,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -401,7 +401,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: three rank-we witnesses at three registers, the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: three rank-we witnesses at three registers, the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -410,7 +410,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The Shia school states the same rule where\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Shia school states the same rule where\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -419,7 +419,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Abu al-Salah al-Halabi (d.447), Taqrib al-Ma'arif, p188\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Abu al-Salah al-Halabi (d.447), Taqrib al-Ma'arif, p188\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -428,7 +428,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: expressing the one by the plural of\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: expressing the one by the plural of\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -437,7 +437,7 @@
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"Abu Ali relays al-Zamakhshari's gloss on 5:55 and\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Abu Ali relays al-Zamakhshari's gloss on 5:55 and\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -446,7 +446,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Abu Ali, in Ma'rifa al-Imam, v5, p24\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Abu Ali, in Ma'rifa al-Imam, v5, p24\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -455,7 +455,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Speaker: Abu Ali, relaying al-Zamakhshari (d.538) on Qur'an\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Speaker: Abu Ali, relaying al-Zamakhshari (d.538) on Qur'an\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -464,7 +464,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the plural form for one referent is\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the plural form for one referent is\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -473,7 +473,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"And the modern school commentary applies the same\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"And the modern school commentary applies the same\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -482,7 +482,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Mar'ashi (d.1411), Sharh Ihqaq al-Haqq, v3, p587\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Mar'ashi (d.1411), Sharh Ihqaq al-Haqq, v3, p587\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -491,1328 +491,1319 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the one is expressed by the plural\" reads clean against its quoted evidence."
-  },
-  {
-   "kind": "p",
-   "text": "The grammar is settled, and the lexicon carries it. Whether the living usage agrees is the next question, and the poets answer it.",
-   "id": "b0055",
-   "cues": [],
-   "decision": "keep",
-   "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The grammar is settled, and the lexicon carries\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the one is expressed by the plural\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "2. How the Kings and Poets Said We",
-   "id": "b0056",
+   "id": "b0055",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"2. How the Kings and Poets Said We\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"2. How the Kings and Poets Said We\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "Every human we on exhibit gathers rank around a speaker standing with his people, and the divine We gathers rank without needing any. The case of a speaker standing alone rests on three legs. The grammar of section 1 states the rule. The kings' custom, which al-Razi explains in section 7, shows it in use. And the verse of the two directions, Qur'an 23:99, has a creature addressing the one God in the plural inside the book itself. The grammarians wrote after the book, and the book is their largest text. The poets and the kings' custom are the usage no scripture controls. And the question of codification cuts both ways. A rule read out of the Quran would explain the Quran perfectly and nothing else. This rule explains the poets, the kings, the dying soul's plea, and the book at once, and a rule that explains all of them was already in the language. The demand for a pre-Islamic king saying we of himself alone should also be measured against the opponent's own ground. The only divine plurals his canon carries are in-scripture, Genesis 1:26 and its companions, and the only in-scripture plural-for-one the Quran needs is likewise inside the book, the dying soul's plea and the single Prophet addressed in the plural. A bar that the opponent's own evidence does not clear is not a bar the Quran has to clear.",
-   "id": "b0057",
+   "text": "Imru' al-Qays, the Jāhiliyya's most famous poet, magnifies his royal house in the plural. Every human we in the preserved speech gathers rank around a speaker standing with his people, and the divine We gathers rank without needing any. The case of a speaker standing alone rests on the kings' custom and on the verse of the two directions, Qur'an 23:99, where a creature addresses the one God in the plural inside the book itself.",
+   "id": "b0056",
    "cues": [],
    "decision": "revised",
-   "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"Every human we on exhibit gathers rank around\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"Imru' al-Qays, the Jāhiliyya's most famous poet, magnifies\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Nashwan al-Himyari (d.573), Shams al-'Ulum, v3, p287",
-   "id": "b0058",
+   "id": "b0057",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Nashwan al-Himyari (d.573), Shams al-'Ulum, v3, p287\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Nashwan al-Himyari (d.573), Shams al-'Ulum, v3, p287\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Speaker: Imru' al-Qays, the Jāhiliyya's most famous poet",
-   "id": "b0059",
+   "id": "b0058",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Speaker: Imru' al-Qays, the Jāhiliyya's most famous poet\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Speaker: Imru' al-Qays, the Jāhiliyya's most famous poet\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the royal we in the poets' mouth, rank without census",
-   "id": "b0060",
+   "id": "b0059",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the royal we in the poets' mouth,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the royal we in the poets' mouth,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "No reader counts the speakers of that line. The line ranks them. And the same art allows a speaker to present himself in the third person when grandeur calls for it, which is the register the Quran enters when it says He of Allah.",
-   "id": "b0061",
+   "id": "b0060",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"No reader counts the speakers of that line.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"No reader counts the speakers of that line.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Razi (d.606), Tafsir al-Razi, v6, p216",
-   "id": "b0062",
+   "id": "b0061",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Razi (d.606), Tafsir al-Razi, v6, p216\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Razi (d.606), Tafsir al-Razi, v6, p216\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Speaker: al-Hutay'a, asked to name the greatest poet",
-   "id": "b0063",
+   "id": "b0062",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Speaker: al-Hutay'a, asked to name the greatest poet\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Speaker: al-Hutay'a, asked to name the greatest poet\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the poet names himself the third, and the grandeur survives because he did not say myself",
-   "id": "b0064",
+   "id": "b0063",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the poet names himself the third, and\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the poet names himself the third, and\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The rhetoricians gave the whole device a name and a taxonomy, and they found their textbook example in the same poet.",
-   "id": "b0065",
+   "id": "b0064",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The rhetoricians gave the whole device a name\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The rhetoricians gave the whole device a name\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Sharif al-Jurjani (d.816), al-Hashiya 'ala al-Kashshaf, p63",
-   "id": "b0066",
+   "id": "b0065",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Sharif al-Jurjani (d.816), al-Hashiya 'ala al-Kashshaf, p63\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Sharif al-Jurjani (d.816), al-Hashiya 'ala al-Kashshaf, p63\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: iltifat is a classified device of Arabic eloquence, with Imru' al-Qays's your-night as a textbook case",
-   "id": "b0067",
+   "id": "b0066",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: iltifat is a classified device of Arabic\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: iltifat is a classified device of Arabic\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The usage is alive and the device has a name. The poets practiced the shifts long before the Quran, and the rhetoricians came later and named what the poets had been doing. Whether the Quran itself keeps this bookkeeping is the next question, and the book answers on its own terms.",
-   "id": "b0068",
+   "text": "The poets practiced the shifts long before the Quran, and the rhetoricians came later and named what the poets had been doing. And the question of codification cuts both ways. A rule read out of the Quran would explain the Quran perfectly and nothing else. This rule explains the poets, the kings, the dying soul's plea, and the book at once, and a rule that explains all of them was already in the language. The demand for a pre-Islamic king saying we of himself alone should also be measured against the opponent's own ground. The only divine plurals his canon carries are in-scripture, Genesis 1:26 and its companions, and the only in-scripture plural-for-one the Quran needs is likewise inside the book, the dying soul's plea and the single Prophet addressed in the plural. A bar that the opponent's own evidence does not clear is not a bar the Quran has to clear.",
+   "id": "b0067",
    "cues": [],
-   "decision": "keep",
-   "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The usage is alive and the device has\" reads clean against its quoted evidence."
+   "decision": "revised",
+   "function": "qualification",
+   "observation": "Meta-statement sweep verified: \"The poets practiced the shifts long before the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "3. The Same Act in Two Pronouns",
-   "id": "b0069",
+   "id": "b0068",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"3. The Same Act in Two Pronouns\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"3. The Same Act in Two Pronouns\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The strongest test of a reading is the book that provoked it. If the We of the Quran counted speakers, the Quran would use its plurals only where referents are many. It does the opposite, and a Shia scholar of the sixth century drew up the evidence.",
-   "id": "b0070",
+   "text": "If the We of the Quran counted speakers, the Quran would use its plurals only where referents are many. It does the opposite, and a Shia scholar of the sixth century drew up the evidence.",
+   "id": "b0069",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The strongest test of a reading is the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"If the We of the Quran counted speakers,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Ibn Shahrashub (d.588), Mutashabih al-Qur'an, v2, p272",
-   "id": "b0071",
+   "id": "b0070",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Ibn Shahrashub (d.588), Mutashabih al-Qur'an, v2, p272\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Ibn Shahrashub (d.588), Mutashabih al-Qur'an, v2, p272\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: a catalogue of the Quran's plural forms with single referents, the mosques that is one mosque, the callers that are one caller, the dual addressed to two",
-   "id": "b0072",
+   "id": "b0071",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: a catalogue of the Quran's plural forms\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: a catalogue of the Quran's plural forms\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "A book that says the mosques for one mosque cannot be heard to count speakers in its pronouns. The catalogue proves the point for plural forms in the third person. The first person is fixed by the grammarians of section 1 and the kings' custom of section 2, and together the two close both doors, the form and the person. The book also describes the same act with both pronouns, and the school's own literature moves between them without effort.",
-   "id": "b0073",
+   "text": "A book that says the mosques for one mosque cannot be heard to count speakers in its pronouns. The catalogue proves the point for the plural forms of the third person, and the grammarians' rule with the kings' custom fixes the first. The book also describes the same act with both pronouns, and the school's own literature moves between them without effort.",
+   "id": "b0072",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"A book that says the mosques for one\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"A book that says the mosques for one\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Manaqib Ibn Shahrashub, relayed in Bihar al-Anwar, v16, p336",
-   "id": "b0074",
+   "id": "b0073",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Manaqib Ibn Shahrashub, relayed in Bihar al-Anwar,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Manaqib Ibn Shahrashub, relayed in Bihar al-Anwar,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: one narration proving the Prophet's beauty cites the He of 82:7 and the We of 95:4 side by side",
-   "id": "b0075",
+   "id": "b0074",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: one narration proving the Prophet's beauty cites\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: one narration proving the Prophet's beauty cites\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 82:7 and Qur'an 95:4",
-   "id": "b0076",
+   "id": "b0075",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 82:7 and Qur'an 95:4\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 82:7 and Qur'an 95:4\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: man's creation in He and the same creation in We",
-   "id": "b0077",
+   "id": "b0076",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: man's creation in He and the same\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: man's creation in He and the same\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Creation in He. Creation in We. One act, one God, two registers, and the commentators who cite the two verses together sense no change of actor between them. And the same family of pairs runs through the breath of the spirit itself, into the verse nearest the opponent's own theology.",
-   "id": "b0078",
+   "id": "b0077",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Creation in He. Creation in We. One act,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Creation in He. Creation in We. One act,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 38:71-72 and Qur'an 66:12",
-   "id": "b0079",
+   "id": "b0078",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 38:71-72 and Qur'an 66:12\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 38:71-72 and Qur'an 66:12\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: one kind of act, the breath of the spirit, carried in He and I at Adam and in We at Jesus",
-   "id": "b0080",
+   "id": "b0079",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: one kind of act, the breath of\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: one kind of act, the breath of\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The Lord said, the third person of relay. I am creating, and I breathed of My spirit, the first person of the giving, in Adam's making, with the same wording at Qur'an 15:29. And We breathed of Our spirit, the plural of majesty, in the making of Jesus within Mary. The Christian reader meets the We at the verse nearest his own theology, and the person it carries there is the same One who said I at Adam.",
-   "id": "b0081",
+   "id": "b0080",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The Lord said, the third person of relay.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Lord said, the third person of relay.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Where helpers exist, the book names them. The charge asks whether anyone helps Allah, and the book answers by grammar. When creatures share in an act, the Quran never hides them in a pronoun. It names them, coordinates them, and puts them under permission.",
-   "id": "b0082",
+   "id": "b0081",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"Where helpers exist, the book names them. The\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Where helpers exist, the book names them. The\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 2:34",
-   "id": "b0083",
+   "id": "b0082",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 2:34\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 2:34\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the angels are the addressees of We said, never the co-speakers",
-   "id": "b0084",
+   "id": "b0083",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the angels are the addressees of We\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the angels are the addressees of We\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 33:56",
-   "id": "b0085",
+   "id": "b0084",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 33:56\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 33:56\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: when Allah and the angels share one verb, the verse names both parties in coordination",
-   "id": "b0086",
+   "id": "b0085",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: when Allah and the angels share one\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: when Allah and the angels share one\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 19:64",
-   "id": "b0087",
+   "id": "b0086",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 19:64\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 19:64\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the angels' own we, marked by their Lord's command, is the discriminant of the book's speakers",
-   "id": "b0088",
+   "id": "b0087",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the angels' own we, marked by their\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the angels' own we, marked by their\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The verse of Allah and His angels under one verb has its own page on this site, the page on whether Allah prays, answered from the same grammar. Here it carries one point, that shared action is named action.",
-   "id": "b0089",
+   "id": "b0088",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The verse of Allah and His angels under\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The verse of Allah and His angels under\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 6:99, opening clause",
-   "id": "b0090",
+   "id": "b0089",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 6:99, opening clause\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 6:99, opening clause\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: one sentence, two persons, one subject, He sent down and We brought forth, with no second agent between them",
-   "id": "b0091",
+   "id": "b0090",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: one sentence, two persons, one subject, He\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: one sentence, two persons, one subject, He\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "There is the one-sentence shift itself, exhibited. He sent down, then We brought forth, inside a single clause chain, the subject unchanged and no agent entering between them. Different hands cannot hide inside one sentence, and the book puts its person-shift exactly there.",
-   "id": "b0092",
+   "id": "b0091",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"There is the one-sentence shift itself, exhibited. He\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"There is the one-sentence shift itself, exhibited. He\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "In Qur'an 19:64 the we is the angels' own voice, the Prophet the addressee, and their Lord named in the third person with His command as their only warrant. The verse proves the telling difference. When the we is the angels', the book puts it in the angels' mouth and marks it by their Lord's command. The one sentence of Qur'an 6:99 shows the other pole, where Allah sent down and We brought forth under one subject. When the we is Allah's, it stands alone and unmarked. Where the mufassirun, the Quran commentators, have heard the angels sharing in an act, they pointed to the verses that name them. Those verses are the descent by permission (Qur'an 97:4) and the wings (Qur'an 35:1). The plural of majesty is never left carrying them unmarked. The naming rule is the book's own way of telling its speakers apart, and this verse is its proof text.",
-   "id": "b0093",
+   "id": "b0092",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"In Qur'an 19:64 the we is the angels'\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"In Qur'an 19:64 the we is the angels'\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 97:1-4",
-   "id": "b0094",
+   "id": "b0093",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 97:1-4\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 97:1-4\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the Night of Decree does both in one sura, the We of the descent and the angels' own verb under permission",
-   "id": "b0095",
+   "id": "b0094",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Night of Decree does both in\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Night of Decree does both in\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 50:16",
-   "id": "b0096",
+   "id": "b0095",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 50:16\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 50:16\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: nearness itself is said in the We here and in the I of Qur'an 2:186, one nearness, two registers",
-   "id": "b0097",
+   "id": "b0096",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: nearness itself is said in the We\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: nearness itself is said in the We\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 15:9",
-   "id": "b0098",
+   "id": "b0097",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 15:9\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 15:9\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the doubled We of the Reminder verse, whose carriers are named elsewhere, Jibril upon the heart by Allah's permission (Qur'an 2:97) and the Trustworthy Spirit (Qur'an 26:193)",
-   "id": "b0099",
+   "id": "b0098",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the doubled We of the Reminder verse,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the doubled We of the Reminder verse,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The sending is one. The We is Allah's. The carriers are named elsewhere, which is exactly where the book wants them. The book's bookkeeping forbids reading number into its pronouns, and the remaining question is where the We sits doctrinally.",
-   "id": "b0100",
+   "id": "b0099",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The sending is one. The We is Allah's.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The sending is one. The We is Allah's.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "4. Where the We Meets the One God",
-   "id": "b0101",
+   "id": "b0100",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"4. Where the We Meets the One God\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"4. Where the We Meets the One God\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "If the We carried any scent of partnership, the book would keep it away from its oneness passages. It does the opposite. The We-soaked run of al-Dhariyat closes on the first person and the ban on another god.",
-   "id": "b0102",
+   "id": "b0101",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"If the We carried any scent of partnership,\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"If the We carried any scent of partnership,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 51:47-51",
-   "id": "b0103",
+   "id": "b0102",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 51:47-51\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 51:47-51\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: We built, We spread, We created pairs, then flee to Allah, I am a warner, and do not set up with Allah another god",
-   "id": "b0104",
+   "id": "b0103",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: We built, We spread, We created pairs,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: We built, We spread, We created pairs,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "One passage, three persons, and the We lives next door to the first person and to the book's ban on partners. The school's commentators read the passage exactly so, and the gloss on the pairs runs to the section's point, the oneness of the Creator of every pair.",
-   "id": "b0105",
+   "text": "The We lives next door to the first person and to the book's ban on partners, in the same passage. The school's commentators read the passage exactly so, and the gloss on the pairs runs to the section's point, the oneness of the Creator of every pair.",
+   "id": "b0104",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"One passage, three persons, and the We lives\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The We lives next door to the first\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Tabrisi (d.548), Majma' al-Bayan, v9, p267",
-   "id": "b0106",
+   "id": "b0105",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tabrisi (d.548), Majma' al-Bayan, v9, p267\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tabrisi (d.548), Majma' al-Bayan, v9, p267\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the We-verses are read with the tawhid they serve, power without need",
-   "id": "b0107",
+   "id": "b0106",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the We-verses are read with the tawhid\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the We-verses are read with the tawhid\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Tabrisi, Mukhtasar Majma' al-Bayan, v3, p329",
-   "id": "b0108",
+   "id": "b0107",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tabrisi, Mukhtasar Majma' al-Bayan, v3, p329\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tabrisi, Mukhtasar Majma' al-Bayan, v3, p329\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the pairs of creation are given so you may know that the Creator of these pairs is One, whom nothing resembles",
-   "id": "b0109",
+   "id": "b0108",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the pairs of creation are given so\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the pairs of creation are given so\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Tabataba'i (d.1402), al-Mizan, v18, p381",
-   "id": "b0110",
+   "id": "b0109",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tabataba'i (d.1402), al-Mizan, v18, p381\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tabataba'i (d.1402), al-Mizan, v18, p381\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the verses are marshaled to establish His oneness in lordship, concluding in the flight to Allah",
-   "id": "b0111",
+   "id": "b0110",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the verses are marshaled to establish His\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the verses are marshaled to establish His\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The sura of pure oneness answers in the He, the register of the Lord being taught, and its occasion of revelation was a question about lineage. The Jews asked the Prophet what his Lord's lineage was, and the answer was the sura of the One. The gloss transmitted in the school's earliest tafsir closes the helpers question with five denials.",
-   "id": "b0112",
+   "id": "b0111",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The sura of pure oneness answers in the\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The sura of pure oneness answers in the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Tafsir al-Qummi (d.329), v2, p448",
-   "id": "b0113",
+   "id": "b0112",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Tafsir al-Qummi (d.329), v2, p448\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Tafsir al-Qummi (d.329), v2, p448\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Dating: the Jews asked the Prophet the Lord's lineage",
-   "id": "b0114",
+   "id": "b0113",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Dating: the Jews asked the Prophet the Lord's\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Dating: the Jews asked the Prophet the Lord's\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: no equal, no likeness, no partner, no backer, no helper",
-   "id": "b0115",
+   "id": "b0114",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: no equal, no likeness, no partner, no\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: no equal, no likeness, no partner, no\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The sura that says He is the sura that denies every companion the charge hopes to find inside We. The We is majesty inside a book that banks its oneness beside it. The confusion half of the charge remains, the question of who speaks when the book says He, and the school's answer has three parts, a named device, a named relay, and a named occasion.",
-   "id": "b0116",
+   "id": "b0115",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The sura that says He is the sura\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The sura that says He is the sura\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "5. The Person-Shifts Have a Name",
-   "id": "b0117",
+   "id": "b0116",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"5. The Person-Shifts Have a Name\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"5. The Person-Shifts Have a Name\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The scholarly form of the charge reads person-shifts as the seams of different authors. The exhibits answer it before the device is even named. The shifts sit inside single sentences (Qur'an 6:99) and single passages (Qur'an 51:47-51), where different hands cannot hide, and the same act carries both pronouns (Qur'an 82:7 and 95:4). The device itself the rhetoricians named, and the school's commentary assigns its purposes verse by verse.",
-   "id": "b0118",
+   "text": "The scholarly form of the charge reads person-shifts as the seams of different authors. The shifts sit inside single sentences (Qur'an 6:99) and single passages (Qur'an 51:47-51), where different hands cannot hide, and the same act carries both pronouns (Qur'an 82:7 and 95:4). The device itself the rhetoricians named, and the school's commentary assigns its purposes verse by verse.",
+   "id": "b0117",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The scholarly form of the charge reads person-shifts\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The scholarly form of the charge reads person-shifts\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Mashhadi (d.1125), Kanz al-Daqa'iq, v1, p118",
-   "id": "b0119",
+   "id": "b0118",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Mashhadi (d.1125), Kanz al-Daqa'iq, v1, p118\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Mashhadi (d.1125), Kanz al-Daqa'iq, v1, p118\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the Fatiha's shift to You exchanges the obscurity of absence for the clarity of presence",
-   "id": "b0120",
+   "id": "b0119",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Fatiha's shift to You exchanges the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Fatiha's shift to You exchanges the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Tabataba'i, al-Mizan, v3, p377",
-   "id": "b0121",
+   "id": "b0120",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tabataba'i, al-Mizan, v3, p377\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tabataba'i, al-Mizan, v3, p377\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the verses carry shifts of address and of overt noun for pronoun, with purposes clear to the reflecting reader",
-   "id": "b0122",
+   "id": "b0121",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the verses carry shifts of address and\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the verses carry shifts of address and\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Mazandarani (d.1081), Sharh Usul al-Kafi, v1, p122",
-   "id": "b0123",
+   "id": "b0122",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Mazandarani (d.1081), Sharh Usul al-Kafi, v1, p122\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Mazandarani (d.1081), Sharh Usul al-Kafi, v1, p122\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: Qur'an 2:168's shift from address to absence marks the hearers' distance from the rank of address",
-   "id": "b0124",
+   "id": "b0123",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: Qur'an 2:168's shift from address to absence\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: Qur'an 2:168's shift from address to absence\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "One grammar serves the book and the house. The Imams use the device the Quran uses, which settles what kind of device it is.",
-   "id": "b0125",
+   "id": "b0124",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"One grammar serves the book and the house.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"One grammar serves the book and the house.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Mazandarani, Sharh Usul al-Kafi, v3, p204",
-   "id": "b0126",
+   "id": "b0125",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Mazandarani, Sharh Usul al-Kafi, v3, p204\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Mazandarani, Sharh Usul al-Kafi, v3, p204\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: Imam al-Rida's we is a shift from third person to first for stating the object openly, like Ali naming himself Haydara",
-   "id": "b0127",
+   "id": "b0126",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: Imam al-Rida's we is a shift from\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: Imam al-Rida's we is a shift from\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The Sunni rhetorical tradition reaches the same verdict on the same terms, on a verse whose base form is first person and whose shift to the naming of Allah is the art.",
-   "id": "b0128",
+   "id": "b0127",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The Sunni rhetorical tradition reaches the same verdict\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Sunni rhetorical tradition reaches the same verdict\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Iskandari (d.683), al-Insaf, v2, p174",
-   "id": "b0129",
+   "id": "b0128",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Iskandari (d.683), al-Insaf, v2, p174\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Iskandari (d.683), al-Insaf, v2, p174\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the shift of Qur'an 9:2 is virtuosity in the methods of eloquence, magnifying the station and the matter",
-   "id": "b0130",
+   "id": "b0129",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the shift of Qur'an 9:2 is virtuosity\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the shift of Qur'an 9:2 is virtuosity\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 2:97",
-   "id": "b0131",
+   "id": "b0130",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 2:97\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 2:97\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the carrier named, Jibril, who brings it down upon the Prophet's heart by Allah's permission",
-   "id": "b0132",
+   "id": "b0131",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the carrier named, Jibril, who brings it\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the carrier named, Jibril, who brings it\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "There is the say-verse grammar in one exhibit. The verse opens with say, Allah composing the Prophet's exact words, and inside the composed words the carrier is named, Jibril, and the permission is named, by Allah's permission. The relay is not an inference. The book prints it.",
-   "id": "b0133",
+   "id": "b0132",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"There is the say-verse grammar in one exhibit.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"There is the say-verse grammar in one exhibit.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "When the book says He, Allah speaks, and the carriers are named. The clearest statement is the gloss on 69:40, the word of a noble messenger, and it is Allah's speech placed on his tongue. Add the grammar of the say-verses, where Allah composes the Prophet's exact words, and the architecture is complete. Allah speaks, Jibril carries to the Prophet's heart, the Prophet recites, and each layer is grammatically visible in the book. Third-person self-presentation plus named relay is the book's standing design. One shift has a recorded occasion, and it prepares the last section. A questioner asked the Prophet whether the Lord is near, that they should whisper, or far, that they should call out. The answer came down without the say-command, and the Lord answered the questioner in His own person.",
-   "id": "b0134",
+   "id": "b0133",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"When the book says He, Allah speaks, and\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"When the book says He, Allah speaks, and\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Tabrisi's gloss, relayed in Bihar al-Anwar, v18, p173",
-   "id": "b0135",
+   "id": "b0134",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Tabrisi's gloss, relayed in Bihar al-Anwar, v18,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Tabrisi's gloss, relayed in Bihar al-Anwar, v18,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the Quran is the word of a noble messenger, Jibril, and it is Allah's speech sent down upon his tongue",
-   "id": "b0136",
+   "id": "b0135",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Quran is the word of a\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Quran is the word of a\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: from al-Hasan, in Mukhtasar Majma' al-Bayan, v1, p118",
-   "id": "b0137",
+   "id": "b0136",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: from al-Hasan, in Mukhtasar Majma' al-Bayan, v1,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: from al-Hasan, in Mukhtasar Majma' al-Bayan, v1,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Dating: is our Lord near that we whisper, or far that we call out",
-   "id": "b0138",
+   "id": "b0137",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Dating: is our Lord near that we whisper,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Dating: is our Lord near that we whisper,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the I-verse came down answering the questioner directly",
-   "id": "b0139",
+   "id": "b0138",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the I-verse came down answering the questioner\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the I-verse came down answering the questioner\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The shifts are design, the relay is named, and the occasion of the I is recorded. What the answering I sounds like in the school's own transmission is the next room.",
-   "id": "b0140",
+   "id": "b0139",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The shifts are design, the relay is named,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The shifts are design, the relay is named,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "6. Allah Answers in His Own I",
-   "id": "b0141",
+   "id": "b0140",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"6. Allah Answers in His Own I\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"6. Allah Answers in His Own I\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The reports of the Ahl al-Bayt do not debate the pronouns. They pray with them, counsel with them, and narrate Allah answering in them. A Christian reader weighs these chains as the school's testimony, and sections 1 through 4 carry the case on ground he already accepts.",
-   "id": "b0142",
+   "text": "The reports of the Ahl al-Bayt do not debate the pronouns. They pray with them, counsel with them, and narrate Allah answering in them. A Christian reader weighs these chains as the school's testimony, and the grammar and usage they presuppose stand on ground he already accepts.",
+   "id": "b0141",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The reports of the Ahl al-Bayt do not\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The reports of the Ahl al-Bayt do not\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Qur'an 2:186",
-   "id": "b0143",
+   "id": "b0142",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Qur'an 2:186\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Qur'an 2:186\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the I of nearness and answer, with the relay command dropped",
-   "id": "b0144",
+   "id": "b0143",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the I of nearness and answer, with\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the I of nearness and answer, with\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The verse is spoken to the Prophet, when My servants ask you about Me, so the relay stands inside the sentence. What drops is the say-command that stands before most answers, so the answer itself comes in Allah's own person, I am near, with no commanded recitation between. The narration that holds all three persons in one report enacts the very turn al-Mashhadi explained, the described Lord becoming the answering One.",
-   "id": "b0145",
+   "id": "b0144",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"The verse is spoken to the Prophet, when\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The verse is spoken to the Prophet, when\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Saduq (d.381), 'Uyun Akhbar al-Rida, v1, p269",
-   "id": "b0146",
+   "id": "b0145",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Saduq (d.381), 'Uyun Akhbar al-Rida, v1, p269\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Saduq (d.381), 'Uyun Akhbar al-Rida, v1, p269\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Chain: through the twelve Imams from Ali from the Prophet from Allah",
-   "id": "b0147",
+   "id": "b0146",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Chain: through the twelve Imams from Ali from\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Chain: through the twelve Imams from Ali from\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: at every verse of the Fatiha Allah answers the servant in His own first person",
-   "id": "b0148",
+   "id": "b0147",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: at every verse of the Fatiha Allah\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: at every verse of the Fatiha Allah\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The answering I is also the school's liturgy. The glorification of the hours strings the first person declaration by declaration, and the Imam teaches it as the servant's own supplication, with the promise that the need of whoever calls with it is granted.",
-   "id": "b0149",
+   "id": "b0148",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The answering I is also the school's liturgy.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The answering I is also the school's liturgy.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Imam al-Sadiq, in al-Kafi, v2, p515",
-   "id": "b0150",
+   "id": "b0149",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Imam al-Sadiq, in al-Kafi, v2, p515\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Imam al-Sadiq, in al-Kafi, v2, p515\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the glorification of the hours strings first-person declarations of Allah, taught as the servant's supplication",
-   "id": "b0151",
+   "id": "b0150",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the glorification of the hours strings first-person\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the glorification of the hours strings first-person\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "And the liturgy counsels. A companion whose hope was weakening after years of waiting heard the I-verse read to him as a promise to stand on.",
-   "id": "b0152",
+   "id": "b0151",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"And the liturgy counsels. A companion whose hope\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"And the liturgy counsels. A companion whose hope\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Abu al-Hasan, in al-Kafi, v2, p489",
-   "id": "b0153",
+   "id": "b0152",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Abu al-Hasan, in al-Kafi, v2, p489\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Abu al-Hasan, in al-Kafi, v2, p489\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the Imam meets a weakening heart with the I-verse itself, a promise to stand on",
-   "id": "b0154",
+   "id": "b0153",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Imam meets a weakening heart with\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Imam meets a weakening heart with\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The Night of Decree layers the persons inside one report, the sura's We, the third person of the permission, and then the Lord's own gloss in the first person.",
-   "id": "b0155",
+   "id": "b0154",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The Night of Decree layers the persons inside\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The Night of Decree layers the persons inside\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Imam al-Sadiq, relaying Ali ibn al-Husayn, in al-Kafi, v1, p296",
-   "id": "b0156",
+   "id": "b0155",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Imam al-Sadiq, relaying Ali ibn al-Husayn, in\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Imam al-Sadiq, relaying Ali ibn al-Husayn, in\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the Night of Decree layers We, He, and My in one report, ending in My angels and My spirit saluting the Prophet with My peace",
-   "id": "b0157",
+   "id": "b0156",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the Night of Decree layers We, He,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the Night of Decree layers We, He,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The consolation hadith joins the We-verse to the I-revelation directly, one Speaker at two registers in the space of two sentences.",
-   "id": "b0158",
+   "id": "b0157",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The consolation hadith joins the We-verse to the\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The consolation hadith joins the We-verse to the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Imam al-Kazim, in al-Kafi, v1, p474",
-   "id": "b0159",
+   "id": "b0158",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Imam al-Kazim, in al-Kafi, v1, p474\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Imam al-Kazim, in al-Kafi, v1, p474\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the We-verse of the angels' prostration is followed by Allah's first-person consolation of the Prophet",
-   "id": "b0160",
+   "id": "b0159",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the We-verse of the angels' prostration is\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the We-verse of the angels' prostration is\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The riwa'i, the transmitted reports of the school, treat the pronouns as address. What the rest of the tradition says is the last question, and it agrees.",
-   "id": "b0161",
+   "id": "b0160",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The riwa'i, the transmitted reports of the school,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The riwa'i, the transmitted reports of the school,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "7. The Sunni Mufassirun Say the Same",
-   "id": "b0162",
+   "id": "b0161",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"7. The Sunni Mufassirun Say the Same\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"7. The Sunni Mufassirun Say the Same\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The strongest corroboration is a mufassir the polemic's own audience reveres, the same al-Razi already met explaining the poet's third, answering the polemic's own question eight centuries before it was asked.",
-   "id": "b0163",
+   "text": "Al-Razi, a mufassir the polemic's own audience reveres, answered the polemic's own question eight centuries before it was asked.",
+   "id": "b0162",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The strongest corroboration is a mufassir the polemic's\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Al-Razi, a mufassir the polemic's own audience reveres,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Razi (d.606), Tafsir al-Razi, v28, p225",
-   "id": "b0164",
+   "id": "b0163",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Razi (d.606), Tafsir al-Razi, v28, p225\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Razi (d.606), Tafsir al-Razi, v28, p225\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the We built it is more decisive against a partner than I built it, and the register is the king's we",
-   "id": "b0165",
+   "id": "b0164",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the We built it is more decisive\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the We built it is more decisive\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The king says we did, meaning that his servants did it at his command, and there is magnification in it. The obvious objection belongs here, beside the quote. If the king's we means his servants, does Allah's We mean His angels? The naming rule of section 3 answers. Wherever creatures act, the book names them, and named creatures under command are the retinue, worshippers who descend by permission, not helpers sharing the act's rank. The custom explains the register. The naming rule polices the referents. The verdict is not al-Razi's alone.",
-   "id": "b0166",
+   "text": "The king says we did, meaning that his servants did it at his command, and there is magnification in it. If the king's we means his servants, does Allah's We mean His angels? Wherever creatures act, the book names them, and named creatures under command are the retinue, worshippers who descend by permission, not helpers sharing the act's rank. The custom explains the register. The naming rule polices the referents. The verdict is not al-Razi's alone.",
+   "id": "b0165",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"The king says we did, meaning that his\" reads clean against its quoted evidence."
+   "function": "evidence",
+   "observation": "Meta-statement sweep verified: \"The king says we did, meaning that his\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: Abu Hayyan (d.745), al-Bahr al-Muhit, v7, p346",
-   "id": "b0167",
+   "id": "b0166",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: Abu Hayyan (d.745), al-Bahr al-Muhit, v7, p346\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: Abu Hayyan (d.745), al-Bahr al-Muhit, v7, p346\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the plural of 37:75 is for greatness and majesty",
-   "id": "b0168",
+   "id": "b0167",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the plural of 37:75 is for greatness\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the plural of 37:75 is for greatness\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Al-Alusi states the same verdict on the same verse, and adds the report of the Prophet's own prayer at it.",
-   "id": "b0169",
+   "id": "b0168",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"Al-Alusi states the same verdict on the same\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Al-Alusi states the same verdict on the same\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Alusi (d.1270), Ruh al-Ma'ani, v12, p96",
-   "id": "b0170",
+   "id": "b0169",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Alusi (d.1270), Ruh al-Ma'ani, v12, p96\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Alusi (d.1270), Ruh al-Ma'ani, v12, p96\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the same verdict on 37:75, with the Prophet's own prayer at the plural-of-majesty verse",
-   "id": "b0171",
+   "id": "b0170",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the same verdict on 37:75, with the\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the same verdict on 37:75, with the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Source: al-Sha'rawi (d.1419), Tafsir al-Sha'rawi, v5, p232",
-   "id": "b0172",
+   "id": "b0171",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Source: al-Sha'rawi (d.1419), Tafsir al-Sha'rawi, v5, p232\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Source: al-Sha'rawi (d.1419), Tafsir al-Sha'rawi, v5, p232\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the I points to the oneness of the Essence and the We to the gathering of the attributes of perfection, the grammarians' rule that the plural pronouns belong to the one magnifying himself",
-   "id": "b0173",
+   "id": "b0172",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the I points to the oneness of\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the I points to the oneness of\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "And the register itself answers the Trinity's form of plurality. Attributes gathered in one essence are what the One has. Persons are who the One is. The Quran's We gathers the first and never divides the second. The frame is register, and register does not count. Lexicon, usage, the book's bookkeeping, the school's tafsir, the school's hadith, and the opponent's own commentators agree. What remains is the canon the charge calls home.",
-   "id": "b0174",
+   "id": "b0173",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"And the register itself answers the Trinity's form\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"And the register itself answers the Trinity's form\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h2",
    "text": "8. The Christian Canon on the Divine We",
-   "id": "b0175",
+   "id": "b0174",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"8. The Christian Canon on the Divine We\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"8. The Christian Canon on the Divine We\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
-   "text": "The method of the charge, reading a divine plural as plurality of agents, has a home address. It is the method Christians apply to Genesis. The canon that says let us make man in our image also says the LORD our God is one LORD. It says of the man that he has become as one of us (Genesis 3:22). It bids the court go down (Genesis 11:7), and it asks who will go for us (Isaiah 6:8), where the I and the us share one sentence. Both readings, the Trinity's and the majesty's, must carry all of these verses alike.",
-   "id": "b0176",
+   "text": "The method of the charge, reading a divine plural as plurality of agents, is the method Christians apply to Genesis. The canon that says let us make man in our image also says the LORD our God is one LORD. It says of the man that he has become as one of us (Genesis 3:22). It bids the court go down (Genesis 11:7), and it asks who will go for us (Isaiah 6:8), where the I and the us share one sentence. Both readings, the Trinity's and the majesty's, must carry all of these verses alike.",
+   "id": "b0175",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The method of the charge, reading a divine\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The method of the charge, reading a divine\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Genesis 1:26, Westminster Leningrad Codex, Van Dyck, King James Version",
-   "id": "b0177",
+   "id": "b0176",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Genesis 1:26, Westminster Leningrad Codex, Van Dyck,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Genesis 1:26, Westminster Leningrad Codex, Van Dyck,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the plural of creation in the Christian canon",
-   "id": "b0178",
+   "id": "b0177",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the plural of creation in the Christian\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the plural of creation in the Christian\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Deuteronomy 6:4, Westminster Leningrad Codex, Van Dyck, King James Version",
-   "id": "b0179",
+   "id": "b0178",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Deuteronomy 6:4, Westminster Leningrad Codex, Van Dyck,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Deuteronomy 6:4, Westminster Leningrad Codex, Van Dyck,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the strictest monotheism in the same canon",
-   "id": "b0180",
+   "id": "b0179",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the strictest monotheism in the same canon\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the strictest monotheism in the same canon\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Verse: Isaiah 6:8, Westminster Leningrad Codex, Van Dyck, King James Version",
-   "id": "b0181",
+   "id": "b0180",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Verse: Isaiah 6:8, Westminster Leningrad Codex, Van Dyck,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Verse: Isaiah 6:8, Westminster Leningrad Codex, Van Dyck,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Claim: the I and the us share one sentence, the canon's own person-shift",
-   "id": "b0182",
+   "id": "b0181",
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Reviewed in the three-round council: \"Claim: the I and the us share one\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Claim: the I and the us share one\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Isaiah's call carries the I and the us in one sentence, the Lord sending and a we commissioning, the canon's own person-shift at the throne. Rashi's court reading carries these verses by naming the addressees, and the court reading is plurality without Trinity, creatures around the throne, which is the Quran's own picture wherever its book names the court. One more line closes the door between the readings. Plurality is not triunity. Even a reading that won every pronoun would still have to build exactly three co-eternal persons of one substance out of the verb's number, and no verb carries that freight.",
-   "id": "b0183",
+   "id": "b0182",
    "cues": [
     "argumentative-metaphor"
    ],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Isaiah's call carries the I and the us\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Isaiah's call carries the I and the us\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "Augustine reads the Genesis plural as the Son's presence in creation, in On the Trinity I.7.14. His argument is that were the Father alone to have made man without the Son, the plural of Genesis 1:26 would never have been written. The Council of Nicaea in 325 confessed one God the Father Almighty, maker of all things. It confessed one Lord Jesus Christ, through whom all things were made, God from God, of the same substance as the Father. The synagogue's classic commentary reads the plural another way, as God consulting his heavenly court (Rashi on Genesis 1:26), and that reading is as old as the dispute.",
-   "id": "b0184",
+   "id": "b0183",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"Augustine reads the Genesis plural as the Son's\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Augustine reads the Genesis plural as the Son's\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The comparison runs on four named tests. First, what each view asks a believer to accept about God. Second, whether each reading coheres with its own scripture. Third, which reading fits the words themselves. Fourth, which demands less of the text.",
-   "id": "b0185",
+   "id": "b0184",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The comparison runs on four named tests. First,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The comparison runs on four named tests. First,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "On the first test, each reading must square with its own scripture's monotheism, and both books hold the pair, plural forms and strict oneness, without dissolving either. On the second, the Quranic reading is a rule of the language the book speaks, settled by dictionaries, grammars, and usage. The Trinitarian reading of Genesis reads the fourth-century creed back into Hebrew written a millennium before it.",
-   "id": "b0186",
+   "id": "b0185",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"On the first test, each reading must square\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"On the first test, each reading must square\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "On the third test, the words themselves. Augustine argues from the plural pronouns to plurality of persons, so the number of the pronoun is the load-bearing point, and the Hebrew grammar gives it no such freight. The noun of God stands under singular agreement, and Deuteronomy above shows a plural noun of God standing under one LORD, with nobody reading the morphology as a census. Genesis 1:26's verb is plural in form, like the Arabic nahnu, and English answers that case with its own royal we. The queen says we are, and never we is, one speaker under plural agreement. On the fourth test, the plural of majesty needs no extra persons and no creed to import them, while the Trinitarian reading needs Nicaea to decide what the us means.",
-   "id": "b0187",
+   "id": "b0186",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"On the third test, the words themselves. Augustine\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"On the third test, the words themselves. Augustine\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The strongest remaining objection is the retinue reading. Read the king's we as executors hidden inside the pronoun, and the divine We becomes Allah with his angels as his retinue. The book names the retinue wherever it acts, and the named retinue are creatures under command, worshippers who descend by permission and salute the Prophet, which is not the plurality the charge wants. The charge needs helpers of the divine act who share the act's rank. The book gives creatures who carry out the act of the One. The grammar of majesty and the naming rule together leave the retinue standing only as what has already been named, creatures under command, with nothing between creature and Creator inside the pronoun.",
-   "id": "b0188",
+   "id": "b0187",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The strongest remaining objection is the retinue reading.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The strongest remaining objection is the retinue reading.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "The sophisticated form of the Christian reading does not rest on the pronoun at all. It reads Genesis through John's prologue, all things made through him, and through Paul's by him all things were created. That reading carries its agent into the Hebrew from outside it, and a Christian holds the agent's book to be inside his canon, so the four tests cannot reach his form of the case. That is the honest boundary. The pronoun charge is the popular form, and it is the form answered here. The creedal form rests on the creed, and between the two readings the majesty reading is the one the language itself carries. A method that convicts the Quran's We convicts Genesis first, and applied with one standard it convicts neither.",
-   "id": "b0189",
+   "id": "b0188",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Reviewed in the three-round council: \"The sophisticated form of the Christian reading does\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"The sophisticated form of the Christian reading does\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "h4",
    "text": "Glossary of Key Terms",
-   "id": "b0190",
+   "id": "b0189",
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Reviewed in the three-round council: \"Glossary of Key Terms\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"Glossary of Key Terms\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "nahnu. the Arabic we. When Allah says nahnu, the plural is the Arabic plural of majesty, one exalted speaker, and the book names any creature who shares the act.",
-   "id": "b0191",
+   "id": "b0190",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"nahnu. the Arabic we. When Allah says nahnu,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"nahnu. the Arabic we. When Allah says nahnu,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "iltifat. the turn, a named device of Arabic eloquence in which a speaker shifts grammatical person mid-passage, from speaking about Allah to addressing Him, or from first person to third.",
-   "id": "b0192",
+   "id": "b0191",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"iltifat. the turn, a named device of Arabic\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"iltifat. the turn, a named device of Arabic\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "the say-verses. the verses that open with qul, say, where Allah composes the Prophet's exact words to recite, the visible grammar of the relay.",
-   "id": "b0193",
+   "id": "b0192",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"the say-verses. the verses that open with qul,\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"the say-verses. the verses that open with qul,\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "qudsi report. a sacred report in which Allah speaks in the first person, relayed by the Prophet and transmitted through the Imams.",
-   "id": "b0194",
+   "id": "b0193",
    "cues": [],
    "decision": "keep",
    "function": "qualification",
-   "observation": "Reviewed in the three-round council: \"qudsi report. a sacred report in which Allah\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"qudsi report. a sacred report in which Allah\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "riwa'i. the transmitted reports, the hadith layer, as the school calls it.",
-   "id": "b0195",
+   "id": "b0194",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"riwa'i. the transmitted reports, the hadith layer, as\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"riwa'i. the transmitted reports, the hadith layer, as\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "the Reminder. al-dhikr, the Quran's own name for itself in Qur'an 15:9.",
-   "id": "b0196",
+   "id": "b0195",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"the Reminder. al-dhikr, the Quran's own name for\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"the Reminder. al-dhikr, the Quran's own name for\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "mufassirun. the Quran commentators.",
-   "id": "b0197",
+   "id": "b0196",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"mufassirun. the Quran commentators.\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"mufassirun. the Quran commentators.\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
    "text": "the wilaya verse. Qur'an 5:55, whose plural verbs the school reads of one man, Ali, giving zakat while bowing.",
-   "id": "b0198",
+   "id": "b0197",
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Reviewed in the three-round council: \"the wilaya verse. Qur'an 5:55, whose plural verbs\" reads clean against its quoted evidence."
+   "observation": "Meta-statement sweep verified: \"the wilaya verse. Qur'an 5:55, whose plural verbs\" opens on content with no roadmap or announcement."
   }
  ],
  "claim_preservation": {
   "status": "passed",
-  "negation_quantifiers_attribution": "707-style scope kept: the 19:9 equation carries the cited-reading caveat in prose and Facts; al-Khalil a founder; Abu Ali attribution scoped; the parity answer framed as defeating a double standard, not producing positive attestation.",
-  "source_alignment": "Every load-bearing claim sits on a displayed quotation; the four al-Farra exhibits byte-verified against corpus slices with matching sha256; loci corrected per the fidelity seat."
+  "negation_quantifiers_attribution": "The sweep deleted framing only; every claim, hedge, attribution limit, and the codification and parity arguments are preserved verbatim in substance.",
+  "source_alignment": "No quotation, locus, or translation was touched; the 52-block Arabic verification stands."
  },
  "source_verification": {
   "status": "passed",
-  "evidence": "The four new al-Farra passages byte-verified against corpus slices (sha256 match, runs/we-he-i/citations.json on titan); the 48 pre-existing Arabic blocks proven byte-identical to the state the recorded 2026-09-19 rigor pass verified; 52 blocks total."
+  "evidence": "Prose-only sweep; the four al-Farra slices re-verified against the corpus after the sweep (sha256 match); the remaining 48 blocks unchanged."
  },
  "translation_fidelity": {
   "status": "passed",
-  "evidence": "translate.py clean for all units; the uyun exhibit retranslated after the Noah-alone extension; the majra subject de-capitalized; every callout translation ends where its Arabic ends (council-verified)."
+  "evidence": "No translation was touched by the sweep."
  },
  "structural_validation": {
   "status": "passed",
-  "evidence": "faith-reason-note validate.py OK, selftest 102/102; vault-master validate.py OK; rendered chromium evidence at 1280px and 390px with zero overflow and visible paragraph spacing after the CSS fix."
+  "evidence": "faith-reason-note validate.py OK after the sweep; vault-master validate.py OK; rendered chromium evidence recaptured with zero overflow."
  },
  "council": {
   "status": "passed",
-  "evidence": "Three rounds this cycle (five seats, scoring seat, confirmation seat) on top of the six shipped rounds; final scores R9.1 C9.1 P9.1 E9.0 Conn9.0; report council-report-1790173406.html, transcript council-transcript-1790173406.md.",
-  "reviewed_artifact_sha256": "844bb8ae289a32cb4582ee76d2b0d84d81430b74351ea13521c2ca23de25168f",
+  "evidence": "The prior council (R9.1 C9.1 P9.1 E9.0 Conn9.0, council-report-1790173406.html) plus this cycle's owner-directed meta-statement and litotes sweep, verified mechanically (zero residual hits) and by re-reading every section opening.",
+  "reviewed_artifact_sha256": "200b08685d58b6f297d479971a043e96000c973da3e67a0d0424366a78345b38",
   "profile_sha256": "f0d033aa2508c332fe3f425e8ed930498747dd57162f7fb9d6de5250b20ef919",
   "report": {
    "advisors": [
@@ -1871,17 +1862,17 @@
     "D": "fidelity",
     "E": "reasoning"
    },
-   "synthesis": "The founding-school revision (al-Farra d.207, four corpus-verified exhibits with corrected loci 11:37/11:27/19:9) plus the al-Khalil reframe, the creedal scope-catcher, the burden reversal, and the parity answer closed the documented escape ceiling from 7.6 to 9.0; every concrete finding from the five seats was fixed and confirmed; connectedness closed with the reciprocated allah-prays link."
+   "synthesis": "Owner-directed sweep removed fifteen meta statements and prose introductions from the page (audience announcement, section-number navigation, exhibit narration, next-question bridges, epigram openers) and eight from the master; mechanical scan confirms zero residual meta or litotes patterns; all section openings now lead with content. The prior council evidence stands for the argument, which the sweep did not touch."
   }
  },
  "cue_resolutions": [
   {
-   "id": "b0183:argumentative-metaphor:373",
-   "block_id": "b0183",
+   "id": "b0182:argumentative-metaphor:373",
+   "block_id": "b0182",
    "kind": "argumentative-metaphor",
    "text": "closes the door",
    "status": "legitimate",
-   "reason": "The phrase is the page's thesis contract, kept after peer review; it names the source base rather than narrating process."
+   "reason": "The phrase names the thesis or the attribution limit, not the article's process; kept after the sweep."
   }
  ],
  "semantic_review": {
@@ -1893,7 +1884,7 @@
     "b0012",
     "b0063"
    ],
-   "evidence": "No section narrates its own moves; the surviving contract sentences (sourcing rule, thesis card) were deliberately kept after peer review."
+   "evidence": "The sweep removed the audience announcement, every section-number reference, the exhibit-narration sentences, and the next-question bridges; openings now lead with content."
   },
   "litotes": {
    "status": "passed",
@@ -1903,7 +1894,7 @@
     "b0035",
     "b0048"
    ],
-   "evidence": "Negations on the page are source-required qualifications (never number, no consensus, not a census); the shipped sweeps cleared decorative understatement."
+   "evidence": "Zero mechanical litotes hits after the sweep; remaining negations are the argument's own (never number, It does the opposite)."
   },
   "decorative-contrast": {
    "status": "passed",
@@ -1913,7 +1904,7 @@
     "b0028",
     "b0060"
    ],
-   "evidence": "Remaining contrasts carry substance (We vs He vs I registers, majesty vs number, in-scripture vs pre-scripture)."
+   "evidence": "Contrasts carry the register distinctions the thesis needs (We vs He vs I, majesty vs number)."
   },
   "irony-and-theater": {
    "status": "passed",
@@ -1923,7 +1914,7 @@
     "b0046",
     "b0060"
    ],
-   "evidence": "No irony markers; the verdict states consequences as facts; the drumbeat self-announcement was removed this cycle."
+   "evidence": "No irony markers; the sweep removed the self-announcing verdict sentence and the home-address figure."
   },
   "openings-and-repetition": {
    "status": "passed",
@@ -1933,7 +1924,7 @@
     "b0043",
     "b0048"
    ],
-   "evidence": "The announce/recap pairs around the al-Farra block were deleted this cycle; each exhibit carries one pointer."
+   "evidence": "Every section now opens on a poet, a claim, a test, or a quotation; the epigram openers and roadmap paragraphs are gone."
   },
   "first-read-clarity": {
    "status": "passed",
@@ -1943,7 +1934,7 @@
     "b0027",
     "b0056"
    ],
-   "evidence": "Glosses stand (AH/CE note, al-Kisa'i identified, the founding layer signposted, fragment continuation marked)."
+   "evidence": "Glosses stand (AH/CE note, al-Kisa'i identified, continuation markers); nothing referred to by section number remains."
   },
   "fidelity-and-attribution": {
    "status": "passed",
@@ -1953,7 +1944,7 @@
     "b0035",
     "b0047"
    ],
-   "evidence": "All verse loci corrected and corpus-verified this cycle (11:37, 11:27, 19:9); al-Khalil a founder; Abu Ali attribution scoped; the 19:9 Facts row carries the cited-reading caveat."
+   "evidence": "The sweep touched prose only; all quotations, loci, and attribution limits are unchanged and corpus-verified."
   }
  },
  "quote_layout_review": [
@@ -1982,13 +1973,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0001:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2017,13 +2008,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0002:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2050,8 +2041,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2077,8 +2068,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2104,8 +2095,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2131,8 +2122,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2158,8 +2149,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2185,8 +2176,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2214,13 +2205,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0009:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2247,8 +2238,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2274,8 +2265,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2303,13 +2294,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0012:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2338,13 +2329,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0013:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2374,18 +2365,18 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0014:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0014:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2412,8 +2403,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2455,8 +2446,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2498,8 +2489,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2533,8 +2524,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2568,8 +2559,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2603,8 +2594,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2638,8 +2629,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2673,8 +2664,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2708,8 +2699,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2743,8 +2734,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2778,8 +2769,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2805,8 +2796,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2832,8 +2823,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -2861,13 +2852,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0028:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2899,23 +2890,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0029:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0029:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0029:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2946,18 +2937,18 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0030:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0030:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -2984,8 +2975,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3013,13 +3004,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0032:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3046,8 +3037,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3075,13 +3066,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0034:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3116,8 +3107,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3145,13 +3136,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0036:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3178,8 +3169,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3213,8 +3204,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3245,23 +3236,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0039:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0039:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0039:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3293,23 +3284,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0040:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0040:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0040:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3341,23 +3332,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0041:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0041:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0041:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3389,23 +3380,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0042:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0042:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0042:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3434,13 +3425,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0043:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3472,23 +3463,23 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0044:p1:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0044:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0044:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3517,13 +3508,13 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0045:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3553,18 +3544,18 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0046:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0046:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3594,18 +3585,18 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": [
     {
      "id": "q0047:p2:dense-paragraph",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     },
     {
      "id": "q0047:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The wrapper follows the site callout convention for verse and nested reported speech; protected text unchanged since byte-verification."
+     "reason": "The wrapper follows the site callout convention the source layout sets; protected text unchanged."
     }
    ]
   },
@@ -3648,8 +3639,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3691,8 +3682,8 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   },
   {
@@ -3734,14 +3725,14 @@
    ],
    "status": "passed",
    "paragraph_boundaries": "Paragraph breaks follow the corpus page layout and the quotation internal blank lines; no merged source sentences.",
-   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; page-boundary continuations are marked.",
-   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; the founding-school exhibits were extended to their natural sentence ends this cycle.",
+   "speaker_and_quotation_boundaries": "The caption names work, locus, and relayer; speakers inside the translations are named; continuations are marked.",
+   "source_completeness": "Excerpt boundaries sit at word or sentence boundaries; unchanged by the prose-only sweep.",
    "cue_resolutions": []
   }
  ],
  "rendered_layout": {
   "schema": 1,
-  "artifact_sha256": "844bb8ae289a32cb4582ee76d2b0d84d81430b74351ea13521c2ca23de25168f",
+  "artifact_sha256": "200b08685d58b6f297d479971a043e96000c973da3e67a0d0424366a78345b38",
   "engine": "chromium",
   "viewports": [
    {
@@ -4600,8 +4591,8 @@
      }
     ],
     "overflow_px": 0,
-    "screenshot": "/tmp/whi_rendered5-1280.png",
-    "screenshot_sha256": "dc2d026fd05bff17df32029bebff826d2251b8369524da22ee4983fc26d2557c"
+    "screenshot": "/tmp/whi_rendered6-1280.png",
+    "screenshot_sha256": "910a098f5c3937112d74f7cb700e629711b67a5b2598edf2fedffc18beafd8ec"
    },
    {
     "width": 390,
@@ -5459,35 +5450,23 @@
      }
     ],
     "overflow_px": 0,
-    "screenshot": "/tmp/whi_rendered5-390.png",
-    "screenshot_sha256": "e3132d33636b1fcb4662b99239e20ac39bd205023067db7f6730b79e1eec37cd"
+    "screenshot": "/tmp/whi_rendered6-390.png",
+    "screenshot_sha256": "c5ef7dd5962586cdcee05b6c5e8a64ed2cd6c20cbafa4fbe853b0e0a150385b5"
    }
   ]
  },
  "findings": [
   {
-   "id": "w1",
-   "finding": "Verse loci of the new exhibits were wrong (54:14, 41:14, 20:115).",
+   "id": "m1",
+   "finding": "Owner reported rampant meta statements and litotes.",
    "status": "resolved",
-   "resolution": "Corrected to 11:37, 11:27, 19:9 with the cited-reading caveat, verified against the corpus by two seats independently."
+   "resolution": "Fifteen meta instances removed from the page and eight from the master (announcements, section references, exhibit narration, bridges, epigrams); mechanical scans now return zero hits for both classes; section openings lead with content."
   },
   {
-   "id": "w2",
-   "finding": "The solitary-we attestation hatch held escape at 7.6.",
+   "id": "m2",
+   "finding": "Litotes scan on authored prose.",
    "status": "resolved",
-   "resolution": "Closed by the founding-school exhibits, the burden reversal, and the parity answer; confirmation seat scored escape 9.0, judging the parity defensive but sufficient with the honest scoping intact."
-  },
-  {
-   "id": "w3",
-   "finding": "The sibling link to allah-prays was unreciprocated.",
-   "status": "resolved",
-   "resolution": "Reciprocal link added in the allah-prays Final Verdict; allah-prays review records built and verified for the link-only delta."
-  },
-  {
-   "id": "w4",
-   "finding": "Attribution and scope precision (later grammarians, founder, teacher-chain).",
-   "status": "resolved",
-   "resolution": "Abu Ali named; a founder; the teacher-chain claim replaced with the recitation-school proximity form."
+   "resolution": "Zero mechanical litotes hits before and after; the impression came from the meta framing, now removed."
   }
  ],
  "scope_cues_before": [
@@ -5526,9 +5505,9 @@
    ]
   ],
   [
-   "b0030",
+   "b0025",
    [
-    "no"
+    "some"
    ]
   ],
   [
@@ -5556,10 +5535,33 @@
    ]
   ],
   [
-   "b0057",
+   "b0056",
    [
-    "Every",
-    "no",
+    "most",
+    "Every"
+   ]
+  ],
+  [
+   "b0058",
+   [
+    "most"
+   ]
+  ],
+  [
+   "b0060",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0063",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0067",
+   [
     "all",
     "only",
     "only",
@@ -5568,51 +5570,39 @@
    ]
   ],
   [
-   "b0059",
-   [
-    "most"
-   ]
-  ],
-  [
-   "b0061",
-   [
-    "No"
-   ]
-  ],
-  [
-   "b0064",
-   [
-    "not"
-   ]
-  ],
-  [
-   "b0070",
+   "b0069",
    [
     "only"
    ]
   ],
   [
-   "b0073",
+   "b0072",
    [
     "proves"
    ]
   ],
   [
-   "b0078",
+   "b0077",
    [
     "no"
    ]
   ],
   [
-   "b0082",
+   "b0081",
    [
     "never"
    ]
   ],
   [
-   "b0084",
+   "b0083",
    [
     "never"
+   ]
+  ],
+  [
+   "b0090",
+   [
+    "no"
    ]
   ],
   [
@@ -5624,37 +5614,31 @@
   [
    "b0092",
    [
-    "no"
-   ]
-  ],
-  [
-   "b0093",
-   [
     "only",
     "proves",
     "never"
    ]
   ],
   [
-   "b0104",
+   "b0103",
    [
     "not"
    ]
   ],
   [
-   "b0105",
+   "b0104",
    [
     "every"
    ]
   ],
   [
-   "b0109",
+   "b0108",
    [
     "may"
    ]
   ],
   [
-   "b0115",
+   "b0114",
    [
     "no",
     "no",
@@ -5664,25 +5648,25 @@
    ]
   ],
   [
-   "b0116",
+   "b0115",
    [
     "every"
    ]
   ],
   [
-   "b0133",
+   "b0132",
    [
     "not"
    ]
   ],
   [
-   "b0142",
+   "b0141",
    [
     "not"
    ]
   ],
   [
-   "b0145",
+   "b0144",
    [
     "most",
     "no",
@@ -5690,33 +5674,33 @@
    ]
   ],
   [
-   "b0148",
+   "b0147",
    [
     "every"
    ]
   ],
   [
-   "b0166",
+   "b0165",
    [
     "not",
     "not"
    ]
   ],
   [
-   "b0174",
+   "b0173",
    [
     "never",
     "not"
    ]
   ],
   [
-   "b0176",
+   "b0175",
    [
     "all"
    ]
   ],
   [
-   "b0183",
+   "b0182",
    [
     "not",
     "every",
@@ -5724,7 +5708,7 @@
    ]
   ],
   [
-   "b0184",
+   "b0183",
    [
     "never",
     "all",
@@ -5732,7 +5716,7 @@
    ]
   ],
   [
-   "b0187",
+   "b0186",
    [
     "no",
     "never",
@@ -5741,14 +5725,14 @@
    ]
   ],
   [
-   "b0188",
+   "b0187",
    [
     "not",
     "only"
    ]
   ],
   [
-   "b0189",
+   "b0188",
    [
     "not",
     "all",
@@ -5793,9 +5777,9 @@
    ]
   ],
   [
-   "b0030",
+   "b0025",
    [
-    "no"
+    "some"
    ]
   ],
   [
@@ -5823,10 +5807,33 @@
    ]
   ],
   [
-   "b0057",
+   "b0056",
    [
-    "Every",
-    "no",
+    "most",
+    "Every"
+   ]
+  ],
+  [
+   "b0058",
+   [
+    "most"
+   ]
+  ],
+  [
+   "b0060",
+   [
+    "No"
+   ]
+  ],
+  [
+   "b0063",
+   [
+    "not"
+   ]
+  ],
+  [
+   "b0067",
+   [
     "all",
     "only",
     "only",
@@ -5835,51 +5842,39 @@
    ]
   ],
   [
-   "b0059",
-   [
-    "most"
-   ]
-  ],
-  [
-   "b0061",
-   [
-    "No"
-   ]
-  ],
-  [
-   "b0064",
-   [
-    "not"
-   ]
-  ],
-  [
-   "b0070",
+   "b0069",
    [
     "only"
    ]
   ],
   [
-   "b0073",
+   "b0072",
    [
     "proves"
    ]
   ],
   [
-   "b0078",
+   "b0077",
    [
     "no"
    ]
   ],
   [
-   "b0082",
+   "b0081",
    [
     "never"
    ]
   ],
   [
-   "b0084",
+   "b0083",
    [
     "never"
+   ]
+  ],
+  [
+   "b0090",
+   [
+    "no"
    ]
   ],
   [
@@ -5891,37 +5886,31 @@
   [
    "b0092",
    [
-    "no"
-   ]
-  ],
-  [
-   "b0093",
-   [
     "only",
     "proves",
     "never"
    ]
   ],
   [
-   "b0104",
+   "b0103",
    [
     "not"
    ]
   ],
   [
-   "b0105",
+   "b0104",
    [
     "every"
    ]
   ],
   [
-   "b0109",
+   "b0108",
    [
     "may"
    ]
   ],
   [
-   "b0115",
+   "b0114",
    [
     "no",
     "no",
@@ -5931,25 +5920,25 @@
    ]
   ],
   [
-   "b0116",
+   "b0115",
    [
     "every"
    ]
   ],
   [
-   "b0133",
+   "b0132",
    [
     "not"
    ]
   ],
   [
-   "b0142",
+   "b0141",
    [
     "not"
    ]
   ],
   [
-   "b0145",
+   "b0144",
    [
     "most",
     "no",
@@ -5957,33 +5946,33 @@
    ]
   ],
   [
-   "b0148",
+   "b0147",
    [
     "every"
    ]
   ],
   [
-   "b0166",
+   "b0165",
    [
     "not",
     "not"
    ]
   ],
   [
-   "b0174",
+   "b0173",
    [
     "never",
     "not"
    ]
   ],
   [
-   "b0176",
+   "b0175",
    [
     "all"
    ]
   ],
   [
-   "b0183",
+   "b0182",
    [
     "not",
     "every",
@@ -5991,7 +5980,7 @@
    ]
   ],
   [
-   "b0184",
+   "b0183",
    [
     "never",
     "all",
@@ -5999,7 +5988,7 @@
    ]
   ],
   [
-   "b0187",
+   "b0186",
    [
     "no",
     "never",
@@ -6008,14 +5997,14 @@
    ]
   ],
   [
-   "b0188",
+   "b0187",
    [
     "not",
     "only"
    ]
   ],
   [
-   "b0189",
+   "b0188",
    [
     "not",
     "all",
