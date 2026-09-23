@@ -300,7 +300,7 @@ def _check(src, register='standard'):
     # callout must place the card immediately before its first callout, and a
     # subsection with a callout must carry a card at all (home: "Fact cards",
     # user-directed 2026-09-07).
-    CARD = re.compile(r'<div class="premise-card space-y-1 mb-4">\s*<p class="text-sm">', re.S)
+    CARD = re.compile(r'<div class="premise-card space-y-1 mb-4"(?: data-note-block="n[0-9]+")?>\s*<p class="text-sm">', re.S)
     is_narr = re.search(r'<main[^>]*data-category="narration"', src)
     scopes = [] if is_narr else (list(re.finditer(r'<article[^>]*>.*?</article>', src, re.S)) + list(re.finditer(r'<section id="comparison"[^>]*>.*?</section>', src, re.S)))
     for sm in scopes:
@@ -308,8 +308,8 @@ def _check(src, register='standard'):
         bq = sc.find('<blockquote')
         if bq < 0:
             continue
-        ends = [cm.end() for cm in re.finditer(r'<div class="premise-card space-y-1 mb-4">\s*<p class="text-sm">.*?</div>', sc, re.S)]
-        for cm2 in re.finditer(r'<div class="premise-card space-y-1 mb-4">\s*<p class="text-sm">.*?</div>', sc, re.S):
+        ends = [cm.end() for cm in re.finditer(r'<div class="premise-card space-y-1 mb-4"(?: data-note-block="n[0-9]+")?>\s*<p class="text-sm">.*?</div>', sc, re.S)]
+        for cm2 in re.finditer(r'<div class="premise-card space-y-1 mb-4"(?: data-note-block="n[0-9]+")?>\s*<p class="text-sm">.*?</div>', sc, re.S):
             ctxt = cm2.group(0)
             mref = re.search(r'<strong>Verse:\s*</strong>[^<]*\bQur\'an \d+:\d+', ctxt) or re.search(r'<strong>Verse:\s*</strong>[^<]*\b(?:Genesis|Exodus|Numbers|Psalm|Psalms|Isaiah|Ephesians|Luke|John|Matthew) \d+:\d+', ctxt)
             if mref:
@@ -888,6 +888,14 @@ FIXTURES = [
 
 # fixtures may carry a 5th element: the register to run them under
 
+
+# Mapped fact cards retain the same adjacency requirements as existing cards.
+FIXTURES += [
+    ('mapped '+name, source.replace('class="premise-card space-y-1 mb-4">',
+       'class="premise-card space-y-1 mb-4" data-note-block="n0012">'), must, absent)
+    for name, source, must, absent, *unused in list(FIXTURES)
+    if name in ('card placement clean','card placement fires','second quote cardless fires')
+]
 
 def selftest():
     failed = 0
