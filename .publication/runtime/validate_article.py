@@ -457,7 +457,10 @@ def _check(src, register='standard'):
             errs.append(f'{kind} at {locus} carries no translation paragraph')
         if len(cites) != 1:
             errs.append(f'{kind} at {locus} must carry exactly one <cite>; found {len(cites)}')
-        if kind == 'quran-callout':
+        # Bible originals may be Hebrew or Greek. A verified original and
+        # complete translation do not require an optional romanization layer.
+        biblical_original = any(n['attrs'].get('lang') in {'he','grc'} for n in pnodes)
+        if kind == 'quran-callout' and not biblical_original:
             if not arabic:
                 errs.append(f'quran-callout at {locus} carries no Arabic <p class="rtl ... font-amiri" lang="ar"> block')
             if not translits:
@@ -865,6 +868,7 @@ FIXTURES = [
     ('Hebrews scripture ref clean', _mini('<p>See (Hebrews 1:3).</p>'), None, 'without book name'),
     ('category attribute order still gates nav', _mini('<p>Text.</p>', main='<main class="page" data-category="debate" data-opponent="sunni">'), 'sticky section nav', None),
     ('broken internal anchor fires', _mini('<p><a href="#missing">go</a></p>'), 'internal anchor', None),
+    ('bible original without romanization clean', _mini('<blockquote class="quran-callout"><p lang="grc">λογος</p><p class="translation">Word.</p><cite>John 1:1, Textus Receptus</cite></blockquote>'), None, 'carries no transliteration'),
     ('quran callout missing Arabic fires', _mini('<blockquote class="quran-callout"><p class="italic transliteration">text</p><p class="translation">Words.</p><cite>Quran 1:1</cite></blockquote>'), 'carries no Arabic', None),
     ('quran callout missing transliteration fires', _mini('<style>.rtl{direction: rtl;}</style><blockquote class="quran-callout"><p class="rtl font-amiri" lang="ar">\u0643\u0644\u0627\u0645</p><p class="translation">Words.</p><cite>Quran 1:1</cite></blockquote>'), 'carries no transliteration', None),
     ('callout missing cite fires', _mini('<blockquote class="hadith-callout"><p class="translation">Words.</p></blockquote>'), 'exactly one <cite>', None),

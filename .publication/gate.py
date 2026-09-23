@@ -2,7 +2,8 @@
 """Validate the exact public tree and obtain fresh independent release decisions.
 
 Unchanged legacy pages are explicitly grandfathered, not retroactively approved.
-Only a successful main-branch run may supply reusable server review evidence.
+Reusable evidence requires a successful main ancestor, or an identical commit
+checked in a successful push run in this repository.
 """
 import argparse
 import json
@@ -32,15 +33,22 @@ def old_blob(commit,path):
     except subprocess.CalledProcessError:return None
 
 
+def eligible_prior_run(run, head, repository):
+    if run.get('conclusion')!='success' or run.get('event')!='push':return False
+    if run.get('head_repository',{}).get('full_name')!=repository:return False
+    return run.get('head_sha')==head or run.get('head_branch')=='main'
+
+
 def prior_success():
     token=os.environ.get('GITHUB_TOKEN');repo=os.environ.get('GITHUB_REPOSITORY')
     if not token or not repo:return None
-    url=f'https://api.github.com/repos/{repo}/actions/workflows/publication.yml/runs?branch=main&status=success&per_page=30'
+    url=f'https://api.github.com/repos/{repo}/actions/workflows/publication.yml/runs?status=success&per_page=30'
     request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
     with urllib.request.urlopen(request,timeout=30) as response:data=json.load(response)
+    head=git('rev-parse','HEAD').decode().strip()
     for run in data['workflow_runs']:
+        if not eligible_prior_run(run,head,repo):continue
         commit=run['head_sha']
-        if commit==git('rev-parse','HEAD').decode().strip():continue
         if subprocess.run(['git','merge-base','--is-ancestor',commit,'HEAD'],stderr=subprocess.DEVNULL).returncode:continue
         # Changed checking code/policy invalidates reuse. Legacy exceptions remain
         # explicit in the frozen manifest, rather than manufacturing old approvals.

@@ -1,14 +1,14 @@
 {
-  "review.py": "f9cff39811d1d54beee6150477a3c96711fa847342f1fe0a11c62d38aa948ffd",
+  "review.py": "15885bc8b58eecf334838b4c0eb8d2a0d9d6da759a109fe82361405e18062137",
   "quote_layout.py": "8d8691a1927a6be126a63138eca65b9cfdf8624d4368ebf2644d2c5684d52e8d",
   "handoff.py": "ec13702dc0a7eb21938b26dd8a12d512918906cb302846e62ffba3818402beba",
   "pre_push.py": "cdeebfc1490c1b0485a862b448c3ed5f56a5f8fd69dd8ffc9c8eaa9e8c47e1bf",
-  "release_runner.py": "b54bb149e28b9c9c55f42f9d3a757f0b3091dda65e4b764462100151ad069952",
-  "evidence.py": "3f2ef9cd82dcca5fa08f2071f73300e1d1f2615530b8d1bc9351179eca47cd3a",
+  "release_runner.py": "8c684ed07649e56795528f03fa22c9749b16254144c780b92579dd8cf6474568",
+  "evidence.py": "5d411f2d63ec453d1880393ca112d6a352c4197e0482c336a73281000c59e865",
   "contract.md": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
   "drafting.md": "a38dbb2edcf6d6d679cc4f141c2bd522614e8048efccddefeb0904439053be4e",
   "editorial.md": "256ebc4d05f06b9cdfe997693523edc7eb5cb96098f9f4a56ef1c19e85eace4e",
-  "council-article.md": "9511c74bbe5df3a4df27589597ed5237fcbbd18d700ca79c7da8f86b039a8d7a",
+  "council-article.md": "aa1ec94f859dbf80a7aaa857f0f7e3c6c081bd1768736825fa90617acf3dd344",
   "paragraphs.md": "cb2a2caaf2789b9bcfd0b98e07a59a2ea35549554df35aec3b50f1bca747f17c",
-  "validate_article.py": "c49bf85683d2fdd0cbc1c7a92240b1ea9e92a7908dbf5a861b895dea62b37878"
+  "validate_article.py": "ea1182635c827e4410b6c99fc38e22a0e04e88c8ffc026b9e0b37be236402e4c"
 }

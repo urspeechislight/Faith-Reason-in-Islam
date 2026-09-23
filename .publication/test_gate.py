@@ -6,6 +6,8 @@ import unittest
 sys.path.insert(0,str(Path(__file__).parent))
 import gate
 import evidence
+import release_runner
+import json
 
 class PublicationTests(unittest.TestCase):
     def test_unmarked_html_is_still_an_article(self):
@@ -22,6 +24,36 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue(evidence.verify(bundle,note+' revised'))
         changed=copy.deepcopy(bundle);changed['sources'][0]['citation']['title']='Other work'
         self.assertTrue(evidence.verify(changed,note))
+    def test_joined_page_slices_require_complete_ordered_bytes(self):
+        quotes=['ألف باء','جيم دال']
+        self.assertEqual(evidence.covered_slices('ألف باء\n\nجيم دال',quotes),{0,1})
+        for bad in ['جيم دال ألف باء','ألف باء جيم','ألف باء كلام جيم دال']:
+            self.assertEqual(evidence.covered_slices(bad,quotes),set())
+    def test_review_context_decodes_transport_without_summarizing(self):
+        raw=json.dumps([{'verse':1,'text':'نص محفوظ'}],ensure_ascii=True)
+        source={'id':'one','raw':raw,'raw_sha256':evidence.sha(raw),'citation':'Test fixture'}
+        bundle={'artifact_sha256':'fixture','sources':[source,dict(source,id='two')]}
+        result=release_runner.review_evidence(bundle)
+        self.assertEqual(len(result['sources']),2);self.assertEqual(len(result['contexts']),1)
+        self.assertEqual(next(iter(result['contexts'].values()))['content'][0]['text'],'نص محفوظ')
+        parser=release_runner.SourceText();parser.feed('<html><body><p>Quoted <b>words</b>.</p><p>Qualification.</p><script>not source prose</script></body></html>')
+        self.assertIn('Quoted words.', ''.join(parser.parts));self.assertIn('Qualification.', ''.join(parser.parts))
+        self.assertNotIn('not source prose',''.join(parser.parts))
+    def test_reuse_requires_main_or_identical_same_repository_push(self):
+        run={'conclusion':'success','event':'push','head_sha':'same','head_branch':'repair','head_repository':{'full_name':'owner/site'}}
+        self.assertTrue(gate.eligible_prior_run(run,'same','owner/site'))
+        self.assertFalse(gate.eligible_prior_run(run,'different','owner/site'))
+        self.assertFalse(gate.eligible_prior_run(dict(run,event='pull_request'),'same','owner/site'))
+        self.assertFalse(gate.eligible_prior_run(run,'same','other/site'))
+        self.assertTrue(gate.eligible_prior_run(dict(run,head_branch='main'),'different','owner/site'))
+    def test_review_projection_retains_judgments_and_changed_historical_text(self):
+        text='A full source quotation long enough to be duplicated in the candidate.'
+        response={'blocks':[{'text':text,'observation':'Delete the adjacent empty framing.'},{'text':'Earlier differing claim','observation':'Attribution incorrect.'}]}
+        packet={'candidate':text,'report':{'followup_reviews':[{'response':json.dumps(response)}]}}
+        projected=release_runner.review_packet(packet)['report']['followup_reviews'][0]['response']
+        self.assertEqual(projected['blocks'][0]['observation'],'Delete the adjacent empty framing.')
+        self.assertEqual(projected['blocks'][1]['text'],'Earlier differing claim')
+        self.assertIn('text',json.loads(packet['report']['followup_reviews'][0]['response'])['blocks'][0])
     def test_empty_or_unlocated_evidence_blocks(self):
         self.assertTrue(evidence.verify({'schema':1,'artifact_sha256':evidence.sha('text'),'sources':[]},'text'))
     def test_metadata_is_in_the_actual_reviewer_input(self):

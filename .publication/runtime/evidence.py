@@ -32,6 +32,19 @@ def arabic_blocks(note):
     return blocks
 
 
+def covered_slices(block, quotes):
+    """Match whole captured slices in order, allowing only layout whitespace."""
+    target = flat(block)
+    normalized = [flat(q) for q in quotes]
+    for start in range(len(normalized)):
+        joined = ''
+        for end in range(start, len(normalized)):
+            joined = (joined + ' ' + normalized[end]).strip()
+            if joined == target: return set(range(start, end + 1))
+            if not target.startswith(joined): break
+    return set()
+
+
 def verify(bundle, note):
     errors = []
     if bundle.get('schema') != 1 or bundle.get('artifact_sha256') != sha(note):
@@ -57,7 +70,7 @@ def verify(bundle, note):
         elif source.get('kind') != 'external' or not source.get('url') or not source.get('accessed'):
             errors.append(key+': external source URL/access date missing')
     for i, block in enumerate(arabic_blocks(note), 1):
-        if flat(block) not in [flat(q) for q in quotes]: errors.append(f'Arabic block {i}: missing exact ledger slice')
+        if not covered_slices(block, quotes): errors.append(f'Arabic block {i}: missing exact ledger slice')
     for claim in bundle.get('claims', []):
         if not claim.get('claim') or not claim.get('source_ids') or not set(claim['source_ids']) <= set(ids):
             errors.append('claim map has missing or unknown evidence')

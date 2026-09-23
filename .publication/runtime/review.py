@@ -290,13 +290,14 @@ def council_digest(report: dict) -> str:
 
 def council_responses(report: dict) -> list[tuple[str, dict]]:
     responses = []
-    for key in ('advisors', 'peer_reviews'):
+    for key in ('advisors', 'peer_reviews', 'followup_reviews'):
         items = report.get(key, [])
         if not isinstance(items, list):
             continue
         for index, item in enumerate(items, 1):
             if isinstance(item, dict):
-                namespace = str(item.get('role', 'unknown')) if key == 'advisors' else f'peer-{index}'
+                namespace = (str(item.get('role', 'unknown')) if key == 'advisors' else
+                             f'peer-{index}' if key == 'peer_reviews' else f'followup-{index}')
                 responses.append((namespace, item))
     return responses
 

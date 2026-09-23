@@ -103,8 +103,9 @@ Resolve simple prose defects locally, then have an existing independent reviewer
 check the fixes and reread the final article for repetitions introduced by edits.
 Source or argument changes return to that stage and the affected reviewers.
 Do not rerun all five for an unchanged argument or a verified HTML conversion.
-Refresh the report to identify the exact final candidate and actual follow-up
-reviews. Never relabel an old report as a review of new text. Stop after three
+Refresh the report to identify the exact final candidate. Append actual follow-up
+responses under `followup_reviews`, with their reviewer, original input hash and
+verbatim response. The independent decision must address their findings too. Never relabel an old report as a review of new text. Stop after three
 unsuccessful fix cycles and report the remaining issue without releasing it.
 
 ## Independent release decision
