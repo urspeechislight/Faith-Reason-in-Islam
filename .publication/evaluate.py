@@ -21,9 +21,10 @@ def main():
         evidence['artifact_sha256']=packet['artifact_sha256']
         out=a.output/name
         try:release_runner.run(packet,evidence,out,a.client);passed=True
-        except ValueError:
+        except ValueError as failure:
             # A provider/schema failure is never credited as successful rejection.
             invocation=json.loads((out/'invocation.json').read_text())
+            if invocation['exit_code']:raise ValueError('Provider/configuration failure; inspect retained stderr.txt') from failure
             response=json.loads((out/'response.txt').read_text())
             if invocation['exit_code'] or response.get('status')!='blocked' or not response.get('open_findings'):raise
             passed=False
