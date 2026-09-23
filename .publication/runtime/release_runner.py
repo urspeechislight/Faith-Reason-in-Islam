@@ -115,7 +115,12 @@ material evidence is a blocking source-review finding. Do not infer source
 verification from an approval status or a hash. Preserve genuine qualifications.
 Return ONLY the release JSON object specified in council-article.md. The status
 value must be exactly "passed" or "blocked" (never "pass"). Use the packet's
-exact hashes. Return blocked for any remaining defect, even if the
+exact hashes. Include every required_disposition_ids entry with status "resolved"
+or "not-a-defect" and specific evidence of AT LEAST EIGHT WORDS per entry.
+A short label such as "Roadmap deleted" is invalid: explain what changed and
+where the final candidate resolves that finding. The overall assessment needs
+at least twelve words. Check this response schema before returning it.
+Return blocked for any remaining defect, even if the
 writer calls it a stylistic preference. In assessment, quote the defective
 wording and say what should change. Do not edit or publish anything.
 '''+json.dumps({'policies': policies, 'packet': review_packet(packet), 'source_evidence': review_evidence(evidence)}, ensure_ascii=False)
