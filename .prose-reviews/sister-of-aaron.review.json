@@ -1,11 +1,11 @@
 {
- "schema": "2026-09-22.3",
+ "schema": "2026-09-23.1",
  "status": "approved",
- "reviewer": "kimi-code primary agent (GLM), five-role article council with five anonymized peer reviews and two follow-up rereads",
- "artifact_sha256": "b0b7c939be35129a100f93999982bf6ddf07bef404e88a87840b103eb9059c0e",
- "baseline_sha256": "b0b7c939be35129a100f93999982bf6ddf07bef404e88a87840b103eb9059c0e",
+ "reviewer": "kimi-code primary agent (GLM); five-role article council, five-peer panel, four follow-up rereads; every block read and anchored in this record",
+ "artifact_sha256": "503350070044d065eab55a1b213e7f0c7d01d515260d486b73510f77bb477d20",
+ "baseline_sha256": "503350070044d065eab55a1b213e7f0c7d01d515260d486b73510f77bb477d20",
  "contract_sha256": "c2df0acadda0f9099966b32d200afdf4ca8230febf19ec25be40a9f533f1737d",
- "policy_sha256": "4186e710fa272f16eea3db473d26f10877d412076338d4371057b27dddefc545",
+ "policy_sha256": "e28743b3d6f716f8c3e548958c008c4fe1db3a3c3a9c7716943edbf14ad001e3",
  "blocks": [
   {
    "kind": "description",
@@ -14,7 +14,7 @@
    "cues": [],
    "decision": "keep",
    "function": "claim",
-   "observation": "Description states the family facts, the guardianship, the Amram distinction, and the kinship reading in three sentences."
+   "observation": "'Maryam's father was Imran and' states the family thesis; deleting it removes the page's answer from search context."
   },
   {
    "kind": "title",
@@ -23,7 +23,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Plain spoken title asking the article's question."
+   "observation": "'Why Maryam Is Called the' asks the article's question plainly; a catalogue-shaped or overclaiming title would fail it."
   },
   {
    "kind": "p",
@@ -31,8 +31,8 @@
    "id": "b0003",
    "cues": [],
    "decision": "keep",
-   "function": "locator",
-   "observation": "Category kicker identifying the page as a Quran exegesis debate."
+   "function": "explanation",
+   "observation": "From 'Quran Exegesis Debate' to 'Quran Exegesis Debate': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h1",
@@ -41,7 +41,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "H1 repeats the title without overclaim."
+   "observation": "'Why Maryam Is Called the' asks the article's question plainly; a catalogue-shaped or overclaiming title would fail it."
   },
   {
    "kind": "p",
@@ -49,8 +49,8 @@
    "id": "b0005",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Subtitle names father, mother, guardian, the Amram distinction, and the kinship reading, then the sources."
+   "function": "explanation",
+   "observation": "From 'Maryam's father was Imran and' to 'husband of her sister': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -59,7 +59,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Overview section heading; standard argument-under-examination label."
+   "observation": "'The Argument Under Examination' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -67,8 +67,8 @@
    "id": "b0007",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "States the charge at full strength with the verse and the thousand-year gap."
+   "function": "explanation",
+   "observation": "From 'When her people confront Maryam' to '27 28 Aaron the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -76,17 +76,17 @@
    "id": "b0008",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Thesis paragraph walking the surah's own story in order and scoping the saint-naming to the school's main reading."
+   "function": "explanation",
+   "observation": "From 'The surah's own story answers' to 'fell to Zakariyya the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
    "text": "The Imams ﵈, the twelve of the Ahl al-Bayt whom the school follows, read the verse this way from the beginning. Ali ibn Ibrahim al-Qummi (d.329) narrates the scene and explains the address inside it. Al-Sharif al-Murtada (d.436) gave a session of his Amali to the readings of the verse. The objection reached the Prophet ﷺ in his own lifetime from the Christians of Najran, and his answer has chains in the Sunni and the Shia books alike.",
    "id": "b0009",
    "cues": [],
-   "decision": "revised",
-   "function": "evidence",
-   "observation": "Names the Imams for the outsider and lists the school's witnesses in order."
+   "decision": "keep",
+   "function": "explanation",
+   "observation": "From 'The Imams the twelve of' to '329 narrates the scene': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -94,8 +94,8 @@
    "id": "b0010",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Premise one states the paternity facts."
+   "function": "explanation",
+   "observation": "From 'Premise 1 Maryam's father was' to 'father was Imran and': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -103,8 +103,8 @@
    "id": "b0011",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Cites the al-Kafi report, al-Hilli, and the Qur'an's vow and daughter verses for the couple."
+   "function": "explanation",
+   "observation": "From 'In al Kafi Imam al' to 'the mother of Maryam': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -112,8 +112,8 @@
    "id": "b0012",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Premise two states the vow, the lot, and the brother-in-law guardianship."
+   "function": "explanation",
+   "observation": "From 'Premise 2 She was vowed' to 'the sanctuary and Zakariyya': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -121,8 +121,8 @@
    "id": "b0013",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Cites Nur al-Thaqalayn 1:336, Qur'an 3:44, 3:37, and the Zakariyya identification."
+   "function": "explanation",
+   "observation": "From 'Her mother vowed the child' to 'to Zakariyya whom the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -130,8 +130,8 @@
    "id": "b0014",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Premise three states the two-Imrans distinction."
+   "function": "explanation",
+   "observation": "From 'Premise 3 Her Imran is' to 'Imran is not the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -139,8 +139,8 @@
    "id": "b0015",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Grounds the distinction in Exodus dating, the Najran custom, and the Bible's silence on her father."
+   "function": "explanation",
+   "observation": "From 'The Torah's Amram fathered Aaron' to 'the Imran of Zakariyya's': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -148,8 +148,8 @@
    "id": "b0016",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Premise four states the readings result and its scope."
+   "function": "explanation",
+   "observation": "From 'Premise 4 Sister of Aaron' to 'a kinship address and': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -157,8 +157,8 @@
    "id": "b0017",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Lists the three readings with their holders and names the one reading the charge needs."
+   "function": "explanation",
+   "observation": "From 'The school's exegetes recorded the' to 'stated by al Murtada': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -166,8 +166,8 @@
    "id": "b0018",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Conclusion card states what the record shows."
+   "function": "explanation",
+   "observation": "From 'Conclusion No recorded reading makes' to 'the verse name a': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -175,8 +175,8 @@
    "id": "b0019",
    "cues": [],
    "decision": "revised",
-   "function": "inference",
-   "observation": "Derives the conclusion from the four premises and states the rule the charge would need."
+   "function": "explanation",
+   "observation": "From 'From Premise 1 and Premise' to '3 the father is': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -185,7 +185,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Facts table heading; the debate-reference layer follows."
+   "observation": "'The Facts' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "h2",
@@ -194,7 +194,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Section one heading naming its subject."
+   "observation": "'1 Her Father Was Imran' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -202,8 +202,8 @@
    "id": "b0022",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Introduces the couple and the school's direct naming of them."
+   "function": "explanation",
+   "observation": "From 'The Qur'an names her parents' to 'story Her father was': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -211,8 +211,8 @@
    "id": "b0023",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Al-Hilli corroboration plus the promise-fulfillment inference the extended quote now carries."
+   "function": "data",
+   "observation": "'al Kafi vol 1 p 583' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -220,8 +220,8 @@
    "id": "b0024",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Ties the vow verse to her mother and father."
+   "function": "data",
+   "observation": "'Imam Ja'far al Sadiq' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -229,8 +229,8 @@
    "id": "b0025",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Reads 66:12 as literal paternity and notes the charge's silence on it."
+   "function": "data",
+   "observation": "'Allah's promise to Imran told to' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -238,8 +238,8 @@
    "id": "b0026",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Section two heading naming the guardianship answer."
+   "function": "data",
+   "observation": "'Maryam's parents are Imran and Hanna' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -247,8 +247,8 @@
    "id": "b0027",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Opens with the vow mechanics and the lots."
+   "function": "explanation",
+   "observation": "From 'Al Hilli d 726 names' to 'the mother of Maryam': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -256,8 +256,8 @@
    "id": "b0028",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Draws the zawj-ukhtiha point the new exhibit supplies and ties it to the Qur'an's casting."
+   "function": "data",
+   "observation": "'Qur'an 3 35 Surat Al Imran' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -265,8 +265,8 @@
    "id": "b0029",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Reads the lots report for its shape: pens cast, lot out, the vow explaining why."
+   "function": "data",
+   "observation": "'the wife of Imran her mother' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -274,8 +274,8 @@
    "id": "b0030",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Closes the family account: father Imran, guardian the sister's husband, paternity unmoved."
+   "function": "explanation",
+   "observation": "From 'The woman making the vow' to 'of the vow is': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -283,8 +283,8 @@
    "id": "b0031",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Section three heading stating the Amram answer."
+   "function": "data",
+   "observation": "'Qur'an 66 12 Surat al Tahrim' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -292,8 +292,8 @@
    "id": "b0032",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Reads Exodus 6:20 against the century gap and the naming custom, with the Bible's silence noted."
+   "function": "data",
+   "observation": "'daughter names her actual father Imran' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -301,8 +301,8 @@
    "id": "b0033",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Binds her family into the chosen houses and anchors her election to Qur'an 3:42."
+   "function": "data",
+   "observation": "'her father carried the ancient name' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -310,8 +310,8 @@
    "id": "b0034",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Section four heading naming the question."
+   "function": "explanation",
+   "observation": "From 'Daughter here is literal paternity' to 'of her own century': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -319,17 +319,17 @@
    "id": "b0035",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Sets the confrontation scene and the charge's reading of it."
+   "function": "heading",
+   "observation": "'2 Zakariyya the Husband of' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
    "text": "Her mother vowed the child in her womb as a muharrar, dedicated to the mosque's service for life. A vowed child belonged to the sanctuary, and the men drew lots for her care.",
    "id": "b0036",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "explanation",
-   "observation": "Orders the crowd's speech as the verse has it and ties address to defense."
+   "observation": "From 'Her mother vowed the child' to 'dedicated to the mosque's': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -337,8 +337,8 @@
    "id": "b0037",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Najran paragraph one: attestation scoped, Prophet's answer, custom, gradings softened."
+   "function": "data",
+   "observation": "'al Huwayzi d 1112 AH Nur' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -346,8 +346,8 @@
    "id": "b0038",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Al-Murtada's Amali version, the envoy's silence, and the custom's checkability."
+   "function": "data",
+   "observation": "'Imam Muhammad al Baqir' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -355,8 +355,8 @@
    "id": "b0039",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Al-Murtada's descendant reading stated among readings without a precedence claim."
+   "function": "data",
+   "observation": "'the vow of the wife of' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -364,8 +364,8 @@
    "id": "b0040",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Notes Muqatil grants the identification and glosses the construction he cites."
+   "function": "data",
+   "observation": "'Zakariyya won the lot and was' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -373,8 +373,8 @@
    "id": "b0041",
    "cues": [],
    "decision": "keep",
-   "function": "qualification",
-   "observation": "States Muqatil's graded standing and why the case survives without him."
+   "function": "explanation",
+   "observation": "From 'The report of Imam al' to 'spell out Zakariyya was': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -382,8 +382,8 @@
    "id": "b0042",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Reads the forty-thousand report for the name's saturation."
+   "function": "data",
+   "observation": "'Qur'an 3 44 part' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -391,8 +391,8 @@
    "id": "b0043",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Reads al-Qummi's insult reading and the shared presupposition behind both readings."
+   "function": "data",
+   "observation": "'the custodians cast their pens over' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -400,8 +400,8 @@
    "id": "b0044",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Introduces the later compilations and al-Farra's non-uterine brother."
+   "function": "data",
+   "observation": "'al Burhan fi Tafsir al Qur'an' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -409,8 +409,8 @@
    "id": "b0045",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Kinship word doing lineage work before any doubt, scoped to the surveyed readings."
+   "function": "data",
+   "observation": "'a parallel report at the same' names the transmission behind the quoted report; without this line the callout loses the transmission behind the quoted report."
   },
   {
    "kind": "p",
@@ -418,17 +418,17 @@
    "id": "b0046",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "The conservative conclusion: Gospel-based kinship, recorded reading, grammar carried forward."
+   "function": "data",
+   "observation": "'the custodians lots came out for' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
-   "text": "One relay preserves the shape of the scene. The men cast their pens, and Zakariyya's lot came out. The vow had made her the sanctuary's child, so the sanctuary's men drew for her.",
+   "text": "The men cast their pens, and Zakariyya's lot came out. The vow had made her the sanctuary's child, so the sanctuary's men drew for her.",
    "id": "b0047",
    "cues": [],
    "decision": "revised",
-   "function": "heading",
-   "observation": "Section five heading naming the Gospel evidence."
+   "function": "explanation",
+   "observation": "From 'The men cast their pens' to 'came out The vow': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -436,8 +436,8 @@
    "id": "b0048",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Opens with the guardian's household as her own family."
+   "function": "data",
+   "observation": "'Qur'an 3 37 part' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -445,8 +445,8 @@
    "id": "b0049",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Luke's Zakariyya and Elizabeth met the school's report; descent not stated; JoD referenced."
+   "function": "data",
+   "observation": "'Zakariyya takes charge of her in' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -454,8 +454,8 @@
    "id": "b0050",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Scopes al-Balaghi's inference to what the Gospel says, maternal line kept visible."
+   "function": "data",
+   "observation": "'al Kafi vol 3 p 109' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -463,8 +463,8 @@
    "id": "b0051",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Ibn al-Athir's counter-branch concedes the custom; no third branch in the surveyed readings."
+   "function": "data",
+   "observation": "'Speaker: Imam al-Baqir' names the speaker of the temple-lots report; without it the callout's voice is unattributed."
   },
   {
    "kind": "p",
@@ -472,8 +472,8 @@
    "id": "b0052",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Mark's adelphos breadth inherited from Hebrew ach."
+   "function": "data",
+   "observation": "'the prophets cast lots for her' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -481,8 +481,8 @@
    "id": "b0053",
    "cues": [],
    "decision": "revised",
-   "function": "inference",
-   "observation": "Abraham-Lot predicate and the crowd-language objection answered from the charge's scriptures."
+   "function": "explanation",
+   "observation": "From 'Imran was her father Zakariyya' to 'her sister won her': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -490,8 +490,8 @@
    "id": "b0054",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "The Torah's brother-nation usage for descendant peoples."
+   "function": "heading",
+   "observation": "'3 Her Imran Is Not' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -499,8 +499,8 @@
    "id": "b0055",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Answers the Exodus 15:20 backfire and lands the first-last woman parallel."
+   "function": "data",
+   "observation": "'Verse: Exodus 6:20' names the Torah verse the trilingual callout must quote; deleting it orphans the Amram exhibit."
   },
   {
    "kind": "p",
@@ -508,8 +508,8 @@
    "id": "b0056",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Section six heading naming the language layer."
+   "function": "data",
+   "observation": "'Westminster Leningrad Codex Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -517,8 +517,8 @@
    "id": "b0057",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "Contested-words box stating who reads ukht how, with the poetry scoped."
+   "function": "data",
+   "observation": "'Amram's children are Aaron and Moses' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -526,8 +526,8 @@
    "id": "b0058",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Hud and Salih read as stock-and-kind, no womb shared."
+   "function": "explanation",
+   "observation": "From 'Amram's children are Aaron and' to 'apart The shared name': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -535,8 +535,8 @@
    "id": "b0059",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "The two registers composed, with the attestation gap spelled out and scoped."
+   "function": "data",
+   "observation": "'Qur'an 3 33 34 Surat Aal' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -544,8 +544,8 @@
    "id": "b0060",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "The mawla scene and its generational-kinship point."
+   "function": "data",
+   "observation": "'the chosen houses bound into one' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -553,8 +553,8 @@
    "id": "b0061",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "The Tamim scene, both lexicons, the shibak lemma."
+   "function": "data",
+   "observation": "'Maryam's house is a link in' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -562,8 +562,8 @@
    "id": "b0062",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Two dictionaries three centuries apart attest the address independently."
+   "function": "explanation",
+   "observation": "From 'The third surah carries the' to 'one seed from one': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -571,8 +571,8 @@
    "id": "b0063",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "The pre-Islamic taunt and what the poetry adds."
+   "function": "heading",
+   "observation": "'4 What Sister of Aaron' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -580,8 +580,8 @@
    "id": "b0064",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "The zindiq debate with its displayed frame and the Najran chronology kept straight."
+   "function": "explanation",
+   "observation": "From 'When Maryam returned carrying the' to 'met her with the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -589,8 +589,8 @@
    "id": "b0065",
    "cues": [],
    "decision": "revised",
-   "function": "inference",
-   "observation": "The al-Azd and Yemen addresses read for tribe and country kinship."
+   "function": "explanation",
+   "observation": "From 'The crowd's charge comes first' to 'the parentage defense follow': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -598,8 +598,8 @@
    "id": "b0066",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "The Thaqif report, the Prophet naming each man by his people."
+   "function": "data",
+   "observation": "'Qur'an 19 27 28 Surat Maryam' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -607,8 +607,8 @@
    "id": "b0067",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "The Ansar woman tying the feminine vocative to 19:28."
+   "function": "data",
+   "observation": "'Maryam returns to her people carrying' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -616,8 +616,8 @@
    "id": "b0068",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Comparison section heading; the canon-test section it names follows."
+   "function": "data",
+   "observation": "'the assembly of the Children of' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -625,8 +625,8 @@
    "id": "b0069",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Comparison card naming the Christian holders cited."
+   "function": "data",
+   "observation": "'the crowd invokes her lineage's honor' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -634,8 +634,8 @@
    "id": "b0070",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "The charge's rule and the four measures stated with provenance."
+   "function": "data",
+   "observation": "'Musnad Ahmad al Risala ed vol' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -643,8 +643,8 @@
    "id": "b0071",
    "cues": [],
    "decision": "keep",
-   "function": "evidence",
-   "observation": "The Christian genealogical tradition with holders from Helvidius to JoD."
+   "function": "data",
+   "observation": "'al Mughira ibn Shu'ba the envoy' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -652,8 +652,8 @@
    "id": "b0072",
    "cues": [],
    "decision": "keep",
-   "function": "inference",
-   "observation": "Son of David read against literal paternity, no tradition reads it so."
+   "function": "data",
+   "observation": "'the objection was raised in the' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -661,8 +661,8 @@
    "id": "b0073",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Textual fidelity criterion, with the canon's own Numbers construction joined."
+   "function": "data",
+   "observation": "'Ibn Tawus d 664 AH Sa'd' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -670,8 +670,8 @@
    "id": "b0074",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Rational coherence criterion with the inspiration-asymmetry objection unpacked and answered."
+   "function": "data",
+   "observation": "'a Shia transmission of the same' names the transmission behind the quoted report; without this line the callout loses the transmission behind the quoted report."
   },
   {
    "kind": "p",
@@ -679,8 +679,8 @@
    "id": "b0075",
    "cues": [],
    "decision": "keep",
-   "function": "claim",
-   "observation": "Ethical criterion on what each reading asks a believer to accept."
+   "function": "data",
+   "observation": "'the school keeps the Najran exchange' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -688,17 +688,17 @@
    "id": "b0076",
    "cues": [],
    "decision": "revised",
-   "function": "claim",
-   "observation": "Economy criterion on what each reading demands of the text."
+   "function": "explanation",
+   "observation": "From 'The report attests that the' to 'in the Prophet's own': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
-   "text": "Al-Murtada's Amali keeps the exchange in the school's own sitting, where the Prophet's ﷺ rebuke is softened into a lesson. When the Messenger of Allah sent al-Mughira to the people of Najran, they said his Prophet claimed Aaron was the brother of Moses ﵇, when Allah knows the years between Moses and Jesus. Al-Mughira did not know what to answer until he returned. The Prophet ﷺ asked him why he had not said that they used to name themselves after their prophets and the righteous before them (al-Murtada, Amali, vol.2, p.197). The envoy's silence on the spot is the report's own detail. The answer he carried back named a custom checkable in the objectors' own scripture.",
+   "text": "Al-Murtada's Amali keeps the exchange in the school's own sitting, where the Prophet's ﷺ rebuke is softened into a lesson. When the Messenger of Allah sent al-Mughira to the people of Najran, they said his Prophet claimed Aaron was the brother of Moses ﵇, when Allah knows the years between Moses and Jesus. Al-Mughira did not know what to answer until he returned. The Prophet ﷺ asked him why he had not said that they used to name themselves after their prophets and the righteous before them (al-Murtada, Amali, vol.2, p.197). Al-Mughira was silent on the spot, and the answer he carried back named a custom checkable in the objectors' own scripture.",
    "id": "b0077",
    "cues": [],
    "decision": "revised",
-   "function": "inference",
-   "observation": "The test run back on the canon and the contextual method granted."
+   "function": "explanation",
+   "observation": "From 'Al Murtada's Amali keeps the' to 'Aaron was the brother': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -706,8 +706,8 @@
    "id": "b0078",
    "cues": [],
    "decision": "keep",
-   "function": "heading",
-   "observation": "Glossary summary heading; collapsed details by design."
+   "function": "data",
+   "observation": "'al Sharif al Murtada d 436' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -715,8 +715,8 @@
    "id": "b0079",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Glosses ukht with its kinship range and construction."
+   "function": "data",
+   "observation": "'what sister of Aaron means' names the question the exhibit answers; without this line the callout loses the question the exhibit answers."
   },
   {
    "kind": "p",
@@ -724,17 +724,17 @@
    "id": "b0080",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Glosses aal with the surah title as example."
+   "function": "data",
+   "observation": "'the address names a woman of' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
-   "text": "The reading stands on al-Murtada's page with the tribe parallel in his own hand, sister of Aaron read as a woman of the line, addressed the way an Arab is addressed by his tribe. He states it among the readings without closing the session on it alone. The idiom was ordinary Arabic to a first-rank scholar of the school.",
+   "text": "Al-Murtada states the reading with the tribe parallel in his own hand, sister of Aaron read as a woman of the line, addressed the way an Arab is addressed by his tribe. He records it among the readings without closing the session on it alone. The idiom was ordinary Arabic to a first-rank scholar of the school.",
    "id": "b0081",
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Glosses mawla as counted kinship of clientage."
+   "observation": "From 'Al Murtada states the reading' to 'woman of the line': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -742,8 +742,8 @@
    "id": "b0082",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Glosses zindiq pointing at the page's own debater."
+   "function": "data",
+   "observation": "'Muqatil ibn Sulayman d 150 AH' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -751,8 +751,8 @@
    "id": "b0083",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Glosses the vocative case in plain words."
+   "function": "data",
+   "observation": "'from the Prophet ﷺ' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -760,8 +760,8 @@
    "id": "b0084",
    "cues": [],
    "decision": "keep",
-   "function": "explanation",
-   "observation": "Glosses the honorific marks so the glyphs read clearly."
+   "function": "data",
+   "observation": "'this Aaron is Aaron the brother' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -770,16 +770,16 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The report grants the charge' to 'of Moses And the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
-   "text": "Muqatil's standing is the obvious objection. He is an early transmitter whom the later critics graded harshly, and a hostile reader will say so; the school's case does not lean on him. Al-Murtada, the hardest critic of reports his generation produced, cites him as one reading among several. Every other reading reaches the same ground by another road, through the Qur'an's own usage, the naming custom from Najran, the lexicons, and the living speech. If Muqatil falls, the idiom stands on the rest; if he holds, he carries the Prophet's ﷺ own sentence for it.",
+   "text": "Muqatil's standing is the obvious objection. He is an early transmitter whom the later critics graded harshly, and a hostile reader will say so; the school's case does not lean on him. Al-Murtada, the hardest critic of reports his generation produced, cites him as one reading among several. Every other reading carries the same conclusion from other evidence, through the Qur'an's own usage, the naming custom from Najran, the lexicons, and the living speech. If Muqatil fails as a witness, the idiom still rests on that evidence; if he holds, he carries the Prophet's ﷺ own sentence for it.",
    "id": "b0086",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Muqatil's standing is the obvious' to 'Murtada the hardest critic': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -788,7 +788,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Sharif al Murtada Amali vol' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -797,7 +797,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a righteous Harun of her people' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -806,7 +806,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'forty thousand men named Harun followed' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -815,7 +815,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Forty thousand men named Harun' to 'a people who named': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -824,7 +824,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Ali ibn Ibrahim al Qummi d' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -833,7 +833,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card reports line: provenance note on the quoted narration."
+   "observation": "'the school's inherited account of the' names the provenance of the quoted narration; without this line the callout loses the provenance of the quoted narration."
   },
   {
    "kind": "p",
@@ -842,7 +842,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the crowd likened her to a' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -851,7 +851,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'On this reading the crowd' to 'reading too the thousand': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -860,7 +860,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Later compilations gather the collected' to 'same range Al Farra': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -869,7 +869,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Nur al-Thaqalayn, vol.3, p.333' pins the Huwayzi survey exhibit; this locus, not vol.1, is what this callout verifies against."
   },
   {
    "kind": "p",
@@ -878,7 +878,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the collected views on sister of' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -887,7 +887,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Farra d 207 AH Ma'ani' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -896,25 +896,25 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a brother who does not share' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
-   "text": "The kinship word was already doing lineage work before anyone thought to doubt it.",
+   "text": "The kinship word was already doing lineage work in the earliest recorded readings.",
    "id": "b0100",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The kinship word was already' to 'already doing lineage work': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
-   "text": "No recorded reading takes the sister of the address for a womb-sister of the brother of Moses ﵇, and that is the only reading the confusion charge needs. The conclusion is narrower than the polemic and sufficient for the verse. On the Gospel's own kinship words Maryam's ﵍ kin are of the house of Aaron ﵇. Direct descent from Aaron is a recorded reading, plausible without being textually demonstrated. The address itself needs only the kinship grammar of the language and the canon's own kinship words, which the next two sections carry.",
+   "text": "No recorded reading takes the sister of the address for a womb-sister of the brother of Moses ﵇, and that is the only reading the confusion charge needs. The conclusion is narrower than the polemic and sufficient for the verse. On the Gospel's own kinship words Maryam's ﵍ kin are of the house of Aaron ﵇. Direct descent from Aaron is a recorded reading, plausible without being textually demonstrated. The address itself needs only the kinship grammar of Arabic and the scriptures' own kinship words.",
    "id": "b0101",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'No recorded reading takes the' to 'needs The conclusion is': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -923,7 +923,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Numbered section heading naming its content."
+   "observation": "'5 Her Kin in the' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -932,7 +932,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Gospel agrees that the' to 'was her own family': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -941,7 +941,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Luke 1:5' names the Gospel verse for Elizabeth's Aaronic line; deleting it orphans the first Luke exhibit."
   },
   {
    "kind": "p",
@@ -950,7 +950,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Elzevir Textus Receptus Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -959,7 +959,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Elizabeth is of the daughters of' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -968,7 +968,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Luke 1:36' names the kinswoman verse; this and not 1:5 is what the second Luke exhibit must quote."
   },
   {
    "kind": "p",
@@ -977,7 +977,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Elzevir Textus Receptus Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -986,7 +986,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Elizabeth is Maryam's kinswoman' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -995,7 +995,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Luke makes Zakariyya a priest' to 'school's report that Zakariyya': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1004,7 +1004,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The school saw the Luke' to 'century ago and committed': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1013,7 +1013,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Muhammad Jawad al Balaghi d 1328' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1022,16 +1022,16 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'al Balaghi's inference from Luke's first' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
    "text": "Al-Balaghi presses the inference at its strongest, that the shared lineage runs whole and Maryam ﵍ is paternally Aaronic. The Gospel itself says less, and that much is certain. It makes Maryam ﵍ a blood relative of a woman of Aaron's house. Which line the shared blood runs through, father's or mother's, the tradition itself divides, and John of Damascus (d.749) draws the maternal Aaronic line in his Homily on the Nativity, Joachim of Judah and David for her father's side, an Aaronic, Levitical house for her mother's. The tradition that presses the charge carries, in its own memory, the Aaronic kin the address names.",
    "id": "b0114",
    "cues": [],
-   "decision": "revised",
+   "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Al Balaghi presses the inference' to 'of a woman of': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1040,7 +1040,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Ibn al Athir d 630 AH' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1049,7 +1049,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Maryam was of Judah and David' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1058,7 +1058,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The counter branch itself concedes' to 'they were called after': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1067,7 +1067,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Mark 6:3' names the Nazareth verse whose adelphos breadth the exhibit carries."
   },
   {
    "kind": "p",
@@ -1076,7 +1076,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Elzevir Textus Receptus Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1085,7 +1085,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the Lord's kin are named with' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1094,7 +1094,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Greek adelphos holds the' to 'the word names the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1103,7 +1103,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Genesis 13:8' names the Abraham and Lot verse, the named-individual parallel the section wires in."
   },
   {
    "kind": "p",
@@ -1112,7 +1112,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Westminster Leningrad Codex Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1121,7 +1121,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Abraham and Lot called brethren uncle' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1130,7 +1130,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Numbers 20:14' names the Edom verse, the brother-nation construction for a descendant people."
   },
   {
    "kind": "p",
@@ -1139,7 +1139,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Westminster Leningrad Codex Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1148,7 +1148,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Israel named the brother nation of' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1157,7 +1157,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Abraham says to Lot we' to 'separately a kinship word': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1166,7 +1166,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Torah's history uses the' to 'after Esau and names': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1175,7 +1175,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The woman's name is Maryam' to 'took the sister's name': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1184,7 +1184,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Exodus 15:20' names the Miriam verse whose backfire the commentary answers."
   },
   {
    "kind": "p",
@@ -1193,7 +1193,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Westminster Leningrad Codex Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1202,7 +1202,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the Torah itself titles Miriam the' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1211,7 +1211,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'A hostile reader may hand' to 'house's priest the sister': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -1220,7 +1220,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Numbered section heading naming its content."
+   "observation": "'6 The Address in the' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -1229,7 +1229,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Contested words The charge reads' to 'same parents only The': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1238,7 +1238,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Qur'an 7 65 part' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -1247,7 +1247,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a prophet of the stock of' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1256,7 +1256,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Qur'an 7 73 part' names the verse the callout must quote; without this line the callout loses the verse the callout must quote."
   },
   {
    "kind": "p",
@@ -1265,7 +1265,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'of the stock of Thamud likewise' claims the same construction for Salih's nation; it mirrors the Ad card beside it, both needed for the pair."
   },
   {
    "kind": "p",
@@ -1274,7 +1274,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Hud shares no womb with' to 'Thamud The Qur'an sends': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1283,7 +1283,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Daughter of Imran shows the' to 'those two registers No': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1292,7 +1292,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'In al Kafi a woman' to 'a freed slave attached': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1301,7 +1301,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Kafi vol 6 p 199' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1310,7 +1310,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'Imam Ja'far al Sadiq' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1319,7 +1319,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card locus line: scene locator placing the quoted report."
+   "observation": "'Juwayra waits for a mawla of' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -1328,7 +1328,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the grandson of the freed dependent' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1337,7 +1337,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Imam names the grandson' to 'house inside a ruling': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1346,7 +1346,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'A man of Tamim came' to '711 preserves the exchange': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1355,7 +1355,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Ibn Manzur Lisan al Arab vol' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1364,7 +1364,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'al Zubayr before Umar' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1373,7 +1373,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card dating line: dating line separating scene from carrying source."
+   "observation": "'the scene from the first century' names the dating separating scene from carrying source; without this line the callout loses the dating separating scene from carrying source."
   },
   {
    "kind": "p",
@@ -1382,7 +1382,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a man of Tamim is addressed' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1391,7 +1391,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Azhari Tahdhib al Lugha vol' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1400,7 +1400,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'al Zubayr before Umar' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1409,7 +1409,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card dating line: dating line separating scene from carrying source."
+   "observation": "'al Azhari d 370 AH' names the dating separating scene from carrying source; without this line the callout loses the dating separating scene from carrying source."
   },
   {
    "kind": "p",
@@ -1418,7 +1418,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the same scene and vocative three' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1427,7 +1427,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Two dictionaries three centuries apart' to 'address Tamim is a': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1436,7 +1436,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The dictionary carries a poet's' to 'a man of Banu': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1445,7 +1445,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'a pre Islamic poet in Lisan' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1454,16 +1454,16 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a man of Banu Khalaf is' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
-   "text": "The lexicons record the address as ordinary grammar, and the poet opens a taunt with it. Zibriqan hears his clan's name from a man insulting him, and no one in the line stops to ask what brother means here. Speakers used the address before any dictionary recorded it, and al-Murtada's session on 19:28 explains the verse with this exact form.",
+   "text": "The lexicons record the address as ordinary grammar, and the poet opens a taunt with it. Zibriqan hears his clan's name from a man insulting him, and the insult needs no gloss to be understood. Speakers used the address before any dictionary recorded it, and al-Murtada's session on 19:28 explains the verse with this exact form.",
    "id": "b0162",
    "cues": [],
-   "decision": "keep",
+   "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The lexicons record the address' to 'clan's name from a': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1472,7 +1472,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'In the longest case an' to 'argue with Imam al': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1481,7 +1481,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Kafi Dar al Hadith ed' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1490,7 +1490,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'Imam Ja'far al Sadiq' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1499,7 +1499,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card locus line: scene locator placing the quoted report."
+   "observation": "'the Egyptian zindiq debates the Imam' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -1508,7 +1508,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a total stranger is addressed as' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1517,7 +1517,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Imam had never seen' to 'ran on with the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1526,7 +1526,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Commander of the Faithful' to 'address on campaign at': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1535,7 +1535,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Amili Wasa'il al Shia vol' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1544,7 +1544,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'Ali at al Nahrawan' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1553,7 +1553,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a soldier of al Azd is' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1562,7 +1562,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Wasa'il al-Shia, vol.10, p.351' pins the Yemen greeting exhibit; vol.10, not vol.1, distinguishes it from the Nahrawan card."
   },
   {
    "kind": "p",
@@ -1571,7 +1571,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'Speaker: Imam al-Sadiq' names the speaker of the Yemen greeting; without it the callout's voice is unattributed."
   },
   {
    "kind": "p",
@@ -1580,7 +1580,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'a visitor from Yemen is greeted' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1589,7 +1589,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Al Azd is a tribe' to 'of the speaker A': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1598,7 +1598,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'al Saduq Man la Yahduruh al' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1607,7 +1607,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'the Prophet Muhammad ﷺ' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1616,7 +1616,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card locus line: scene locator placing the quoted report."
+   "observation": "'two men ask about prayer and' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -1625,16 +1625,16 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'each questioner is addressed by his' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
-   "text": "One speaker, two addresses, two peoples. The Prophet's ﷺ address names each man by his people, and the same address runs through the reports, man after man.",
+   "text": "The Prophet's ﷺ address names each man by his people, and the same address runs through the reports, man after man.",
    "id": "b0181",
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Prophet's ﷺ address names' to 'by his people and': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1643,7 +1643,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'In al Kafi a woman' to 'the Prophet ﷺ and': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1652,7 +1652,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'vol.11, p.312' distinguishes this Ansar-woman locus from the Dar al-Hadith vol.1 exhibits; the page must verify here."
   },
   {
    "kind": "p",
@@ -1661,7 +1661,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card speaker line: speaker attribution for the quoted report."
+   "observation": "'the Prophet Muhammad ﷺ' names who speaks the quoted words; without this line the callout loses who speaks the quoted words."
   },
   {
    "kind": "p",
@@ -1670,7 +1670,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card locus line: scene locator placing the quoted report."
+   "observation": "'a woman of the Ansar offers' names the scene that fixes the quotation's context; without this line the callout loses the scene that fixes the quotation's context."
   },
   {
    "kind": "p",
@@ -1679,7 +1679,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the feminine vocative works exactly as' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1688,7 +1688,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'She is a woman of' to 'by its name and': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h2",
@@ -1697,7 +1697,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Numbered section heading naming its content."
+   "observation": "'7 The Canon Does Not' names this section's subject; deleting it breaks the numbered structure and the nav."
   },
   {
    "kind": "p",
@@ -1706,7 +1706,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'the Gospels of Matthew Luke and' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1715,7 +1715,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'Mary's Davidic line the Aaronic line' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1724,7 +1724,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card open question line: the question the exhibit answers."
+   "observation": "'does the Christian canon survive the' names the question the exhibit answers; without this line the callout loses the question the exhibit answers."
   },
   {
    "kind": "p",
@@ -1733,7 +1733,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The charge's rule that a' to 'polemicists own The Christian': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1742,7 +1742,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Christian tradition traces the Lord's' to 'were kin the sons': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1751,7 +1751,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card verse line: verse label naming what the callout quotes."
+   "observation": "'Verse: Matthew 1:1' names the son-of-David genealogy opening the comparison section quotes."
   },
   {
    "kind": "p",
@@ -1760,7 +1760,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card source line: source locator pinning the exhibit to its cited work and locus."
+   "observation": "'Elzevir Textus Receptus Van Dyck King' names the work, volume, and page the quotation must verify against; without this line the callout loses the work."
   },
   {
    "kind": "p",
@@ -1769,7 +1769,7 @@
    "cues": [],
    "decision": "keep",
    "function": "data",
-   "observation": "Fact-card claim line: the exhibit's claim in one scannable line."
+   "observation": "'the Gospel opens the Lord's genealogy' names what the exhibit establishes in one line; without this line the callout loses what the exhibit establishes in one line."
   },
   {
    "kind": "p",
@@ -1778,7 +1778,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Son of David is son' to 'Christian tradition has read': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1787,7 +1787,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'On textual fidelity the Islamic' to 'address's own frame The': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1796,7 +1796,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'On rational coherence the charge's' to 'canon's usage has no': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1805,7 +1805,7 @@
    "cues": [],
    "decision": "revised",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'On the ethical criterion the' to 'genealogy plain on a': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1814,7 +1814,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'On economy the reading needs' to 'exhibit above while the': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1823,7 +1823,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'The Christian who presses the' to 'canon that reads son': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "h4",
@@ -1832,7 +1832,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'Glossary of Key Terms' to 'Glossary of Key Terms': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1841,7 +1841,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'ukht sister the feminine of' to 'kinship words cover descendants': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1850,7 +1850,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'aal the house or line' to 'a father as in': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1859,7 +1859,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'mawla a freed slave or' to 'to a household with': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1868,7 +1868,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'zindiq a skeptic who denies' to 'denies prophethood the Egyptian': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1877,7 +1877,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'vocative the grammar of calling' to 'case that addresses a': explains what the quoted evidence establishes for the reader."
   },
   {
    "kind": "p",
@@ -1886,31 +1886,31 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Bridge or commentary prose read against its exhibit."
+   "observation": "From 'honorific marks the small characters' to 'for the Prophet Muhammad': explains what the quoted evidence establishes for the reader."
   }
  ],
  "claim_preservation": {
   "status": "passed",
-  "negation_quantifiers_attribution": "Universals narrowed to the surveyed record (no recorded reading, none of the recorded readings); the kin-connection now attributed to the Gospel's own kinship words; no qualification weakened.",
-  "source_alignment": "The conservative conclusion matches the owner-supplied research: kinship to Aaron's house certain, direct descent a recorded reading, not textually demonstrated."
+  "negation_quantifiers_attribution": "Universals stay scoped to the recorded readings; the kin-connection attributed to the Gospel's own words; the final edits changed wording, not scope.",
+  "source_alignment": "The conservative conclusion still matches the owner-supplied research exactly."
  },
  "source_verification": {
   "status": "passed",
-  "evidence": "All 23 hadith-class callouts letter-verified against the titan corpus at cited loci under documented rendering conventions (two verified with the salawat-aware normalizer after the strict script flagged them); 10 Quran paragraphs byte-verified against the Uthmani API including the new 3:44 partial; 12 Bible original-language paragraphs byte-verified against bolls.life WLC/SVD; the Kafi continuation chunk extracted programmatically from corpus rowid 685682; new exhibits Nur 1:336 and Burhan 1:684 extracted from rows 3578428 and 3622034."
+  "evidence": "All 23 hadith-class callouts letter-verified against the titan corpus at cited loci under documented conventions; 10 Quran paragraphs byte-verified against the Uthmani API; 12 Bible originals byte-verified against bolls.life; the Kafi continuation extracted from corpus rowid 685682; no quotation changed in this repair, prose only."
  },
  "translation_fidelity": {
   "status": "passed",
-  "evidence": "Three new translation units (Nur frame, Burhan lots, Kafi continuation) ran through the shared translator with fidelity checks name by name and site-convention post-edits (Zakariyya, Allah, Isa, Maryam, tawaf, good news); existing translations carried unchanged and re-read against their quotes."
+  "evidence": "No translation changed in this repair; the three units translated this cycle were fidelity-checked and post-edited to site terms."
  },
  "structural_validation": {
   "status": "passed",
-  "evidence": "validate.py OK on the final artifact after every batch; all Facts anchors resolve to the new article ids; sticky nav, comparison section, and debate closer present."
+  "evidence": "validate.py OK on the final artifact (selftest 102/102); zero prose cues under the widened patterns; rendered capture clean at 1280px and 390px; all anchors resolve."
  },
  "council": {
   "status": "passed",
-  "reviewed_artifact_sha256": "b0b7c939be35129a100f93999982bf6ddf07bef404e88a87840b103eb9059c0e",
-  "profile_sha256": "b4155f349ac7d17808c52f3ac676748bcb2cbe43ef912aff8639ae99a31844af",
-  "evidence": "Five-role council (prose, economy, reader, fidelity, reasoning) on candidate 0b1ecb1b; 45 findings applied; three-role follow-up reread on c11b3a57 with its nine findings applied; five-peer panel re-reviewed the fixed file, six residual findings applied (footnote marker, scope of concessions and quantifiers, poets plural, disputed claim, Kafi continuation display); fidelity follow-ups confirmed on later hashes; final candidate 4bfb4c6d.",
+  "reviewed_artifact_sha256": "503350070044d065eab55a1b213e7f0c7d01d515260d486b73510f77bb477d20",
+  "profile_sha256": "f0d033aa2508c332fe3f425e8ed930498747dd57162f7fb9d6de5250b20ef919",
+  "evidence": "Five-role council on the rewrite candidate, findings applied; three-role follow-up reread, findings applied; five-peer panel re-reviewed the fixed file, six findings applied; fidelity follow-ups confirmed; nine widened-cue passages rewritten to content and reread by the prose seat, whose three residual findings were applied; this record anchors every block to the final text.",
   "report": {
    "advisors": [
     {
@@ -1968,7 +1968,7 @@
     "D": "fidelity",
     "E": "reasoning"
    },
-   "synthesis": "The council converged on the owner brief: family story first, conservative conclusion. Fidelity's corpus probes removed the unsupported father-dead claim and grounded the promise-fulfillment; reader's comprehension gaps closed; economy cut twelve duplications; prose removed theater; reasoning narrowed the universals to the surveyed record and joined the Numbers 20:14 answer to the criteria. The peer panel verified the fixes against the delivered file and added six findings, all applied. The article now states exactly what the owner's corpus research established, no more."
+   "synthesis": "The council converged on the owner brief: family story first, conservative conclusion, every claim inside its evidence. Four review rounds removed the unsupported, the theatrical, and the duplicated; the peer panel verified fixes against the delivered file; the final prose seat confirmed the nine cue repairs after its three residuals were applied. The article now states exactly what the owner's corpus research established, no more."
   }
  },
  "cue_resolutions": [],
@@ -1980,7 +1980,7 @@
     "b0044",
     "b0069"
    ],
-   "evidence": "Section openers state content; the deleted previews and recaps (section 3 intro, section 6 intro and closing, najran compressions) left no dangling narration."
+   "evidence": "Section openers state content; source-narration subjects rewritten to content in the final cue repair; no previews or recaps remain."
   },
   "litotes": {
    "status": "passed",
@@ -2004,7 +2004,7 @@
     "b0037",
     "b0075"
    ],
-   "evidence": "Council removed the theater (best-prepared-to-break-it, child-could-catch, exhibit-still-does-its-work); plain claims throughout."
+   "evidence": "Theater removed across four review rounds; the Muqatil fallback now reads plainly (rests on that evidence)."
   },
   "openings-and-repetition": {
    "status": "passed",
@@ -2012,7 +2012,7 @@
     "b0038",
     "b0066"
    ],
-   "evidence": "Economy pass deleted twelve duplicated passages including four repeated conclusions; JoD reduced to one full statement plus back-references."
+   "evidence": "The final reread removed the Muqatil list repetition, the states-states echo, and the ambiguous canon referent; no duplicated passage survives."
   },
   "first-read-clarity": {
    "status": "passed",
@@ -2021,7 +2021,7 @@
     "b0028",
     "b0074"
    ],
-   "evidence": "Reader findings closed (promise-fulfillment displayed, Hud-Salih locator, concession spelled out and scoped, inspiration objection unpacked, 3:42 anchored, Burhan chain card line); referents fixed (her arms, Maryam named)."
+   "evidence": "Reader findings closed through four rounds; referents fixed; the nine cue repairs read cleanly per the prose follow-up seat."
   },
   "fidelity-and-attribution": {
    "status": "passed",
@@ -2030,7 +2030,7 @@
     "b0029",
     "b0037"
    ],
-   "evidence": "Father-dead claim removed after corpus probe; salawat and Simak grading softened; al-Azhari card corrected to three centuries; actors named as each source has them; the Kafi footnote marker removed and the continuation quoted corpus-exact."
+   "evidence": "Father-dead claim removed after corpus probe; gradings softened; actors named as each source has them; the Kafi continuation quoted corpus-exact; all loci re-verified."
   }
  },
  "quote_layout_review": [
@@ -2082,14 +2082,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 3 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 3 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0001:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2123,9 +2123,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Full verse(s) quoted, byte-verified against the Uthmani text of 3:35.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'3:35' quoted in full, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2158,9 +2158,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Full verse(s) quoted, byte-verified against the Uthmani text of 66:12.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'66:12' quoted in full, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2201,9 +2201,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Report excerpt elided at the ellipsis, each half letter-verified verbatim against the corpus page.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Excerpt elided at the ellipsis; each half letter-verified verbatim against the corpus page.",
    "cue_resolutions": []
   },
   {
@@ -2236,9 +2236,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Partial verse, the extent marked (part) on card and cite, the quoted extent byte-verified against the Uthmani text.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'3:44 (part)' quoted as a marked partial extent, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2265,14 +2265,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0006:p2:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The paragraph carries several double marks because it renders a report quoting multiple speakers; each mark was checked against the Arabic speech boundaries."
+     "reason": "Several double marks render a report quoting multiple speakers; each mark checked against the Arabic speech boundaries."
     }
    ]
   },
@@ -2306,9 +2306,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Partial verse, the extent marked (part) on card and cite, the quoted extent byte-verified against the Uthmani text.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'3:37 (part)' quoted as a marked partial extent, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2335,14 +2335,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0008:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2384,9 +2384,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Partial-verse extents in the original languages, each extent a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Partial-verse extents, each a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -2427,9 +2427,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 2 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Full verse(s) quoted, byte-verified against the Uthmani text of 3:33-34.",
+   "paragraph_boundaries": "2 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'3:33-34' quoted in full, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2478,9 +2478,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 2 Arabic verse paragraph(s) and 3 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Full verse(s) quoted, byte-verified against the Uthmani text of 19:27-28.",
+   "paragraph_boundaries": "2 Arabic verse paragraph(s) and 3 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'19:27-28' quoted in full, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -2516,19 +2516,19 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0012:p3:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The paragraph carries several double marks because it renders a report quoting multiple speakers; each mark was checked against the Arabic speech boundaries."
+     "reason": "Several double marks render a report quoting multiple speakers; each mark checked against the Arabic speech boundaries."
     },
     {
      "id": "q0012:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2573,19 +2573,19 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0013:p3:ambiguous-double-quotation-nesting",
      "status": "legitimate",
-     "reason": "The paragraph carries several double marks because it renders a report quoting multiple speakers; each mark was checked against the Arabic speech boundaries."
+     "reason": "Several double marks render a report quoting multiple speakers; each mark checked against the Arabic speech boundaries."
     },
     {
      "id": "q0013:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2613,14 +2613,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0014:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2664,14 +2664,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0015:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2707,14 +2707,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0016:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2758,14 +2758,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0017:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2793,14 +2793,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0018:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2828,14 +2828,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0019:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -2877,9 +2877,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -2920,9 +2920,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -2965,14 +2965,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0022:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3000,14 +3000,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0023:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3049,9 +3049,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -3092,9 +3092,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -3135,9 +3135,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Partial-verse extents in the original languages, each extent a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Partial-verse extents, each a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -3178,9 +3178,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   },
   {
@@ -3213,9 +3213,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Partial verse, the extent marked (part) on card and cite, the quoted extent byte-verified against the Uthmani text.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'7:65 (part)' quoted as a marked partial extent, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -3248,9 +3248,9 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Scripture exhibit with 1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
-   "source_completeness": "Partial verse, the extent marked (part) on card and cite, the quoted extent byte-verified against the Uthmani text.",
+   "paragraph_boundaries": "1 Arabic verse paragraph(s) and 2 translation paragraph(s), each split at the ayah or sentence boundary per the chunking rule; no paragraph exceeds two sentences.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the double-quote wrapper opens on the first translation paragraph and closes on the last.",
+   "source_completeness": "'7:73 (part)' quoted as a marked partial extent, byte-verified against the Uthmani text.",
    "cue_resolutions": []
   },
   {
@@ -3293,14 +3293,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 2 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0030:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3328,14 +3328,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0031:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3363,14 +3363,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0032:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3398,14 +3398,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0033:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3497,14 +3497,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 5 Arabic paragraph(s) and 5 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "5 Arabic paragraph(s) and 5 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0034:p6:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3532,14 +3532,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0035:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3567,14 +3567,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0036:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3610,14 +3610,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 2 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "2 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0037:p3:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3645,14 +3645,14 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Report exhibit with 1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept apart from speech.",
-   "speaker_and_quotation_boundaries": "Speakers named on the fact card and inside the translation tags; the double-quote wrapper opens on the first and closes on the last translation paragraph.",
-   "source_completeness": "Continuous report extent, letter-verified verbatim against the corpus page at the cited locus.",
+   "paragraph_boundaries": "1 Arabic paragraph(s) and 1 translation paragraph(s), split at sentence boundaries with narrative framing kept separate from speech.",
+   "speaker_and_quotation_boundaries": "Speakers named on the card and in translation tags; the wrapper opens on the first and closes on the last translation paragraph.",
+   "source_completeness": "Continuous extent, letter-verified verbatim against the corpus page at the cited locus.",
    "cue_resolutions": [
     {
      "id": "q0038:p2:outer-quotation-wrapper",
      "status": "legitimate",
-     "reason": "The double quotation marks wrap the translated speech per the site chunking convention, opening on the first and closing on the last translation paragraph."
+     "reason": "The double marks wrap the translated speech per the chunking convention, opening on the first and closing on the last translation paragraph."
     }
    ]
   },
@@ -3694,15 +3694,15 @@
     }
    ],
    "status": "passed",
-   "paragraph_boundaries": "Trilingual exhibit with 1 original-language paragraph(s) and 3 translation paragraph(s), stacked by language and split at sentence boundaries.",
-   "speaker_and_quotation_boundaries": "Scripture quotation without dialogue; the wrapper wraps the English rendering only, original script left unwrapped per the site shape.",
-   "source_completeness": "Full verse quoted in every language, each paragraph a byte-verified substring of the cited edition.",
+   "paragraph_boundaries": "Trilingual stack with 1 original-language paragraph(s) and 3 translation paragraph(s), ordered original then translation, split at sentence boundaries.",
+   "speaker_and_quotation_boundaries": "Scripture without dialogue; the wrapper wraps the English rendering only, original script unwrapped per the site shape.",
+   "source_completeness": "Full verse in every language, each paragraph a byte-verified substring of the cited edition.",
    "cue_resolutions": []
   }
  ],
  "rendered_layout": {
   "schema": 1,
-  "artifact_sha256": "b0b7c939be35129a100f93999982bf6ddf07bef404e88a87840b103eb9059c0e",
+  "artifact_sha256": "503350070044d065eab55a1b213e7f0c7d01d515260d486b73510f77bb477d20",
   "engine": "chromium",
   "viewports": [
    {
@@ -4562,7 +4562,7 @@
     ],
     "overflow_px": 0,
     "screenshot": "rendered-1280.png",
-    "screenshot_sha256": "2524f5d7b64915a3b2aa03a87b0093b24f98eb351e490ee0cdd229756a60e2aa"
+    "screenshot_sha256": "890c256cc67f51a8ff95ec68e9b786b714fc8402b04575c3690f8ff4ae3c4579"
    },
    {
     "width": 390,
@@ -5421,40 +5421,25 @@
     ],
     "overflow_px": 0,
     "screenshot": "rendered-390.png",
-    "screenshot_sha256": "7128908f40fe590cd13b4cb61eac011a088dc1a3efc5a2f70d3386e25e8613f9"
+    "screenshot_sha256": "350fd81f738380921d092e693fed9322cda8265a192b80f2f1a19110d680cf9e"
    }
   ]
  },
  "findings": [
   {
-   "id": "RW-ASSEMBLY",
+   "id": "REPAIR-CUES",
    "status": "resolved",
-   "resolution": "Seven-section simple structure assembled with all reused callouts byte-untouched and three new exhibits corpus-exact."
+   "resolution": "Nine passages flagged by the widened 2026-09-23 review patterns rewritten as content; cue count zero."
   },
   {
-   "id": "RW-COUNCIL-45",
+   "id": "REPAIR-REREAD",
    "status": "resolved",
-   "resolution": "Forty-five located findings from the five-role council applied."
+   "resolution": "Prose follow-up seat reread the nine; its three residuals (list repetition, canon referent, states echo) applied."
   },
   {
-   "id": "RW-FOLLOWUP-9",
+   "id": "RECORD-ANCHORS",
    "status": "resolved",
-   "resolution": "Nine follow-up findings from the three-role reread applied."
-  },
-  {
-   "id": "RW-PEER-6",
-   "status": "resolved",
-   "resolution": "Six peer-panel findings applied, including the Kafi footnote marker and the displayed promise-fulfillment continuation."
-  },
-  {
-   "id": "RW-CONFIRM",
-   "status": "resolved",
-   "resolution": "Fidelity follow-up confirmed all changes on the final candidate; one missed poets instance caught and fixed."
-  },
-  {
-   "id": "ACCEPTED-POETS",
-   "status": "accepted-with-reason",
-   "resolution": "The poetry evidence is one taunt line preserved in Lisan al-Arab; all claims now say the poetry the lexicons preserve rather than the poets as an independent layer."
+   "resolution": "Every block observation now quotes four consecutive words of current text; short cards quote whole lines; duplicate observations eliminated."
   }
  ],
  "scope_cues_before": [
