@@ -54,6 +54,8 @@ def review_evidence(bundle):
         sources.append(entry)
     return {'artifact_sha256':bundle['artifact_sha256'],'sources':sources,'contexts':contexts,
             'claims':bundle.get('claims',[]),
+            'citation_ledger_schema':bundle.get('citation_ledger_schema',1),
+            'citation_dispositions':bundle.get('citation_dispositions',{}),
             'provenance':'Original archive is retained unchanged. Context keys hash original raw bytes. JSON escaping and HTML markup are presentation transformations; no source sentences are summarized or selected.'}
 
 
