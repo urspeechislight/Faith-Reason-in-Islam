@@ -213,7 +213,8 @@ def _check(src, register='standard'):
 
     # The shared extractor protects source quotations from prose rewrites.
     import importlib.util
-    shared = Path.home() / '.agents/prose/review.py'
+    bundled = Path(__file__).resolve().with_name('review.py')
+    shared = bundled if bundled.is_file() else Path.home() / '.agents/prose/review.py'
     spec = importlib.util.spec_from_file_location('prose_review', shared)
     review = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(review)

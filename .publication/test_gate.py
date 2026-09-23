@@ -9,6 +9,8 @@ import evidence
 import release_runner
 import json
 import evaluate
+from unittest.mock import patch
+import tempfile
 
 class PublicationTests(unittest.TestCase):
     def test_unmarked_html_is_still_an_article(self):
@@ -63,6 +65,10 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(release_runner.review_packet(packet)['candidate'],packet['candidate'])
         clean=next(row for row in fixtures if row[0]=='direct-prose')
         self.assertIn('does not assess the poets’ motives',clean[1]['candidate'])
+    def test_hosted_validator_uses_bundled_runtime_without_personal_install(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(Path,'home',return_value=Path(directory)):
+            errors=gate.validate_article.check('<html><body><main data-category="commentary"><p>A source gives a date.</p></main></body></html>')
+            self.assertIsInstance(errors,list)
     def test_empty_or_unlocated_evidence_blocks(self):
         self.assertTrue(evidence.verify({'schema':1,'artifact_sha256':evidence.sha('text'),'sources':[]},'text'))
     def test_metadata_is_in_the_actual_reviewer_input(self):
