@@ -2,8 +2,8 @@
   "schema": "2026-09-23.4",
   "status": "approved",
   "reviewer": "Codex conversion review; exact master preserved, hosted final approval pending",
-  "artifact_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
-  "baseline_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
+  "artifact_sha256": "1ac463ffd66e4c7da068a8a7b6ad77d83d9a8a7c03865b1c66fccbd9640cb81c",
+  "baseline_sha256": "1ac463ffd66e4c7da068a8a7b6ad77d83d9a8a7c03865b1c66fccbd9640cb81c",
   "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
   "policy_sha256": "f0cbdc0f841985b67153d6b61be1f89ef0e5de303e91db99af1e2a5a0961b457",
   "blocks": [
@@ -1539,7 +1539,7 @@
   },
   "council": {
     "status": "passed",
-    "reviewed_artifact_sha256": "ba6f6d62e5373a19b39bf9d0dcdb48feee1a32fdf432583675c0d3077fe728da",
+    "reviewed_artifact_sha256": "3bff4373d2afc4b5a248fc2df9c39026cab2914033d21bed189728332548ef4b",
     "profile_sha256": "aa1ec94f859dbf80a7aaa857f0f7e3c6c081bd1768736825fa90617acf3dd344",
     "evidence": "Actual historical advisor/peer findings retained with original provenance; affected prose and source reviewers reread the complete revision and confirmed final corrections. Hosted independent release remains pending.",
     "report": {
@@ -2600,7 +2600,7 @@
     },
     {
       "id": "q0013",
-      "caption": "- Al-Yazdi al-Ha'iri, Ilzam al-Nasib, vol. 1, pp. 129-130, p. 129",
+      "caption": "- Al-Yazdi al-Ha'iri, Ilzam al-Nasib, vol. 1, pp. 129-130, p. 129 — composite biblical paraphrase, including clauses absent from Revelation 12",
       "paragraphs": [
         {
           "id": "q0013:p1",
@@ -4292,7 +4292,7 @@
   ],
   "rendered_layout": {
     "schema": 2,
-    "artifact_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
+    "artifact_sha256": "1ac463ffd66e4c7da068a8a7b6ad77d83d9a8a7c03865b1c66fccbd9640cb81c",
     "engine": "chromium",
     "authored_sha256": "a1f10706e6d3ac9a32fbb134f2d0b84de6b6ab84386e53fe699332689d99445c",
     "viewports": [
@@ -5733,8 +5733,8 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "runs/stars-gap-repair/render-round2-1280.png",
-        "screenshot_sha256": "0f01902b23283a9fe3a95a7ae4c69b52006c9a94d31e9dc267480d72ec48a305"
+        "screenshot": "runs/stars-gap-repair/render-round3-1280.png",
+        "screenshot_sha256": "e7f0755e948826e47c705695dac03aa581aeb7a7b0a17c48a030bc25f031ab2b"
       },
       {
         "width": 390,
@@ -7173,8 +7173,8 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "runs/stars-gap-repair/render-round2-390.png",
-        "screenshot_sha256": "bdcecb8a9bf18b55464ff8ba9d0a173fcd601aff4c16475caa04c06360a6d862"
+        "screenshot": "runs/stars-gap-repair/render-round3-390.png",
+        "screenshot_sha256": "d8727c387129464028a8bad0783b6a3654e5c3937ed5e77365a93e28551326c4"
       }
     ]
   },
@@ -7618,6 +7618,11 @@
       "id": "repair-F-04-speaker",
       "status": "resolved",
       "resolution": "Source adjudication corrected the displayed attribution. Original: > [!info]- Al-Hasan answering, al-Kafi, vol. 1, pp. 573-574 Applied correction: > [!info]- Al-Khidr's testimony, al-Kafi, vol. 1, pp. 573–574"
+    },
+    {
+      "id": "FID-01-caption",
+      "status": "resolved",
+      "resolution": "Hosted run35899650980 objected to the translated source introduction. The preceding authored paragraph already identifies the extra-biblical clauses. The source caption now also explicitly labels this a composite biblical paraphrase including clauses absent from Revelation 12; quoted source wording remains intact."
     },
     {
       "id": "source-final-corrections",
