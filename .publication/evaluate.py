@@ -19,6 +19,11 @@ def fixtures():
         packet={'candidate':text,'artifact_sha256':review.digest(text),'report':{},'council_sha256':review.council_digest({}),'required_disposition_ids':[],'writer_dispositions':[]}
         evidence['artifact_sha256']=packet['artifact_sha256']
         yield name,packet,dict(evidence),expected
+    text='The catalogue names eight poets who composed elegies for Karim. [Source S1]'
+    report={'advisors':[{'role':'fidelity','response':'FID-01: The earlier candidate says twelve poets. The source names eight; correct the count.'}]}
+    packet={'candidate':text,'artifact_sha256':review.digest(text),'report':report,'council_sha256':review.council_digest(report),'required_disposition_ids':sorted(review.council_finding_ids(report)),'writer_dispositions':[]}
+    evidence['artifact_sha256']=packet['artifact_sha256']
+    yield 'corrected-history',packet,dict(evidence),True
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot');a=p.parse_args()

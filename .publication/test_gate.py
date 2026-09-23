@@ -58,7 +58,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(projected['blocks'][1]['text'],'Earlier differing claim')
         self.assertIn('text',json.loads(packet['report']['followup_reviews'][0]['response'])['blocks'][0])
     def test_every_actual_provider_fixture_has_valid_projection_inputs(self):
-        fixtures=list(evaluate.fixtures());self.assertEqual(len(fixtures),3)
+        fixtures=list(evaluate.fixtures());self.assertEqual(len(fixtures),4)
         for name,packet,bundle,expected in fixtures:
             self.assertEqual(bundle['artifact_sha256'],packet['artifact_sha256'])
             self.assertTrue(release_runner.review_evidence(bundle)['contexts'])
