@@ -69,16 +69,9 @@ first, then regenerate its review/handoff when necessary.
 Include explicit paragraph margins; line-height alone spaces lines, not
 paragraphs. The publication template should supply these rules after resets:
 
-```css
-main p { line-height: 1.7; }
-main p + p { margin-block-start: 1em; }
-main :is(.hadith-callout, .quran-callout) { margin-block: 1.25rem; }
-main :is(.hadith-callout, .quran-callout) p + p { margin-block-start: .85em; }
-main :is(.hadith-callout, .quran-callout) .rtl { line-height: 2.1; }
-main :is(.hadith-callout, .quran-callout) cite {
-  display: block; margin-block-start: 1em;
-}
-```
+Use the shared `quotation.css` embedded in both publication templates. Its
+language-specific values and insets are described below; do not duplicate
+competing defaults here.
 
 These are template defaults, not a reason to restyle existing articles during
 an unrelated task. Preserve existing typography and do not put implementation
@@ -92,10 +85,10 @@ expanded. The reader should see paragraph breaks, where quotation begins and
 ends, speaker changes, and where the author's analysis resumes. Check long
 paragraphs by meaning; do not shorten evidence to satisfy a length target.
 
-New version-3 handoffs record callout paragraph boundaries and reject merging,
+Version-3 and version-4 handoffs record callout paragraph boundaries and reject merging,
 splitting or reordering them, even if the flattened words are unchanged. They
 also reject mapped prose blocks rendered as inline elements. Version-2 receipts
-remain valid for existing artifacts; a repair should create a fresh version-3
+remain valid for existing artifacts; a repair should create a fresh version-4
 handoff. This check preserves authored structure; it does not judge whether the
 initial paragraph divisions or CSS are good. Source fidelity and rendered
 inspection remain necessary.
@@ -139,3 +132,25 @@ positive margins cannot prove that a single paragraph is well organized.
 Then pass `--render RENDER.json` to review.py inspect. Its final verification
 and the outgoing-commit gate reject missing, stale or incomplete measurements.
 A passing handoff cannot replace quotation review or browser evidence.
+
+## Quotation inset and compact rhythm
+
+All displayed quotations need an inset from surrounding prose, including inside
+callouts. Keep the source citation at the callout's normal inner edge; inset
+original, transliteration and English paragraphs by 12–16px. Outside callouts,
+use a 20–24px inset. Retain quotation marks for direct speech inside a source and
+use meaningful speaker paragraphs. Never add whitespace to the stored source
+merely to simulate indentation. Insets are CSS, applied in the text direction:
+Arabic/Hebrew from the right, English/Greek/Latin from the left.
+
+Use line-height 1.55–1.6 for English quotations, 1.7 for main prose, and 1.85–2.0
+for Arabic (check the actual vocalized font). Keep quotation text at normal
+reading size. Use paragraph gaps around .7em and a larger 1em gap between original,
+transliteration and translation. Avoid full justification. On narrow screens
+reduce the inset to 12px without shrinking text. Inspect long quotations and
+multiple speakers on desktop/mobile, in print and without JavaScript.
+
+Source paragraph visibility and spacing checks are supplemented by actual inset
+and line-height measurements. No generated labels, color legend, hover-only
+explanation or reader-facing typography commentary is needed. See
+article-sources.md for lexical marks, which stay visible in print.

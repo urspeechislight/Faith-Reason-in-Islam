@@ -6,8 +6,12 @@ import html
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+
+import importlib.util as _ilu
+_sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
+scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
 import re
-VERSION=3
+VERSION=4
 
 def sha(s):return hashlib.sha256(s.encode()).hexdigest()
 def clean(s):return re.sub(r'\s+',' ',html.unescape(s)).strip()
@@ -38,6 +42,7 @@ def link_tokens(s):
     return out
 
 def inline(s):
+    s=scripture.unmark(s)
     if re.search(r'<[A-Za-z/!]',s):raise ValueError('raw HTML in Markdown requires explicit conversion support')
     for a,b,label,target in reversed(link_tokens(s)):s=s[:a]+label+s[b:]
     s=re.sub(r'\*\*(.+?)\*\*',r'\1',s)
@@ -65,7 +70,7 @@ def blocks(source):
             flush();buf_links.extend(source_links(line));buf.append(re.sub(r'^#{1,6}\s+','',line));flush();continue
         buf_links.extend(source_links(line))
         if line.startswith('>'):
-            line=re.sub(r'^>\s?','',line)
+            line=re.sub(r'^(?:>\s?)+','',line)
             line=re.sub(r'^\[!\w+\][-+]?\s*','',line)
         line=re.sub(r'^\s*(?:[-*+] |\d+\. )','',line)
         if line.lstrip().startswith('|'):
@@ -108,9 +113,10 @@ def paragraph_layout(source, records):
 def prepare(source,path='',schema=VERSION):
     records,category=blocks(source)
     if category not in ('debate','exegesis','narration','commentary'):raise ValueError('valid category frontmatter required')
-    if schema not in (2,3):raise ValueError('unsupported handoff schema')
+    if schema not in (2,3,4):raise ValueError('unsupported handoff schema')
     receipt={'schema':schema,'source_path':path,'source_sha256':sha(source),'source_markdown':source,'category':category,'blocks':records,'links':source_links(source),'anchor_map':{},'note_map':{}}
     if schema>=3:receipt['paragraph_layout']=paragraph_layout(source,records)
+    if schema>=4:receipt['scripture_highlights']=scripture.highlights(source,'md')
     return receipt
 
 class Rendered(HTMLParser):
@@ -167,7 +173,14 @@ def verify(source,receipt):
     expected=prepare(receipt['source_markdown'],receipt.get('source_path',''),schema=receipt.get('schema'));errors=[]
     for key in ('schema','source_sha256','category','blocks','links'):
         if receipt.get(key)!=expected[key]:errors.append('invalid handoff '+key)
+    if expected['schema']>=4:errors.extend(scripture.errors(receipt['source_markdown'],'md'));errors.extend(scripture.errors(source,'html'))
     page=Rendered(source)
+    if expected['schema']<4 and (scripture.highlights(source,'html') or scripture.highlights(receipt['source_markdown'],'md')):errors.append('scripture lexical marks require a version-4 handoff')
+    if expected['schema']>=4:
+        if receipt.get('scripture_highlights')!=expected['scripture_highlights']:errors.append('invalid scripture highlight receipt')
+        if scripture.highlights(source,'html')!=expected['scripture_highlights']:errors.append('scripture highlight words, roles, IDs or offsets changed during conversion')
+        errors.extend(scripture.errors(receipt['source_markdown'],'md'))
+        errors.extend(scripture.errors(source,'html'))
     if expected['schema']>=3:
         if receipt.get('paragraph_layout')!=expected['paragraph_layout']:
             errors.append('invalid handoff paragraph_layout')
