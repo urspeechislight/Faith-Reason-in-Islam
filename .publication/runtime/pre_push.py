@@ -29,6 +29,12 @@ def check_update(local,remote,require_release=True):
     errors=[]
     for path in names:
         page=blob(local,path)
+        # Merging main into a branch can introduce an article already published
+        # there. It is not a new article revision in this outgoing change. The
+        # hosted gate independently decides whether its approval is reusable.
+        try:
+            if blob('refs/remotes/origin/main',path)==page:continue
+        except subprocess.CalledProcessError:pass
         pattern=rb'<main\b[^>]*data-category=["\'](?:debate|exegesis|narration|commentary)'
         is_article=bool(re.search(pattern,page))
         if not is_article and remote:
