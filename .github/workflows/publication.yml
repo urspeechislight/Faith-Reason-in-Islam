@@ -1,0 +1,23 @@
+name: Publication validation
+on:
+  push:
+    branches: [workflow/verified-publication]
+permissions:
+  contents: read
+  copilot-requests: write
+jobs:
+  reviewer-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install reviewer client
+        run: npm install --prefix "$RUNNER_TEMP/copilot" @github/copilot@1.0.88
+      - name: Verify independent reviewer access
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          "$RUNNER_TEMP/copilot/node_modules/.bin/copilot" --version
+          "$RUNNER_TEMP/copilot/node_modules/.bin/copilot" -p 'Return only this JSON object: {"reviewer_available":true}' -s --deny-tool '*'
