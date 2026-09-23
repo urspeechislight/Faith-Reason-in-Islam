@@ -1,16 +1,21 @@
-"""Copy only tracked public assets into the Pages artifact after gate success."""
+"""Stage the exact inventory and bytes checked by the successful gate."""
 import json
 from pathlib import Path
 import shutil
 import subprocess
 import sys
-result=json.loads(Path(sys.argv[1]).read_text())
-if result.get('status')!='passed':raise SystemExit('No successful publication check')
-out=Path(sys.argv[2]);out.mkdir(parents=True,exist_ok=False)
-allowed={'.html','.htm','.css','.js','.json','.svg','.png','.jpg','.jpeg','.webp','.ico','.woff','.woff2','.ttf','.pdf','.txt','.xml'}
-for name in subprocess.check_output(['git','ls-files','-z']).decode().strip('\0').split('\0'):
- p=Path(name)
- if any(part.startswith('.') for part in p.parts) or p.suffix.lower() not in allowed:continue
- if p.is_symlink():raise SystemExit('Symlink in public assets: '+name)
- dest=out/p;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
-(out/'.nojekyll').touch()
+from public_files import snapshot
+
+def stage(result_path,out):
+    result=json.loads(Path(result_path).read_text())
+    head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+    if result.get('status')!='passed' or result.get('commit')!=head:
+        raise ValueError('No successful publication check for this commit')
+    current=snapshot()
+    if not current or current!=result.get('public_files'):
+        raise ValueError('Public inventory or bytes changed after review')
+    out=Path(out);out.mkdir(parents=True,exist_ok=False)
+    for name in current:
+        target=out/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(name,target)
+    (out/'.nojekyll').touch()
+if __name__=='__main__':stage(sys.argv[1],sys.argv[2])

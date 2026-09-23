@@ -14,7 +14,7 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
-VERSION = 1
+VERSION = 2
 HON = set('ﷺ﵇﵍﵈﵊﵁﵀ﷻ﷿﵌')
 AR = re.compile(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff\ufb50-\ufdff\ufe70-\ufeff]')
 
@@ -125,8 +125,8 @@ def review_errors(quotes,records):
 def finite(value):
     return isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value)
 
-def render_errors(quotes,record,artifact_sha256):
-    if not quotes:return []
+def render_errors(quotes,record,artifact_sha256,require_render=False):
+    if not quotes and not require_render:return []
     if not isinstance(record,dict):return ['rendered quotation measurements missing']
     errors=[]
     if record.get('schema')!=VERSION or record.get('artifact_sha256')!=artifact_sha256 or record.get('engine')!='chromium':errors.append('rendered quotation evidence missing or stale')
@@ -137,6 +137,9 @@ def render_errors(quotes,record,artifact_sha256):
             errors.append('rendered viewport missing or wrong width');continue
         if not re.fullmatch('[0-9a-f]{64}',str(v.get('screenshot_sha256',''))):errors.append('rendered screenshot evidence missing')
         if not finite(v.get('overflow_px')) or v['overflow_px']>2:errors.append(f'{width}px viewport has horizontal page overflow or missing measurement')
+        if v.get('authored_sha256') != record.get('authored_sha256') or not record.get('authored_sha256'):errors.append('rendered authored text differs from checked HTML')
+        if v.get('hidden_blocks'):errors.append('mapped article text is not visibly rendered: '+', '.join(v['hidden_blocks']))
+        if v.get('pseudo_text'):errors.append('CSS-generated article text is absent from the master')
         rows=v.get('callouts')
         if not isinstance(rows,list) or len(rows)!=len(quotes):errors.append('rendered evidence omits source callouts');continue
         for q,row in zip(quotes,rows):
@@ -145,7 +148,7 @@ def render_errors(quotes,record,artifact_sha256):
             for index,(p,item) in enumerate(zip(q['paragraphs'],row['paragraphs'])):
                 if not isinstance(item,dict) or item.get('sha256')!=p['sha256']:
                     errors.append(p['id']+' rendered text differs');continue
-                if not finite(item.get('height')) or item['height']<=0:errors.append(p['id']+' not visibly rendered')
+                if item.get('visible') is not True or not finite(item.get('height')) or item['height']<=0:errors.append(p['id']+' not visibly rendered')
                 if not finite(item.get('gap_before')) or (index>0 and item['gap_before']<8):errors.append(p['id']+f' lacks visible paragraph spacing at {width}px')
     return errors
 
@@ -154,7 +157,9 @@ def capture(path,output):
     from playwright.sync_api import sync_playwright
     if output.exists():raise ValueError('render output exists; preserve prior audit evidence')
     data=path.read_bytes();quotes=extract(data.decode(),'html')
-    result={'schema':VERSION,'artifact_sha256':sha(data),'engine':'chromium','viewports':[]}
+    import review
+    def authored(text):return sha(json.dumps(review.extract(text,'html')['blocks'],ensure_ascii=False))
+    result={'schema':VERSION,'artifact_sha256':sha(data),'engine':'chromium','authored_sha256':authored(data.decode()),'viewports':[]}
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
         try:
@@ -165,12 +170,23 @@ def capture(path,output):
                 page.set_viewport_size({'width':width,'height':height})
                 # Expand native source/commentary containers before inspecting.
                 page.locator('details').evaluate_all('(els)=>els.forEach(e=>e.open=true)')
-                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all('''els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))''')
+                page.evaluate("""() => {window.articleVisible = e => {
+                    const r=e.getBoundingClientRect();
+                    if(r.height<=0 || r.width<=0 || r.right<=0 || r.left>=innerWidth) return false;
+                    if(e.checkVisibility && !e.checkVisibility({checkOpacity:true,checkVisibilityCSS:true})) return false;
+                    for(let n=e;n;n=n.parentElement){const s=getComputedStyle(n);
+                        if(s.visibility==='hidden'||s.display==='none'||Number(s.opacity)===0||/opacity\\(0(?:%|\\.0+)?\\)/.test(s.filter))return false;}
+                    return !/rgba\\([^)]*,\\s*0\\)/.test(getComputedStyle(e).color);
+                }}""")
+                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
+                hidden=page.locator('[data-note-block]').evaluate_all("els=>els.filter(e=>!window.articleVisible(e)).map(e=>e.dataset.noteBlock)")
+                pseudo=page.locator('main *').evaluate_all("""els=>els.flatMap(e=>['::before','::after'].map(p=>getComputedStyle(e,p).content)).filter(t=>t&&!['none','normal','""'].includes(t)&&/[A-Za-z0-9\\u0600-\\u06ff]/.test(t))""")
                 for row in rows:
                     for item in row['paragraphs']:item['sha256']=sha(flat(item.pop('text')))
                 screenshot=output.with_name(output.stem+f'-{width}.png')
                 page.screenshot(path=str(screenshot),full_page=True)
                 result['viewports'].append({'width':width,'height':height,'callouts':rows,
+                    'authored_sha256':authored(page.content()),'hidden_blocks':hidden,'pseudo_text':pseudo,
                     'overflow_px':page.evaluate('Math.max(0,document.documentElement.scrollWidth-innerWidth)'),
                     'screenshot':str(screenshot),'screenshot_sha256':sha(screenshot.read_bytes())})
         finally:browser.close()

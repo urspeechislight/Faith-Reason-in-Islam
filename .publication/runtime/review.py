@@ -18,7 +18,7 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
-VERSION = '2026-09-23.3'
+VERSION = '2026-09-23.4'
 ROOT = Path(__file__).resolve().parent
 # Validators may load this module by path from another skill directory.
 import importlib.util
@@ -120,8 +120,10 @@ class ProseHTML(HTMLParser):
         for key in ('href','src','id'):
             if key in a:
                 self.links.append((key,a[key]))
-        if tag == 'meta' and a.get('name') in ('description',):
-            self.blocks.append({'kind':'description','text':a.get('content','')})
+        if tag == 'meta' and (a.get('name') or a.get('property')) in ('description','og:description','twitter:description','og:title','twitter:title'):
+            self.blocks.append({'kind':a.get('name') or a.get('property'),'text':a.get('content','')})
+        for attribute in ('alt','title','aria-label'):
+            if a.get(attribute):self.blocks.append({'kind':attribute,'text':a[attribute]})
         classes = a.get('class','').split()
         # Layout and language classes never exempt authored text. Only explicit
         # source containers protect quotations; their evidence is checked separately.

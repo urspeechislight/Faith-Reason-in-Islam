@@ -12,7 +12,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(gate.article_paths(['new.html','nested/unmarked.htm','index.html','facts.html','.publication/index-template.html']),['new.html','nested/unmarked.htm'])
     def test_corpus_export_cannot_change_quote_or_full_context(self):
         raw='source words and qualifying context';note='a candidate'
-        passage={'start':0,'end':12,'quote':raw[:12],'quote_sha256':evidence.sha(raw[:12]),'source_sha256':evidence.sha(raw)}
+        passage={'start':0,'end':12,'source':{'title':'Witness','page':1},'quote':raw[:12],'quote_sha256':evidence.sha(raw[:12]),'source_sha256':evidence.sha(raw)}
         bundle={'schema':1,'artifact_sha256':evidence.sha(note),'sources':[{'id':'S1','kind':'corpus','citation':{'title':'Witness','page':1},'raw':raw,'raw_sha256':evidence.sha(raw),'passage':passage}]}
         self.assertFalse(evidence.verify(bundle,note))
         changed=copy.deepcopy(bundle);changed['sources'][0]['raw']+=' altered'
@@ -20,6 +20,8 @@ class PublicationTests(unittest.TestCase):
         changed=copy.deepcopy(bundle);changed['sources'][0]['passage']['quote']='a different quotation'
         self.assertTrue(evidence.verify(changed,note))
         self.assertTrue(evidence.verify(bundle,note+' revised'))
+        changed=copy.deepcopy(bundle);changed['sources'][0]['citation']['title']='Other work'
+        self.assertTrue(evidence.verify(changed,note))
     def test_empty_or_unlocated_evidence_blocks(self):
         self.assertTrue(evidence.verify({'schema':1,'artifact_sha256':evidence.sha('text'),'sources':[]},'text'))
     def test_metadata_is_in_the_actual_reviewer_input(self):

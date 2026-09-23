@@ -48,6 +48,7 @@ def verify(bundle, note):
         if not source.get('citation'): errors.append(key+': source identity/locus missing')
         if source.get('kind') == 'corpus':
             entry = source['passage']
+            if source['citation'] != entry.get('source'):errors.append(key+': displayed citation contradicts corpus metadata')
             if entry['source_sha256'] != sha(raw) or entry['quote_sha256'] != sha(entry['quote']):
                 errors.append(key+': ledger hash mismatch')
             if raw[entry['start']:entry['end']] != entry['quote']:

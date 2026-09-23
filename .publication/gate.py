@@ -21,6 +21,7 @@ import release_runner
 import review
 import validate_article
 import build_indexes
+import public_files
 
 
 def git(*args):return subprocess.check_output(['git',*args],stderr=subprocess.DEVNULL)
@@ -49,9 +50,7 @@ def prior_success():
 
 
 def article_paths(names):
-    # Removing/changing data-category cannot exempt a page. Only the two named
-    # generated indexes are handled as indexes, never by a caller-supplied label.
-    return [p for p in names if p.lower().endswith(('.html','.htm')) and p not in {'index.html','facts.html'} and not p.startswith('.')]
+    return [p for p in names if public_files.is_article(p)]
 
 
 def packet_for(receipt, page):
@@ -83,7 +82,10 @@ def main():
     # public text must remain generated from the article collection; no new HTML
     # filename may opt into this exception.
     try:
-        public_html=[p for p in names if p.lower().endswith(('.html','.htm')) and not p.startswith('.')]
+        inventory=public_files.snapshot()
+        assets={n:h for n,h in inventory.items() if Path(n).suffix.lower() in public_files.STATIC}
+        if assets!=read(HERE/'assets.json'):raise ValueError('static assets changed; validate rendering and update the checked asset manifest')
+        public_html=[p for p in inventory if p.lower().endswith(('.html','.htm'))]
         if any(review.digest(Path(p).read_bytes())!=legacy.get(p) for p in public_html):
             build_indexes.check(Path.cwd())
         for path in article_paths(names):
@@ -96,14 +98,13 @@ def main():
                 results.append({'path':path,'status':'reused-server-review','commit':prior});continue
             page,receipt,bundle=validate_article_files(path)
             directory=a.output/stem;directory.mkdir()
-            if review.extract(page,'html')['quotes']:
-                quote_layout.capture(Path(path).resolve(),directory/'render.json')
-                errors=quote_layout.render_errors(review.extract(page,'html')['quotes'],read(directory/'render.json'),review.digest(page))
-                if errors:raise ValueError(path+': '+'; '.join(errors))
+            quote_layout.capture(Path(path).resolve(),directory/'render.json')
+            errors=quote_layout.render_errors(review.extract(page,'html')['quotes'],read(directory/'render.json'),review.digest(page),require_render=True)
+            if errors:raise ValueError(path+': '+'; '.join(errors))
             packet=packet_for(receipt,page)
             release_runner.run(packet,bundle,directory/'independent-review',a.client)
             results.append({'path':path,'status':'passed','artifact_sha256':review.digest(raw)})
-        (a.output/'result.json').write_text(json.dumps({'status':'passed','results':results},indent=2)+'\n')
+        (a.output/'result.json').write_text(json.dumps({'status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
         print('Publication checks passed:',sum(r['status']=='passed' for r in results),'fresh reviews;',len(results),'articles accounted for.')
         return 0
     except (OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError) as error:
