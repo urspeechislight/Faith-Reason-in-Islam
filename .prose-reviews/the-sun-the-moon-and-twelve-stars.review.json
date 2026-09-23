@@ -2,8 +2,8 @@
   "schema": "2026-09-23.4",
   "status": "approved",
   "reviewer": "Codex conversion review; exact master preserved, hosted final approval pending",
-  "artifact_sha256": "15277d20a3052d5d52c2c19c999df4910f50b78e0861d58a80afa00db3bb31a6",
-  "baseline_sha256": "15277d20a3052d5d52c2c19c999df4910f50b78e0861d58a80afa00db3bb31a6",
+  "artifact_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
+  "baseline_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
   "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
   "policy_sha256": "f0cbdc0f841985b67153d6b61be1f89ef0e5de303e91db99af1e2a5a0961b457",
   "blocks": [
@@ -1531,7 +1531,7 @@
   },
   "translation_fidelity": {
     "status": "passed",
-    "evidence": "Independent source reviewer checked full article translations and biblical originals, then confirmed corrected speaker attribution, verb senses, complete Kifaya ending and focused excerpts on exact final hash. Archived final-fidelity-assessment-v2.json retains specific limits."
+    "evidence": "Independent source reviewer checked full article translations and biblical originals, then confirmed corrected speaker attribution, verb senses, complete Kifaya ending and focused excerpts on exact final hash. Archived final-fidelity-assessment-v2.json retains specific limits. The hosted reviewer required FID-14, now corrected from after it to after him against the retained source page; final hosted approval is still pending."
   },
   "structural_validation": {
     "status": "passed",
@@ -1539,7 +1539,7 @@
   },
   "council": {
     "status": "passed",
-    "reviewed_artifact_sha256": "e8502731fe6042854bd34001e757d1baf876c62b28719c9eedfa17957720c80c",
+    "reviewed_artifact_sha256": "ba6f6d62e5373a19b39bf9d0dcdb48feee1a32fdf432583675c0d3077fe728da",
     "profile_sha256": "aa1ec94f859dbf80a7aaa857f0f7e3c6c081bd1768736825fa90617acf3dd344",
     "evidence": "Actual historical advisor/peer findings retained with original provenance; affected prose and source reviewers reread the complete revision and confirmed final corrections. Hosted independent release remains pending.",
     "report": {
@@ -1668,6 +1668,12 @@
           "reviewer": "/root/forward_test",
           "reviewed_sha256": "e8502731fe6042854bd34001e757d1baf876c62b28719c9eedfa17957720c80c",
           "response": "{\n  \"schema\": 1,\n  \"assessment_type\": \"Independent source fidelity delta review following the full assessment\",\n  \"artifact\": \"runs/stars-gap-repair/candidate.md\",\n  \"artifact_sha256\": \"e8502731fe6042854bd34001e757d1baf876c62b28719c9eedfa17957720c80c\",\n  \"previous_artifact_sha256\": \"cd9612192fcf136d6c9603c6abfe98e5f7857577e78c12888595cc3ca37db724\",\n  \"assessed_at_utc\": \"2026-09-23T17:19:07.077917+00:00\",\n  \"fidelity_judgment\": \"The five required source corrections are implemented correctly. The inspected delta introduces no new source distortion. No unresolved blocking source-fidelity defect was identified within the documented review scope.\",\n  \"fidelity_result\": \"pass_with_documented_limits\",\n  \"release_approval\": null,\n  \"release_approval_note\": \"This is source adjudication only; hosted release review and publication approval are separate.\",\n  \"required_corrections\": [],\n  \"correction_verification\": [\n    {\n      \"id\": \"FINAL-01\",\n      \"old_removed\": true,\n      \"exact_replacement_found\": true,\n      \"judgment\": \"Implemented exactly\"\n    },\n    {\n      \"id\": \"FINAL-02\",\n      \"old_removed\": true,\n      \"exact_replacement_found\": true,\n      \"judgment\": \"Implemented exactly\"\n    },\n    {\n      \"id\": \"FINAL-03\",\n      \"old_removed\": true,\n      \"exact_replacement_found\": true,\n      \"judgment\": \"Implemented exactly\"\n    },\n    {\n      \"id\": \"FINAL-04\",\n      \"old_removed\": true,\n      \"exact_replacement_found\": true,\n      \"judgment\": \"Implemented exactly\"\n    },\n    {\n      \"id\": \"FINAL-05\",\n      \"old_removed\": true,\n      \"exact_replacement_found\": false,\n      \"judgment\": \"Implemented equivalently: complete narrator quotation followed by the bracketed Abu Basir identification; respondent and questioner correctly distinguished.\"\n    }\n  ],\n  \"delta_review\": {\n    \"q5_qummi\": \"Abu Basir explicitly asks; Abu Abd Allah answers. Narrator quotation is correctly closed.\",\n    \"q6_furat\": \"Furat and Abu Jafar remain transmitters; al-Harith asks al-Husayn. Repaired quotation wrappers preserve roles and content.\",\n    \"q25_khidr\": \"Only paragraph boundaries changed; normalized callout text is identical.\",\n    \"q42_hasan\": \"Only paragraph boundary before direct speech changed; normalized callout text is identical.\",\n    \"smith_van_dyck_hyphen\": \"Typography only; source identity unchanged.\",\n    \"arabic_blocks\": \"Identical to previously assessed candidate, before and after delta.\"\n  },\n  \"verification\": {\n    \"live_candidate_citations\": \"workflow/citations.py verify citations.json candidate.md passed: live slices, metadata and Arabic coverage.\",\n    \"live_full_dossier_export\": \"Full source archive exported after live corpus verification; independent fidelity review still required.\",\n    \"bundle_integrity_errors\": [],\n    \"sources\": 119,\n    \"claims\": 37,\n    \"evidence_file\": \"runs/stars-gap-repair/evidence.json\",\n    \"previous_evidence_preserved\": \"runs/stars-gap-repair/evidence-v1-cd961219.json\",\n    \"original_evidence\": \"Previously verified original-evidence.json retained unchanged.\",\n    \"source_review_reuse\": \"Unchanged sources and claims retain the prior full assessment. This turn reviewed all text differences and refreshed live corpus/dossier checks rather than repeating unchanged source reading.\"\n  },\n  \"limits\": [\n    \"This review establishes source fidelity and the stated limits of inference. It does not authenticate hadith chains, grade reports, establish independence of literary relays, or adjudicate religious truth.\",\n    \"Corpus byte verification cannot establish manuscript accuracy or repair every transcription error. The Arabic is transparently presented as corpus text; known Revelation12:1 discrepancy is disclosed.\",\n    \"The retained biblical delivery sources are digital editions, not a critical manuscript collation. Psalm72 was independently replaced because the original delivery text was corrupt.\",\n    \"Proper-name romanizations in translated chains have not received an exhaustive orthographic audit.\",\n    \"Historical date ranges and work identities are reviewed at the precision used by this article; this is not an exhaustive bibliographic investigation.\",\n    \"Claim mapping is explanatory evidence coverage, not a mechanically complete entailment proof. Full originals permit independent reevaluation.\",\n    \"This assessment is bound to the stated candidate hash and does not approve later edits, rendering, publication, or deployment.\"\n  ],\n  \"prior_full_assessment\": \"runs/stars-gap-repair/final-fidelity-assessment.json\"\n}\n"
+        },
+        {
+          "role": "release",
+          "reviewer": "GitHub controlled reviewer, run35897003711",
+          "reviewed_sha256": "e8502731fe6042854bd34001e757d1baf876c62b28719c9eedfa17957720c80c",
+          "response": "{\"status\":\"blocked\",\"artifact_sha256\":\"e8502731fe6042854bd34001e757d1baf876c62b28719c9eedfa17957720c80c\",\"council_sha256\":\"db16fcd82b5d12fdee03dfe0f97a432181f0ab3c194bbaf8083509449e96e1f4\",\"assessment\":\"The candidate remains blocked by the translation in the Ibn al-Munadi callout: “There is no good in life after it.” The Arabic لا خير في الحياة بعده uses a masculine pronoun that naturally refers to the Mahdi, not to an impersonal “it.” Change the sentence to “There is no good in life after him,” or explicitly justify a different referent. The same unresolved defect is repeated in the fidelity follow-up and peer findings. The candidate also contains no independent release authorization; prior approvals and source-verification hashes do not cure the remaining translation defect.\",\"open_findings\":[\"fidelity:FID-14\",\"peer-2:FID-14\",\"peer-3:FID-14\",\"peer-5:FID-14\",\"followup-5:R-09\",\"release:FID-14\"],\"dispositions\":[{\"id\":\"fidelity:FID-14\",\"status\":\"resolved\",\"evidence\":\"Not resolved: the current callout still reads “There is no good in life after it.” Rewrite it as “There is no good in life after him,” or document a source-based reason for another referent.\"},{\"id\":\"peer-2:FID-14\",\"status\":\"resolved\",\"evidence\":\"Not resolved: the candidate retains “There is no good in life after it.” The accepted correction requires the masculine referent “him,” unless an alternative source-based referent is established.\"},{\"id\":\"peer-3:FID-14\",\"status\":\"resolved\",\"evidence\":\"Not resolved: the candidate retains “There is no good in life after it.” Correct the pronoun to preserve the Arabic referent.\"},{\"id\":\"peer-5:FID-14\",\"status\":\"resolved\",\"evidence\":\"Not resolved: the candidate retains “There is no good in life after it.” Correct it to “There is no good in life after him,” or justify the alternative.\"},{\"id\":\"followup-5:R-09\",\"status\":\"resolved\",\"evidence\":\"The current final verdict avoids the earlier unqualified twelve-star attribution and preserves the count and lineage limitations, but the translation defect identified in the same review remains open under fidelity:FID-14.\"},{\"id\":\"release:FID-14\",\"status\":\"resolved\",\"evidence\":\"Not resolved: “There is no good in life after it” remains in the current candidate and requires source-aligned correction.\"}]}\n\n"
         }
       ],
       "historical_synthesis": "Council synthesis (chairman). The council ran in three rounds on this artifact line. Round one: five role advisors (prose, economy, reader, fidelity, reasoning) reviewed candidate 9a79b039 and returned 113 located findings; the chairman triaged them, accepted 79 with duplicates folded into their strongest form, and rejected the remainder with recorded reasons (thesis-summary and required-anatomy items, unverifiable stylistic preferences, duplicates). Round two: five anonymized peers reviewed the revised candidate e639d0d1 against the dispositions and returned 25 findings; six substantive ones were accepted (Salman report credited with the nine shining stars rather than the twelve-star crown; the Abu Dawud father-clause claim restated as Ibn Hanbal's absence; gradings and witness-mergers removed from the abstract, Facts, and verdict; the closing separated into unnamed Sunni strand and named Imami strand). Round three: the five advisors re-reviewed the final candidate d3ab490a in follow-up form; the re-litigated rejected items were rejected again for the same recorded reasons, and the follow-up's new substantive findings were accepted (the crown-role sentence rewritten so no report is credited with an assignment it does not make; the lineage phrasing made arithmetically exact, eleven of the twelve being Fatimah's descendants; a note added that al-Ha'iri's rendering of Revelation 12 paraphrases loosely and folds in clauses Revelation does not carry). The initial-round and peer-round responses are preserved verbatim in this run's council directory (advisor-*.txt, peer-*.txt, followup-*.txt); the advisors array binds the follow-up responses to the final artifact. Residual decisions recorded: the page-split callout convention is deliberate and documented; the two \"rather than\" contrasts and the beside-vs-throne distinction were ruled genuine; the FK advisory grade sits at 10.6 against a 10.5 ceiling, non-blocking, with the length carrying necessary qualifications.",
@@ -4058,8 +4064,8 @@
         },
         {
           "id": "q0037:p5",
-          "text": "He will remain thus for seven, or eight, or nine years (4). There is no good in life after it (5).",
-          "sha256": "a5fb321fed1cd1517fd78677d54f371b5020c8e0fc83aaf92ba63833fb92097d",
+          "text": "He will remain thus for seven, or eight, or nine years (4). There is no good in life after him (5).",
+          "sha256": "859fbb7daf768a301985f9340f640f2e6d781f6a7a623cdf3f926d076793dfe0",
           "language": "translation-or-other",
           "words": 21,
           "cues": []
@@ -4286,7 +4292,7 @@
   ],
   "rendered_layout": {
     "schema": 2,
-    "artifact_sha256": "15277d20a3052d5d52c2c19c999df4910f50b78e0861d58a80afa00db3bb31a6",
+    "artifact_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
     "engine": "chromium",
     "authored_sha256": "a1f10706e6d3ac9a32fbb134f2d0b84de6b6ab84386e53fe699332689d99445c",
     "viewports": [
@@ -5609,7 +5615,7 @@
                 "visible": true,
                 "height": 27.1875,
                 "gap_before": 13.59375,
-                "sha256": "a5fb321fed1cd1517fd78677d54f371b5020c8e0fc83aaf92ba63833fb92097d"
+                "sha256": "859fbb7daf768a301985f9340f640f2e6d781f6a7a623cdf3f926d076793dfe0"
               }
             ]
           },
@@ -5727,8 +5733,8 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "runs/stars-gap-repair/render-final-1280.png",
-        "screenshot_sha256": "7284abedfea7a2712d0ed95c81f56f90d01fd19e4e8c5f37b5b1ca50afe5a8b5"
+        "screenshot": "runs/stars-gap-repair/render-round2-1280.png",
+        "screenshot_sha256": "0f01902b23283a9fe3a95a7ae4c69b52006c9a94d31e9dc267480d72ec48a305"
       },
       {
         "width": 390,
@@ -7049,7 +7055,7 @@
                 "visible": true,
                 "height": 81.5625,
                 "gap_before": 13.59375,
-                "sha256": "a5fb321fed1cd1517fd78677d54f371b5020c8e0fc83aaf92ba63833fb92097d"
+                "sha256": "859fbb7daf768a301985f9340f640f2e6d781f6a7a623cdf3f926d076793dfe0"
               }
             ]
           },
@@ -7167,8 +7173,8 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "runs/stars-gap-repair/render-final-390.png",
-        "screenshot_sha256": "a07694a5b3a32ce5f4f8a8f81a0a5eab8d0b7157a82e5a8fbef7d701537fc61f"
+        "screenshot": "runs/stars-gap-repair/render-round2-390.png",
+        "screenshot_sha256": "bdcecb8a9bf18b55464ff8ba9d0a173fcd601aff4c16475caa04c06360a6d862"
       }
     ]
   },
@@ -7192,6 +7198,11 @@
       "id": "FQ-06",
       "status": "resolved",
       "resolution": "q0025 testimony now splits into four complete succession groups with dialogue paragraphs afterward; continuous source words remain."
+    },
+    {
+      "id": "FID-14",
+      "status": "resolved",
+      "resolution": "Changed after it to after him in the Ibn al-Munadi translation. The full retained source page predicates the reign of the Mahdi and uses the masculine pronoun afterward. Arabic and every other translated word are unchanged."
     },
     {
       "id": "repair-P-01",

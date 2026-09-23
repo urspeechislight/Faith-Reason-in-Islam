@@ -2659,8 +2659,8 @@
         },
         {
           "id": "q0037:p5",
-          "text": "He will remain thus for seven, or eight, or nine years (4). There is no good in life after it (5).",
-          "sha256": "a5fb321fed1cd1517fd78677d54f371b5020c8e0fc83aaf92ba63833fb92097d",
+          "text": "He will remain thus for seven, or eight, or nine years (4). There is no good in life after him (5).",
+          "sha256": "859fbb7daf768a301985f9340f640f2e6d781f6a7a623cdf3f926d076793dfe0",
           "language": "translation-or-other",
           "words": 21,
           "cues": []
@@ -2817,9 +2817,9 @@
       ]
     }
   ],
-  "protected_sha256": "289c886a0f6beea219e3b7fa156b1c111927d617753ed346d3b5c09e45c89fbf",
+  "protected_sha256": "812a371db11356b5da5793ea81dea9cf117aeac862cc5412bc6127923c0d7a56",
   "links_sha256": "cc915be919dd7a04cad20c9d50e5a78674bae463b0f118d4e7cd672cb79dc58e",
   "schema": "2026-09-23.4",
-  "artifact_sha256": "15277d20a3052d5d52c2c19c999df4910f50b78e0861d58a80afa00db3bb31a6",
+  "artifact_sha256": "ce9837fcfb4d63da378dba26ab361c7f71713af190e3b6be82c4fbc8c23066bd",
   "format": "html"
 }
