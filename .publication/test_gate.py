@@ -65,6 +65,30 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(release_runner.review_packet(packet)['candidate'],packet['candidate'])
         clean=next(row for row in fixtures if row[0]=='direct-prose')
         self.assertIn('does not assess the poets’ motives',clean[1]['candidate'])
+    def test_schema_retry_is_bounded_and_preserves_original_responses(self):
+        import subprocess
+        packet={'candidate':'Eight poets wrote elegies.','report':{'advisors':[{'role':'prose','response':'No defects.'}]},'required_disposition_ids':['prose:response']}
+        packet.update(artifact_sha256=gate.review.digest(packet['candidate']),council_sha256=gate.review.council_digest(packet['report']))
+        bundle={'artifact_sha256':packet['artifact_sha256'],'sources':[{'raw':'Eight poets wrote elegies.','raw_sha256':gate.review.digest('Eight poets wrote elegies.')}]}
+        base={'status':'passed','open_findings':[],'artifact_sha256':packet['artifact_sha256'],'council_sha256':packet['council_sha256'],'assessment':'The complete current candidate preserves the source statement without adding any unsupported inference or framing.'}
+        good=dict(base,dispositions=[{'id':'prose:response','status':'resolved','evidence':'The current candidate states the source count directly and contains no additional framing or unsupported interpretation.'}])
+        short=dict(base,dispositions=[{'id':'prose:response','status':'resolved','evidence':'Direct prose.'}])
+        for responses,expected,calls in [([short,good],True,2),([short,short],False,2),([dict(good,status='blocked',open_findings=['new'])],False,1),([dict(good,artifact_sha256='wrong')],False,1)]:
+            with self.subTest(expected=expected,calls=calls), tempfile.TemporaryDirectory() as directory:
+                sequence=iter(responses)
+                def invoke(command,**kwargs):
+                    kwargs['stdout'].write(json.dumps(next(sequence)));return subprocess.CompletedProcess(command,0)
+                out=Path(directory)/'review'
+                with patch.object(release_runner.shutil,'which',return_value='/fixture/client'),patch.object(release_runner.subprocess,'run',side_effect=invoke) as model:
+                    if expected:result=release_runner.run(packet,bundle,out)
+                    else:
+                        with self.assertRaises(ValueError):release_runner.run(packet,bundle,out)
+                self.assertEqual(model.call_count,calls)
+                self.assertEqual(json.loads((out/'response.txt').read_text()),responses[0])
+                if expected:
+                    self.assertEqual(json.loads(result['response']),good)
+                    self.assertEqual(json.loads((out/'schema-retry/response.txt').read_text()),good)
+                else:self.assertFalse((out/'release.json').exists())
     def test_malformed_blocked_response_cannot_pass_behavioral_test(self):
         def malformed(packet,bundle,out,client):
             out.mkdir(parents=True)

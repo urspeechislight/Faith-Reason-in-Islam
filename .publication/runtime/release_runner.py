@@ -83,7 +83,7 @@ def review_packet(packet):
     return result
 
 
-def run(packet, evidence, output, client='copilot', timeout=600):
+def run(packet, evidence, output, client='copilot', timeout=600, _schema_feedback=None):
     if review.digest(packet['candidate']) != packet['artifact_sha256']:
         raise ValueError('candidate hash mismatch')
     if review.council_digest(packet['report']) != packet['council_sha256']:
@@ -130,6 +130,8 @@ Return blocked for any remaining defect, even if the
 writer calls it a stylistic preference. In assessment, quote the defective
 wording and say what should change. Do not edit or publish anything.
 '''+json.dumps({'policies': policies, 'historical_review_packet': projected, 'source_evidence': review_evidence(evidence)}, ensure_ascii=False)+ '\nCURRENT CANDIDATE (the only text being released):\n'+json.dumps(current,ensure_ascii=False)+ '\nFINAL RESPONSE BINDING: copy these exact strings unchanged into your JSON: '+json.dumps({'artifact_sha256':packet['artifact_sha256'],'council_sha256':packet['council_sha256']})
+    if _schema_feedback is not None:
+        prompt += '\nRESPONSE SCHEMA CORRECTION: Your previous response is preserved below. Reassess the current candidate; do not assume its pass label is correct. Return the complete release JSON again. Every disposition needs at least TWENTY words of specific evidence. The prior short entries were rejected; do not repeat those short explanations. Prior response: '+json.dumps(_schema_feedback,ensure_ascii=False)
     (output/'input.txt').write_text(prompt)
     command = [binary, '-s', '--model', 'auto', '--auto-tier', 'intelligence', '--context', 'long_context', '--available-tools', 'view', '--deny-tool', 'read',
                '--disable-builtin-mcps', '--no-custom-instructions', '--no-auto-update',
@@ -157,6 +159,21 @@ wording and say what should change. Do not edit or publish anything.
     errors = review.release_errors(report, packet['artifact_sha256'])
     (output/'validation.json').write_text(json.dumps({'errors': errors}, indent=2)+'\n')
     if errors:
+        # One schema-only retry. Never retry a substantive block, hash mismatch,
+        # missing finding, malformed JSON, or provider error into an approval.
+        decoded=json.loads(raw) if errors==['independent release dispositions missing or unresolved'] else {}
+        rows=decoded.get('dispositions',[])
+        short_only=(decoded.get('status')=='passed' and decoded.get('open_findings')==[]
+                    and isinstance(rows,list) and bool(rows)
+                    and all(isinstance(row,dict) and str(row.get('id','')).strip()
+                            and row.get('status') in ('resolved','not-a-defect')
+                            and isinstance(row.get('evidence'),str) and row['evidence'].strip()
+                            for row in rows))
+        if short_only and _schema_feedback is None:
+            corrected=run(packet,evidence,output/'schema-retry',client,timeout,_schema_feedback=decoded)
+            (output/'schema-correction.json').write_text(json.dumps({'reason':errors,'original_response_sha256':review.digest(raw),'corrected_response_sha256':review.digest(corrected['response']),'path':'schema-retry'},indent=2)+'\n')
+            (output/'release.json').write_text(json.dumps(corrected,ensure_ascii=False,indent=2)+'\n')
+            return corrected
         raise ValueError('release blocked: '+'; '.join(errors))
     (output/'release.json').write_text(json.dumps(release, ensure_ascii=False, indent=2)+'\n')
     return release
