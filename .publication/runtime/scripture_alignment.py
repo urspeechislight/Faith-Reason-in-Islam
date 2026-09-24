@@ -29,8 +29,15 @@ def words(text: str) -> list:
     recitation guidance rather than words, carry no Romanization, and would
     otherwise demand unmappable spans. Displayed bytes are never changed.
     """
+    # UXLC uses joiners to position meteg: retain them within the original token.
+    # A standalone pe/samekh after sof pasuq is a section marker. Literal letters
+    # elsewhere remain words; never remove them globally.
+    # https://www.tanach.us/Pages/Coding.html and Pages/Instructions.html
     result=[];buf=[]
-    for ch in scripture.unmark(text):
+    text=re.sub(r'(?<=׃)\s*[פס](?=\s|$)',' ',scripture.unmark(text))
+    for ch in text:
+        if ch in {'\u200c','\u200d'} and buf:
+            buf.append(ch);continue
         if ch in ANNOTATION:
             if buf:result.append(''.join(buf).strip("-־"));buf=[]
         elif unicodedata.category(ch)[0] in 'LM':buf.append(ch)

@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 import shutil
 ROOT=Path(__file__).resolve().parent
-FILES=['article-sources.md','native_release.py','publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
-AUTHORING_PROSE=['translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_native_release.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
+FILES=['conversion_review.py','article-sources.md','native_release.py','publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
+AUTHORING_PROSE=['article_scope.py','review_intake.py','test_review_flow.py','translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_native_release.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
 AUTHORING_SKILLS={'islamic-note':['SKILL.md','validate.py','references/markdown.md'],
  'faith-reason-note':['SKILL.md','template-tabs.html','template-flowing.html','references/website.md'],
  'faith-reason-research':['SKILL.md','references/article-modes.md','references/prose-translation.md','references/debate-mode.md','references/research-framework.md']}

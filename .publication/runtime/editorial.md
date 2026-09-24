@@ -8,6 +8,13 @@ article-sources.md own sourcing. This procedure owns the final prose and meaning
 mandatory emphatic closers and backward/forward links. Readability measures and
 phrase scans are cues for review, not proof of good prose.
 
+For website runs, article-build.md owns record creation and ingestion. Use
+`advance`, native `review-request`/`review-accept`, and the final release commands.
+The low-level commands below describe the editorial checks and support note-only
+work; they are not a second website pipeline. Reviewed Markdown converts through
+an exact checked handoff and a separate visual review. Do not duplicate its prose
+judgments for rendered table cells or list items.
+
 1. Complete source verification and translation fidelity review on the working
    draft. Fix quotation boundaries, source metadata, and translations first.
    Inspect every source callout using paragraphs.md, including quotations and

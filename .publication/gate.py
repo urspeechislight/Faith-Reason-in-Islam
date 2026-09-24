@@ -140,7 +140,7 @@ def validate_article_files(path):
     receipt=read(str(base)+'.handoff.json');record=read(str(base)+'.review.json');baseline=read(str(base)+'.baseline.json')
     errors=review.verify_handoff(page,receipt,require_release=False)
     draft=review.inspect_file(Path(path))
-    errors+=review.verify(draft,baseline,record,receipt['source_sha256'],require_release=False)
+    errors+=review.verify_html(page,baseline,record,receipt,require_release=False)
     errors+=validate_article.check(page,register=record.get('register','standard'))
     bundle=read(str(base)+'.evidence.json')
     errors+=evidence.verify(bundle,receipt['source_markdown'])

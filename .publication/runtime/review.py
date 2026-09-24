@@ -54,7 +54,7 @@ COUNCIL_ROLES = {'prose','economy','reader','fidelity','reasoning'}
 
 def policy_digest() -> str:
     # Bind the actual review policy and implementation, not just the prose contract.
-    names = ('contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quote_layout.py','review.py','handoff.py','pre_push.py')
+    names = ('contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','conversion_review.py','quote_layout.py','review.py','handoff.py','pre_push.py')
     return digest(''.join(name + ':' + digest((ROOT/name).read_bytes()) + '\n' for name in names))
 
 def cue_items(blocks: list[dict]) -> list[dict]:
@@ -304,17 +304,31 @@ def council_responses(report: dict) -> list[tuple[str, dict]]:
 
 
 def council_finding_ids(report: dict) -> set[str]:
-    """Inventory both panels, including responses with unnumbered findings.
+    """Inventory declared findings, not incidental IDs quoted in review prose.
 
-    :response requires an assessment of each complete response, so an unfamiliar
-    finding-ID format cannot silently remove a reviewer from the closure check.
+    Every response retains an independent whole-response disposition, covering
+    unnumbered findings and legacy formats. Raw responses remain hash-bound.
     """
+    pattern = r'(?:[A-Z][A-Z0-9]*(?:-[A-Z][A-Z0-9]*)*-\d{1,3}|[A-Z]{1,8}\d{1,3})'
     ids = set()
+    def declared(value):
+        found = set()
+        if isinstance(value, dict):
+            for key, item in value.items():
+                if key == 'id' and isinstance(item, str) and re.fullmatch(pattern, item): found.add(item)
+                elif key == 'open_findings' and isinstance(item, list):
+                    found.update(x.rsplit(':', 1)[-1] for x in item if isinstance(x, str) and re.fullmatch(pattern, x.rsplit(':', 1)[-1]))
+                if isinstance(item, (dict, list)): found.update(declared(item))
+        elif isinstance(value, list):
+            for item in value: found.update(declared(item))
+        return found
     for namespace, item in council_responses(report):
-        ids.add(namespace+':response')
-        ids.update(namespace+':'+identifier for identifier in re.findall(
-            r'\b(?:[A-Z][A-Z0-9]*(?:-[A-Z][A-Z0-9]*)*-\d{1,3}|[A-Z]{1,8}\d{1,3})\b',
-            str(item.get('response', ''))))
+        ids.add(namespace + ':response')
+        raw = str(item.get('response', ''))
+        try: found = declared(json.loads(raw))
+        except (ValueError, TypeError):
+            found = set(re.findall(r'(?m)^\s*(?:[#*>|\-]+\s*|\d+[.)]\s*)*(?:\*\*)?(' + pattern + r')\b', raw))
+        ids.update(namespace + ':' + identifier for identifier in found)
     return ids
 
 
@@ -383,6 +397,16 @@ def verify_handoff(page: str, receipt: dict, require_release: bool = True) -> li
     source = receipt['source_markdown']
     draft = dict(extract(source, 'md'), schema=VERSION, format='md', artifact_sha256=digest(source))
     return ['master review: '+e for e in verify(draft, baseline, record, require_release=require_release)]
+
+
+def verify_html(page, baseline, record, receipt=None, require_release=True):
+    """Reuse master prose only after complete handoff preservation and visual review."""
+    if record.get('kind') == 'verified-conversion-v1':
+        if not receipt: return ['conversion review requires the exact verified master handoff']
+        import conversion_review
+        return conversion_review.errors(page, baseline, record, receipt, require_release)
+    draft = dict(extract(page, 'html'), schema=VERSION, format='html', artifact_sha256=digest(page))
+    return verify(draft, baseline, record, receipt['source_sha256'] if receipt else None, require_release)
 
 
 def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str | None = None, require_release: bool = True) -> list[str]:
@@ -535,7 +559,7 @@ def main(argv=None):
             failures=verify_handoff(args.file.read_text(),receipt)
             if failures:raise ValueError('invalid handoff: '+'; '.join(failures))
             council_source=receipt['source_sha256']
-        errors=verify(draft,baseline,read(args.review),council_source)
+        errors=(verify_html(args.file.read_text(),baseline,read(args.review),receipt if args.handoff else None) if draft['format'] in ('html','htm') else verify(draft,baseline,read(args.review),council_source))
         for error in errors:print('FAIL:',error)
         print('Review record verified; editorial judgments remain the reviewer\'s responsibility.' if not errors else f'{len(errors)} review failure(s)')
         return bool(errors)

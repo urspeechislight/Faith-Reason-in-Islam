@@ -45,6 +45,25 @@ pending new paths, and grants no approval. Then use preflight, the actual
 scripture/source review, evidence, reviews and prepare/release/verify/stage.
 `adopt` and `revise` never manufacture advisor responses or migrate pass labels.
 
+## Keep the requested article isolated
+
+Every new run claims one article slug in its site worktree. A second slug in
+that worktree is rejected. For an existing manifest created before this rule,
+bind the user-supplied URL before continuing:
+
+```bash
+python3 ~/.agents/prose/article_build.py scope RUN/build.json --url REQUESTED_URL
+```
+
+Use `init --url REQUESTED_URL` for new repair runs. Scope records live in the
+worktree's Git metadata. Use a fresh worktree for another authorized article;
+never delete or change a scope record to broaden a task. If a whole-site gate
+names a different article, diagnose its preservation/deployment state separately.
+Do not start repairing it, borrow its reviews, or change the runtime from an
+article session. A runtime defect is workflow maintenance with regression tests,
+not an invitation to relax the article's checks. These local boundaries detect
+mistakes in maintained commands; they cannot police arbitrary shell edits.
+
 ## Start once, before review
 
 Use a new run directory and a working candidate; preserve the current master.
@@ -121,57 +140,68 @@ lists/quotes stop with a diagnostic. Literal source numbering is preserved as qu
 maintained renderer and preservation contract with a fixture when needed; never
 silently remove source content or make a per-article generator.
 
-## Bind actual reviews and check the complete result
+## One mechanical advance, then actual review
 
-Read the existing editorial/council instructions. After preflight run
-`article_build.py reviews RUN/build.json` to create the registered master and
-HTML baselines and pending reviews. This command also binds the HTML render
-capture. Pending templates are not approval. Existing approved reviews can be reused only if their actual verifier
-passes. Do not fill status/hash fields to migrate a stale review.
-
-After source verification and actual master review:
+After init/adopt/revise, use the maintained prerequisite command:
 
 ```bash
-python3 ~/.agents/prose/article_build.py prepare RUN/build.json
-python3 ~/.agents/prose/article_build.py paths RUN/build.json
+python3 ~/.agents/prose/article_build.py advance RUN/build.json \
+  --ledger CITATIONS.json --external EXTERNAL-SOURCES.json --claims CLAIMS.json
 ```
 
-If the exact review files already exist elsewhere, provide both `--baseline`
-and `--review` to prepare; successful validation registers those paths. Prepare
-embeds the actual verified master records into an immutable handoff and pins the
-HTML, source, runtime and review bytes. Prepare can precede native release review. Complete release-request/release-accept
-as described in publication.md; the final verify and stage require the actual
-native response. GitHub makes no model calls.
+Omit inapplicable flags. The manifest saves the exact input paths; subsequent
+`advance` calls and revisions inherit them. This runs rendering preflight,
+live source export into an immutable archive, and pending review creation in
+order. It stops on the first failed stage with its evidence intact. Repeating
+it reuses exact successful artifacts; it never replaces completed judgments.
+A scripture alignment failure requires actual fidelity review below, then
+another `advance`. Do not rename/copy evidence1/2/3 files to guessed paths.
+`paths` prints the authoritative registered paths.
 
-Use the printed HTML/render paths to create the HTML review at the manifest's
-`html_baseline` and `html_review` paths. Reuse the verified master council through
-the handoff as the editorial instructions allow; inspect all rendered content,
-metadata and quotation layout. Run `article_build.py evidence RUN/build.json --ledger CITATIONS.json`
-with applicable `--external`, `--claims` and `--db` flags. The manifest records
-these exact inputs; later revisions inherit them. Each export rechecks the live
-corpus and writes an immutable, content-addressed archive. An existing archive
-from an earlier candidate cannot cause an output-path collision. Then run:
+Complete the actual council under council-article.md and retain its responses,
+identities and original candidate hashes in the pending master record. The
+writer coordinates the work but cannot generate clean observations or invent
+reviewer identities. Then request the editorial judgment and visual inspection:
 
 ```bash
-python3 ~/.agents/prose/article_build.py verify RUN/build.json
+python3 ~/.agents/prose/article_build.py review-request RUN/build.json \
+  --kind master --parent-model ACTIVE_MODEL --output RUN/master-request
+python3 ~/.agents/prose/article_build.py review-request RUN/build.json \
+  --kind render --parent-model ACTIVE_MODEL --output RUN/render-request
 ```
 
-This combines the master approval, handoff preservation, HTML review, render
-measurements and source archive checks. It cannot pass on separate successful
-checks while the embedded master fails. Exact alternative paths can be supplied
-with `--html-baseline`, `--html-review` and `--evidence`; successful verification
-pins them. For publication, success means the exact bundle has a valid native release
-receipt and is ready for protected GitHub checks; deployment is still required. Any later edit invalidates the pinned artifacts.
+Delegate each prompt.txt to a native subagent inheriting the running model.
+The request contains the exact candidate, current schema and relevant evidence.
+The master reviewer completes actual prose, source, cue and council judgments.
+The render reviewer inspects the page and screenshots and returns visual
+findings. HTML uses a verified-conversion record: exact handoff preservation
+plus actual visual review. It does not need another observation on every table
+cell, list item or source caption. Master review and source verification still
+apply to all content. Unmapped/changed text fails conversion and returns to the
+Markdown stage. Generated HTML is never edited independently.
 
-Run `article_build.py stage RUN/build.json` to copy the five verified artifacts
-to the registered worktree. The transaction preserves replaced files and can
-resume after interruption. A site/slug lock prevents overlapping stage commands.
-Other destination changes block staging; inspect them before proceeding. Regenerate indexes, review the diff,
-and use the protected publication branch/PR procedure in publication.md. The
-outgoing-commit and hosted checks validate those exact copied bytes again.
-Never disable branch protection or bypass a failed gate. A failed job requires
-its actual error log; waiting for Pages cannot repair it. Claim publication only
-after the main deployment succeeds and live bytes match the checked commit.
+Ingest each unedited response with the same maintained command:
+
+```bash
+python3 ~/.agents/prose/article_build.py review-accept RUN/build.json \
+  --request RUN/master-request/request.json --response ACTUAL_RESPONSE.json \
+  --agent-id ACTUAL_CHILD_ID --model ACTIVE_MODEL
+```
+
+Use the render request for its response. Blocked, malformed or stale replies are
+retained and grant no approval. Ask the responding reviewer to correct a malformed
+response once; never fill its judgments yourself. A substantive finding returns
+to its source stage and a supported revision. Accepted records are immutable and
+the manifest registers them. No JSON completion, hash-rebinding or port scripts.
+
+After both reviews pass, run `prepare`, `release-request`/`release-accept` from
+publication.md, and `verify`. The final reviewer independently reads the complete
+candidate and retained findings. No external model is called by these commands.
+`stage` copies only the five verified artifacts into the registered worktree.
+The transaction preserves replaced files, resumes interruptions and rejects
+outside changes. Regenerate indexes and follow the protected branch/PR procedure.
+Never disable branch protection or bypass a failed gate. Report publication only
+after the main deployment succeeds and live bytes match the checked output.
 
 ## Scripture before expensive review
 
@@ -179,20 +209,23 @@ The first preflight creates `reviews/scripture-alignment.json` when scripture
 is present. A pending or incomplete record blocks the preflight. The fidelity
 reviewer checks the actual original, complete Romanization and direct English
 against the cited source before approving it. Review every quote now, including
-ones the previous council did not flag. Required fields are demonstrated by
-`scripture_alignment.py prepare SOURCE --record NEW_PATH`; it creates no
-transliteration or approval.
+ones the previous council did not flag. Use the native scripture reviewer before the council:
 
-Each quote contains exact source and Roman tokens. Its `units` list has one
-entry per source token, with zero-based `source_index`, exact `source`,
-`roman_start`, exclusive `roman_end`, and exact `romanization`. Consecutive spans
-must cover every displayed Roman token once. One source word can map to several
-Roman tokens. Preserve phonemic apostrophes, ʿ and ʾ. The named reviewer records a
-specific fidelity assessment in `evidence` and marks reviewed quotations
-`passed`; only a completely reviewed record is `approved`. The mechanical check
-establishes complete alignment, not correct pronunciation or interpretation.
-The native final reviewer receives the full layers, source and alignment for its own
-assessment. Never invent token assignments merely to satisfy coverage.
+```bash
+python3 ~/.agents/prose/article_build.py review-request RUN/build.json \
+  --kind scripture --source-context RETAINED-SOURCE-DOSSIER.json \
+  --parent-model ACTIVE_MODEL --output RUN/scripture-request
+```
+
+Supply the actual original source dossier, including all relevant corpus captures
+and external editions. It may be retained evidence from an older candidate; it
+is source context, never approval of the current text. The request includes the
+current original, Roman and English layers and a pending positional alignment
+schema. Delegate its prompt through a native inherited-model child, then use
+`review-accept` with its unedited response. Run `advance` again. Neither equal
+token counts nor a successful alignment checker establishes linguistic fidelity.
+One source word can map to several Roman tokens; preserve phonemic apostrophes,
+ʿ and ʾ. The final reviewer independently checks the complete layers again.
 
 ## Revise without rebuilding records by hand
 
@@ -201,9 +234,7 @@ Keep the edited Markdown in a separate file, then run:
 ```bash
 python3 ~/.agents/prose/article_build.py revise RUN/build.json \
   --source EDITED.md --output NEXT_RUN/build.json --reason "Concrete correction"
-python3 ~/.agents/prose/article_build.py preflight NEXT_RUN/build.json
-python3 ~/.agents/prose/article_build.py evidence NEXT_RUN/build.json
-python3 ~/.agents/prose/article_build.py reviews NEXT_RUN/build.json
+python3 ~/.agents/prose/article_build.py advance NEXT_RUN/build.json
 ```
 
 Use a new directory and the filename `build.json`. The retained preflight
@@ -234,7 +265,8 @@ approval, changed-block judgments, semantic checks or cue dispositions. Duplicat
 text, changed sections, changed protected quotations/links and stale prior
 reviews require fresh review. No prefix matching or hand-written JSON port
 scripts. Finish the actual affected reviews and full-article coherence check,
-then run prepare, release-request/release-accept, verify and stage normally.
+then ingest actual responses using review-request/review-accept and run prepare,
+release-request/release-accept, verify and stage normally.
 
 `article_build.py status RUN/build.json` reports the recorded stage and next
 command. It does not report publication; inspect the exact GitHub run using

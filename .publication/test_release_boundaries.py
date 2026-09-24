@@ -60,6 +60,12 @@ class ReleaseBoundaryTests(unittest.TestCase):
         self.assertEqual(actual,result['public_files'])
 
     def test_new_synthetic_article_passes_full_gate_and_exact_stage(self):
+        self.synthetic_article(False)
+
+    def test_verified_conversion_passes_full_gate_and_exact_stage(self):
+        self.synthetic_article(True)
+
+    def synthetic_article(self,conversion):
         """Test-only synthetic approvals exercise schemas, never a real article decision."""
         sys.path.insert(0,str(SOURCE/'.publication/authoring/prose'))
         import render_article
@@ -70,6 +76,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
         master=self.root/'synthetic-candidate.md';master.write_text(source)
         baseline=gate.review.inspect_file(master)
         record=test_pipeline.ReviewTests().approved(baseline)
+        record['structural_validation']['status']='passed'
         receipt=gate.handoff.prepare(source,str(master));receipt.update(source_baseline=baseline,source_review=record)
         page,receipt=render_article.render(source,receipt)
         name='synthetic-release-forward.html';Path(name).write_text(page)
@@ -81,6 +88,16 @@ class ReleaseBoundaryTests(unittest.TestCase):
         receipt['source_review']=record
         html_baseline=gate.review.inspect_file(Path(name))
         html_review=test_pipeline.ReviewTests().approved(html_baseline)
+        if conversion:
+            import conversion_review as C
+            capture=self.root/'visual.json';gate.quote_layout.capture(Path(name).resolve(),capture)
+            render=json.loads(capture.read_text());binding=C.binding(page,receipt['source_sha256'],render)
+            response=json.dumps({'request_sha256':'synthetic-intake','status':'passed','findings':[], 'record':{'binding':binding,'status':'passed','open_findings':[],
+                'assessment':'Synthetic fixture only checks the exact retained converted output without making any claim about real source accuracy.',
+                'checks':{k:{'status':'passed','evidence':'Synthetic fixture only: this visual property is recorded for mechanical testing of the checked conversion.'} for k in C.CHECKS}}})
+            html_review=dict(C.pending(page,receipt['source_sha256'],render),status='approved',reviewer='synthetic-visual-child',response=response,
+                native={'agent_id':'synthetic-visual-child','model':'synthetic-parent','parent_model':'synthetic-parent','inherited':True,'request_sha256':'synthetic-intake','response_sha256':gate.review.digest(response)})
+
         base=Path('.prose-reviews/synthetic-release-forward')
         for suffix,value in [('.handoff.json',receipt),('.baseline.json',html_baseline),('.review.json',html_review)]:
             Path(str(base)+suffix).write_text(json.dumps(value)+'\n')

@@ -44,3 +44,11 @@ actual affected review. A legacy handoff without a usable manifest uses `adopt`.
 Never copy fixture approvals, patch receipt hashes, or edit generated HTML. Keep
 project work on Titan; use the versioned bundle's tests for maintenance separately
 from the article run. Reading these instructions does not migrate an old receipt.
+
+Bind the supplied article URL to its run with `article_build.py scope` when
+resuming an older manifest. One worktree serves one requested article. A failure
+on another page does not authorize repairing it. Use `advance` for mechanical
+prerequisites and native `review-request`/`review-accept` for actual master,
+scripture and visual judgments. HTML conversion reuses verified master content;
+do not write duplicate per-cell observations, receipt-fill scripts, or modified
+source archives to obtain a pass. Read article-build.md for these commands.

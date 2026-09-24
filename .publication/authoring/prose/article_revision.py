@@ -9,6 +9,7 @@ from types import SimpleNamespace
 import shutil
 import tempfile
 import review
+import conversion_review
 import scripture_alignment
 
 
@@ -140,6 +141,28 @@ def revise(B,a):
     print('Revision created:',target);print('Next: preflight, evidence, reviews, and real review. Prior approvals were not copied.');return 0
 
 
+def advance(B,a):
+    """Run mechanical prerequisites in order; stop before any model judgment."""
+    data=B.load(a.manifest)
+    recipe=dict(data.get('evidence_recipe',{}))
+    for key in ['ledger','external','claims','db']:
+        value=getattr(a,key,None)
+        if value:
+            if not value.is_file():raise ValueError('missing source recipe input: '+str(value))
+            recipe[key]=str(value.resolve())
+    if recipe:
+        data['evidence_recipe']=recipe;B.write(a.manifest,data)
+    result=B.preflight(SimpleNamespace(manifest=a.manifest))
+    if result:return result
+    evidence_export(B,SimpleNamespace(manifest=a.manifest))
+    reviews(B,SimpleNamespace(manifest=a.manifest))
+    data=B.load(a.manifest)
+    if data.get('ready'):return status(B,a)
+    pending=[label for label,key in [('master','review'),('render','html_review')] if B.read(data['paths'][key]).get('status')!='approved']
+    print('Mechanical prerequisites passed. Next:',('review-request/review-accept for '+', '.join(pending)) if pending else 'prepare; existing accepted reviews retained')
+    return 0
+
+
 def baseline(B,path,draft):
     if path.exists():
         if B.read(path)!=draft:raise ValueError('review baseline differs; create a revision instead of replacing it')
@@ -152,7 +175,7 @@ def reviews(B,a):
         draft=review.inspect_file(path);bp=Path(data['paths']['baseline' if label=='master' else 'html_baseline']);rp=Path(data['paths']['review' if label=='master' else 'html_review'])
         baseline(B,bp,draft)
         if not rp.exists():
-            record=review.template(draft,draft)
+            record=(conversion_review.pending(path.read_text(),review.digest(source),B.read(directory/'render.json') if (directory/'render.json').is_file() else None) if label=='html' else review.template(draft,draft))
             historical=a.manifest.resolve().parent/'previous.review.json'
             if label=='master' and historical.is_file():
                 previous=B.read(historical)
@@ -162,7 +185,8 @@ def reviews(B,a):
             if label=='html' and (directory/'render.json').is_file():record['rendered_layout']=B.read(directory/'render.json')
             B.write(rp,record)
         elif B.read(rp).get('artifact_sha256')!=draft['artifact_sha256']:raise ValueError('review record belongs to earlier bytes; create a revision')
-    print('Registered master and HTML review records ready; approvals remain pending.');return 0
+    data=B.load(a.manifest)
+    print('Registered review states:',', '.join(label+'='+str(B.read(data['paths'][key]).get('status')) for label,key in [('master','review'),('render','html_review')])+'. Existing records retained; no approval generated.');return 0
 
 
 def reuse(B,a):
@@ -199,11 +223,11 @@ def evidence_export(B,a):
     for key in ['ledger','external','claims','db']:
         value=getattr(a,key,None)
         if value:recipe[key]=str(value.resolve())
-    if 'ledger' not in recipe:raise ValueError('first evidence export requires --ledger; later revisions inherit its exact path')
+    if not recipe.get('ledger') and not recipe.get('external'):raise ValueError('first evidence export requires --ledger and/or --external; later revisions inherit the exact paths')
     recipe.setdefault('db','/home/fahmy/code/islamic/index/corpus.db')
     alignment_path=Path(data['paths'].get('scripture_review',a.manifest.parent/'reviews/scripture-alignment.json'))
     alignment=B.read(alignment_path) if alignment_path.exists() else None
-    bundle=B.evidence.export(recipe['db'],source,B.read(recipe['ledger']),B.read(recipe['external']) if recipe.get('external') else None,B.read(recipe['claims']) if recipe.get('claims') else None,alignment=alignment)
+    bundle=B.evidence.export(recipe['db'],source,B.read(recipe['ledger']) if recipe.get('ledger') else {'schema':1,'passages':[]},B.read(recipe['external']) if recipe.get('external') else None,B.read(recipe['claims']) if recipe.get('claims') else None,alignment=alignment)
     key=review.digest(json.dumps(bundle,sort_keys=True,ensure_ascii=False));path=a.manifest.resolve().parent/'evidence'/key/'sources.json'
     if path.exists():
         if B.read(path)!=bundle:raise ValueError('immutable evidence archive was altered')
@@ -302,15 +326,20 @@ def status(B,a):
         print(json.dumps(result,indent=2));return 0
     try:
         source,directory,_=B.current_build(data)
-        result.update(state='needs-evidence-and-reviews',next='evidence; reviews; complete actual review')
+        result.update(state='needs-evidence-and-reviews',next='advance')
+        review_paths=[Path(data['paths'][k]) for k in ('review','html_review')]
+        ep=Path(data['paths']['evidence'])
+        if ep.is_file() and all(p.is_file() for p in review_paths) and not B.evidence.verify(B.read(ep),source):
+            pending=[label for label,p in zip(('master','render'),review_paths) if B.read(p).get('status')!='approved']
+            result.update(state='awaiting-review' if pending else 'needs-prepare',next='review-request/review-accept for '+', '.join(pending) if pending else 'prepare')
         if data.get('ready'):
             import contextlib,io
             with contextlib.redirect_stdout(io.StringIO()):
-                B.verify(SimpleNamespace(manifest=a.manifest,html_baseline=None,html_review=None,evidence=None,read_only=True))
+                B.verify(SimpleNamespace(manifest=a.manifest,html_baseline=None,html_review=None,evidence=None,read_only=True,native_pending=data['ready']['status']=='awaiting-native-review'))
             result['validated']=True
         if data.get('staging'):result.update(state='staging-interrupted',next='stage')
         elif data.get('staged'):result.update(state='staged',next='inspect Git diff and publication status')
-        elif data.get('ready'):result.update(state=data['ready']['status'],next='verify' if data['ready']['status']!='prepared-for-publication' else 'stage')
+        elif data.get('ready'):result.update(state=data['ready']['status'],next='release-request' if data['ready']['status']=='awaiting-native-review' else 'verify' if data['ready']['status']!='prepared-for-publication' else 'stage')
     except (OSError,ValueError,KeyError,TypeError) as exc:
         result.update(state='blocked',validated=False,next='resolve the located verification failure');result['errors'].append(str(exc))
     print(json.dumps(result,indent=2));return 1 if result['errors'] else 0
