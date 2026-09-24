@@ -62,8 +62,12 @@ Style checks do not replace that comparison. Return exactly the requested JSON
 keys with nonempty string values, no fences or commentary. Use escaped newlines
 inside strings for paragraph breaks.
 
-Mark direct-speech paragraphs with Markdown `> ` inside the translation string;
-keep narration and isnad unprefixed. Assembly adds the outer callout marker,
-producing `> >` for speech. Separate paragraphs with `\n\n`. Use one nested
-level and preserve every word and its order. Follow paragraphs.md for the
-compact source-callout example; do not leave long chains joined to speeches.
+Separate the isnad (transmission chain) from the matn (the report itself).
+Keep the isnad unprefixed. Prefix EVERY matn paragraph with Markdown `> ` in
+the translation string, including narrative, actions, speech tags and dialogue.
+Assembly adds the outer callout marker: isnad becomes `>`, matn becomes `> >`.
+A new speaker gets a paragraph at the SAME matn depth, never a deeper inset.
+Use escaped `\n\n` between paragraphs and retain every word in source order.
+When a report has no isnad, the entire report is matn. Quotation marks still
+identify speech within it. Do not guess an ambiguous chain/body boundary;
+flag it for source review. Follow paragraphs.md for the compact example.

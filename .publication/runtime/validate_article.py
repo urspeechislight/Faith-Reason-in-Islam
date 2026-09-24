@@ -298,7 +298,7 @@ def _check(src, register='standard'):
         art = am.group(0)
         h5s = re.findall(r'<h5 class="analysis-heading">', art)
         art_index=HTMLIndex(art);art_index.feed(art)
-        bqs=[n for n in art_index.nodes if n['tag']=='blockquote' and 'source-speech' not in n['attrs'].get('class','').split()]
+        bqs=[n for n in art_index.nodes if n['tag']=='blockquote' and not set(n['attrs'].get('class','').split()) & {'source-speech','source-matn'}]
         if len(h5s) == 1 and len(bqs) <= 1 and '<h3' in art:
             h5 = re.search(r'<h5 class="analysis-heading">([^<]*)</h5>', art).group(1)[:40]
             errs.append(f'single-exhibit subsection carries a redundant subheading ("{h5}"); an h5 must partition distinct exhibits or add a claim the h3 lacks')
@@ -326,7 +326,7 @@ def _check(src, register='standard'):
                     break
         scope_index=HTMLIndex(sc);scope_index.feed(sc)
         for quote in sorted(scope_index.nodes,key=lambda n:n['start']):
-            if quote['tag']!='blockquote' or 'source-speech' in quote['attrs'].get('class','').split():continue
+            if quote['tag']!='blockquote' or set(quote['attrs'].get('class','').split()) & {'source-speech','source-matn'}:continue
             b = quote['start']
             if not any(sc[e:b].strip() == '' for e in ends):
                 errs.append('every quoted callout carries its own fact card immediately above it; a callout without an adjacent Source/Claim card fails (first offender at offset %d in its subsection)' % b)
@@ -446,10 +446,10 @@ def _check(src, register='standard'):
             continue
         classes = set(node['attrs'].get('class', '').split())
         kind = next((k for k in ('quran-callout', 'hadith-callout') if k in classes), None)
-        if 'source-speech' in classes:
+        if classes & {'source-speech','source-matn'}:
             parents=[n for n in index.nodes if n['tag']=='blockquote' and n['start']<node['start'] and n['end']>node['end']]
-            if (len(parents)!=1 or not set(parents[0]['attrs'].get('class','').split()) & {'hadith-callout','quran-callout'} or node['attrs'].get('data-quote-role')!='speech'):
-                errs.append('nested speech requires one source callout parent and its explicit speech role')
+            if (len(parents)!=1 or not set(parents[0]['attrs'].get('class','').split()) & {'hadith-callout','quran-callout'} or node['attrs'].get('data-quote-role') not in ('speech','matn')):
+                errs.append('nested quoted body requires one source callout parent and its explicit role')
         if kind:
             callouts.append((kind, node, index.inner(node)))
 

@@ -1,6 +1,6 @@
 /* Quotation presentation. Source and translation words are never changed. */
 main { line-height: 1.7; }
-main blockquote:not(.hadith-callout):not(.quran-callout):not(.source-speech) {
+main blockquote:not(.hadith-callout):not(.quran-callout):not(.source-speech):not(.source-matn) {
   margin-block: 1.25rem;
   margin-inline: 1.25rem 0;
   padding-inline-start: .75rem;
@@ -34,14 +34,14 @@ mark[data-term="2"] { text-decoration-style: double; }
 @media (max-width: 480px) {
   main :is(.hadith-callout, .quran-callout) { padding: 1rem; }
   main :is(.hadith-callout, .quran-callout) p { margin-inline-start: .75rem; }
-  main blockquote:not(.hadith-callout):not(.quran-callout):not(.source-speech) { margin-inline-start: .75rem; }
+  main blockquote:not(.hadith-callout):not(.quran-callout):not(.source-speech):not(.source-matn) { margin-inline-start: .75rem; }
 }
 @media print {
   mark[data-term] { color: inherit; background: transparent; }
 }
 
-/* A nested Markdown quote marks direct speech inside its complete source. */
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech {
+/* A nested Markdown quote marks the complete matn, including narration and speech. */
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) {
   margin-block: .375rem;
   margin-inline: 1rem 0;
   padding-block: 0;
@@ -50,27 +50,27 @@ main :is(.hadith-callout, .quran-callout) > blockquote.source-speech {
   border-inline-start: 1px solid #c7bca9;
   line-height: 1.55;
 }
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech p {
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) p {
   margin-inline: 0;
   line-height: 1.55;
 }
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech p + p,
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech + p {
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) p + p,
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) + p {
   margin-block-start: .375rem;
 }
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech [lang="ar"] { line-height: 1.95; }
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech :is([lang="he"], [lang="arc"], [lang="syr"]) { line-height: 1.85; }
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) [lang="ar"] { line-height: 1.95; }
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) :is([lang="he"], [lang="arc"], [lang="syr"]) { line-height: 1.85; }
 @media (max-width: 480px) {
-  main :is(.hadith-callout, .quran-callout) > blockquote.source-speech { margin-inline-start: .75rem; }
+  main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn) { margin-inline-start: .75rem; }
 }
 
-main :is(.hadith-callout, .quran-callout) > p:not(.translation) + blockquote.source-speech:has(> p.translation:first-child),
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech:has(> p:not(.translation):last-child) + p.translation,
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech[dir="rtl"] + blockquote.source-speech[dir="ltr"] {
+main :is(.hadith-callout, .quran-callout) > p:not(.translation) + blockquote:is(.source-speech, .source-matn):has(> p.translation:first-child),
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn):has(> p:not(.translation):last-child) + p.translation,
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn)[dir="rtl"] + blockquote:is(.source-speech, .source-matn)[dir="ltr"] {
   margin-block-start: 1em;
 }
 
-main :is(.hadith-callout, .quran-callout) > blockquote.source-speech:has(> p:not(.transliteration):last-child) + p.transliteration,
-main :is(.hadith-callout, .quran-callout) > p.transliteration + blockquote.source-speech:has(> p.translation:first-child) {
+main :is(.hadith-callout, .quran-callout) > blockquote:is(.source-speech, .source-matn):has(> p:not(.transliteration):last-child) + p.transliteration,
+main :is(.hadith-callout, .quran-callout) > p.transliteration + blockquote:is(.source-speech, .source-matn):has(> p.translation:first-child) {
   margin-block-start: 1em;
 }

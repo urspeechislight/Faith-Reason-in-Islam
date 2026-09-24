@@ -134,6 +134,8 @@ def render_source(item,receipt,options):
     layout=receipt['paragraph_layout'][identifier]
     if [H.inline(p) for p in parts]!=layout['paragraphs']:
         raise ValueError(identifier+': source paragraph mapping differs')
+    boundary_errors=callout_structure.matn_errors(callout_structure.paragraphs(item['raw'][1:])) if kind!='quote' else []
+    if boundary_errors:raise ValueError(identifier+': '+('; '.join(boundary_errors)).lower())
     rendered=[];role='original';speech_open=False;speech_direction=None;speech_role=None
     depths=layout.get('quote_depths',[0]*len(parts))
     original_count=options.get('source_paragraphs',{}).get(H.inline(caption))
@@ -154,13 +156,14 @@ def render_source(item,receipt,options):
         elif role=='transliteration':attrs='class="italic transliteration"'
         else:attrs='class="translation" lang="en"'
         if role=='translation' and kind!='quote' and callout_structure.mixed_chain(H.inline(raw)):
-            raise ValueError(identifier+': separate the long isnad from direct speech in the master; use > > for the speech')
+            raise ValueError(identifier+': separate the long isnad from direct speech in the master; use > > for the complete matn')
         depth=depths[index]
         direction='rtl' if 'dir="rtl"' in attrs else 'ltr'
         if speech_open and (not depth or direction!=speech_direction or role!=speech_role):
             rendered.append('</blockquote>');speech_open=False
         if depth and not speech_open:
-            rendered.append(f'<blockquote class="source-speech" data-quote-role="speech" dir="{direction}">');speech_open=True;speech_direction=direction;speech_role=role
+            quote_role='speech' if kind=='quote' else 'matn'
+            rendered.append(f'<blockquote class="source-{quote_role}" data-quote-role="{quote_role}" dir="{direction}">');speech_open=True;speech_direction=direction;speech_role=role
         rendered.append(f'<p {attrs}>{inline(raw,receipt)}</p>')
     if speech_open:rendered.append('</blockquote>')
     css='quran-callout' if kind=='quote' else 'hadith-callout'
