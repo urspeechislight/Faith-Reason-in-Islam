@@ -22,6 +22,12 @@ def alignment(text):
 
 
 class AlignmentTests(unittest.TestCase):
+    def test_zwj_and_hebrew_section_markers_are_not_words(self):
+        joined=scripture_note('אֱ\u200dלֹהִים דֶּבֶר פ','ʾElohim diber','God spoke')
+        record=alignment(joined);self.assertEqual(A.errors(joined,record),[])
+        counted=A.inventory(joined)[0]
+        self.assertEqual(counted['source_tokens'],['אֱלֹהִים','דֶּבֶר'])
+        self.assertEqual(counted['roman_tokens'],['ʾElohim','diber'])
     def test_complete_and_partial_layers(self):
         source=scripture_note('alpha beta gamma','alpha beta gamma','three words')
         record=alignment(source);self.assertEqual(A.errors(source,record),[])
@@ -62,6 +68,35 @@ class RevisionTests(ManifestTests):
         self.assertEqual(self.call('verify',self.manifest),1)
         with contextlib.redirect_stdout(io.StringIO()):self.assertEqual(finish_fixture(B,self.manifest),0)
         self.assertEqual(self.call('verify',self.manifest),0)
+    def test_draft_and_note_stage_refuse_site_writes(self):
+        self.init();data=B.read(self.manifest)
+        before={str(p):p.read_bytes() for p in self.site.rglob('*') if p.is_file()} if hasattr(self,'site') else None
+        for delivery in ['draft','note']:
+            data['delivery']=delivery;B.write(self.manifest,data)
+            self.assertEqual(self.call('stage',self.manifest),1)
+        self.assertNotIn('staged',B.read(self.manifest))
+
+    def test_status_revalidates_records_without_mutating_manifest(self):
+        self.ready();before=self.manifest.read_bytes()
+        self.assertEqual(self.call('status',self.manifest),0)
+        self.assertEqual(self.manifest.read_bytes(),before)
+        B.write(B.read(self.manifest)['paths']['html_review'],{})
+        self.assertEqual(self.call('status',self.manifest),1)
+        self.assertEqual(self.manifest.read_bytes(),before)
+
+    def test_adopt_keeps_old_source_and_review_unapproved(self):
+        self.ready();self.assertEqual(self.call('stage',self.manifest),0)
+        data=B.read(self.manifest);receipt=Path(data['ready']['paths']['handoff']);raw=receipt.read_bytes()
+        output=self.root/'adopted'/'build.json'
+        self.assertEqual(self.call('adopt',output,'--handoff',receipt,'--site-root',data['paths']['site_root'],'--slug',data['slug']),0)
+        adopted=B.read(output)
+        self.assertIsNone(adopted['ready']);self.assertEqual(adopted['builds'],[])
+        self.assertEqual(self.call('status',output),0)
+        self.assertEqual((output.parent/'previous.handoff.json').read_bytes(),raw)
+        self.assertEqual(Path(adopted['paths']['source']).read_text(),B.read(receipt)['source_markdown'])
+        self.assertFalse(Path(adopted['paths']['review']).exists())
+        self.assertEqual(self.call('adopt',output,'--handoff',receipt,'--site-root',data['paths']['site_root'],'--slug',data['slug']),1)
+
     def test_native_request_accept_preserves_prior_record_and_stages(self):
         from test_native_release import response
         self.ready();old=Path(B.read(self.manifest)['paths']['review']);before=old.read_bytes();request=self.root/'native-request'

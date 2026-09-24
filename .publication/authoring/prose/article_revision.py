@@ -12,6 +12,36 @@ import review
 import scripture_alignment
 
 
+def adopt(B,a):
+    """Import a legacy handoff as retained history into a fresh unapproved run."""
+    target=a.manifest.resolve()
+    if target.name!='build.json' or target.parent.exists():raise ValueError('adopt requires a new directory ending in build.json')
+    raw=a.handoff.read_bytes();receipt=json.loads(raw)
+    old=receipt.get('source_markdown')
+    if not isinstance(old,str) or review.digest(old)!=receipt.get('source_sha256'):raise ValueError('legacy handoff source hash mismatch; recover the original source first')
+    text=a.source.read_text() if a.source else old
+    target.parent.parent.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='.adopt-',dir=target.parent.parent) as temporary:
+        root=Path(temporary);candidate=root/'candidate.md';candidate.write_text(text)
+        args=SimpleNamespace(manifest=root/'build.json',source=candidate,site_root=a.site_root,slug=a.slug,operation='repair',delivery=a.delivery,baseline=None,review=None,config=a.config)
+        import contextlib,io
+        with contextlib.redirect_stdout(io.StringIO()):B.init(args)
+        data=B.read(args.manifest)
+        for key,value in data['paths'].items():
+            path=Path(value)
+            if path.is_relative_to(root):data['paths'][key]=str(target.parent/path.relative_to(root))
+        data['imported_history']={'path':str(a.handoff.resolve()),'sha256':B.sha_bytes(raw),'approval':'none'}
+        (root/'previous.handoff.json').write_bytes(raw);(root/'previous.md').write_text(old)
+        for key,name in [('source_baseline','previous.baseline.json'),('source_review','previous.review.json')]:
+            if isinstance(receipt.get(key),dict):B.write(root/name,receipt[key])
+        B.write(root/'revision.json',{'schema':1,'parent':data['imported_history'],'artifact_sha256':review.digest(text),'blocks':mapping(old,text),'approval':'none'})
+        B.write(args.manifest,data)
+        shutil.move(str(root),str(target.parent))
+    print('Legacy history retained without approval:',target)
+    print('Next: preflight, complete source alignment, evidence, reviews and actual affected review. Never rebind historical approval hashes.')
+    return 0
+
+
 def previous_source(B,data):
     row=next((b for b in data['builds'] if b['id']==data.get('latest_build')),None)
     if not row:raise ValueError('parent has no retained preflight; preserve a source snapshot before revising')
@@ -207,6 +237,7 @@ def destination_allowed(B,data):
 
 def stage(B,a):
     data=B.load(a.manifest)
+    if data.get('delivery')!='publish':raise ValueError('stage requires publish delivery; draft and note output must remain in the run directory')
     root=Path(tempfile.gettempdir())/('article-build-locks-'+str(os.getuid()))
     root.mkdir(mode=0o700,exist_ok=True)
     key=review.digest(str(Path(data['paths']['site_root']).resolve())+'/'+data['slug'])
@@ -267,11 +298,19 @@ def stage_locked(B,a):
 
 def status(B,a):
     data=B.load(a.manifest);result={'manifest':str(a.manifest.resolve()),'slug':data['slug'],'state':'needs-preflight','next':'preflight','errors':[]}
+    if not data.get('latest_build'):
+        print(json.dumps(result,indent=2));return 0
     try:
         source,directory,_=B.current_build(data)
         result.update(state='needs-evidence-and-reviews',next='evidence; reviews; complete actual review')
+        if data.get('ready'):
+            import contextlib,io
+            with contextlib.redirect_stdout(io.StringIO()):
+                B.verify(SimpleNamespace(manifest=a.manifest,html_baseline=None,html_review=None,evidence=None,read_only=True))
+            result['validated']=True
         if data.get('staging'):result.update(state='staging-interrupted',next='stage')
         elif data.get('staged'):result.update(state='staged',next='inspect Git diff and publication status')
         elif data.get('ready'):result.update(state=data['ready']['status'],next='verify' if data['ready']['status']!='prepared-for-publication' else 'stage')
-    except (OSError,ValueError,KeyError,TypeError) as exc:result['errors'].append(str(exc))
-    print(json.dumps(result,indent=2));return 0
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        result.update(state='blocked',validated=False,next='resolve the located verification failure');result['errors'].append(str(exc))
+    print(json.dumps(result,indent=2));return 1 if result['errors'] else 0

@@ -53,6 +53,22 @@ class TranslationTests(unittest.TestCase):
                 elif field=='style':self.style.write_text('Changed style.')
                 else:self.args[-1]='synthetic/glm-other'
                 self.assertEqual(self.run_engine(),(0,1))
+    def test_archived_chapter_covers_multiverse_passage(self):
+        import json as _json
+        chapter = _json.dumps([{"pk": 1, "verse": 4, "text": "αβ γα"}, {"pk": 2, "verse": 5, "text": "δε ζη"}])
+        import evidence
+        self.assertIn("αβ γα δε ζη", [q for q in evidence.archived_text(chapter)])
+        note = "> [!quote]- Test 4-5, Edition\n> αβ γα δε ζη\n>\n> *ab ga de ze*\n>\n> \"Words\""
+        self.assertEqual(evidence.scripture_coverage(note, evidence.archived_text(chapter)), [])
+
+    def test_scripture_coverage_survives_combining_mark_order(self):
+        decomposed = "\u05d5\u05bc\u05c1\u05dc\u05b0"  # vav+dagesh+shin-dot+hiriq, decomposed order
+        composed = "\u05d5\u05bc\u05c1\u05dc\u05b0"
+        note = "> [!quote]- Test verse, Testus Receptus\n> " + composed + " diber\n>\n> *walc-shel diber*\n>\n> \"God spoke\""
+        archived = "prefix " + decomposed + " diber suffix"
+        import evidence
+        self.assertEqual(evidence.scripture_coverage(note, [archived]), [])
+
     def test_missing_provenance_rejected(self):
         self.out.write_text(json.dumps({'u':'He came home.'}))
         self.assertEqual(self.run_engine(),(0,1))
@@ -176,12 +192,12 @@ class ReviewTests(unittest.TestCase):
             item.update(status='passed',blocks=[b['id'] for b in draft['blocks']],evidence='Synthetic fixture checks record completeness only, never approves real prose.')
         out['council'].update(status='passed',reviewed_artifact_sha256=draft['artifact_sha256'],
             profile_sha256=r.digest((r.ROOT/'council-article.md').read_bytes()),report={
-                'advisors':[{'role':role,'reviewer':'synthetic test only',
+                'advisors':[{'role':role,'reviewer':'synthetic advisor '+role,
                              'reviewed_sha256':draft['artifact_sha256'],
                              'response':'Synthetic test response for schema checks, not a real independent review.'} for role in sorted(r.COUNCIL_ROLES)],
-                'peer_reviews':[{'reviewer':'synthetic test only',
+                'peer_reviews':[{'reviewer':'synthetic peer '+str(i),
                                 'reviewed_sha256':draft['artifact_sha256'],
-                                'response':'Synthetic peer response for schema checks, not a real independent review.'} for _ in range(5)],
+                                'response':'Synthetic peer response for schema checks, not a real independent review.'} for i in range(5)],
                 'anonymization':dict(zip('ABCDE',sorted(r.COUNCIL_ROLES))),
                 'synthesis':'Synthetic test synthesis for schema checks, not a real publication decision.'})
         report=out['council']['report']
