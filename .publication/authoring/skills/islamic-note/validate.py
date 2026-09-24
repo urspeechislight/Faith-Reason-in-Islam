@@ -102,7 +102,7 @@ if cat == 'narration':
             errs.append(f'empty framing sentence in narration: {pat}')
     if ci_line is not None:
         for t, title, blines, ln in blocks:
-            if ln > ci_line and any(TRANSLIT.match(b) for b in blines):
+            if ln > ci_line and t != 'quote' and any(TRANSLIT.match(b) for b in blines):
                 errs.append(f'transliteration line inside a Commentary callout at line {ln}; commentary blocks are Arabic then translation only')
 
 # corpus bucket labels are not book titles

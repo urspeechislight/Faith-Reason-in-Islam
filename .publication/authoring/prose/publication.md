@@ -12,7 +12,7 @@ report the limitation instead of selecting a provider.
 The agent performs independent review before pushing. GitHub runs only mechanical
 verification in `.github/workflows/native-publication.yml`; it makes no model
 calls and has no Copilot permission. `Publication gate` remains required before
-`Deploy checked site`. The retired `publication.yml` workflow stays disabled.
+`Deploy checked site`. The retired `publication.yml` workflow remains removed.
 Never disable protection or waive a failed check to publish.
 
 ## Prepare the reviewed bundle
@@ -100,6 +100,17 @@ run/attempt artifact. Read its typed result.json and retained native review. Old
 they are not article decisions. Exit 2 means running. Return control between
 bounded waits. Failed/skipped jobs need diagnosis, not propagation sleeps.
 
+The migration preserves the last successfully deployed bytes from the recorded
+GitHub Pages deployment, while keeping exact known pre-migration failed edits
+unpublished. The gate labels those `held-unpublished-migration`; it does not
+approve their source or receipts. A changed article or changed pending receipt
+requires current review. The candidate legacy registry cannot grant exemptions.
+Release staging uses the gate's exact composed and hashed public tree, with
+catalogues regenerated from that tree. It never blindly copies all main files.
+Inspect these statuses before reporting what will publish. Runtime maintenance
+also rehearses the full gate without deploying, so green runtime tests alone
+cannot conceal an unusable publication path.
+
 Current-policy reuse requires a successful same-repository main ancestor or
 identical push commit, a successful full publication step, and unchanged policy,
 article and four receipts. Identical historical files may retain explicitly
@@ -110,9 +121,15 @@ approved. Runtime-only jobs cannot supply article approval.
 ## Install workflow changes without publishing articles
 
 The versioned runtime and authoring bundle contain commands, policies, templates,
-CSS and tests. `sync_runtime.py --agents-root PATH` snapshots an isolated tested
-bundle. `install_toolchain.py --target PATH` verifies its manifests, preserves
-replaced bytes and installs shared translation aliases. `--check` verifies an
+CSS and tests. Edit and test the versioned bundle in an isolated Titan worktree.
+`sync_runtime.py --refresh-manifests` updates its hashes without copying installed
+files. `sync_runtime.py --agents-root PATH` explicitly imports an installed
+snapshot only when packaged files have no divergent edits; it is not a manifest-
+only command and refuses to overwrite packaged edits. `install_toolchain.py --target PATH` verifies its manifests, preserves
+replaced bytes and installs shared translation aliases. It checks all destinations,
+locks installation, rechecks concurrent drift, rolls back failed writes and
+recovers interrupted transactions before use. A differing concurrent file is
+preserved and reported, never overwritten during rollback. `--check` verifies an
 installation; `--expected` takes pre-change hashes to protect concurrent edits.
 Test a clean target before installing on Mac and Titan. Policy changes require
 genuine revalidation, never patched approval hashes.

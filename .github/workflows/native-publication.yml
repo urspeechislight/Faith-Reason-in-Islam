@@ -38,8 +38,15 @@ jobs:
         run: |
           python3 .publication/test_gate.py
           python3 .publication/test_workflow.py
-          cd "$HOME/.agents/prose"
-          python3 -m unittest test_article_build test_revision_workflow test_native_release test_pipeline test_scripture test_handoff test_quote_layout
+          python3 .publication/test_content_boundaries.py
+          python3 .publication/test_install_boundaries.py
+          python3 .publication/test_release_boundaries.py
+          python3 .publication/run_tests.py --agents-root "$HOME/.agents"
+      - name: Rehearse full publication without deploying
+        if: steps.scope.outputs.mode == 'runtime'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .publication/gate.py --output "$RUNNER_TEMP/publication-rehearsal"
       - name: Verify runtime-only update preserves public artifacts
         if: steps.scope.outputs.mode == 'runtime'
         env:
@@ -56,6 +63,13 @@ jobs:
         with:
           name: article-release-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/publication-review
+          retention-days: 90
+      - name: Retain unpublished publication rehearsal
+        if: always() && steps.scope.outputs.mode == 'runtime'
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-rehearsal-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/publication-rehearsal
           retention-days: 90
       - name: Stage checked public assets
         if: steps.scope.outputs.mode == 'publication'

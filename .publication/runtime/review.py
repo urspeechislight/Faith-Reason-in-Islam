@@ -452,6 +452,14 @@ def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str
         any(not isinstance(a,dict) or not str(a.get('reviewer','')).strip() or len(str(a.get('response','')).split())<8
             or not re.fullmatch(r'[0-9a-f]{64}',str(a.get('reviewed_sha256',''))) for a in peers)):
         errors.append('council peer review evidence incomplete')
+    primary=str(review.get('reviewer','')).strip()
+    for label,actors in [('advisors',advisors),('peer reviewers',peers)]:
+        names=[str(x.get('reviewer','')).strip() for x in actors if isinstance(x,dict)] if isinstance(actors,list) else []
+        if len(set(names))!=len(names) or primary in names:
+            errors.append('council '+label+' require distinct native agent IDs separate from the primary reviewer/writer')
+    final=report.get('release',{})
+    if isinstance(final,dict) and str(final.get('reviewer','')).strip()==primary:
+        errors.append('independent release reviewer cannot be the primary reviewer/writer')
     mapping=report.get('anonymization',{})
     if not isinstance(mapping,dict) or set(mapping)!=set('ABCDE') or set(mapping.values())!=COUNCIL_ROLES:
         errors.append('council anonymization mapping incomplete')

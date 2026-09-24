@@ -23,6 +23,13 @@ reading the article alone verifies it. Do not provide the writer's self-score
 or preferred verdict. Run advisors independently in batches within available
 concurrency; one does not see another's answer until peer review.
 
+Record the actual native agent ID in each reviewer field, not just the shared
+model name. The five advisor IDs are distinct and separate from the writer/
+primary reviewer; the five peer IDs are also distinct. Advisors may return as
+peer or final reviewers. The final reviewer cannot be the writer/primary
+reviewer. These consistency checks do not authenticate host identity: retain
+actual invocation transcripts and never invent reviewer IDs or responses.
+
 Use these five roles:
 
 1. `prose`: inspect every authored sentence for empty meta commentary, source-as-

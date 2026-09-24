@@ -57,22 +57,23 @@ def blocks(source):
     m=re.match(r'^---\n(.*?)\n---\n',source,re.S)
     body=source[m.end():] if m else source
     if re.search(r'^\s*(```|~~~)|^!\[|^\[\^',body,re.M):raise ValueError('fences/images/footnote definitions need an explicit converter extension')
-    out=[];buf=[];buf_links=[]
+    out=[];buf=[];buf_links=[];source_callout=False
     def flush():
         if not buf:return
         text=inline('\n'.join(buf));buf.clear()
         if text:out.append({'id':f'n{len(out)+1:04d}','text':text,'links':list(buf_links)})
         buf_links.clear()
     for line in body.splitlines():
-        if not line.strip():flush();continue
+        if not line.strip():flush();source_callout=False;continue
         if re.fullmatch(r'\s*---+\s*',line):flush();continue
         if line.startswith('#'):
             flush();buf_links.extend(source_links(line));buf.append(re.sub(r'^#{1,6}\s+','',line));flush();continue
         buf_links.extend(source_links(line))
+        if re.match(r'^> ?\[!(info|note|tip|warning|quote)\]',line):source_callout=True
         if line.startswith('>'):
             line=re.sub(r'^(?:>\s?)+','',line)
             line=re.sub(r'^\[!\w+\][-+]?\s*','',line)
-        line=re.sub(r'^\s*(?:[-*+] |\d+\. )','',line)
+        if not source_callout:line=re.sub(r'^\s*(?:[-*+] |\d+\. )','',line)
         if line.lstrip().startswith('|'):
             if re.fullmatch(r'[|:\-\s]+',line):continue
             line=inline(line).replace(r'\|','\x00')
@@ -96,7 +97,6 @@ def paragraph_layout(source, records):
             if re.match(r'^> ?\[!\w+\]',lines[i]):
                 raise ValueError('Separate source callouts with a blank line')
             content=re.sub(r'^>\s?','',lines[i])
-            content=re.sub(r'^\s*(?:[-*+] |\d+\. )','',content)
             if content.strip():buf.append(content)
             else:flush()
             i+=1

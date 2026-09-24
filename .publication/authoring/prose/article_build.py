@@ -15,6 +15,13 @@ import time
 import fcntl
 
 ROOT=Path(__file__).resolve().parent
+_toolchain_lock=None
+if (ROOT.parent/'.toolchain-install.lock').exists():
+    _toolchain_lock=(ROOT.parent/'.toolchain-install.lock').open('a')
+    try:fcntl.flock(_toolchain_lock,fcntl.LOCK_SH|fcntl.LOCK_NB)
+    except BlockingIOError:raise SystemExit('BLOCKED: toolchain installation is in progress; retry after it completes')
+if (ROOT.parent/'.toolchain-install-active.json').exists():
+    raise SystemExit('BLOCKED: interrupted toolchain installation; recover it with install_toolchain.py before running article commands')
 sys.path.insert(0,str(ROOT))
 import handoff
 import evidence
@@ -40,7 +47,9 @@ def runtime():
     return {str(p):digest(p) for p in paths}
 def load(manifest):
     data=read(manifest)
-    if data.get('schema')!=SCHEMA:raise ValueError('unsupported run manifest schema')
+    if data.get('schema')!=SCHEMA:raise ValueError('unsupported run manifest schema; preserve it and adopt its retained handoff into a new run')
+    if str(data.get('paths',{}).get('site_root','')).startswith('/Users/'):
+        raise ValueError('project execution belongs on Titan; use titan-project and a Titan site worktree')
     return data
 
 def inputs(data):
@@ -64,6 +73,7 @@ def init(a):
     if path.exists():raise ValueError('manifest exists; use it instead of replacing run history')
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',a.slug):raise ValueError('slug must be lowercase words separated by hyphens')
     source=a.source.resolve();site=a.site_root.resolve()
+    if str(site).startswith('/Users/'):raise ValueError('project execution belongs on Titan; use titan-project')
     if not source.is_file():raise ValueError('source does not exist: '+str(source))
     if not site.is_dir():raise ValueError('site workspace does not exist: '+str(site))
     if a.operation=='repair' and not (site/(a.slug+'.html')).is_file():raise ValueError('repair must identify the existing article slug in the site workspace')
@@ -201,7 +211,7 @@ def verify(a):
     data['paths'].update(final_paths);ready['paths'].update(final_paths)
     ready['hashes'].update({name:digest(path) for name,path in final_paths.items()})
     ready['status']=('awaiting-native-review' if getattr(a,'native_pending',False) else 'prepared-for-publication') if data['delivery']=='publish' else 'reviewed-draft'
-    write(a.manifest,data)
+    if not getattr(a,'read_only',False):write(a.manifest,data)
     print('Combined artifact checks passed. Status:',ready['status']+'. GitHub checks and deployment remain required for publication.');return 0
 
 
@@ -217,6 +227,7 @@ def paths(a):
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
     i=sub.add_parser('init');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--site-root',type=Path,required=True);i.add_argument('--slug',required=True);i.add_argument('--operation',choices=['create','repair'],required=True);i.add_argument('--delivery',choices=['publish','draft','note'],default='publish');i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path);i.add_argument('--config',type=Path)
+    i=sub.add_parser('adopt');i.add_argument('manifest',type=Path);i.add_argument('--handoff',type=Path,required=True);i.add_argument('--source',type=Path);i.add_argument('--site-root',type=Path,required=True);i.add_argument('--slug',required=True);i.add_argument('--delivery',choices=['publish','draft','note'],default='publish');i.add_argument('--config',type=Path)
     i=sub.add_parser('preflight');i.add_argument('manifest',type=Path)
     i=sub.add_parser('prepare');i.add_argument('manifest',type=Path);i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path)
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
@@ -231,6 +242,8 @@ def main(argv=None):
     for option in ['ledger','external','claims','db']:i.add_argument('--'+option,type=Path)
     a=p.parse_args(argv)
     try:
+        if a.command=='adopt':
+            return article_revision.adopt(sys.modules[__name__],a)
         a.manifest.parent.mkdir(parents=True,exist_ok=True)
         with a.manifest.with_suffix(a.manifest.suffix+'.lock').open('a') as lock:
             try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)

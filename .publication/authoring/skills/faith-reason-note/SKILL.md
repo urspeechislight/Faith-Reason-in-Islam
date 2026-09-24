@@ -35,3 +35,10 @@ All council and release reviewers also inherit the running model through native
 subagents. No Copilot, OpenCode, alternate endpoint or paid-usage change without
 explicit authorization. Use release-request/release-accept before final verify
 and stage. GitHub runs mechanical checks only; publication needs no Copilot quota.
+
+When resuming after a process update, reload article-build.md and run the existing
+manifest's status first. A stale policy requires a fresh supported revision and
+actual affected review. A legacy handoff without a usable manifest uses `adopt`.
+Never copy fixture approvals, patch receipt hashes, or edit generated HTML. Keep
+project work on Titan; use the versioned bundle's tests for maintenance separately
+from the article run. Reading these instructions does not migrate an old receipt.
