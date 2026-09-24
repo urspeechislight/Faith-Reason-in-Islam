@@ -1,6 +1,6 @@
 {
   "article-sources.md": "16dbc380e266eeffd2d43895541e288208a66422146d9cfe936a6706c576ba24",
-  "native_release.py": "30ad021a872a403822141df7bc13a6d654abc897b42f2940c153b6ba5f77d57b",
+  "native_release.py": "799d550c684d0d567cee428f06c16e5393084d1f42d94758b29792c4c8b2d23f",
   "publication_status.py": "b3eb0e397504f0a680c2a3feaeb7823616ee68d4f2d8325217202c437ad0dbb0",
   "scripture_alignment.py": "da6fa243d99d73525f5091dbfa5541a271eea868591f2142199de7b539bf69ce",
   "scripture.py": "d2d6f890929e6c87d27f443117b06c90f9c9454de9bd2263692f0938df4c86b6",
@@ -13,7 +13,7 @@
   "contract.md": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
   "drafting.md": "a38dbb2edcf6d6d679cc4f141c2bd522614e8048efccddefeb0904439053be4e",
   "editorial.md": "256ebc4d05f06b9cdfe997693523edc7eb5cb96098f9f4a56ef1c19e85eace4e",
-  "council-article.md": "6c010ebf7a1bc1e7a611f7eb18d8c016afabb774079e9ff6d05b316e42d89152",
+  "council-article.md": "a6b5e0cbf7d8f60b5c6b921a923231d31e68a3e870bfc4ca536e8855074bd17f",
   "paragraphs.md": "0015fc5f5d4da26c9f377cd6aeab244edd19080fc8285b496c0405e7809665fb",
   "validate_article.py": "b5f30aad6afd90b42472cfe7de9b53be680fcd7f26c7d8180c70b409152c2331"
 }

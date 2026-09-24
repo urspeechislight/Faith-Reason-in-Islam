@@ -22,7 +22,7 @@ def finish_fixture(B,manifest):
 class NativeTests(unittest.TestCase):
     def setUp(self):
         self.source='The source names eight witnesses.';self.page='<main><p>The source names eight witnesses.</p></main>'
-        self.evidence=json.dumps({'sources':[{'raw':self.source}]})
+        self.evidence=json.dumps({'artifact_sha256':review.digest(self.source),'sources':[{'id':'fixture','kind':'external','citation':'Synthetic fixture','url':'https://example.invalid','accessed':'2026-09-24','raw':self.source,'raw_sha256':review.digest(self.source)}]})
         self.report={'advisors':[{'role':'fidelity','response':'FID-01: Correct the count of witnesses.'}]}
         self.packet=N.packet(self.source,self.page,self.evidence,self.report,'active-parent')
     def approved(self):return dict(self.report,release=N.receipt(self.packet,response(self.packet),'native-child','active-parent'))

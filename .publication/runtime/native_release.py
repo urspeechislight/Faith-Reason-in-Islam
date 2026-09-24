@@ -43,8 +43,10 @@ prohibited prose classes, including quote-announcers and empty framing. Check
 all original, transliteration and English layers completely against the sources.
 Check attribution, negation, scope, uncertainty and counterevidence. Do not edit,
 publish, run external model clients or delegate to a different model.
-Return ONLY the release JSON specified in council-article.md, including every
-required disposition ID and a specific assessment. Add request_sha256 exactly as
+Return ONLY the release JSON specified in council-article.md. Set status to
+exactly "passed" or "blocked", never "pass". Include every required disposition
+ID, at least eight words of specific evidence for each disposition, and an
+assessment of at least twelve words. For accepted text open_findings is []. Add request_sha256 exactly as
 supplied. Return blocked for remaining defects; do not fix your own review input.
 ''' + json.dumps({'policies':policies,'request_sha256':packet_hash(value),'packet':projected},ensure_ascii=False)
 

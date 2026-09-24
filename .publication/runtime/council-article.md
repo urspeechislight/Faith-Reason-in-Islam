@@ -150,6 +150,9 @@ The reviewer returns a JSON object, without Markdown fences:
 }
 ```
 
+Use exactly `"passed"` for acceptance or `"blocked"` for rejection in `status`;
+`"pass"` is invalid. An assessment needs at least twelve words, and each
+disposition needs at least eight words of specific evidence.
 For a pass, `open_findings` is empty. `dispositions` must cover every ID in the
 packet's `required_disposition_ids`, using the original reviewer namespace,
 for example `prose:P-02` or `peer-1:PX-01`. The packet also includes a `:response`
