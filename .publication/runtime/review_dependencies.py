@@ -3,8 +3,8 @@ import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 GROUPS={
- 'editorial':('callout_structure.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','review.py','review_identity.py','review_dependencies.py','quote_layout.py','scripture.py'),
- 'render':('callout_structure.py','conversion_review.py','quote_layout.py','scripture.py','review_dependencies.py'),
+ 'editorial':('reader_layout.py','callout_structure.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','review.py','review_identity.py','review_dependencies.py','quote_layout.py','scripture.py'),
+ 'render':('reader_layout.py','callout_structure.py','conversion_review.py','quote_layout.py','scripture.py','review_dependencies.py'),
 }
 
 

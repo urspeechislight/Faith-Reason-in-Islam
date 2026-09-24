@@ -63,6 +63,20 @@ class StatusTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td,patch.object(S,'gh',side_effect=gh),patch.object(S.subprocess,'run',side_effect=subprocess.CalledProcessError(1,['gh'])),contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(S.main(['--run','1','--commit','abc','--output',td]),1);self.assertFalse((Path(td)/'1-1/article').exists())
 
+class FactsIndexTests(unittest.TestCase):
+    def test_index_reads_reader_and_legacy_facts(self):
+        import importlib.util
+        path=Path(__file__).resolve().parent.parent/'gen_facts_index.py'
+        spec=importlib.util.spec_from_file_location('facts_index',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            legacy='<section id="facts"><div class="analysis-section"><table><tr><td>Claim &amp; qualification</td><td><a href="#proof">↗</a></td></tr></table></div></section>'
+            reader='<main data-article-format="reader-v1"><section id="facts"><div data-note-block="n0001" data-reader-table=\'["Claim","Detail"]\'><details data-reader-row="0"><summary data-reader-cell="0">Claim &amp; qualification</summary><div data-reader-cell="1"><a href="#proof">↗</a></div></details></div></section></main>'
+            for name,text in [('old.html',legacy),('new.html',reader)]: (root/name).write_text(text)
+            with patch.object(module,'REPO',root):
+                self.assertEqual(module.extract_facts('old.html'),module.extract_facts('new.html'))
+                self.assertEqual(module.extract_facts('new.html')[0][1][0][1],'proof')
+
 class ReviewUpgradeTests(unittest.TestCase):
     def test_previous_version_inflight_reviews_survive_the_supported_upgrade(self):
         self.upgrade(True)
@@ -78,7 +92,10 @@ class ReviewUpgradeTests(unittest.TestCase):
             archive=subprocess.check_output(['git','-C',str(root),'archive','014f1ac','.publication'])
             with tarfile.open(fileobj=io.BytesIO(archive)) as tar:tar.extractall(old,filter='data')
             subprocess.run([sys.executable,str(old/'.publication/install_toolchain.py'),'--target',str(work/'old-agents')],check=True,capture_output=True)
-            subprocess.run([sys.executable,str(root/'.publication/install_toolchain.py'),'--target',str(work/'new-agents')],check=True,capture_output=True)
+            compatible=work/'compatible';compatible.mkdir()
+            archive=subprocess.check_output(['git','-C',str(root),'archive','c60ad7c','.publication'])
+            with tarfile.open(fileobj=io.BytesIO(archive)) as tar:tar.extractall(compatible,filter='data')
+            subprocess.run([sys.executable,str(compatible/'.publication/install_toolchain.py'),'--target',str(work/'new-agents')],check=True,capture_output=True)
             script=work/'old-run.py'
             script.write_text(OLD_REVIEW_RUN)
             run=subprocess.run([sys.executable,str(script),str(work),'seed' if seed else 'empty'],capture_output=True,text=True)
@@ -98,7 +115,19 @@ class ReviewUpgradeTests(unittest.TestCase):
                 self.assertEqual(result.returncode,0,result.stdout+result.stderr)
             result=subprocess.run([sys.executable,str(tool),'prepare',str(manifest)],capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+            subprocess.run([sys.executable,str(root/'.publication/install_toolchain.py'),'--target',str(work/'new-agents')],check=True,capture_output=True)
             before=manifest.read_bytes()
+            blocked=subprocess.run([sys.executable,str(tool),'prepare',str(manifest)],capture_output=True,text=True)
+            self.assertNotEqual(blocked.returncode,0);self.assertEqual(manifest.read_bytes(),before)
+            revised=work/'reader-run/build.json'
+            for args in [('revise',str(manifest),'--source',str(work/'candidate.md'),'--output',str(revised),'--reason','Shared reader format'),('preflight',str(revised)),('reviews',str(revised))]:
+                result=subprocess.run([sys.executable,str(tool),*args],capture_output=True,text=True)
+                self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+            child=json.loads(revised.read_text());self.assertTrue((revised.parent/'previous.review.json').is_file())
+            render=json.loads(Path(child['paths']['html_review']).read_text())
+            self.assertNotEqual(render.get('status'),'passed')
+            page=Path(child['builds'][-1]['directory'])/'article.html'
+            self.assertIn('data-article-format="reader-v1"',page.read_text())
             source=work/'candidate.md';source.write_text(source.read_text()+'\nA changed claim.\n')
             failed=subprocess.run([sys.executable,str(tool),'review-accept',str(manifest),'--request',str(work/'master/request.json'),'--response',str(work/'master/reply.json'),'--agent-id','real-fixture-child','--model','fixture-parent'],capture_output=True,text=True)
             self.assertNotEqual(failed.returncode,0);self.assertEqual(manifest.read_bytes(),before)

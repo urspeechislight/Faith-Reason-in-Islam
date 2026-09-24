@@ -322,7 +322,7 @@ its baseline/review, then bind them to the passing website build.
 Follow [article-build.md](article-build.md) for the maintained rendering command,
 run manifest, early browser preflight and combined final verification. Both
 create and repair use this route. The renderer reads the maintained templates
-and quotation.css directly; published HTML is never its input shell. Do not
+with reader.css and reader.js directly; published HTML is never its input shell. Do not
 create run-local generators, search old runs for converters, or patch generated
 HTML. Extend the maintained converter with a test for unsupported syntax.
 

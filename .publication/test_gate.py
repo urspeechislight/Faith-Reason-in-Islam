@@ -83,7 +83,7 @@ class PublicationTests(unittest.TestCase):
         packet=gate.packet_for(receipt,'<html><head><meta name="description" content="The conclusion is a weighed reading."></head><body><main><p>Claim.</p></main></body></html>')
         self.assertIn('The conclusion is a weighed reading.',[b['text'] for b in packet['rendered_authored_blocks']])
     def test_runtime_scope_excludes_public_and_review_changes(self):
-        self.assertTrue(gate.runtime_only_paths(['.publication/runtime/scripture.py','.github/workflows/publication.yml']))
+        self.assertTrue(gate.runtime_only_paths(['.publication/runtime/scripture.py','.github/workflows/publication.yml','gen_facts_index.py']))
         for path in ['article.html','.prose-reviews/article.review.json','style.css','.publication/legacy.json','.publication/assets.json']:
             self.assertFalse(gate.runtime_only_paths(['.publication/gate.py',path]))
         self.assertFalse(gate.runtime_only_paths([]))

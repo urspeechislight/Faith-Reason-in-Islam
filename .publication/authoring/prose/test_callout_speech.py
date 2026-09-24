@@ -28,7 +28,7 @@ class SpeechTests(unittest.TestCase):
     def test_text_and_hierarchy_roundtrip(self):
         source,page,receipt=self.render()
         self.assertEqual(H.verify(page,receipt),[])
-        self.assertEqual(Q.extract(source,'md'),Q.extract(page,'html'))
+        self.assertEqual(Q.extract(source,'md'),[{k:v for k,v in q.items() if k!='layout_profile'} for q in Q.extract(page,'html')])
         row=Q.extract(page,'html')[-1]
         self.assertEqual([p['quote_depth'] for p in row['paragraphs']],[0,1,1,1,1])
         self.assertEqual(page.count('data-quote-role="matn"'),1)
@@ -36,11 +36,13 @@ class SpeechTests(unittest.TestCase):
     def test_stripping_nesting_rejected_without_changing_words(self):
         source,page,receipt=self.render()
         page=page.replace('class="source-matn" data-quote-role="matn"','class="plain"')
-        self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
+        with self.assertRaisesRegex(ValueError,'invalid generated reader label'):H.verify(page,receipt)
 
     def test_isnad_cannot_be_indented_with_matn(self):
         source,page,receipt=self.render()
-        page=page.replace('<p class="translation" lang="en">The compiler','<blockquote class="source-matn" data-quote-role="matn"><p class="translation" lang="en">The compiler').replace('the following.</p>','the following.</p></blockquote>')
+        tree=H.reader_layout.Tree(page)
+        paragraph=next(n for n in tree.nodes if n.tag=='p' and 'The compiler' in n.text())
+        page=page[:paragraph.start]+'<blockquote class="source-matn" data-quote-role="matn">'+page[paragraph.start:paragraph.end]+'</blockquote>'+page[paragraph.end:]
         self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
 
     def test_legacy_speech_role_still_preserves_recorded_boundaries(self):
@@ -81,7 +83,7 @@ class SpeechTests(unittest.TestCase):
         self.assertIn('data-quote-role="matn" dir="rtl"',page)
         self.assertIn('data-quote-role="matn" dir="ltr"',page)
         self.assertEqual(H.verify(page,receipt),[])
-        self.assertEqual(Q.extract(source,'md'),Q.extract(page,'html'))
+        self.assertEqual(Q.extract(source,'md'),[{k:v for k,v in q.items() if k!='layout_profile'} for q in Q.extract(page,'html')])
 
     def test_legacy_callout_has_no_new_depth_fields(self):
         source,page,receipt=self.render('> [!note] Synthetic legacy\n> A complete statement.')
@@ -92,7 +94,7 @@ class SpeechTests(unittest.TestCase):
     def test_nested_scripture_preserves_three_layers(self):
         source,page,receipt=self.render('> [!quote] Greek fixture\n> > γυνή\n>\n> *gyne*\n>\n> > woman')
         self.assertEqual(H.verify(page,receipt),[])
-        self.assertEqual(Q.extract(source,'md'),Q.extract(page,'html'))
+        self.assertEqual(Q.extract(source,'md'),[{k:v for k,v in q.items() if k!='layout_profile'} for q in Q.extract(page,'html')])
 
     def test_fact_card_counts_outer_source_only(self):
         import article_build as B
@@ -115,7 +117,9 @@ class SpeechTests(unittest.TestCase):
         import test_pipeline
         source,page,receipt=self.render()
         quotes=Q.extract(page,'html')
+        for q in quotes:q.pop('layout_profile',None)
         draft=test_pipeline.ReviewTests().draft(page)
+        draft['quotes']=quotes
         record=test_pipeline.ReviewTests().approved(draft)['rendered_layout']
         for view in record['viewports']:
             for row,q in zip(view['callouts'],quotes):

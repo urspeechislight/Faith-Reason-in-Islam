@@ -155,6 +155,13 @@ class HTMLIndex(HTMLParser):
 
 
 def _check(src, register='standard'):
+    import importlib.util as _rlu
+    _rp=Path(__file__).resolve().with_name('reader_layout.py')
+    if not _rp.exists():_rp=Path(__file__).resolve().parents[2]/'prose/reader_layout.py'
+    if not _rp.exists():_rp=Path.home()/'.agents/prose/reader_layout.py'
+    if _rp.exists():
+        _rs=_rlu.spec_from_file_location('validator_reader_layout',_rp);_rm=_rlu.module_from_spec(_rs);_rs.loader.exec_module(_rm)
+        src=_rm.normalize(src)
     """Run every gate on one page's HTML; return the list of failures.
 
     register='haddad' waives only the grade-9 prose gates (dash ban, colon
@@ -678,7 +685,7 @@ def _check(src, register='standard'):
 
     # new architecture: sticky nav present, no JS-toggled hiding outside details
     if cat in ('debate', 'exegesis'):
-        if 'position: sticky' not in src and 'sticky top-0' not in src:
+        if not re.search(r'position:\s*sticky',src) and 'sticky top-0' not in src:
             errs.append('debate/exegesis pages need the sticky section nav (position: sticky)')
         if not re.search(r'<nav[^>]*aria-label', src):
             errs.append('sticky nav missing its <nav aria-label> landmark')

@@ -59,3 +59,7 @@ specific evidence gaps. Keep reviewer tasks scoped to their supplied inputs;
 do not forward the entire session history. Use session-qualified native IDs,
 never dummy agents to avoid collisions. See article-build.md for the supported
 readiness, response and legacy-provenance commands.
+
+Website creation and repair both use the shared reader-v1 format through
+article_build.py. Follow the website reference for layout, typography, retained
+Faith & Reason colors and Back navigation. Never reuse an old HTML shell.

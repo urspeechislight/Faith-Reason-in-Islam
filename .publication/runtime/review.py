@@ -18,6 +18,10 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
+import importlib.util as _reader_ilu
+_reader_spec=_reader_ilu.spec_from_file_location('article_reader_layout',Path(__file__).resolve().parent/'reader_layout.py')
+reader_layout=_reader_ilu.module_from_spec(_reader_spec);_reader_spec.loader.exec_module(reader_layout)
+
 VERSION = '2026-09-23.5'
 ROOT = Path(__file__).resolve().parent
 # Validators may load this module by path from another skill directory.
@@ -234,6 +238,7 @@ def markdown(source: str) -> tuple[list[dict],list[str],list]:
 
 def extract(source: str, fmt: str) -> dict:
     if fmt in ('html','htm'):
+        source=reader_layout.normalize(source)
         p=ProseHTML(source);blocks,protected,links=p.blocks,p.protected,p.links
     elif fmt=='md':
         blocks,protected,links=markdown(source)

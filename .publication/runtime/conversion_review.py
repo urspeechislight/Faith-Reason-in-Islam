@@ -69,5 +69,6 @@ def visual_errors(page,baseline,record,source_sha256):
     if not isinstance(response,dict):return errors+['visual response must be a JSON object']
     if response.get('status')!='passed' or response.get('findings')!=[] or response.get('request_sha256')!=native.get('request_sha256'): errors.append('visual intake response is blocked or belongs to another request')
     errors.extend(response_errors(expected, response.get('record')))
+    errors.extend(quote_layout.reader_layout.render_errors(page,render))
     errors.extend(quote_layout.render_errors(draft['quotes'], render, draft['artifact_sha256'], require_render=bool(draft['quotes'])))
     return errors

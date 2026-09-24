@@ -2,6 +2,11 @@
 import re
 import unicodedata
 from html.parser import HTMLParser
+from pathlib import Path
+
+import importlib.util as _reader_ilu
+_reader_spec=_reader_ilu.spec_from_file_location('article_reader_layout',Path(__file__).resolve().parent/'reader_layout.py')
+reader_layout=_reader_ilu.module_from_spec(_reader_spec);_reader_spec.loader.exec_module(reader_layout)
 
 MARK = re.compile(r'<mark data-term="([12])">([^<>]+)</mark>')
 ROLES = ('original', 'transliteration', 'translation')
@@ -79,6 +84,7 @@ class ScriptureHTML(HTMLParser):
             if self.depth==0:self.rows.append(self.row);self.row=None
 
 def html(source):
+    source=reader_layout.normalize(source)
     parser=ScriptureHTML();parser.feed(source)
     if parser.mark is not None:parser.errors.append('Unclosed lexical mark')
     return parser.rows,parser.errors

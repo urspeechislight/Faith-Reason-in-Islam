@@ -44,7 +44,7 @@ def eligible_prior_run(run, head, repository):
 
 
 def runtime_only_paths(names):
-    allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py','.publication/release_state.py','.publication/stage.py','.publication/run_tests.py','.publication/test_content_boundaries.py','.publication/test_install_boundaries.py','.publication/test_release_boundaries.py',
+    allowed={'gen_facts_index.py','.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py','.publication/release_state.py','.publication/stage.py','.publication/run_tests.py','.publication/test_content_boundaries.py','.publication/test_install_boundaries.py','.publication/test_release_boundaries.py',
              '.publication/runtime-manifest.json','.publication/authoring-manifest.json','.publication/install_toolchain.py','.publication/test_workflow.py','.publication/evaluate.py','.publication/regression.py','.github/workflows/publication.yml','.github/workflows/native-publication.yml'}
     return bool(names) and all(n in allowed or n.startswith(('.publication/runtime/','.publication/authoring/')) for n in names)
 

@@ -7,6 +7,10 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 
+import importlib.util as _reader_ilu
+_reader_spec=_reader_ilu.spec_from_file_location('article_reader_layout',Path(__file__).resolve().parent/'reader_layout.py')
+reader_layout=_reader_ilu.module_from_spec(_reader_spec);_reader_spec.loader.exec_module(reader_layout)
+
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
@@ -122,7 +126,7 @@ class Rendered(HTMLParser):
     SPACE={'p','div','section','article','li','br','tr','td','th','summary','blockquote','cite','h1','h2','h3','h4','h5','h6'}
     def __init__(self,source):
         super().__init__(convert_charrefs=True);self.stack=[];self.records=[];self.active=None;self.outside=[];self.source_hash=None;self.category=None;self.main_count=0;self.links=[];self.in_caption=False;self.link=None;self.layout={};self.paragraph=None;self.source_roles=[];self.speech_levels=set()
-        self.feed(source);self.close()
+        self.feed(reader_layout.normalize(source));self.close()
         if self.stack:raise ValueError('unclosed HTML')
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
