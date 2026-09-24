@@ -3,6 +3,7 @@ import json
 import re
 import review
 import quote_layout
+import review_dependencies
 
 KIND = 'verified-conversion-v1'
 CHECKS = ('quotation_insets', 'direction_and_spacing', 'overflow_and_visibility', 'navigation_and_metadata')
@@ -10,7 +11,7 @@ CHECKS = ('quotation_insets', 'direction_and_spacing', 'overflow_and_visibility'
 
 def binding(page, source_sha256, render):
     return {'artifact_sha256': review.digest(page), 'source_sha256': source_sha256,
-            'policy_sha256': review.policy_digest(),
+            'policy_sha256': review_dependencies.digest('render'),
             'render_sha256': review.digest(json.dumps(render, sort_keys=True, ensure_ascii=False))}
 
 
@@ -43,12 +44,18 @@ def master_errors(source,master):
 def errors(page, baseline, record, receipt, require_release=True):
     errors = review.verify_handoff(page, receipt, require_release=require_release)
     errors.extend(master_errors(receipt.get('source_markdown',''),receipt.get('source_review',{})))
+    return errors + visual_errors(page,baseline,record,receipt.get('source_sha256'))
+
+
+def visual_errors(page,baseline,record,source_sha256):
+    errors=[]
     draft = dict(review.extract(page, 'html'), schema=review.VERSION, format='html', artifact_sha256=review.digest(page))
     if baseline != draft: errors.append('conversion baseline differs from the exact rendered article')
     render = record.get('rendered_layout')
-    expected = binding(page, receipt.get('source_sha256'), render)
+    expected = binding(page, source_sha256, render)
     if record.get('schema') != 1 or record.get('kind') != KIND or record.get('status') != 'approved':
         errors.append('conversion visual review is pending or invalid')
+    if review.policy_matches(record.get('policy_sha256'),'render'):expected['policy_sha256']=record['policy_sha256']
     if any(record.get(k) != v for k, v in expected.items()): errors.append('conversion record binding mismatch')
     native = record.get('native', {})
     raw = record.get('response', '')

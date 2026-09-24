@@ -52,10 +52,20 @@ SEMANTIC_CHECKS = (
 FUNCTIONS = {'claim','evidence','explanation','inference','qualification','locator','heading','data'}
 COUNCIL_ROLES = {'prose','economy','reader','fidelity','reasoning'}
 
-def policy_digest() -> str:
+def legacy_policy_digest() -> str:
     # Bind the actual review policy and implementation, not just the prose contract.
     names = ('contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','conversion_review.py','quote_layout.py','review.py','handoff.py','pre_push.py')
     return digest(''.join(name + ':' + digest((ROOT/name).read_bytes()) + '\n' for name in names))
+
+def policy_digest() -> str:
+    import review_dependencies
+    return review_dependencies.digest('editorial')
+
+
+def policy_matches(value,kind='editorial'):
+    import review_dependencies
+    return review_dependencies.matches(value,kind)
+
 
 def cue_items(blocks: list[dict]) -> list[dict]:
     items=[]
@@ -416,7 +426,7 @@ def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str
     if draft['protected_sha256']!=baseline.get('protected_sha256'):errors.append('protected quotations, translations, metadata, tables, or code changed; perform a separate source-verified revision and start a new editorial baseline')
     if draft['links_sha256']!=baseline.get('links_sha256'):errors.append('link targets or anchors changed')
     for key,expected in [('artifact_sha256',draft['artifact_sha256']),('baseline_sha256',baseline.get('artifact_sha256')),('contract_sha256',digest((ROOT/'contract.md').read_bytes())),('policy_sha256',policy_digest())]:
-        if review.get(key)!=expected:errors.append(key+' mismatch; review is stale')
+        if (not policy_matches(review.get(key)) if key=='policy_sha256' else review.get(key)!=expected):errors.append(key+' mismatch; review is stale')
     if review.get('status')!='approved' or not str(review.get('reviewer','')).strip():errors.append('review must be approved by a named reviewer/model')
     rows=review.get('blocks',[])
     if not isinstance(rows,list) or len(rows)!=len(draft['blocks']):errors.append('review does not cover every prose block')
@@ -476,14 +486,14 @@ def verify(draft: dict, baseline: dict, review: dict, council_source_sha256: str
         any(not isinstance(a,dict) or not str(a.get('reviewer','')).strip() or len(str(a.get('response','')).split())<8
             or not re.fullmatch(r'[0-9a-f]{64}',str(a.get('reviewed_sha256',''))) for a in peers)):
         errors.append('council peer review evidence incomplete')
-    primary=str(review.get('reviewer','')).strip()
+    import review_identity
     for label,actors in [('advisors',advisors),('peer reviewers',peers)]:
-        names=[str(x.get('reviewer','')).strip() for x in actors if isinstance(x,dict)] if isinstance(actors,list) else []
-        if len(set(names))!=len(names) or primary in names:
-            errors.append('council '+label+' require distinct native agent IDs separate from the primary reviewer/writer')
+        if isinstance(actors,list):
+            errors.extend('council '+label+': '+error for error in review_identity.distinct(review,[x for x in actors if isinstance(x,dict)]))
     final=report.get('release',{})
-    if isinstance(final,dict) and str(final.get('reviewer','')).strip()==primary:
-        errors.append('independent release reviewer cannot be the primary reviewer/writer')
+    try:
+        if final and review_identity.same(review,final):errors.append('independent release reviewer cannot be the primary reviewer/writer')
+    except (ValueError,AttributeError) as exc:errors.append(str(exc))
     mapping=report.get('anonymization',{})
     if not isinstance(mapping,dict) or set(mapping)!=set('ABCDE') or set(mapping.values())!=COUNCIL_ROLES:
         errors.append('council anonymization mapping incomplete')

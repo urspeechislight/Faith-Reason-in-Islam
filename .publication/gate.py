@@ -82,7 +82,7 @@ def validate_runtime_only(base):
     if any(old_blob(base,n)!=Path(n).read_bytes() for n in protected(names)):
         raise ValueError('runtime update changed article, public asset or review bytes')
     manifest=read(HERE/'runtime-manifest.json')
-    actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
+    actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md','.json'}}
     if actual!=manifest:raise ValueError('CI runtime snapshot differs from manifest')
     return {'phase':'article','status':'passed','mode':'runtime-only','base':base,
             'commit':git('rev-parse','HEAD').decode().strip(),
@@ -163,7 +163,7 @@ def main():
             print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
         names=files();release_state.check_registry();prior=prior_success();preserved=prior or prior_success(allow_older_policy=True)
         manifest=read(HERE/'runtime-manifest.json')
-        actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
+        actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md','.json'}}
         if actual!=manifest:raise ValueError('CI runtime snapshot differs from its manifest; synchronize and test it')
         inventory=public_files.snapshot()
         assets={n:h for n,h in inventory.items() if Path(n).suffix.lower() in public_files.STATIC}
