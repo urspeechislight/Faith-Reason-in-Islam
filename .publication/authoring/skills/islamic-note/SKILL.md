@@ -5,6 +5,14 @@ description: Research a topic or source note against the Titan corpus, write and
 
 # Research, write, and save an Islamic note
 
+A request to fix/update and republish an existing URL includes applying the
+current shared article format, even when that URL was published earlier in this
+session. Reload the current build instructions and check the retained build's
+status before declaring completion. Live bytes matching an old approved build
+do not establish compliance with the current renderer. A format update needs no
+separate user request; proceed through the supported revision and publication.
+
+
 Accept a topic, question, raw sources, existing note, or article to repair.
 A note-only request saves a reviewed canonical Markdown note on Titan. A request
 to create an article or fix/update a supplied published article includes
