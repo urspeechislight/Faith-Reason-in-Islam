@@ -22,6 +22,12 @@ def alignment(text):
 
 
 class AlignmentTests(unittest.TestCase):
+    def test_zwj_and_hebrew_section_markers_are_not_words(self):
+        joined=scripture_note('אֱ\u200dלֹהִים דֶּבֶר פ','ʾElohim diber','God spoke')
+        record=alignment(joined);self.assertEqual(A.errors(joined,record),[])
+        counted=A.inventory(joined)[0]
+        self.assertEqual(counted['source_tokens'],['אֱלֹהִים','דֶּבֶר'])
+        self.assertEqual(counted['roman_tokens'],['ʾElohim','diber'])
     def test_complete_and_partial_layers(self):
         source=scripture_note('alpha beta gamma','alpha beta gamma','three words')
         record=alignment(source);self.assertEqual(A.errors(source,record),[])
