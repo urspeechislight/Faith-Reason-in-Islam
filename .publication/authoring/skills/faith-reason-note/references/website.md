@@ -13,14 +13,15 @@ From the Mac use `titan-project -C /Users/me/code/Faith-Reason-in-Islam -- ...`.
 Inspect actual branch/remotes/status and catalogue before changes. Preserve
 existing slugs and URLs; do not rename an article to create a second version.
 
-Use `../template-tabs.html` for open sectioned pages (the filename is historical,
-not permission to create tabs) or `../template-flowing.html` for a single thread
-and narration. These paths are relative to this reference. Templates provide
-layout only. Preserve all approved master text and paragraph boundaries through
-handoff.py version 4, with mapped block IDs and source-note-sha256 metadata.
-Do not add template prose, extra headings, duplicate cards, or silently remove
-quotations. If a template or validator conflicts with the master, resolve the
-format issue or revise/review the master first. Never rewrite only the HTML.
+Both historical template names (`template-tabs.html`, `template-flowing.html`)
+use the same maintained reader layout. Creation and repair always regenerate
+from canonical Markdown with `article_build.py`; never copy a published page's
+shell or construct a run-local generator. The reference is
+https://sun-moon-twelve-stars.mr-famzy.chatgpt.site/ (version 6), with the
+Faith & Reason palette and a Back link replacing Original article.
+`reader.css`, `reader.js`, and `render_article.py` own this format.
+Preserve approved master text, paragraph boundaries, mapped block IDs and
+source-note-sha256. Layout supplies interface labels only; no invented prose.
 
 Map category to `<main data-category="debate|exegesis|narration|commentary">`
 using the actual category. Map the master's opponent for applicable debates.
@@ -34,92 +35,51 @@ then regenerate and preflight before review.
 
 ## Rendering specification
 
-- **Fonts** (loaded in `<head>`, never substitute): Inter for body,
-  `font-serif` = Playfair Display for headings, `font-amiri` = Amiri for
-  Arabic, and 'Scheherazade New' for honorific ligatures per article-sources.md and the font rules below. (If a note ever contains Hebrew, class
-  `font-hebrew` with 'SBL Hebrew'; Greek stays Inter.) Arabic paragraphs
-  carry class `rtl` with `lang="ar"`, and the page CSS must include the
-  `.rtl { direction: rtl; text-align: right; }` rule: `lang="ar"` alone
-  does not set direction, and without the rule the Arabic renders
-  left-justified (the validator fails the build on it).
-- **Palette**: background `#FDFBF7`, body text `#3D4451`. The site has ONE
-  accent system, hardcoded in the templates: `#B99C6B` for decoration only
-  (borders, active-tab underline, the verdict rule) and `#8A6D3B` for
-  anything read as text (headings, active-tab label, kicker). No other
-  accent exists. Terracotta (`#A43820`), red text (`text-red-*`), and red or
-  amber backgrounds (`bg-red-*`, `bg-amber-*`) are banned everywhere.
-- **Callouts are tint boxes, never side stripes.** `quran-callout` (bg
-  `#F3F5F7`, full 1px border `#DFE4EA`) for Qur'an quotes; `hadith-callout`
-  (bg `#F8F1E2`, full 1px border `#E9DCC3`) for hadith, tafsir, and
-  scholarly narrations. No `border-l-4` accent stripes anywhere on the
-  page. Premise cards in the intro section use class `premise-card`
-  (neutral tint `#F7F4EC`, border `#E7E0D1`); the conclusion premise card
-  uses `conclusion-card` (warm tint, border in `#B99C6B`). Hairline
-  borders everywhere are `#E7E0D1`, not Tailwind's `border-gray-200`.
-- **Consolidate parallel exhibits.** When two or more quotations answer the
-  same question in the same way (two lexicons on one word, two poems on one
-  construction, two dictionary entries making the same point), place them
-  side by side under ONE card in ONE visual unit, or present them in a
-  comparison table with columns per source. Never stack three sequential
-  card-plus-quote pairs that could be one side-by-side unit. The reader
-  sees the convergence at a glance, and the page shrinks.
-- **Quote blocks**: one continuous passage of one source is ONE callout; a second callout for the same passage is a defect. Every quoted text follows this exact shape. The default
-  (hadith, tafsir, scholarly, historical) is three parts:
-  ```html
-  <blockquote class="hadith-callout" data-content-role="source" data-note-block="SOURCE_BLOCK_ID">
-      <p class="rtl font-amiri text-xl" lang="ar">ARABIC</p>
-      <p class="translation">The source narrator’s words in translation.</p>
-      <cite data-note-citation class="text-sm text-gray-500">- Source, Vol. X, p. Y</cite>
-  </blockquote>
-  ```
-  Every scripture callout renders the master's transliteration between
-  original text and translation as shown below. For Bible exhibits preserve
-  their approved language/edition layers from article-sources.md. Report
-  callouts have no added transliteration layer:
-  ```html
-  <blockquote class="quran-callout" data-content-role="source" data-note-block="SOURCE_BLOCK_ID">
-      <p class="rtl font-amiri text-xl" lang="ar">ARABIC</p>
-      <p class="italic transliteration">Transliteration.</p>
-      <p class="translation">"Translation."</p>
-      <cite data-note-citation class="text-sm text-gray-500">- Source, Vol. X, p. Y</cite>
-  </blockquote>
-  ```
-- **Content roles:** only mapped source callouts carry `data-content-role="source"`.
-  Table prose, premise/conclusion cards, and ordinary authored blockquotes remain
-  in the prose inventory. Language and translation CSS classes cannot exempt
-  authored text. The handoff rejects source roles outside the master's callouts.
-- **Long callouts preserve source-defined paragraphs.** Follow
-  `~/.agents/prose/paragraphs.md`: separate narrator framing and direct speech
-  at meaningful boundaries, keep one source passage in one callout, and map
-  every original/translation paragraph to its own `<p>`. Include explicit
-  margins between paragraphs. No mechanical two-sentence splitting or invented
-  Arabic punctuation. Fix missing paragraph breaks in the master before making
-  the handoff; conversion preserves them. One `<cite>` per callout.
-- **Page chrome**: back-nav, left-aligned Playfair title and approved subtitle,
-  compact margins and hairline rule. Use `max-w-4xl mx-auto`, not the full-width
-  container. Keep the category's actual master sections and headings.
-- **Navigation**: sticky section nav (`position: sticky; top: 0`, background
-  #FDFBF7, hairline bottom border, nav with aria-label), one horizontally
-  scrollable row on mobile. Link only existing master sections. Use numbered
-  labels where the sections are numbered, no emoji. With more than five links,
-  use text-sm md:text-base. Targets have scroll offsets; scroll-spy sets
-  aria-current="location". Use the template script, not custom content hiding.
-- **Open content**: no JS-toggled tabs or accordion sections. Only Glossary and
-  narration Commentary use native details. Print hides sticky nav and opens
-  details. Find-in-page, reader mode and no-JS must expose article content.
-- **Alignment**: left-aligned headers, sections and closings. No text-center
-  before the footer except chart-node diagram boxes and chart-arrow rows.
-- **Closing style**: retain the master's exact heading and content. Use the
-  short accent rule, Playfair heading and max-w-3xl for the appropriate category
-  closing. Conclusion prose uses font-semibold text-gray-800; accent color is
-  for headings and labels, never conclusion paragraphs.
-- **Quote classes**: use the current canonical classes above, not quote-original,
-  quote-translit, quote-translation or font-arabic. Category anatomy and heading
-  layers come from article-structure.md, not from an old model page.
-- **Footer**: use the current year and `Faith & Reason in Islam · All Rights
-  Reserved`. Keep site chrome outside mapped article content.
-- IDs are unique across the page. A heading cannot be invented, renamed or
-  duplicated during conversion to satisfy a layout pattern.
+- **Typography:** Inter body; Literata headings and English quotations; Amiri
+  Arabic; Scheherazade New honorifics. Preserve actual language and direction.
+  Body is 17px/1.85, English quotations 17px/1.9, Arabic 24px/2.1. Use the
+  shared stylesheet, including its narrow-screen sizes, without local overrides.
+- **Colors:** paper #FDFBF7, ink #3D4451, muted #6B7280, accent #8A6D3B,
+  hairlines #E7E0D1. Reports retain #F8F1E2 with #E9DCC3 borders; scripture
+  retains #F3F5F7 with #DFE4EA borders. Preserve original Faith & Reason colors.
+- **Shell:** wide masthead and title area (1320px maximum); category eyebrow,
+  canonical title and optional canonical summary. Reading grid has a 244px
+  sidebar and article column up to 760px, with numbered chapter navigation.
+  Sidebar sticks on desktop. Below 760px use collapsible mobile contents.
+- **Navigation:** chapter labels and links come from actual master headings.
+  Scroll-spy marks the current chapter. Deep links open containing details.
+  Both Back links go to the distinct HTTP(S) referring page when available;
+  direct visits fall back to index.html. They must work without JavaScript.
+- **Premises and conclusion:** open two-column premise grid on wide screens,
+  one column on narrow screens. Preserve authored claims and exact closing.
+  A summary caption identical to its section heading shares that visible label;
+  other captions remain visible. No fabricated premise titles or recaps.
+- **Facts:** canonical Markdown tables become numbered native details rows.
+  The claim is the summary; Actor, Date, Place, Source and Qualifier remain
+  separately labeled expanded fields, with the original supporting-passage
+  link. Every cell, its order and link are checked against the master. Other
+  tables remain tables. The fact index reads this same canonical projection.
+- **Quotations:** one source passage stays in one square tint callout, with
+  source label, source-defined paragraphs, and citation separated by a rule.
+  Desktop padding is 32px horizontally, mobile 20px. Explicit nested Markdown
+  `> >` identifies the entire matn; `>` holds its isnad. Render chain and matn
+  as separate labeled units with the chain rule and distinct typography from
+  the reference. Preserve nested dialogue boundaries and all source text.
+  Never infer Arabic boundaries, merge paragraphs or add transliteration to
+  reports. Scripture remains original → transliteration → English.
+- **Source roles:** only canonical source callouts carry data-content-role=source.
+  Interface labels have enumerated data-reader-ui roles validated separately;
+  they cannot hide authored text or grant a quotation exemption.
+- **Open reading:** article sections remain open. Facts, glossary and narration
+  commentary can use native details, which work without JavaScript. Print
+  expands disclosure content. All IDs are unique. No tabs or invented sections.
+- **Footer:** site brand, current year, rights notice and Back link. Chrome stays
+  outside mapped article content. Source marks and lexical underlines are kept.
+
+These are the `reader-v1` visual rules. Older quotation.css measurements remain
+for verifying legacy pages only; do not layer them over reader.css. A format
+upgrade requires a new render/preflight and visual review. Unchanged canonical
+prose and source evidence retain their separate review lifecycle.
 
 ## Mapping details
 
@@ -129,9 +89,8 @@ then regenerate and preflight before review.
   data-note-citation. Do not flatten source and translated paragraphs.
 - Wrap every honorific ligature in span.honorific, including within Arabic.
   The class uses Scheherazade New; markup changes no underlying source text.
-- Map master fact lists into premise-card elements and real lists/tables without
-  inventing or duplicating text. Facts tables live in section#facts, with tint
-  styling and resolved detail links. Preserve qualifier wording exactly.
+- Map master fact lists into premise-card elements. Facts tables in section#facts
+  use the checked disclosure mapping described above, with resolved detail links. Preserve qualifier wording exactly.
 - Bible original Greek uses lang="grc";
   Hebrew uses font-hebrew and lang="he". Preserve the master's edition-cited
   layers. The source standard governs which layers exist, not a template.
@@ -150,8 +109,8 @@ then regenerate and preflight before review.
 
 Run `python3 ~/.agents/skills/faith-reason-note/validate.py --selftest` once per
 session. article_build.py preflight validates the conversion and browser geometry
-before review; its final verify checks master and HTML approval together. For the
-hosted route it defers only the final release decision to GitHub. A separate
+before review; its final verify checks master and HTML approval together. The native inherited-model reviewer supplies the final release decision; CI
+verifies its bindings without calling an external provider. A separate
 review.py pass without its required handoff cannot replace combined verification.
 Inspect desktop/mobile rendering, paragraph spacing, expanded/collapsed content,
 anchors, RTL, print and no-JS visibility. article-polish supplies the visual
@@ -200,9 +159,6 @@ separate p.transliteration. Keep Hebrew/Aramaic RTL and Greek/Latin LTR. Preserv
 conversion. At most two IDs per passage, each present once in all three layers.
 The handoff checks their text and offsets as well as all ordinary source text.
 
-Both templates include shared quotation CSS: compact English line height,
-roomier vocalized Arabic, paragraph gaps, directional insets within callouts,
-and printable single/double underlines for linked terms. Keep citations at the
-callout's normal edge. Test the actual font and narrow viewport; do not replace
-visible emphasis with a hover interaction. These rules do not authorize editing
-or publishing existing articles during workflow maintenance.
+Both templates use reader.css and reader.js. Test real fonts at desktop and
+narrow widths, expanded facts, chain/matn distinction, source layers, and linked
+term underlines. Workflow maintenance does not authorize article publication.

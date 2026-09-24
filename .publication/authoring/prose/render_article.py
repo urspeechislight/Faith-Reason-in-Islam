@@ -136,11 +136,14 @@ def render_source(item,receipt,options):
         raise ValueError(identifier+': source paragraph mapping differs')
     boundary_errors=callout_structure.matn_errors(callout_structure.paragraphs(item['raw'][1:])) if kind!='quote' else []
     if boundary_errors:raise ValueError(identifier+': '+('; '.join(boundary_errors)).lower())
-    rendered=[];role='original';speech_open=False;speech_direction=None;speech_role=None
+    rendered=['<div class="source-label" data-reader-ui="source">'+('Scripture' if kind=='quote' else 'Transmitted report')+'</div>'];role='original';speech_open=False;speech_direction=None;speech_role=None
     depths=layout.get('quote_depths',[0]*len(parts))
     original_count=options.get('source_paragraphs',{}).get(H.inline(caption))
     if original_count is not None and (type(original_count) is not int or not 0<original_count<len(parts)):
         raise ValueError(identifier+': source_paragraphs must leave at least one original and one English paragraph')
+    def report_role(index,raw):
+        non_latin=re.search(r'[\u0370-\u03ff\u0590-\u05ff\u1f00-\u1fff]',H.scripture.unmark(raw))
+        return 'original' if (index<original_count if original_count is not None else AR.search(H.scripture.unmark(raw)) or non_latin) else 'translation'
     for index,raw in enumerate(parts):
         # Match the supported master's paragraph role convention.
         if kind=='quote':
@@ -148,8 +151,7 @@ def render_source(item,receipt,options):
                 role='transliteration';raw=raw[1:-1]
             elif role=='transliteration':role='translation'
         else:
-            non_latin=re.search(r'[\u0370-\u03ff\u0590-\u05ff\u1f00-\u1fff]',H.scripture.unmark(raw))
-            role='original' if (index<original_count if original_count is not None else AR.search(H.scripture.unmark(raw)) or non_latin) else 'translation'
+            role=report_role(index,raw)
             if original_count is None and options.get('languages',{}).get(H.inline(caption)) in ('la','en'):
                 raise ValueError(identifier+': declare source_paragraphs for Latin-script report layers')
         if role=='original':attrs=original_attrs(original_language(H.inline(caption),H.inline(raw),options))
@@ -161,10 +163,20 @@ def render_source(item,receipt,options):
         direction='rtl' if 'dir="rtl"' in attrs else 'ltr'
         if speech_open and (not depth or direction!=speech_direction or role!=speech_role):
             rendered.append('</blockquote>');speech_open=False
-        if depth and not speech_open:
+        opened_matn=depth and not speech_open
+        if opened_matn:
             quote_role='speech' if kind=='quote' else 'matn'
             rendered.append(f'<blockquote class="source-{quote_role}" data-quote-role="{quote_role}" dir="{direction}">');speech_open=True;speech_direction=direction;speech_role=role
-        rendered.append(f'<p {attrs}>{inline(raw,receipt)}</p>')
+        value=inline(raw,receipt)
+        if kind!='quote' and not depth and any(depths[index+1:]):
+            same_layer=any(d and report_role(k,parts[k])==role for k,d in enumerate(depths[index+1:],index+1))
+            if same_layer:
+                label='الإسناد · Isnad' if role=='original' and 'lang="ar"' in attrs else 'Isnad · Chain of transmission'
+                value=f'<span class="isnad-segment"><span class="segment-label" data-reader-ui="isnad" dir="ltr">{label}</span><span class="chain-text">'+value+'</span></span>'
+        if kind!='quote' and opened_matn:
+            label='المتن · Matn' if role=='original' and 'lang="ar"' in attrs else 'Matn · Report text'
+            rendered.append(f'<span class="segment-label matn-label" data-reader-ui="matn" dir="ltr">{label}</span>')
+        rendered.append(f'<p {attrs}>{value}</p>')
     if speech_open:rendered.append('</blockquote>')
     css='quran-callout' if kind=='quote' else 'hadith-callout'
     return f'<blockquote class="{css}" data-content-role="source" data-note-block="{identifier}">'+''.join(rendered)+f'<cite data-note-citation>{inline(caption,receipt)}</cite></blockquote>'
@@ -205,12 +217,43 @@ def render_block(item,receipt,options):
         kind,caption,parts=callout_parts(item)
         if kind in SOURCE_TYPES:return render_source(item,receipt,options)
         if kind not in ('abstract','summary'):raise ValueError(identifier+': unsupported callout '+kind)
-        css='premise-card' if kind=='abstract' else 'conclusion-card'
-        inner='<p>'+inline(caption,receipt)+'</p>' if caption else ''
+        if kind=='abstract':
+            lines=[re.sub(r'^>\s?','',line) for line in raw[1:]]
+            cards=[]
+            if lines and re.match(r'^(?:[-*+] |\d+\. )',lines[0]):
+                for line in lines:
+                    match=re.match(r'^(?:[-*+] |\d+\. )(.*)',line)
+                    if match:cards.append(match[1])
+                    elif line.strip() and cards:cards[-1]+=' '+line.strip()
+            else:cards=parts
+            inner=('<p>'+inline(caption,receipt)+'</p>') if caption else ''
+            inner+=''.join('<div class="premise-card"><p>'+inline(card,receipt)+'</p></div>' for card in cards)
+            return f'<div class="premises" {mapped}>{inner}</div>'
+        css='conclusion-card'
+        shared_caption=caption and H.inline(caption)==options.get('_heading')
+        if shared_caption:mapped+=' data-reader-caption="'+esc(H.inline(caption))+'" aria-labelledby="'+esc(options['_heading_id'])+'"'
+        inner='<p>'+inline(caption,receipt)+'</p>' if caption and not shared_caption else ''
         lines=[re.sub(r'^>\s?','',line) for line in raw[1:]]
         if lines and re.match(r'^(?:[-*+] |\d+\. )',lines[0]):inner+=render_list(lines,receipt)
         else:inner+=''.join('<p>'+inline(p,receipt)+'</p>' for p in parts)
         return f'<div class="{css}" {mapped}>{inner}</div>'
+    if first.startswith('|') and options.get('_facts'):
+        rows=[table_cells(line) for line in raw if not re.fullmatch(r'[|:\-\s]+',line)]
+        if any(len(row)!=len(rows[0]) for row in rows):raise ValueError(identifier+': inconsistent table columns')
+        headers=[H.inline(cell) for cell in rows[0]]
+        chunks=[f'<div class="evidence-list" {mapped} data-reader-table="{esc(json.dumps(headers))}">']
+        for number,row in enumerate(rows[1:]):
+            chunks.append(f'<details class="evidence" data-reader-row="{number}"><summary><span class="evidence-number" data-reader-ui="number">{number+1:02d}</span><span data-reader-cell="0">'+inline(row[0],receipt)+'</span><span class="toggle" data-reader-ui="toggle" aria-hidden="true">+</span></summary><div class="evidence-body"><dl>')
+            last_link=headers[-1]=='↗'
+            for col,cell in enumerate(row[1:-1] if last_link else row[1:],1):
+                chunks.append(f'<div><dt data-reader-ui="fact-label" data-column="{col}">{esc(headers[col])}</dt><dd data-reader-cell="{col}">'+inline(cell,receipt)+'</dd></div>')
+            chunks.append('</dl>')
+            if last_link:
+                link=inline(row[-1],receipt)
+                if '<a ' in link:link=link.replace('>','><span data-reader-ui="support">Read the supporting passage</span> ',1)
+                chunks.append(f'<span data-reader-cell="{len(headers)-1}">'+link+'</span>')
+            chunks.append('</div></details>')
+        return ''.join(chunks)+'</div>'
     if first.startswith('|'):
         rows=[table_cells(line) for line in raw if not re.fullmatch(r'[|:\-\s]+',line)]
         if any(len(row)!=len(rows[0]) for row in rows):raise ValueError(identifier+': inconsistent table columns')
@@ -277,33 +320,20 @@ def render(source,receipt,options=None,site_root=None):
     title=headings[0]['label'];category=receipt['category'];template_name=options.get('template','flowing' if category=='narration' else 'tabs')
     if template_name not in ('tabs','flowing'):raise ValueError('template must be tabs or flowing')
     template=(TEMPLATES/f'template-{template_name}.html').read_text()
-    head=template.split('</head>',1)[0]
-    replacements={'SOURCE_NOTE_SHA256':receipt['source_sha256'],'PAGE_TITLE':title,'META_DESCRIPTION':meta.get('summary',''),'META_KEYWORDS':meta.get('keywords',''),'FILENAME':options.get('slug',slug(title))+'.html'}
-    for key,value in replacements.items():head=head.replace('{{'+key+'}}',esc(value))
-    if '{{' in head:raise ValueError('template head has unknown placeholders')
-    css=(ROOT/'quotation.css').read_text()
-    head+='\n<style>\n'+css+'''
-body {margin:0} .article-shell{max-width:56rem;margin:auto;padding:1.25rem}
-main p{margin-block-end:1em} main h2{margin-block:2rem 1rem} main h3{margin-block:1.5rem .75rem}
-main .premise-card,main .conclusion-card{margin-block:1rem;padding:1.25rem;border-radius:.5rem}
-main ul,main ol{padding-inline-start:1.5rem} main ul{list-style:disc} main ol{list-style:decimal}
-main li+li{margin-block-start:.5em} main a{text-decoration:underline;color:#8A6D3B}
-.table-scroll{overflow-x:auto;margin-block:1rem} table{width:100%;border-collapse:collapse}
-th,td{padding:.65rem;border:1px solid #E7E0D1;text-align:start;vertical-align:top}
-.font-hebrew{font-family:'SBL Hebrew',serif} .nav-row{display:flex;gap:1rem;overflow-x:auto;white-space:nowrap}
-.commentary-card{padding-block:1rem} summary{cursor:pointer} section,article,h2,h3{scroll-margin-top:5rem}
-@media print{nav.section-nav{display:none} details{display:block}}
-</style></head>'''
-    title_html=f'<h1 id="{esc(ids[items[0]["id"]])}" class="font-serif text-4xl" data-note-block="{items[0]["id"]}">'+inline(items[0]['heading'],receipt)+'</h1>'
-    header='<header class="article-shell"><a href="index.html">Faith &amp; Reason in Islam</a>'+title_html
-    if meta.get('summary'):header+='<p>'+text_html(meta['summary'])+'</p>'
-    header+='</header>'
-    nav='<nav class="section-nav" aria-label="Article sections"><div class="article-shell nav-row">'+''.join(f'<a class="navlink" href="#{esc(ids[i["id"]])}">{text_html(i["label"])}</a>' for i in headings if i['level']==2)+'</div></nav>'
+    chapters=[i for i in headings if i['level']==2]
+    links=''.join(f'<li><a href="#{esc(ids[i["id"]])}"><span>{n:02d}</span>{text_html(i["label"])}</a></li>' for n,i in enumerate(chapters,1))
+    nav='<aside class="contents"><nav aria-label="Article chapters"><p class="eyebrow" data-reader-ui="contents">In this article</p><ol>'+links+'</ol><a class="back-top" href="#top">Back to top ↑</a></nav></aside>'
+    mobile='<details class="mobile-contents"><summary><span data-reader-ui="contents">In this article</span> <span>'+str(len(chapters))+' chapters</span></summary><nav aria-label="Article chapters on mobile"><ol>'+links+'</ol></nav></details>'
+    title_html=f'<h1 id="{esc(ids[items[0]["id"]])}" data-note-block="{items[0]["id"]}">'+inline(items[0]['heading'],receipt)+'</h1>'
+    header='<header class="masthead"><a href="index.html">Faith <span>&amp;</span> Reason in Islam</a><a class="reader-back" data-reader-back href="index.html">← Back</a></header>'
+    header+='<div class="hero"><div class="hero-inner"><p class="eyebrow">'+esc(category.title())+'</p>'+title_html
+    if meta.get('summary'):header+='<p class="dek">'+text_html(meta['summary'])+'</p>'
+    header+='<div class="hero-meta"><span>'+str(len(chapters))+' chapters</span></div></div></div>'
     opponent=''
     if meta.get('opponent'):
         if meta['opponent'] not in ('christian','sunni','orientalist','secular'):raise ValueError('invalid opponent metadata')
         opponent=' data-opponent="'+meta['opponent']+'"'
-    body=[f'<main class="article-shell" data-category="{category}"{opponent}>'];section=False;details=False;article=False
+    body=[f'<main id="article" tabindex="-1" data-article-format="reader-v1" data-category="{category}"{opponent}>'];section=False;details=False;article=False;chapter=0;in_facts=False;current_heading='';current_heading_id=''
     for item in items[1:]:
         if 'level' in item:
             level=item['level'];label=item['label'];sid=ids[item['id']]
@@ -311,7 +341,8 @@ th,td{padding:.65rem;border:1px solid #E7E0D1;text-align:start;vertical-align:to
                 if article:body.append('</article>');article=False
                 if details:body.append('</details>');details=False
                 if section:body.append('</section>')
-                body.append(f'<section id="{esc(sid)}" class="content-section">');section=True
+                chapter+=1;in_facts=label=='The Facts';current_heading=label;current_heading_id=sid
+                body.append(f'<section id="{esc(sid)}" class="content-section"><div class="chapter-label" data-reader-ui="chapter">Chapter {chapter:02d}</div>');section=True
                 if (category=='narration' and label=='Commentary') or label in ('Glossary','Glossary of Key Terms'):
                     body.append('<details open><summary>');details=True
                     body.append(f'<h2 class="font-serif text-3xl" data-note-block="{item["id"]}">'+inline(item['heading'],receipt)+'</h2></summary>')
@@ -321,14 +352,17 @@ th,td{padding:.65rem;border:1px solid #E7E0D1;text-align:start;vertical-align:to
                 if article:body.append('</article>')
                 body.append(f'<article id="{esc(sid)}" class="commentary-card">');article=True
                 body.append(f'<h3 class="font-serif text-2xl" data-note-block="{item["id"]}">'+inline(item['heading'],receipt)+'</h3>')
-        else:body.append(render_block(item,receipt,options))
+        else:body.append(render_block(item,receipt,dict(options,_facts=in_facts,_heading=current_heading,_heading_id=current_heading_id)))
     if article:body.append('</article>')
     if details:body.append('</details>')
     if section:body.append('</section>')
     body.append('</main>')
-    scripts='\n'.join(re.findall(r'<script\b[^>]*>.*?</script>',template.split('</head>',1)[1],re.S))
-    footer=f'<footer class="article-shell"><p>© {datetime.date.today().year} Faith &amp; Reason in Islam · All Rights Reserved</p></footer>'
-    page=head+'<body>'+header+nav+'\n'.join(body)+scripts+footer+'</body></html>\n'
+    footer=f'<footer><a href="index.html">Faith &amp; Reason in Islam</a><span>All Rights Reserved · {datetime.date.today().year}</span><a href="index.html" data-reader-back>← Back</a></footer>'
+    content='<body id="top"><a class="skip" href="#article">Skip to article</a>'+header+'<div class="reading-layout">'+nav+mobile+'\n'.join(body)+'</div>'+footer
+    replacements={'SOURCE_NOTE_SHA256':receipt['source_sha256'],'PAGE_TITLE':title,'META_DESCRIPTION':meta.get('summary',''),'META_KEYWORDS':meta.get('keywords','')}
+    for key,value in replacements.items():template=template.replace('{{'+key+'}}',esc(value))
+    page=template.replace('{{READER_CSS}}',(ROOT/'reader.css').read_text()).replace('{{BODY_HTML}}',content).replace('{{READER_JS}}',(ROOT/'reader.js').read_text())
+    if '{{' in page:raise ValueError('reader template has unknown placeholders')
     errors=H.verify(page,receipt)
     if errors:raise ValueError('conversion rejected: '+'; '.join(errors))
     return page,receipt

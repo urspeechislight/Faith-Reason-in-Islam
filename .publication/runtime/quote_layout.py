@@ -14,6 +14,10 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
+import importlib.util as _reader_ilu
+_reader_spec=_reader_ilu.spec_from_file_location('article_reader_layout',Path(__file__).resolve().parent/'reader_layout.py')
+reader_layout=_reader_ilu.module_from_spec(_reader_spec);_reader_spec.loader.exec_module(reader_layout)
+
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
@@ -72,6 +76,8 @@ class Quotes(HTMLParser):
             self.rows.append(self.q);self.q=None
 
 def extract(source,fmt):
+    reader=fmt in ('html','htm') and 'data-article-format="reader-v1"' in source
+    if reader:source=reader_layout.normalize(source)
     if fmt in ('html','htm'):
         parser=Quotes();parser.feed(source);rows=parser.rows
     else:
@@ -112,6 +118,8 @@ def extract(source,fmt):
         if english and english[0].startswith(('"','“')) and english[-1].endswith(('"','”')):
             next(p for p in paragraphs if p['language']!='original')['cues'].append('outer-quotation-wrapper')
         result.append({'id':f'q{n:04d}','caption':flat(row['caption']),'paragraphs':paragraphs,'lexical_marks':row.get('marks',[])})
+    if reader:
+        for row in result:row['layout_profile']='reader-v1'
     return result
 
 def pending(quotes):
@@ -170,15 +178,18 @@ def render_errors(quotes,record,artifact_sha256,require_render=False):
                 if not isinstance(item,dict) or item.get('sha256')!=p['sha256']:
                     errors.append(p['id']+' rendered text differs');continue
                 if item.get('visible') is not True or not finite(item.get('height')) or item['height']<=0:errors.append(p['id']+' not visibly rendered')
+                reader=q.get('layout_profile')=='reader-v1'
                 depth=p.get('quote_depth',0)
                 if item.get('quote_depth',0)!=depth:errors.append(p['id']+' rendered speech depth differs')
-                if depth and (not finite(item.get('speech_inset_px')) or not 8<=item['speech_inset_px']<=20):errors.append(p['id']+' needs a compact 8-20px speech inset')
+                if not reader and depth and (not finite(item.get('speech_inset_px')) or not 8<=item['speech_inset_px']<=20):errors.append(p['id']+' needs a compact 8-20px speech inset')
                 compact=index>0 and (depth or q['paragraphs'][index-1].get('quote_depth',0)) and item.get('language')==row['paragraphs'][index-1].get('language') and item.get('layer')==row['paragraphs'][index-1].get('layer')
-                minimum=4 if compact else 8
+                minimum=4 if compact and not reader else 8
                 if not finite(item.get('gap_before')) or (index>0 and item['gap_before']<minimum):errors.append(p['id']+f' lacks visible paragraph spacing at {width}px')
-                if compact and finite(item.get('gap_before')) and item['gap_before']>12:errors.append(p['id']+' speech spacing is too loose')
-                if not finite(item.get('inset_px')) or item['inset_px']<10:errors.append(p['id']+' quotation lacks a visible directional inset')
+                if compact and not reader and finite(item.get('gap_before')) and item['gap_before']>12:errors.append(p['id']+' speech spacing is too loose')
+                if reader and (not finite(item.get('container_padding_px')) or not 19<=item['container_padding_px']<=33):errors.append(p['id']+' reader callout padding differs from the shared format')
+                if not reader and (not finite(item.get('inset_px')) or item['inset_px']<10):errors.append(p['id']+' quotation lacks a visible directional inset')
                 low,high=(1.8,2.1) if item.get('language')=='ar' else (1.7,2.0) if item.get('language') in ('he','arc','syr') else (1.5,1.7)
+                if reader:low,high=(1.8,2.15) if item.get('language')=='ar' else (1.7,2.05) if item.get('language') in ('he','arc','syr') else (1.7,1.95)
                 if not finite(item.get('line_ratio')) or not low<=item['line_ratio']<=high:errors.append(p['id']+' quotation line spacing is outside its readable compact range')
     return errors
 
@@ -208,7 +219,7 @@ def capture(path,output):
                         if(s.visibility==='hidden'||s.display==='none'||Number(s.opacity)===0||/opacity\\(0(?:%|\\.0+)?\\)/.test(s.filter))return false;}
                     return !/rgba\\([^)]*,\\s*0\\)/.test(getComputedStyle(e).color);
                 }}""")
-                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,layer:p.classList.contains('transliteration')?'transliteration':p.classList.contains('translation')?'translation':'original',quote_depth:p.closest('blockquote.source-speech, blockquote.source-matn')?1:0,speech_inset_px:p.closest('blockquote.source-speech, blockquote.source-matn')?(getComputedStyle(p).direction==='rtl'?p.closest('blockquote.source-speech, blockquote.source-matn').getBoundingClientRect().right-p.getBoundingClientRect().right:p.getBoundingClientRect().left-p.closest('blockquote.source-speech, blockquote.source-matn').getBoundingClientRect().left):0,language:p.lang||(getComputedStyle(p).direction==='rtl'?'ar':'en'),line_ratio:parseFloat(getComputedStyle(p).lineHeight)/parseFloat(getComputedStyle(p).fontSize),inset_px:getComputedStyle(p).direction==='rtl'?(q.getBoundingClientRect().right-parseFloat(getComputedStyle(q).paddingRight)-p.getBoundingClientRect().right):(p.getBoundingClientRect().left-q.getBoundingClientRect().left-parseFloat(getComputedStyle(q).paddingLeft)),visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
+                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:(()=>{const c=p.cloneNode(true);c.querySelectorAll('[data-reader-ui]').forEach(n=>n.remove());return c.textContent})(),container_padding_px:parseFloat(getComputedStyle(q).paddingInlineStart),layer:p.classList.contains('transliteration')?'transliteration':p.classList.contains('translation')?'translation':'original',quote_depth:p.closest('blockquote.source-speech, blockquote.source-matn')?1:0,speech_inset_px:p.closest('blockquote.source-speech, blockquote.source-matn')?(getComputedStyle(p).direction==='rtl'?p.closest('blockquote.source-speech, blockquote.source-matn').getBoundingClientRect().right-p.getBoundingClientRect().right:p.getBoundingClientRect().left-p.closest('blockquote.source-speech, blockquote.source-matn').getBoundingClientRect().left):0,language:p.lang||(getComputedStyle(p).direction==='rtl'?'ar':'en'),line_ratio:parseFloat(getComputedStyle(p).lineHeight)/parseFloat(getComputedStyle(p).fontSize),inset_px:getComputedStyle(p).direction==='rtl'?(q.getBoundingClientRect().right-parseFloat(getComputedStyle(q).paddingRight)-p.getBoundingClientRect().right):(p.getBoundingClientRect().left-q.getBoundingClientRect().left-parseFloat(getComputedStyle(q).paddingLeft)),visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
                 hidden=page.locator('[data-note-block]').evaluate_all("els=>els.filter(e=>!window.articleVisible(e)).map(e=>e.dataset.noteBlock)")
                 pseudo=page.locator('main *').evaluate_all("""els=>els.flatMap(e=>['::before','::after'].map(p=>getComputedStyle(e,p).content)).filter(t=>t&&!['none','normal','""'].includes(t)&&/[A-Za-z0-9\\u0600-\\u06ff]/.test(t))""")
                 for row in rows:
@@ -216,10 +227,11 @@ def capture(path,output):
                 lexical_marks=page.locator('main mark[data-term]').evaluate_all("els=>els.map(e=>({term:e.dataset.term,text:e.textContent,visible:window.articleVisible(e),underline:getComputedStyle(e).textDecorationLine.includes('underline'),style:getComputedStyle(e).textDecorationStyle}))")
                 expected_marks=[{'term':m['term'],'text':m['text']} for row in scripture.html(data.decode())[0] for para in row['paragraphs'] for m in para['marks']]
                 if [{'term':m['term'],'text':m['text']} for m in lexical_marks]!=expected_marks:raise ValueError('rendered lexical emphasis differs from checked source')
+                fact_cells=page.locator('[data-reader-cell]').evaluate_all(r"""els=>els.map(e=>{const c=e.cloneNode(true);c.querySelectorAll('[data-reader-ui]').forEach(n=>n.remove());return {id:e.closest('[data-reader-table]').dataset.noteBlock+':'+e.closest('[data-reader-row]').dataset.readerRow+':'+e.dataset.readerCell,text:c.textContent.replace(/\s+/g,' ').trim(),visible:window.articleVisible(e)}})""")
                 screenshot=output.with_name(output.stem+f'-{width}.png')
                 page.screenshot(path=str(screenshot),full_page=True)
                 result['viewports'].append({'width':width,'height':height,'callouts':rows,
-                    'lexical_marks':lexical_marks,'authored_sha256':authored(page.content()),'hidden_blocks':hidden,'pseudo_text':pseudo,
+                    'fact_cells':fact_cells,'lexical_marks':lexical_marks,'authored_sha256':authored(page.content()),'hidden_blocks':hidden,'pseudo_text':pseudo,
                     'overflow_px':page.evaluate('Math.max(0,document.documentElement.scrollWidth-innerWidth)'),
                     'screenshot':str(screenshot),'screenshot_sha256':sha(screenshot.read_bytes())})
         finally:browser.close()

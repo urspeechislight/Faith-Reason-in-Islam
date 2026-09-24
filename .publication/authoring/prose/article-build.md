@@ -1,7 +1,7 @@
 # Repeatable article builds
 
 Use `python3 ~/.agents/prose/article_build.py` for every website create or repair.
-It renders canonical Markdown through the maintained templates and quotation.css.
+It renders canonical Markdown through the maintained reader templates, reader.css and reader.js.
 It never reads old article HTML as a template, rewrites prose, grants approval,
 changes Git state, or publishes. The agent completes research, review and the
 protected publication procedure in the same skill invocation.
@@ -103,7 +103,7 @@ The manifest records absolute paths, source/runtime hashes, build history and
 final checked artifact hashes. `paths` prints the registered paths, including
 HTML and render evidence after preflight. Successful identical preflights reuse
 their checked artifacts. Missing or edited artifacts block reuse. Runtime hashes
-include both templates, quotation CSS, source policies and verification code.
+include both templates, reader CSS/JS, source policies and verification code.
 Keep Mac-owned global files and Titan runtime synchronized; do not edit policy
 or approval hashes inside records to conceal version differences.
 
@@ -329,3 +329,16 @@ release-request/release-accept, verify and stage normally.
 `article_build.py status RUN/build.json` reports the recorded stage and next
 command. It does not report publication; inspect the exact GitHub run using
 publication.md. A successful local verification never proves that deployment completed.
+
+## Shared reader format
+
+All new and repaired website articles use reader-v1, defined in the website
+reference, render_article.py, reader.css and reader.js. The historical `tabs`
+and `flowing` render options select the same layout. Colors remain Faith &
+Reason's; the approved reference supplies typography and layout. Back links
+use the referring page or index.html. No per-article CSS patches or generators.
+
+For a run begun under an older format, use the supported `revise` lifecycle;
+retain the old run and actual reviews, regenerate the new presentation and
+review its desktop/mobile output. Old render approvals cannot approve new HTML.
+Do not patch hashes or recreate review observations just to change the template.

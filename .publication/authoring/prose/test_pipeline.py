@@ -200,7 +200,7 @@ class ReviewTests(unittest.TestCase):
         if draft.get('format') in ('html','htm') and draft['quotes']:
             out['rendered_layout']={'schema':r.quote_layout.VERSION,'authored_sha256':'1'*64,'artifact_sha256':draft['artifact_sha256'],'engine':'chromium',
                 'viewports':[{'width':w,'authored_sha256':'1'*64,'hidden_blocks':[],'pseudo_text':[],'overflow_px':0,'screenshot_sha256':'0'*64,
-                    'callouts':[{'id':q['id'],'paragraphs':[{'sha256':p['sha256'],'height':20,'visible':True,'gap_before':16,'inset_px':16,'line_ratio':1.58,'language':'en'} for p in q['paragraphs']]} for q in draft['quotes']]} for w in (1280,390)]}
+                    'callouts':[{'id':q['id'],'paragraphs':[{'sha256':p['sha256'],'height':20,'visible':True,'gap_before':16,'inset_px':16,'line_ratio':1.85 if q.get('layout_profile')=='reader-v1' else 1.58,'container_padding_px':32,'quote_depth':p.get('quote_depth',0),'language':'en'} for p in q['paragraphs']]} for q in draft['quotes']]} for w in (1280,390)]}
         return out
     def test_hosted_preparation_defers_only_independent_release(self):
         d=self.draft('<p>A supported statement.</p>');record=self.approved(d)

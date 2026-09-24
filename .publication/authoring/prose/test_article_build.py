@@ -108,7 +108,7 @@ class RendererTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             site=Path(td);(site/'reading.html').write_text('POISON OLD PAGE')
             source=note();page,_=R.render(source,H.prepare(source),{},site)
-            self.assertNotIn('POISON',page);self.assertIn('Quotation presentation',page)
+            self.assertNotIn('POISON',page);self.assertIn('.reading-layout',page)
 
 
 class ManifestTests(unittest.TestCase):

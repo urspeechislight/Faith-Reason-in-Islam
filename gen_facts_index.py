@@ -7,11 +7,14 @@ one page grouped by category, then article, each row linking to
 block changes; never hand-edit the output.
 """
 import json
+import importlib.util
 import re
 from pathlib import Path
 
-REPO = Path.home() / "code" / "Faith-Reason-in-Islam"
-INV = json.loads((REPO / "retrofit_inventory.json").read_text())
+REPO = Path(__file__).resolve().parent
+_spec = importlib.util.spec_from_file_location("reader_layout", REPO / ".publication/runtime/reader_layout.py")
+_reader = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_reader)
 
 ORDER = ["debate", "exegesis"]
 CAT_LABEL = {"debate": "Debate Articles", "exegesis": "Exegesis Articles"}
@@ -28,12 +31,14 @@ def title_of(slug: str) -> str:
 def extract_facts(slug: str):
     """Return [(subtable_title, [row_cells_with_first_anchor])] from a page."""
     src = (REPO / slug).read_text()
+    src = _reader.normalize(src)
     m = re.search(r'<section id="facts".*?</section>', src, flags=re.S)
     if not m:
         return []
     ftxt = m.group(0)
     out = []
-    for sec in re.findall(r'<div class="analysis-section">(.*?)(?=<div class="analysis-section">|$)', ftxt, flags=re.S):
+    sections = re.findall(r'<div class="analysis-section">(.*?)(?=<div class="analysis-section">|$)', ftxt, flags=re.S) or [ftxt]
+    for sec in sections:
         hm = re.search(r'analysis-heading[^>]*>([^<]+)<', sec) or re.search(r'<summary><h4[^>]*>([^<]+)</h4></summary>', sec)
         title = hm.group(1).strip() if hm else "Facts"
         rows = []
@@ -49,9 +54,10 @@ def extract_facts(slug: str):
 
 
 def main():
+    inventory = json.loads((REPO / "retrofit_inventory.json").read_text())
     parts = []
     for cat in ORDER:
-        items = [(slug, meta) for slug, meta in INV.items() if meta["cat"] == cat]
+        items = [(slug, meta) for slug, meta in inventory.items() if meta["cat"] == cat]
         rows_any = False
         cat_html = [f'<section class="mt-10"> <h2 class="font-serif text-2xl font-bold mb-6 text-[#8A6D3B]">{CAT_LABEL[cat]}</h2>']
         for slug, _meta in items:
