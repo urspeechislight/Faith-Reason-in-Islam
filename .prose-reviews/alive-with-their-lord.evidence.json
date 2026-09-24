@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "artifact_sha256": "1b8ccc8c9ff8b527095ecdd916aa0f500fb3a5d37e0f3abe6525a0611c32fa3a",
+  "artifact_sha256": "33deeb6231042b76765c6c5f761ca058ee2bc25fe63df838a83467b3a4cb3e5c",
   "sources": [
     {
       "id": "uddat-instruction",
@@ -1683,6 +1683,96 @@
       }
     },
     {
+      "id": "farhat-relay-a",
+      "kind": "corpus",
+      "citation": {
+        "rowid": 1399948,
+        "relpath": "shia-hadith-general/Ibn-Tawus_Farhat_al-Ghuri_Arabic_BBxaWkjE.json",
+        "author": "السيد عبد الكريم بن طاووس",
+        "title": "فرحة الغري",
+        "vol": "",
+        "page": "106"
+      },
+      "raw": "\n57 - وعنه قال : حدثنا بن تمام ، قال : حدثنا محمد بن محمد بن رباح (1) ، قال : حدثنا أبو القاسم علي بن محمد بن رباح ، قال : حدثني أحمد بن حماد بن زهير (2) القرشي ، عن يزيد بن إسحاق ، عن أبي (السحيف الأرحبي) (3) ، قال : (حدثني عمر بن عبد الله بن طلحة النهدي) (4) ، عن أبيه ، قال : دخلت على أبي عبد الله ، فقال : يا عبد الله بن طلحة ، أما تأتون قبر أبي الحسين ؟ قلت : بلى جعلت فداك إنا لنأتيه . قال : تأتونه كل جمعة ؟ قلت : لا . قال : فتأتونه في كل شهر ؟ قلت : لا . قال : ما أجفاكم ! ان زيارته تعدل حجة وعمرة ، وزيارة أبي علي (﵇) تعدل حجتين وعمرتين (5) .\n58 - ورواه شيخنا في التهذيب بسنده إليه ، وعنه قال : أخبرنا أحمد بن محمد بن سعيد ، قال : حدثنا حماد بن يعلى ، قال : أخبرني حسان بن مهران الجمال ، قال :\nقال لي (6) جعفر بن محمد :\nيا حسان أتزور قبور الشهداء قبلكم ؟ قلت : أي الشهداء ؟ قال : علي وحسين . قلت : إنا نزورهما فنكثر . قال : أولئك الشهداء\n",
+      "raw_sha256": "653b6ca25687d3682dc3ac537d37d9271be6d3def5f511e9c3782f670b518b54",
+      "passage": {
+        "id": "farhat-relay-a",
+        "source": {
+          "rowid": 1399948,
+          "relpath": "shia-hadith-general/Ibn-Tawus_Farhat_al-Ghuri_Arabic_BBxaWkjE.json",
+          "author": "السيد عبد الكريم بن طاووس",
+          "title": "فرحة الغري",
+          "vol": "",
+          "page": "106"
+        },
+        "source_sha256": "653b6ca25687d3682dc3ac537d37d9271be6d3def5f511e9c3782f670b518b54",
+        "start": 552,
+        "end": 847,
+        "quote": "58 - ورواه شيخنا في التهذيب بسنده إليه ، وعنه قال : أخبرنا أحمد بن محمد بن سعيد ، قال : حدثنا حماد بن يعلى ، قال : أخبرني حسان بن مهران الجمال ، قال :\nقال لي (6) جعفر بن محمد :\nيا حسان أتزور قبور الشهداء قبلكم ؟ قلت : أي الشهداء ؟ قال : علي وحسين . قلت : إنا نزورهما فنكثر . قال : أولئك الشهداء\n",
+        "quote_sha256": "3ebf34142746836f4d4fd987affc1662e71584f4b9f86acb6b526ca70af4e3f9"
+      }
+    },
+    {
+      "id": "farhat-relay-b",
+      "kind": "corpus",
+      "citation": {
+        "rowid": 1399949,
+        "relpath": "shia-hadith-general/Ibn-Tawus_Farhat_al-Ghuri_Arabic_BBxaWkjE.json",
+        "author": "السيد عبد الكريم بن طاووس",
+        "title": "فرحة الغري",
+        "vol": "",
+        "page": "107"
+      },
+      "raw": "\nالمرزوقين ، فزوروهم وافزعوا عندهم بحوائجكم ، فلو يكونون منا كموضعهم منكم لاتخذناهم هجرة (1) .\n59 - أخبرني والدي (﵁) ، عن محمد بن نما ، عن محمد بن إدريس ، عن عربي بن مسافر ، عن الياس بن هشام ، عن أبي علي ، عن الطوسي ، عن المفيد ، عن محمد بن أحمد بن داود ، عن أحمد بن محمد بن سعيد ، قال : أخبرنا أحمد بن الحسين بن عبد الملك الأودي البزاز .\nقال : حدثنا (ذبيان بن حكيم) (2) ، قال : حدثني يونس بن ظبيان ، عن أبي عبد الله ، قال :\nإذا أردت زيارة قبر أمير المؤمنين (﵇) فتوضأ واغتسل وامشي على هنك ، وقل : الحمد لله الذي أكرمني بمعرفته ومعرفة رسوله (﵌) ، ومن فرض طاعته رحمة منه وتطولا علي بالإيمان ، الحمد لله الذي سيرني في بلاده ، وحملني على دوابه ، وطوى لي البعيد ، ودفع عني المكروه ، حتى أدخلني حرم أخي رسول الله فأرانيه في عافية ، (الحمد لله الذي جعلني من زوار قبر وصي رسوله) (3) ، الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله ، أشهد أن لا إله إلا الله ، وأشهد أن محمدا عبده ورسوله جاء بالحق من عنده ، وأشهد أن عليا عبد الله وأخو رسوله (﵉) ، ثم تدنو من القبر وتقول : السلام من الله ، والسلام على محمد أمين الله وعلى رسالته (4) وعزائم أمره ، ومعدن الوحي والتنزيل ، الخاتم لما سبق والفاتح لما أستقبل ، والمهيمن\n",
+      "raw_sha256": "dcf87668993001127472ee63f8a46bb3dc605688f616ed45dcbe154a058affde",
+      "passage": {
+        "id": "farhat-relay-b",
+        "source": {
+          "rowid": 1399949,
+          "relpath": "shia-hadith-general/Ibn-Tawus_Farhat_al-Ghuri_Arabic_BBxaWkjE.json",
+          "author": "السيد عبد الكريم بن طاووس",
+          "title": "فرحة الغري",
+          "vol": "",
+          "page": "107"
+        },
+        "source_sha256": "dcf87668993001127472ee63f8a46bb3dc605688f616ed45dcbe154a058affde",
+        "start": 1,
+        "end": 94,
+        "quote": "المرزوقين ، فزوروهم وافزعوا عندهم بحوائجكم ، فلو يكونون منا كموضعهم منكم لاتخذناهم هجرة (1) .",
+        "quote_sha256": "75eb8158ae63f35d4141b789a3d6d6b307f61c13471c1ce6db6719516352a6cc"
+      }
+    },
+    {
+      "id": "shanqiti-3522",
+      "kind": "corpus",
+      "citation": {
+        "rowid": 1142998,
+        "relpath": "sunni-tafsir/Al-Shanqiti_Adwa_al-Bayan_v06_Arabic_M8wo8rA-_06.json",
+        "author": "الشنقيطي",
+        "title": "أضواء البيان",
+        "vol": "06",
+        "page": "125"
+      },
+      "raw": "\nذلك من الآيات . ولو كان معنى الآية وما شابهها : * (إِنَّكَ لاَ تُسْمِعُ الْمَوْتَى) * ، أي : الذين فارقت أرواحهم أبدانهم لما كان في ذلك تسلية له ﵌ ، كما ترى .\nواعلم : أن آية (النمل) هذه ، حاءت آيتان أُخريان بمعناها :\nالأولى منهما : قوله تعالى في سورة (الروم) : * (فَإِنَّكَ لاَ تُسْمِعُ الْمَوْتَى وَلاَ تُسْمِعُ الصُّمَّ الدُّعَاء إِذَا وَلَّوْاْ مُدْبِرِينَ * وَمَا أَنتَ بِهَادِى الْعُمْىِ عَن ضَلَالَتِهِمْ إِن تُسْمِعُ إِلاَّ مَن يُؤْمِنُ بِئَايَاتِنَا فَهُم مُّسْلِمُونَ) * ، ولفظ آية (الروم) هذه ، كلفظ آية (النمل) التي نحن بصددها ، فيكفي في بيان آية (الروم) ، ما ذكرنا في آية (النمل) .\nوالثانية منهما : قوله تعالى في سورة (فاطر) : * (إِنَّ اللَّهَ يُسْمِعُ مَن يَشَاء وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ، وآية (فاطر) هذه كآية (النمل) و (الروم) المتقدمتين ، لأن المراد بقوله فيها : * (مَن فِى الْقُبُورِ) * الموتى ، فلا فرق بي قوله : * (إِنَّكَ لاَ تُسْمِعُ الْمَوْتَى) * ، وبين قوله : * (وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ؛ لأن المراد بالموتى ومن في القبور واحد ؛ كقوله تعالى : * (وَأَنَّ اللَّهَ يَبْعَثُ مَن فِى الْقُبُورِ) * ، أي : يبعث جميع الموتى من قُبِر منهم ومن لم يقبر ، وقد دلَّت قرائن قرءانيّة أيضًا على أن معنى آية (فاطر) هذه كمعنى آية (الروم) ، منها قوله تعالى قبلها : * (وَلاَ تَزِرُ وَازِرَةٌ وِزْرَ أُخْرَى وَإِن تَدْعُ مُثْقَلَةٌ) * ، لأن معناها : لا ينفع إنذارك إلا من هداه اللَّه ووفّقه فصار ممن يخشى ربّه بالغيب ويقيم الصلاة ، * (وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ، أي : الموتى ، أي : الكفار الذين سبق لهم الشقاء ، كما تقدّم . ومنها قوله تعالى أيضًا : * (وَمَا يَسْتَوِى الاْعْمَى وَالْبَصِيرُ) * ، أي : المؤمن والكافر . وقوله تعالى (بعدها) : * (وَمَا يَسْتَوِى الاْحْيَاء وَلاَ الاْمْوَاتُ) * ، أي : المؤمنون والكفار . ومنها قوله تعالى بعده : * (إِنْ أَنتَ إِلاَّ نَذِيرٌ) * (52 / 32) ، أي : ليس الإضلال والهدى بيدك ما أنت إلا نذير ، أي : وقد بلّغت .\nالتفسير الثاني : هو أن المراد بالموتى الذين ماتوا بالفعل ، ولكن المراد بالسماع المنفي في قوله : * (إِنَّكَ لاَ تُسْمِعُ الْمَوْتَى) * خصوص السماع المعتاد الذي ينتفع صاحبه به ، وأن هذا مثل ضرب للكفار ، والكفار يسمعون الصوت ، لكن لا يسمعون سماع قبول بفقه واتّباع ؛ كما قال تعالى : * (وَمَثَلُ الَّذِينَ كَفَرُواْ كَمَثَلِ الَّذِى يَنْعِقُ بِمَا لاَ يَسْمَعُ إِلاَّ دُعَاء\n",
+      "raw_sha256": "95ea758373246e8345b460938617834a1e01ee37fb20f2772d123c4dc5dfb15e",
+      "passage": {
+        "id": "shanqiti-3522",
+        "source": {
+          "rowid": 1142998,
+          "relpath": "sunni-tafsir/Al-Shanqiti_Adwa_al-Bayan_v06_Arabic_M8wo8rA-_06.json",
+          "author": "الشنقيطي",
+          "title": "أضواء البيان",
+          "vol": "06",
+          "page": "125"
+        },
+        "source_sha256": "95ea758373246e8345b460938617834a1e01ee37fb20f2772d123c4dc5dfb15e",
+        "start": 595,
+        "end": 1490,
+        "quote": "والثانية منهما : قوله تعالى في سورة (فاطر) : * (إِنَّ اللَّهَ يُسْمِعُ مَن يَشَاء وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ، وآية (فاطر) هذه كآية (النمل) و (الروم) المتقدمتين ، لأن المراد بقوله فيها : * (مَن فِى الْقُبُورِ) * الموتى ، فلا فرق بي قوله : * (إِنَّكَ لاَ تُسْمِعُ الْمَوْتَى) * ، وبين قوله : * (وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ؛ لأن المراد بالموتى ومن في القبور واحد ؛ كقوله تعالى : * (وَأَنَّ اللَّهَ يَبْعَثُ مَن فِى الْقُبُورِ) * ، أي : يبعث جميع الموتى من قُبِر منهم ومن لم يقبر ، وقد دلَّت قرائن قرءانيّة أيضًا على أن معنى آية (فاطر) هذه كمعنى آية (الروم) ، منها قوله تعالى قبلها : * (وَلاَ تَزِرُ وَازِرَةٌ وِزْرَ أُخْرَى وَإِن تَدْعُ مُثْقَلَةٌ) * ، لأن معناها : لا ينفع إنذارك إلا من هداه اللَّه ووفّقه فصار ممن يخشى ربّه بالغيب ويقيم الصلاة ، * (وَمَا أَنتَ بِمُسْمِعٍ مَّن فِى الْقُبُورِ) * ، أي : الموتى ، أي : الكفار الذين سبق لهم الشقاء ، كما تقدّم .",
+        "quote_sha256": "0dfea44d0e27948fa9601ad1d0cf88999a13e559bcfffad2a0b85257a9ab0beb"
+      }
+    },
+    {
       "id": "quran-3-169",
       "kind": "external",
       "citation": "Qur'an 3:169 (Uthmani), api.alquran.cloud",
@@ -1741,9 +1831,11 @@
     {
       "claim": "A chained report instructs visiting the graves of Ali and al-Husayn and turning there with one's needs.",
       "source_ids": [
-        "ibnuqda-hassan"
+        "ibnuqda-hassan",
+        "farhat-relay-a",
+        "farhat-relay-b"
       ],
-      "inference": "The chain is printed in the source and relayed by Ibn Tawus; the locative ambiguity of 'turn there with your needs' is stated and resolved by the Uddat formula.",
+      "inference": "The chain is printed in the source and relayed by Ibn Tawus; the locative ambiguity of 'turn there with your needs' is stated and resolved by the Uddat formula. Ibn Tawus relays the same report through Ahmad ibn Muhammad ibn Sa’id (Ibn Uqda) in Farhat al-Ghari pp. 106-107, a later transmitted witness, not independent corroboration.",
       "limits": "The phrase alone does not specify to whom the request is directed."
     },
     {
@@ -1880,10 +1972,1153 @@
         "shanqiti-a",
         "shanqiti-b",
         "shanqiti-c",
-        "ibtaymiyya-isnad"
+        "ibtaymiyya-isnad",
+        "shanqiti-3522"
       ],
-      "inference": "On the second reading the objection survives only as a denial of beneficial hearing, which the canon's own hearing reports answer; the form-versus-belief dispute is left unsettled.",
+      "inference": "On the second reading the objection survives only as a denial of beneficial hearing, which the canon's own hearing reports answer; the form-versus-belief dispute is left unsettled. His parallel-verse treatment reads Qur’an 35:22 the same way (Adwa al-Bayan vol. 6 p. 125).",
       "limits": "Al-Shinqiti ascribes the second reading to Ibn Taymiyya himself; the companion verse 35:22 is read the same way at Adwa al-Bayan vol. 6 p. 125 (prose locator)."
     }
-  ]
+  ],
+  "scripture_alignment": {
+    "schema": 1,
+    "status": "approved",
+    "reviewer": "agent-0",
+    "quotes": [
+      {
+        "id": "s0001",
+        "caption": "Qur'an 3:169",
+        "layers": {
+          "original": "وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ",
+          "transliteration": "wa-la tahsabanna alladhina qutilu fi sabili Allahi amwatan, bal ahyaanun 'inda rabbihim yurzaqun",
+          "translation": "Do not suppose that those who have been killed in the way of God are dead. Rather, they are alive with their Lord, receiving provision."
+        },
+        "source_tokens": [
+          "وَلَا",
+          "تَحْسَبَنَّ",
+          "ٱلَّذِينَ",
+          "قُتِلُوا",
+          "فِى",
+          "سَبِيلِ",
+          "ٱللَّهِ",
+          "أَمْوَٰتًۢا",
+          "بَلْ",
+          "أَحْيَآءٌ",
+          "عِندَ",
+          "رَبِّهِمْ",
+          "يُرْزَقُونَ"
+        ],
+        "roman_tokens": [
+          "wa-la",
+          "tahsabanna",
+          "alladhina",
+          "qutilu",
+          "fi",
+          "sabili",
+          "Allahi",
+          "amwatan",
+          "bal",
+          "ahyaanun",
+          "'inda",
+          "rabbihim",
+          "yurzaqun"
+        ],
+        "layers_sha256": "4f543fa33e2be8eb9dbd00f7cf7dcfd703d194fb4ea95c595b7d5db5fff49346",
+        "status": "passed",
+        "units": [
+          {
+            "source_index": 0,
+            "source": "وَلَا",
+            "roman_start": 0,
+            "roman_end": 1,
+            "romanization": "wa-la"
+          },
+          {
+            "source_index": 1,
+            "source": "تَحْسَبَنَّ",
+            "roman_start": 1,
+            "roman_end": 2,
+            "romanization": "tahsabanna"
+          },
+          {
+            "source_index": 2,
+            "source": "ٱلَّذِينَ",
+            "roman_start": 2,
+            "roman_end": 3,
+            "romanization": "alladhina"
+          },
+          {
+            "source_index": 3,
+            "source": "قُتِلُوا",
+            "roman_start": 3,
+            "roman_end": 4,
+            "romanization": "qutilu"
+          },
+          {
+            "source_index": 4,
+            "source": "فِى",
+            "roman_start": 4,
+            "roman_end": 5,
+            "romanization": "fi"
+          },
+          {
+            "source_index": 5,
+            "source": "سَبِيلِ",
+            "roman_start": 5,
+            "roman_end": 6,
+            "romanization": "sabili"
+          },
+          {
+            "source_index": 6,
+            "source": "ٱللَّهِ",
+            "roman_start": 6,
+            "roman_end": 7,
+            "romanization": "Allahi"
+          },
+          {
+            "source_index": 7,
+            "source": "أَمْوَٰتًۢا",
+            "roman_start": 7,
+            "roman_end": 8,
+            "romanization": "amwatan"
+          },
+          {
+            "source_index": 8,
+            "source": "بَلْ",
+            "roman_start": 8,
+            "roman_end": 9,
+            "romanization": "bal"
+          },
+          {
+            "source_index": 9,
+            "source": "أَحْيَآءٌ",
+            "roman_start": 9,
+            "roman_end": 10,
+            "romanization": "ahyaanun"
+          },
+          {
+            "source_index": 10,
+            "source": "عِندَ",
+            "roman_start": 10,
+            "roman_end": 11,
+            "romanization": "'inda"
+          },
+          {
+            "source_index": 11,
+            "source": "رَبِّهِمْ",
+            "roman_start": 11,
+            "roman_end": 12,
+            "romanization": "rabbihim"
+          },
+          {
+            "source_index": 12,
+            "source": "يُرْزَقُونَ",
+            "roman_start": 12,
+            "roman_end": 13,
+            "romanization": "yurzaqun"
+          }
+        ],
+        "evidence": "Arabic layer is byte-identical to the dossier api.alquran.cloud Uthmani text of 3:169, and the full-verse wording bal ahyaanun 'inda rabbihim yurzaqun is also relayed verbatim in corpus row 5049 (Ilm al-Yaqin), confirming a complete verse from wa-laa to yurzaqoon. All 13 source tokens are exactly the verse words after dropping Uthmani pause marks (qutiluu's superscript zero). Each Arabic word romanizes to exactly one roman token in order, e.g. wala as hyphenated wa-la and pausal yurzaqun, tiling all 13 roman tokens with no gaps. The English renders every phrase directly: amwaatan as 'dead', bal as 'Rather', yurzaqoon as 'receiving provision', with nothing added or dropped.",
+        "retained_from": {
+          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
+          "reviewer": "agent-0",
+          "quote_id": "s0001"
+        }
+      },
+      {
+        "id": "s0002",
+        "caption": "Qur'an 9:105",
+        "layers": {
+          "original": "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ إِلَىٰ عَٰلِمِ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
+          "transliteration": "wa-qul i'malu fa-sayara Allahu 'amalakum wa-rasuluhu wa-l-mu'minun, wa-saturadduna ila 'alimi l-ghaybi wa-l-shahadati fa-yunabbi'ukum bi-ma kuntum ta'malun",
+          "translation": "Say, \"Act. God will see your deeds, as will His Messenger and the believers. Then you will be returned to the Knower of the unseen and the seen, and He will inform you of what you used to do.\""
+        },
+        "source_tokens": [
+          "وَقُلِ",
+          "ٱعْمَلُوا",
+          "فَسَيَرَى",
+          "ٱللَّهُ",
+          "عَمَلَكُمْ",
+          "وَرَسُولُهُۥ",
+          "وَٱلْمُؤْمِنُونَ",
+          "وَسَتُرَدُّونَ",
+          "إِلَىٰ",
+          "عَٰلِمِ",
+          "ٱلْغَيْبِ",
+          "وَٱلشَّهَٰدَةِ",
+          "فَيُنَبِّئُكُم",
+          "بِمَا",
+          "كُنتُمْ",
+          "تَعْمَلُونَ"
+        ],
+        "roman_tokens": [
+          "wa-qul",
+          "i'malu",
+          "fa-sayara",
+          "Allahu",
+          "'amalakum",
+          "wa-rasuluhu",
+          "wa-l-mu'minun",
+          "wa-saturadduna",
+          "ila",
+          "'alimi",
+          "l-ghaybi",
+          "wa-l-shahadati",
+          "fa-yunabbi'ukum",
+          "bi-ma",
+          "kuntum",
+          "ta'malun"
+        ],
+        "layers_sha256": "78f7dc9a04b034fe6ac183377b17cda3bbd7006c9d37e45699e763dd21d436bb",
+        "status": "passed",
+        "units": [
+          {
+            "source_index": 0,
+            "source": "وَقُلِ",
+            "roman_start": 0,
+            "roman_end": 1,
+            "romanization": "wa-qul"
+          },
+          {
+            "source_index": 1,
+            "source": "ٱعْمَلُوا",
+            "roman_start": 1,
+            "roman_end": 2,
+            "romanization": "i'malu"
+          },
+          {
+            "source_index": 2,
+            "source": "فَسَيَرَى",
+            "roman_start": 2,
+            "roman_end": 3,
+            "romanization": "fa-sayara"
+          },
+          {
+            "source_index": 3,
+            "source": "ٱللَّهُ",
+            "roman_start": 3,
+            "roman_end": 4,
+            "romanization": "Allahu"
+          },
+          {
+            "source_index": 4,
+            "source": "عَمَلَكُمْ",
+            "roman_start": 4,
+            "roman_end": 5,
+            "romanization": "'amalakum"
+          },
+          {
+            "source_index": 5,
+            "source": "وَرَسُولُهُۥ",
+            "roman_start": 5,
+            "roman_end": 6,
+            "romanization": "wa-rasuluhu"
+          },
+          {
+            "source_index": 6,
+            "source": "وَٱلْمُؤْمِنُونَ",
+            "roman_start": 6,
+            "roman_end": 7,
+            "romanization": "wa-l-mu'minun"
+          },
+          {
+            "source_index": 7,
+            "source": "وَسَتُرَدُّونَ",
+            "roman_start": 7,
+            "roman_end": 8,
+            "romanization": "wa-saturadduna"
+          },
+          {
+            "source_index": 8,
+            "source": "إِلَىٰ",
+            "roman_start": 8,
+            "roman_end": 9,
+            "romanization": "ila"
+          },
+          {
+            "source_index": 9,
+            "source": "عَٰلِمِ",
+            "roman_start": 9,
+            "roman_end": 10,
+            "romanization": "'alimi"
+          },
+          {
+            "source_index": 10,
+            "source": "ٱلْغَيْبِ",
+            "roman_start": 10,
+            "roman_end": 11,
+            "romanization": "l-ghaybi"
+          },
+          {
+            "source_index": 11,
+            "source": "وَٱلشَّهَٰدَةِ",
+            "roman_start": 11,
+            "roman_end": 12,
+            "romanization": "wa-l-shahadati"
+          },
+          {
+            "source_index": 12,
+            "source": "فَيُنَبِّئُكُم",
+            "roman_start": 12,
+            "roman_end": 13,
+            "romanization": "fa-yunabbi'ukum"
+          },
+          {
+            "source_index": 13,
+            "source": "بِمَا",
+            "roman_start": 13,
+            "roman_end": 14,
+            "romanization": "bi-ma"
+          },
+          {
+            "source_index": 14,
+            "source": "كُنتُمْ",
+            "roman_start": 14,
+            "roman_end": 15,
+            "romanization": "kuntum"
+          },
+          {
+            "source_index": 15,
+            "source": "تَعْمَلُونَ",
+            "roman_start": 15,
+            "roman_end": 16,
+            "romanization": "ta'malun"
+          }
+        ],
+        "evidence": "Original matches the dossier Uthmani text of 9:105 exactly, and corpus tafsir rows 10136 and 79801 relay the same wording from wa-qul i'maloo to ta'maloon, confirming completeness. All 16 source words map one-to-one onto the 16 roman tokens in sequence; hyphenated compounds fa-sayara, wa-saturadduna, fa-yunabbi'ukum and bi-ma are single tokens, so the tiling covers every roman token exactly once. The English supplies only the elided verb in 'as will His Messenger and the believers', keeps 'aalimi l-ghaybi wa-l-shahadati as 'Knower of the unseen and the seen', and adds no doctrine.",
+        "retained_from": {
+          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
+          "reviewer": "agent-0",
+          "quote_id": "s0002"
+        }
+      },
+      {
+        "id": "s0003",
+        "caption": "Qur'an 27:40",
+        "layers": {
+          "original": "قَالَ ٱلَّذِى عِندَهُۥ عِلْمٌۭ مِّنَ ٱلْكِتَٰبِ أَنَا۠ ءَاتِيكَ بِهِۦ قَبْلَ أَن يَرْتَدَّ إِلَيْكَ طَرْفُكَ ۚ فَلَمَّا رَءَاهُ مُسْتَقِرًّا عِندَهُۥ قَالَ هَٰذَا مِن فَضْلِ رَبِّى لِيَبْلُوَنِىٓ ءَأَشْكُرُ أَمْ أَكْفُرُ ۖ وَمَن شَكَرَ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ رَبِّى غَنِىٌّۭ كَرِيمٌۭ",
+          "transliteration": "qala alladhi 'indahu 'ilmun min al-kitabi ana atika bihi qabla an yartadda ilayka tarfuk, falamma ra'ahu mustaqirran 'indahu qala hadha min fadli rabbi li-yabluwanni a-ashkuru am akfuru, wa-man shakara fa-innama yashkuru li-nafsihi, wa-man kafara fa-inna rabbi ghaniyyun karim",
+          "translation": "The one who had knowledge from the Book said, \"I will bring it to you before your glance returns to you.\" Then, when he saw it settled before him, he said, \"This is from the bounty of my Lord, to test me whether I will give thanks or be ungrateful. Whoever gives thanks gives thanks only for his own sake. Whoever is ungrateful, then my Lord is Self-Sufficient and Generous.\""
+        },
+        "source_tokens": [
+          "قَالَ",
+          "ٱلَّذِى",
+          "عِندَهُۥ",
+          "عِلْمٌۭ",
+          "مِّنَ",
+          "ٱلْكِتَٰبِ",
+          "أَنَا۠",
+          "ءَاتِيكَ",
+          "بِهِۦ",
+          "قَبْلَ",
+          "أَن",
+          "يَرْتَدَّ",
+          "إِلَيْكَ",
+          "طَرْفُكَ",
+          "فَلَمَّا",
+          "رَءَاهُ",
+          "مُسْتَقِرًّا",
+          "عِندَهُۥ",
+          "قَالَ",
+          "هَٰذَا",
+          "مِن",
+          "فَضْلِ",
+          "رَبِّى",
+          "لِيَبْلُوَنِىٓ",
+          "ءَأَشْكُرُ",
+          "أَمْ",
+          "أَكْفُرُ",
+          "وَمَن",
+          "شَكَرَ",
+          "فَإِنَّمَا",
+          "يَشْكُرُ",
+          "لِنَفْسِهِۦ",
+          "وَمَن",
+          "كَفَرَ",
+          "فَإِنَّ",
+          "رَبِّى",
+          "غَنِىٌّۭ",
+          "كَرِيمٌۭ"
+        ],
+        "roman_tokens": [
+          "qala",
+          "alladhi",
+          "'indahu",
+          "'ilmun",
+          "min",
+          "al-kitabi",
+          "ana",
+          "atika",
+          "bihi",
+          "qabla",
+          "an",
+          "yartadda",
+          "ilayka",
+          "tarfuk",
+          "falamma",
+          "ra'ahu",
+          "mustaqirran",
+          "'indahu",
+          "qala",
+          "hadha",
+          "min",
+          "fadli",
+          "rabbi",
+          "li-yabluwanni",
+          "a-ashkuru",
+          "am",
+          "akfuru",
+          "wa-man",
+          "shakara",
+          "fa-innama",
+          "yashkuru",
+          "li-nafsihi",
+          "wa-man",
+          "kafara",
+          "fa-inna",
+          "rabbi",
+          "ghaniyyun",
+          "karim"
+        ],
+        "layers_sha256": "e977c0b3fa8003b7fe432a425e0db47a936e96ab42acf65e69a6e3632198b118",
+        "status": "passed",
+        "units": [
+          {
+            "source_index": 0,
+            "source": "قَالَ",
+            "roman_start": 0,
+            "roman_end": 1,
+            "romanization": "qala"
+          },
+          {
+            "source_index": 1,
+            "source": "ٱلَّذِى",
+            "roman_start": 1,
+            "roman_end": 2,
+            "romanization": "alladhi"
+          },
+          {
+            "source_index": 2,
+            "source": "عِندَهُۥ",
+            "roman_start": 2,
+            "roman_end": 3,
+            "romanization": "'indahu"
+          },
+          {
+            "source_index": 3,
+            "source": "عِلْمٌۭ",
+            "roman_start": 3,
+            "roman_end": 4,
+            "romanization": "'ilmun"
+          },
+          {
+            "source_index": 4,
+            "source": "مِّنَ",
+            "roman_start": 4,
+            "roman_end": 5,
+            "romanization": "min"
+          },
+          {
+            "source_index": 5,
+            "source": "ٱلْكِتَٰبِ",
+            "roman_start": 5,
+            "roman_end": 6,
+            "romanization": "al-kitabi"
+          },
+          {
+            "source_index": 6,
+            "source": "أَنَا۠",
+            "roman_start": 6,
+            "roman_end": 7,
+            "romanization": "ana"
+          },
+          {
+            "source_index": 7,
+            "source": "ءَاتِيكَ",
+            "roman_start": 7,
+            "roman_end": 8,
+            "romanization": "atika"
+          },
+          {
+            "source_index": 8,
+            "source": "بِهِۦ",
+            "roman_start": 8,
+            "roman_end": 9,
+            "romanization": "bihi"
+          },
+          {
+            "source_index": 9,
+            "source": "قَبْلَ",
+            "roman_start": 9,
+            "roman_end": 10,
+            "romanization": "qabla"
+          },
+          {
+            "source_index": 10,
+            "source": "أَن",
+            "roman_start": 10,
+            "roman_end": 11,
+            "romanization": "an"
+          },
+          {
+            "source_index": 11,
+            "source": "يَرْتَدَّ",
+            "roman_start": 11,
+            "roman_end": 12,
+            "romanization": "yartadda"
+          },
+          {
+            "source_index": 12,
+            "source": "إِلَيْكَ",
+            "roman_start": 12,
+            "roman_end": 13,
+            "romanization": "ilayka"
+          },
+          {
+            "source_index": 13,
+            "source": "طَرْفُكَ",
+            "roman_start": 13,
+            "roman_end": 14,
+            "romanization": "tarfuk"
+          },
+          {
+            "source_index": 14,
+            "source": "فَلَمَّا",
+            "roman_start": 14,
+            "roman_end": 15,
+            "romanization": "falamma"
+          },
+          {
+            "source_index": 15,
+            "source": "رَءَاهُ",
+            "roman_start": 15,
+            "roman_end": 16,
+            "romanization": "ra'ahu"
+          },
+          {
+            "source_index": 16,
+            "source": "مُسْتَقِرًّا",
+            "roman_start": 16,
+            "roman_end": 17,
+            "romanization": "mustaqirran"
+          },
+          {
+            "source_index": 17,
+            "source": "عِندَهُۥ",
+            "roman_start": 17,
+            "roman_end": 18,
+            "romanization": "'indahu"
+          },
+          {
+            "source_index": 18,
+            "source": "قَالَ",
+            "roman_start": 18,
+            "roman_end": 19,
+            "romanization": "qala"
+          },
+          {
+            "source_index": 19,
+            "source": "هَٰذَا",
+            "roman_start": 19,
+            "roman_end": 20,
+            "romanization": "hadha"
+          },
+          {
+            "source_index": 20,
+            "source": "مِن",
+            "roman_start": 20,
+            "roman_end": 21,
+            "romanization": "min"
+          },
+          {
+            "source_index": 21,
+            "source": "فَضْلِ",
+            "roman_start": 21,
+            "roman_end": 22,
+            "romanization": "fadli"
+          },
+          {
+            "source_index": 22,
+            "source": "رَبِّى",
+            "roman_start": 22,
+            "roman_end": 23,
+            "romanization": "rabbi"
+          },
+          {
+            "source_index": 23,
+            "source": "لِيَبْلُوَنِىٓ",
+            "roman_start": 23,
+            "roman_end": 24,
+            "romanization": "li-yabluwanni"
+          },
+          {
+            "source_index": 24,
+            "source": "ءَأَشْكُرُ",
+            "roman_start": 24,
+            "roman_end": 25,
+            "romanization": "a-ashkuru"
+          },
+          {
+            "source_index": 25,
+            "source": "أَمْ",
+            "roman_start": 25,
+            "roman_end": 26,
+            "romanization": "am"
+          },
+          {
+            "source_index": 26,
+            "source": "أَكْفُرُ",
+            "roman_start": 26,
+            "roman_end": 27,
+            "romanization": "akfuru"
+          },
+          {
+            "source_index": 27,
+            "source": "وَمَن",
+            "roman_start": 27,
+            "roman_end": 28,
+            "romanization": "wa-man"
+          },
+          {
+            "source_index": 28,
+            "source": "شَكَرَ",
+            "roman_start": 28,
+            "roman_end": 29,
+            "romanization": "shakara"
+          },
+          {
+            "source_index": 29,
+            "source": "فَإِنَّمَا",
+            "roman_start": 29,
+            "roman_end": 30,
+            "romanization": "fa-innama"
+          },
+          {
+            "source_index": 30,
+            "source": "يَشْكُرُ",
+            "roman_start": 30,
+            "roman_end": 31,
+            "romanization": "yashkuru"
+          },
+          {
+            "source_index": 31,
+            "source": "لِنَفْسِهِۦ",
+            "roman_start": 31,
+            "roman_end": 32,
+            "romanization": "li-nafsihi"
+          },
+          {
+            "source_index": 32,
+            "source": "وَمَن",
+            "roman_start": 32,
+            "roman_end": 33,
+            "romanization": "wa-man"
+          },
+          {
+            "source_index": 33,
+            "source": "كَفَرَ",
+            "roman_start": 33,
+            "roman_end": 34,
+            "romanization": "kafara"
+          },
+          {
+            "source_index": 34,
+            "source": "فَإِنَّ",
+            "roman_start": 34,
+            "roman_end": 35,
+            "romanization": "fa-inna"
+          },
+          {
+            "source_index": 35,
+            "source": "رَبِّى",
+            "roman_start": 35,
+            "roman_end": 36,
+            "romanization": "rabbi"
+          },
+          {
+            "source_index": 36,
+            "source": "غَنِىٌّۭ",
+            "roman_start": 36,
+            "roman_end": 37,
+            "romanization": "ghaniyyun"
+          },
+          {
+            "source_index": 37,
+            "source": "كَرِيمٌۭ",
+            "roman_start": 37,
+            "roman_end": 38,
+            "romanization": "karim"
+          }
+        ],
+        "evidence": "The 38-word verse 27:40 matches the dossier raw byte-for-byte, and corpus rows 46820 and 4076 relay the identical wording from qala alladhee to ghaniyyun kareem, so nothing is truncated. Every Arabic word, including the repeated qala, 'indahu, rabbee and wa-man pairs, maps to exactly one roman token in order, covering all 38 roman tokens. li-yabluwanni renders the Uthmani li-yabluwaniya with a conventional doubled nun; the translation keeps fa-innamaa as 'only', the am alternative as 'or', and Self-Sufficient Generous for ghaniyyun kareem.",
+        "retained_from": {
+          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
+          "reviewer": "agent-0",
+          "quote_id": "s0003"
+        }
+      },
+      {
+        "id": "s0004",
+        "caption": "Qur'an 10:64",
+        "layers": {
+          "original": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْءَاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+          "transliteration": "lahum al-bushra fi al-hayati al-dunya wa-fi al-akhirah, la tabdila li-kalimati Allahi, dhalika huwa l-fawzu l-'azim",
+          "translation": "For them is good news in the life of this world and in the Hereafter. There is no changing the words of God. That is the great triumph."
+        },
+        "source_tokens": [
+          "لَهُمُ",
+          "ٱلْبُشْرَىٰ",
+          "فِى",
+          "ٱلْحَيَوٰةِ",
+          "ٱلدُّنْيَا",
+          "وَفِى",
+          "ٱلْءَاخِرَةِ",
+          "لَا",
+          "تَبْدِيلَ",
+          "لِكَلِمَٰتِ",
+          "ٱللَّهِ",
+          "ذَٰلِكَ",
+          "هُوَ",
+          "ٱلْفَوْزُ",
+          "ٱلْعَظِيمُ"
+        ],
+        "roman_tokens": [
+          "lahum",
+          "al-bushra",
+          "fi",
+          "al-hayati",
+          "al-dunya",
+          "wa-fi",
+          "al-akhirah",
+          "la",
+          "tabdila",
+          "li-kalimati",
+          "Allahi",
+          "dhalika",
+          "huwa",
+          "l-fawzu",
+          "l-'azim"
+        ],
+        "layers_sha256": "0058a1bd0acd3eb6b6a36b92731c56f9ebc331bb4c89979124b3f54a7e117ae8",
+        "status": "passed",
+        "units": [
+          {
+            "source_index": 0,
+            "source": "لَهُمُ",
+            "roman_start": 0,
+            "roman_end": 1,
+            "romanization": "lahum"
+          },
+          {
+            "source_index": 1,
+            "source": "ٱلْبُشْرَىٰ",
+            "roman_start": 1,
+            "roman_end": 2,
+            "romanization": "al-bushra"
+          },
+          {
+            "source_index": 2,
+            "source": "فِى",
+            "roman_start": 2,
+            "roman_end": 3,
+            "romanization": "fi"
+          },
+          {
+            "source_index": 3,
+            "source": "ٱلْحَيَوٰةِ",
+            "roman_start": 3,
+            "roman_end": 4,
+            "romanization": "al-hayati"
+          },
+          {
+            "source_index": 4,
+            "source": "ٱلدُّنْيَا",
+            "roman_start": 4,
+            "roman_end": 5,
+            "romanization": "al-dunya"
+          },
+          {
+            "source_index": 5,
+            "source": "وَفِى",
+            "roman_start": 5,
+            "roman_end": 6,
+            "romanization": "wa-fi"
+          },
+          {
+            "source_index": 6,
+            "source": "ٱلْءَاخِرَةِ",
+            "roman_start": 6,
+            "roman_end": 7,
+            "romanization": "al-akhirah"
+          },
+          {
+            "source_index": 7,
+            "source": "لَا",
+            "roman_start": 7,
+            "roman_end": 8,
+            "romanization": "la"
+          },
+          {
+            "source_index": 8,
+            "source": "تَبْدِيلَ",
+            "roman_start": 8,
+            "roman_end": 9,
+            "romanization": "tabdila"
+          },
+          {
+            "source_index": 9,
+            "source": "لِكَلِمَٰتِ",
+            "roman_start": 9,
+            "roman_end": 10,
+            "romanization": "li-kalimati"
+          },
+          {
+            "source_index": 10,
+            "source": "ٱللَّهِ",
+            "roman_start": 10,
+            "roman_end": 11,
+            "romanization": "Allahi"
+          },
+          {
+            "source_index": 11,
+            "source": "ذَٰلِكَ",
+            "roman_start": 11,
+            "roman_end": 12,
+            "romanization": "dhalika"
+          },
+          {
+            "source_index": 12,
+            "source": "هُوَ",
+            "roman_start": 12,
+            "roman_end": 13,
+            "romanization": "huwa"
+          },
+          {
+            "source_index": 13,
+            "source": "ٱلْفَوْزُ",
+            "roman_start": 13,
+            "roman_end": 14,
+            "romanization": "l-fawzu"
+          },
+          {
+            "source_index": 14,
+            "source": "ٱلْعَظِيمُ",
+            "roman_start": 14,
+            "roman_end": 15,
+            "romanization": "l-'azim"
+          }
+        ],
+        "evidence": "The original equals the dossier text of 10:64, and corpus rows 3567 and 3709 relay the same full verse from lahum al-bushraa to l-'azeem, with the following verse 'la yahzunuhum' absent, so the quotation is complete. The 15 source words each occupy one roman token in order, hyphenated articles al-/l- and conjunctions wa-fi included, tiling all 15 roman tokens exactly once. The English renders laa tabdeela li-kalimaati Allahi as 'There is no changing the words of God' and dhaalika huwa as 'That is', a direct rendering with no qualifiers dropped.",
+        "retained_from": {
+          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
+          "reviewer": "agent-0",
+          "quote_id": "s0004"
+        }
+      },
+      {
+        "id": "s0005",
+        "caption": "Qur'an 27:80",
+        "layers": {
+          "original": "إِنَّكَ لَا تُسْمِعُ ٱلْمَوْتَىٰ وَلَا تُسْمِعُ ٱلصُّمَّ ٱلدُّعَآءَ إِذَا وَلَّوْا۟ مُدْبِرِينَ",
+          "transliteration": "innaka la tusmi'u l-mawta wa-la tusmi'u l-summa l-du'a'a idha wallaw mudbirin",
+          "translation": "Indeed, you cannot make the dead hear, nor can you make the deaf hear the call when they turn away, retreating."
+        },
+        "source_tokens": [
+          "إِنَّكَ",
+          "لَا",
+          "تُسْمِعُ",
+          "ٱلْمَوْتَىٰ",
+          "وَلَا",
+          "تُسْمِعُ",
+          "ٱلصُّمَّ",
+          "ٱلدُّعَآءَ",
+          "إِذَا",
+          "وَلَّوْا",
+          "مُدْبِرِينَ"
+        ],
+        "roman_tokens": [
+          "innaka",
+          "la",
+          "tusmi'u",
+          "l-mawta",
+          "wa-la",
+          "tusmi'u",
+          "l-summa",
+          "l-du'a'a",
+          "idha",
+          "wallaw",
+          "mudbirin"
+        ],
+        "layers_sha256": "1f1b817b29875bff54241c348279d030a844b5ad49bf612d8adafecb2a734c38",
+        "status": "passed",
+        "units": [
+          {
+            "source_index": 0,
+            "source": "إِنَّكَ",
+            "roman_start": 0,
+            "roman_end": 1,
+            "romanization": "innaka"
+          },
+          {
+            "source_index": 1,
+            "source": "لَا",
+            "roman_start": 1,
+            "roman_end": 2,
+            "romanization": "la"
+          },
+          {
+            "source_index": 2,
+            "source": "تُسْمِعُ",
+            "roman_start": 2,
+            "roman_end": 3,
+            "romanization": "tusmi'u"
+          },
+          {
+            "source_index": 3,
+            "source": "ٱلْمَوْتَىٰ",
+            "roman_start": 3,
+            "roman_end": 4,
+            "romanization": "l-mawta"
+          },
+          {
+            "source_index": 4,
+            "source": "وَلَا",
+            "roman_start": 4,
+            "roman_end": 5,
+            "romanization": "wa-la"
+          },
+          {
+            "source_index": 5,
+            "source": "تُسْمِعُ",
+            "roman_start": 5,
+            "roman_end": 6,
+            "romanization": "tusmi'u"
+          },
+          {
+            "source_index": 6,
+            "source": "ٱلصُّمَّ",
+            "roman_start": 6,
+            "roman_end": 7,
+            "romanization": "l-summa"
+          },
+          {
+            "source_index": 7,
+            "source": "ٱلدُّعَآءَ",
+            "roman_start": 7,
+            "roman_end": 8,
+            "romanization": "l-du'a'a"
+          },
+          {
+            "source_index": 8,
+            "source": "إِذَا",
+            "roman_start": 8,
+            "roman_end": 9,
+            "romanization": "idha"
+          },
+          {
+            "source_index": 9,
+            "source": "وَلَّوْا",
+            "roman_start": 9,
+            "roman_end": 10,
+            "romanization": "wallaw"
+          },
+          {
+            "source_index": 10,
+            "source": "مُدْبِرِينَ",
+            "roman_start": 10,
+            "roman_end": 11,
+            "romanization": "mudbirin"
+          }
+        ],
+        "evidence": "The original matches the dossier text of 27:80, and corpus rows 3021 and 3153 relay the identical wording innaka laa tusmi'u l-mawtaa ... mudbireen, confirming completeness before 27:81. The 11 source words map one-to-one to the 11 roman tokens: wallaw drops only the pause-sign superscript, mudbirin is the pausal form of mudbirina, and both tusmi'u occurrences keep separate la/wa-la tokens. The English preserves both negations 'you cannot make the dead hear, nor can you make the deaf hear' and renders idhaa wallaw mudbireen as 'when they turn away, retreating'.",
+        "retained_from": {
+          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
+          "reviewer": "agent-0",
+          "quote_id": "s0005"
+        }
+      }
+    ]
+  },
+  "citation_ledger_schema": 2,
+  "citation_dispositions": {
+    "uddat-instruction": {
+      "use": "quotation"
+    },
+    "mustadrak-relay": {
+      "use": "quotation"
+    },
+    "uddat-hadi-grave": {
+      "use": "quotation"
+    },
+    "ibnuqda-hassan": {
+      "use": "quotation"
+    },
+    "kamil-mustashfi": {
+      "use": "quotation"
+    },
+    "tahdhib-ziyara-plea": {
+      "use": "quotation"
+    },
+    "kafi-arad-1": {
+      "use": "quotation"
+    },
+    "kafi-arad-3": {
+      "use": "quotation"
+    },
+    "basair-arad-bab": {
+      "use": "quotation"
+    },
+    "kafi-believer-knows": {
+      "use": "quotation"
+    },
+    "kamil-ibnbukayr": {
+      "use": "quotation"
+    },
+    "kamil-nabsh-2a": {
+      "use": "quotation"
+    },
+    "kamil-nabsh-2b": {
+      "use": "quotation"
+    },
+    "basair-samaa": {
+      "use": "quotation"
+    },
+    "kafi-souls-1a": {
+      "use": "quotation"
+    },
+    "kafi-souls-1b": {
+      "use": "quotation"
+    },
+    "kafi-souls-2": {
+      "use": "quotation"
+    },
+    "kafi-zurara-3": {
+      "use": "quotation"
+    },
+    "kafi-zurara-4": {
+      "use": "quotation"
+    },
+    "basair-souls-6": {
+      "use": "quotation"
+    },
+    "basair-souls-7": {
+      "use": "quotation"
+    },
+    "kafi-threeday": {
+      "use": "quotation"
+    },
+    "tahdhib-forty": {
+      "use": "quotation"
+    },
+    "tahdhib-emptygrave-a": {
+      "use": "quotation"
+    },
+    "tahdhib-emptygrave-b": {
+      "use": "quotation"
+    },
+    "amali-dizaj-a": {
+      "use": "quotation"
+    },
+    "mm-raising": {
+      "use": "quotation"
+    },
+    "mm-harmonize": {
+      "use": "quotation"
+    },
+    "kafi-abubakr-chain-a": {
+      "use": "quotation"
+    },
+    "kafi-abubakr-chain-b": {
+      "use": "quotation"
+    },
+    "kafi-abubakr-13": {
+      "use": "quotation"
+    },
+    "basair-bab-rida": {
+      "use": "quotation"
+    },
+    "basair-quba-2": {
+      "use": "quotation"
+    },
+    "amali-raani": {
+      "use": "quotation"
+    },
+    "amali-dream-654": {
+      "use": "quotation"
+    },
+    "kafi-bushra-60": {
+      "use": "quotation"
+    },
+    "tirmidhi-hunayf": {
+      "use": "quotation"
+    },
+    "hakim-hunayf-a": {
+      "use": "quotation"
+    },
+    "zabidi-story-a": {
+      "use": "quotation"
+    },
+    "zabidi-story-b": {
+      "use": "quotation"
+    },
+    "abudawud-footsteps": {
+      "use": "quotation"
+    },
+    "fathbari-witnesses": {
+      "use": "quotation"
+    },
+    "ibnkathir-earth": {
+      "use": "quotation"
+    },
+    "ibnasakir-adam": {
+      "use": "quotation"
+    },
+    "ibtaymiyya-shirk": {
+      "use": "quotation"
+    },
+    "shanqiti-a": {
+      "use": "quotation"
+    },
+    "shanqiti-b": {
+      "use": "quotation"
+    },
+    "shanqiti-c": {
+      "use": "quotation"
+    },
+    "ibtaymiyya-isnad": {
+      "use": "quotation"
+    },
+    "amali-dream-654b": {
+      "use": "quotation"
+    },
+    "tahdhib-threeday-relay": {
+      "use": "quotation"
+    },
+    "hakim-hunayf-b": {
+      "use": "quotation"
+    },
+    "kafi-arad-2": {
+      "use": "quotation"
+    },
+    "kafi-arad-4a": {
+      "use": "quotation"
+    },
+    "kafi-arad-4b": {
+      "use": "quotation"
+    },
+    "kafi-family-visits": {
+      "use": "quotation"
+    },
+    "farhat-relay-a": {
+      "use": "research-only",
+      "reason": "Verifies the prose attribution that Ibn Tawus relays the Ibn Uqda grave-visit report through Ahmad ibn Muhammad ibn Sa’id in Farhat al-Ghari pp. 106-107; the displayed quotation is the Ibn Uqda original, so this witness is retained as research evidence, not displayed."
+    },
+    "farhat-relay-b": {
+      "use": "research-only",
+      "reason": "Continuation of the Farhat al-Ghari relay on p. 107 closing the report; captured separately because it spans a page boundary. Research-only for the same reason as farhat-relay-a."
+    },
+    "shanqiti-3522": {
+      "use": "research-only",
+      "reason": "Verifies the prose claim that al-Shinqiti reads Qur’an 35:22 the same way as 27:80 (Adwa al-Bayan vol. 6 p. 125); the displayed al-Shinqiti quotations cover 27:80 at pp. 122 and 126, so this page is retained as research evidence."
+    }
+  }
 }
