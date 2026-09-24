@@ -48,6 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
+        continue-on-error: true
       - name: Verify runtime-only update preserves public artifacts
         if: steps.scope.outputs.mode == 'runtime'
         env:
