@@ -133,8 +133,8 @@ class Rendered(HTMLParser):
         if 'data-note-block' in a:
             if self.active is not None:raise ValueError('nested note blocks')
             self.active={'id':a['data-note-block'],'parts':[],'caption':[],'links':[],'caption_links':[], 'tag':tag,'paragraphs':[],'quote_depths':[]}
-        if tag=='blockquote' and 'source-speech' in a.get('class','').split():
-            if self.active is None or a.get('data-quote-role')!='speech':raise ValueError('speech quote requires its mapped source and explicit role')
+        if tag=='blockquote' and set(a.get('class','').split()) & {'source-speech','source-matn'}:
+            if self.active is None or a.get('data-quote-role') not in ('speech','matn'):raise ValueError('nested quotation requires its mapped source and explicit role')
             self.speech_levels.add(len(self.stack))
         if tag=='p' and self.active is not None:
             self.active['quote_depths'].append(len(self.speech_levels))
@@ -194,7 +194,7 @@ def verify(source,receipt):
         for identifier,layout in expected['paragraph_layout'].items():
             actual=page.layout.get(identifier,{})
             if actual.get('quote_depths')!=layout.get('quote_depths',[0]*len(layout['paragraphs'])):
-                errors.append(identifier+': narration/speech quote hierarchy changed')
+                errors.append(identifier+': source/quoted-body hierarchy changed')
             if actual.get('tag')!='blockquote' or actual.get('paragraphs')!=layout['paragraphs']:
                 errors.append(identifier+': source-callout paragraphs merged, split, reordered or not rendered as a blockquote')
         if page.source_roles != [('blockquote',identifier) for identifier in expected['paragraph_layout']]:

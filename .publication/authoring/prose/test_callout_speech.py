@@ -9,7 +9,8 @@ import quote_layout as Q
 import render_article as R
 from test_article_build import note
 
-SOURCE = "> [!note] Synthetic witness\n> A narrator introduced the exchange.\n>\n> > The judge said, “Read the document aloud.”\n> >\n> > The witness asked, “Shall I read the whole document?”\n>\n> The narrator recorded the answer."
+SOURCE = "> [!note] Synthetic witness\n> The compiler, from a witness, who reported the following.\n>\n> > The witness entered the room.\n> >\n> > The judge said, “Read the document aloud.”\n> >\n> > The witness asked, “Shall I read the whole document?”\n> >\n> > The narrator recorded the answer."
+
 
 class SpeechTests(unittest.TestCase):
     def render(self,extra=SOURCE):
@@ -29,17 +30,27 @@ class SpeechTests(unittest.TestCase):
         self.assertEqual(H.verify(page,receipt),[])
         self.assertEqual(Q.extract(source,'md'),Q.extract(page,'html'))
         row=Q.extract(page,'html')[-1]
-        self.assertEqual([p['quote_depth'] for p in row['paragraphs']],[0,1,1,0])
-        self.assertEqual(page.count('data-quote-role="speech"'),1)
+        self.assertEqual([p['quote_depth'] for p in row['paragraphs']],[0,1,1,1,1])
+        self.assertEqual(page.count('data-quote-role="matn"'),1)
 
     def test_stripping_nesting_rejected_without_changing_words(self):
         source,page,receipt=self.render()
-        page=page.replace('class="source-speech" data-quote-role="speech"','class="plain"')
+        page=page.replace('class="source-matn" data-quote-role="matn"','class="plain"')
         self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
 
-    def test_narrator_cannot_be_indented_as_speech(self):
+    def test_isnad_cannot_be_indented_with_matn(self):
         source,page,receipt=self.render()
-        page=page.replace('<p class="translation" lang="en">A narrator','<blockquote class="source-speech" data-quote-role="speech"><p class="translation" lang="en">A narrator').replace('the exchange.</p>','the exchange.</p></blockquote>')
+        page=page.replace('<p class="translation" lang="en">The compiler','<blockquote class="source-matn" data-quote-role="matn"><p class="translation" lang="en">The compiler').replace('the following.</p>','the following.</p></blockquote>')
+        self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
+
+    def test_legacy_speech_role_still_preserves_recorded_boundaries(self):
+        source,page,receipt=self.render()
+        page=page.replace('source-matn','source-speech').replace('data-quote-role="matn"','data-quote-role="speech"')
+        self.assertEqual(H.verify(page,receipt),[])
+
+    def test_narration_cannot_escape_matn_after_dialogue(self):
+        source,page,receipt=self.render()
+        page=page.replace('<p class="translation" lang="en">The narrator recorded the answer.</p></blockquote>','</blockquote><p class="translation" lang="en">The narrator recorded the answer.</p>')
         self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
 
     def test_soft_wraps_and_single_extra_level(self):
@@ -54,10 +65,21 @@ class SpeechTests(unittest.TestCase):
         self.assertFalse(C.mixed_chain('The judge said, “Read it.”'))
         self.assertFalse(C.mixed_chain('The word “woman” occurs here.'))
 
+    def test_unquoted_narrative_matn_needs_its_own_inset(self):
+        chain='A transmitter, from the first, from the second, from the third, who said,'
+        body='The witness entered the room and read the document.'
+        with self.assertRaisesRegex(ValueError,'every matn paragraph'):
+            self.render('> [!note] Fixture\n> '+chain+'\n>\n> '+body)
+        source,page,receipt=self.render('> [!note] Fixture\n> '+chain+'\n>\n> > '+body)
+        self.assertEqual(H.verify(page,receipt),[])
+        self.assertFalse(any('isnad-matn-layout' in p['cues'] for q in Q.extract(source,'md') for p in q['paragraphs']))
+        wrong=source.replace('> > '+body,'> '+body)
+        self.assertTrue(any('isnad-matn-layout' in p['cues'] for q in Q.extract(wrong,'md') for p in q['paragraphs']))
+
     def test_rtl_speech_changes_direction_before_english(self):
         source,page,receipt=self.render('> [!note] Synthetic RTL\n> > نص المصدر\n>\n> > A translated speech.')
-        self.assertIn('data-quote-role="speech" dir="rtl"',page)
-        self.assertIn('data-quote-role="speech" dir="ltr"',page)
+        self.assertIn('data-quote-role="matn" dir="rtl"',page)
+        self.assertIn('data-quote-role="matn" dir="ltr"',page)
         self.assertEqual(H.verify(page,receipt),[])
         self.assertEqual(Q.extract(source,'md'),Q.extract(page,'html'))
 

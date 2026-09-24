@@ -15,15 +15,15 @@ Use normal sentence punctuation and spaces within a paragraph. Use a blank
 line between Markdown paragraphs; a single newline usually renders as a space.
 
 Keep the article author's introduction, source quotation and explanation in
-separate blocks. A quotation may contain its own narrator and direct speech:
-paragraph those separately at natural boundaries within the same source callout.
-Do not move the source narrator into the article author's voice. A necessary
-short speech tag may stay with its speech. A new speaker starts a new paragraph.
-Use quotation marks to distinguish direct speech from the surrounding translated
-narration; do not wrap all narration in another pair of quotation marks merely
-because it is a translation. Preserve quotation marks in a verbatim edition.
-Never add a speaker, speech, punctuation inside the Arabic, or an explanatory
-bridge just to make the layout work.
+separate blocks. Within a transmitted report, separate the isnad (chain of
+transmitters) from the matn (the report's entire body). The matn includes
+narration, actions, descriptions, speech tags and dialogue. It is not limited
+to words inside quotation marks. Keep the isnad at the normal callout inset;
+indent the complete matn one compact level further. A change of speaker starts
+a paragraph at that same matn depth. Quotation marks identify direct speech;
+do not add another indentation level for it. Preserve the exact chain/body
+boundary supported by the source. Do not guess, omit transmitters, introduce
+speaker labels, or rewrite source punctuation to create the distinction.
 
 ## Author callouts with paragraphs already present
 
@@ -42,25 +42,25 @@ The author identifies a disagreement about the report.
 > [!note]- Source title, edition and page
 > [Verified original-language paragraphs are inserted here.]
 >
-> The witness described the meeting.
+> A narrator, from a witness, who reported the following.
 >
+> > The witness entered the room and opened the document.
+> >
 > > The judge said, “Read the document aloud.”
->
-> The witness read it and then answered the question.
+> >
+> > The witness read it and then answered the question.
 
 The report establishes that the document was read. It leaves its date uncertain.
 ```
 
-Use `> >` for direct speech inside the source callout, with a quoted blank line
-before and after it. Keep the isnad and narration at `>` depth; keep a short
-speech tag with its speech when that reads naturally. Consecutive speech
-paragraphs may share one nested quote. Use one extra level, even when speech
-contains another quotation: retain its quotation marks without making a staircase
-of progressively narrower text. Preserve every source word and its order.
-The renderer does not infer speakers or repair mixed narration and speech.
-A long transmission chain joined to direct speech must be separated in the master
-before review. Translators must mark these boundaries while translating, not
-leave them for the publication agent to discover.
+Use `> >` for every paragraph of the matn, including narration before and after
+speech. Use `>` for the isnad and `>` on the blank line separating it from the
+matn. All consecutive matn paragraphs share one nested blockquote. Use one extra
+level only: speaker changes and speech within the report do not create deeper
+quotes. A report without an isnad has its complete body at matn depth.
+The renderer preserves these explicit boundaries; it never infers them.
+Translators mark the complete matn with `> ` in each translated paragraph;
+assembly adds the outer callout marker. Resolve boundaries before review.
 
 A long source passage remains one callout with several paragraphs. Split where
 meaning or the speaker changes, keeping original-language slices contiguous and
@@ -72,8 +72,8 @@ transmission chains and their attribution clear without dropping names.
 
 Map each source/translation paragraph to its own `<p>` inside the callout;
 use `<cite>` for the citation and `<blockquote>` for the source container.
-Nested `> >` paragraphs map to a `blockquote.source-speech` with
-`data-quote-role="speech"`; its inner paragraphs remain inside the outer source.
+Nested `> >` paragraphs map to a `blockquote.source-matn` with
+`data-quote-role="matn"` for reports; its inner paragraphs remain inside the outer source.
 The handoff preserves this hierarchy as well as the paragraph text.
 Do not replace paragraphs with repeated `<br>` tags, inline spans or one large
 `<p>`. Keep narrative framing and direct speech in their source-defined order.
@@ -141,7 +141,7 @@ python3 ~/.agents/prose/quote_layout.py capture ARTICLE.html --output RENDER.jso
 This requires Playwright and Chromium, measures every callout at desktop and
 mobile widths, expands native details, and saves screenshots. It verifies
 visible paragraphs, at least 8px between ordinary callout paragraphs, compact
-4–12px gaps around same-language nested speech, and no
+4–12px gaps around same-language nested matn, and no
 page-wide horizontal overflow. Use the screenshots for the human layout review;
 positive margins cannot prove that a single paragraph is well organized.
 Then pass `--render RENDER.json` to review.py inspect. Its final verification
@@ -154,7 +154,7 @@ All displayed quotations need an inset from surrounding prose, including inside
 callouts. Keep the source citation at the callout's normal inner edge; inset
 original, transliteration and English paragraphs by 12–16px. Outside callouts,
 use a 20–24px inset. Retain quotation marks for direct speech inside a source and
-use meaningful speaker paragraphs. Never add whitespace to the stored source
+use meaningful paragraphs within the matn. Never add whitespace to the stored source
 merely to simulate indentation. Insets are CSS, applied in the text direction:
 Arabic/Hebrew from the right, English/Greek/Latin from the left.
 
@@ -170,10 +170,17 @@ and line-height measurements. No generated labels, color legend, hover-only
 explanation or reader-facing typography commentary is needed. See
 article-sources.md for lexical marks, which stay visible in print.
 
-Inside a callout, nested speech adds only 12px of padding and a subtle 1px
-rule on its reading edge. Use 6px gaps around speech and between its paragraphs,
+Inside a callout, nested matn adds only 12px of padding and a subtle 1px
+rule on its reading edge. Use 6px gaps around the matn and between its paragraphs,
 with English line-height 1.55. Keep the existing larger gap between language
 layers. No empty spacer paragraphs, large quote margins, or additional quote
-cards. Browser checks require an extra speech inset of 8–20px and reject gaps
-above 12px between same-language narration and speech. Inspect the boundaries,
+cards. Browser checks require an extra matn inset of 8–20px and reject gaps
+above 12px between same-language isnad and matn. Inspect the boundaries,
 not just the outer callout's padding.
+
+In quotation review, check the isnad/matn boundary explicitly. Narration before
+or after dialogue belongs inside the matn inset. An inset around dialogue alone
+fails this requirement for a transmitted report. The original-language and
+English layers each preserve their own verified chain/body boundaries. Existing
+`source-speech` markup remains readable for older artifacts; new report output
+uses `source-matn`. No extra visible labels are required.
