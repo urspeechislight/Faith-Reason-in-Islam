@@ -6,7 +6,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from review import extract, digest, verify, verify_handoff, VERSION
+from review import extract, digest, verify, verify_handoff, verify_html, VERSION
 import handoff
 
 ZERO='0'*40
@@ -50,7 +50,7 @@ def check_update(local,remote,require_release=True):
             draft=extract(page.decode(),'html')
             draft.update(schema=VERSION,artifact_sha256=digest(page),format='html')
             failures=[]
-            council_source=None
+            council_source=None;receipt=None
             needs_handoff=b'source-note-sha256' in page
             if remote:
                 try:needs_handoff=needs_handoff or b'source-note-sha256' in blob(remote,path)
@@ -60,9 +60,9 @@ def check_update(local,remote,require_release=True):
                 handoff_errors=verify_handoff(page.decode(),receipt,require_release=require_release)
                 failures.extend(handoff_errors)
                 if not handoff_errors:council_source=receipt['source_sha256']
-            failures.extend(verify(draft,baseline,review,council_source,require_release=require_release))
-            required=['structural_validation','council']
-            if re.search('[\u0600-\u06ff\ufb50-\ufdff\ufe70-\ufeff]',page.decode()):
+            failures.extend(verify_html(page.decode(),baseline,review,receipt,require_release=require_release))
+            required=[] if review.get('kind')=='verified-conversion-v1' else ['structural_validation','council']
+            if review.get('kind')!='verified-conversion-v1' and re.search('[\u0600-\u06ff\ufb50-\ufdff\ufe70-\ufeff]',page.decode()):
                 required+=['source_verification','translation_fidelity']
             for field in required:
                 if review.get(field,{}).get('status')!='passed':

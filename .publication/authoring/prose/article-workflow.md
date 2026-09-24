@@ -321,7 +321,11 @@ An unchanged master can reuse current valid source/council evidence; obsolete
 schemas or policies require genuine revalidation, not approval-field changes.
 Any content change returns to the Markdown/source stage and affected review.
 Use `article_build.py revise`, then its preflight/evidence/reviews commands.
-Use its checked reuse operation for eligible context-inspected judgments; never
+Use `advance` to run the mechanical prerequisites and register the evidence
+recipe. Use native `review-request`/`review-accept` for actual judgments and the
+verified-conversion visual record; no second per-cell HTML prose review.
+Bind older runs to the requested URL with `scope`; a different article requires
+its own authorization and worktree. Use its checked reuse operation for eligible context-inspected judgments; never
 write one-off port scripts or rewrite approval hashes. Complete scripture
 coverage and fidelity before expensive council review.
 The final article_build.py verify combines master, HTML, handoff, rendered and

@@ -96,8 +96,12 @@ def request(B,a):
     B.verify(SimpleNamespace(manifest=a.manifest,html_baseline=None,html_review=None,evidence=None,native_pending=True))
     data,source,page,evidence_raw,report=current(B,a.manifest)
     value=packet(source,page,evidence_raw,report,a.parent_model);directory=a.output.resolve()
-    if directory.exists():raise ValueError('request directory exists; preserve it and use a fresh request path')
-    directory.mkdir(parents=True);B.write(directory/'request.json',value);(directory/'prompt.txt').write_text(prompt(value))
+    if directory.exists():
+        if B.read(directory/'request.json')!=value:raise ValueError('request directory contains different inputs; preserve it and use a fresh path')
+        if (directory/'prompt.txt').read_text()!=prompt(value):raise ValueError('retained reviewer prompt changed')
+    else:
+        directory.mkdir(parents=True);B.write(directory/'request.json',value);(directory/'prompt.txt').write_text(prompt(value))
+    print('Review packet:',len(prompt(value).encode()),'bytes;',len(value['required_disposition_ids']),'declared findings/response assessments.')
     print('Native review request:',directory/'prompt.txt');print('Delegate with model inheritance; no model was called and no approval was generated.');return 0
 
 def accept(B,a):

@@ -26,13 +26,15 @@ sys.path.insert(0,str(ROOT))
 import handoff
 import evidence
 import article_revision
+import article_scope
+import review_intake
 import native_release
 import scripture_alignment
 import quote_layout
 import render_article
 import review
 SCHEMA=1
-RUNTIME=['native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
+RUNTIME=['conversion_review.py','review_intake.py','article_scope.py','native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
 VALIDATOR=ROOT.parent/'skills/faith-reason-note/validate.py'
 
 
@@ -50,6 +52,7 @@ def load(manifest):
     if data.get('schema')!=SCHEMA:raise ValueError('unsupported run manifest schema; preserve it and adopt its retained handoff into a new run')
     if str(data.get('paths',{}).get('site_root','')).startswith('/Users/'):
         raise ValueError('project execution belongs on Titan; use titan-project and a Titan site worktree')
+    article_scope.check(data)
     return data
 
 def inputs(data):
@@ -91,6 +94,7 @@ def init(a):
     data['initial_source_sha256']=digest(source)
     if a.operation=='repair':data['original_article_sha256']=digest(site/(a.slug+'.html'))
     data['destination_snapshot']=article_revision.destination_snapshot(sys.modules[__name__],data)
+    article_scope.bind(sys.modules[__name__],data,getattr(a,'url',None))
     write(path,data);print('Run manifest:',path);return 0
 
 
@@ -203,7 +207,7 @@ def verify(a):
     if errors:raise ValueError('; '.join(errors))
     final_paths={name:str(getattr(a,name).resolve()) if getattr(a,name,None) else data['paths'][name] for name in ('html_baseline','html_review','evidence')}
     baseline=read(final_paths['html_baseline']);record=read(final_paths['html_review'])
-    errors=review.verify(review.inspect_file(Path(ready['paths']['html'])),baseline,record,receipt['source_sha256'],require_release=data['delivery']!='publish')
+    errors=review.verify_html(page,baseline,record,receipt,require_release=data['delivery']!='publish')
     errors+=evidence.verify(read(final_paths['evidence']),source)
     if data['delivery']=='publish' and not getattr(a,'native_pending',False):
         errors+=native_release.errors(source,page,Path(final_paths['evidence']).read_text(),receipt['source_review']['council']['report'])
@@ -227,7 +231,11 @@ def paths(a):
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='command',required=True)
     i=sub.add_parser('init');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--site-root',type=Path,required=True);i.add_argument('--slug',required=True);i.add_argument('--operation',choices=['create','repair'],required=True);i.add_argument('--delivery',choices=['publish','draft','note'],default='publish');i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path);i.add_argument('--config',type=Path)
+    i.add_argument('--url',help='Exact user-supplied published article URL; must match slug')
     i=sub.add_parser('adopt');i.add_argument('manifest',type=Path);i.add_argument('--handoff',type=Path,required=True);i.add_argument('--source',type=Path);i.add_argument('--site-root',type=Path,required=True);i.add_argument('--slug',required=True);i.add_argument('--delivery',choices=['publish','draft','note'],default='publish');i.add_argument('--config',type=Path)
+    i=sub.add_parser('scope');i.add_argument('manifest',type=Path);i.add_argument('--url',required=True)
+    i=sub.add_parser('review-request');i.add_argument('manifest',type=Path);i.add_argument('--kind',choices=['master','render','scripture'],required=True);i.add_argument('--source-context',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
+    i=sub.add_parser('review-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True)
     i=sub.add_parser('preflight');i.add_argument('manifest',type=Path)
     i=sub.add_parser('prepare');i.add_argument('manifest',type=Path);i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path)
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
@@ -238,8 +246,9 @@ def main(argv=None):
     for command in ['reviews','stage','status']:
         i=sub.add_parser(command);i.add_argument('manifest',type=Path)
     i=sub.add_parser('reuse');i.add_argument('manifest',type=Path);i.add_argument('--confirmation',type=Path,required=True)
-    i=sub.add_parser('evidence');i.add_argument('manifest',type=Path)
-    for option in ['ledger','external','claims','db']:i.add_argument('--'+option,type=Path)
+    for command in ['advance','evidence']:
+        i=sub.add_parser(command);i.add_argument('manifest',type=Path)
+        for option in ['ledger','external','claims','db']:i.add_argument('--'+option,type=Path)
     a=p.parse_args(argv)
     try:
         if a.command=='adopt':
@@ -248,9 +257,12 @@ def main(argv=None):
         with a.manifest.with_suffix(a.manifest.suffix+'.lock').open('a') as lock:
             try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             except BlockingIOError:raise ValueError('another process is using this run manifest')
+            if a.command=='scope':return article_scope.command(sys.modules[__name__],a)
+            if a.command in {'review-request','review-accept'}:
+                return getattr(review_intake,'request' if a.command=='review-request' else 'accept')(sys.modules[__name__],a)
             if a.command in {'release-request','release-accept'}:
                 return getattr(native_release,'request' if a.command=='release-request' else 'accept')(sys.modules[__name__],a)
-            if a.command in {'revise','reviews','reuse','stage','status','evidence'}:
+            if a.command in {'revise','reviews','reuse','stage','status','evidence','advance'}:
                 method='evidence_export' if a.command=='evidence' else a.command
                 return getattr(article_revision,method)(sys.modules[__name__],a)
             return {'init':init,'preflight':preflight,'prepare':prepare,'verify':verify,'paths':paths}[a.command](a)

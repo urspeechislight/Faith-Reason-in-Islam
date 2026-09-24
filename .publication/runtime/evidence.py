@@ -6,7 +6,9 @@ consistency, not corpus provenance or the truth of an interpretation.
 """
 import scripture_alignment
 import argparse
+import contextlib
 import hashlib
+import unicodedata
 import json
 from pathlib import Path
 
@@ -86,7 +88,36 @@ def archived_text(raw):
             if isinstance(value, dict): return [s for item in value.values() for s in strings(item)]
             return []
         parts = strings(data)
-        return parts + [' '.join(parts)]
+        def chapters(value):
+            joined=[]
+            if isinstance(value,list):
+                if value and all(isinstance(v,dict) and isinstance(v.get('text'),str) and type(v.get('verse')) is int for v in value):
+                    run=[];previous=None
+                    for verse in value:
+                        if previous is not None and verse['verse']!=previous+1:
+                            joined.append(' '.join(run));run=[]
+                        run.append(verse['text']);previous=verse['verse']
+                    joined.append(' '.join(run))
+                else:
+                    for item in value:joined.extend(chapters(item))
+            elif isinstance(value,dict):
+                for item in value.values():joined.extend(chapters(item))
+            return joined
+        return parts + chapters(data)
+    if raw.lstrip().startswith('<?xml') or re.match(r'\s*<Tanach[ >]',raw):
+        import xml.etree.ElementTree as ET
+        try:root=ET.fromstring(raw)
+        except ET.ParseError:return [raw]
+        if root.tag.rsplit('}',1)[-1]=='Tanach':
+            verses=[]
+            for verse in root.iter():
+                if verse.tag.rsplit('}',1)[-1]!='v':continue
+                children=list(verse)
+                if not children or any(w.tag.rsplit('}',1)[-1]!='w' or list(w) for w in children):
+                    return [raw]
+                verses.append(' '.join((w.text or '') for w in children))
+            if verses:return verses+[' '.join(verses)]
+        return [raw]
     if re.search(r'<(?:html|body|p|div|span)\b', raw, re.I):
         from html.parser import HTMLParser
         class SourceText(HTMLParser):
@@ -105,11 +136,15 @@ def archived_text(raw):
 
 
 def scripture_coverage(note, quotes):
-    """Require the displayed original, never an intermediary, in archived evidence."""
+    """Match scripture after NFC comparison only; retain raw archives and corpus slices unchanged.
+
+    Do not strip joiners, repair letters/points, harmonize editions, or alter the
+    archive. A noncanonical mismatch requires a correctly identified source.
+    """
     errors = []
     for index, row in enumerate(scripture.markdown(note), 1):
-        original = flat(' '.join(p['text'] for p in row['paragraphs'] if p['role'] == 'original'))
-        if not original or not any(original in flat(q) for q in quotes):
+        original = unicodedata.normalize('NFC', flat(' '.join(p['text'] for p in row['paragraphs'] if p['role'] == 'original')))
+        if not original or not any(original in unicodedata.normalize('NFC', flat(q)) for q in quotes):
             errors.append(f'scripture {index}: displayed original is absent from archived source text')
     return errors
 
@@ -165,7 +200,8 @@ def verify(bundle, note):
 def export(db, note, ledger, external=None, claims=None, alignment=None):
     ledger_usage(ledger)
     sources = []
-    with sqlite3.connect(Path(db).resolve().as_uri()+'?mode=ro', uri=True) as connection:
+    connection_context=(sqlite3.connect(Path(db).resolve().as_uri()+'?mode=ro', uri=True) if ledger['passages'] else contextlib.nullcontext(None))
+    with connection_context as connection:
         for entry in ledger['passages']:
             row = connection.execute('SELECT '+','.join(FIELDS)+' FROM pages WHERE rowid=?', (entry['source']['rowid'],)).fetchone()
             if row is None: raise ValueError('corpus row missing')

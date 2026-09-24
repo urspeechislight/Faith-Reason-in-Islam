@@ -163,8 +163,11 @@ disposition needs at least eight words of specific evidence.
 For a pass, `open_findings` is empty. `dispositions` must cover every ID in the
 packet's `required_disposition_ids`, using the original reviewer namespace,
 for example `prose:P-02` or `peer-1:PX-01`. The packet also includes a `:response`
-entry for every advisor and peer; assess its entire response, including unnumbered
-findings and ranges of IDs. Each item contains `id`, `status` (`resolved` or
+entry for every advisor, peer and follow-up; assess its entire response, including
+unnumbered findings and ranges of IDs. Finding IDs come from declared JSON `id`/
+`open_findings` fields or leading IDs in legacy text. IDs merely mentioned inside
+explanations are covered by the whole-response assessment, not multiplied into
+new findings. Historical responses remain verbatim and hash-bound. Each item contains `id`, `status` (`resolved` or
 `not-a-defect`), and `evidence` explaining the actual corrected text or the
 source-based reason the finding was mistaken. Give new or unnumbered findings
 IDs too. Keep unresolved IDs in `open_findings` and return `blocked`.

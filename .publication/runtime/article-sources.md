@@ -172,3 +172,12 @@ presentation check. Report those distinct results. During an in-progress run,
 record the policy change and stop at a draft boundary if it requires source or
 translation changes; preserve the existing artifact and receipts. Resume with
 a separately verified candidate only within the user's article-editing scope.
+
+External archives retain the source response unchanged. JSON verse-list and
+simple Tanach XML decoding and NFC comparison are presentation operations over
+retained raw bytes. Do not strip joiners, change vowel points, insert missing
+letters or combine editions to make a displayed quotation match. A corrected
+or composite transcription is editorial material, not an untouched external
+witness. Preserve it separately with its differences; recapture and cite an
+actual source supporting the displayed original, or report the mismatch. A URL
+and a recomputed hash alone cannot authenticate an edited archive.
