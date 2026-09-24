@@ -176,12 +176,12 @@ class ReviewTests(unittest.TestCase):
             item.update(status='passed',blocks=[b['id'] for b in draft['blocks']],evidence='Synthetic fixture checks record completeness only, never approves real prose.')
         out['council'].update(status='passed',reviewed_artifact_sha256=draft['artifact_sha256'],
             profile_sha256=r.digest((r.ROOT/'council-article.md').read_bytes()),report={
-                'advisors':[{'role':role,'reviewer':'synthetic test only',
+                'advisors':[{'role':role,'reviewer':'synthetic advisor '+role,
                              'reviewed_sha256':draft['artifact_sha256'],
                              'response':'Synthetic test response for schema checks, not a real independent review.'} for role in sorted(r.COUNCIL_ROLES)],
-                'peer_reviews':[{'reviewer':'synthetic test only',
+                'peer_reviews':[{'reviewer':'synthetic peer '+str(i),
                                 'reviewed_sha256':draft['artifact_sha256'],
-                                'response':'Synthetic peer response for schema checks, not a real independent review.'} for _ in range(5)],
+                                'response':'Synthetic peer response for schema checks, not a real independent review.'} for i in range(5)],
                 'anonymization':dict(zip('ABCDE',sorted(r.COUNCIL_ROLES))),
                 'synthesis':'Synthetic test synthesis for schema checks, not a real publication decision.'})
         report=out['council']['report']

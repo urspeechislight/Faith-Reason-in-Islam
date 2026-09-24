@@ -43,6 +43,17 @@ class StatusTests(unittest.TestCase):
             self.assertEqual(S.main(['--run','1','--commit','abc','--output',td]),1)
             result=json.loads((Path(td)/'status.json').read_text());self.assertEqual(result['article']['result']['status'],'blocked');self.assertEqual(result['regression']['result']['status'],'passed')
             self.assertEqual(set(names),{'article-release-1-2','reviewer-regression-1-2'})
+    def test_cached_article_report_with_wrong_commit_is_rejected(self):
+        run={'head_sha':'expected','status':'completed','run_attempt':1,'html_url':'url','conclusion':'success'}
+        def gh(*args):
+            if '/jobs?' in args[-1]:return {'jobs':[]}
+            if '/artifacts?' in args[-1]:return {'artifacts':[{'name':'article-release-1-1'}]}
+            return run
+        with tempfile.TemporaryDirectory() as td,patch.object(S,'gh',side_effect=gh),contextlib.redirect_stdout(io.StringIO()):
+            dest=Path(td)/'1-1/article';dest.mkdir(parents=True)
+            (dest/'result.json').write_text(json.dumps({'phase':'article','status':'passed','commit':'different'}))
+            self.assertEqual(S.main(['--run','1','--commit','expected','--output',td]),1)
+
     def test_partial_download_is_not_reused(self):
         run={'head_sha':'abc','status':'completed','run_attempt':1,'html_url':'url','conclusion':'failure'}
         def gh(*args):

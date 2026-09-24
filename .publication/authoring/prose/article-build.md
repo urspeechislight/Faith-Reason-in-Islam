@@ -19,7 +19,31 @@ PY
 Do not nest scripts inside quoted SSH commands. Check command exit status
 without piping it through tail/head/echo. Preserve failed artifacts. Do not
 retry a mutating command after a connection failure until its remote state has
-been inspected. Each run has a separate manifest and an exclusive command lock.
+been inspected. Each run has a separate manifest and an exclusive command lock. `stage` refuses draft/note deliveries; `status` revalidates any recorded ready bundle and returns nonzero for stale evidence.
+
+## Resume after a workflow change
+
+Read this file again when the process changes during an active session. Run
+`article_build.py status RUN/build.json` first. A blocked/stale record is a
+located failure, not an invitation to rebind policy hashes. Use `revise` with
+the current candidate to create a fresh run under the installed toolchain;
+retain all historical responses and perform genuine current affected review.
+The maintained commands regenerate rendering, mappings and hashes. No article
+run may author a receipt-porting/rebinding script or edit generated HTML.
+
+If an older run has a handoff but no usable manifest, import its retained source:
+
+```bash
+python3 ~/.agents/prose/article_build.py adopt NEW_RUN/build.json \
+  --handoff SITE/.prose-reviews/SLUG.handoff.json --site-root SITE --slug SLUG
+```
+
+For a preview, pass `--delivery draft`; for note-only recovery use `--delivery note`.
+Add `--source EDITED.md` to retain an already corrected candidate. The command
+copies the original handoff, source and historical review unchanged, creates
+pending new paths, and grants no approval. Then use preflight, the actual
+scripture/source review, evidence, reviews and prepare/release/verify/stage.
+`adopt` and `revise` never manufacture advisor responses or migrate pass labels.
 
 ## Start once, before review
 
@@ -93,7 +117,7 @@ The converter never chooses translations, transliterations or highlighted words.
 Supported blocks are H1–H3 subject to category rules, soft-wrapped paragraphs,
 source/abstract/summary callouts, flat lists, fact cards and tables, ordinary
 blockquotes and inline links/emphasis/code. Unsupported images, raw HTML, nested
-lists/quotes and literal source numbering stop with a diagnostic. Extend the
+lists/quotes stop with a diagnostic. Literal source numbering is preserved as quotation text. Extend the
 maintained renderer and preservation contract with a fixture when needed; never
 silently remove source content or make a per-article generator.
 

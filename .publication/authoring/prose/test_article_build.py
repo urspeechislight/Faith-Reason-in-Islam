@@ -92,7 +92,8 @@ class RendererTests(unittest.TestCase):
         page,receipt=self.render(note(extra=extra));self.assertEqual(H.verify(page,receipt),[])
         self.assertIn('<ol start="3">',page);self.assertIn('A | B',page)
     def test_original_numbering_never_silently_removed(self):
-        with self.assertRaisesRegex(ValueError,'never strip source text'):self.render(note(extra='> [!info] Witness\n> 12. A numbered quotation.'))
+        page,receipt=self.render(note(extra='> [!info] Witness\n> 12. A numbered quotation.'))
+        self.assertIn('12. A numbered quotation.',page);self.assertEqual(H.verify(page,receipt),[])
     def test_unsupported_syntax_stops(self):
         for extra in ('```\ncode\n```','![image](image.png)','#### Deep heading','<div>HTML</div>','> [!custom] Caption\n> Text'):
             with self.subTest(extra=extra),self.assertRaises(ValueError):self.render(note(extra=extra))

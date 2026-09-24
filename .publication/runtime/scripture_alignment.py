@@ -17,16 +17,28 @@ def sha(value):
     return hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
 
 
-def words(text):
-    # Keep intra-word apostrophes and hyphens; ignore verse numbers and punctuation.
+ANNOTATION = frozenset(chr(c) for c in range(0x06D6, 0x06E0))
+
+
+def words(text: str) -> list:
+    """Tokenize a displayed layer into words for source-to-roman mapping.
+
+    Keeps intra-word apostrophes and hyphens; verse numbers and punctuation are
+    separators. ANNOTATION holds the Quranic annotation signs (U+06D6..U+06DF:
+    waqf marks, small-high ligatures, end-of-ayah, rub-el-hizb), which are
+    recitation guidance rather than words, carry no Romanization, and would
+    otherwise demand unmappable spans. Displayed bytes are never changed.
+    """
     result=[];buf=[]
     for ch in scripture.unmark(text):
-        if unicodedata.category(ch)[0] in 'LM':buf.append(ch)
+        if ch in ANNOTATION:
+            if buf:result.append(''.join(buf).strip("-־"));buf=[]
+        elif unicodedata.category(ch)[0] in 'LM':buf.append(ch)
         elif ch in "'’ʾʿ-־" :buf.append(ch)
         else:
             if buf:result.append(''.join(buf).strip("-־"));buf=[]
     if buf:result.append(''.join(buf).strip("-־"))
-    return [x for x in result if any(unicodedata.category(ch)[0] in "LM" for ch in x)]
+    return [x for x in result if any(unicodedata.category(ch)[0] == "L" for ch in x)]
 
 
 def inventory(source,fmt='md'):

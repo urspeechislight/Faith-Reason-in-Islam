@@ -138,10 +138,8 @@ def original_attrs(language):
 def render_source(item,receipt,options):
     kind,caption,parts=callout_parts(item);identifier=item['id']
     layout=receipt['paragraph_layout'][identifier]
-    if [H.inline(re.sub(r'^\s*(?:[-*+] |\d+\. )','',p)) for p in parts]!=layout['paragraphs']:
+    if [H.inline(p) for p in parts]!=layout['paragraphs']:
         raise ValueError(identifier+': source paragraph mapping differs')
-    if any(re.match(r'^\s*(?:[-*+] |\d+\. )', re.sub(r'^>\s?', '', line)) for line in item['raw'][1:]):
-        raise ValueError(identifier+': literal source numbering/bullets need a preserving handoff extension; never strip source text')
     rendered=[];role='original'
     original_count=options.get('source_paragraphs',{}).get(H.inline(caption))
     if original_count is not None and (type(original_count) is not int or not 0<original_count<len(parts)):

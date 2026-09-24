@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Validate the exact public tree and verify native inherited-model release decisions.
 
-Unchanged legacy pages are explicitly grandfathered, not retroactively approved.
+Previously deployed pages are preserved, never retroactively approved. Known
+failed pre-migration edits remain unpublished in the composed release tree.
 Reusable evidence requires a successful main ancestor, or an identical commit
 checked in a successful push run in this repository.
 """
@@ -24,6 +25,8 @@ import review
 import validate_article
 import build_indexes
 import public_files
+import release_state
+import shutil
 
 
 def git(*args):return subprocess.check_output(['git',*args],stderr=subprocess.DEVNULL)
@@ -41,7 +44,7 @@ def eligible_prior_run(run, head, repository):
 
 
 def runtime_only_paths(names):
-    allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py',
+    allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py','.publication/release_state.py','.publication/stage.py','.publication/run_tests.py','.publication/test_content_boundaries.py','.publication/test_install_boundaries.py','.publication/test_release_boundaries.py',
              '.publication/runtime-manifest.json','.publication/authoring-manifest.json','.publication/install_toolchain.py','.publication/test_workflow.py','.publication/evaluate.py','.publication/regression.py','.github/workflows/publication.yml','.github/workflows/native-publication.yml'}
     return bool(names) and all(n in allowed or n.startswith(('.publication/runtime/','.publication/authoring/')) for n in names)
 
@@ -91,12 +94,18 @@ def prior_success(allow_older_policy=False):
     if not token or not repo:return None
     runs=[]
     for workflow in ['native-publication.yml','publication.yml']:
-        url=f'https://api.github.com/repos/{repo}/actions/workflows/{workflow}/runs?status=success&per_page=30'
-        request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
-        try:
-            with urllib.request.urlopen(request,timeout=30) as response:runs.extend(json.load(response)['workflow_runs'])
-        except urllib.error.HTTPError as exc:
-            if exc.code!=404:raise
+        page=1
+        while True:
+            url=f'https://api.github.com/repos/{repo}/actions/workflows/{workflow}/runs?status=success&per_page=100&page={page}'
+            request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
+            try:
+                with urllib.request.urlopen(request,timeout=30) as response:batch=json.load(response)['workflow_runs']
+            except urllib.error.HTTPError as exc:
+                if exc.code==404:break
+                raise
+            runs.extend(batch)
+            if len(batch)<100:break
+            page+=1
     data={'workflow_runs':sorted(runs,key=lambda r:r['id'],reverse=True)}
     head=git('rev-parse','HEAD').decode().strip()
     for run in data['workflow_runs']:
@@ -152,23 +161,22 @@ def main():
             result=validate_runtime_only(a.runtime_base)
             (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
             print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
-        names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True)
+        names=files();release_state.check_registry();prior=prior_success();preserved=prior or prior_success(allow_older_policy=True)
         manifest=read(HERE/'runtime-manifest.json')
         actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
         if actual!=manifest:raise ValueError('CI runtime snapshot differs from its manifest; synchronize and test it')
         inventory=public_files.snapshot()
         assets={n:h for n,h in inventory.items() if Path(n).suffix.lower() in public_files.STATIC}
         if assets!=read(HERE/'assets.json'):raise ValueError('static assets changed; validate rendering and update the checked asset manifest')
-        public_html=[p for p in inventory if p.lower().endswith(('.html','.htm'))]
-        if any(review.digest(Path(p).read_bytes())!=legacy.get(p) for p in public_html):
-            build_indexes.check(Path.cwd())
+        overrides={}
         for path in article_paths(names):
             current_article=path
             if Path(path).is_symlink():raise ValueError('public article symlink forbidden: '+path)
             raw=Path(path).read_bytes();stem=Path(path).stem
-            if review.digest(raw)==legacy.get(path):
-                results.append({'path':path,'status':'unchanged-legacy'});continue
             dependencies=[path]+['.prose-reviews/'+stem+suffix for suffix in ['.baseline.json','.review.json','.handoff.json','.evidence.json']]
+            historical=release_state.preserved(path,dependencies)
+            if historical:
+                overrides[path]=historical.pop('bytes');results.append(dict(path=path,**historical));continue
             if preserved and all(Path(n).is_file() and old_blob(preserved,n)==Path(n).read_bytes() for n in dependencies):
                 results.append({'path':path,'status':'reused-server-review' if prior else 'preserved-prior-policy-review','commit':preserved});continue
             page,receipt,bundle=validate_article_files(path)
@@ -179,7 +187,15 @@ def main():
             release=receipt['source_review']['council']['report']['release']
             (directory/'native-release.json').write_text(json.dumps(release,ensure_ascii=False,indent=2)+'\n')
             results.append({'path':path,'status':'passed','artifact_sha256':review.digest(raw)})
-        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
+        site=a.output/'checked-site';site.mkdir()
+        for name in inventory:
+            target=site/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(overrides.get(name,Path(name).read_bytes()))
+        if build_indexes.strip_catalog(Path('index.html').read_text())!=build_indexes.strip_catalog((HERE/'index-template.html').read_text()):
+            raise ValueError('index template changed outside maintained template')
+        build_indexes.build(site)
+        build_indexes.check(site)
+        checked={n:review.digest((site/n).read_bytes()) for n in inventory}
+        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'passed','mode':'publication','commit':git('rev-parse','HEAD').decode().strip(),'input_files':inventory,'public_files':checked,'results':results},indent=2)+'\n')
         print('Publication checks passed:',sum(r['status']=='passed' for r in results),'fresh reviews;',len(results),'articles accounted for.')
         return 0
     except (OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError) as error:
