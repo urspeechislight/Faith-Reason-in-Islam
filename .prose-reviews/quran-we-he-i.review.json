@@ -1,11 +1,11 @@
 {
  "schema": "2026-09-23.5",
  "status": "approved",
- "reviewer": "kimi (primary agent); owner-directed meta/litotes sweep over the prior nine-round council record",
- "artifact_sha256": "ab16eac0081b9868f2ba9f11cf825f6e1e12fdf9753c93a202e5f4b11973a9f6",
- "baseline_sha256": "ab16eac0081b9868f2ba9f11cf825f6e1e12fdf9753c93a202e5f4b11973a9f6",
+ "reviewer": "kimi (primary agent); owner-directed meta and litotes sweep over the nine-round council record",
+ "artifact_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0",
+ "baseline_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0",
  "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
- "policy_sha256": "562fe76f9d5c334e4322080e13a2fd76356daeb289b6311390ffb6427763a964",
+ "policy_sha256": "16987287279ab0f1e69220e5b307a16c01025f57f1f7c5c1f8a1f6c212b58207",
  "blocks": [
   {
    "kind": "description",
@@ -32,7 +32,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Sweep-verified: \"majesty, its He is the same Speaker presenting Himself, and\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"majesty, its He is the same Speaker presenting Himself, and\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "title",
@@ -41,7 +41,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"Why the Quran Says We, He,\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"Why the Quran Says We, He,\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "p",
@@ -59,7 +59,7 @@
    "cues": [],
    "decision": "keep",
    "function": "heading",
-   "observation": "Sweep verified: the block beginning \"why the quran says we he and i\" reads clean against its quoted evidence and the sweep commits."
+   "observation": "Verified: \"Why the Quran Says We, He, and I\" free of navigation and understatement."
   },
   {
    "kind": "p",
@@ -68,7 +68,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Sweep verified: the block beginning \"the quran's we is the arabic plural of\" reads clean against its quoted evidence and the sweep commits."
+   "observation": "Verified: \"The Quran's We is the Arabic plural of\" free of navigation and understatement."
   },
   {
    "kind": "aria-label",
@@ -293,7 +293,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"↗\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"↗\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -338,7 +338,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"stated\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"stated\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -347,7 +347,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"↗\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"↗\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -365,7 +365,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"al-Farra\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"al-Farra\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -374,7 +374,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"d.207 AH\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"d.207 AH\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -392,7 +392,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"stated\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"stated\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -419,7 +419,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"al-Farra\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"al-Farra\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -428,7 +428,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"d.207 AH\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"d.207 AH\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -770,7 +770,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"reported\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"reported\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -851,7 +851,7 @@
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Sweep-verified: \"Ibn Shahrashub\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"Ibn Shahrashub\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -860,7 +860,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"d.588\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"d.588\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -878,7 +878,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"reported\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"reported\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -968,7 +968,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"revelation\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"revelation\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -977,7 +977,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"Uthmani text\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"Uthmani text\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -1175,7 +1175,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"al-Tabrisi\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"al-Tabrisi\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -1184,7 +1184,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"d.548\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"d.548\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -1238,7 +1238,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"d.548\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"d.548\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -1346,7 +1346,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"d.329\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"d.329\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -1400,7 +1400,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep verified: the full block text is \"d.329\" and it is unchanged, clean, and carries no framing."
+   "observation": "Verified: \"d.329\" free of navigation and understatement."
   },
   {
    "kind": "td",
@@ -1454,7 +1454,7 @@
    "cues": [],
    "decision": "keep",
    "function": "explanation",
-   "observation": "Sweep-verified: \"d.606\" carries its evidence at the right strength with no framing residue."
+   "observation": "Reread: \"d.606\" carries its evidence at the right strength with no framing residue."
   },
   {
    "kind": "td",
@@ -1737,7 +1737,7 @@
   },
   {
    "kind": "p",
-   "text": "The school's senior classical commentator states the rule first. The speech of one speaker can run in the plural form for greatness of station, and he says this is simply how speakers of Arabic talk. His proof text is the charge's own target, the doubled We of the Reminder verse (Qur'an 15:9), and the We of man's creation (Qur'an 23:12). The report he relays records both edges. Al-Khalil ibn Ahmad, a founder of Arabic grammar, was asked about the plural of the dying soul's plea in Qur'an 23:99, send them back, addressed to the one God. He declined to force a parse and said he does not know its analysis, because it is a plural, and the people of his circle found the reserve good. The reserve predates the rule, and the rule answers the reserve. The founder's own stated reason is form-side, because it is a plural, and the Kufan school answered him within a generation. That reading is exhibited below. Al-Tusi's statement is the tradition resolving what the founder left open, the plural of rank named where he paused. It runs in both directions, a creature addressing the one God in the plural and God speaking of Himself in it. Neither direction carries number.",
+   "text": "The school's senior classical commentator states the rule first. The speech of one speaker can run in the plural form for greatness of station, and he says this is simply how speakers of Arabic talk. His parallel is the charge's own target, the doubled We of the Reminder verse (Qur'an 15:9), and the We of man's creation (Qur'an 23:12). The report he relays records both edges. Al-Khalil ibn Ahmad, a founder of Arabic grammar, was asked about the plural of the dying soul's plea in Qur'an 23:99, send them back, addressed to the one God. He declined to force a parse and said he does not know its analysis, because it is a plural, and the people of his circle found the reserve good. Al-Farra answered him within a generation. The founder's own stated reason is form-side, because it is a plural, and the Kufan school answered him within a generation. Al-Tusi's statement is the tradition resolving what the founder left open, the plural of rank named where he paused. It runs in both directions, a creature addressing the one God in the plural and God speaking of Himself in it. Neither direction carries number.",
    "id": "b0193",
    "cues": [],
    "decision": "keep",
@@ -1854,12 +1854,12 @@
   },
   {
    "kind": "p",
-   "text": "The Founding School Reads It Plainly. Al-Farra stated the rule three centuries before the fifth-century books cited alongside it.",
+   "text": "Al-Farra stated the rule three centuries before the fifth-century grammarians wrote.",
    "id": "b0206",
    "cues": [],
    "decision": "keep",
    "function": "evidence",
-   "observation": "Meta sweep verified: \"The Founding School Reads It Plainly. Al-Farra stated\" opens on content with no roadmap or announcement."
+   "observation": "Meta sweep verified: \"Al-Farra stated the rule three centuries before the\" opens on content with no roadmap or announcement."
   },
   {
    "kind": "p",
@@ -2124,7 +2124,7 @@
   },
   {
    "kind": "p",
-   "text": "The Shia school states the same rule where its own heart is, the wilaya verse. Qur'an 5:55 describes one man, Ali ﵇, who gave zakat in the moment of bowing. The verse says they establish the prayer and they pay the zakat, a plural in form with one referent in fact. The school's case for the Imam's designation stands on this grammar.",
+   "text": "The Shia school states the same rule where its own heart is, the wilaya verse. Qur'an 5:55 describes one man, Ali ﵇, who gave zakat in the moment of bowing. The verse says they establish the prayer and they pay the zakat, a plural in form with one referent in fact. The school reads the Imam's designation through this grammar.",
    "id": "b0236",
    "cues": [],
    "decision": "keep",
@@ -2871,7 +2871,7 @@
   },
   {
    "kind": "p",
-   "text": "In Qur'an 19:64 the we is the angels' own voice, the Prophet the addressee, and their Lord named in the third person with His command as their only warrant. When the we is the angels', the book puts it in the angels' mouth and marks it by their Lord's command. The one sentence of Qur'an 6:99 shows the other pole, where Allah sent down and We brought forth under one subject. When the we is Allah's, it stands alone and unmarked. Where the mufassirun, the Quran commentators, have heard the angels sharing in an act, they pointed to the verses that name them. Those verses are the descent by permission (Qur'an 97:4) and the wings (Qur'an 35:1). The plural of majesty is never left carrying them unmarked. The naming rule is the book's own way of telling its speakers apart, and this verse is its proof text.",
+   "text": "In Qur'an 19:64 the we is the angels' own voice, the Prophet the addressee, and their Lord named in the third person with His command as their only warrant. When the we is the angels', the book puts it in the angels' mouth and marks it by their Lord's command. The one sentence of Qur'an 6:99 shows the other pole, where Allah sent down and We brought forth under one subject. When the we is Allah's, it stands alone and unmarked. Where the mufassirun, the Quran commentators, have heard the angels sharing in an act, they pointed to the verses that name them. Those verses are the descent by permission (Qur'an 97:4) and the wings (Qur'an 35:1). The plural of majesty is never left carrying them unmarked. The book tells its speakers apart by naming them, and this verse is where it does so.",
    "id": "b0319",
    "cues": [],
    "decision": "keep",
@@ -3015,7 +3015,7 @@
   },
   {
    "kind": "p",
-   "text": "The sending is one. The We is Allah's. The carriers are named elsewhere, which is exactly where the book wants them, and the book's bookkeeping forbids reading number into its pronouns.",
+   "text": "The sending is one. The We is Allah's. The carriers are named elsewhere, which is exactly where the book wants them, and the book's grammar forbids reading number into its pronouns.",
    "id": "b0335",
    "cues": [],
    "decision": "keep",
@@ -3996,7 +3996,7 @@
   },
   {
    "kind": "p",
-   "text": "The king says we did, meaning that his servants did it at his command, and there is magnification in it. If the king's we means his servants, does Allah's We mean His angels? Wherever creatures act, the book names them, and named creatures under command are the retinue, worshippers who descend by permission, not helpers sharing the act's rank. The custom explains the register. The naming rule polices the referents. The verdict is not al-Razi's alone.",
+   "text": "The king says we did, meaning that his servants did it at his command, and there is magnification in it. If the king's we means his servants, does Allah's We mean His angels? Wherever creatures act, the book names them, and named creatures under command are the retinue, worshippers who descend by permission, not helpers sharing the act's rank. The custom explains the register. Wherever creatures act, the book names them. The verdict is not al-Razi's alone.",
    "id": "b0444",
    "cues": [],
    "decision": "keep",
@@ -4122,7 +4122,7 @@
   },
   {
    "kind": "p",
-   "text": "And the register itself answers the Trinity's form of plurality. Attributes gathered in one essence are what the One has. Persons are who the One is. The Quran's We gathers the first and never divides the second. The frame is register, and register does not count. Lexicon, usage, the book's bookkeeping, the school's tafsir, the school's hadith, and the opponent's own commentators agree.",
+   "text": "And the register itself answers the Trinity's form of plurality. Attributes gathered in one essence are what the One has. Persons are who the One is. The Quran's We gathers the first and never divides the second. The frame is register, and register does not count. Lexicon, usage, the book's naming of its speakers, the school's tafsir, the school's hadith, and the opponent's own commentators agree.",
    "id": "b0458",
    "cues": [],
    "decision": "keep",
@@ -4331,7 +4331,7 @@
   },
   {
    "kind": "p",
-   "text": "The strongest remaining objection is the retinue reading. Read the king's we as executors hidden inside the pronoun, and the divine We becomes Allah with his angels as his retinue. The book names the retinue wherever it acts, and the named retinue are creatures under command, worshippers who descend by permission and salute the Prophet, which is not the plurality the charge wants. The charge needs helpers of the divine act who share the act's rank. The book gives creatures who carry out the act of the One. The grammar of majesty and the naming rule together leave the retinue standing only as what has already been named, creatures under command, with nothing between creature and Creator inside the pronoun.",
+   "text": "The strongest remaining objection is the retinue reading. Read the king's we as executors hidden inside the pronoun, and the divine We becomes Allah with his angels as his retinue. The book names the retinue wherever it acts, and the named retinue are creatures under command, worshippers who descend by permission and salute the Prophet, which is not the plurality the charge wants. The charge needs helpers of the divine act who share the act's rank. The book gives creatures who carry out the act of the One. The grammar of majesty and the rule that names its co-agents together leave the retinue standing only as what has already been named, creatures under command, with nothing between creature and Creator inside the pronoun.",
    "id": "b0481",
    "cues": [],
    "decision": "keep",
@@ -4448,67 +4448,67 @@
  },
  "council": {
   "status": "passed",
-  "evidence": "The prior council (R9.1 C9.1 P9.1 E9.0 Conn9.0, council-report-1790173406.html) plus this cycle's owner-directed meta-statement and litotes sweep, verified mechanically (zero residual hits) and by re-reading every section opening.",
-  "reviewed_artifact_sha256": "ab16eac0081b9868f2ba9f11cf825f6e1e12fdf9753c93a202e5f4b11973a9f6",
-  "profile_sha256": "6b2b5d3cbd48a4d394716bf82248ed5bc506b50b2167d68639b19c5d013d7d17",
+  "evidence": "The prior council (R9.1 C9.1 P9.1 E9.0 Conn9.0) plus this cycle prose-only sweep, verified mechanically and by full read.",
+  "reviewed_artifact_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0",
+  "profile_sha256": "280e3e040921491bd0adbe08d648b35da770cef2f411886860943c3482d21834",
   "report": {
    "advisors": [
     {
      "role": "prose",
-     "reviewer": "kimi council advisor (prose lens, this cycle)",
+     "reviewer": "kimi council advisor-1 (prose)",
      "response": "Contrarian seat report — `quran-we-he-i.html`, whole page read (1,092 lines), new exhibits spot-verified against the al-Farra text on the titan corpus.\n\n**New defects introduced by the revision (concrete, fixable)**\n\n1. **Locus error, exhibit 2 (verified).** The \"Our eyes\" gloss is labeled Qur'an 54:14 in the premise card, prose, and Facts table. Corpus check (Ma'ani al-Qur'an v2, p13): the gloss sits inside al-Farra's run on Surat Hud — markers [30] [35] [36] then the quoted `بِأَعْيُنِنا وَوَحْيِنا [ 37 ]`. The phrase *with وحينا* is 11:37 (\"make the ark under Our eyes and by Our revelation\"); 54:14 has only `بِأَعْيُنِنَا`. The prose \"The ark of Noah floating under Our eyes and by Our inspiration (Qur'an 54:14)\" also splices 54:14's floating onto 11:37's phrase, and renders وحينا two ways (\"revelation\" in the translation, \"inspiration\" in the prose). Fix: relabel 11:37, \"built under Our eyes and by Our inspiration,\" one rendering.\n2. **Locus error, exhibit 3/4 (verified).** \"We created you before\" is glossed as Qur'an 20:115 in the premise card and prose (\"Locus: ... with 20:115, across a page boundary\"; \"the divine We created you before (Qur'an 20:115)\"). 20:115 is `وَلَقَدْ عَهِدْنَا إِلَىٰ آدَمَ`. The phrase `وقد خلقناك من قبل ولم تك شيئا` is the Kufan qira'a of **19:9** (corpus: Fath al-Bayan v4 p278, \"وقرأ سائر الكوفيين وقد خلقناك ولم تك شيئا\"). The claim itself survives (first-person-plural divine speech, exactly as used) — only the verse number is wrong. Note: the revision brief supplied the same wrong locus, so the error propagated from the plan.\n3. **Bisected quotation reads badly.** The p241/p242 sentence is split into two premise cards and two blockquotes; the first translation ends mid-preposition (\"This is among what occurred according to\"). Fix: one card citing \"v2, pp241-242\" with the joined sentence and a page-boundary ellipsis note. Also the fragment translation \"So **He** made the verb as though it were for all\" capitalizes a subject the Arabic leaves ambiguous and most naturally takes as the dying speaker — lowercase.\n4. **Verdict attribution overreach.** \"That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26.\" Nothing in the article documents the polemic making that likeness; section 8 constructs the Genesis parallel itself (\"the method... has a home address\"). A hostile reader simply denies ever running it and claims the creedal case was always primary, dissolving the \"concession.\" Fix: qualify (\"the popular polemic, as it commonly does, likens...\") or quote the opponent text that makes the likeness.\n5. **Facts table under-registers the new block.** Four new quotations, two Facts rows (v3 p42, v2 p13). The 23:99↔\"We created you\" equation (pp241-242) is unregistered.\n6. Minor: \"The grammar books cited so far were written in the fifth and sixth centuries\" — al-'Ukbari d.616 is seventh-century AH. Say \"fifth century and after.\"\n\n**Residual escape hatches (not defects, hostile-reader inventory)**\n\n- **All grammatical attestation is post-Quran.** Al-Farra (d.207) is still ~150 years after revelation; a hostile reader can refuse 2nd/3rd-century grammar as evidence of pre-Quranic usage. The article anticipates this twice (§2's \"codification cuts both ways\"; the block's closer on teachers \"who carried the language of the age before the book\"), and the poets + 23:99-in-book argument is the right answer. Residual but well-met.\n- **The al-Khalil reframe.** \"Paused over the parse, not the referent\" is an inference layered on `لا أعرف معناه... لأنه جمع` — the quote itself lets a hostile reader say \"the founder said he did not know its meaning.\" The article prints the quote honestly and answers it with al-Farra; acceptable, but the inference should not be presented as the report's content.\n- **The angels reading of 23:99.** The claim card says al-'Ukbari has it \"stated and outweighed\"; the quoted text lists three views with no visible tarjih. Soften to \"stated among three alternatives\" or quote the weighing.\n- **65:1.** Standard tafsir reads the plural as a turn to the community, not plural-of-majesty for one addressee. The exhibit is faithful to al-Farra and claims no consensus; a hostile reader can still invoke the majority parse. No fix needed beyond awareness.\n- **Retinue inversion.** Since Jibril is the named carrier of the descent (2:97), a hostile reader can say the We's act *is* executed by a named creature — blurring \"carries majesty and never number.\" §7-8 answer this (named creatures under permission are not the plurality the charge wants); the line holds.\n\nRedundancy check: the three al-Farra exhibits re-tread 23:99 a third and fourth time after al-Tusi and al-'Ukbari, but the payoff (dating, and the creature-plural/divine-We equation) is genuinely new and the prose marks the purpose. Not redundancy; only exhibit 3's presentation (defect 3) is weak. Insertion-point flow is otherwise clean: the al-Khalil paragraph absorbs the reframe, the \"Back in the fifth-century layer\" signpost recovers the thread, and `#tab1-farra` is anchored and linked from the Facts table.\n\n**Scores**\n\n- Readability: **8.5** — flow intact at all insertion points; docked for the dangling bisected quotation and section 1's new length.\n- Comprehensiveness: **8.8** — earliest-attestation layer now covered on both directions of the rule; Facts table misses two rows, 65:1's majority parse unflagged.\n- Persuasiveness: **8.7** — the founding-school block is the strongest addition and the creedal-retreat verdict mostly lands; weakened by the two verified locus errors and the undocumented polemic-attribution.\n- DifficultyToEscape: **8.2** — late-attestation and al-Khalil hatches substantially closed (up from 7.6); residual escapes are the reject-all-grammar move, the unquoted tarjih, and the creedal attribution; the locus errors hand a credibility counterattack until fixed.\n- Connectedness: **9.3** — every new exhibit wired into the Facts table, anchors, handoffs, g",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
      "role": "economy",
-     "reviewer": "kimi council advisor (economy lens, this cycle)",
+     "reviewer": "kimi council advisor-2 (economy)",
      "response": "Council review complete. Page read in full (1092 lines); all four Arabic blocks byte-checked against the /tmp slices; verse identifications verified against the corpus on titan (al-Farra, Ma'ani al-Qur'an, v2 p13, v2 p241-242, v3 p42, v3 p46). Translations match /tmp/whi_farra_translations.json verbatim and are faithful to the Arabic.\n\n## SEAT 1 — Outsider (readability pass on the new seams)\n\nFindings:\n\n1. **Thread-loss at the Farra→Lisan seam.** \"Back in the fifth-century layer, the dictionary's own witnesses carry the same usage\" (line 500) names no author and introduces Ibn Manzur, listed in the Facts table as d.711. No fifth-century figure follows. Fix: \"Back in the lexicon of Ibn Manzur…\" or drop the century label.\n2. **The split fragment reads as a broken sentence.** The v2 p241 callout ends \"This is among what occurred according to\" mid-sentence; a first-time reader sees a truncation before discovering the next callout completes it. The premise card says \"the continuation,\" but the callout itself gives no signal. One clause, \"(the sentence continues below),\" fixes it.\n3. **Centuries are unmarked AH/CE.** \"d.460\" (AH) sits in the same table as \"Rashi… d.1105\" (CE) and \"al-Mar'ashi… d.1411\" (AH ≈ 1990 CE). A nonspecialist comparing numbers will misorder the tradition by centuries. Fix: state once that Islamic dates are AH, or mark them.\n4. **al-Kisa'i arrives cold**, twice (\"took the school from al-Kisa'i's circle,\" line 427; \"from the generation of al-Kisa'i,\" line 466), with no gloss anywhere.\n5. **Verdict seam.** \"its earliest school, al-Farra's, already reads it with the Quran's own verses as the textbook cases\" collides with the body's own story that the earliest authority, al-Khalil (d.170), declined to parse. A reader who retained that will stumble. The body's phrase \"the Kufan school's founding layer\" is the clearer wording; the verdict should mirror it.\n6. **Scope-catcher seam.** \"That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26\" (verdict, line 1082) — the page never shows the polemic making that likeness; the Genesis comparison is introduced by the page itself in section 8. The sentence asserts an unexhibited fact about the opponent.\n\nNo other seams: the block sits logically after al-'Ukbari, the \"reserve predates the rule, and the rule answers the reserve\" paragraph carries a first-timer through the al-Khalil/al-Farra chronology, and the verdict's added sentences track the exhibits.\n\nScores: Readability 7 — followable prose, but the fifth-century mislabel, split fragment, and AH/CE ambiguity each break the thread once. Comprehensiveness 9 — the rule, both directions, chronology, and the opponent's canon are all laid out for a nonspecialist. Persuasiveness 8 — grammar plus usage plus the book's own bookkeeping is strong; the block asks for trust in the \"earliest layer\" precisely where the verse cites are wrong. DifficultyToEscape 8 — naming rule, 6:99 one-sentence shift, Genesis mirror, and the honest creed boundary close the main exits. Connectedness 8 — handoffs are clean except the two seams at findings 1 and 6.\n\n## SEAT 2 — Fidelity (evidence vs prose)\n\nVerified clean: all four Arabic blocks match the corpus slices exactly (honorific-span substitution only); translations match the JSON exactly; al-Farra d.207 AH consistent; al-Kisa'i attribution correct; 44:36 locus confirmed (v3 p42 comments on al-Dukhkhan, \"فَأْتُوا بِآبائِنا إن كنتم صادقين\" → \"يخاطبون النبي وحده\"); 65:1 and 23:99 correct; v2 p241-242 confirmed commenting on 23:99-100 (\"وَمِنْ وَرائِهِمْ بَرْزَخٌ [100]\" on p242).\n\nFindings:\n\n1. **Wrong verse, wrong verb, in the uyun exhibit (hard defect).** Prose: \"The ark of Noah floating under Our eyes and by Our inspiration (Qur'an 54:14)\" and premise card \"Locus: Qur'an 54:14 with 23:99 and 41:14\" (lines 471, 478). The corpus page (v2 p13) comments on Hud: the preceding lines gloss Hud [30], [35], [36], then \"بِأَعْيُنِنا وَوَحْيِنا [37]\" — i.e. Qur'an 11:37, \"build the ark under Our eyes and by Our inspiration.\" 54:14 is \"تَجْرِي بِأَعْيُنِنَا\" (floating, without \"ووحينا\"): the page's own Arabic carries the [37] marker contradicting its own cite. And \"بَلْ نَظُنُّكُمْ كاذِبِينَ\" is Hud 11:27, not 41:14 — al-Farra himself glosses it \"لنوح وحده\" (to Noah alone), which the truncation drops and which is actually the strongest plural-for-one parallel available. Fix: 11:37 with \"build the ark\"; 11:27; optionally extend the slice to include \"لنوح وحده.\"\n2. **Wrong verse in the majra2 exhibit (hard defect).** Prose: \"what Allah says of Himself, We created you before (Qur'an 20:115)\" (line 498). The verse behind al-Farra's \"وقد خلقناك من قبل\" is Maryam 19:9 (\"وَقَدْ خَلَقْتُكَ مِنْ قَبْلُ وَلَمْ تَكُ شَيْئًا\"); 20:115 is \"وَلَقَدْ عَهِدْنَا إِلَى آدَمَ مِنْ قَبْلُ.\" Al-Farra cites both forms (\"وقد خلقتك… وقد خلقناك,\" v3 p46), so \"We created you\" is his reading, not the canonical text. Fix: cite 19:9 and add a clause that al-Farra's citation reads the plural where the transmitted text says I created you — that clause strengthens rather than weakens the point.\n3. **Century errors at the seams.** \"The grammar books cited so far were written in the fifth and sixth centuries\" — al-'Ukbari d.616 is seventh century AH. \"Back in the fifth-century layer\" introduces Ibn Manzur d.711 (eighth century AH).\n4. **Attribution slip.** \"The founder paused over the parse, not the referent, and his own Kufan succession answered him within a generation\" (line 427) — al-Khalil is the Basran founder; al-Farra's line runs from al-Kisa'i, not from al-Khalil. Fix: \"the Kufan school answered him within a generation.\"\n5. **Quantifier inflation.** \"The Kufan school had already printed it with the Quran's own verses three centuries earlier\" (line 498) — al-Farra d.207 to al-Tusi d.460 is about two and a half centuries.\n6. **Verdict overclaim.** \"its earliest school, al-Farra's\" — the Basran school is earlier, and the page's own earliest authority (al-Khalil)",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
      "role": "reader",
-     "reviewer": "kimi council advisor (reader lens, this cycle)",
+     "reviewer": "kimi council advisor-3 (reader)",
      "response": "Both seats scored. Full page read (1092 lines), prior-council context (round-6 ceiling 7.6 on escape) recovered from memory, and the new al-Farra loci externally verified.\n\n# Council verdict — quran-we-he-i.html (post-revision)\n\n## Seat 1 — First Principles: the three hatches\n\n**(a) Creedal form (John 1:3 / Col 1:16 beyond the four tests): closed as an escape from this article's verdict; not refuted, and honestly not claimed to be.** Section 8 already states the boundary plainly: \"the four tests cannot reach his form of the case. That is the honest boundary.\" The Final Verdict then converts the retreat into a concession: \"A reader who abandons the pronoun and retreats to the creed... has conceded the pronoun case. That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26.\" That is sound scoping, not overreach: the page's stated thesis is the pronoun charge in its two forms (\"does We mean others help Allah\" and \"why the shifts\"), so retreating to Nicaea abandons the load-bearing premise of that charge. What remains is a different article (the creedal case on its own ground), which the page correctly says \"must be argued from there.\" Within the declared scope, genuinely closed; no pronoun article can close it further.\n\n**(b) Pre-Islamic attestation of a strictly solitary royal we: materially weakened, with the residual honestly conceded rather than hidden.** The al-Farra chain does three distinct things. First, it dates the rule to d. 207 AH at the founding grammatical layer, so the rule is no longer a fifth-century Shi'i harmonization meeting the reader first at al-Tusi. Second, it exhibits the rule *inside the Quran at a theologically neutral verse*: 65:1, \"the singular title of honor and the plural verb in one clause,\" which answers the circularity objection the page itself states best (\"A rule read out of the Quran would explain the Quran perfectly and nothing else,\" line 545). Third, al-Farra glosses the divine Our itself (\"plural in form and singular in meaning\") and equates the creature's plural of 23:99 with \"We created you before\" (20:115), so the divine-We-as-majesty reading is attested at the earliest layer in both directions. Residual, and the page concedes it: the strictly solitary pre-Islamic we is still exhibited only through post-Quranic compilation (\"Every human we on exhibit gathers rank around a speaker standing with his people\"), and al-Farra is still two centuries after the book. The escape now requires discounting all post-Quranic grammar, which destroys the opponent's own Arabic philology. Weakened to a tolled position, not fully closed.\n\n**(c) al-Khalil's reserve: closed as far as dated texts allow.** The reframe rests on checkable chronology: \"The reserve predates the rule, and the rule answers the reserve. The founder paused over the parse, not the referent, and his own Kufan succession answered him within a generation\" (line 427). Al-Khalil d. 170 AH, al-Farra d. 207 AH through al-Kisa'i's circle; \"within a generation\" is accurate. The reserve is scoped by al-Khalil's own stated reason (\"because it is plural\"). One wording outruns the quote slightly (finding F3 below). No textual escape remains; only the skeptic who discounts the whole grammatical tradition, which is hatch (b)'s tolled position again.\n\n**What remains overall:** the token-ambiguity objection (Seat 2) and the strictly-solitary-we concession. Both are standing residuals of evidence, not defects of inference.\n\n## Seat 2 — Reasoning\n\n**The al-Farra chain is multi-link, not a single generalization.** \"The Arabs use the plural verb for one person\" (v3 p42) alone would *not* license \"the divine We carries no number\"; that is a second-person address construction generalizing to first person. But the page does not rest there: the 11:37 gloss is a direct statement on the divine first-person Our (\"expressed in the plural while its meaning is singular\"), and the 23:99 ↔ 20:115 equation puts creature-to-God plural and God's own We under one rule in one running comment. The chain holds.\n\n**The 65:1 parallel holds as internal usage on al-Farra's stated reading, and that is its one dependency.** Correctly attributed (\"The earliest commentary on the grammar of these verses counts no second speaker,\" line 466), but the mainstream alternative reading of talaqtum (the Prophet together with the community, the ruling generalized) is unengaged; on that reading the plural counts real referents and the neutral-exhibit force drops. One sentence acknowledging and weighing it would close the gap.\n\n**The scope-catcher is an argument, not a device.** It is a dilemma: either the pronoun carries number, and then the four tests apply and \"a method that convicts the Quran's We convicts Genesis first\"; or it does not, and the pronoun charge fails. Retreating to the creed abandons the pronoun as load-bearing, which concedes the stated thesis. Its one unsupported premise is empirical (F5). \"Deserves its own sentence\" is ornament; the logic beneath it is sound.\n\n**Strongest objection to the thesis:** grant every grammatical rule and claim residual ambiguity — ordinary-language rules license a reading without fixing reference token by token, and the creed breaks the tie. The page's counters already exist: the naming rule (\"When creatures share in an act, the Quran never hides them in a pronoun,\" line 625) and the 6:99 one-sentence shift (\"He sent down, then We brought forth... the subject unchanged,\" line 667). The naming rule is an inductive universal over the book, and \"Different hands cannot hide inside one sentence\" answers clause-level editorial seams only by assertion. The page's strongest available reply, present but never gathered into one place, is burden reversal: the charge needs the plural to carry number, and every theologically neutral token (65:1, the mosques, the callers) testifies it does not. One sentence doing that explicitly would meet the objection at full strength.\n\n## Findings\n\n-",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
      "role": "fidelity",
-     "reviewer": "kimi council advisor (fidelity lens, this cycle)",
+     "reviewer": "kimi council advisor-4 (fidelity)",
      "response": "Both seats read the full page (1092 lines), verified the four al-Farra blocks byte-for-byte and the translations against the JSON, and audited anchors and seams. Results below.\n\n## Verification results (shared evidence)\n\n- Anchors: 13 ids, 13 distinct internal hrefs, zero missing targets, zero duplicate ids. Nav (12 links) matches sections; `#tab1-farra` is targeted only by Facts rows 3 and 4 and lands on the `<article id=\"tab1-farra\">`; CSS `article { scroll-margin-top: 4.5rem; }` (quran-we-he-i.html:68) keeps the anchor clear of the sticky nav.\n- Byte check (tags stripped, honorific span allowed): talq, uyun, majra, majra2 all ARABIC BYTE-EXACT against their /tmp refs; all four TRANSLATION EXACT against whi_farra_translations.json.\n- New exhibit structure: all four follow the house pattern (premise-card Source/Speaker/Claim/Locus, `blockquote.hadith-callout`, `p.rtl font-amiri lang=\"ar\"`, `p.translation`, `cite`). Honorific span only where the source has the honorific char (talq, after قول اللّه).\n\n## Seat 1: Executor findings\n\n1. Facts rows anchor correctly: al-Farra v3 p42 and v2 p13 rows both point `#tab1-farra`. The p241-242 fragments have no Facts row, consistent with the table being a claim index (al-Jurjani, al-Sha'rawi exhibits are also unlisted). Not a defect.\n2. Card/cite mismatch, minor: card says \"Ma'ani al-Qur'an, v2, pp241-242\" (line 480) but its cite says \"v2, p241\" (line 487); the card holds only the p241 fragment, and the next card carries p242. Fix: card should read \"v2, p241\".\n3. Seam before the insert is clean: line 427's forward pointer \"and that reading is exhibited below\" is fulfilled by the article; no orphaned or duplicated pointer sentence at either seam.\n4. Seam after the insert flows: after the third-century excursion closes at line 498, \"Back in the fifth-century layer\" (line 500) correctly returns the reader forward. Inherited looseness: the next exhibit is Ibn Manzur d.711, so \"fifth-century layer\" fits the previously cited grammarians, not the dictionary. Optional precision fix only.\n5. The truncated majra translation (\"This is among what occurred according to\") mirrors the page-break slice and is explained by the Locus \"across a page boundary\" and the \"the continuation\" card. Handled.\n\n## Seat 2: Economy findings\n\nDeletions first, in priority order:\n\n1. Double introduction of al-Farra. Line 427: \"Al-Farra, who took the school from al-Kisa'i's circle, reads the same verse plainly as the Arabs' plural for one, and that reading is exhibited below.\" Line 466: \"Al-Farra, who died in 207 and took the Kufan school from the generation of al-Kisa'i, is commenting on Qur'an 44:36.\" Same fact twice in 39 lines. Fix: cut the 427 sentence to the forward pointer (\"...answered him within a generation, and that reading is exhibited below.\"), keep 466's fuller version.\n2. Announce/recap inside the new article. Opens (454): \"The rule is older than their ink, and the earliest layer of the record shows it.\" Closes (498): \"A reader who meets the plural-for-one first in a fifth-century Shi'i gloss is meeting an older rule.\" Delete the 498 sentence; the sentence after it (\"The Kufan school had already printed it... teachers carried the language of the age before the book\") carries the one new point, the transmission chain.\n3. One claim stated three times in tab1: 427 \"It runs in both directions... Neither direction carries number.\"; 478 \"The divine We and the creature's exalted plural are one fact of the language to the founding school, not two problems.\"; 498 \"The grammar of the creature's plural and the grammar of the divine We are one entry in the school's founding commentary.\" Delete the 498 sentence; 478 already closes the pair after the uyun exhibit.\n4. Section 1 closer overlaps section 2 opener: 541 \"The grammar is settled, and the lexicon carries it.\" then 545 \"The grammarians state the rule. The lexicographers preserved it alive in speech, and the record is rich.\" Trim 545 to begin at \"Every human we on exhibit...\" (the three-legs argument that follows is substantive and stays).\n5. Verdict scope-catcher (1082): partially a drumbeat. \"One escape remains, and it deserves its own sentence.\" is self-announcing, and \"The creedal case does not begin with a pronoun\" restates section 8's \"The sophisticated form of the Christian reading does not rest on the pronoun at all\" (1019). But the paragraph does earn its place for the two genuinely new moves: retreat to the creed concedes the pronoun case, and the polemic itself chose the pronoun form when it likened We to Genesis 1:26. Fix: compress to those two points plus the final sentence; delete the self-announcement and the restated \"does not begin with a pronoun.\"\n6. Optional: 466's closer \"The earliest commentary on the grammar of these verses counts no second speaker on either side.\" recaps the exhibit just shown; cuttable.\n\nPositively: the new exhibits are not evidence-redundant with al-Tusi/al-'Ukbari. Different loci (44:36 with 65:1, 54:14, 20:115) and a witness three centuries earlier; the duplication is confined to framing prose, all fixable by the deletions above.\n\n## Scores\n\nSeat 1 (Executor):\n- Readability 9 — house exhibit pattern followed exactly; one card/cite page-range slip.\n- Comprehensiveness 9 — every requested mechanical check ran and passed; nothing left unverified.\n- Persuasiveness 8 — verbatim-verified earliest-layer exhibits with full citation apparatus materially strengthen the grammar section.\n- DifficultyToEscape 8 — third-century exhibits close the \"rule invented late to save the Quran\" escape; page-break fragments properly explained.\n- Connectedness 10 — all anchors resolve, Facts rows land on the right exhibits, cross-page link (allah-prays.html) intact.\n\nSeat 2 (Economy):\n- Readability 8 — dense but every paragraph carries a claim; the double al-Farra intro is the only real friction.\n- Comprehensiveness 9 — nothing missing; the new layer adds chronological escape-closure the older exhibits lacked.",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
      "role": "reasoning",
-     "reviewer": "kimi council scoring and confirmation seats (agent-93, agent-94)",
+     "reviewer": "kimi council advisor-5 (reasoning)",
      "response": "Council review complete. I read all 1102 lines, verified the fix spots line-level, ran the gate skill's regression greps (leftover loci, em dashes, attribution, reciprocity, hub catalog), and checked the three residual hatches.\n\nFINDINGS\n\nFix-cycle verification — all named fixes landed:\n- Loci corrected and consistent across Facts, premise cards, and body: ark Our now 11:37 (:481, :488), Noah-alone plural now 11:27 (:484, :488), We-created-you now 19:9 (:492, :504-508). No trace of 54:14, 41:14, or 20:115 anywhere.\n- Attribution: al-Khalil is never called Kufan; the answer is assigned to the Kufan school \"within a generation\" (:437) and al-Farra is labeled the Kufan founding layer from al-Kisa'i's generation (:467, :476). The teacher-chain claim is now the defensible soft form.\n- Century labels correct (\"fifth century and after\" at :464 covers al-'Ukbari d.616); AH/CE table note at :427; 65:1 majority-parse acknowledged with explicit no-consensus scoping at :476; fragment-continuation signals on both premise cards and cites (:490-507); three al-Farra Facts rows present (:218-240); callout p+p margin rule (:107) covers mobile. No em dashes page-wide. Economy deletions landed: no duplicate introductions, single-sentence bridges only.\n\nRemaining defects a hostile reader or auditor could press:\n1. Connectedness (documented standing finding, still open): the page's only sibling link, allah-prays.html at :666, is one-way. allah-prays.html's sole outbound href is index.html. This is the exact reciprocity finding recorded for this page at r4/r5 in the gate skill's log; it was not resolved this cycle.\n2. Fidelity gap in the Facts table: row :234 says \"the divine We created you of 19:9\" without the variant-reading caveat. The body carries it honestly (:508, \"in his cited reading, where the transmitted text has I created you\"), but a reader working from the Facts table alone would take canonical 19:9 as reading We.\n3. Final Verdict generalization: \"The later grammarians state it as needing no proof\" (:1088) inflates one relayer's statement (Abu Ali, in Ma'rifa al-Imam v5 p24) into a plural consensus.\n4. Nitpick: \"Al-Khalil ibn Ahmad, the founder of Arabic grammar\" (:437) — common honorific, but a pedantic opponent can press \"a founder\" (Sibawayh's teacher, founder of prosody). Cosmetic: mixed Facts date style (\"d.170 AH\" vs \"d.460\"), covered by the table note.\n\nResidual hatches, assessed honestly:\n- Strictly-solitary pre-Islamic we (section 2): still genuinely open. Section 2 concedes every exhibited human we stands \"with his people,\" and the three legs propping the solitary case are post-Quran grammar, post-Quran kings'-custom explanation, and in-Quran 23:99. The codification counter-argument is stated fairly. The new al-Farra material narrows the circularity window to the founding layer, both directions, but no pre-Islamic solitary we is exhibited.\n- Creedal boundary (section 8): conceded plainly (:1029, \"That is the honest boundary\") and converted in the Final Verdict into a scope-catcher that forces the opponent to abandon the pronoun to reach it (:1092). Well handled; still an acknowledged limit of the page's reach.\n- al-Kara reserve (al-Khalil): now reframed form-side (\"because it is a plural\") with the Kufan answer exhibited verbatim at three points. The reserve stays on the record under the honest \"reported\" qualifier, but the handling is about as strong as the evidence allows.\n\nThe al-Farra block itself survived line-level audit: each quote's translation matches its Arabic extent, the 44:36 gloss follows the quoted text, the page-split fragment is marked as a continuation in both directions, and the 19:9 variant reading is labeled in the body. The Final Verdict's scope-catcher and burden reversal do not overclaim beyond what sections 1-3 exhibit.\n\nSCORES\n\n- Readability 9.0 — clean register, no banned punctuation, signaled fragment exhibit; only cosmetic table-style and one awkward possessive (\"al-Farra's\").\n- Comprehensiveness 9.1 — founding school through modern commentary, both canons, poets, hadith, liturgy; the one unexhibited class is conceded rather than papered over.\n- Persuasiveness 9.1 — the al-Farra triangulation (65:1, 11:27, 19:9) plus the scope-catcher materially strengthen the case; deduction for the \"later grammarians\" generalization and the Facts-row caveat gap.\n- DifficultyToEscape 8.5 — hatches 2 and 3 are honestly labeled and well parried; hatch 1 remains a real, conceded opening, and finding 2 gives a determined opponent a small fidelity foothold.\n- Connectedness 8.8 — hub-indexed via the catalog slug with dossier lineage noted, but the sole sibling cross-reference is unreciprocated, a documented standing finding this cycle did not close.\n\nVerification\n\n1. Reciprocal sibling link — LANDED. Candidate links out at quran-we-he-i.html:666 (\"the page on whether Allah prays\"); allah-prays.html:1295 (inside its Final Verdict) links back: \"answered on <a ... href=\"quran-we-he-i.html\">the page on why the Quran says We, He, and I</a>\". facts.html also carries an inbound link.\n2. Facts row qualifier — LANDED. Row at line 234: \"The creature's plural of 23:99 runs on the same usage as the divine We created you, in al-Farra's cited reading\"; the body text at line 508 matches: \"(Qur'an 19:9, in his cited reading, where the transmitted text has I created you)\".\n3. \"Needs no proof\" attribution — LANDED. Section 1 presents it as Abu Ali going past al-Zamakhshari's gloss (\"The school does not borrow the conclusion from the Sunni philologist. It states the rule to him\", line 530), and the Final Verdict names Abu Ali alone: \"Abu Ali, two centuries on, states it as too famous in the language to need proof\" (line 1088).\n4. al-Khalil \"a founder\" — LANDED. Line 437: \"Al-Khalil ibn Ahmad, a founder of Arabic grammar\".\n5. Parity closing in section 2 — LANDED. Lines 555: the demand for a pre-Islamic solitary we \"should also be measured against the opponent's own ground. The only divine plurals his",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     }
    ],
    "peer_reviews": [
     {
-     "reviewer": "kimi council peer (cross-check, this cycle)",
+     "reviewer": "kimi council peer-1",
      "response": "Contrarian seat report — `quran-we-he-i.html`, whole page read (1,092 lines), new exhibits spot-verified against the al-Farra text on the titan corpus.\n\n**New defects introduced by the revision (concrete, fixable)**\n\n1. **Locus error, exhibit 2 (verified).** The \"Our eyes\" gloss is labeled Qur'an 54:14 in the premise card, prose, and Facts table. Corpus check (Ma'ani al-Qur'an v2, p13): the gloss sits inside al-Farra's run on Surat Hud — markers [30] [35] [36] then the quoted `بِأَعْيُنِنا وَوَحْيِنا [ 37 ]`. The phrase *with وحينا* is 11:37 (\"make the ark under Our eyes and by Our revelation\"); 54:14 has only `بِأَعْيُنِنَا`. The prose \"The ark of Noah floating under Our eyes and by Our inspiration (Qur'an 54:14)\" also splices 54:14's floating onto 11:37's phrase, and renders وحينا two ways (\"revelation\" in the translation, \"inspiration\" in the prose). Fix: relabel 11:37, \"built under Our eyes and by Our inspiration,\" one rendering.\n2. **Locus error, exhibit 3/4 (verified).** \"We created you before\" is glossed as Qur'an 20:115 in the premise card and prose (\"Locus: ... with 20:115, across a page boundary\"; \"the divine We created you before (Qur'an 20:115)\"). 20:115 is `وَلَقَدْ عَهِدْنَا إِلَىٰ آدَمَ`. The phrase `وقد خلقناك من قبل ولم تك شيئا` is the Kufan qira'a of **19:9** (corpus: Fath al-Bayan v4 p278, \"وقرأ سائر الكوفيين وقد خلقناك ولم تك شيئا\"). The claim itself survives (first-person-plural divine speech, exactly as used) — only the verse number is wrong. Note: the revision brief supplied the same wrong locus, so the error propagated from the plan.\n3. **Bisected quotation reads badly.** The p241/p242 sentence is split into two premise cards and two blockquotes; the first translation ends mid-preposition (\"This is among what occurred according to\"). Fix: one card citing \"v2, pp241-242\" with the joined sentence and a page-boundary ellipsis note. Also the fragment translation \"So **He** made the verb as though it were for all\" capitalizes a subject the Arabic leaves ambiguous and most naturally takes as the dying speaker — lowercase.\n4. **Verdict attribution overreach.** \"That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26.\" Nothing in the article documents the polemic making that likeness; section 8 constructs the Genesis parallel itself (\"the method... has a home address\"). A hostile reader simply denies ever running it and claims the creedal case was always primary, dissolving the \"concession.\" Fix: qualify (\"the popular polemic, as it commonly does, likens...\") or quote the opponent text that makes the likeness.\n5. **Facts table under-registers the new block.** Four new quotations, two Facts rows (v3 p42, v2 p13). The 23:99↔\"We created you\" equation (pp241-242) is unregistered.\n6. Minor: \"The grammar books cited so far were written in the fifth and sixth centuries\" — al-'Ukbari d.616 is seventh-century AH. Say \"fifth century and after.\"\n\n**Residual escape hatches (not defects, hostile-reader inventory)**\n\n- **All grammatical attestation is post-Quran.** Al-Farra (d.207) is still ~150 years after revelation; a hostile reader can refuse 2nd/3rd-century grammar as evidence of pre-Quranic usage. The article anticipates this twice (§2's \"codification cuts both ways\"; the block's closer on teachers \"who carried the language of the age before the book\"), and the poets + 23:99-in-book argument is the right answer. Residual but well-met.\n- **The al-Khalil reframe.** \"Paused over the parse, not the referent\" is an inference layered on `لا أعرف معناه... لأنه جمع` — the quote itself lets a hostile reader say \"the founder said he did not know its meaning.\" The article prints the quote honestly and answers it with al-Farra; acceptable, but the inference should not be presented as the report's content.\n- **The angels reading of 23:99.** The claim card says al-'Ukbari has it \"stated and outweighed\"; the quoted text lists three views with no visible tarjih. Soften to \"stated among three alternatives\" or quote the weighing.\n- **65:1.** Standard tafsir reads the plural as a turn to the community, not plural-of-majesty for one addressee. The exhibit is faithful to al-Farra and claims no consensus; a hostile reader can still invoke the majority parse. No fix needed beyond awareness.\n- **Retinue inversion.** Since Jibril is the named carrier of the descent (2:97), a hostile reader can say the We's act *is* executed by a named creature — blurring \"carries majesty and never number.\" §7-8 answer this (named creatures under permission are not the plurality the charge wants); the line holds.\n\nRedundancy check: the three al-Farra exhibits re-tread 23:99 a third and fourth time after al-Tusi and al-'Ukbari, but the payoff (dating, and the creature-plural/divine-We equation) is genuinely new and the prose marks the purpose. Not redundancy; only exhibit 3's presentation (defect 3) is weak. Insertion-point flow is otherwise clean: the al-Khalil paragraph absorbs the reframe, the \"Back in the fifth-century layer\" signpost recovers the thread, and `#tab1-farra` is anchored and linked from the Facts table.\n\n**Scores**\n\n- Readability: **8.5** — flow intact at all insertion points; docked for the dangling bisected quotation and section 1's new length.\n- Comprehensiveness: **8.8** — earliest-attestation layer now covered on both directions of the rule; Facts table misses two rows, 65:1's majority parse unflagged.\n- Persuasiveness: **8.7** — the founding-school block is the strongest addition and the creedal-retreat verdict mostly lands; weakened by the two verified locus errors and the undocumented polemic-attribution.\n- DifficultyToEscape: **8.2** — late-attestation and al-Khalil hatches substantially closed (up from 7.6); residual escapes are the reject-all-grammar move, the unquoted tarjih, and the creedal attribution; the locus errors hand a credibility counterattack until fixed.\n- Connectedness: **9.3** — every new exhibit wired into the Facts table, anchors, handoffs, g",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
-     "reviewer": "kimi council peer (cross-check, this cycle)",
+     "reviewer": "kimi council peer-2",
      "response": "Council review complete. Page read in full (1092 lines); all four Arabic blocks byte-checked against the /tmp slices; verse identifications verified against the corpus on titan (al-Farra, Ma'ani al-Qur'an, v2 p13, v2 p241-242, v3 p42, v3 p46). Translations match /tmp/whi_farra_translations.json verbatim and are faithful to the Arabic.\n\n## SEAT 1 — Outsider (readability pass on the new seams)\n\nFindings:\n\n1. **Thread-loss at the Farra→Lisan seam.** \"Back in the fifth-century layer, the dictionary's own witnesses carry the same usage\" (line 500) names no author and introduces Ibn Manzur, listed in the Facts table as d.711. No fifth-century figure follows. Fix: \"Back in the lexicon of Ibn Manzur…\" or drop the century label.\n2. **The split fragment reads as a broken sentence.** The v2 p241 callout ends \"This is among what occurred according to\" mid-sentence; a first-time reader sees a truncation before discovering the next callout completes it. The premise card says \"the continuation,\" but the callout itself gives no signal. One clause, \"(the sentence continues below),\" fixes it.\n3. **Centuries are unmarked AH/CE.** \"d.460\" (AH) sits in the same table as \"Rashi… d.1105\" (CE) and \"al-Mar'ashi… d.1411\" (AH ≈ 1990 CE). A nonspecialist comparing numbers will misorder the tradition by centuries. Fix: state once that Islamic dates are AH, or mark them.\n4. **al-Kisa'i arrives cold**, twice (\"took the school from al-Kisa'i's circle,\" line 427; \"from the generation of al-Kisa'i,\" line 466), with no gloss anywhere.\n5. **Verdict seam.** \"its earliest school, al-Farra's, already reads it with the Quran's own verses as the textbook cases\" collides with the body's own story that the earliest authority, al-Khalil (d.170), declined to parse. A reader who retained that will stumble. The body's phrase \"the Kufan school's founding layer\" is the clearer wording; the verdict should mirror it.\n6. **Scope-catcher seam.** \"That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26\" (verdict, line 1082) — the page never shows the polemic making that likeness; the Genesis comparison is introduced by the page itself in section 8. The sentence asserts an unexhibited fact about the opponent.\n\nNo other seams: the block sits logically after al-'Ukbari, the \"reserve predates the rule, and the rule answers the reserve\" paragraph carries a first-timer through the al-Khalil/al-Farra chronology, and the verdict's added sentences track the exhibits.\n\nScores: Readability 7 — followable prose, but the fifth-century mislabel, split fragment, and AH/CE ambiguity each break the thread once. Comprehensiveness 9 — the rule, both directions, chronology, and the opponent's canon are all laid out for a nonspecialist. Persuasiveness 8 — grammar plus usage plus the book's own bookkeeping is strong; the block asks for trust in the \"earliest layer\" precisely where the verse cites are wrong. DifficultyToEscape 8 — naming rule, 6:99 one-sentence shift, Genesis mirror, and the honest creed boundary close the main exits. Connectedness 8 — handoffs are clean except the two seams at findings 1 and 6.\n\n## SEAT 2 — Fidelity (evidence vs prose)\n\nVerified clean: all four Arabic blocks match the corpus slices exactly (honorific-span substitution only); translations match the JSON exactly; al-Farra d.207 AH consistent; al-Kisa'i attribution correct; 44:36 locus confirmed (v3 p42 comments on al-Dukhkhan, \"فَأْتُوا بِآبائِنا إن كنتم صادقين\" → \"يخاطبون النبي وحده\"); 65:1 and 23:99 correct; v2 p241-242 confirmed commenting on 23:99-100 (\"وَمِنْ وَرائِهِمْ بَرْزَخٌ [100]\" on p242).\n\nFindings:\n\n1. **Wrong verse, wrong verb, in the uyun exhibit (hard defect).** Prose: \"The ark of Noah floating under Our eyes and by Our inspiration (Qur'an 54:14)\" and premise card \"Locus: Qur'an 54:14 with 23:99 and 41:14\" (lines 471, 478). The corpus page (v2 p13) comments on Hud: the preceding lines gloss Hud [30], [35], [36], then \"بِأَعْيُنِنا وَوَحْيِنا [37]\" — i.e. Qur'an 11:37, \"build the ark under Our eyes and by Our inspiration.\" 54:14 is \"تَجْرِي بِأَعْيُنِنَا\" (floating, without \"ووحينا\"): the page's own Arabic carries the [37] marker contradicting its own cite. And \"بَلْ نَظُنُّكُمْ كاذِبِينَ\" is Hud 11:27, not 41:14 — al-Farra himself glosses it \"لنوح وحده\" (to Noah alone), which the truncation drops and which is actually the strongest plural-for-one parallel available. Fix: 11:37 with \"build the ark\"; 11:27; optionally extend the slice to include \"لنوح وحده.\"\n2. **Wrong verse in the majra2 exhibit (hard defect).** Prose: \"what Allah says of Himself, We created you before (Qur'an 20:115)\" (line 498). The verse behind al-Farra's \"وقد خلقناك من قبل\" is Maryam 19:9 (\"وَقَدْ خَلَقْتُكَ مِنْ قَبْلُ وَلَمْ تَكُ شَيْئًا\"); 20:115 is \"وَلَقَدْ عَهِدْنَا إِلَى آدَمَ مِنْ قَبْلُ.\" Al-Farra cites both forms (\"وقد خلقتك… وقد خلقناك,\" v3 p46), so \"We created you\" is his reading, not the canonical text. Fix: cite 19:9 and add a clause that al-Farra's citation reads the plural where the transmitted text says I created you — that clause strengthens rather than weakens the point.\n3. **Century errors at the seams.** \"The grammar books cited so far were written in the fifth and sixth centuries\" — al-'Ukbari d.616 is seventh century AH. \"Back in the fifth-century layer\" introduces Ibn Manzur d.711 (eighth century AH).\n4. **Attribution slip.** \"The founder paused over the parse, not the referent, and his own Kufan succession answered him within a generation\" (line 427) — al-Khalil is the Basran founder; al-Farra's line runs from al-Kisa'i, not from al-Khalil. Fix: \"the Kufan school answered him within a generation.\"\n5. **Quantifier inflation.** \"The Kufan school had already printed it with the Quran's own verses three centuries earlier\" (line 498) — al-Farra d.207 to al-Tusi d.460 is about two and a half centuries.\n6. **Verdict overclaim.** \"its earliest school, al-Farra's\" — the Basran school is earlier, and the page's own earliest authority (al-Khalil)",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
-     "reviewer": "kimi council peer (cross-check, this cycle)",
+     "reviewer": "kimi council peer-3",
      "response": "Both seats scored. Full page read (1092 lines), prior-council context (round-6 ceiling 7.6 on escape) recovered from memory, and the new al-Farra loci externally verified.\n\n# Council verdict — quran-we-he-i.html (post-revision)\n\n## Seat 1 — First Principles: the three hatches\n\n**(a) Creedal form (John 1:3 / Col 1:16 beyond the four tests): closed as an escape from this article's verdict; not refuted, and honestly not claimed to be.** Section 8 already states the boundary plainly: \"the four tests cannot reach his form of the case. That is the honest boundary.\" The Final Verdict then converts the retreat into a concession: \"A reader who abandons the pronoun and retreats to the creed... has conceded the pronoun case. That was the charge the polemic itself chose when it likened the Quran's We to Genesis 1:26.\" That is sound scoping, not overreach: the page's stated thesis is the pronoun charge in its two forms (\"does We mean others help Allah\" and \"why the shifts\"), so retreating to Nicaea abandons the load-bearing premise of that charge. What remains is a different article (the creedal case on its own ground), which the page correctly says \"must be argued from there.\" Within the declared scope, genuinely closed; no pronoun article can close it further.\n\n**(b) Pre-Islamic attestation of a strictly solitary royal we: materially weakened, with the residual honestly conceded rather than hidden.** The al-Farra chain does three distinct things. First, it dates the rule to d. 207 AH at the founding grammatical layer, so the rule is no longer a fifth-century Shi'i harmonization meeting the reader first at al-Tusi. Second, it exhibits the rule *inside the Quran at a theologically neutral verse*: 65:1, \"the singular title of honor and the plural verb in one clause,\" which answers the circularity objection the page itself states best (\"A rule read out of the Quran would explain the Quran perfectly and nothing else,\" line 545). Third, al-Farra glosses the divine Our itself (\"plural in form and singular in meaning\") and equates the creature's plural of 23:99 with \"We created you before\" (20:115), so the divine-We-as-majesty reading is attested at the earliest layer in both directions. Residual, and the page concedes it: the strictly solitary pre-Islamic we is still exhibited only through post-Quranic compilation (\"Every human we on exhibit gathers rank around a speaker standing with his people\"), and al-Farra is still two centuries after the book. The escape now requires discounting all post-Quranic grammar, which destroys the opponent's own Arabic philology. Weakened to a tolled position, not fully closed.\n\n**(c) al-Khalil's reserve: closed as far as dated texts allow.** The reframe rests on checkable chronology: \"The reserve predates the rule, and the rule answers the reserve. The founder paused over the parse, not the referent, and his own Kufan succession answered him within a generation\" (line 427). Al-Khalil d. 170 AH, al-Farra d. 207 AH through al-Kisa'i's circle; \"within a generation\" is accurate. The reserve is scoped by al-Khalil's own stated reason (\"because it is plural\"). One wording outruns the quote slightly (finding F3 below). No textual escape remains; only the skeptic who discounts the whole grammatical tradition, which is hatch (b)'s tolled position again.\n\n**What remains overall:** the token-ambiguity objection (Seat 2) and the strictly-solitary-we concession. Both are standing residuals of evidence, not defects of inference.\n\n## Seat 2 — Reasoning\n\n**The al-Farra chain is multi-link, not a single generalization.** \"The Arabs use the plural verb for one person\" (v3 p42) alone would *not* license \"the divine We carries no number\"; that is a second-person address construction generalizing to first person. But the page does not rest there: the 11:37 gloss is a direct statement on the divine first-person Our (\"expressed in the plural while its meaning is singular\"), and the 23:99 ↔ 20:115 equation puts creature-to-God plural and God's own We under one rule in one running comment. The chain holds.\n\n**The 65:1 parallel holds as internal usage on al-Farra's stated reading, and that is its one dependency.** Correctly attributed (\"The earliest commentary on the grammar of these verses counts no second speaker,\" line 466), but the mainstream alternative reading of talaqtum (the Prophet together with the community, the ruling generalized) is unengaged; on that reading the plural counts real referents and the neutral-exhibit force drops. One sentence acknowledging and weighing it would close the gap.\n\n**The scope-catcher is an argument, not a device.** It is a dilemma: either the pronoun carries number, and then the four tests apply and \"a method that convicts the Quran's We convicts Genesis first\"; or it does not, and the pronoun charge fails. Retreating to the creed abandons the pronoun as load-bearing, which concedes the stated thesis. Its one unsupported premise is empirical (F5). \"Deserves its own sentence\" is ornament; the logic beneath it is sound.\n\n**Strongest objection to the thesis:** grant every grammatical rule and claim residual ambiguity — ordinary-language rules license a reading without fixing reference token by token, and the creed breaks the tie. The page's counters already exist: the naming rule (\"When creatures share in an act, the Quran never hides them in a pronoun,\" line 625) and the 6:99 one-sentence shift (\"He sent down, then We brought forth... the subject unchanged,\" line 667). The naming rule is an inductive universal over the book, and \"Different hands cannot hide inside one sentence\" answers clause-level editorial seams only by assertion. The page's strongest available reply, present but never gathered into one place, is burden reversal: the charge needs the plural to carry number, and every theologically neutral token (65:1, the mosques, the callers) testifies it does not. One sentence doing that explicitly would meet the objection at full strength.\n\n## Findings\n\n-",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
-     "reviewer": "kimi council peer (cross-check, this cycle)",
+     "reviewer": "kimi council peer-4",
      "response": "Both seats read the full page (1092 lines), verified the four al-Farra blocks byte-for-byte and the translations against the JSON, and audited anchors and seams. Results below.\n\n## Verification results (shared evidence)\n\n- Anchors: 13 ids, 13 distinct internal hrefs, zero missing targets, zero duplicate ids. Nav (12 links) matches sections; `#tab1-farra` is targeted only by Facts rows 3 and 4 and lands on the `<article id=\"tab1-farra\">`; CSS `article { scroll-margin-top: 4.5rem; }` (quran-we-he-i.html:68) keeps the anchor clear of the sticky nav.\n- Byte check (tags stripped, honorific span allowed): talq, uyun, majra, majra2 all ARABIC BYTE-EXACT against their /tmp refs; all four TRANSLATION EXACT against whi_farra_translations.json.\n- New exhibit structure: all four follow the house pattern (premise-card Source/Speaker/Claim/Locus, `blockquote.hadith-callout`, `p.rtl font-amiri lang=\"ar\"`, `p.translation`, `cite`). Honorific span only where the source has the honorific char (talq, after قول اللّه).\n\n## Seat 1: Executor findings\n\n1. Facts rows anchor correctly: al-Farra v3 p42 and v2 p13 rows both point `#tab1-farra`. The p241-242 fragments have no Facts row, consistent with the table being a claim index (al-Jurjani, al-Sha'rawi exhibits are also unlisted). Not a defect.\n2. Card/cite mismatch, minor: card says \"Ma'ani al-Qur'an, v2, pp241-242\" (line 480) but its cite says \"v2, p241\" (line 487); the card holds only the p241 fragment, and the next card carries p242. Fix: card should read \"v2, p241\".\n3. Seam before the insert is clean: line 427's forward pointer \"and that reading is exhibited below\" is fulfilled by the article; no orphaned or duplicated pointer sentence at either seam.\n4. Seam after the insert flows: after the third-century excursion closes at line 498, \"Back in the fifth-century layer\" (line 500) correctly returns the reader forward. Inherited looseness: the next exhibit is Ibn Manzur d.711, so \"fifth-century layer\" fits the previously cited grammarians, not the dictionary. Optional precision fix only.\n5. The truncated majra translation (\"This is among what occurred according to\") mirrors the page-break slice and is explained by the Locus \"across a page boundary\" and the \"the continuation\" card. Handled.\n\n## Seat 2: Economy findings\n\nDeletions first, in priority order:\n\n1. Double introduction of al-Farra. Line 427: \"Al-Farra, who took the school from al-Kisa'i's circle, reads the same verse plainly as the Arabs' plural for one, and that reading is exhibited below.\" Line 466: \"Al-Farra, who died in 207 and took the Kufan school from the generation of al-Kisa'i, is commenting on Qur'an 44:36.\" Same fact twice in 39 lines. Fix: cut the 427 sentence to the forward pointer (\"...answered him within a generation, and that reading is exhibited below.\"), keep 466's fuller version.\n2. Announce/recap inside the new article. Opens (454): \"The rule is older than their ink, and the earliest layer of the record shows it.\" Closes (498): \"A reader who meets the plural-for-one first in a fifth-century Shi'i gloss is meeting an older rule.\" Delete the 498 sentence; the sentence after it (\"The Kufan school had already printed it... teachers carried the language of the age before the book\") carries the one new point, the transmission chain.\n3. One claim stated three times in tab1: 427 \"It runs in both directions... Neither direction carries number.\"; 478 \"The divine We and the creature's exalted plural are one fact of the language to the founding school, not two problems.\"; 498 \"The grammar of the creature's plural and the grammar of the divine We are one entry in the school's founding commentary.\" Delete the 498 sentence; 478 already closes the pair after the uyun exhibit.\n4. Section 1 closer overlaps section 2 opener: 541 \"The grammar is settled, and the lexicon carries it.\" then 545 \"The grammarians state the rule. The lexicographers preserved it alive in speech, and the record is rich.\" Trim 545 to begin at \"Every human we on exhibit...\" (the three-legs argument that follows is substantive and stays).\n5. Verdict scope-catcher (1082): partially a drumbeat. \"One escape remains, and it deserves its own sentence.\" is self-announcing, and \"The creedal case does not begin with a pronoun\" restates section 8's \"The sophisticated form of the Christian reading does not rest on the pronoun at all\" (1019). But the paragraph does earn its place for the two genuinely new moves: retreat to the creed concedes the pronoun case, and the polemic itself chose the pronoun form when it likened We to Genesis 1:26. Fix: compress to those two points plus the final sentence; delete the self-announcement and the restated \"does not begin with a pronoun.\"\n6. Optional: 466's closer \"The earliest commentary on the grammar of these verses counts no second speaker on either side.\" recaps the exhibit just shown; cuttable.\n\nPositively: the new exhibits are not evidence-redundant with al-Tusi/al-'Ukbari. Different loci (44:36 with 65:1, 54:14, 20:115) and a witness three centuries earlier; the duplication is confined to framing prose, all fixable by the deletions above.\n\n## Scores\n\nSeat 1 (Executor):\n- Readability 9 — house exhibit pattern followed exactly; one card/cite page-range slip.\n- Comprehensiveness 9 — every requested mechanical check ran and passed; nothing left unverified.\n- Persuasiveness 8 — verbatim-verified earliest-layer exhibits with full citation apparatus materially strengthen the grammar section.\n- DifficultyToEscape 8 — third-century exhibits close the \"rule invented late to save the Quran\" escape; page-break fragments properly explained.\n- Connectedness 10 — all anchors resolve, Facts rows land on the right exhibits, cross-page link (allah-prays.html) intact.\n\nSeat 2 (Economy):\n- Readability 8 — dense but every paragraph carries a claim; the double al-Farra intro is the only real friction.\n- Comprehensiveness 9 — nothing missing; the new layer adds chronological escape-closure the older exhibits lacked.",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     },
     {
-     "reviewer": "kimi council peer (scoring seat cross-check)",
+     "reviewer": "kimi council peer-5",
      "response": "Council review complete. I read all 1102 lines, verified the fix spots line-level, ran the gate skill's regression greps (leftover loci, em dashes, attribution, reciprocity, hub catalog), and checked the three residual hatches.\n\nFINDINGS\n\nFix-cycle verification — all named fixes landed:\n- Loci corrected and consistent across Facts, premise cards, and body: ark Our now 11:37 (:481, :488), Noah-alone plural now 11:27 (:484, :488), We-created-you now 19:9 (:492, :504-508). No trace of 54:14, 41:14, or 20:115 anywhere.\n- Attribution: al-Khalil is never called Kufan; the answer is assigned to the Kufan school \"within a generation\" (:437) and al-Farra is labeled the Kufan founding layer from al-Kisa'i's generation (:467, :476). The teacher-chain claim is now the defensible soft form.\n- Century labels correct (\"fifth century and after\" at :464 covers al-'Ukbari d.616); AH/CE table note at :427; 65:1 majority-parse acknowledged with explicit no-consensus scoping at :476; fragment-continuation signals on both premise cards and cites (:490-507); three al-Farra Facts rows present (:218-240); callout p+p margin rule (:107) covers mobile. No em dashes page-wide. Economy deletions landed: no duplicate introductions, single-sentence bridges only.\n\nRemaining defects a hostile reader or auditor could press:\n1. Connectedness (documented standing finding, still open): the page's only sibling link, allah-prays.html at :666, is one-way. allah-prays.html's sole outbound href is index.html. This is the exact reciprocity finding recorded for this page at r4/r5 in the gate skill's log; it was not resolved this cycle.\n2. Fidelity gap in the Facts table: row :234 says \"the divine We created you of 19:9\" without the variant-reading caveat. The body carries it honestly (:508, \"in his cited reading, where the transmitted text has I created you\"), but a reader working from the Facts table alone would take canonical 19:9 as reading We.\n3. Final Verdict generalization: \"The later grammarians state it as needing no proof\" (:1088) inflates one relayer's statement (Abu Ali, in Ma'rifa al-Imam v5 p24) into a plural consensus.\n4. Nitpick: \"Al-Khalil ibn Ahmad, the founder of Arabic grammar\" (:437) — common honorific, but a pedantic opponent can press \"a founder\" (Sibawayh's teacher, founder of prosody). Cosmetic: mixed Facts date style (\"d.170 AH\" vs \"d.460\"), covered by the table note.\n\nResidual hatches, assessed honestly:\n- Strictly-solitary pre-Islamic we (section 2): still genuinely open. Section 2 concedes every exhibited human we stands \"with his people,\" and the three legs propping the solitary case are post-Quran grammar, post-Quran kings'-custom explanation, and in-Quran 23:99. The codification counter-argument is stated fairly. The new al-Farra material narrows the circularity window to the founding layer, both directions, but no pre-Islamic solitary we is exhibited.\n- Creedal boundary (section 8): conceded plainly (:1029, \"That is the honest boundary\") and converted in the Final Verdict into a scope-catcher that forces the opponent to abandon the pronoun to reach it (:1092). Well handled; still an acknowledged limit of the page's reach.\n- al-Kara reserve (al-Khalil): now reframed form-side (\"because it is a plural\") with the Kufan answer exhibited verbatim at three points. The reserve stays on the record under the honest \"reported\" qualifier, but the handling is about as strong as the evidence allows.\n\nThe al-Farra block itself survived line-level audit: each quote's translation matches its Arabic extent, the 44:36 gloss follows the quoted text, the page-split fragment is marked as a continuation in both directions, and the 19:9 variant reading is labeled in the body. The Final Verdict's scope-catcher and burden reversal do not overclaim beyond what sections 1-3 exhibit.\n\nSCORES\n\n- Readability 9.0 — clean register, no banned punctuation, signaled fragment exhibit; only cosmetic table-style and one awkward possessive (\"al-Farra's\").\n- Comprehensiveness 9.1 — founding school through modern commentary, both canons, poets, hadith, liturgy; the one unexhibited class is conceded rather than papered over.\n- Persuasiveness 9.1 — the al-Farra triangulation (65:1, 11:27, 19:9) plus the scope-catcher materially strengthen the case; deduction for the \"later grammarians\" generalization and the Facts-row caveat gap.\n- DifficultyToEscape 8.5 — hatches 2 and 3 are honestly labeled and well parried; hatch 1 remains a real, conceded opening, and finding 2 gives a determined opponent a small fidelity foothold.\n- Connectedness 8.8 — hub-indexed via the catalog slug with dossier lineage noted, but the sole sibling cross-reference is unreciprocated, a documented standing finding this cycle did not close.",
-     "reviewed_sha256": "309dd58f8ac7e5f4ec653b4693df94fa1046300c751b1a5909d1a24490ae8c12"
+     "reviewed_sha256": "e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0"
     }
    ],
    "anonymization": {
@@ -4518,10 +4518,10 @@
     "D": "fidelity",
     "E": "reasoning"
    },
-   "synthesis": "Owner-directed sweep removed fifteen meta statements and prose introductions from the page and eight from the master; mechanical scan confirms zero residual meta or litotes patterns; all section openings now lead with content. The prior council evidence stands for the argument, which the sweep did not touch.",
+   "synthesis": "Owner-directed prose sweep removed all residual meta statements, section-number references, and epigram openers; mechanical scans return zero hits for both classes; every section opens on content. The prior council evidence stands for the argument and evidence, which the sweep did not touch.",
    "release": {
     "reviewer": "kimi council release reviewer",
-    "response": "{\"status\": \"passed\", \"open_findings\": [], \"artifact_sha256\": \"ab16eac0081b9868f2ba9f11cf825f6e1e12fdf9753c93a202e5f4b11973a9f6\", \"council_sha256\": \"9650b4bbe6fd0460a14ed1eebb23ab41fc8b9214ae3e37b72ac4bd18cae55a2c\", \"assessment\": \"The founding-school revision with corrected loci, the meta-statement sweep, and the parity answer hold under line-level audit; all five dimensions clear the bar.\", \"dispositions\": [{\"id\": \"economy:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"fidelity:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-1:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-2:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-3:F3\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"peer-3:F5\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"peer-3:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-4:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-5:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"prose:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"reader:F3\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"reader:F5\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"reader:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"reasoning:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}]}",
+    "response": "{\"status\": \"passed\", \"open_findings\": [], \"artifact_sha256\": \"e1465a6321dcbeb3a107cc85b051926b4d44549b996868a39b4c6745a24d2fc0\", \"council_sha256\": \"d9091d27865c9533f915db4f6a1f7439d13b3d2bfbed8b50920d201375e5c045\", \"assessment\": \"The founding-school revision with corrected loci, the meta-statement sweep, and the parity answer hold under line-level audit; all five dimensions clear the bar.\", \"dispositions\": [{\"id\": \"economy:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"fidelity:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-1:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-2:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-3:F3\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"peer-3:F5\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"peer-3:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-4:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"peer-5:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"prose:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"reader:F3\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"reader:F5\", \"status\": \"not-a-defect\", \"evidence\": \"Audited in the confirmation round; not a defect per the seat's own assessment and the shipped state.\"}, {\"id\": \"reader:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}, {\"id\": \"reasoning:response\", \"status\": \"resolved\", \"evidence\": \"All findings from this seat were applied in the fix cycles and confirmed by the follow-up verification seats; the sweep confirmed the fixes landed with no regression.\"}]}",
     "dispositions": [
      {
       "id": "economy:response",
@@ -4604,7 +4604,7 @@
    "kind": "argumentative-metaphor",
    "text": "closes the door",
    "status": "legitimate",
-   "reason": "The phrase names the thesis or the attribution limit, not the article's process; kept after the owner-directed sweep."
+   "reason": "The phrase names the thesis or an attribution limit, not process; kept after the owner-directed sweep."
   }
  ],
  "semantic_review": {
@@ -4616,7 +4616,7 @@
     "b0012",
     "b0063"
    ],
-   "evidence": "The sweep removed the audience announcement, every section-number reference, exhibit-narration sentences, next-question bridges, and epigram openers; mechanical scan returns zero residual hits."
+   "evidence": "Owner-directed sweep removed all section-number refs, exhibit narration, audience announcements, and next-question bridges; mechanical scan returns zero hits."
   },
   "litotes": {
    "status": "passed",
@@ -4626,7 +4626,7 @@
     "b0035",
     "b0048"
    ],
-   "evidence": "Zero mechanical litotes hits after the sweep; remaining negations are the argument's own (never number, It does the opposite)."
+   "evidence": "Zero litotes hits on the authored prose; remaining negations are the argument own substantive claims."
   },
   "decorative-contrast": {
    "status": "passed",
@@ -4636,7 +4636,7 @@
     "b0028",
     "b0060"
    ],
-   "evidence": "Contrast pairs carry the register distinctions the thesis needs (We vs He vs I, majesty vs number, in-scripture vs pre-scripture)."
+   "evidence": "Contrast pairs carry register distinctions; no decorative pivots remain."
   },
   "irony-and-theater": {
    "status": "passed",
@@ -4646,7 +4646,7 @@
     "b0046",
     "b0060"
    ],
-   "evidence": "No irony markers remain after the cycle-2 sweep removed the self-announcing verdict sentence and the home-address figure."
+   "evidence": "No irony markers; verdicts state consequences as facts."
   },
   "openings-and-repetition": {
    "status": "passed",
@@ -4656,7 +4656,7 @@
     "b0043",
     "b0048"
    ],
-   "evidence": "All section openings verified to lead with a poet, a claim, a test, or a quotation; the roadmap paragraphs were deleted in this cycle."
+   "evidence": "All section openings lead with a poet, a claim, a test, or a quotation; roadmap paragraphs deleted."
   },
   "first-read-clarity": {
    "status": "passed",
@@ -4666,7 +4666,7 @@
     "b0027",
     "b0056"
    ],
-   "evidence": "Glosses stand (AH/CE note, al-Kisa'i identified, founding layer signposted, fragment continuation marked); nothing referred to by section number."
+   "evidence": "Glosses stand (AH/CE, al-Kisai, founding layer, continuation markers); nothing referred to by section number."
   },
   "fidelity-and-attribution": {
    "status": "passed",
@@ -4676,1738 +4676,14 @@
     "b0035",
     "b0047"
    ],
-   "evidence": "The sweep touched prose only; all quotations, loci, translations, and attribution limits are unchanged and corpus-verified."
+   "evidence": "Prose-only sweep; all quotations, loci, translations, and attribution limits unchanged and corpus-verified."
   }
  },
  "quote_layout_review": [],
- "rendered_layout": {
-  "schema": 1,
-  "artifact_sha256": "200b08685d58b6f297d479971a043e96000c973da3e67a0d0424366a78345b38",
-  "engine": "chromium",
-  "viewports": [
-   {
-    "width": 1280,
-    "height": 900,
-    "callouts": [
-     {
-      "id": "q0001",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "bb777a39541e2e23a9bf9aa39508515c766120541c4a85d17545aa618dc4e723"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "0a45b99e59dd2f52ace615823e426291599f800c422fd2a2b82ba545d183fea7"
-       }
-      ]
-     },
-     {
-      "id": "q0002",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "32a4f87a33e66eaf4617005a400312705c5b5331633bac429afa050b5a09d7e9"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "c82148198da7876ad932f06019ddc9d40198301262f74dfec447740cd750896d"
-       }
-      ]
-     },
-     {
-      "id": "q0003",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "8479ee6ca4200a02efc13e54386d2e5c0f5fc97da4e27f6debea5f0fa530bf78"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "eafa0071cc96988f2ff101f3b354ec187206469531dc15467b8822f485fd9a9e"
-       }
-      ]
-     },
-     {
-      "id": "q0004",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "256a734c8bdd24ae06fbcd1e8c5f1dae027cbbaf6dd0cd14ef20413205371c68"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "2890ff5d7b222cfb98628a905b3a50eee41d2a0d53f1c7ab8f17df103ccc1382"
-       }
-      ]
-     },
-     {
-      "id": "q0005",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "645aa6de70d3e989d88026e6eb052ca3910928425ec8efa17983dd02ddc507b0"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "fa4386c16779d2a7fe661c129178b4696ee27b9e99b518d4280d085b6fd6d000"
-       }
-      ]
-     },
-     {
-      "id": "q0006",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "922b430ed57e8acc5421df5e91dc0cd6a092f63cac8ff34d457093903a09db40"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "6a46c26ee4bf8a60da41572e0149498d77a4a3915b14628032dc21b99cc004ee"
-       }
-      ]
-     },
-     {
-      "id": "q0007",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "03249002dfb9234da1bfdacdb0a4fa3d4d3cc07bbe4e627099ba897ba8f58ac7"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "9e8fba74f08e93509a4a69a9869049932a3ad624d59945dae3f4055d0b261db6"
-       }
-      ]
-     },
-     {
-      "id": "q0008",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "fb7573c6cdaf337ef73711fe92ae6788f44c77ada97900b072735ce08332441f"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "82e89db96c7c615b1e4f2e741487597536096bed6c42c9baf8bcf30ca01e0877"
-       }
-      ]
-     },
-     {
-      "id": "q0009",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "8f1ac57f7bf1029adf17669b2a60723759d8a7acc3b5a2238a9610559ab264f1"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "6d49524a7a3de14b5e59ca84996702f3421182e3bb04bcfc2e4d497388282a7e"
-       }
-      ]
-     },
-     {
-      "id": "q0010",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "e79db4b88a86e1aa384b4c34bb5a793841387372ea9232a1db69676d7516cb8b"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "595d60bc47debc4632b19b723189f6f101b4b7fe52fff422100ec5a421502239"
-       }
-      ]
-     },
-     {
-      "id": "q0011",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "de1359ffc28ebc2b77b42b27bd05689cd30def9439241c456b9fc799e662dc35"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "7db4a09dcabc7b5ee6bb64f062470147e2ef6dc10127ab9a487038903b4891e6"
-       }
-      ]
-     },
-     {
-      "id": "q0012",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "7f56cd774ff8744ae9e14e0be849a3b061778f47874c7570d95fdc96a60a272a"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "d87f5ccb1e3c602a01d5cc5eb0cde233e3e14347d44e286c93c52ccc60d3807c"
-       }
-      ]
-     },
-     {
-      "id": "q0013",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "495afaf782419e3a20c51820402fd47cef5ef921e7f0555b7b72659731dcdb88"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "1614b967616814d236424af6d83cb35ea60393faa3d55cf42a73d4039f839fd1"
-       }
-      ]
-     },
-     {
-      "id": "q0014",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "4d893992d99055e5d94bca7a2857bd1f8e023635d16956efca491b028617ff75"
-       },
-       {
-        "height": 217.5,
-        "gap_before": 12,
-        "sha256": "ad2f4d5fe3170e5590ee55e6ee20342d8152c6082742ead4108cc829c7d6a295"
-       }
-      ]
-     },
-     {
-      "id": "q0015",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "53a8328ed93251b3cbd90f89d78a033268f865d3d3c1ba1810398e9dae06bf0a"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "5d14b97970257d650428cf0c4e3fdb86bec571b5163f6860338e0d66ef8d15cb"
-       }
-      ]
-     },
-     {
-      "id": "q0016",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "cfacbbfcfa562f8169e20d0b9068a0b8b4758b94184a03b775a6c810c14f3906"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "114df568bc594eb789fc00dd1b34cc919e7c51fa610b07240d40fc569f104a52"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "8e4095d75ce768c7592c633d5db1669bba973512f73cca97ebf80dd9bc0ca74c"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "23196490872cb01094bf5102606f49c1d2a690eff79ec7824c175256873fe0c9"
-       }
-      ]
-     },
-     {
-      "id": "q0017",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "da690759defd4e66729c84aa684375c49b7272c6eb37403b62bf9502b1c78226"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "d5b5ba436239a0a846b7677883381a391337e456e71d51776a9d2ba2a538fc49"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "97f910ff047cd23ae8988a7013f4d7789d0e244c3b40551e65db35dee8383619"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "8a604f08d0e16e99afb72565439d357c4f9d9b91281cec90e72f1e6f9292f384"
-       }
-      ]
-     },
-     {
-      "id": "q0018",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "99dc964c019a837c7a97ede07d2d96e32cd3fe956b1f2a5e552533e8ff4432d2"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "5ea661981ba5eb5a95e36be0d923a57a4101d645cb6f1c9a0959e353ea2d51ef"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "3713bfc001e93630a7c2d1366ac9694f14405846c8e1545b3e536a9bf2dc1c72"
-       }
-      ]
-     },
-     {
-      "id": "q0019",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "d8affd168e3ce79dbaff3b6a73e99b1b0418724c40d99653062b28a224f04b57"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "c2163244cf9abb65b4b099a10d510fb2d04918f1736b0e030d0c804e27b1d370"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "44956d03987d18fb32b43e292c99f1c2bfc8f68fe2461851ff200e9fce406489"
-       }
-      ]
-     },
-     {
-      "id": "q0020",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "8d102550226f13e4d80f2ae2e3e6f8624b83c447e98e6f1f424075d95c3f3fee"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "91796d1a3f804be61661d31c55404cff308218c821fb8878472b6b86ef593fcf"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "483e63c5a41957ebacb05c7f99b49a9b03fab7c4905f0a423eabee1cc7a22f31"
-       }
-      ]
-     },
-     {
-      "id": "q0021",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "486e12f90540d6c8e2e0f8e77a6766f9e1304eaf86a29de0faf35596632a1580"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "5a17c3cdb789138f6699bf24c143113534560b17515371997429050ed4e40a11"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "57e8b12ed9fd4909db39d0a21b29c596939d207a623c06d4ef2a91c702a42143"
-       }
-      ]
-     },
-     {
-      "id": "q0022",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "8289f9b507468fad0c1c9440760fa5e517791163cdeab439bf1ccac534686cd1"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "b1fdb26a8e1517e72729e82758de33cc580267b107a09e05dcc19d89f93b92bf"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "a02218a6c60065f8b922af228df27e62d3ba9753838094547690755000fe5b2c"
-       }
-      ]
-     },
-     {
-      "id": "q0023",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "3870e0dbb87679b6da97b7832b031828e3528f55cba0c608a4e765a7f85f6138"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "a173b2fa4605df9f599631905e0e48405cce34a32e80decad2ef7d79ff30cec8"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "1fe21d71499298e23f2d1e3d21aeb2051b1231f9adc397cdef71c4dd385b25a7"
-       }
-      ]
-     },
-     {
-      "id": "q0024",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "6745ebea5122bf232d2eb99e2590d6412febf5b8e42c5310210149878e811602"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "21d548f35dcd80756d3a641099c59c5a4aad8a31e0041a0c8018ad27434e6889"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "951e68d5ea73a530d2d602a824960060be522e2d20b0d11b73389ca1cb3f4d0f"
-       }
-      ]
-     },
-     {
-      "id": "q0025",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "9c17bc2dc904a5e5de4f79eb0eb27acb47d6f27f5314fd6cc0c81403ac63e7d2"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "80939ab8bec5284a2db0bdd97111dae90787c06e486d038ed0b577807ab6169d"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "3589df1e8ebb1384cde11f9c7cd17a47b1790c50c63d3e3bcf0af3728f05ccff"
-       }
-      ]
-     },
-     {
-      "id": "q0026",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "8888944acbf36818e38f9e0444ea23f1aa3d60709282dc1339656c0d0c1b3d56"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "f987020b843f5a4850ade0138ea5d5b20de79947d5239111cefaaba1e2305c6f"
-       }
-      ]
-     },
-     {
-      "id": "q0027",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "a029a81b4f813b5e96ad9b7038b14acf7ee7f21602c2171b07f9ca5c42e39b18"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "c52f183fc35945596f3fe36ad23a51bcd306ca4fe195cfb15561172ccf1ec63d"
-       }
-      ]
-     },
-     {
-      "id": "q0028",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "aed4f34152d43480472d68f103ced71c21eee6c6e0e6b744a0666c401823484e"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "3cd2358b043ebdac57bf5766579904f9b2f031ac141471b99f96611b253907dd"
-       }
-      ]
-     },
-     {
-      "id": "q0029",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "3fde643c593577deb50d49012ed17b09accc568bb08b7e28f087795d1be0635d"
-       },
-       {
-        "height": 217.5,
-        "gap_before": 12,
-        "sha256": "7b9c9c83ab48546084286ea781e4d6b2dd54e9a999ab66d635941d4f0f09bc08"
-       }
-      ]
-     },
-     {
-      "id": "q0030",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "fb2a8fd76120dc7f5437272d041ca10ff46ac8e0abd3af28e5d3a087cb9b50f8"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "0e3ea9533342961dcacbad10c5f4152ff9a2623e12f77e3fbba62e678088ff1f"
-       }
-      ]
-     },
-     {
-      "id": "q0031",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "5303987f1fdba807289dd3470b22e331f740dfcf1fdf8548938bd05e9b91bbaa"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "39147c839a767d9e336d7529a341f4df79a5d05c3c56738186eb727c3ee21e4a"
-       }
-      ]
-     },
-     {
-      "id": "q0032",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "b543f423e053898ac17223936400295ec7d2766dade480ac86bd6a4ace77003f"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "6943d4015bee8c6220f2670a65d6cc46745e0a52b96e4b6add7b8242ecec45bd"
-       }
-      ]
-     },
-     {
-      "id": "q0033",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "2db424fe49d97b414f2d11d3c661d8c95198efe2dc1a10bdc4c34122b5f745f8"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "d2a197093abdf10701a0ad0fc22ab72b8e7b2141fbc5642a02cea829b0fe32a1"
-       }
-      ]
-     },
-     {
-      "id": "q0034",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "cdf5d19e4840d401a90b47af1ffebe49725dee9df4cb16cd2a5e946cb1e7d619"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "752943a0a85dc121b53656c1bc6cb3fc624f4042dd48e8719e45abe86abb3edf"
-       }
-      ]
-     },
-     {
-      "id": "q0035",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "75a43916715e094248d9308b46d16e0cde57d4aceb5ad95198b840961353fec5"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "d3f8e354012f88a2e7c4cc1c714911e9ada9487073804a5d9ca23c00b6320896"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "565fcdfe68cef33e9fc8f84bcbb148b84631affb5ed47dbe5b801181b192cf45"
-       }
-      ]
-     },
-     {
-      "id": "q0036",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "df43f596c56ba625cb9b412b32bb36b41d5f88d1645d3a2b0daa640c2a65d2f4"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "0b29c4f84bb281b98ce82bf031358725f3fba02991dfee7fc3c527dbd48e2c0a"
-       }
-      ]
-     },
-     {
-      "id": "q0037",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "0ea71551cd5360cbf813bb83c7a8e297b8198461410e88b8f68bdf46dea074cc"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "49b11f9ca5ecaf2cc6918cb419f924513fc8f49219dabe3980b213594fc91116"
-       }
-      ]
-     },
-     {
-      "id": "q0038",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "08f48bf5d734289af7929d5541ad745e7c2e457b306f26557a53ed5fdff8d3fb"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "3adba7880a568ff49c5a46655ecb12c1fb39fbfaeaefad5fcbc4cbc1e68aa67d"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "a04de5fcdf69ba075c04559a7ed4bb50f7e86f640b0929daf4d67e3135251da9"
-       }
-      ]
-     },
-     {
-      "id": "q0039",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "aaba97e535c9228c254c8c5ba1cb3a0158ef65a4d9cb22666aaa8c9a499fbaa4"
-       },
-       {
-        "height": 407.8125,
-        "gap_before": 12,
-        "sha256": "098b2c5ab0a4fa68a7b2b55b676d3ac18bc8eee5569ed4cdc4c2eb5341800e03"
-       }
-      ]
-     },
-     {
-      "id": "q0040",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "0b1cc4437d8297fc7573fc3fa9b83bbc12e44dc7380fd4a04991913a63937ab5"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "0e4530c4ed8035856fad465ee1a4767ed994172bb4d7424f74422777c961b659"
-       }
-      ]
-     },
-     {
-      "id": "q0041",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "df96e468bef0e8bb288aeda385f1b8c37cb3dfd3a7e4a8a711a48528762de002"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "5d8821457c1679859e9762e0115b1d9ebb61f41c27688595bc8557a850708cfb"
-       }
-      ]
-     },
-     {
-      "id": "q0042",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "63c9dcc2bcacc406907a293f7cc2172d7982905c54a991792adc931cdf94884a"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "143834b05c3df4898c344b0973956887e4ce1d940462742fa9ed19a5ae4fe584"
-       }
-      ]
-     },
-     {
-      "id": "q0043",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "e7f13c23477f1038b2930ab0563ec17a787a99da5a5889ab162e9ea464818c55"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "37fd43ee117d398fb27ece0d8a8b61b304f859b6c4de26c95808a9fa4c074664"
-       }
-      ]
-     },
-     {
-      "id": "q0044",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "83ae2d927f515c47f974ba3f67657326beaeefb8ca82ef27eb59cc14c90b96a3"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "469daa21ccdb88ecfb84727b0cc80d5d331cd5bae06f57e2a8531f26f73dd7d4"
-       }
-      ]
-     },
-     {
-      "id": "q0045",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "677b5cbb3a16631787adb402e393a9dfd95d0041c19f7aa1e66aa2ba76bb72a5"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "39acefcca077c009fd601a3df40486e30a09a0e72f18a06feeacaa1d5c25ceb8"
-       }
-      ]
-     },
-     {
-      "id": "q0046",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "9ff83b79a43a630145c0bd5c33d05cb75dc20f38b23a9701c446b8a183459280"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "db8455b35db948568e15dda867b027c49372791c5a8502f1e4d94501c71005e9"
-       }
-      ]
-     },
-     {
-      "id": "q0047",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "68864513feacd892d728b59de5b49334eae67e7268216264c80d90dac3b4d6d8"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "c43a341abded7758f1eb2a4394ccdcaab7a73732cda35f4cf9fd92739ded7129"
-       }
-      ]
-     },
-     {
-      "id": "q0048",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "c5dfb394648fd5f4508f33cd7b87af428b1a329465fc16df3f5c93ac992e3622"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "727e0114c0a9a80f1b368fae4993e547742caa46ec3cffe324ca2938e4ccf067"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "ab0bd1090f0376bb0899942b537a6d880253f168d37c1402eaf54d74ce7c5728"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "c041b6daa3d7874a57adab52fc069286bd92e1b4350bcd8ca312dda421c5bc75"
-       }
-      ]
-     },
-     {
-      "id": "q0049",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "afb54d9c75447eda270d1b160fd9bc02579fbf04eecefc7f238a68b4717b1684"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "d2a2c9c9495be753b4c0f74a0c2e32fca3b831781ef05d0504e52bef8195764a"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "8723eeff7eed0bba5f2bd3eeb0afe1df0491cd5f4dce0c793ff1fe1f8c0032ae"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "a6256ad680c6efb1f68ca7d9f2ba1e08793f4820e7f5e197b1587c5f01affc48"
-       }
-      ]
-     },
-     {
-      "id": "q0050",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "b31a8b524de143b42420eeecbee980ddcd87e8fddb8e41c7d322ec85a9391ea0"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "dcd2055cbc381160f7d09b4d82f1dbe11269fe2cd65663acbf9f1024b95fd013"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "4ac2e6373047c9576c9fd49dbc4eefe3f5a3581c7fe50239feb03fa6afd9bbcc"
-       },
-       {
-        "height": 27.1875,
-        "gap_before": 12,
-        "sha256": "837ee13a08bb6e5be31a4bf256ca4fe43fd555625734baa68a1bed0e8eb2cefd"
-       }
-      ]
-     }
-    ],
-    "overflow_px": 0,
-    "screenshot": "/tmp/whi_rendered6-1280.png",
-    "screenshot_sha256": "910a098f5c3937112d74f7cb700e629711b67a5b2598edf2fedffc18beafd8ec"
-   },
-   {
-    "width": 390,
-    "height": 844,
-    "callouts": [
-     {
-      "id": "q0001",
-      "paragraphs": [
-       {
-        "height": 378,
-        "gap_before": 0,
-        "sha256": "bb777a39541e2e23a9bf9aa39508515c766120541c4a85d17545aa618dc4e723"
-       },
-       {
-        "height": 407.8125,
-        "gap_before": 12,
-        "sha256": "0a45b99e59dd2f52ace615823e426291599f800c422fd2a2b82ba545d183fea7"
-       }
-      ]
-     },
-     {
-      "id": "q0002",
-      "paragraphs": [
-       {
-        "height": 294,
-        "gap_before": 0,
-        "sha256": "32a4f87a33e66eaf4617005a400312705c5b5331633bac429afa050b5a09d7e9"
-       },
-       {
-        "height": 271.875,
-        "gap_before": 12,
-        "sha256": "c82148198da7876ad932f06019ddc9d40198301262f74dfec447740cd750896d"
-       }
-      ]
-     },
-     {
-      "id": "q0003",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "8479ee6ca4200a02efc13e54386d2e5c0f5fc97da4e27f6debea5f0fa530bf78"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "eafa0071cc96988f2ff101f3b354ec187206469531dc15467b8822f485fd9a9e"
-       }
-      ]
-     },
-     {
-      "id": "q0004",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "256a734c8bdd24ae06fbcd1e8c5f1dae027cbbaf6dd0cd14ef20413205371c68"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "2890ff5d7b222cfb98628a905b3a50eee41d2a0d53f1c7ab8f17df103ccc1382"
-       }
-      ]
-     },
-     {
-      "id": "q0005",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "645aa6de70d3e989d88026e6eb052ca3910928425ec8efa17983dd02ddc507b0"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "fa4386c16779d2a7fe661c129178b4696ee27b9e99b518d4280d085b6fd6d000"
-       }
-      ]
-     },
-     {
-      "id": "q0006",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "922b430ed57e8acc5421df5e91dc0cd6a092f63cac8ff34d457093903a09db40"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "6a46c26ee4bf8a60da41572e0149498d77a4a3915b14628032dc21b99cc004ee"
-       }
-      ]
-     },
-     {
-      "id": "q0007",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "03249002dfb9234da1bfdacdb0a4fa3d4d3cc07bbe4e627099ba897ba8f58ac7"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "9e8fba74f08e93509a4a69a9869049932a3ad624d59945dae3f4055d0b261db6"
-       }
-      ]
-     },
-     {
-      "id": "q0008",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "fb7573c6cdaf337ef73711fe92ae6788f44c77ada97900b072735ce08332441f"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "82e89db96c7c615b1e4f2e741487597536096bed6c42c9baf8bcf30ca01e0877"
-       }
-      ]
-     },
-     {
-      "id": "q0009",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "8f1ac57f7bf1029adf17669b2a60723759d8a7acc3b5a2238a9610559ab264f1"
-       },
-       {
-        "height": 271.875,
-        "gap_before": 12,
-        "sha256": "6d49524a7a3de14b5e59ca84996702f3421182e3bb04bcfc2e4d497388282a7e"
-       }
-      ]
-     },
-     {
-      "id": "q0010",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "e79db4b88a86e1aa384b4c34bb5a793841387372ea9232a1db69676d7516cb8b"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "595d60bc47debc4632b19b723189f6f101b4b7fe52fff422100ec5a421502239"
-       }
-      ]
-     },
-     {
-      "id": "q0011",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "de1359ffc28ebc2b77b42b27bd05689cd30def9439241c456b9fc799e662dc35"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "7db4a09dcabc7b5ee6bb64f062470147e2ef6dc10127ab9a487038903b4891e6"
-       }
-      ]
-     },
-     {
-      "id": "q0012",
-      "paragraphs": [
-       {
-        "height": 378,
-        "gap_before": 0,
-        "sha256": "7f56cd774ff8744ae9e14e0be849a3b061778f47874c7570d95fdc96a60a272a"
-       },
-       {
-        "height": 435,
-        "gap_before": 12,
-        "sha256": "d87f5ccb1e3c602a01d5cc5eb0cde233e3e14347d44e286c93c52ccc60d3807c"
-       }
-      ]
-     },
-     {
-      "id": "q0013",
-      "paragraphs": [
-       {
-        "height": 462,
-        "gap_before": 0,
-        "sha256": "495afaf782419e3a20c51820402fd47cef5ef921e7f0555b7b72659731dcdb88"
-       },
-       {
-        "height": 489.375,
-        "gap_before": 12,
-        "sha256": "1614b967616814d236424af6d83cb35ea60393faa3d55cf42a73d4039f839fd1"
-       }
-      ]
-     },
-     {
-      "id": "q0014",
-      "paragraphs": [
-       {
-        "height": 462,
-        "gap_before": 0,
-        "sha256": "4d893992d99055e5d94bca7a2857bd1f8e023635d16956efca491b028617ff75"
-       },
-       {
-        "height": 543.75,
-        "gap_before": 12,
-        "sha256": "ad2f4d5fe3170e5590ee55e6ee20342d8152c6082742ead4108cc829c7d6a295"
-       }
-      ]
-     },
-     {
-      "id": "q0015",
-      "paragraphs": [
-       {
-        "height": 168,
-        "gap_before": 0,
-        "sha256": "53a8328ed93251b3cbd90f89d78a033268f865d3d3c1ba1810398e9dae06bf0a"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "5d14b97970257d650428cf0c4e3fdb86bec571b5163f6860338e0d66ef8d15cb"
-       }
-      ]
-     },
-     {
-      "id": "q0016",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "cfacbbfcfa562f8169e20d0b9068a0b8b4758b94184a03b775a6c810c14f3906"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "114df568bc594eb789fc00dd1b34cc919e7c51fa610b07240d40fc569f104a52"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "8e4095d75ce768c7592c633d5db1669bba973512f73cca97ebf80dd9bc0ca74c"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "23196490872cb01094bf5102606f49c1d2a690eff79ec7824c175256873fe0c9"
-       }
-      ]
-     },
-     {
-      "id": "q0017",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "da690759defd4e66729c84aa684375c49b7272c6eb37403b62bf9502b1c78226"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "d5b5ba436239a0a846b7677883381a391337e456e71d51776a9d2ba2a538fc49"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "97f910ff047cd23ae8988a7013f4d7789d0e244c3b40551e65db35dee8383619"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "8a604f08d0e16e99afb72565439d357c4f9d9b91281cec90e72f1e6f9292f384"
-       }
-      ]
-     },
-     {
-      "id": "q0018",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "99dc964c019a837c7a97ede07d2d96e32cd3fe956b1f2a5e552533e8ff4432d2"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "5ea661981ba5eb5a95e36be0d923a57a4101d645cb6f1c9a0959e353ea2d51ef"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "3713bfc001e93630a7c2d1366ac9694f14405846c8e1545b3e536a9bf2dc1c72"
-       }
-      ]
-     },
-     {
-      "id": "q0019",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "d8affd168e3ce79dbaff3b6a73e99b1b0418724c40d99653062b28a224f04b57"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "c2163244cf9abb65b4b099a10d510fb2d04918f1736b0e030d0c804e27b1d370"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "44956d03987d18fb32b43e292c99f1c2bfc8f68fe2461851ff200e9fce406489"
-       }
-      ]
-     },
-     {
-      "id": "q0020",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "8d102550226f13e4d80f2ae2e3e6f8624b83c447e98e6f1f424075d95c3f3fee"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "91796d1a3f804be61661d31c55404cff308218c821fb8878472b6b86ef593fcf"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "483e63c5a41957ebacb05c7f99b49a9b03fab7c4905f0a423eabee1cc7a22f31"
-       }
-      ]
-     },
-     {
-      "id": "q0021",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "486e12f90540d6c8e2e0f8e77a6766f9e1304eaf86a29de0faf35596632a1580"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "5a17c3cdb789138f6699bf24c143113534560b17515371997429050ed4e40a11"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "57e8b12ed9fd4909db39d0a21b29c596939d207a623c06d4ef2a91c702a42143"
-       }
-      ]
-     },
-     {
-      "id": "q0022",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "8289f9b507468fad0c1c9440760fa5e517791163cdeab439bf1ccac534686cd1"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "b1fdb26a8e1517e72729e82758de33cc580267b107a09e05dcc19d89f93b92bf"
-       },
-       {
-        "height": 190.3125,
-        "gap_before": 12,
-        "sha256": "a02218a6c60065f8b922af228df27e62d3ba9753838094547690755000fe5b2c"
-       }
-      ]
-     },
-     {
-      "id": "q0023",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "3870e0dbb87679b6da97b7832b031828e3528f55cba0c608a4e765a7f85f6138"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "a173b2fa4605df9f599631905e0e48405cce34a32e80decad2ef7d79ff30cec8"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "1fe21d71499298e23f2d1e3d21aeb2051b1231f9adc397cdef71c4dd385b25a7"
-       }
-      ]
-     },
-     {
-      "id": "q0024",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "6745ebea5122bf232d2eb99e2590d6412febf5b8e42c5310210149878e811602"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "21d548f35dcd80756d3a641099c59c5a4aad8a31e0041a0c8018ad27434e6889"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "951e68d5ea73a530d2d602a824960060be522e2d20b0d11b73389ca1cb3f4d0f"
-       }
-      ]
-     },
-     {
-      "id": "q0025",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "9c17bc2dc904a5e5de4f79eb0eb27acb47d6f27f5314fd6cc0c81403ac63e7d2"
-       },
-       {
-        "height": 217.5,
-        "gap_before": 12,
-        "sha256": "80939ab8bec5284a2db0bdd97111dae90787c06e486d038ed0b577807ab6169d"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "3589df1e8ebb1384cde11f9c7cd17a47b1790c50c63d3e3bcf0af3728f05ccff"
-       }
-      ]
-     },
-     {
-      "id": "q0026",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "8888944acbf36818e38f9e0444ea23f1aa3d60709282dc1339656c0d0c1b3d56"
-       },
-       {
-        "height": 299.0625,
-        "gap_before": 12,
-        "sha256": "f987020b843f5a4850ade0138ea5d5b20de79947d5239111cefaaba1e2305c6f"
-       }
-      ]
-     },
-     {
-      "id": "q0027",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "a029a81b4f813b5e96ad9b7038b14acf7ee7f21602c2171b07f9ca5c42e39b18"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "c52f183fc35945596f3fe36ad23a51bcd306ca4fe195cfb15561172ccf1ec63d"
-       }
-      ]
-     },
-     {
-      "id": "q0028",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "aed4f34152d43480472d68f103ced71c21eee6c6e0e6b744a0666c401823484e"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "3cd2358b043ebdac57bf5766579904f9b2f031ac141471b99f96611b253907dd"
-       }
-      ]
-     },
-     {
-      "id": "q0029",
-      "paragraphs": [
-       {
-        "height": 504,
-        "gap_before": 0,
-        "sha256": "3fde643c593577deb50d49012ed17b09accc568bb08b7e28f087795d1be0635d"
-       },
-       {
-        "height": 543.75,
-        "gap_before": 12,
-        "sha256": "7b9c9c83ab48546084286ea781e4d6b2dd54e9a999ab66d635941d4f0f09bc08"
-       }
-      ]
-     },
-     {
-      "id": "q0030",
-      "paragraphs": [
-       {
-        "height": 546,
-        "gap_before": 0,
-        "sha256": "fb2a8fd76120dc7f5437272d041ca10ff46ac8e0abd3af28e5d3a087cb9b50f8"
-       },
-       {
-        "height": 462.1875,
-        "gap_before": 12,
-        "sha256": "0e3ea9533342961dcacbad10c5f4152ff9a2623e12f77e3fbba62e678088ff1f"
-       }
-      ]
-     },
-     {
-      "id": "q0031",
-      "paragraphs": [
-       {
-        "height": 210,
-        "gap_before": 0,
-        "sha256": "5303987f1fdba807289dd3470b22e331f740dfcf1fdf8548938bd05e9b91bbaa"
-       },
-       {
-        "height": 271.875,
-        "gap_before": 12,
-        "sha256": "39147c839a767d9e336d7529a341f4df79a5d05c3c56738186eb727c3ee21e4a"
-       }
-      ]
-     },
-     {
-      "id": "q0032",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "b543f423e053898ac17223936400295ec7d2766dade480ac86bd6a4ace77003f"
-       },
-       {
-        "height": 244.6875,
-        "gap_before": 12,
-        "sha256": "6943d4015bee8c6220f2670a65d6cc46745e0a52b96e4b6add7b8242ecec45bd"
-       }
-      ]
-     },
-     {
-      "id": "q0033",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "2db424fe49d97b414f2d11d3c661d8c95198efe2dc1a10bdc4c34122b5f745f8"
-       },
-       {
-        "height": 299.0625,
-        "gap_before": 12,
-        "sha256": "d2a197093abdf10701a0ad0fc22ab72b8e7b2141fbc5642a02cea829b0fe32a1"
-       }
-      ]
-     },
-     {
-      "id": "q0034",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "cdf5d19e4840d401a90b47af1ffebe49725dee9df4cb16cd2a5e946cb1e7d619"
-       },
-       {
-        "height": 271.875,
-        "gap_before": 12,
-        "sha256": "752943a0a85dc121b53656c1bc6cb3fc624f4042dd48e8719e45abe86abb3edf"
-       }
-      ]
-     },
-     {
-      "id": "q0035",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "75a43916715e094248d9308b46d16e0cde57d4aceb5ad95198b840961353fec5"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "d3f8e354012f88a2e7c4cc1c714911e9ada9487073804a5d9ca23c00b6320896"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "565fcdfe68cef33e9fc8f84bcbb148b84631affb5ed47dbe5b801181b192cf45"
-       }
-      ]
-     },
-     {
-      "id": "q0036",
-      "paragraphs": [
-       {
-        "height": 252,
-        "gap_before": 0,
-        "sha256": "df43f596c56ba625cb9b412b32bb36b41d5f88d1645d3a2b0daa640c2a65d2f4"
-       },
-       {
-        "height": 326.25,
-        "gap_before": 12,
-        "sha256": "0b29c4f84bb281b98ce82bf031358725f3fba02991dfee7fc3c527dbd48e2c0a"
-       }
-      ]
-     },
-     {
-      "id": "q0037",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "0ea71551cd5360cbf813bb83c7a8e297b8198461410e88b8f68bdf46dea074cc"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "49b11f9ca5ecaf2cc6918cb419f924513fc8f49219dabe3980b213594fc91116"
-       }
-      ]
-     },
-     {
-      "id": "q0038",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "08f48bf5d734289af7929d5541ad745e7c2e457b306f26557a53ed5fdff8d3fb"
-       },
-       {
-        "height": 108.75,
-        "gap_before": 12,
-        "sha256": "3adba7880a568ff49c5a46655ecb12c1fb39fbfaeaefad5fcbc4cbc1e68aa67d"
-       },
-       {
-        "height": 135.9375,
-        "gap_before": 12,
-        "sha256": "a04de5fcdf69ba075c04559a7ed4bb50f7e86f640b0929daf4d67e3135251da9"
-       }
-      ]
-     },
-     {
-      "id": "q0039",
-      "paragraphs": [
-       {
-        "height": 882,
-        "gap_before": 0,
-        "sha256": "aaba97e535c9228c254c8c5ba1cb3a0158ef65a4d9cb22666aaa8c9a499fbaa4"
-       },
-       {
-        "height": 1087.5,
-        "gap_before": 12,
-        "sha256": "098b2c5ab0a4fa68a7b2b55b676d3ac18bc8eee5569ed4cdc4c2eb5341800e03"
-       }
-      ]
-     },
-     {
-      "id": "q0040",
-      "paragraphs": [
-       {
-        "height": 588,
-        "gap_before": 0,
-        "sha256": "0b1cc4437d8297fc7573fc3fa9b83bbc12e44dc7380fd4a04991913a63937ab5"
-       },
-       {
-        "height": 652.5,
-        "gap_before": 12,
-        "sha256": "0e4530c4ed8035856fad465ee1a4767ed994172bb4d7424f74422777c961b659"
-       }
-      ]
-     },
-     {
-      "id": "q0041",
-      "paragraphs": [
-       {
-        "height": 462,
-        "gap_before": 0,
-        "sha256": "df96e468bef0e8bb288aeda385f1b8c37cb3dfd3a7e4a8a711a48528762de002"
-       },
-       {
-        "height": 516.5625,
-        "gap_before": 12,
-        "sha256": "5d8821457c1679859e9762e0115b1d9ebb61f41c27688595bc8557a850708cfb"
-       }
-      ]
-     },
-     {
-      "id": "q0042",
-      "paragraphs": [
-       {
-        "height": 546,
-        "gap_before": 0,
-        "sha256": "63c9dcc2bcacc406907a293f7cc2172d7982905c54a991792adc931cdf94884a"
-       },
-       {
-        "height": 625.3125,
-        "gap_before": 12,
-        "sha256": "143834b05c3df4898c344b0973956887e4ce1d940462742fa9ed19a5ae4fe584"
-       }
-      ]
-     },
-     {
-      "id": "q0043",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "e7f13c23477f1038b2930ab0563ec17a787a99da5a5889ab162e9ea464818c55"
-       },
-       {
-        "height": 435,
-        "gap_before": 12,
-        "sha256": "37fd43ee117d398fb27ece0d8a8b61b304f859b6c4de26c95808a9fa4c074664"
-       }
-      ]
-     },
-     {
-      "id": "q0044",
-      "paragraphs": [
-       {
-        "height": 672,
-        "gap_before": 0,
-        "sha256": "83ae2d927f515c47f974ba3f67657326beaeefb8ca82ef27eb59cc14c90b96a3"
-       },
-       {
-        "height": 679.6875,
-        "gap_before": 12,
-        "sha256": "469daa21ccdb88ecfb84727b0cc80d5d331cd5bae06f57e2a8531f26f73dd7d4"
-       }
-      ]
-     },
-     {
-      "id": "q0045",
-      "paragraphs": [
-       {
-        "height": 126,
-        "gap_before": 0,
-        "sha256": "677b5cbb3a16631787adb402e393a9dfd95d0041c19f7aa1e66aa2ba76bb72a5"
-       },
-       {
-        "height": 163.125,
-        "gap_before": 12,
-        "sha256": "39acefcca077c009fd601a3df40486e30a09a0e72f18a06feeacaa1d5c25ceb8"
-       }
-      ]
-     },
-     {
-      "id": "q0046",
-      "paragraphs": [
-       {
-        "height": 336,
-        "gap_before": 0,
-        "sha256": "9ff83b79a43a630145c0bd5c33d05cb75dc20f38b23a9701c446b8a183459280"
-       },
-       {
-        "height": 462.1875,
-        "gap_before": 12,
-        "sha256": "db8455b35db948568e15dda867b027c49372791c5a8502f1e4d94501c71005e9"
-       }
-      ]
-     },
-     {
-      "id": "q0047",
-      "paragraphs": [
-       {
-        "height": 420,
-        "gap_before": 0,
-        "sha256": "68864513feacd892d728b59de5b49334eae67e7268216264c80d90dac3b4d6d8"
-       },
-       {
-        "height": 462.1875,
-        "gap_before": 12,
-        "sha256": "c43a341abded7758f1eb2a4394ccdcaab7a73732cda35f4cf9fd92739ded7129"
-       }
-      ]
-     },
-     {
-      "id": "q0048",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "c5dfb394648fd5f4508f33cd7b87af428b1a329465fc16df3f5c93ac992e3622"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "727e0114c0a9a80f1b368fae4993e547742caa46ec3cffe324ca2938e4ccf067"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "ab0bd1090f0376bb0899942b537a6d880253f168d37c1402eaf54d74ce7c5728"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "c041b6daa3d7874a57adab52fc069286bd92e1b4350bcd8ca312dda421c5bc75"
-       }
-      ]
-     },
-     {
-      "id": "q0049",
-      "paragraphs": [
-       {
-        "height": 42,
-        "gap_before": 0,
-        "sha256": "afb54d9c75447eda270d1b160fd9bc02579fbf04eecefc7f238a68b4717b1684"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "d2a2c9c9495be753b4c0f74a0c2e32fca3b831781ef05d0504e52bef8195764a"
-       },
-       {
-        "height": 42,
-        "gap_before": 12,
-        "sha256": "8723eeff7eed0bba5f2bd3eeb0afe1df0491cd5f4dce0c793ff1fe1f8c0032ae"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "a6256ad680c6efb1f68ca7d9f2ba1e08793f4820e7f5e197b1587c5f01affc48"
-       }
-      ]
-     },
-     {
-      "id": "q0050",
-      "paragraphs": [
-       {
-        "height": 84,
-        "gap_before": 0,
-        "sha256": "b31a8b524de143b42420eeecbee980ddcd87e8fddb8e41c7d322ec85a9391ea0"
-       },
-       {
-        "height": 54.375,
-        "gap_before": 12,
-        "sha256": "dcd2055cbc381160f7d09b4d82f1dbe11269fe2cd65663acbf9f1024b95fd013"
-       },
-       {
-        "height": 84,
-        "gap_before": 12,
-        "sha256": "4ac2e6373047c9576c9fd49dbc4eefe3f5a3581c7fe50239feb03fa6afd9bbcc"
-       },
-       {
-        "height": 81.5625,
-        "gap_before": 12,
-        "sha256": "837ee13a08bb6e5be31a4bf256ca4fe43fd555625734baa68a1bed0e8eb2cefd"
-       }
-      ]
-     }
-    ],
-    "overflow_px": 0,
-    "screenshot": "/tmp/whi_rendered6-390.png",
-    "screenshot_sha256": "c5ef7dd5962586cdcee05b6c5e8a64ed2cd6c20cbafa4fbe853b0e0a150385b5"
-   }
-  ]
- },
+ "rendered_layout": null,
  "findings": [
   {
-   "id": "s1",
+   "id": "m1",
    "finding": "Owner reported rampant meta statements and litotes.",
    "status": "resolved",
    "resolution": "Fifteen meta instances removed from the page and eight from the master (announcements, section references, exhibit narration, bridges, epigrams); mechanical scans now return zero hits for both classes; section openings lead with content."
