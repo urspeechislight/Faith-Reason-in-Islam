@@ -23,13 +23,46 @@ been inspected. Each run has a separate manifest and an exclusive command lock. 
 
 ## Resume after a workflow change
 
-Read this file again when the process changes during an active session. Run
-`article_build.py status RUN/build.json` first. A blocked/stale record is a
-located failure, not an invitation to rebind policy hashes. Use `revise` with
-the current candidate to create a fresh run under the installed toolchain;
-retain all historical responses and perform genuine current affected review.
-The maintained commands regenerate rendering, mappings and hashes. No article
-run may author a receipt-porting/rebinding script or edit generated HTML.
+Reload this file for every new repair invocation and after a process change.
+“Fix and republish URL” includes the current shared format. Earlier completion,
+a green deployment and live bytes equal to an old approved page are historical
+publication evidence; they do not establish current format compliance.
+
+Run `article_build.py status RUN/build.json`. `needs-revision` and
+`format_current: false` mean the retained build no longer matches current inputs.
+Continue with a supported revision and actual affected review without asking
+for a separate re-render request. `format_current: true` alone is not approval:
+source, review, release and deployment checks still apply. An unchanged current
+build can reuse its verified work; do not create changes merely to republish.
+
+```bash
+python3 ~/.agents/prose/article_build.py revise RUN/build.json \
+  --source CANDIDATE.md --output NEXT_RUN/build.json --reason 'Apply current article format'
+```
+
+Scope compares local changes against the shared upstream ancestor when it can
+prove that ancestor descends from the original task baseline. Merged updates
+therefore do not become unrelated local edits. The original scope record stays
+unchanged. Unmerged, staged, unstaged and untracked unrelated work still blocks.
+
+If the recorded worktree is busy or on an unsuitable branch, preserve it. Fetch
+origin and create a fresh isolated worktree at origin/main using the usual Git
+procedure, then select it through the supported flag:
+
+```bash
+python3 ~/.agents/prose/article_build.py revise RUN/build.json \
+  --source CANDIDATE.md --site-root CLEAN_SITE_WORKTREE \
+  --output NEXT_RUN/build.json --reason 'Continue repair with current workflow'
+```
+
+This requires a clean same-repository worktree at fetched origin/main, the same
+article identity and unchanged destination article/receipt bytes relative to the
+parent's recorded or staged versions. It preserves the parent manifest, source,
+reviews and worktree, records the destination transition, and starts a new
+unapproved build. If the destination article changed, inspect that current
+version and use its retained handoff with `adopt`; do not overwrite it with an
+old candidate. Never edit scope bases, manifests, receipt hashes or generated
+HTML to get past these checks. No receipt-porting scripts or verifier archaeology.
 
 If an older run has a handoff but no usable manifest, import its retained source:
 

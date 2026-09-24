@@ -106,16 +106,21 @@ def retained_alignment(B,parent,old,new):
 
 
 def revise(B,a):
-    parent=B.load(a.manifest)
+    replacement=getattr(a,'site_root',None)
+    parent=B.load(a.manifest,scope_changes=replacement is None)
     if parent.get('staging'):raise ValueError('resume the interrupted stage before creating a revision')
     old=previous_source(B,parent)
     source=a.source.resolve();target=a.output.resolve()
     if target.name!='build.json':raise ValueError('revision output must be NEW_DIRECTORY/build.json')
     if not source.is_file():raise ValueError('revised source missing')
     if target.parent.exists():raise ValueError('revision directory exists; use a new directory to preserve all prior attempts')
-    # inputs checks destination ownership even if the parent candidate was edited.
-    B.inputs(parent)
-    text=source.read_text();site=Path(parent['paths']['site_root']);slug=parent['slug']
+    site=Path(parent['paths']['site_root'])
+    if replacement is not None:
+        site=B.article_scope.revision_site(parent,replacement)
+        destination=copy.deepcopy(parent);destination['paths']['site_root']=str(site)
+        B.inputs(destination)
+    else:B.inputs(parent)
+    text=source.read_text();slug=parent['slug']
     target.parent.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.revision-',dir=target.parent.parent) as temp:
         root=Path(temp);(root/'candidate.md').write_text(text);(root/'previous.md').write_text(old)
@@ -127,6 +132,10 @@ def revise(B,a):
         child['destination_snapshot']=destination_snapshot(B,child)
         if (site/(slug+'.html')).exists():child['operation']='repair';child['original_article_sha256']=B.digest(site/(slug+'.html'))
         child['parent']={'manifest':str(a.manifest.resolve()),'manifest_sha256':B.digest(a.manifest),'source_sha256':review.digest(old),'reason':a.reason}
+        if replacement is not None:
+            child.pop('task_scope',None)
+            child['worktree_transition']={'from':parent['paths']['site_root'],'to':str(site),'head':B.article_scope.git(site,'rev-parse','HEAD'),'approval':'none'}
+            B.article_scope.bind(B,child,parent.get('task_scope',{}).get('requested_url'))
         plan={'schema':1,'parent':child['parent'],'artifact_sha256':review.digest(text),'blocks':mapping(old,text),'approval':'none'}
         B.write(root/'revision.json',plan);B.write(root/target.name,child)
         alignment=retained_alignment(B,parent,old,text)
@@ -324,11 +333,24 @@ def stage_locked(B,a):
 
 
 def status(B,a):
-    data=B.load(a.manifest);result={'manifest':str(a.manifest.resolve()),'slug':data['slug'],'state':'needs-preflight','next':'preflight','errors':[]}
+    result={'manifest':str(a.manifest.resolve()),'state':'needs-preflight','next':'preflight','format_current':False,'errors':[]}
+    try:data=B.load(a.manifest)
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        next_step='revise into a clean worktree with --site-root; preserve the parent' if isinstance(exc,B.article_scope.ScopeConflict) else 'resolve the located manifest or identity failure; adopt a verified retained handoff if the manifest is unusable'
+        result.update(state='blocked',next=next_step,errors=[str(exc)])
+        print(json.dumps(result,indent=2));return 1
+    result['slug']=data['slug']
     if not data.get('latest_build'):
         print(json.dumps(result,indent=2));return 0
     try:
+        source,binding=B.inputs(data)
+        row=next((b for b in data['builds'] if b['id']==data['latest_build']),None)
+        if row is None:raise ValueError('retained latest_build is absent from build history; recover its original manifest or adopt its verified handoff')
+        if not B.compatible_binding(B.read(row['preflight']).get('binding',{}),binding):
+            result.update(state='needs-revision',next='revise',reason='Canonical source, renderer or build inputs changed since the retained build',recovery={'source':data['paths']['source'],'output':'NEW_RUN/build.json','site_root':data['paths']['site_root']})
+            print(json.dumps(result,indent=2));return 0
         source,directory,_=B.current_build(data)
+        result['format_current']=True
         result.update(state='needs-evidence-and-reviews',next='advance')
         review_paths=[Path(data['paths'][k]) for k in ('review','html_review')]
         ep=Path(data['paths']['evidence'])

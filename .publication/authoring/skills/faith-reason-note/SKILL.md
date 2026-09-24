@@ -5,6 +5,14 @@ description: Publish a researched Islamic note as a Faith & Reason article, pres
 
 # Publish a Faith & Reason article
 
+A request to fix/update and republish an existing URL includes applying the
+current shared article format, even when that URL was published earlier in this
+session. Reload the current build instructions and check the retained build's
+status before declaring completion. Live bytes matching an old approved build
+do not establish compliance with the current renderer. A format update needs no
+separate user request; proceed through the supported revision and publication.
+
+
 Accept a researched note, topic, or existing article to repair. Default to
 website publication. An explicit audit-only, draft-only, preview, or no-publish
 instruction overrides that default. Reuse an approved, unchanged master;
