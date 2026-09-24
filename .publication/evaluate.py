@@ -25,21 +25,6 @@ def fixtures():
     evidence['artifact_sha256']=packet['artifact_sha256']
     yield 'corrected-history',packet,dict(evidence),True
 
-def main():
-    p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot');a=p.parse_args()
-    for name,packet,evidence,expected in fixtures():
-        out=a.output/name
-        try:release_runner.run(packet,evidence,out,a.client);passed=True
-        except ValueError as failure:
-            # A provider/schema failure is never credited as successful rejection.
-            invocation=json.loads((out/'invocation.json').read_text())
-            if invocation['exit_code']:raise ValueError('Provider/configuration failure; inspect retained stderr.txt') from failure
-            response=json.loads((out/'response.txt').read_text())
-            if invocation['exit_code'] or response.get('status')!='blocked' or not response.get('open_findings'):raise
-            errors=json.loads((out/'validation.json').read_text())['errors']
-            if errors!=['independent release reviewer has not cleared all findings']:
-                raise ValueError('Malformed rejection cannot pass the behavioral regression: '+str(errors)) from failure
-            passed=False
-        if passed!=expected:raise ValueError('Behavioral regression failed: '+name)
-        print('PASS:',name,'accepted' if passed else 'rejected')
+def main(argv=None):
+    raise SystemExit('External provider evaluation is disabled. Use fixtures() with native inherited-model subagents; CI runs only mechanical tests.')
 if __name__=='__main__':main()

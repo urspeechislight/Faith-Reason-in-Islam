@@ -7,6 +7,13 @@ Keep independent review and anonymous peer review; the writer coordinates fixes,
 and an independent reviewer decides whether the final candidate clears them.
 The writer must finish the drafting checks and editorial deletion pass first.
 
+All five roles, peer reviewers, follow-ups and the independent release reviewer
+run as native subagents inheriting the active parent model. Do not invoke the
+generic council skill's external-provider CLI or choose a different model. No
+Copilot, OpenCode or separate endpoint without explicit user authorization. If
+native inheritance is unavailable, report the limitation; never substitute a
+provider. These model rules override generic council orchestration defaults.
+
 ## Inputs and independence
 
 Give each advisor the exact candidate, its SHA-256, category, contract.md,
@@ -110,9 +117,11 @@ unsuccessful fix cycles and report the remaining issue without releasing it.
 
 ## Independent release decision
 
-For the hosted Faith & Reason destination, [publication.md](publication.md)
-runs this final check in GitHub Actions and captures the actual response. Do not
-run a second local release check merely to populate an approval field.
+For Faith & Reason, [publication.md](publication.md) runs this final check in a
+native inherited-model subagent before pushing. GitHub verifies the exact saved
+response and its artifact bindings; it never calls an AI provider. Use
+article_build.py release-request/release-accept and retain the actual response.
+The response also includes the exact request_sha256 from the native packet.
 For other destinations, use an existing council reviewer for this final check; do not add another full
 council round. The writer cannot perform or fabricate this review. Generate its
 input from the final Markdown candidate and completed council record:
@@ -141,6 +150,9 @@ The reviewer returns a JSON object, without Markdown fences:
 }
 ```
 
+Use exactly `"passed"` for acceptance or `"blocked"` for rejection in `status`;
+`"pass"` is invalid. An assessment needs at least twelve words, and each
+disposition needs at least eight words of specific evidence.
 For a pass, `open_findings` is empty. `dispositions` must cover every ID in the
 packet's `required_disposition_ids`, using the original reviewer namespace,
 for example `prose:P-02` or `peer-1:PX-01`. The packet also includes a `:response`

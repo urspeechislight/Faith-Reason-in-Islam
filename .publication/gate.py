@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the exact public tree and obtain fresh independent release decisions.
+"""Validate the exact public tree and verify native inherited-model release decisions.
 
 Unchanged legacy pages are explicitly grandfathered, not retroactively approved.
 Reusable evidence requires a successful main ancestor, or an identical commit
@@ -19,6 +19,7 @@ import evidence
 import handoff
 import quote_layout
 import release_runner
+import native_release
 import review
 import validate_article
 import build_indexes
@@ -41,8 +42,8 @@ def eligible_prior_run(run, head, repository):
 
 def runtime_only_paths(names):
     allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py',
-             '.publication/runtime-manifest.json','.github/workflows/publication.yml'}
-    return bool(names) and all(n in allowed or n.startswith('.publication/runtime/') for n in names)
+             '.publication/runtime-manifest.json','.publication/authoring-manifest.json','.publication/install_toolchain.py','.publication/test_workflow.py','.publication/evaluate.py','.publication/regression.py','.github/workflows/publication.yml','.github/workflows/native-publication.yml'}
+    return bool(names) and all(n in allowed or n.startswith(('.publication/runtime/','.publication/authoring/')) for n in names)
 
 
 def changes(base, head='HEAD'):
@@ -80,7 +81,7 @@ def validate_runtime_only(base):
     manifest=read(HERE/'runtime-manifest.json')
     actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
     if actual!=manifest:raise ValueError('CI runtime snapshot differs from manifest')
-    return {'status':'passed','mode':'runtime-only','base':base,
+    return {'phase':'article','status':'passed','mode':'runtime-only','base':base,
             'commit':git('rev-parse','HEAD').decode().strip(),
             'public_files':public_files.snapshot(),'article_approvals':[]}
 
@@ -88,9 +89,15 @@ def validate_runtime_only(base):
 def prior_success(allow_older_policy=False):
     token=os.environ.get('GITHUB_TOKEN');repo=os.environ.get('GITHUB_REPOSITORY')
     if not token or not repo:return None
-    url=f'https://api.github.com/repos/{repo}/actions/workflows/publication.yml/runs?status=success&per_page=30'
-    request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
-    with urllib.request.urlopen(request,timeout=30) as response:data=json.load(response)
+    runs=[]
+    for workflow in ['native-publication.yml','publication.yml']:
+        url=f'https://api.github.com/repos/{repo}/actions/workflows/{workflow}/runs?status=success&per_page=30'
+        request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
+        try:
+            with urllib.request.urlopen(request,timeout=30) as response:runs.extend(json.load(response)['workflow_runs'])
+        except urllib.error.HTTPError as exc:
+            if exc.code!=404:raise
+    data={'workflow_runs':sorted(runs,key=lambda r:r['id'],reverse=True)}
     head=git('rev-parse','HEAD').decode().strip()
     for run in data['workflow_runs']:
         if not eligible_prior_run(run,head,repo):continue
@@ -99,7 +106,7 @@ def prior_success(allow_older_policy=False):
         # Current-policy reuse requires identical checking code. A separately labelled
         # preservation path may retain an older approval for identical article
         # and evidence bytes; it never approves an edited candidate.
-        if not allow_older_policy and git('diff','--name-only',commit,'HEAD','--','.publication','.github/workflows/publication.yml').strip():continue
+        if not allow_older_policy and git('diff','--name-only',commit,'HEAD','--','.publication','.github/workflows/publication.yml','.github/workflows/native-publication.yml').strip():continue
         jobs_request=urllib.request.Request(f'https://api.github.com/repos/{repo}/actions/runs/{run["id"]}/jobs?per_page=100',headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
         with urllib.request.urlopen(jobs_request,timeout=30) as response:jobs=json.load(response)
         if not completed_publication_job(jobs):continue
@@ -128,25 +135,24 @@ def validate_article_files(path):
     errors+=validate_article.check(page,register=record.get('register','standard'))
     bundle=read(str(base)+'.evidence.json')
     errors+=evidence.verify(bundle,receipt['source_markdown'])
+    errors+=native_release.errors(receipt['source_markdown'],page,Path(str(base)+'.evidence.json').read_text(),receipt['source_review']['council']['report'])
     if errors:raise ValueError(path+': '+'; '.join(errors))
     return page,receipt,bundle
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--client',default='copilot');p.add_argument('--classify',action='store_true');p.add_argument('--runtime-base')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path);p.add_argument('--classify',action='store_true');p.add_argument('--runtime-base')
     a=p.parse_args()
     if a.classify:classify_event();return 0
     if a.output is None:p.error('--output is required')
     a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=False)
-    if a.runtime_base:
-        result=validate_runtime_only(a.runtime_base)
-        (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
-        print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
-    names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True);results=[]
-    # The index generators are separate from the article review. Changes to their
-    # public text must remain generated from the article collection; no new HTML
-    # filename may opt into this exception.
+    results=[];current_article=None
     try:
+        if a.runtime_base:
+            result=validate_runtime_only(a.runtime_base)
+            (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+            print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
+        names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True)
         manifest=read(HERE/'runtime-manifest.json')
         actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
         if actual!=manifest:raise ValueError('CI runtime snapshot differs from its manifest; synchronize and test it')
@@ -157,6 +163,7 @@ def main():
         if any(review.digest(Path(p).read_bytes())!=legacy.get(p) for p in public_html):
             build_indexes.check(Path.cwd())
         for path in article_paths(names):
+            current_article=path
             if Path(path).is_symlink():raise ValueError('public article symlink forbidden: '+path)
             raw=Path(path).read_bytes();stem=Path(path).stem
             if review.digest(raw)==legacy.get(path):
@@ -169,13 +176,13 @@ def main():
             quote_layout.capture(Path(path).resolve(),directory/'render.json')
             errors=quote_layout.render_errors(review.extract(page,'html')['quotes'],read(directory/'render.json'),review.digest(page),require_render=True)
             if errors:raise ValueError(path+': '+'; '.join(errors))
-            packet=packet_for(receipt,page)
-            release_runner.run(packet,bundle,directory/'independent-review',a.client)
+            release=receipt['source_review']['council']['report']['release']
+            (directory/'native-release.json').write_text(json.dumps(release,ensure_ascii=False,indent=2)+'\n')
             results.append({'path':path,'status':'passed','artifact_sha256':review.digest(raw)})
-        (a.output/'result.json').write_text(json.dumps({'status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
+        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
         print('Publication checks passed:',sum(r['status']=='passed' for r in results),'fresh reviews;',len(results),'articles accounted for.')
         return 0
     except (OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError) as error:
-        (a.output/'result.json').write_text(json.dumps({'status':'blocked','error':str(error),'results':results},indent=2)+'\n')
+        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'blocked','article':current_article,'error':str(error),'results':results,'review_directory':str(a.output/Path(current_article).stem) if current_article else None},indent=2)+'\n')
         print('PUBLICATION BLOCKED:',error);return 1
 if __name__=='__main__':raise SystemExit(main())

@@ -1,4 +1,4 @@
-name: Publication validation
+name: Native publication validation
 on:
   push:
   pull_request:
@@ -16,7 +16,6 @@ jobs:
     permissions:
       contents: read
       actions: read
-      copilot-requests: write
     outputs:
       mode: ${{ steps.scope.outputs.mode }}
     steps:
@@ -27,23 +26,20 @@ jobs:
       - name: Classify runtime-only changes
         id: scope
         run: python3 .publication/gate.py --classify
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install review and rendering clients
+      - name: Install rendering client
         run: |
-          npm install --prefix "$RUNNER_TEMP/copilot" @github/copilot@1.0.88
-          echo "$RUNNER_TEMP/copilot/node_modules/.bin" >> "$GITHUB_PATH"
           python3 -m pip install playwright==1.58.0
           python3 -m playwright install --with-deps chromium
       - name: Install shared prose toolchain into the runner home
         run: |
-          mkdir -p "$HOME/.agents/prose" "$HOME/.agents/skills/faith-reason-note"
-          cp .publication/runtime/*.py .publication/runtime/*.md "$HOME/.agents/prose/"
-          cp .publication/runtime/validate_article.py "$HOME/.agents/skills/faith-reason-note/validate.py"
+          python3 .publication/install_toolchain.py --target "$HOME/.agents"
           python3 .publication/runtime/validate_article.py --selftest
       - name: Test mechanical publication boundaries
-        run: python3 .publication/test_gate.py
+        run: |
+          python3 .publication/test_gate.py
+          python3 .publication/test_workflow.py
+          cd "$HOME/.agents/prose"
+          python3 -m unittest test_article_build test_revision_workflow test_native_release test_pipeline test_scripture test_handoff test_quote_layout
       - name: Verify runtime-only update preserves public artifacts
         if: steps.scope.outputs.mode == 'runtime'
         env:
@@ -54,20 +50,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/gate.py --output "$RUNNER_TEMP/publication-review"
-      - name: Exercise actual reviewer on unpublished regression cases
-        if: steps.scope.outputs.mode == 'publication'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
-        continue-on-error: true
-      - name: Retain original reviewer responses and validation evidence
+      - name: Retain article release evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: publication-review-${{ github.sha }}
-          path: |
-            ${{ runner.temp }}/reviewer-evaluation
-            ${{ runner.temp }}/publication-review
+          name: article-release-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/publication-review
           retention-days: 90
       - name: Stage checked public assets
         if: steps.scope.outputs.mode == 'publication'

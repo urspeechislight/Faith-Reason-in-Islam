@@ -4,6 +4,7 @@
 Export runs against Titan's read-only corpus. Offline verification proves archive
 consistency, not corpus provenance or the truth of an interpretation.
 """
+import scripture_alignment
 import argparse
 import hashlib
 import json
@@ -150,6 +151,7 @@ def verify(bundle, note):
     for i, block in enumerate(arabic_blocks(note), 1):
         if not covered_slices(block, quotes): errors.append(f'Arabic block {i}: missing exact ledger slice')
     errors.extend(scripture_coverage(note, quotes))
+    errors.extend(scripture_alignment.errors(note, bundle.get("scripture_alignment")))
     for entry in corpus_entries:
         if usage.get(entry['id'], {}).get('use') == 'quotation' and AR.search(entry['quote']):
             if not any(flat(entry['quote']) in flat(block) for block in arabic_blocks(note)):
@@ -160,7 +162,7 @@ def verify(bundle, note):
     return errors
 
 
-def export(db, note, ledger, external=None, claims=None):
+def export(db, note, ledger, external=None, claims=None, alignment=None):
     ledger_usage(ledger)
     sources = []
     with sqlite3.connect(Path(db).resolve().as_uri()+'?mode=ro', uri=True) as connection:
@@ -174,6 +176,7 @@ def export(db, note, ledger, external=None, claims=None):
                             'raw':data['raw'], 'raw_sha256':sha(data['raw']), 'passage':entry})
     sources.extend(external or [])
     bundle = {'schema':1, 'artifact_sha256':sha(note), 'sources':sources, 'claims':claims or []}
+    if alignment is not None: bundle['scripture_alignment'] = alignment
     bundle['citation_ledger_schema'] = ledger['schema']
     if ledger['schema'] == 2: bundle['citation_dispositions'] = ledger['dispositions']
     errors = verify(bundle, note)
@@ -187,10 +190,11 @@ def main():
     p.add_argument('--db',type=Path,default=Path('/home/fahmy/code/islamic/index/corpus.db'))
     p.add_argument('--external',type=Path,help='JSON array of external sources: id, kind=external, citation, url, accessed, raw, raw_sha256')
     p.add_argument('--claims',type=Path,help='JSON array: claim, source_ids, inference, limits')
+    p.add_argument('--scripture-review',type=Path,help='Approved original-to-Romanization alignment for every scripture quotation')
     a=p.parse_args()
     try:
         if a.output.exists():raise ValueError('output exists; preserve evidence and use a new path')
-        bundle=export(a.db,a.note.read_text(),json.loads(a.ledger.read_text()),json.loads(a.external.read_text()) if a.external else None,json.loads(a.claims.read_text()) if a.claims else None)
+        bundle=export(a.db,a.note.read_text(),json.loads(a.ledger.read_text()),json.loads(a.external.read_text()) if a.external else None,json.loads(a.claims.read_text()) if a.claims else None, json.loads(a.scripture_review.read_text()) if a.scripture_review else None)
         a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(bundle,ensure_ascii=False,indent=2)+'\n')
         print('Full source archive exported after live corpus verification; independent fidelity review still required.')
         return 0
