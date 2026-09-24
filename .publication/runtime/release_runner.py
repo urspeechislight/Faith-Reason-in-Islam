@@ -54,6 +54,7 @@ def review_evidence(bundle):
         sources.append(entry)
     return {'artifact_sha256':bundle['artifact_sha256'],'sources':sources,'contexts':contexts,
             'claims':bundle.get('claims',[]),
+            'scripture_alignment':bundle.get('scripture_alignment'),
             'citation_ledger_schema':bundle.get('citation_ledger_schema',1),
             'citation_dispositions':bundle.get('citation_dispositions',{}),
             'provenance':'Original archive is retained unchanged. Context keys hash original raw bytes. JSON escaping and HTML markup are presentation transformations; no source sentences are summarized or selected.'}
@@ -116,7 +117,10 @@ Inspect the master and rendered_authored_blocks, including social metadata and
 accessible text. Inspect every authored sentence, including headings, summaries, tables, cards,
 openings and closings, for the prohibited prose patterns. Inspect unflagged text.
 A useful fact does not excuse adjacent empty framing. Check quotations and
-translations against the supplied full source context; verify claims and
+translations against the supplied full source context. Inspect every scripture
+source word against the complete transliteration and English layers. Treat the
+alignment record as a review aid, not proof of linguistic correctness; report
+omissions and inaccurate mappings. Verify claims and
 inferences, attribution, scope, uncertainty, and adverse evidence. Missing
 material evidence is a blocking source-review finding. Do not infer source
 verification from an approval status or a hash. Preserve genuine qualifications.
@@ -133,7 +137,7 @@ writer calls it a stylistic preference. In assessment, quote the defective
 wording and say what should change. Do not edit or publish anything.
 '''+json.dumps({'policies': policies, 'historical_review_packet': projected, 'source_evidence': review_evidence(evidence)}, ensure_ascii=False)+ '\nCURRENT CANDIDATE (the only text being released):\n'+json.dumps(current,ensure_ascii=False)+ '\nFINAL RESPONSE BINDING: copy these exact strings unchanged into your JSON: '+json.dumps({'artifact_sha256':packet['artifact_sha256'],'council_sha256':packet['council_sha256']})
     if _schema_feedback is not None:
-        prompt += '\nRESPONSE SCHEMA CORRECTION: Your previous response is preserved below. Reassess the current candidate; do not assume its pass label is correct. Return the complete release JSON again. Every disposition needs at least TWENTY words of specific evidence. The prior short entries were rejected; do not repeat those short explanations. Prior response: '+json.dumps(_schema_feedback,ensure_ascii=False)
+        prompt += '\nRESPONSE SCHEMA CORRECTION: Your previous response is preserved below. Reassess the current candidate; do not assume its pass label is correct. Return the complete release JSON again. Every disposition needs at least TWENTY words of specific evidence. The prior missing or short entries were rejected. Include every required ID; independently assess each one. If any remains unresolved, return blocked. Prior response: '+json.dumps(_schema_feedback,ensure_ascii=False)
     (output/'input.txt').write_text(prompt)
     command = [binary, '-s', '--model', 'auto', '--auto-tier', 'intelligence', '--context', 'long_context', '--available-tools', 'view', '--deny-tool', 'read',
                '--disable-builtin-mcps', '--no-custom-instructions', '--no-auto-update',
@@ -143,13 +147,18 @@ wording and say what should change. Do not edit or publish anything.
     # review. Only the prompt carries the article and evidence. Piped stdin is
     # intentional: -p would ignore it, and article packets exceed argv limits.
     started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    failure=None
     with tempfile.TemporaryDirectory(prefix='article-review-') as workspace:
         with (output/'response.txt').open('w') as stdout, (output/'stderr.txt').open('w') as stderr:
-            result = subprocess.run(command, input=prompt, text=True, cwd=workspace,
-                                    stdout=stdout, stderr=stderr, timeout=timeout)
+            try:
+                result = subprocess.run(command, input=prompt, text=True, cwd=workspace,
+                                        stdout=stdout, stderr=stderr, timeout=timeout)
+            except (subprocess.TimeoutExpired,OSError) as exc:
+                failure=type(exc).__name__+': '+str(exc)
+                result=subprocess.CompletedProcess(command,124 if isinstance(exc,subprocess.TimeoutExpired) else 127)
     raw = (output/'response.txt').read_text()
     invocation = {'started_at': started, 'command': command, 'exit_code': result.returncode,
-                  'input_sha256': review.digest(prompt), 'response_sha256': review.digest(raw),
+                  'failure':failure, 'input_sha256': review.digest(prompt), 'response_sha256': review.digest(raw),
                   'artifact_sha256': packet['artifact_sha256'], 'council_sha256': packet['council_sha256'],
                   'github_run_id': os.environ.get('GITHUB_RUN_ID'),
                   'github_sha': os.environ.get('GITHUB_SHA')}
@@ -161,17 +170,22 @@ wording and say what should change. Do not edit or publish anything.
     errors = review.release_errors(report, packet['artifact_sha256'])
     (output/'validation.json').write_text(json.dumps({'errors': errors}, indent=2)+'\n')
     if errors:
-        # One schema-only retry. Never retry a substantive block, hash mismatch,
-        # missing finding, malformed JSON, or provider error into an approval.
-        decoded=json.loads(raw) if errors==['independent release dispositions missing or unresolved'] else {}
+        # One schema-only retry; the second response must independently pass
+        # every check. Substantive blocks, bad hashes, malformed JSON and provider
+        # failures are never retried into approval.
+        repairable=all(error=='independent release dispositions missing or unresolved'
+                       or error.startswith('independent release omitted advisor finding IDs: ')
+                       or error.startswith('blocking council responses require independent finding dispositions: ')
+                       for error in errors)
+        decoded=json.loads(raw) if repairable else {}
         rows=decoded.get('dispositions',[])
-        short_only=(decoded.get('status')=='passed' and decoded.get('open_findings')==[]
-                    and isinstance(rows,list) and bool(rows)
-                    and all(isinstance(row,dict) and str(row.get('id','')).strip()
-                            and row.get('status') in ('resolved','not-a-defect')
-                            and isinstance(row.get('evidence'),str) and row['evidence'].strip()
-                            for row in rows))
-        if short_only and _schema_feedback is None:
+        schema_only=(decoded.get('status')=='passed' and decoded.get('open_findings')==[]
+                     and isinstance(rows,list)
+                     and all(isinstance(row,dict) and str(row.get('id','')).strip()
+                             and row.get('status') in ('resolved','not-a-defect')
+                             and isinstance(row.get('evidence'),str)
+                             for row in rows))
+        if schema_only and _schema_feedback is None:
             corrected=run(packet,evidence,output/'schema-retry',client,timeout,_schema_feedback=decoded)
             (output/'schema-correction.json').write_text(json.dumps({'reason':errors,'original_response_sha256':review.digest(raw),'corrected_response_sha256':review.digest(corrected['response']),'path':'schema-retry'},indent=2)+'\n')
             (output/'release.json').write_text(json.dumps(corrected,ensure_ascii=False,indent=2)+'\n')

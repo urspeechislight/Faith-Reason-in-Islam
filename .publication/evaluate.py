@@ -25,8 +25,7 @@ def fixtures():
     evidence['artifact_sha256']=packet['artifact_sha256']
     yield 'corrected-history',packet,dict(evidence),True
 
-def main():
-    p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot');a=p.parse_args()
+def evaluate(a, outcomes):
     for name,packet,evidence,expected in fixtures():
         out=a.output/name
         try:release_runner.run(packet,evidence,out,a.client);passed=True
@@ -41,5 +40,17 @@ def main():
                 raise ValueError('Malformed rejection cannot pass the behavioral regression: '+str(errors)) from failure
             passed=False
         if passed!=expected:raise ValueError('Behavioral regression failed: '+name)
+        outcomes.append({'case':name,'status':'passed','decision':'accepted' if passed else 'rejected'})
         print('PASS:',name,'accepted' if passed else 'rejected')
-if __name__=='__main__':main()
+def main(argv=None):
+    p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--client',default='copilot');a=p.parse_args(argv)
+    a.output.mkdir(parents=True,exist_ok=True)
+    result={'phase':'regression','status':'blocked','cases':[]}
+    try:
+        evaluate(a,result['cases']);result['status']='passed';return 0
+    except Exception as exc:
+        result['error']=type(exc).__name__+': '+str(exc)
+        print('Reviewer regression BLOCKED:',result['error']);return 1
+    finally:
+        (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+if __name__=='__main__':raise SystemExit(main())

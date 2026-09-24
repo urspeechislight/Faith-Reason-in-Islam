@@ -97,8 +97,10 @@ class PublicationTests(unittest.TestCase):
             (out/'validation.json').write_text(json.dumps({'errors':['independent release reviewer has not cleared all findings','independent release response is stale for these council findings/dispositions']}))
             raise ValueError('invalid response')
         with tempfile.TemporaryDirectory() as directory, patch.object(sys,'argv',['evaluate','--output',directory]), patch.object(evaluate.release_runner,'run',side_effect=malformed):
-            with self.assertRaisesRegex(ValueError,'Malformed rejection'):
-                evaluate.main()
+            self.assertEqual(evaluate.main(),1)
+            result=json.loads((Path(directory)/'result.json').read_text())
+            self.assertEqual(result['status'],'blocked')
+            self.assertIn('Malformed rejection',result['error'])
     def test_hosted_validator_uses_bundled_runtime_without_personal_install(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(Path,'home',return_value=Path(directory)):
             errors=gate.validate_article.check('<html><body><main data-category="commentary"><p>A source gives a date.</p></main></body></html>')

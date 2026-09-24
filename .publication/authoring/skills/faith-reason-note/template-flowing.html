@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="source-note-sha256" content="{{SOURCE_NOTE_SHA256}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{META_KEYWORDS}}">
+    <title>{{PAGE_TITLE}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Scholarly Neutrals (Off-white #FDFBF7, Dark Slate #3D4451, Accent #B99C6B decorative / #8A6D3B text) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3D4451;
+        }
+        main p {
+            line-height: 1.7;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-amiri {
+            font-family: 'Amiri', serif;
+        }
+        .honorific {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-size: 0.75em;
+            line-height: 1;
+        }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #FDFBF7;
+            border-bottom: 1px solid #E7E0D1;
+        }
+        .section-nav a.navlink {
+            color: #3D4451;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 0.25rem;
+            white-space: nowrap;
+        }
+        .section-nav a.navlink:hover { color: #8A6D3B; }
+        .section-nav a.navlink[aria-current="location"] {
+            color: #8A6D3B;
+            border-color: #B99C6B;
+        }
+        .section-nav a.backlink { color: #6B7280; }
+        .section-nav a.backlink:hover { color: #8A6D3B; }
+        .content-section, article { scroll-margin-top: 4.5rem; }
+        details.glossary summary, details.commentary summary { cursor: pointer; }
+        details.glossary > summary h4, details.commentary > summary h4 { display: inline; }
+        @media print {
+            .section-nav { display: none; }
+            details > * { display: block !important; }
+            details > summary { display: none !important; }
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        /* Source paragraph boundaries are preserved by the shared handoff. */
+        main p + p { margin-block-start: 1em; }
+        main :is(.hadith-callout, .quran-callout) p + p { margin-block-start: 0.85em; }
+        .analysis-section {
+            margin-bottom: 1.5rem;
+        }
+        .analysis-heading {
+            font-weight: 700;
+            color: #3D4451;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .transliteration {
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout {
+            background-color: #F8F1E2;
+            border: 1px solid #E9DCC3;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .quran-callout {
+            background-color: #F3F5F7;
+            border: 1px solid #DFE4EA;
+            border-radius: 0.5rem;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .hadith-callout .rtl, .quran-callout .rtl {
+            line-height: 2.1;
+            color: #3D4451;
+        }
+        .hadith-callout cite, .quran-callout cite {
+            display: block;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(61, 68, 81, 0.12);
+        }
+        .premise-card {
+            background-color: #F7F4EC;
+            border: 1px solid #E7E0D1;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-card {
+            background-color: #F8F1E2;
+            border: 1px solid #B99C6B;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+        }
+        .conclusion-box {
+            border: 1px solid #B99C6B;
+            background-color: #F8F1E2;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        /* BEGIN shared quotation.css */
+/* Quotation presentation. Source and translation words are never changed. */
+main { line-height: 1.7; }
+main blockquote:not(.hadith-callout):not(.quran-callout) {
+  margin-block: 1.25rem;
+  margin-inline: 1.25rem 0;
+  padding-inline-start: .75rem;
+  border-inline-start: 2px solid #B99C6B;
+  line-height: 1.58;
+}
+main :is(.hadith-callout, .quran-callout) p {
+  margin: 0;
+  margin-inline-start: 1rem;
+  line-height: 1.58;
+  text-align: start;
+}
+main :is(.hadith-callout, .quran-callout) p + p { margin-block-start: .7em; }
+main :is(.hadith-callout, .quran-callout) :is(.rtl, [lang="ar"]) {
+  direction: rtl; text-align: right; line-height: 1.95;
+}
+main :is(.hadith-callout, .quran-callout) :is([lang="he"], [lang="arc"], [lang="syr"]) {
+  direction: rtl; text-align: right; line-height: 1.85;
+}
+main :is(.hadith-callout, .quran-callout) p:not(.transliteration) + p.transliteration,
+main :is(.hadith-callout, .quran-callout) p.transliteration + p.translation { margin-block-start: 1em; }
+mark[data-term] {
+  color: inherit; background: transparent;
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: .07em;
+  text-underline-offset: .22em;
+  text-decoration-skip-ink: auto;
+}
+mark[data-term="2"] { text-decoration-style: double; }
+@media (max-width: 480px) {
+  main :is(.hadith-callout, .quran-callout) { padding: 1rem; }
+  main :is(.hadith-callout, .quran-callout) p { margin-inline-start: .75rem; }
+  main blockquote:not(.hadith-callout):not(.quran-callout) { margin-inline-start: .75rem; }
+}
+@media print {
+  mark[data-term] { color: inherit; background: transparent; }
+}
+        /* END shared quotation.css */
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+        <header class="mb-6">
+            <p class="text-sm font-semibold tracking-widest uppercase text-[#8A6D3B] mb-2">{{KICKER}}</p>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[#3D4451] mb-2">{{HEADER_TITLE}}</h1>
+            <p class="text-md md:text-lg text-gray-600 max-w-2xl">{{HEADER_SUBTITLE}}</p>
+            <hr class="mt-6 border-[#E7E0D1]">
+        </header>
+
+        <!-- STICKY SECTION NAV: back-link plus anchors to each part,
+             commentary, and the closing section. -->
+        <div class="section-nav -mx-4 px-4">
+            <nav class="flex items-center gap-4 overflow-x-auto" aria-label="Section navigation">
+                <a href="index.html" class="backlink text-sm py-3 flex-shrink-0">&larr; Faith &amp; Reason in Islam</a>
+                <a href="#sec1" class="navlink text-sm md:text-base py-3 flex-shrink-0">{{PART_1_SHORT|Story|Section 1}}</a>
+                <a href="#commentary" class="navlink text-sm md:text-base py-3 flex-shrink-0">Commentary</a>
+                <a href="#closing" class="navlink text-sm md:text-base py-3 flex-shrink-0">{{CLOSING_LABEL|Conclusion}}</a>
+            </nav>
+        </div>
+
+        <!-- Render only the approved master's blocks. Use its handoff IDs on
+             all mapped headings, prose, lists, tables and quote containers.
+             Remove category-inapplicable sample regions and their nav links.
+             Templates supply markup, never additional article text. -->
+        <main data-category="{{CATEGORY|debate|exegesis|narration|commentary}}">
+            <!-- FLOWING LAYOUT: sequential open sections, no tabs.
+                 Debate/exegesis: sections of argument, subsections as open
+                 <article>s. Narration: continuous translated narrative, then
+                 ONE Commentary block as native <details> holding anchored
+                 commentary cards, then a closing section titled after the
+                 note's own final heading (never "Final Verdict").
+                 Debate/exegesis flowing pages carry a The Facts section
+                 (see template-tabs.html for the table markup) after the
+                 first section. -->
+            <section id="sec1" class="content-section mb-12 p-6 md:p-8 bg-white rounded-lg shadow-sm border border-[#E7E0D1]">
+                <h2 class="font-serif text-2xl font-bold mb-4 text-[#8A6D3B]">{{SECTION_TITLE}}</h2>
+                <p class="mb-4 text-gray-600">...</p>
+
+                <!-- SUBSECTION: open article, unique stable id (Facts rows
+                     and commentary anchors link to it). -->
+                <article id="sec1-1" class="mb-8">
+
+                    <!-- FACT CARD: when required by the master category; before the first quotation. -->
+                    <div class="premise-card space-y-1 mb-4">
+                        <p class="text-sm"><strong>Source:</strong> {{SOURCE_CITATION_SHORT}}</p>
+                        <p class="text-sm"><strong>Claim:</strong> {{ITEM_CLAIM_ONE_LINE}}</p>
+                    </div>
+                    <div class="analysis-section">
+
+                        <p class="text-gray-600">...</p>
+                    </div>
+                    <div class="analysis-section">
+
+                        <p class="mb-2 text-gray-600">...</p>
+                        <!-- QUOTE BLOCK (quran-callout for Qur'an with transliteration;
+                             hadith-callout for hadith/tafsir/scholars without): -->
+                        <blockquote class="hadith-callout" data-note-block="{{QUOTE_BLOCK_ID}}">
+                            <p class="rtl font-amiri text-xl" lang="ar">{{ARABIC_VERBATIM}}</p>
+                            <p class="translation">{{TRANSLATION}}</p>
+                            <cite data-note-citation class="text-sm text-gray-500">- {{CITATION}}</cite>
+                        </blockquote>
+                        <p class="text-gray-700 mt-3">{{SOURCE_GROUNDED_EXPLANATION}}</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Narration only: omit this entire region and its nav link for
+                 other categories. Render master H3 commentary cards here. -->
+            <div id="commentary" class="content-section mb-12">
+                <details class="commentary bg-white border border-[#E7E0D1] rounded-lg p-4">
+                    <summary><h2 class="font-serif text-xl font-bold text-[#3D4451]">Commentary</h2></summary>
+                    <div class="pt-4 mt-4 border-t border-[#E7E0D1] space-y-6">
+                        <!-- commentary cards: id="cN", class commentary-card scroll-mt-28,
+                             each opening with its fact card -->
+                    </div>
+                </details>
+            </div>
+
+            <!-- One closing section only, when present in the master.
+                 Omit this section and its nav link for commentary that needs
+                 no closing synthesis. Preserve the exact master heading. -->
+            <section id="closing" class="content-section mt-16 pt-10 border-t border-[#E7E0D1]">
+                <div class="max-w-3xl">
+                    <div class="w-12 h-1 bg-[#B99C6B] mb-6 rounded-full"></div>
+                    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-[#3D4451]">{{CLOSING_TITLE}}</h2>
+                    <p class="font-semibold text-gray-800">{{CLOSING_PARAGRAPH}}</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    (function () {
+        function openHash() {
+            var id = decodeURIComponent(location.hash.slice(1));
+            if (!id) return;
+            var el = document.getElementById(id);
+            if (!el) return;
+            var details = el.closest('details');
+            if (details) details.open = true;
+            setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+        }
+        window.addEventListener('hashchange', openHash);
+        window.addEventListener('DOMContentLoaded', function () { setTimeout(openHash, 100); });
+    })();
+    </script>
+    <script>
+    (function () {
+        var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a.navlink'));
+        if (!links.length || !('IntersectionObserver' in window)) return;
+        var map = {}; var sections = [];
+        links.forEach(function (l) {
+            var id = l.getAttribute('href').slice(1);
+            var t = document.getElementById(id);
+            if (t) { map[id] = l; sections.push(t); }
+        });
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                    var l = map[e.target.id];
+                    if (l) l.setAttribute('aria-current', 'location');
+                }
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        sections.forEach(function (t) { obs.observe(t); });
+    })();
+    </script>
+
+    <footer class="text-center mt-16 pt-8 border-t border-[#E7E0D1] max-w-4xl mx-auto px-4">
+        <p class="text-sm text-gray-500">© 2025 Faith &amp; Reason in Islam · All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -41,8 +41,8 @@ def eligible_prior_run(run, head, repository):
 
 def runtime_only_paths(names):
     allowed={'.publication/gate.py','.publication/test_gate.py','.publication/sync_runtime.py',
-             '.publication/runtime-manifest.json','.github/workflows/publication.yml'}
-    return bool(names) and all(n in allowed or n.startswith('.publication/runtime/') for n in names)
+             '.publication/runtime-manifest.json','.publication/authoring-manifest.json','.publication/install_toolchain.py','.publication/test_workflow.py','.publication/evaluate.py','.publication/regression.py','.github/workflows/publication.yml'}
+    return bool(names) and all(n in allowed or n.startswith(('.publication/runtime/','.publication/authoring/')) for n in names)
 
 
 def changes(base, head='HEAD'):
@@ -80,7 +80,7 @@ def validate_runtime_only(base):
     manifest=read(HERE/'runtime-manifest.json')
     actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
     if actual!=manifest:raise ValueError('CI runtime snapshot differs from manifest')
-    return {'status':'passed','mode':'runtime-only','base':base,
+    return {'phase':'article','status':'passed','mode':'runtime-only','base':base,
             'commit':git('rev-parse','HEAD').decode().strip(),
             'public_files':public_files.snapshot(),'article_approvals':[]}
 
@@ -138,15 +138,13 @@ def main():
     if a.classify:classify_event();return 0
     if a.output is None:p.error('--output is required')
     a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=False)
-    if a.runtime_base:
-        result=validate_runtime_only(a.runtime_base)
-        (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
-        print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
-    names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True);results=[]
-    # The index generators are separate from the article review. Changes to their
-    # public text must remain generated from the article collection; no new HTML
-    # filename may opt into this exception.
+    results=[];current_article=None
     try:
+        if a.runtime_base:
+            result=validate_runtime_only(a.runtime_base)
+            (a.output/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+            print('Runtime checked; public and review bytes unchanged. No article approval or site deployment.');return 0
+        names=files();legacy=read(HERE/'legacy.json')['files'];prior=prior_success();preserved=prior or prior_success(allow_older_policy=True)
         manifest=read(HERE/'runtime-manifest.json')
         actual={p.name:review.digest(p.read_bytes()) for p in (HERE/'runtime').iterdir() if p.suffix in {'.py','.md'}}
         if actual!=manifest:raise ValueError('CI runtime snapshot differs from its manifest; synchronize and test it')
@@ -157,6 +155,7 @@ def main():
         if any(review.digest(Path(p).read_bytes())!=legacy.get(p) for p in public_html):
             build_indexes.check(Path.cwd())
         for path in article_paths(names):
+            current_article=path
             if Path(path).is_symlink():raise ValueError('public article symlink forbidden: '+path)
             raw=Path(path).read_bytes();stem=Path(path).stem
             if review.digest(raw)==legacy.get(path):
@@ -172,10 +171,10 @@ def main():
             packet=packet_for(receipt,page)
             release_runner.run(packet,bundle,directory/'independent-review',a.client)
             results.append({'path':path,'status':'passed','artifact_sha256':review.digest(raw)})
-        (a.output/'result.json').write_text(json.dumps({'status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
+        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'passed','commit':git('rev-parse','HEAD').decode().strip(),'public_files':inventory,'results':results},indent=2)+'\n')
         print('Publication checks passed:',sum(r['status']=='passed' for r in results),'fresh reviews;',len(results),'articles accounted for.')
         return 0
     except (OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError) as error:
-        (a.output/'result.json').write_text(json.dumps({'status':'blocked','error':str(error),'results':results},indent=2)+'\n')
+        (a.output/'result.json').write_text(json.dumps({'phase':'article','status':'blocked','article':current_article,'error':str(error),'results':results,'review_directory':str(a.output/Path(current_article).stem/'independent-review') if current_article else None},indent=2)+'\n')
         print('PUBLICATION BLOCKED:',error);return 1
 if __name__=='__main__':raise SystemExit(main())

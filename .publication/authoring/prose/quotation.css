@@ -1,0 +1,41 @@
+/* Quotation presentation. Source and translation words are never changed. */
+main { line-height: 1.7; }
+main blockquote:not(.hadith-callout):not(.quran-callout) {
+  margin-block: 1.25rem;
+  margin-inline: 1.25rem 0;
+  padding-inline-start: .75rem;
+  border-inline-start: 2px solid #B99C6B;
+  line-height: 1.58;
+}
+main :is(.hadith-callout, .quran-callout) p {
+  margin: 0;
+  margin-inline-start: 1rem;
+  line-height: 1.58;
+  text-align: start;
+}
+main :is(.hadith-callout, .quran-callout) p + p { margin-block-start: .7em; }
+main :is(.hadith-callout, .quran-callout) :is(.rtl, [lang="ar"]) {
+  direction: rtl; text-align: right; line-height: 1.95;
+}
+main :is(.hadith-callout, .quran-callout) :is([lang="he"], [lang="arc"], [lang="syr"]) {
+  direction: rtl; text-align: right; line-height: 1.85;
+}
+main :is(.hadith-callout, .quran-callout) p:not(.transliteration) + p.transliteration,
+main :is(.hadith-callout, .quran-callout) p.transliteration + p.translation { margin-block-start: 1em; }
+mark[data-term] {
+  color: inherit; background: transparent;
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: .07em;
+  text-underline-offset: .22em;
+  text-decoration-skip-ink: auto;
+}
+mark[data-term="2"] { text-decoration-style: double; }
+@media (max-width: 480px) {
+  main :is(.hadith-callout, .quran-callout) { padding: 1rem; }
+  main :is(.hadith-callout, .quran-callout) p { margin-inline-start: .75rem; }
+  main blockquote:not(.hadith-callout):not(.quran-callout) { margin-inline-start: .75rem; }
+}
+@media print {
+  mark[data-term] { color: inherit; background: transparent; }
+}

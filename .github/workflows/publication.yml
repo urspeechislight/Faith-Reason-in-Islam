@@ -38,12 +38,14 @@ jobs:
           python3 -m playwright install --with-deps chromium
       - name: Install shared prose toolchain into the runner home
         run: |
-          mkdir -p "$HOME/.agents/prose" "$HOME/.agents/skills/faith-reason-note"
-          cp .publication/runtime/*.py .publication/runtime/*.md "$HOME/.agents/prose/"
-          cp .publication/runtime/validate_article.py "$HOME/.agents/skills/faith-reason-note/validate.py"
+          python3 .publication/install_toolchain.py --target "$HOME/.agents"
           python3 .publication/runtime/validate_article.py --selftest
       - name: Test mechanical publication boundaries
-        run: python3 .publication/test_gate.py
+        run: |
+          python3 .publication/test_gate.py
+          python3 .publication/test_workflow.py
+          cd "$HOME/.agents/prose"
+          python3 -m unittest test_article_build test_revision_workflow test_pipeline test_scripture test_handoff test_quote_layout
       - name: Verify runtime-only update preserves public artifacts
         if: steps.scope.outputs.mode == 'runtime'
         env:
@@ -54,20 +56,29 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/gate.py --output "$RUNNER_TEMP/publication-review"
-      - name: Exercise actual reviewer on unpublished regression cases
-        if: steps.scope.outputs.mode == 'publication'
+      - name: Check exact reviewer regression receipt
+        id: regression
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .publication/regression.py
+      - name: Run required reviewer regressions
+        if: steps.regression.outputs.needed == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
-        continue-on-error: true
-      - name: Retain original reviewer responses and validation evidence
+      - name: Retain reviewer regression evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: publication-review-${{ github.sha }}
-          path: |
-            ${{ runner.temp }}/reviewer-evaluation
-            ${{ runner.temp }}/publication-review
+          name: reviewer-regression-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/reviewer-evaluation
+          retention-days: 90
+      - name: Retain article release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: article-release-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/publication-review
           retention-days: 90
       - name: Stage checked public assets
         if: steps.scope.outputs.mode == 'publication'
