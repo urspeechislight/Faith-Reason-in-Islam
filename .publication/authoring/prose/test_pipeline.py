@@ -88,8 +88,11 @@ class TranslationTests(unittest.TestCase):
         with patch.dict(t.os.environ,{'OPENCODE_MODEL':'wrong/provider','OPENCODE_BIN':'/fake'}),patch.object(subprocess,'run',side_effect=AssertionError('must not launch providers')):
             self.assertEqual(self.run_engine(),(0,1))
     def test_both_entrypoints_share_engine(self):
-        home=Path.home()/'.agents/skills'
-        self.assertEqual((home/'islamic-note/translate.py').resolve(),(home/'faith-reason-note/translate.py').resolve())
+        home=Path(t.__file__).resolve().parent.parent/'skills'
+        for skill in ['islamic-note','faith-reason-note']:
+            self.assertTrue((home/skill/'translate.py').is_file())
+            self.assertEqual((home/skill/'translate.py').resolve(),Path(t.__file__).resolve())
+            self.assertEqual((home/skill/'translate-style.md').resolve(),Path(t.__file__).resolve().parent/'translate-style.md')
     def test_request_is_bound_to_job_style_parent_model_and_prompt(self):
         for target in ['source','style','model','prompt']:
             code,requests=self.prepare();self.assertEqual(code,0)

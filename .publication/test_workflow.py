@@ -6,6 +6,7 @@ import regression as R
 import evaluate as E
 import gate as G
 import publication_status as S
+import install_toolchain as I
 
 class RegressionTests(unittest.TestCase):
     def run_fixture(self):
@@ -30,6 +31,21 @@ class RegressionTests(unittest.TestCase):
     def test_regression_failures_have_typed_result_and_nonzero_exit(self):
         with tempfile.TemporaryDirectory() as td,patch.object(E,'evaluate',side_effect=ValueError('malformed reviewer response')),contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(E.main(['--output',td]),1);result=json.loads((Path(td)/'result.json').read_text());self.assertEqual(result['phase'],'regression');self.assertEqual(result['status'],'blocked')
+
+class InstallTests(unittest.TestCase):
+    def test_cold_install_has_shared_aliases_and_verifies_exact_bundle(self):
+        with tempfile.TemporaryDirectory() as td,contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(I.main(['--target',td]),0);self.assertEqual(I.main(['--target',td,'--check']),0)
+            for skill in ['islamic-note','faith-reason-note']:
+                alias=Path(td)/'skills'/skill/'translate.py';self.assertTrue(alias.is_file());self.assertEqual(alias.resolve(),Path(td)/'prose/translate.py')
+            (Path(td)/'skills/islamic-note/translate.py').unlink();self.assertEqual(I.main(['--target',td,'--check']),1)
+            self.assertEqual(I.main(['--target',td]),0);self.assertEqual(I.main(['--target',td,'--check']),0)
+    def test_drift_check_stops_before_overwriting_existing_tool(self):
+        with tempfile.TemporaryDirectory() as td,contextlib.redirect_stdout(io.StringIO()):
+            root=Path(td);self.assertEqual(I.main(['--target',td]),0)
+            expected=root/'expected.json';expected.write_text(json.dumps({name:I.digest(root/name) for name in I.inventory()}))
+            source=root/'prose/article_build.py';source.write_text('concurrent change')
+            self.assertEqual(I.main(['--target',td,'--expected',str(expected)]),1);self.assertEqual(source.read_text(),'concurrent change')
 
 class StatusTests(unittest.TestCase):
     def test_wrong_commit_stops_before_artifact_download(self):

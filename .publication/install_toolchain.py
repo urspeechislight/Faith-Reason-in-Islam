@@ -3,6 +3,7 @@
 import argparse,datetime,hashlib,json,os
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
+ALIASES={f'skills/{skill}/{name}':'../../prose/'+name for skill in ['islamic-note','faith-reason-note'] for name in ['translate.py','translate-style.md']}
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def inventory():
@@ -23,8 +24,14 @@ def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--target',type=Path,required=True);p.add_argument('--check',action='store_true');p.add_argument('--expected',type=Path,help='JSON map of target-relative paths to pre-install hashes or null');a=p.parse_args(argv)
     try:
         files=inventory();changed={name:source for name,source in files.items() if not (a.target/name).is_file() or digest(a.target/name)!=digest(source)}
+        missing_aliases=[]
+        for name,target in ALIASES.items():
+            dest=a.target/name
+            if dest.is_symlink() or dest.exists():
+                if not dest.is_symlink() or dest.resolve()!=(dest.parent/target).resolve():raise ValueError('translation alias differs: '+str(dest))
+            else:missing_aliases.append(name)
         if a.check:
-            print('Toolchain identical' if not changed else 'Toolchain differs: '+', '.join(changed));return bool(changed)
+            print('Toolchain identical' if not changed and not missing_aliases else 'Toolchain differs: '+', '.join(list(changed)+missing_aliases));return bool(changed or missing_aliases)
         if a.expected:
             expected=json.loads(a.expected.read_text())
             for name in changed:
@@ -39,6 +46,8 @@ def main(argv=None):
             if dest.exists():
                 old=backup/name;old.parent.mkdir(parents=True,exist_ok=True);old.write_bytes(dest.read_bytes())
             tmp=dest.with_name(dest.name+'.install-'+str(os.getpid()));tmp.write_bytes(source.read_bytes());tmp.replace(dest)
+        for name in missing_aliases:
+            dest=a.target/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.symlink_to(ALIASES[name])
         print('Installed',len(changed),'files; replaced bytes retained at',backup);return 0
     except (OSError,ValueError,KeyError) as exc:print('BLOCKED:',exc);return 1
 if __name__=='__main__':raise SystemExit(main())
