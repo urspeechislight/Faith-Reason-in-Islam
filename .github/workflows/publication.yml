@@ -44,11 +44,6 @@ jobs:
           python3 .publication/runtime/validate_article.py --selftest
       - name: Test mechanical publication boundaries
         run: python3 .publication/test_gate.py
-      - name: Exercise actual reviewer on unpublished regression cases
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
-        continue-on-error: true
       - name: Verify runtime-only update preserves public artifacts
         if: steps.scope.outputs.mode == 'runtime'
         env:
@@ -59,6 +54,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .publication/gate.py --output "$RUNNER_TEMP/publication-review"
+      - name: Exercise actual reviewer on unpublished regression cases
+        if: steps.scope.outputs.mode == 'publication'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .publication/evaluate.py --output "$RUNNER_TEMP/reviewer-evaluation"
+        continue-on-error: true
       - name: Retain original reviewer responses and validation evidence
         if: always()
         uses: actions/upload-artifact@v4
