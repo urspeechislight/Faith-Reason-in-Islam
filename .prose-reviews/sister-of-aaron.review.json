@@ -1,7 +1,7 @@
 {
   "schema": "2026-09-23.5",
   "status": "approved",
-  "reviewer": "kimi-code primary agent (GLM); r5 affected re-review carrying verified r3 judgments for byte-identical blocks",
+  "reviewer": "kimi-code primary agent (GLM); r6 pure revalidation of the approved r5 record under the hosted CI runtime bundle at /tmp/ci-agents, no content change (candidate 118c67d1a8ce7545ab344263b49e1fdd418c529eeb604c7887f3b6cf95030eef and rendered HTML 37135f184e0d8c17e4f2954e72fbfd08441312a010bd97f1f7c1c592f077ca96 byte-identical to r5)",
   "artifact_sha256": "37135f184e0d8c17e4f2954e72fbfd08441312a010bd97f1f7c1c592f077ca96",
   "baseline_sha256": "37135f184e0d8c17e4f2954e72fbfd08441312a010bd97f1f7c1c592f077ca96",
   "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
@@ -2973,7 +2973,7 @@
     "reviewed_artifact_sha256": "37135f184e0d8c17e4f2954e72fbfd08441312a010bd97f1f7c1c592f077ca96",
     "profile_sha256": "280e3e040921491bd0adbe08d648b35da770cef2f411886860943c3482d21834",
     "historical_only": true,
-    "evidence": "Cites the master's council evidence through the verified handoff rather than commissioning a second content council: the master review embedded in the prepare handoff carries the retained historical council, the fresh r5 affected review of the five changed blocks, and the two resolved release findings. The rendered bundle was checked block-by-block against the corrected master; the independent native release response for this exact rendered artifact is pending.",
+    "evidence": "Cites the master's council evidence through the verified handoff rather than commissioning a second content council: the master review embedded in the prepare handoff carries the retained historical council, the fresh r5 affected review of the five changed blocks, and the two resolved release findings. The rendered bundle was checked block-by-block against the corrected master; for the r6 revalidation (2026-09-24) the page is byte-identical to the r5 checked build (37135f184e0d8c17e4f2954e72fbfd08441312a010bd97f1f7c1c592f077ca96) with identical Chromium captures at 1280 and 390 px, the r6 master review carries the accepted r5 native release response (agent-59) covering these exact master bytes, and a fresh r6 native release request is issued separately under the hosted CI runtime bundle.",
     "report": {
       "advisors": [
         {
@@ -6118,7 +6118,7 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "/home/fahmy/code/islamic/runs/sister-of-aaron-v4/r5/builds/bfdecd596ce749fcfd7a/render-1280.png",
+        "screenshot": "/home/fahmy/code/islamic/runs/sister-of-aaron-v4/r6/builds/95c4ba7c37325080c7f0/render-1280.png",
         "screenshot_sha256": "17f99bcb8a18f13903cd6f799fdf979253b8416382e314d899ac12e35f001a50"
       },
       {
@@ -7442,7 +7442,7 @@
         "hidden_blocks": [],
         "pseudo_text": [],
         "overflow_px": 0,
-        "screenshot": "/home/fahmy/code/islamic/runs/sister-of-aaron-v4/r5/builds/bfdecd596ce749fcfd7a/render-390.png",
+        "screenshot": "/home/fahmy/code/islamic/runs/sister-of-aaron-v4/r6/builds/95c4ba7c37325080c7f0/render-390.png",
         "screenshot_sha256": "584dfda5c576ade36cfe31537f94514bc2c678f99859c5ebf98162c43f6f6b7d"
       }
     ]
@@ -7587,6 +7587,11 @@
       "id": "release:RL-02",
       "status": "resolved",
       "resolution": "Muqatil's lineage gloss separated from the Prophet's report: al-Murtada's text (Amali vol.2 p.197) limits the Prophetic report to identifying Aaron as the brother of Moses; the descendants-and-kind gloss is now attributed to Muqatil alone, and the colon before the gloss became 'that'."
+    },
+    {
+      "id": "revalidation:r6-ci-runtime",
+      "status": "resolved",
+      "resolution": "r6 revalidated the approved r5 rendered-conversion review under the hosted CI runtime bundle: article.html is byte-identical to the r5 checked build and the fresh r6 Chromium capture (1280/390 px, zero overflow, no hidden blocks, identical screenshot hashes) replaces the rendered-layout evidence paths; all rendered block texts equal the r5 reviewed texts."
     }
   ],
   "scope_cues_before": [
