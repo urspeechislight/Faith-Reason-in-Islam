@@ -8,30 +8,6 @@ import gate as G
 import publication_status as S
 import install_toolchain as I
 
-class RegressionTests(unittest.TestCase):
-    def run_fixture(self):
-        return {'id':12,'head_sha':'abc','conclusion':'success','event':'push','head_branch':'main','head_repository':{'full_name':'owner/repo'},'updated_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'html_url':'https://example.invalid/run'}
-    def test_receipt_requires_recent_successful_main_same_repo(self):
-        run=self.run_fixture();now=datetime.datetime.now(datetime.timezone.utc);self.assertTrue(R.eligible(run,'owner/repo',now))
-        for changes in [{'event':'pull_request'},{'head_branch':'topic'},{'conclusion':'failure'},{'head_repository':{'full_name':'fork/repo'}},{'updated_at':(now-datetime.timedelta(hours=25)).isoformat()},{'updated_at':(now+datetime.timedelta(hours=1)).isoformat()}]:self.assertFalse(R.eligible(dict(run,**changes),'owner/repo',now))
-    def receipt(self,fingerprint=None,step='success',ancestor=0,error=None):
-        run=self.run_fixture()
-        def api(path):
-            if error:raise error
-            return {'workflow_runs':[run]} if '/workflows/' in path else {'jobs':[{'conclusion':'success','steps':[{'name':R.STEP,'conclusion':step}]}]}
-        with patch.dict(os.environ,{'GITHUB_REPOSITORY':'owner/repo','GITHUB_TOKEN':'synthetic','GITHUB_EVENT_NAME':'push'}),patch.object(R,'api',side_effect=api),patch.object(R,'fingerprint',side_effect=fingerprint or (lambda *a:'same')),patch.object(R.subprocess,'run',return_value=subprocess.CompletedProcess([],ancestor)):
-            return R.find_receipt()
-    def test_only_exact_contract_and_actual_regression_step_reuse(self):
-        self.assertEqual(self.receipt()['run_id'],12)
-        self.assertIsNone(self.receipt(fingerprint=lambda *a:'old' if a else 'new'))
-        self.assertIsNone(self.receipt(step='skipped'));self.assertIsNone(self.receipt(ancestor=1));self.assertIsNone(self.receipt(error=OSError('outage')))
-    def test_runtime_scope_never_includes_articles_or_receipts(self):
-        self.assertTrue(G.runtime_only_paths(['.publication/authoring/prose/article_build.py','.publication/regression.py']))
-        self.assertFalse(G.runtime_only_paths(['article.html']));self.assertFalse(G.runtime_only_paths(['.prose-reviews/article.review.json']))
-    def test_regression_failures_have_typed_result_and_nonzero_exit(self):
-        with tempfile.TemporaryDirectory() as td,patch.object(E,'evaluate',side_effect=ValueError('malformed reviewer response')),contextlib.redirect_stdout(io.StringIO()):
-            self.assertEqual(E.main(['--output',td]),1);result=json.loads((Path(td)/'result.json').read_text());self.assertEqual(result['phase'],'regression');self.assertEqual(result['status'],'blocked')
-
 class InstallTests(unittest.TestCase):
     def test_cold_install_has_shared_aliases_and_verifies_exact_bundle(self):
         with tempfile.TemporaryDirectory() as td,contextlib.redirect_stdout(io.StringIO()):

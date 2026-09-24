@@ -1,8 +1,8 @@
 # Translation stage
 
-Use a native subagent of the running GLM model for new or corrected translations.
+Use a native subagent of the running agent model for new or corrected translations.
 The child inherits the active parent model and provider configuration. Use the
-host's documented inheritance mechanism; do not select another model, pin a GLM
+host's documented inheritance mechanism; do not select another model, pin a different
 version, launch OpenCode, or route the job through another provider. The Python
 helper cannot spawn a session-native agent: the running coordinator performs
 that tool call. If native delegation or model inheritance is unavailable, report

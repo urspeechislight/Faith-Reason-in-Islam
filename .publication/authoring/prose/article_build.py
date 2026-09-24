@@ -19,12 +19,13 @@ sys.path.insert(0,str(ROOT))
 import handoff
 import evidence
 import article_revision
+import native_release
 import scripture_alignment
 import quote_layout
 import render_article
 import review
 SCHEMA=1
-RUNTIME=['article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
+RUNTIME=['native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
 VALIDATOR=ROOT.parent/'skills/faith-reason-note/validate.py'
 
 
@@ -167,7 +168,7 @@ def prepare(a):
     errors=review.verify(review.inspect_file(Path(data['paths']['source'])),baseline,record,require_release=not pending)
     if errors:raise ValueError('master review failed: '+'; '.join(errors))
     receipt=read(directory/'handoff.preview.json')
-    receipt.update(source_baseline=baseline,source_review=record,release_pending=pending)
+    receipt.update(source_baseline=baseline,source_review=record,release_pending=pending and not record.get('council',{}).get('report',{}).get('release',{}).get('native'))
     errors=handoff.verify((directory/'article.html').read_text(),receipt)
     if errors:raise ValueError('verified conversion changed: '+'; '.join(errors))
     key=sha_bytes((digest(baseline_path)+digest(review_path)+digest(directory/'article.html')).encode())[:20]
@@ -177,7 +178,7 @@ def prepare(a):
     else:write(approved,receipt)
     data['paths'].update(baseline=str(baseline_path),review=str(review_path))
     paths={'source':data['paths']['source'],'baseline':str(baseline_path),'review':str(review_path),'html':str(directory/'article.html'),'handoff':str(approved),'preflight':str(directory/'preflight.json')}
-    data['ready']={'status':'awaiting-hosted-review' if pending else 'master-reviewed','paths':paths,'hashes':{name:digest(path) for name,path in paths.items()},'runtime':runtime()}
+    data['ready']={'status':'awaiting-native-review' if receipt['release_pending'] else 'master-reviewed','paths':paths,'hashes':{name:digest(path) for name,path in paths.items()},'runtime':runtime()}
     write(manifest,data);print('Checked build:',approved);print('Status:',data['ready']['status'],'(no publication performed)');return 0
 
 
@@ -194,12 +195,14 @@ def verify(a):
     baseline=read(final_paths['html_baseline']);record=read(final_paths['html_review'])
     errors=review.verify(review.inspect_file(Path(ready['paths']['html'])),baseline,record,receipt['source_sha256'],require_release=data['delivery']!='publish')
     errors+=evidence.verify(read(final_paths['evidence']),source)
+    if data['delivery']=='publish' and not getattr(a,'native_pending',False):
+        errors+=native_release.errors(source,page,Path(final_paths['evidence']).read_text(),receipt['source_review']['council']['report'])
     if errors:raise ValueError('combined final verification failed: '+'; '.join(errors))
     data['paths'].update(final_paths);ready['paths'].update(final_paths)
     ready['hashes'].update({name:digest(path) for name,path in final_paths.items()})
-    ready['status']='prepared-for-hosted-review' if data['delivery']=='publish' else 'reviewed-draft'
+    ready['status']=('awaiting-native-review' if getattr(a,'native_pending',False) else 'prepared-for-publication') if data['delivery']=='publish' else 'reviewed-draft'
     write(a.manifest,data)
-    print('Combined master, HTML, handoff, render and source-archive checks passed. Hosted approval and deployment remain required for publication.');return 0
+    print('Combined artifact checks passed. Status:',ready['status']+'. GitHub checks and deployment remain required for publication.');return 0
 
 
 def paths(a):
@@ -219,6 +222,8 @@ def main(argv=None):
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
     i=sub.add_parser('paths');i.add_argument('manifest',type=Path)
     i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True)
+    i=sub.add_parser('release-request');i.add_argument('manifest',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
+    i=sub.add_parser('release-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True)
     for command in ['reviews','stage','status']:
         i=sub.add_parser(command);i.add_argument('manifest',type=Path)
     i=sub.add_parser('reuse');i.add_argument('manifest',type=Path);i.add_argument('--confirmation',type=Path,required=True)
@@ -230,6 +235,8 @@ def main(argv=None):
         with a.manifest.with_suffix(a.manifest.suffix+'.lock').open('a') as lock:
             try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             except BlockingIOError:raise ValueError('another process is using this run manifest')
+            if a.command in {'release-request','release-accept'}:
+                return getattr(native_release,'request' if a.command=='release-request' else 'accept')(sys.modules[__name__],a)
             if a.command in {'revise','reviews','reuse','stage','status','evidence'}:
                 method='evidence_export' if a.command=='evidence' else a.command
                 return getattr(article_revision,method)(sys.modules[__name__],a)

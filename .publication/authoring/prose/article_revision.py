@@ -272,6 +272,6 @@ def status(B,a):
         result.update(state='needs-evidence-and-reviews',next='evidence; reviews; complete actual review')
         if data.get('staging'):result.update(state='staging-interrupted',next='stage')
         elif data.get('staged'):result.update(state='staged',next='inspect Git diff and publication status')
-        elif data.get('ready'):result.update(state=data['ready']['status'],next='verify' if data['ready']['status']!='prepared-for-hosted-review' else 'stage')
+        elif data.get('ready'):result.update(state=data['ready']['status'],next='verify' if data['ready']['status']!='prepared-for-publication' else 'stage')
     except (OSError,ValueError,KeyError,TypeError) as exc:result['errors'].append(str(exc))
     print(json.dumps(result,indent=2));return 0

@@ -174,6 +174,10 @@ class ManifestTests(unittest.TestCase):
         ready=B.read(self.manifest)['ready'];html=review.inspect_file(Path(ready['paths']['html']))
         B.write(data['paths']['html_baseline'],html);B.write(data['paths']['html_review'],fixture.approved(html))
         B.write(data['paths']['evidence'],{'schema':1,'artifact_sha256':review.digest(self.source.read_text()),'sources':[{'kind':'external','id':'fixture','citation':'Synthetic witness only','url':'https://example.invalid','accessed':'2026-09-23','raw':'He went home.','raw_sha256':review.digest('He went home.')}],'claims':[]})
+        from test_native_release import finish_fixture
+        self.assertEqual(self.call('verify',self.manifest),1)
+        with contextlib.redirect_stdout(io.StringIO()):self.assertEqual(finish_fixture(B,self.manifest),0)
+        ready=B.read(self.manifest)['ready']
         self.assertEqual(self.call('verify',self.manifest),0)
         # A valid HTML review cannot excuse a stale embedded master approval.
         receipt=B.read(ready['paths']['handoff']);receipt['source_review']['schema']='obsolete'

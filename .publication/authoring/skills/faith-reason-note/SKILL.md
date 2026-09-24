@@ -19,7 +19,7 @@ pipeline or ask the user to invoke its internal stages separately.
 
 The shared workflow applies in Kimi, Claude, Codex, and other skill clients.
 Existing `validate.py`, `translate.py`, and `translate-style.md` paths remain
-supported. Translation uses a native subagent inheriting the running GLM model. The shared
+supported. Translation uses a native subagent inheriting the active parent model. The shared
 helper prepares requests and validates responses; it does not launch OpenCode.
 Follow the translation procedure linked from the shared workflow.
 
@@ -30,3 +30,8 @@ Complete scripture alignment before council review. Diagnose CI with the exact
 run/commit through publication_status.py; regression fixtures and article release
 results are separate. These commands are agent responsibilities within this
 invocation, not extra tasks for the user.
+
+All council and release reviewers also inherit the running model through native
+subagents. No Copilot, OpenCode, alternate endpoint or paid-usage change without
+explicit authorization. Use release-request/release-accept before final verify
+and stage. GitHub runs mechanical checks only; publication needs no Copilot quota.

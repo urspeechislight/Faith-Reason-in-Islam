@@ -58,7 +58,30 @@ class RevisionTests(ManifestTests):
         ready=B.read(self.manifest)['ready'];html=review.inspect_file(Path(ready['paths']['html']))
         B.write(data['paths']['html_baseline'],html);B.write(data['paths']['html_review'],fixture.approved(html))
         B.write(data['paths']['evidence'],{'schema':1,'artifact_sha256':review.digest(self.source.read_text()),'sources':[{'kind':'external','id':'fixture','citation':'Synthetic witness only','url':'https://example.invalid','accessed':'2026-09-23','raw':'He went home.','raw_sha256':review.digest('He went home.')}],'claims':[]})
+        from test_native_release import finish_fixture
+        self.assertEqual(self.call('verify',self.manifest),1)
+        with contextlib.redirect_stdout(io.StringIO()):self.assertEqual(finish_fixture(B,self.manifest),0)
         self.assertEqual(self.call('verify',self.manifest),0)
+    def test_native_request_accept_preserves_prior_record_and_stages(self):
+        from test_native_release import response
+        self.ready();old=Path(B.read(self.manifest)['paths']['review']);before=old.read_bytes();request=self.root/'native-request'
+        self.assertEqual(self.call('release-request',self.manifest,'--parent-model','active-model','--output',request),0)
+        reply=self.root/'native-response.json';reply.write_text(response(B.read(request/'request.json')))
+        self.assertEqual(self.call('release-accept',self.manifest,'--request',request/'request.json','--response',reply,'--agent-id','synthetic-native-child','--model','active-model'),0)
+        self.assertEqual(old.read_bytes(),before);self.assertNotEqual(B.read(self.manifest)['paths']['review'],str(old))
+        self.assertEqual(self.call('stage',self.manifest),0)
+    def test_native_accept_failure_restores_manifest_and_preserves_response(self):
+        from test_native_release import response
+        self.ready();request=self.root/'native-request'
+        self.assertEqual(self.call('release-request',self.manifest,'--parent-model','active-model','--output',request),0)
+        reply=self.root/'native-response.json';reply.write_text(response(B.read(request/'request.json')))
+        before=B.read(self.manifest);original=B.verify;calls=[]
+        def verify(args):
+            calls.append(1)
+            if len(calls)==2:raise ValueError('simulated post-prepare verification failure')
+            return original(args)
+        with patch.object(B,'verify',side_effect=verify):self.assertEqual(self.call('release-accept',self.manifest,'--request',request/'request.json','--response',reply,'--agent-id','child','--model','active-model'),1)
+        self.assertEqual(B.read(self.manifest),before);self.assertTrue(list((request/'responses').glob('*/response.txt')))
     def test_revision_preserves_parent_and_starts_pending(self):
         self.init();self.preflight();before=self.manifest.read_bytes();old=self.source.read_text()
         self.source.write_text(note(extra='A later witness arrived.'))
@@ -133,34 +156,5 @@ class RevisionTests(ManifestTests):
         changed=R.retained_alignment(B,parent,old,old.replace('*alpha beta*','*alpha*'));self.assertEqual(changed['status'],'pending')
         record['reviewer']='altered';B.write(path,record);self.assertIsNone(R.retained_alignment(B,parent,old,old))
 
-
-class ReviewerRetryTests(unittest.TestCase):
-    def packet(self):
-        report={'advisors':[{'response':'FID-01: Correct the count of witnesses.'}]}
-        return {'candidate':'The source names eight witnesses.','artifact_sha256':review.digest('The source names eight witnesses.'),'report':report,'council_sha256':review.council_digest(report),'required_disposition_ids':sorted(review.council_finding_ids(report)),'writer_dispositions':[]}
-    def response(self,p,**extra):
-        return dict(status='passed',artifact_sha256=p['artifact_sha256'],council_sha256=p['council_sha256'],assessment='The current candidate gives the count in the source and preserves its limited scope.',open_findings=[],dispositions=[{'id':key,'status':'resolved','evidence':'The candidate now says eight witnesses and matches the exact count given in the supplied source.'} for key in p['required_disposition_ids']],**extra)
-    def invoke(self,responses):
-        packet=self.packet();evidence={'sources':[{'raw':'Eight witnesses.','raw_sha256':review.digest('Eight witnesses.')}],'artifact_sha256':packet['artifact_sha256']}
-        calls=[]
-        def run(*args,**kwargs):
-            value=responses[min(len(calls),len(responses)-1)];calls.append(1)
-            if isinstance(value,Exception):raise value
-            kwargs['stdout'].write(value if isinstance(value,str) else json.dumps(value));kwargs['stdout'].flush()
-            return subprocess.CompletedProcess([],0)
-        with tempfile.TemporaryDirectory() as td,patch.object(L.shutil,'which',return_value='/fixture/client'),patch.object(L.subprocess,'run',side_effect=run):
-            error=None
-            try:L.run(packet,evidence,Path(td)/'review')
-            except ValueError as exc:error=str(exc)
-            receipts=list((Path(td)/'review').rglob('invocation.json'))
-            return calls,error,[json.loads(p.read_text()) for p in receipts]
-    def test_missing_dispositions_get_one_real_retry(self):
-        passed=self.response(self.packet());empty=dict(passed,dispositions=[])
-        calls,error,_=self.invoke([empty,passed]);self.assertEqual(len(calls),2);self.assertIsNone(error)
-        calls,error,_=self.invoke([empty]);self.assertEqual(len(calls),2);self.assertIsNotNone(error)
-    def test_substantive_hash_and_provider_failures_are_never_retried(self):
-        passed=self.response(self.packet())
-        for value in [dict(passed,status='blocked',open_findings=['FID-02']),dict(passed,artifact_sha256='wrong'),'not json',subprocess.TimeoutExpired(['fixture'],1)]:
-            calls,error,receipts=self.invoke([value]);self.assertEqual(len(calls),1);self.assertIsNotNone(error);self.assertEqual(len(receipts),1)
 
 if __name__=='__main__':unittest.main()

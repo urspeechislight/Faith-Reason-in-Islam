@@ -115,8 +115,9 @@ python3 ~/.agents/prose/article_build.py paths RUN/build.json
 If the exact review files already exist elsewhere, provide both `--baseline`
 and `--review` to prepare; successful validation registers those paths. Prepare
 embeds the actual verified master records into an immutable handoff and pins the
-HTML, source, runtime and review bytes. Hosted publication defers only the final
-independent release decision to GitHub. All other review requirements still apply.
+HTML, source, runtime and review bytes. Prepare can precede native release review. Complete release-request/release-accept
+as described in publication.md; the final verify and stage require the actual
+native response. GitHub makes no model calls.
 
 Use the printed HTML/render paths to create the HTML review at the manifest's
 `html_baseline` and `html_review` paths. Reuse the verified master council through
@@ -135,8 +136,8 @@ This combines the master approval, handoff preservation, HTML review, render
 measurements and source archive checks. It cannot pass on separate successful
 checks while the embedded master fails. Exact alternative paths can be supplied
 with `--html-baseline`, `--html-review` and `--evidence`; successful verification
-pins them. For hosted publication, success means prepared for hosted review,
-not published. Any later edit invalidates the pinned artifacts.
+pins them. For publication, success means the exact bundle has a valid native release
+receipt and is ready for protected GitHub checks; deployment is still required. Any later edit invalidates the pinned artifacts.
 
 Run `article_build.py stage RUN/build.json` to copy the five verified artifacts
 to the registered worktree. The transaction preserves replaced files and can
@@ -166,7 +167,7 @@ Roman tokens. Preserve phonemic apostrophes, ʿ and ʾ. The named reviewer recor
 specific fidelity assessment in `evidence` and marks reviewed quotations
 `passed`; only a completely reviewed record is `approved`. The mechanical check
 establishes complete alignment, not correct pronunciation or interpretation.
-The hosted reviewer receives the full layers, source and alignment for its own
+The native final reviewer receives the full layers, source and alignment for its own
 assessment. Never invent token assignments merely to satisfy coverage.
 
 ## Revise without rebuilding records by hand
@@ -209,8 +210,8 @@ approval, changed-block judgments, semantic checks or cue dispositions. Duplicat
 text, changed sections, changed protected quotations/links and stale prior
 reviews require fresh review. No prefix matching or hand-written JSON port
 scripts. Finish the actual affected reviews and full-article coherence check,
-then run prepare, verify and stage normally.
+then run prepare, release-request/release-accept, verify and stage normally.
 
 `article_build.py status RUN/build.json` reports the recorded stage and next
 command. It does not report publication; inspect the exact GitHub run using
-publication.md. A successful local verification never closes hosted findings.
+publication.md. A successful local verification never proves that deployment completed.

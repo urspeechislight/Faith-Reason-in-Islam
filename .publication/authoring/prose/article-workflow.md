@@ -10,6 +10,15 @@ A plain faith-reason-note request publishes the supplied note, researching
 substantive gaps first when needed. Workflow maintenance authorizes changes to
 the process, not edits or publication of articles quoted as examples.
 
+## Model authorization
+
+Use native subagents inheriting the current agent's model for every delegated
+model task: translation, all council roles, follow-ups and final review. Do not
+choose a different model, launch Copilot/OpenCode/GitHub Models, call another
+provider, or enable paid usage without explicit user authorization. CI performs
+mechanical checks only. The user does not need a Copilot allowance to publish.
+Follow publication.md for the artifact-bound native final-review handoff.
+
 ## Load the applicable references
 
 Both skill names are entry points into this workflow. Follow these references
@@ -274,7 +283,7 @@ main line even when it was found during research. Retain useful excluded
 material in the dossier rather than forcing every search result into the article.
 
 Copy Arabic from the corpus, follow translation.md to delegate new translation
-units to a native subagent inheriting the running GLM model, and
+units to a native subagent inheriting the active model, and
 verify quotations and complete translations. Apply the shared prose contract.
 Keep commentary beside the evidence in research articles; do not repeat an
 entire second argument under a narration's closing Commentary section.

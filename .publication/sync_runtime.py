@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 import shutil
 ROOT=Path(__file__).resolve().parent
-FILES=['publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
-AUTHORING_PROSE=['translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-sources.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
+FILES=['article-sources.md','native_release.py','publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
+AUTHORING_PROSE=['translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_native_release.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
 AUTHORING_SKILLS={'islamic-note':['SKILL.md','validate.py'],'faith-reason-note':['SKILL.md','template-tabs.html','template-flowing.html']}
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--check',action='store_true');p.add_argument('--agents-root',type=Path,default=Path.home()/'.agents');a=p.parse_args()

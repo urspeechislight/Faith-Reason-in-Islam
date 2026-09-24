@@ -65,42 +65,13 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(release_runner.review_packet(packet)['candidate'],packet['candidate'])
         clean=next(row for row in fixtures if row[0]=='direct-prose')
         self.assertIn('does not assess the poets’ motives',clean[1]['candidate'])
-    def test_schema_retry_is_bounded_and_preserves_original_responses(self):
-        import subprocess
-        packet={'candidate':'Eight poets wrote elegies.','report':{'advisors':[{'role':'prose','response':'No defects.'}]},'required_disposition_ids':['prose:response']}
-        packet.update(artifact_sha256=gate.review.digest(packet['candidate']),council_sha256=gate.review.council_digest(packet['report']))
-        bundle={'artifact_sha256':packet['artifact_sha256'],'sources':[{'raw':'Eight poets wrote elegies.','raw_sha256':gate.review.digest('Eight poets wrote elegies.')}]}
-        base={'status':'passed','open_findings':[],'artifact_sha256':packet['artifact_sha256'],'council_sha256':packet['council_sha256'],'assessment':'The complete current candidate preserves the source statement without adding any unsupported inference or framing.'}
-        good=dict(base,dispositions=[{'id':'prose:response','status':'resolved','evidence':'The current candidate states the source count directly and contains no additional framing or unsupported interpretation.'}])
-        short=dict(base,dispositions=[{'id':'prose:response','status':'resolved','evidence':'Direct prose.'}])
-        for responses,expected,calls in [([short,good],True,2),([short,short],False,2),([dict(good,status='blocked',open_findings=['new'])],False,1),([dict(good,artifact_sha256='wrong')],False,1)]:
-            with self.subTest(expected=expected,calls=calls), tempfile.TemporaryDirectory() as directory:
-                sequence=iter(responses)
-                def invoke(command,**kwargs):
-                    kwargs['stdout'].write(json.dumps(next(sequence)));return subprocess.CompletedProcess(command,0)
-                out=Path(directory)/'review'
-                with patch.object(release_runner.shutil,'which',return_value='/fixture/client'),patch.object(release_runner.subprocess,'run',side_effect=invoke) as model:
-                    if expected:result=release_runner.run(packet,bundle,out)
-                    else:
-                        with self.assertRaises(ValueError):release_runner.run(packet,bundle,out)
-                self.assertEqual(model.call_count,calls)
-                self.assertEqual(json.loads((out/'response.txt').read_text()),responses[0])
-                if expected:
-                    self.assertEqual(json.loads(result['response']),good)
-                    self.assertEqual(json.loads((out/'schema-retry/response.txt').read_text()),good)
-                else:self.assertFalse((out/'release.json').exists())
-    def test_malformed_blocked_response_cannot_pass_behavioral_test(self):
-        def malformed(packet,bundle,out,client):
-            out.mkdir(parents=True)
-            (out/'invocation.json').write_text(json.dumps({'exit_code':0}))
-            (out/'response.txt').write_text(json.dumps({'status':'blocked','open_findings':['prose:one']}))
-            (out/'validation.json').write_text(json.dumps({'errors':['independent release reviewer has not cleared all findings','independent release response is stale for these council findings/dispositions']}))
-            raise ValueError('invalid response')
-        with tempfile.TemporaryDirectory() as directory, patch.object(sys,'argv',['evaluate','--output',directory]), patch.object(evaluate.release_runner,'run',side_effect=malformed):
-            self.assertEqual(evaluate.main(),1)
-            result=json.loads((Path(directory)/'result.json').read_text())
-            self.assertEqual(result['status'],'blocked')
-            self.assertIn('Malformed rejection',result['error'])
+    def test_external_execution_is_disabled_even_with_a_client_argument(self):
+        with patch.object(release_runner.subprocess,'run',side_effect=AssertionError('external execution forbidden')):
+            with self.assertRaisesRegex(ValueError,'disabled'):release_runner.run({}, {}, 'unused',client='copilot')
+    def test_gate_has_no_model_call_or_model_cli_permission(self):
+        source=Path(gate.__file__).read_text();self.assertNotIn('release_runner.run(',source)
+        workflow=(Path(gate.__file__).parent.parent/'.github/workflows/native-publication.yml').read_text()
+        self.assertNotIn('copilot-requests',workflow);self.assertNotIn('@github/copilot',workflow);self.assertNotIn('evaluate.py --output',workflow)
     def test_hosted_validator_uses_bundled_runtime_without_personal_install(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(Path,'home',return_value=Path(directory)):
             errors=gate.validate_article.check('<html><body><main data-category="commentary"><p>A source gives a date.</p></main></body></html>')
