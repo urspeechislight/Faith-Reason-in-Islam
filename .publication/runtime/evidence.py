@@ -8,6 +8,7 @@ import scripture_alignment
 import argparse
 import hashlib
 import json
+import unicodedata
 from pathlib import Path
 
 import importlib.util as _ilu
@@ -19,7 +20,14 @@ import sqlite3
 FIELDS = ['rowid', 'relpath', 'author', 'title', 'vol', 'page', 'raw']
 AR = re.compile(r'[\u0621-\u063a\u0641-\u064a\u066e-\u06d3\u0750-\u077f\u08a0-\u08c9]')
 def sha(text): return hashlib.sha256(text.encode()).hexdigest()
-def flat(text): return re.sub(r'\s+', ' ', text).strip()
+def flat(text: str) -> str:
+    """Collapse whitespace and apply NFC so combining-mark order cannot defeat a match.
+
+    Archived editions and displayed verses may differ only in Unicode
+    combining-mark ordering (cantillation and vowel signs); article-sources.md
+    allows documented NFC normalization for exactly this case.
+    """
+    return re.sub(r'\s+', ' ', unicodedata.normalize('NFC', text).replace('\u200d', '')).strip()
 
 
 def arabic_blocks(note):
@@ -74,7 +82,12 @@ def ledger_usage(ledger):
 
 
 def archived_text(raw):
-    """Decode archived transport without changing its retained bytes or hash."""
+    """Decode archived transport without changing its retained bytes or hash.
+
+    Verse-list JSON chapters additionally yield their verses joined in order,
+    a presentation transformation of the same retained text, so a displayed
+    multi-verse passage is coverable by its chapter archive.
+    """
     try:
         data = json.loads(raw)
     except (ValueError, TypeError):
@@ -86,6 +99,8 @@ def archived_text(raw):
             if isinstance(value, dict): return [s for item in value.values() for s in strings(item)]
             return []
         parts = strings(data)
+        if isinstance(data, list) and data and all(isinstance(v, dict) and isinstance(v.get('text'), str) and isinstance(v.get('verse'), int) for v in data):
+            parts.append(' '.join(v['text'] for v in sorted(data, key=lambda v: v['verse'])))
         return parts + [' '.join(parts)]
     if re.search(r'<(?:html|body|p|div|span)\b', raw, re.I):
         from html.parser import HTMLParser

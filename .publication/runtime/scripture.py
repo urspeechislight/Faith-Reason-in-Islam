@@ -101,6 +101,11 @@ def errors(source,fmt):
         for para in row['paragraphs']:
             if para['role']=='transliteration' and any(unicodedata.category(ch).startswith('L') and 'LATIN' not in unicodedata.name(ch,'') and 'MODIFIER LETTER' not in unicodedata.name(ch,'') for ch in para['text']):
                 issues.append(prefix+'transliteration must use Roman letters, not copied source script')
+        for para in row['paragraphs']:
+            if para['role']=='translation':
+                letters=[ch for ch in para['text'] if unicodedata.category(ch).startswith('L')]
+                latin=sum('LATIN' in unicodedata.name(ch,'') for ch in letters)
+                if letters and latin<=len(letters)-latin:issues.append(prefix+'translation must contain English, not a copied source-language paragraph')
         slots={r:{} for r in ROLES}
         for p in row['paragraphs']:
             for mark in p['marks']:slots[p['role']].setdefault(mark['term'],[]).append(mark)
@@ -112,6 +117,7 @@ def errors(source,fmt):
                 if len(marks)!=1:issues.append(prefix+f'term {term} needs exactly one mark in {role}')
                 elif not marks[0]['text'].strip():issues.append(prefix+'empty lexical mark')
                 elif role!='translation' and len(marks[0]['text'].split())!=1:issues.append(prefix+'mark one source lexeme and its romanization, not an entire phrase')
+                elif role=='translation' and re.search(r'[.!?;]|\b(?:because|although|whereas|therefore)\b',marks[0]['text'],re.I):issues.append(prefix+'highlight the English rendering of one lexeme, not a sentence or clause')
         originals=[p for p in row['paragraphs'] if p['role']=='original']
         # Arabic must not be inserted as an intermediary beside another source script.
         scripts=set()
@@ -120,6 +126,7 @@ def errors(source,fmt):
             if re.search(r'[\u0370-\u03ff\u1f00-\u1fff]',p['text']):scripts.add('grc')
             if re.search(r'[\u0590-\u05ff]',p['text']):scripts.add('he')
         bible=re.search(r'\b(?:Bible|Torah|Tanakh|Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song(?: of (?:Songs|Solomon))?|Canticles|Wisdom|Sirach|Tobit|Judith|Baruch|Maccabees|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation)\b',row['caption'],re.I)
+        if bible and any(re.search(r'[\u0621-\u064a]',p['text']) for p in row['paragraphs']):issues.append(prefix+'Arabic intermediary is forbidden in every Bible layer')
         if 'ar' in scripts and (len(scripts)>1 or bible):issues.append(prefix+'Arabic intermediary is forbidden; quote the identified source language directly')
         if fmt in ('html','htm'):
             langs={p['language'] for p in originals}

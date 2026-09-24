@@ -39,6 +39,9 @@ def main(argv=None):
                 if report.is_file():
                     data=json.loads(report.read_text())
                     if data.get('phase')!=phase:raise ValueError('artifact phase mismatch: '+str(report))
+                    if data.get('commit') is not None and data['commit']!=a.commit:raise ValueError('artifact commit mismatch: '+str(report))
+                    if data.get('status') not in {'passed','blocked'}:raise ValueError('artifact lacks a valid result status: '+str(report))
+                    if phase=='article' and data.get('status')=='passed' and data.get('commit')!=a.commit:raise ValueError('passed article artifact lacks exact commit binding')
                     result[phase]={'report':str(report.resolve()),'result':data}
         a.output.mkdir(parents=True,exist_ok=True);(a.output/'status.json').write_text(json.dumps(result,indent=2)+'\n')
         summary=json.loads(json.dumps(result))
