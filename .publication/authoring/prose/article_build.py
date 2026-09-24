@@ -28,13 +28,15 @@ import evidence
 import article_revision
 import article_scope
 import review_intake
+import review_dispatch
+import review_dependencies
 import native_release
 import scripture_alignment
 import quote_layout
 import render_article
 import review
 SCHEMA=1
-RUNTIME=['conversion_review.py','review_intake.py','article_scope.py','native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
+RUNTIME=['conversion_review.py','review_intake.py','review_dispatch.py','review_identity.py','review_dependencies.py','article_scope.py','native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
 VALIDATOR=ROOT.parent/'skills/faith-reason-note/validate.py'
 
 
@@ -47,6 +49,18 @@ def write(path,data):
 def runtime():
     paths=[ROOT/n for n in RUNTIME]+[VALIDATOR]+[render_article.TEMPLATES/f'template-{t}.html' for t in ('tabs','flowing')]
     return {str(p):digest(p) for p in paths}
+def render_runtime():
+    names={'render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','quotation.css','article-structure.md'}
+    return {path:value for path,value in runtime().items() if Path(path).name in names or path==str(VALIDATOR) or Path(path).name.startswith('template-')}
+
+def compatible_binding(previous,current):
+    previous=dict(previous)
+    retained=previous.get('runtime',{})
+    if review_dependencies.runtime_matches(retained,runtime()):previous['runtime']=current['runtime']
+    else:previous['runtime']={p:v for p,v in retained.items() if p in current['runtime']}
+    return previous==current
+
+
 def load(manifest):
     data=read(manifest)
     if data.get('schema')!=SCHEMA:raise ValueError('unsupported run manifest schema; preserve it and adopt its retained handoff into a new run')
@@ -65,7 +79,7 @@ def inputs(data):
     source=Path(data['paths']['source'])
     if not source.is_file():raise ValueError('missing canonical candidate: '+str(source))
     text=source.read_text()
-    return text,{'source_sha256':handoff.sha(text),'runtime':runtime(),'render':data['render'],'site_root':data['paths']['site_root'],'linked_pages':{v:digest(Path(data['paths']['site_root'])/v.split('#')[0]) for v in data['render'].get('note_map',{}).values()},'year':datetime.date.today().year,'scripture_review_sha256':digest(data['paths']['scripture_review']) if data['paths'].get('scripture_review') and Path(data['paths']['scripture_review']).is_file() else None}
+    return text,{'source_sha256':handoff.sha(text),'runtime':render_runtime(),'render':data['render'],'site_root':data['paths']['site_root'],'linked_pages':{v:digest(Path(data['paths']['site_root'])/v.split('#')[0]) for v in data['render'].get('note_map',{}).values()},'year':datetime.date.today().year,'scripture_review_sha256':digest(data['paths']['scripture_review']) if data['paths'].get('scripture_review') and Path(data['paths']['scripture_review']).is_file() else None}
 
 def validator():
     spec=importlib.util.spec_from_file_location('article_html_validator',VALIDATOR);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
@@ -106,11 +120,11 @@ def preflight(a):
         candidate=Path(previous['preflight'])
         if candidate.is_file():
             cached=read(candidate)
-            if cached.get('binding')==binding and cached.get('status')=='passed':
+            if compatible_binding(cached.get('binding',{}),binding) and cached.get('status')=='passed':
                 directory=Path(previous['directory']);result_path=candidate;break
     if result_path.exists():
         result=read(result_path)
-        if result.get('binding')!=binding:raise ValueError('preflight binding mismatch')
+        if not compatible_binding(result.get('binding',{}),binding):raise ValueError('preflight binding mismatch')
         for name,value in result.get('artifacts',{}).items():
             if digest(directory/name)!=value:raise ValueError('cached preflight artifact changed: '+name)
         if result['status']=='passed':
@@ -163,7 +177,7 @@ def current_build(data):
     row=next((b for b in data['builds'] if b['id']==data.get('latest_build')),None)
     if not row:raise ValueError('run preflight before preparing a reviewed handoff')
     result=read(row['preflight'])
-    if result.get('binding')!=binding:raise ValueError('master, render options or toolchain changed; run preflight again')
+    if not compatible_binding(result.get('binding',{}),binding):raise ValueError('master, render options or toolchain changed; run preflight again')
     if result.get('status')!='passed':raise ValueError('preflight is blocked; fix its located findings before review')
     directory=Path(row['directory'])
     for name,value in result['artifacts'].items():
@@ -199,7 +213,7 @@ def prepare(a):
 def verify(a):
     data=load(a.manifest);source,directory,result=current_build(data);ready=data.get('ready')
     if not ready:raise ValueError('no verified handoff; run prepare after real master review')
-    if ready['runtime']!=runtime():raise ValueError('toolchain changed since review; no approval-field or hash patching is permitted')
+    if not review_dependencies.runtime_matches(ready['runtime'],runtime()):raise ValueError('toolchain changed since review; no approval-field or hash patching is permitted')
     for name,path in ready['paths'].items():
         if digest(path)!=ready['hashes'][name]:raise ValueError('ready artifact changed: '+name)
     receipt=read(ready['paths']['handoff']);page=Path(ready['paths']['html']).read_text()
@@ -234,15 +248,17 @@ def main(argv=None):
     i.add_argument('--url',help='Exact user-supplied published article URL; must match slug')
     i=sub.add_parser('adopt');i.add_argument('manifest',type=Path);i.add_argument('--handoff',type=Path,required=True);i.add_argument('--source',type=Path);i.add_argument('--site-root',type=Path,required=True);i.add_argument('--slug',required=True);i.add_argument('--delivery',choices=['publish','draft','note'],default='publish');i.add_argument('--config',type=Path)
     i=sub.add_parser('scope');i.add_argument('manifest',type=Path);i.add_argument('--url',required=True)
-    i=sub.add_parser('review-request');i.add_argument('manifest',type=Path);i.add_argument('--kind',choices=['master','render','scripture'],required=True);i.add_argument('--source-context',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
-    i=sub.add_parser('review-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True)
+    i=sub.add_parser('review-request');i.add_argument('manifest',type=Path);i.add_argument('--kind',choices=['master','render','scripture'],required=True);i.add_argument('--source-context',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--session-id');i.add_argument('--council-origins',type=Path)
+    i=sub.add_parser('review-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True);i.add_argument('--session-id')
+    i=sub.add_parser('review-plan');i.add_argument('manifest',type=Path)
+    i=sub.add_parser('review-identity');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--session-id',required=True);i.add_argument('--agent-id',required=True)
     i=sub.add_parser('preflight');i.add_argument('manifest',type=Path)
     i=sub.add_parser('prepare');i.add_argument('manifest',type=Path);i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path)
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
     i=sub.add_parser('paths');i.add_argument('manifest',type=Path)
     i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True)
     i=sub.add_parser('release-request');i.add_argument('manifest',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
-    i=sub.add_parser('release-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True)
+    i=sub.add_parser('release-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True);i.add_argument('--session-id')
     for command in ['reviews','stage','status']:
         i=sub.add_parser(command);i.add_argument('manifest',type=Path)
     i=sub.add_parser('reuse');i.add_argument('manifest',type=Path);i.add_argument('--confirmation',type=Path,required=True)
@@ -257,6 +273,8 @@ def main(argv=None):
         with a.manifest.with_suffix(a.manifest.suffix+'.lock').open('a') as lock:
             try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             except BlockingIOError:raise ValueError('another process is using this run manifest')
+            if a.command=='review-identity':return review_dispatch.check_identity(sys.modules[__name__],a)
+            if a.command=='review-plan':return review_dispatch.command(sys.modules[__name__],a)
             if a.command=='scope':return article_scope.command(sys.modules[__name__],a)
             if a.command in {'review-request','review-accept'}:
                 return getattr(review_intake,'request' if a.command=='review-request' else 'accept')(sys.modules[__name__],a)

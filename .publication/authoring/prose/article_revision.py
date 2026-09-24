@@ -158,6 +158,9 @@ def advance(B,a):
     reviews(B,SimpleNamespace(manifest=a.manifest))
     data=B.load(a.manifest)
     if data.get('ready'):return status(B,a)
+    import review_dispatch
+    readiness=review_dispatch.plan(B,a.manifest)
+    if readiness['errors']:raise ValueError('review prerequisites: '+'; '.join(readiness['errors']))
     pending=[label for label,key in [('master','review'),('render','html_review')] if B.read(data['paths'][key]).get('status')!='approved']
     print('Mechanical prerequisites passed. Next:',('review-request/review-accept for '+', '.join(pending)) if pending else 'prepare; existing accepted reviews retained')
     return 0
@@ -330,6 +333,9 @@ def status(B,a):
         review_paths=[Path(data['paths'][k]) for k in ('review','html_review')]
         ep=Path(data['paths']['evidence'])
         if ep.is_file() and all(p.is_file() for p in review_paths) and not B.evidence.verify(B.read(ep),source):
+            import review_dispatch
+            readiness=review_dispatch.plan(B,a.manifest)
+            if readiness['errors']:raise ValueError('review prerequisites: '+'; '.join(readiness['errors']))
             pending=[label for label,p in zip(('master','render'),review_paths) if B.read(p).get('status')!='approved']
             result.update(state='awaiting-review' if pending else 'needs-prepare',next='review-request/review-accept for '+', '.join(pending) if pending else 'prepare')
         if data.get('ready'):

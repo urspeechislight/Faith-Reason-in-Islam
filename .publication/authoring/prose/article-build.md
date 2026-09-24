@@ -140,6 +140,64 @@ lists/quotes stop with a diagnostic. Literal source numbering is preserved as qu
 maintained renderer and preservation contract with a fixture when needed; never
 silently remove source content or make a per-article generator.
 
+## Use the prepared review, not validator exploration
+
+For an ordinary article repair, read the existing article, its registered corpus
+captures and the installed prose instructions. Correct concrete defects and reuse
+valid evidence. Research again only for a missing source, a changed claim or a
+specific fidelity concern. The presence of corpus text does not itself prove that
+the article's interpretation is correct.
+
+Run `article_build.py review-plan RUN/build.json` before dispatching reviewers.
+It reports stale master/render records before either review consumes model time.
+Resolve the reported stage through advance or revise; retain completed records.
+Do not inspect validator code to learn how to fill a review. The generated
+prompt, response contract, locations and response form are the review interface.
+
+Give the reviewer the prompt.txt path on Titan, its native session ID and the
+active model, with the instruction to read the listed assets and complete the
+form. Use a bounded task context; do not pass the full repair-session history.
+Read the complete candidate and the source evidence needed for its claims.
+The large request.json and baseline are machine archives, not extra reading
+assignments. The coordinator reads the readiness result and final findings;
+it does not separately reconstruct the reviewer schema or reread its packet.
+
+The form omits redundant machine fields. Intake restores exact omitted bindings,
+source text and retained council responses from the immutable request, never
+observations, approvals, cue resolutions or other judgments. Each source callout
+requires passed status, paragraph-boundary, speaker-boundary and completeness
+assessments (at least eight words each), plus its listed cue resolutions.
+A blocked response returns located findings. A malformed response gets one
+bounded correction using the tool's error. Repeated tool failures stop that stage
+with the exact command/error and retained files; they do not authorize JSON
+surgery, dummy agents, policy changes, or reverse-engineering the pipeline during
+an article task. Implementation inspection belongs to a reproducible tool defect
+and a separate workflow maintenance change.
+
+Reviewer identity is the native session ID plus native child ID. Supply
+`--session-id NATIVE_SESSION_ID` on review-request, review-accept and release-accept.
+Before substantive reading, the coordinator can check the spawned reviewer's
+identity with `article_build.py review-identity RUN/build.json --request
+RUN/master-request/request.json --session-id NATIVE_SESSION_ID --agent-id
+ACTUAL_CHILD_ID`. Resolve an ambiguous legacy origin before consuming review time.
+New council invocation records retain reviewer_identity with session_id and
+agent_id while preserving reviewer as the actual child ID. A different session's
+agent-2 is a different actor. An unknown legacy scope is never guessed.
+For a legacy collision, review-request accepts `--council-origins ORIGINS.json`:
+a list of group (advisors/peer_reviews/followup_reviews), index, session_id,
+agent_id, and transcript path. Each retained host invocation JSON must contain
+matching session_id, agent_id and the verbatim response. The command attaches
+provenance without renaming reviewers or changing judgments. If evidence is
+unavailable, obtain an actual affected review; never create agents to burn IDs.
+Host records establish recorded provenance, not cryptographic provider identity.
+
+Editorial and rendered review policies have separate dependency groups. Reviewed
+compatibility entries accept only a specific old digest under an exact tested new
+digest; all current validators still run. Unknown policy changes fail closed.
+A changed orchestration helper does not by itself invalidate a render. Rendering,
+source evidence and final release retain their own checks. Do not edit policy or
+install a different toolchain midway through an article task.
+
 ## One mechanical advance, then actual review
 
 After init/adopt/revise, use the maintained prerequisite command:
@@ -165,9 +223,9 @@ reviewer identities. Then request the editorial judgment and visual inspection:
 
 ```bash
 python3 ~/.agents/prose/article_build.py review-request RUN/build.json \
-  --kind master --parent-model ACTIVE_MODEL --output RUN/master-request
+  --kind master --parent-model ACTIVE_MODEL --session-id NATIVE_SESSION_ID --output RUN/master-request
 python3 ~/.agents/prose/article_build.py review-request RUN/build.json \
-  --kind render --parent-model ACTIVE_MODEL --output RUN/render-request
+  --kind render --parent-model ACTIVE_MODEL --session-id NATIVE_SESSION_ID --output RUN/render-request
 ```
 
 Delegate each prompt.txt to a native subagent inheriting the running model.
@@ -185,7 +243,7 @@ Ingest each unedited response with the same maintained command:
 ```bash
 python3 ~/.agents/prose/article_build.py review-accept RUN/build.json \
   --request RUN/master-request/request.json --response ACTUAL_RESPONSE.json \
-  --agent-id ACTUAL_CHILD_ID --model ACTIVE_MODEL
+  --agent-id ACTUAL_CHILD_ID --session-id NATIVE_SESSION_ID --model ACTIVE_MODEL
 ```
 
 Use the render request for its response. Blocked, malformed or stale replies are

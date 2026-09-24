@@ -6,15 +6,15 @@ import json
 from pathlib import Path
 import shutil
 ROOT=Path(__file__).resolve().parent
-FILES=['conversion_review.py','article-sources.md','native_release.py','publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
-AUTHORING_PROSE=['article_scope.py','review_intake.py','test_review_flow.py','translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_native_release.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
+FILES=['review_identity.py','review_dependencies.py','review-policy-compat.json','conversion_review.py','article-sources.md','native_release.py','publication_status.py','scripture_alignment.py','scripture.py','review.py','quote_layout.py','handoff.py','pre_push.py','release_runner.py','evidence.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md']
+AUTHORING_PROSE=['review_dispatch.py','test_review_efficiency.py','article_scope.py','review_intake.py','test_review_flow.py','translate.py','translate-style.md','article_build.py','article_revision.py','render_article.py','quotation.css','article-workflow.md','article-build.md','article-structure.md','publication.md','translation.md','test_article_build.py','test_revision_workflow.py','test_native_release.py','test_pipeline.py','test_scripture.py','test_handoff.py','test_quote_layout.py']
 AUTHORING_SKILLS={'islamic-note':['SKILL.md','validate.py','references/markdown.md'],
  'faith-reason-note':['SKILL.md','template-tabs.html','template-flowing.html','references/website.md'],
  'faith-reason-research':['SKILL.md','references/article-modes.md','references/prose-translation.md','references/debate-mode.md','references/research-framework.md']}
 
 def refresh_manifests():
     for folder,manifest in [('runtime','runtime-manifest.json'),('authoring','authoring-manifest.json')]:
-        paths=[p for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in {'.py','.md','.html','.css'} and '__pycache__' not in p.parts]
+        paths=[p for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in {'.py','.md','.html','.css','.json'} and '__pycache__' not in p.parts]
         for path in paths:
             if path.suffix=='.py':compile(path.read_text(),str(path),'exec')
         (ROOT/manifest).write_text(json.dumps({str(p.relative_to(ROOT/folder)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)},indent=2)+'\n')

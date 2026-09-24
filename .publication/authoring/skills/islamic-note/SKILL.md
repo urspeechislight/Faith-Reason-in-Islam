@@ -52,3 +52,12 @@ prerequisites and native `review-request`/`review-accept` for actual master,
 scripture and visual judgments. HTML conversion reuses verified master content;
 do not write duplicate per-cell observations, receipt-fill scripts, or modified
 source archives to obtain a pass. Read article-build.md for these commands.
+
+For routine repairs, use the existing article, registered source evidence and
+prose instructions. Run review-plan before delegation, then give reviewers the
+generated prompt and response form. Do not investigate baseline schemas or
+validator internals to complete a normal review. Additional research addresses
+specific evidence gaps. Keep reviewer tasks scoped to their supplied inputs;
+do not forward the entire session history. Use session-qualified native IDs,
+never dummy agents to avoid collisions. See article-build.md for the supported
+readiness, response and legacy-provenance commands.
