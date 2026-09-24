@@ -13,6 +13,7 @@ import conversion_review as C
 import evidence
 import review
 import review_intake as I
+import review_dispatch as D
 from test_article_build import ManifestTests
 from test_pipeline import ReviewTests
 
@@ -21,6 +22,7 @@ class IntakeTests(ManifestTests):
     def setup_reviews(self):
         self.init(); self.assertEqual(self.call('preflight',self.manifest),0)
         self.assertEqual(self.call('reviews', self.manifest), 0)
+        B.write(B.read(self.manifest)['paths']['evidence'],{'schema':1,'artifact_sha256':review.digest(self.source.read_text()),'sources':[{'kind':'external','id':'fixture','citation':'Synthetic witness only','url':'https://example.invalid','accessed':'2026-09-24','raw':'He went home.','raw_sha256':review.digest('He went home.')}],'claims':[]})
 
     def request(self, kind):
         directory=self.root/(kind+'-request')
@@ -81,6 +83,7 @@ class IntakeTests(ManifestTests):
 
     def test_master_intake_rejects_unregistered_evidence_before_delegation(self):
         self.setup_reviews()
+        Path(B.read(self.manifest)['paths']['evidence']).unlink()
         self.assertEqual(self.call('review-request',self.manifest,'--kind','master','--parent-model','fixture-parent','--output',self.root/'missing'),1)
         self.assertFalse((self.root/'missing').exists())
 
@@ -92,8 +95,11 @@ class IntakeTests(ManifestTests):
         B.write(ledger,{'schema':1,'passages':[]})
         B.write(external,[{'kind':'external','id':'test','citation':'Synthetic source only','url':'https://example.invalid/test','accessed':'2026-09-24','raw':'He went home.','raw_sha256':review.digest('He went home.')}])
         self.assertEqual(self.call('advance',self.manifest,'--external',external),0)
-        master_request=self.request('master');master=ReviewTests().approved(review.inspect_file(self.source));master['reviewer']='fixture-child';master['structural_validation']['status']='passed'
-        master_reply=self.reply(master_request,master)
+        master=ReviewTests().approved(review.inspect_file(self.source));master['reviewer']='fixture-child';master['structural_validation']['status']='passed'
+        pending_path=Path(B.read(self.manifest)['paths']['review']);pending=B.read(pending_path)
+        pending['council']['report']=copy.deepcopy(master['council']['report']);B.write(pending_path,pending)
+        master_request=self.request('master')
+        master_reply=self.reply(master_request,D.form(master))
         self.assertEqual(self.accept(master_request,master_reply),0)
         render_request=self.request('render');render_reply=self.reply(render_request,self.visual_record(B.read(render_request)))
         self.assertEqual(self.accept(render_request,render_reply),0)

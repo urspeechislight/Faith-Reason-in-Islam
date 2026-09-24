@@ -273,6 +273,17 @@ boundary decisions in the source ledger; do not ship clipped names or sentences.
 If a real source is defective, establish that from the source evidence and name
 the limitation accurately. Translation must not invent the missing ending.
 
+## Routine repair execution
+
+Use the existing article, registered corpus evidence and current prose rules.
+Correct the identified defects, investigate specific source gaps, and use the
+maintained commands. Before delegation, review-plan checks compatibility across
+review stages. Delegate the generated prompt and response form with the minimum
+relevant task context. The coordinator does not reverse-engineer validators or
+read a second copy of every reviewer input. Follow the packet; return located
+findings when blocked. Implementation exploration belongs to a reproducible tool
+failure and workflow maintenance. See article-build.md for the complete interface.
+
 ## Write and review once
 
 Read `drafting.md` and `paragraphs.md` before prose. Keep research strategy separate from reader-facing
