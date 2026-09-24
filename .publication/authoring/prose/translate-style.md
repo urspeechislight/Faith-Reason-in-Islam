@@ -61,3 +61,9 @@ numbers, referents, restrictions, qualifications, logical links, and full extent
 Style checks do not replace that comparison. Return exactly the requested JSON
 keys with nonempty string values, no fences or commentary. Use escaped newlines
 inside strings for paragraph breaks.
+
+Mark direct-speech paragraphs with Markdown `> ` inside the translation string;
+keep narration and isnad unprefixed. Assembly adds the outer callout marker,
+producing `> >` for speech. Separate paragraphs with `\n\n`. Use one nested
+level and preserve every word and its order. Follow paragraphs.md for the
+compact source-callout example; do not leave long chains joined to speeches.

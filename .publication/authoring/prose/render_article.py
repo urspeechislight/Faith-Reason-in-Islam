@@ -12,6 +12,7 @@ import sys
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 import handoff as H
+import callout_structure
 VERSION='2026-09-23.1'
 TEMPLATES=ROOT.parent/'skills/faith-reason-note'
 SOURCE_TYPES={'info','note','tip','warning','quote'}
@@ -106,15 +107,8 @@ def inline(text,receipt):
 
 
 def callout_parts(item):
-    match=CALL.match(item['raw'][0]);kind,caption=match.groups();parts=[];buf=[]
-    for line in item['raw'][1:]:
-        if not line.startswith('>'):raise ValueError(item['id']+': separate callout and prose with a blank line')
-        value=re.sub(r'^>\s?','',line)
-        if value.startswith('>'):raise ValueError(item['id']+': nested quote syntax needs an explicit renderer extension')
-        if value.strip():buf.append(value)
-        elif buf:parts.append(' '.join(buf));buf=[]
-    if buf:parts.append(' '.join(buf))
-    return kind,caption,parts
+    match=CALL.match(item['raw'][0]);kind,caption=match.groups()
+    return kind,caption,[p['text'] for p in callout_structure.paragraphs(item['raw'][1:])]
 
 
 def original_language(caption,text,options):
@@ -140,7 +134,8 @@ def render_source(item,receipt,options):
     layout=receipt['paragraph_layout'][identifier]
     if [H.inline(p) for p in parts]!=layout['paragraphs']:
         raise ValueError(identifier+': source paragraph mapping differs')
-    rendered=[];role='original'
+    rendered=[];role='original';speech_open=False;speech_direction=None;speech_role=None
+    depths=layout.get('quote_depths',[0]*len(parts))
     original_count=options.get('source_paragraphs',{}).get(H.inline(caption))
     if original_count is not None and (type(original_count) is not int or not 0<original_count<len(parts)):
         raise ValueError(identifier+': source_paragraphs must leave at least one original and one English paragraph')
@@ -158,7 +153,16 @@ def render_source(item,receipt,options):
         if role=='original':attrs=original_attrs(original_language(H.inline(caption),H.inline(raw),options))
         elif role=='transliteration':attrs='class="italic transliteration"'
         else:attrs='class="translation" lang="en"'
+        if role=='translation' and kind!='quote' and callout_structure.mixed_chain(H.inline(raw)):
+            raise ValueError(identifier+': separate the long isnad from direct speech in the master; use > > for the speech')
+        depth=depths[index]
+        direction='rtl' if 'dir="rtl"' in attrs else 'ltr'
+        if speech_open and (not depth or direction!=speech_direction or role!=speech_role):
+            rendered.append('</blockquote>');speech_open=False
+        if depth and not speech_open:
+            rendered.append(f'<blockquote class="source-speech" data-quote-role="speech" dir="{direction}">');speech_open=True;speech_direction=direction;speech_role=role
         rendered.append(f'<p {attrs}>{inline(raw,receipt)}</p>')
+    if speech_open:rendered.append('</blockquote>')
     css='quran-callout' if kind=='quote' else 'hadith-callout'
     return f'<blockquote class="{css}" data-content-role="source" data-note-block="{identifier}">'+''.join(rendered)+f'<cite data-note-citation>{inline(caption,receipt)}</cite></blockquote>'
 
