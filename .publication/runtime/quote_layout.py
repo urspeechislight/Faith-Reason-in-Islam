@@ -10,7 +10,6 @@ import copy
 import hashlib
 import json
 import math
-import callout_structure
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -18,6 +17,8 @@ from pathlib import Path
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
+_cs = _ilu.spec_from_file_location('article_callout_structure', Path(__file__).resolve().parent/'callout_structure.py')
+callout_structure = _ilu.module_from_spec(_cs); _cs.loader.exec_module(callout_structure)
 
 VERSION = 3
 HON = set('ﷺ﵇﵍﵈﵊﵁﵀ﷻ﷿﵌')

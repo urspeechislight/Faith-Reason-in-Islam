@@ -10,8 +10,9 @@ from pathlib import Path
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
+_cs = _ilu.spec_from_file_location('article_callout_structure', Path(__file__).resolve().parent/'callout_structure.py')
+callout_structure = _ilu.module_from_spec(_cs); _cs.loader.exec_module(callout_structure)
 import re
-import callout_structure
 VERSION=4
 
 def sha(s):return hashlib.sha256(s.encode()).hexdigest()

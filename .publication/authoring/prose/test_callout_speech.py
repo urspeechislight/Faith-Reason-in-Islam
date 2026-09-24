@@ -17,6 +17,13 @@ class SpeechTests(unittest.TestCase):
         page,receipt=R.render(source,H.prepare(source))
         return source,page,receipt
 
+    def test_file_path_loading_needs_no_global_pythonpath(self):
+        import subprocess,sys
+        for module in (Q,H):
+            code="import importlib.util; s=importlib.util.spec_from_file_location('isolated',"+repr(module.__file__)+"); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); assert m.callout_structure.paragraphs(['> > Speech.'])[0]['depth']==1"
+            result=subprocess.run([sys.executable,'-I','-c',code],capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+
     def test_text_and_hierarchy_roundtrip(self):
         source,page,receipt=self.render()
         self.assertEqual(H.verify(page,receipt),[])

@@ -11,7 +11,7 @@
   "prose/review_dispatch.py": "b2015b0f58e4b5df6804b072888f17a2b6ea4bca96c9b86fc3aa16685e956da7",
   "prose/review_intake.py": "f39fc57fece014693cbf19be9e7296ee2326687da946f049006da35ecf044215",
   "prose/test_article_build.py": "7f8f94a5ebcb32f1015a922a39d9631351dd2a95706a3c939f5b856d31c212a3",
-  "prose/test_callout_speech.py": "f27163259b7c843a62eb40be85390c11d3258abb73276ffb3d143348a8a36510",
+  "prose/test_callout_speech.py": "f4ef8646c9367fbe791b8fb9a1dddfa382ff4e923374d97dc6fd544656307742",
   "prose/test_handoff.py": "788e587a238b2b33b1ba6056b7c0832a8e6df7b4bdbc667fc438e125cd1f17db",
   "prose/test_native_release.py": "a6e22529607a5afb16c6467d00822e3e26c62c998f6cb9830bbdd389e102a060",
   "prose/test_pipeline.py": "601775a46c6733660f820d028fa6f0beedc286934c969789b26f73cdbed98a44",
