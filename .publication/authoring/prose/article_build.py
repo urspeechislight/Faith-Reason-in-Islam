@@ -36,7 +36,7 @@ import quote_layout
 import render_article
 import review
 SCHEMA=1
-RUNTIME=['conversion_review.py','review_intake.py','review_dispatch.py','review_identity.py','review_dependencies.py','article_scope.py','native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
+RUNTIME=['callout_structure.py','conversion_review.py','review_intake.py','review_dispatch.py','review_identity.py','review_dependencies.py','article_scope.py','native_release.py','release_runner.py','article_revision.py','scripture_alignment.py','article_build.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','contract.md','drafting.md','editorial.md','council-article.md','paragraphs.md','quotation.css','pre_push.py','article-sources.md','article-structure.md','evidence.py']
 VALIDATOR=ROOT.parent/'skills/faith-reason-note/validate.py'
 
 
@@ -50,7 +50,7 @@ def runtime():
     paths=[ROOT/n for n in RUNTIME]+[VALIDATOR]+[render_article.TEMPLATES/f'template-{t}.html' for t in ('tabs','flowing')]
     return {str(p):digest(p) for p in paths}
 def render_runtime():
-    names={'render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','quotation.css','article-structure.md'}
+    names={'callout_structure.py','render_article.py','handoff.py','scripture.py','quote_layout.py','review.py','quotation.css','article-structure.md'}
     return {path:value for path,value in runtime().items() if Path(path).name in names or path==str(VALIDATOR) or Path(path).name.startswith('template-')}
 
 def compatible_binding(previous,current):

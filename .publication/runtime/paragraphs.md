@@ -44,12 +44,23 @@ The author identifies a disagreement about the report.
 >
 > The witness described the meeting.
 >
-> The judge said, “Read the document aloud.”
+> > The judge said, “Read the document aloud.”
 >
 > The witness read it and then answered the question.
 
 The report establishes that the document was read. It leaves its date uncertain.
 ```
+
+Use `> >` for direct speech inside the source callout, with a quoted blank line
+before and after it. Keep the isnad and narration at `>` depth; keep a short
+speech tag with its speech when that reads naturally. Consecutive speech
+paragraphs may share one nested quote. Use one extra level, even when speech
+contains another quotation: retain its quotation marks without making a staircase
+of progressively narrower text. Preserve every source word and its order.
+The renderer does not infer speakers or repair mixed narration and speech.
+A long transmission chain joined to direct speech must be separated in the master
+before review. Translators must mark these boundaries while translating, not
+leave them for the publication agent to discover.
 
 A long source passage remains one callout with several paragraphs. Split where
 meaning or the speaker changes, keeping original-language slices contiguous and
@@ -61,6 +72,9 @@ transmission chains and their attribution clear without dropping names.
 
 Map each source/translation paragraph to its own `<p>` inside the callout;
 use `<cite>` for the citation and `<blockquote>` for the source container.
+Nested `> >` paragraphs map to a `blockquote.source-speech` with
+`data-quote-role="speech"`; its inner paragraphs remain inside the outer source.
+The handoff preserves this hierarchy as well as the paragraph text.
 Do not replace paragraphs with repeated `<br>` tags, inline spans or one large
 `<p>`. Keep narrative framing and direct speech in their source-defined order.
 Do not invent new paragraph boundaries during conversion: fix the Markdown
@@ -126,7 +140,8 @@ python3 ~/.agents/prose/quote_layout.py capture ARTICLE.html --output RENDER.jso
 
 This requires Playwright and Chromium, measures every callout at desktop and
 mobile widths, expands native details, and saves screenshots. It verifies
-visible paragraphs, at least 8px between adjacent callout paragraphs and no
+visible paragraphs, at least 8px between ordinary callout paragraphs, compact
+4–12px gaps around same-language nested speech, and no
 page-wide horizontal overflow. Use the screenshots for the human layout review;
 positive margins cannot prove that a single paragraph is well organized.
 Then pass `--render RENDER.json` to review.py inspect. Its final verification
@@ -154,3 +169,11 @@ Source paragraph visibility and spacing checks are supplemented by actual inset
 and line-height measurements. No generated labels, color legend, hover-only
 explanation or reader-facing typography commentary is needed. See
 article-sources.md for lexical marks, which stay visible in print.
+
+Inside a callout, nested speech adds only 12px of padding and a subtle 1px
+rule on its reading edge. Use 6px gaps around speech and between its paragraphs,
+with English line-height 1.55. Keep the existing larger gap between language
+layers. No empty spacer paragraphs, large quote margins, or additional quote
+cards. Browser checks require an extra speech inset of 8–20px and reject gaps
+above 12px between same-language narration and speech. Inspect the boundaries,
+not just the outer callout's padding.

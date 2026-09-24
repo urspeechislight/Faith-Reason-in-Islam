@@ -56,7 +56,7 @@ for i, line in enumerate(lines, 1):
         cur = [m2.group(1).lower(), m2.group(3).strip(), [], i]
     elif cur is not None:
         if line.startswith('>'):
-            cur[2].append(line.lstrip('>').strip())
+            cur[2].append(re.sub(r'^(?:>[ \t]?)+','',line).strip())
         else:
             blocks.append(cur); cur = None
 if cur: blocks.append(cur)

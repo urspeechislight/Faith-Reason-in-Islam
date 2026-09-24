@@ -10,6 +10,8 @@ from pathlib import Path
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
+_cs = _ilu.spec_from_file_location('article_callout_structure', Path(__file__).resolve().parent/'callout_structure.py')
+callout_structure = _ilu.module_from_spec(_cs); _cs.loader.exec_module(callout_structure)
 import re
 VERSION=4
 
@@ -90,17 +92,12 @@ def paragraph_layout(source, records):
     while i<len(lines):
         match=re.match(r'^> ?\[!(info|note|tip|warning|quote)\][-+]?\s*(.*)$',lines[i])
         if not match:i+=1;continue
-        caption=inline(match[2]);i+=1;paragraphs=[];buf=[]
-        def flush():
-            if buf:paragraphs.append(inline(' '.join(buf)));buf.clear()
+        caption=inline(match[2]);i+=1;quoted=[]
         while i<len(lines) and lines[i].startswith('>'):
-            if re.match(r'^> ?\[!\w+\]',lines[i]):
-                raise ValueError('Separate source callouts with a blank line')
-            content=re.sub(r'^>\s?','',lines[i])
-            if content.strip():buf.append(content)
-            else:flush()
-            i+=1
-        flush()
+            if re.match(r'^> ?\[!\w+\]',lines[i]):raise ValueError('Separate source callouts with a blank line')
+            quoted.append(lines[i]);i+=1
+        parsed=callout_structure.paragraphs(quoted)
+        paragraphs=[inline(p['text']) for p in parsed]
         expected=clean(' '.join([caption]+paragraphs))
         candidates=[b for b in records if b['id'] not in used and b['text']==expected]
         if not candidates:
@@ -108,6 +105,7 @@ def paragraph_layout(source, records):
         if not paragraphs:raise ValueError('Source callout has no paragraphs')
         identifier=candidates[0]['id'];used.add(identifier)
         layout[identifier]={'caption':caption,'paragraphs':paragraphs}
+        if any(p['depth'] for p in parsed):layout[identifier]['quote_depths']=[p['depth'] for p in parsed]
     return layout
 
 def prepare(source,path='',schema=VERSION):
@@ -123,7 +121,7 @@ class Rendered(HTMLParser):
     VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
     SPACE={'p','div','section','article','li','br','tr','td','th','summary','blockquote','cite','h1','h2','h3','h4','h5','h6'}
     def __init__(self,source):
-        super().__init__(convert_charrefs=True);self.stack=[];self.records=[];self.active=None;self.outside=[];self.source_hash=None;self.category=None;self.main_count=0;self.links=[];self.in_caption=False;self.link=None;self.layout={};self.paragraph=None;self.source_roles=[]
+        super().__init__(convert_charrefs=True);self.stack=[];self.records=[];self.active=None;self.outside=[];self.source_hash=None;self.category=None;self.main_count=0;self.links=[];self.in_caption=False;self.link=None;self.layout={};self.paragraph=None;self.source_roles=[];self.speech_levels=set()
         self.feed(source);self.close()
         if self.stack:raise ValueError('unclosed HTML')
     def handle_starttag(self,tag,attrs):
@@ -134,8 +132,12 @@ class Rendered(HTMLParser):
         if tag=='main':self.category=a.get('data-category');self.main_count+=1
         if 'data-note-block' in a:
             if self.active is not None:raise ValueError('nested note blocks')
-            self.active={'id':a['data-note-block'],'parts':[],'caption':[],'links':[],'caption_links':[], 'tag':tag,'paragraphs':[]}
+            self.active={'id':a['data-note-block'],'parts':[],'caption':[],'links':[],'caption_links':[], 'tag':tag,'paragraphs':[],'quote_depths':[]}
+        if tag=='blockquote' and 'source-speech' in a.get('class','').split():
+            if self.active is None or a.get('data-quote-role')!='speech':raise ValueError('speech quote requires its mapped source and explicit role')
+            self.speech_levels.add(len(self.stack))
         if tag=='p' and self.active is not None:
+            self.active['quote_depths'].append(len(self.speech_levels))
             if self.paragraph is not None:raise ValueError('nested paragraph')
             self.paragraph=[]
         if tag=='cite' and 'data-note-citation' in a:
@@ -149,6 +151,7 @@ class Rendered(HTMLParser):
     def handle_endtag(self,tag):
         if tag in self.VOID:return
         if not self.stack or self.stack[-1][0]!=tag:raise ValueError('malformed HTML closing '+tag)
+        self.speech_levels.discard(len(self.stack)-1)
         _,ends=self.stack.pop()
         if tag=='p' and self.paragraph is not None:
             self.active['paragraphs'].append(clean(''.join(self.paragraph)));self.paragraph=None
@@ -156,7 +159,7 @@ class Rendered(HTMLParser):
         if tag=='a' and self.link is not None:
             self.active['caption_links' if self.in_caption else 'links'].append({'label':clean(''.join(self.link['parts'])),'target':self.link['target']});self.link=None
         if ends:
-            self.layout[self.active['id']]={'tag':self.active['tag'],'paragraphs':self.active['paragraphs']}
+            self.layout[self.active['id']]={'tag':self.active['tag'],'paragraphs':self.active['paragraphs'],'quote_depths':self.active['quote_depths']}
             caption=clean(''.join(self.active['caption']))
             caption=re.sub(r'^[-–—]\s+','',caption)
             text=clean(caption+' '+''.join(self.active['parts']))
@@ -190,6 +193,8 @@ def verify(source,receipt):
                 errors.append(block['id']+': mapped content needs a block element, not inline spans')
         for identifier,layout in expected['paragraph_layout'].items():
             actual=page.layout.get(identifier,{})
+            if actual.get('quote_depths')!=layout.get('quote_depths',[0]*len(layout['paragraphs'])):
+                errors.append(identifier+': narration/speech quote hierarchy changed')
             if actual.get('tag')!='blockquote' or actual.get('paragraphs')!=layout['paragraphs']:
                 errors.append(identifier+': source-callout paragraphs merged, split, reordered or not rendered as a blockquote')
         if page.source_roles != [('blockquote',identifier) for identifier in expected['paragraph_layout']]:

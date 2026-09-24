@@ -17,6 +17,8 @@ from pathlib import Path
 import importlib.util as _ilu
 _sp = _ilu.spec_from_file_location('article_scripture', Path(__file__).resolve().parent/'scripture.py')
 scripture = _ilu.module_from_spec(_sp); _sp.loader.exec_module(scripture)
+_cs = _ilu.spec_from_file_location('article_callout_structure', Path(__file__).resolve().parent/'callout_structure.py')
+callout_structure = _ilu.module_from_spec(_cs); _cs.loader.exec_module(callout_structure)
 
 VERSION = 3
 HON = set('ﷺ﵇﵍﵈﵊﵁﵀ﷻ﷿﵌')
@@ -40,14 +42,15 @@ def md_inline(text):
 class Quotes(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.rows=[];self.q=None;self.current=None;self.caption=False;self.mk=None
+        self.rows=[];self.q=None;self.current=None;self.caption=False;self.mk=None;self.depth=0
     def handle_starttag(self,tag,attrs):
         attrs=dict(attrs)
         if tag=='blockquote' and attrs.get('data-content-role')=='source':
             if self.q is not None:raise ValueError('nested source blockquote needs explicit layout support')
-            self.q={'caption':'','paragraphs':[],'raw':'','marks':[]}
+            self.q={'caption':'','paragraphs':[],'raw':'','marks':[],'depths':[]}
         if self.q is not None:
-            if tag=='p':self.current=''
+            if tag=='blockquote':self.depth+=1
+            if tag=='p':self.current='';self.q['depths'].append(self.depth-1)
             if tag=='mark':self.mk={'term':attrs.get('data-term'),'text':''}
             if tag=='cite':self.caption=True
             if tag=='br' and self.current is not None:self.current+=' '
@@ -63,7 +66,8 @@ class Quotes(HTMLParser):
         if tag=='p' and self.current is not None:
             self.q['paragraphs'].append(flat(self.current));self.current=None
         if tag=='cite':self.caption=False
-        if tag=='blockquote':
+        if tag=='blockquote':self.depth-=1
+        if tag=='blockquote' and self.depth==0:
             if not self.q['paragraphs'] and flat(self.q['raw']):self.q['paragraphs']=[flat(self.q['raw'])]
             self.rows.append(self.q);self.q=None
 
@@ -81,14 +85,12 @@ def extract(source,fmt):
                 i+=1;continue
             m=None if fence else re.match(r'^>\s*\[!(info|note|tip|warning|quote)\]-?\s*(.*)',line,re.I)
             if not m:i+=1;continue
-            row={'caption':m[2],'paragraphs':[],'marks':[]};buf=[];i+=1
+            row={'caption':m[2],'paragraphs':[],'marks':[],'depths':[]};quoted=[];i+=1
             while i<len(lines) and lines[i].startswith('>'):
-                content=re.sub(r'^> ?', '',lines[i])
-                row['marks'].extend({'term':m['term'],'text':m['text']} for m in scripture.runs(content))
-                if content.strip():buf.append(content)
-                elif buf:row['paragraphs'].append(md_inline(' '.join(buf)));buf=[]
-                i+=1
-            if buf:row['paragraphs'].append(md_inline(' '.join(buf)))
+                quoted.append(lines[i]);i+=1
+            for part in callout_structure.paragraphs(quoted):
+                row['paragraphs'].append(md_inline(part['text']));row['depths'].append(part['depth'])
+                row['marks'].extend({'term':m['term'],'text':m['text']} for m in scripture.runs(part['text']))
             rows.append(row)
     result=[]
     for n,row in enumerate(rows,1):
@@ -102,6 +104,8 @@ def extract(source,fmt):
                 if text.count('"')>=4:cues.append('ambiguous-double-quotation-nesting')
                 if re.search(r'\b(?:with|then|and|because|of|the|a|an|that)\s*["”\']?$',text,re.I):cues.append('possible-unfinished-tail')
             paragraphs.append({'id':f'q{n:04d}:p{k}','text':text,'sha256':sha(text),'language':lang,'words':words,'cues':cues})
+        if any(row.get('depths',[])):
+            for p,depth in zip(paragraphs,row['depths']):p['quote_depth']=depth
         english=[p['text'] for p in paragraphs if p['language']!='original']
         if english and english[0].startswith(('"','“')) and english[-1].endswith(('"','”')):
             next(p for p in paragraphs if p['language']!='original')['cues'].append('outer-quotation-wrapper')
@@ -164,7 +168,13 @@ def render_errors(quotes,record,artifact_sha256,require_render=False):
                 if not isinstance(item,dict) or item.get('sha256')!=p['sha256']:
                     errors.append(p['id']+' rendered text differs');continue
                 if item.get('visible') is not True or not finite(item.get('height')) or item['height']<=0:errors.append(p['id']+' not visibly rendered')
-                if not finite(item.get('gap_before')) or (index>0 and item['gap_before']<8):errors.append(p['id']+f' lacks visible paragraph spacing at {width}px')
+                depth=p.get('quote_depth',0)
+                if item.get('quote_depth',0)!=depth:errors.append(p['id']+' rendered speech depth differs')
+                if depth and (not finite(item.get('speech_inset_px')) or not 8<=item['speech_inset_px']<=20):errors.append(p['id']+' needs a compact 8-20px speech inset')
+                compact=index>0 and (depth or q['paragraphs'][index-1].get('quote_depth',0)) and item.get('language')==row['paragraphs'][index-1].get('language') and item.get('layer')==row['paragraphs'][index-1].get('layer')
+                minimum=4 if compact else 8
+                if not finite(item.get('gap_before')) or (index>0 and item['gap_before']<minimum):errors.append(p['id']+f' lacks visible paragraph spacing at {width}px')
+                if compact and finite(item.get('gap_before')) and item['gap_before']>12:errors.append(p['id']+' speech spacing is too loose')
                 if not finite(item.get('inset_px')) or item['inset_px']<10:errors.append(p['id']+' quotation lacks a visible directional inset')
                 low,high=(1.8,2.1) if item.get('language')=='ar' else (1.7,2.0) if item.get('language') in ('he','arc','syr') else (1.5,1.7)
                 if not finite(item.get('line_ratio')) or not low<=item['line_ratio']<=high:errors.append(p['id']+' quotation line spacing is outside its readable compact range')
@@ -196,7 +206,7 @@ def capture(path,output):
                         if(s.visibility==='hidden'||s.display==='none'||Number(s.opacity)===0||/opacity\\(0(?:%|\\.0+)?\\)/.test(s.filter))return false;}
                     return !/rgba\\([^)]*,\\s*0\\)/.test(getComputedStyle(e).color);
                 }}""")
-                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,language:p.lang||(getComputedStyle(p).direction==='rtl'?'ar':'en'),line_ratio:parseFloat(getComputedStyle(p).lineHeight)/parseFloat(getComputedStyle(p).fontSize),inset_px:getComputedStyle(p).direction==='rtl'?(q.getBoundingClientRect().right-parseFloat(getComputedStyle(q).paddingRight)-p.getBoundingClientRect().right):(p.getBoundingClientRect().left-q.getBoundingClientRect().left-parseFloat(getComputedStyle(q).paddingLeft)),visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
+                rows=page.locator('blockquote[data-content-role="source"]').evaluate_all("""els=>els.map((q,i)=>({id:'q'+String(i+1).padStart(4,'0'),paragraphs:[...q.querySelectorAll('p')].map((p,j,ps)=>({text:p.textContent,layer:p.classList.contains('transliteration')?'transliteration':p.classList.contains('translation')?'translation':'original',quote_depth:p.closest('blockquote.source-speech')?1:0,speech_inset_px:p.closest('blockquote.source-speech')?(getComputedStyle(p).direction==='rtl'?p.closest('blockquote.source-speech').getBoundingClientRect().right-p.getBoundingClientRect().right:p.getBoundingClientRect().left-p.closest('blockquote.source-speech').getBoundingClientRect().left):0,language:p.lang||(getComputedStyle(p).direction==='rtl'?'ar':'en'),line_ratio:parseFloat(getComputedStyle(p).lineHeight)/parseFloat(getComputedStyle(p).fontSize),inset_px:getComputedStyle(p).direction==='rtl'?(q.getBoundingClientRect().right-parseFloat(getComputedStyle(q).paddingRight)-p.getBoundingClientRect().right):(p.getBoundingClientRect().left-q.getBoundingClientRect().left-parseFloat(getComputedStyle(q).paddingLeft)),visible:window.articleVisible(p),height:p.getBoundingClientRect().height,gap_before:j?p.getBoundingClientRect().top-ps[j-1].getBoundingClientRect().bottom:0}))}))""")
                 hidden=page.locator('[data-note-block]').evaluate_all("els=>els.filter(e=>!window.articleVisible(e)).map(e=>e.dataset.noteBlock)")
                 pseudo=page.locator('main *').evaluate_all("""els=>els.flatMap(e=>['::before','::after'].map(p=>getComputedStyle(e,p).content)).filter(t=>t&&!['none','normal','""'].includes(t)&&/[A-Za-z0-9\\u0600-\\u06ff]/.test(t))""")
                 for row in rows:
