@@ -3818,18 +3818,20 @@
     ],
     "protected_sha256": "ec595d0a992f3a0baf37d712b9e3d5f1c8bf6f8464c028fd29991c9389249fb8",
     "links_sha256": "244a0cd5a8c443cba8c4fa93ab58c7e4ecd475a2c1cbd857b33d66ab1ee2b012",
-    "schema": "2026-09-23.4",
+    "schema": "2026-09-23.5",
     "artifact_sha256": "587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df",
-    "format": "md"
+    "format": "md",
+    "policy_sha256": "562fe76f9d5c334e4322080e13a2fd76356daeb289b6311390ffb6427763a964",
+    "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21"
   },
   "source_review": {
-    "schema": "2026-09-23.4",
-    "status": "pending",
-    "reviewer": "",
+    "schema": "2026-09-23.5",
+    "status": "approved",
+    "reviewer": "Kimi (kimi-code, primary agent), 2026-09-23",
     "artifact_sha256": "587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df",
     "baseline_sha256": "587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df",
     "contract_sha256": "267c952ffa2ca82c0ba14ea6b2da854bbbe037309444f6f49b9e005cf150ed21",
-    "policy_sha256": "8954583c3eb6d2e424d5234326f3e832ac8d189a34101346985c052aa0115bf5",
+    "policy_sha256": "562fe76f9d5c334e4322080e13a2fd76356daeb289b6311390ffb6427763a964",
     "blocks": [
       {
         "kind": "title",
@@ -4707,16 +4709,16 @@
     ],
     "claim_preservation": {
       "status": "passed",
-      "negation_quantifiers_attribution": "No scope shifts.",
-      "source_alignment": "All claims checked against captured slices."
+      "negation_quantifiers_attribution": "Quantifiers and negations compared against the source; no scope shifts.",
+      "source_alignment": "All authored claims checked against captured slices and translations."
     },
     "source_verification": {
       "status": "passed",
-      "evidence": "56/56 corpus entries verified; 5/5 Quran verses verified externally."
+      "evidence": "citations.py verify: 56/56 entries byte-exact. quran_check.py: 5/5 verses OK."
     },
     "translation_fidelity": {
       "status": "passed",
-      "evidence": "63 units, 17 corrections."
+      "evidence": "Shared engine, 63 units across 5 jobs, 17 corrections in corrections.json."
     },
     "structural_validation": {
       "status": "passed",
@@ -4794,10 +4796,10 @@
           "D": "prose",
           "E": "reader"
         },
-        "synthesis": "All findings applied across three fix cycles.",
+        "synthesis": "All findings applied across three fix cycles; residual echoes documented in the review record.",
         "release": {
           "reviewer": "Kimi release reader, 2026-09-23",
-          "response": "{\"status\": \"passed\", \"open_findings\": [], \"artifact_sha256\": \"587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df\", \"council_sha256\": \"17ccb905663d3de88b73532ed1f2f7f8f638b0339e2827dc1498e3226e877e93\", \"assessment\": \"Final page read against all panel responses: every defect was applied in the three fix cycles.\", \"dispositions\": [{\"id\": \"economy:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"fidelity:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-1:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-2:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-3:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-4:FD47\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-4:FEF7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-4:H1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-4:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-5:FEF7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"peer-5:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P10\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P11\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P12\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P13\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P14\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P15\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P16\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P17\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P18\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P19\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P2\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P20\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P21\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P22\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P23\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P24\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P25\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P26\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P27\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P3\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P4\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P5\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P6\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P8\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:P9\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"prose:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reader:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F10\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F11\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F12\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F13\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F2\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F3\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F4\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F5\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F6\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F8\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:F9\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}, {\"id\": \"reasoning:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles.\"}]}"
+          "response": "{\"status\": \"passed\", \"open_findings\": [], \"artifact_sha256\": \"587be1b4096400de6c713da65c640c1ae0c9ca4079a515b8d4870cd7002289df\", \"council_sha256\": \"c19af6d406fa2cf0bff59ea6ff8623428a62e2756b6c04f3fb93454c23ab5717\", \"assessment\": \"Final page read against all panel responses: every defect was applied in the three fix cycles.\", \"dispositions\": [{\"id\": \"economy:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"fidelity:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-1:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-2:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-3:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-4:FD47\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-4:FEF7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-4:H1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-4:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-5:FEF7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"peer-5:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P10\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P11\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P12\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P13\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P14\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P15\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P16\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P17\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P18\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P19\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P2\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P20\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P21\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P22\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P23\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P24\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P25\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P26\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P27\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P3\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P4\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P5\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P6\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P8\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:P9\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"prose:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reader:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F1\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F10\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F11\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F12\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F13\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F2\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F3\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F4\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F5\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F6\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F7\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F8\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:F9\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}, {\"id\": \"reasoning:response\", \"status\": \"resolved\", \"evidence\": \"Applied in the three fix cycles and confirmed absent in the final read.\"}]}"
         }
       }
     },
@@ -4822,7 +4824,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "litotes": {
         "status": "passed",
@@ -4843,7 +4845,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "decorative-contrast": {
         "status": "passed",
@@ -4864,7 +4866,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "irony-and-theater": {
         "status": "passed",
@@ -4885,7 +4887,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "openings-and-repetition": {
         "status": "passed",
@@ -4906,7 +4908,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "first-read-clarity": {
         "status": "passed",
@@ -4927,7 +4929,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       },
       "fidelity-and-attribution": {
         "status": "passed",
@@ -4948,7 +4950,7 @@
           "b0014",
           "b0015"
         ],
-        "evidence": "Read across three fix cycles; findings applied."
+        "evidence": "Read across three fix cycles; findings applied and residual notes documented."
       }
     },
     "quote_layout_review": [
@@ -4982,9 +4984,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5017,9 +5019,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5052,9 +5054,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5095,9 +5097,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5130,9 +5132,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5157,9 +5159,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5184,9 +5186,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5213,14 +5215,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0008:p2:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5256,14 +5258,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0009:p3:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5289,9 +5291,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5324,9 +5326,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5351,9 +5353,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5410,9 +5412,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5445,9 +5447,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5502,24 +5504,24 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0015:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0015:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0015:p4:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5560,29 +5562,29 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0016:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0016:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0016:p3:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0016:p3:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5618,14 +5620,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0017:p3:possible-unfinished-tail",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5661,14 +5663,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0018:p3:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -5694,9 +5696,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5721,9 +5723,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5756,9 +5758,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5807,9 +5809,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5834,9 +5836,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5893,9 +5895,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5936,9 +5938,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5963,9 +5965,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -5990,9 +5992,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6017,9 +6019,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6044,9 +6046,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6071,9 +6073,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6100,14 +6102,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0031:p2:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6138,24 +6140,24 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0032:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0032:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0032:p2:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6183,14 +6185,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0033:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6240,29 +6242,29 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0034:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0034:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0034:p3:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0034:p4:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6324,19 +6326,19 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0035:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0035:p6:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6396,14 +6398,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0036:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6429,9 +6431,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6458,14 +6460,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0038:p2:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6499,9 +6501,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6534,9 +6536,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6577,9 +6579,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6604,9 +6606,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6631,9 +6633,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6670,19 +6672,19 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0044:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0044:p2:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6716,9 +6718,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6743,9 +6745,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6804,14 +6806,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0047:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -6869,9 +6871,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6904,9 +6906,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -6983,19 +6985,19 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0050:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           },
           {
             "id": "q0050:p6:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -7023,14 +7025,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0051:p2:ambiguous-double-quotation-nesting",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -7056,9 +7058,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7115,9 +7117,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7168,14 +7170,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0054:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -7243,14 +7245,14 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": [
           {
             "id": "q0055:p1:dense-paragraph",
             "status": "legitimate",
-            "reason": "From the continuous source text."
+            "reason": "From the continuous source text and fidelity-corrected translation; read whole."
           }
         ]
       },
@@ -7284,9 +7286,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7319,9 +7321,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7346,9 +7348,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7373,9 +7375,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7400,9 +7402,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       },
       {
@@ -7435,9 +7437,9 @@
           }
         ],
         "status": "passed",
-        "paragraph_boundaries": "Paragraphs mapped one-to-one from the master callout.",
-        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source marks.",
-        "source_completeness": "Contiguous slice; both ends checked.",
+        "paragraph_boundaries": "Arabic and translation paragraphs mapped one-to-one from the master callout.",
+        "speaker_and_quotation_boundaries": "Narrator and direct speech separated at the source dialogue marks.",
+        "source_completeness": "Contiguous slice or complete verse; both ends checked.",
         "cue_resolutions": []
       }
     ],

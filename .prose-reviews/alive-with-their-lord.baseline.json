@@ -635,7 +635,8 @@
           "words": 25,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0002",
@@ -665,7 +666,8 @@
           "words": 39,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0003",
@@ -695,7 +697,8 @@
           "words": 76,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0004",
@@ -733,7 +736,8 @@
           "words": 33,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0005",
@@ -763,7 +767,8 @@
           "words": 56,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0006",
@@ -785,7 +790,8 @@
           "words": 59,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0007",
@@ -807,7 +813,8 @@
           "words": 62,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0008",
@@ -831,7 +838,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0009",
@@ -863,7 +871,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0010",
@@ -885,7 +894,8 @@
           "words": 86,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0011",
@@ -915,7 +925,8 @@
           "words": 80,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0012",
@@ -937,7 +948,8 @@
           "words": 69,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0013",
@@ -991,7 +1003,8 @@
           "words": 37,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0014",
@@ -1021,7 +1034,8 @@
           "words": 55,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0015",
@@ -1073,7 +1087,8 @@
           "words": 83,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0016",
@@ -1110,7 +1125,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0017",
@@ -1142,7 +1158,8 @@
             "possible-unfinished-tail"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0018",
@@ -1174,7 +1191,8 @@
             "dense-paragraph"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0019",
@@ -1196,7 +1214,8 @@
           "words": 60,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0020",
@@ -1218,7 +1237,8 @@
           "words": 60,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0021",
@@ -1248,7 +1268,8 @@
           "words": 86,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0022",
@@ -1294,7 +1315,8 @@
           "words": 18,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0023",
@@ -1316,7 +1338,8 @@
           "words": 82,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0024",
@@ -1370,7 +1393,8 @@
           "words": 47,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0025",
@@ -1408,7 +1432,8 @@
           "words": 24,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0026",
@@ -1430,7 +1455,8 @@
           "words": 63,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0027",
@@ -1452,7 +1478,8 @@
           "words": 52,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0028",
@@ -1474,7 +1501,8 @@
           "words": 58,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0029",
@@ -1496,7 +1524,8 @@
           "words": 77,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0030",
@@ -1518,7 +1547,8 @@
           "words": 86,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0031",
@@ -1542,7 +1572,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0032",
@@ -1569,7 +1600,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0033",
@@ -1593,7 +1625,8 @@
             "dense-paragraph"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0034",
@@ -1639,7 +1672,8 @@
             "dense-paragraph"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0035",
@@ -1697,7 +1731,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0036",
@@ -1753,7 +1788,8 @@
           "words": 56,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0037",
@@ -1775,7 +1811,8 @@
           "words": 60,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0038",
@@ -1799,7 +1836,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0039",
@@ -1829,7 +1867,8 @@
           "words": 59,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0040",
@@ -1859,7 +1898,8 @@
           "words": 32,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0041",
@@ -1897,7 +1937,8 @@
           "words": 56,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0042",
@@ -1919,7 +1960,8 @@
           "words": 43,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0043",
@@ -1941,7 +1983,8 @@
           "words": 89,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0044",
@@ -1975,7 +2018,8 @@
           "words": 95,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0045",
@@ -2005,7 +2049,8 @@
           "words": 28,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0046",
@@ -2027,7 +2072,8 @@
           "words": 65,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0047",
@@ -2083,7 +2129,8 @@
           "words": 25,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0048",
@@ -2137,7 +2184,8 @@
           "words": 13,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0049",
@@ -2167,7 +2215,8 @@
           "words": 63,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0050",
@@ -2241,7 +2290,8 @@
           "words": 43,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0051",
@@ -2265,7 +2315,8 @@
             "ambiguous-double-quotation-nesting"
           ]
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0052",
@@ -2287,7 +2338,8 @@
           "words": 48,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0053",
@@ -2341,7 +2393,8 @@
           "words": 14,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0054",
@@ -2389,7 +2442,8 @@
           "words": 22,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0055",
@@ -2453,7 +2507,8 @@
           "words": 44,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0056",
@@ -2483,7 +2538,8 @@
           "words": 51,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0057",
@@ -2513,7 +2569,8 @@
           "words": 21,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0058",
@@ -2535,7 +2592,8 @@
           "words": 38,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0059",
@@ -2557,7 +2615,8 @@
           "words": 72,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0060",
@@ -2579,7 +2638,8 @@
           "words": 63,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     },
     {
       "id": "q0061",
@@ -2609,12 +2669,14 @@
           "words": 49,
           "cues": []
         }
-      ]
+      ],
+      "lexical_marks": []
     }
   ],
-  "protected_sha256": "0bd0424ba1f66fa86880f42e0e160787d8dc013fecf1fcb85628e686051ea981",
+  "protected_sha256": "c0c5cb01222d3fc7a3b7bee626f2f07c00a898b37932d78d2e49f51dc84b0fa6",
   "links_sha256": "59f64f58a5d77c3f20f1d55cb89cdf439fee49a56887bfdeb017bd39f29cec03",
-  "schema": "2026-09-23.4",
-  "artifact_sha256": "4bd368429cc0ac53f5e270fc6f899a4ee0d8c14bbf05caffb3dbfa83b315b633",
+  "scripture_errors": [],
+  "schema": "2026-09-23.5",
+  "artifact_sha256": "6cc185357dc8265066ee3368687ea83de8b136297196f01803d229bf05ac0543",
   "format": "html"
 }
