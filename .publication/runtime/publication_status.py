@@ -40,7 +40,14 @@ def main(argv=None):
                     data=json.loads(report.read_text())
                     if data.get('phase')!=phase:raise ValueError('artifact phase mismatch: '+str(report))
                     result[phase]={'report':str(report.resolve()),'result':data}
-        a.output.mkdir(parents=True,exist_ok=True);(a.output/'status.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+        a.output.mkdir(parents=True,exist_ok=True);(a.output/'status.json').write_text(json.dumps(result,indent=2)+'\n')
+        summary=json.loads(json.dumps(result))
+        for phase in ['article','regression']:
+            report=summary.get(phase,{}).get('result',{})
+            if 'public_files' in report:report['public_file_count']=len(report.pop('public_files'))
+            if 'results' in report:
+                rows=report.pop('results');report['article_results']={state:sum(r.get('status')==state for r in rows) for state in sorted({r.get('status','unknown') for r in rows})}
+        print(json.dumps(summary,indent=2))
         return 2 if run['status']!='completed' else (0 if run.get('conclusion')=='success' else 1)
     except (OSError,ValueError,KeyError,subprocess.SubprocessError) as exc:print('BLOCKED:',exc);return 1
 if __name__=='__main__':raise SystemExit(main())
