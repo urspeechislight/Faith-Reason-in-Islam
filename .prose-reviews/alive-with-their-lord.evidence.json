@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "artifact_sha256": "33deeb6231042b76765c6c5f761ca058ee2bc25fe63df838a83467b3a4cb3e5c",
+  "artifact_sha256": "d595c502e8b00ee37b9f979ee6804613308a3867e3ea7b91909618de752aa5e2",
   "sources": [
     {
       "id": "uddat-instruction",
@@ -1982,14 +1982,14 @@
   "scripture_alignment": {
     "schema": 1,
     "status": "approved",
-    "reviewer": "agent-0",
+    "reviewer": "agent-8",
     "quotes": [
       {
         "id": "s0001",
         "caption": "Qur'an 3:169",
         "layers": {
-          "original": "وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ",
-          "transliteration": "wa-la tahsabanna alladhina qutilu fi sabili Allahi amwatan, bal ahyaanun 'inda rabbihim yurzaqun",
+          "original": "وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ",
+          "transliteration": "wa-la tahsabanna alladhina qutilu fi sabili Allahi amwatan, bal ahya'un 'inda rabbihim yurzaqun",
           "translation": "Do not suppose that those who have been killed in the way of God are dead. Rather, they are alive with their Lord, receiving provision."
         },
         "source_tokens": [
@@ -2017,12 +2017,12 @@
           "Allahi",
           "amwatan",
           "bal",
-          "ahyaanun",
+          "ahya'un",
           "'inda",
           "rabbihim",
           "yurzaqun"
         ],
-        "layers_sha256": "4f543fa33e2be8eb9dbd00f7cf7dcfd703d194fb4ea95c595b7d5db5fff49346",
+        "layers_sha256": "f3d4fee27b8598a22461763f218f7e5bad4beda22dbe8c340add480e2c87d506",
         "status": "passed",
         "units": [
           {
@@ -2093,7 +2093,7 @@
             "source": "أَحْيَآءٌ",
             "roman_start": 9,
             "roman_end": 10,
-            "romanization": "ahyaanun"
+            "romanization": "ahya'un"
           },
           {
             "source_index": 10,
@@ -2117,18 +2117,13 @@
             "romanization": "yurzaqun"
           }
         ],
-        "evidence": "Arabic layer is byte-identical to the dossier api.alquran.cloud Uthmani text of 3:169, and the full-verse wording bal ahyaanun 'inda rabbihim yurzaqun is also relayed verbatim in corpus row 5049 (Ilm al-Yaqin), confirming a complete verse from wa-laa to yurzaqoon. All 13 source tokens are exactly the verse words after dropping Uthmani pause marks (qutiluu's superscript zero). Each Arabic word romanizes to exactly one roman token in order, e.g. wala as hyphenated wa-la and pausal yurzaqun, tiling all 13 roman tokens with no gaps. The English renders every phrase directly: amwaatan as 'dead', bal as 'Rather', yurzaqoon as 'receiving provision', with nothing added or dropped.",
-        "retained_from": {
-          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
-          "reviewer": "agent-0",
-          "quote_id": "s0001"
-        }
+        "evidence": "Original layer is byte-identical to the complete Qur'an 3:169 Uthmani verse in the dossier, nothing omitted or added (source_completeness pass). One verse quoted as one quotation with the three layers each in a single paragraph, so no paragraph boundary is split or merged (paragraph_boundaries pass). Plain divine address with no direct speech and no quotation marks in any layer, so no speaker or quotation boundary is misplaced (speaker_and_quotation_boundaries pass). The rendering cues are legitimate: a [!quote] callout, transliteration set as a separate italic paragraph, and no mark highlighting present. All thirteen unit pairings align one-to-one, each Arabic word to exactly one romanization token, after the tokenizer correctly drops standalone pause marks and strips the superscript zero. Unit 9 'أَحْيَآءٌ' is now written 'ahya'un', rendering the standalone hamza with the article's apostrophe convention (i'malu, mu'minun, du'a'a) and correcting the r11 defect, so every layer is faithful and the quote passes."
       },
       {
         "id": "s0002",
         "caption": "Qur'an 9:105",
         "layers": {
-          "original": "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ إِلَىٰ عَٰلِمِ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
+          "original": "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ إِلَىٰ عَٰلِمِ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
           "transliteration": "wa-qul i'malu fa-sayara Allahu 'amalakum wa-rasuluhu wa-l-mu'minun, wa-saturadduna ila 'alimi l-ghaybi wa-l-shahadati fa-yunabbi'ukum bi-ma kuntum ta'malun",
           "translation": "Say, \"Act. God will see your deeds, as will His Messenger and the believers. Then you will be returned to the Knower of the unseen and the seen, and He will inform you of what you used to do.\""
         },
@@ -2284,19 +2279,14 @@
             "romanization": "ta'malun"
           }
         ],
-        "evidence": "Original matches the dossier Uthmani text of 9:105 exactly, and corpus tafsir rows 10136 and 79801 relay the same wording from wa-qul i'maloo to ta'maloon, confirming completeness. All 16 source words map one-to-one onto the 16 roman tokens in sequence; hyphenated compounds fa-sayara, wa-saturadduna, fa-yunabbi'ukum and bi-ma are single tokens, so the tiling covers every roman token exactly once. The English supplies only the elided verb in 'as will His Messenger and the believers', keeps 'aalimi l-ghaybi wa-l-shahadati as 'Knower of the unseen and the seen', and adds no doctrine.",
-        "retained_from": {
-          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
-          "reviewer": "agent-0",
-          "quote_id": "s0002"
-        }
+        "evidence": "Original layer is byte-identical to the complete Qur'an 9:105 Uthmani verse in the dossier, nothing omitted or added (source_completeness pass). One verse quoted as one quotation with the three layers each in a single paragraph, so no paragraph boundary is split or merged (paragraph_boundaries pass). Wa-qul opens direct speech and the translation marks that speech with balanced quotation marks while the Arabic and transliteration carry the same boundary, so speaker and quotation boundaries are preserved (speaker_and_quotation_boundaries pass). The rendering cues are legitimate: a [!quote] callout, transliteration set as a separate italic paragraph, and no mark highlighting present. All sixteen unit pairings align one-to-one, each Arabic word to exactly one romanization token, with the tokenizer correctly dropping the standalone pause mark after the mu'minun clause and stripping attached marks. The unrendered verse-initial wa- and the elided verb in 'as will His Messenger and the believers' are acceptable English renderings, so every layer is faithful and the quote passes."
       },
       {
         "id": "s0003",
         "caption": "Qur'an 27:40",
         "layers": {
-          "original": "قَالَ ٱلَّذِى عِندَهُۥ عِلْمٌۭ مِّنَ ٱلْكِتَٰبِ أَنَا۠ ءَاتِيكَ بِهِۦ قَبْلَ أَن يَرْتَدَّ إِلَيْكَ طَرْفُكَ ۚ فَلَمَّا رَءَاهُ مُسْتَقِرًّا عِندَهُۥ قَالَ هَٰذَا مِن فَضْلِ رَبِّى لِيَبْلُوَنِىٓ ءَأَشْكُرُ أَمْ أَكْفُرُ ۖ وَمَن شَكَرَ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ رَبِّى غَنِىٌّۭ كَرِيمٌۭ",
-          "transliteration": "qala alladhi 'indahu 'ilmun min al-kitabi ana atika bihi qabla an yartadda ilayka tarfuk, falamma ra'ahu mustaqirran 'indahu qala hadha min fadli rabbi li-yabluwanni a-ashkuru am akfuru, wa-man shakara fa-innama yashkuru li-nafsihi, wa-man kafara fa-inna rabbi ghaniyyun karim",
+          "original": "قَالَ ٱلَّذِى عِندَهُۥ عِلْمٌۭ مِّنَ ٱلْكِتَٰبِ أَنَا۠ ءَاتِيكَ بِهِۦ قَبْلَ أَن يَرْتَدَّ إِلَيْكَ طَرْفُكَ ۚ فَلَمَّا رَءَاهُ مُسْتَقِرًّا عِندَهُۥ قَالَ هَٰذَا مِن فَضْلِ رَبِّى لِيَبْلُوَنِىٓ ءَأَشْكُرُ أَمْ أَكْفُرُ ۖ وَمَن شَكَرَ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ رَبِّى غَنِىٌّۭ كَرِيمٌۭ",
+          "transliteration": "qala alladhi 'indahu 'ilmun min al-kitabi ana atika bihi qabla an yartadda ilayka tarfuk, falamma ra'ahu mustaqirran 'indahu qala hadha min fadli rabbi li-yabluwani a-ashkuru am akfuru, wa-man shakara fa-innama yashkuru li-nafsihi, wa-man kafara fa-inna rabbi ghaniyyun karim",
           "translation": "The one who had knowledge from the Book said, \"I will bring it to you before your glance returns to you.\" Then, when he saw it settled before him, he said, \"This is from the bounty of my Lord, to test me whether I will give thanks or be ungrateful. Whoever gives thanks gives thanks only for his own sake. Whoever is ungrateful, then my Lord is Self-Sufficient and Generous.\""
         },
         "source_tokens": [
@@ -2363,7 +2353,7 @@
           "min",
           "fadli",
           "rabbi",
-          "li-yabluwanni",
+          "li-yabluwani",
           "a-ashkuru",
           "am",
           "akfuru",
@@ -2379,7 +2369,7 @@
           "ghaniyyun",
           "karim"
         ],
-        "layers_sha256": "e977c0b3fa8003b7fe432a425e0db47a936e96ab42acf65e69a6e3632198b118",
+        "layers_sha256": "2adb1dd04901653c8d65865023a0f6420ececddd3fc7768f4c79173d9ffad7bc",
         "status": "passed",
         "units": [
           {
@@ -2548,7 +2538,7 @@
             "source": "لِيَبْلُوَنِىٓ",
             "roman_start": 23,
             "roman_end": 24,
-            "romanization": "li-yabluwanni"
+            "romanization": "li-yabluwani"
           },
           {
             "source_index": 24,
@@ -2649,18 +2639,13 @@
             "romanization": "karim"
           }
         ],
-        "evidence": "The 38-word verse 27:40 matches the dossier raw byte-for-byte, and corpus rows 46820 and 4076 relay the identical wording from qala alladhee to ghaniyyun kareem, so nothing is truncated. Every Arabic word, including the repeated qala, 'indahu, rabbee and wa-man pairs, maps to exactly one roman token in order, covering all 38 roman tokens. li-yabluwanni renders the Uthmani li-yabluwaniya with a conventional doubled nun; the translation keeps fa-innamaa as 'only', the am alternative as 'or', and Self-Sufficient Generous for ghaniyyun kareem.",
-        "retained_from": {
-          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
-          "reviewer": "agent-0",
-          "quote_id": "s0003"
-        }
+        "evidence": "Original layer is byte-identical to the complete Qur'an 27:40 Uthmani verse in the dossier, nothing omitted or added (source_completeness pass). One verse quoted as one quotation with the three layers each in a single paragraph, so no paragraph boundary is split or merged (paragraph_boundaries pass). The two qala clauses give two speakers, the one with knowledge of the Book and then Solomon, and the translation marks both direct-speech quotations with balanced quotation marks at the same boundaries as the Arabic (speaker_and_quotation_boundaries pass). The rendering cues are legitimate: a [!quote] callout, transliteration set as a separate italic paragraph, and no mark highlighting present. Thirty-eight unit pairings align one-to-one, each Arabic word to exactly one romanization token, with the tokenizer correctly dropping the standalone pause marks after akfuru and li-nafsihi. Unit 23 'لِيَبْلُوَنِىٓ' is now written 'li-yabluwani', matching the single nun with no shadda in the cited Uthmani text and the English 'to test me', correcting the r11 defect, so every layer is faithful and the quote passes."
       },
       {
         "id": "s0004",
         "caption": "Qur'an 10:64",
         "layers": {
-          "original": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْءَاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+          "original": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْءَاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
           "transliteration": "lahum al-bushra fi al-hayati al-dunya wa-fi al-akhirah, la tabdila li-kalimati Allahi, dhalika huwa l-fawzu l-'azim",
           "translation": "For them is good news in the life of this world and in the Hereafter. There is no changing the words of God. That is the great triumph."
         },
@@ -2807,18 +2792,13 @@
             "romanization": "l-'azim"
           }
         ],
-        "evidence": "The original equals the dossier text of 10:64, and corpus rows 3567 and 3709 relay the same full verse from lahum al-bushraa to l-'azeem, with the following verse 'la yahzunuhum' absent, so the quotation is complete. The 15 source words each occupy one roman token in order, hyphenated articles al-/l- and conjunctions wa-fi included, tiling all 15 roman tokens exactly once. The English renders laa tabdeela li-kalimaati Allahi as 'There is no changing the words of God' and dhaalika huwa as 'That is', a direct rendering with no qualifiers dropped.",
-        "retained_from": {
-          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
-          "reviewer": "agent-0",
-          "quote_id": "s0004"
-        }
+        "evidence": "Original layer is byte-identical to the complete Qur'an 10:64 Uthmani verse in the dossier, nothing omitted or added (source_completeness pass). One verse quoted as one quotation with the three layers each in a single paragraph, so no paragraph boundary is split or merged (paragraph_boundaries pass). Plain statement with no direct speech and no quotation marks in any layer, so no speaker or quotation boundary is misplaced (speaker_and_quotation_boundaries pass). The rendering cues are legitimate: a [!quote] callout, transliteration set as a separate italic paragraph, and no mark highlighting present. All fifteen unit pairings align one-to-one, each Arabic word to exactly one romanization token, with the tokenizer correctly dropping the standalone pause marks after al-akhirah and Allahi, so every layer is faithful and the quote passes."
       },
       {
         "id": "s0005",
         "caption": "Qur'an 27:80",
         "layers": {
-          "original": "إِنَّكَ لَا تُسْمِعُ ٱلْمَوْتَىٰ وَلَا تُسْمِعُ ٱلصُّمَّ ٱلدُّعَآءَ إِذَا وَلَّوْا۟ مُدْبِرِينَ",
+          "original": "إِنَّكَ لَا تُسْمِعُ ٱلْمَوْتَىٰ وَلَا تُسْمِعُ ٱلصُّمَّ ٱلدُّعَآءَ إِذَا وَلَّوْا۟ مُدْبِرِينَ",
           "transliteration": "innaka la tusmi'u l-mawta wa-la tusmi'u l-summa l-du'a'a idha wallaw mudbirin",
           "translation": "Indeed, you cannot make the dead hear, nor can you make the deaf hear the call when they turn away, retreating."
         },
@@ -2929,14 +2909,16 @@
             "romanization": "mudbirin"
           }
         ],
-        "evidence": "The original matches the dossier text of 27:80, and corpus rows 3021 and 3153 relay the identical wording innaka laa tusmi'u l-mawtaa ... mudbireen, confirming completeness before 27:81. The 11 source words map one-to-one to the 11 roman tokens: wallaw drops only the pause-sign superscript, mudbirin is the pausal form of mudbirina, and both tusmi'u occurrences keep separate la/wa-la tokens. The English preserves both negations 'you cannot make the dead hear, nor can you make the deaf hear' and renders idhaa wallaw mudbireen as 'when they turn away, retreating'.",
-        "retained_from": {
-          "record_sha256": "c5d651f1b35243af959067352eede28440054bd91d1bea0aa989698f3cc12850",
-          "reviewer": "agent-0",
-          "quote_id": "s0005"
-        }
+        "evidence": "Original layer is byte-identical to the complete Qur'an 27:80 Uthmani verse in the dossier, nothing omitted or added (source_completeness pass). One verse quoted as one quotation with the three layers each in a single paragraph, so no paragraph boundary is split or merged (paragraph_boundaries pass). Plain second-person address with no direct speech and no quotation marks in any layer, so no speaker or quotation boundary is misplaced (speaker_and_quotation_boundaries pass). The rendering cues are legitimate: a [!quote] callout, transliteration set as a separate italic paragraph, and no mark highlighting present. All eleven unit pairings align one-to-one, each Arabic word to exactly one romanization token, with the tokenizer correctly stripping the attached superscript zero after wallaw. The modal 'cannot' for la tusmi'u is an acceptable English rendering, so every layer is faithful and the quote passes."
       }
-    ]
+    ],
+    "intake": {
+      "request_sha256": "070ab8aad268924ac91f74f984d3bdd389fc8073367a20a5458b4e40a166e863",
+      "response_sha256": "fddc1bfafa83604ce1ef4f7af860e9894005f0c9d7c80ce731e7f7aa2dc0aef8",
+      "agent_id": "agent-8",
+      "parent_model": "GLM (inherited)",
+      "model": "GLM (inherited)"
+    }
   },
   "citation_ledger_schema": 2,
   "citation_dispositions": {
