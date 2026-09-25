@@ -554,7 +554,7 @@ def _check(src, register='standard'):
     # RTL rendering: a page that quotes Arabic in class="rtl" paragraphs must
     # carry the direction rule (lang="ar" alone does not set direction; without
     # it the Arabic renders left-justified in an LTR block)
-    if 'class="rtl' in src and 'direction: rtl' not in src:
+    if 'class="rtl' in src and not re.search(r'direction:\s*rtl', src):
         errs.append('page carries class="rtl" Arabic paragraphs but no "direction: rtl" rule; Arabic renders left-justified (add the .rtl rule from the reference pages)')
     if re.findall(r'[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B50]', src):
         errs.append('emoji found (banned)')
@@ -860,6 +860,7 @@ FIXTURES = [
     ('emoji fires',              _mini('<p>He smiled \U0001F600 at them.</p>'), 'emoji found', None),
     ('rtl without direction fires', _mini('<blockquote class="hadith-callout"><p class="rtl font-amiri text-xl" lang="ar">كلام</p><p class="translation">"Words."</p><cite class="text-sm text-gray-500">- Book, p. 1</cite></blockquote>'), 'direction: rtl', None),
     ('rtl with direction clean', _mini('<style>.rtl{direction: rtl;text-align: right;}</style><blockquote class="hadith-callout"><p class="rtl font-amiri text-xl" lang="ar">كلام</p><p class="translation">"Words."</p><cite class="text-sm text-gray-500">- Book, p. 1</cite></blockquote>'), None, 'direction: rtl'),
+    ('rtl minified direction clean', _mini('<style>.rtl{direction:rtl;text-align:right}</style><blockquote class="hadith-callout"><p class="rtl font-amiri text-xl" lang="ar">كلام</p><p class="translation">"Words."</p><cite class="text-sm text-gray-500">- Book, p. 1</cite></blockquote>'), None, 'direction: rtl'),
     ('four-beat fires',          _mini('<article><h4 class="analysis-heading">Introduction</h4><h4 class="analysis-heading">Example</h4><h4 class="analysis-heading">Implication</h4><h4 class="analysis-heading">Conclusion</h4></article>'), 'four-beat', None),
     ('commentary category accepted', _mini('<h2>Sources and their limits</h2><p>The report attributes this view to its narrator.</p>', main='<main data-category="commentary">'), None, 'missing <main data-category'),
     ('commentary needs no narration apparatus', _mini('<h2>Sources and their limits</h2><p>The report attributes this view to its narrator.</p>', main='<main data-category="commentary">'), None, 'Commentary'),
