@@ -143,7 +143,8 @@ or approval hashes inside records to conceal version differences.
 ## Rendering options
 
 Pass a JSON file with `init --config FILE` only when needed. Supported keys are
-`section_ids`, `note_map`, `languages`, `source_paragraphs`, `template` and `register`.
+`section_ids`, `note_map`, `languages`, `source_paragraphs`, `source_roles`,
+`template` and `register`.
 The manifest supplies `slug`. Unknown keys and obsolete caption/heading mappings
 are rejected. For example:
 
@@ -165,6 +166,30 @@ labels; unknown editions stop the build. Latin-script report callouts need
 `source_paragraphs: {"Exact caption": 1}` to distinguish their original paragraphs
 from English. Scripture layers and significant-term marks come from the master.
 The converter never chooses translations, transliterations or highlighted words.
+
+For a report with a source heading, chain and narration, declare semantic roles
+in this same configuration before preflight:
+
+```json
+{"source_roles": {"Exact report caption": ["heading", "isnad", "matn"]}}
+```
+
+The list follows every paragraph in the callout, including original and English
+layers. Allowed roles are `heading`, `context`, `isnad`, `matn`; each nested `> >`
+paragraph must be `matn` and each outer `>` paragraph must have another role.
+A chapter heading is `heading`, never `isnad`. Mark chains from the actual source;
+position before a narration does not establish a chain. Without a role map,
+outer paragraphs remain neutral source context and nested paragraphs remain matn.
+Do not invent labels or explain isnad/matn inside the callout. Typography and the
+chain separator distinguish the units. The full narration, including unquoted
+narrative sentences, remains in its explicit matn group.
+
+For an existing run, pass the complete replacement rendering configuration to
+`revise --config FILE` together with the usual source, output and reason flags.
+Include retained language and section mappings. This preserves the parent run,
+regenerates presentation and requires actual affected review; never edit an old
+manifest or HTML to apply these roles. This is rendering preparation within the
+normal workflow, not a separate research or receipt-writing stage.
 
 Supported blocks are H1–H3 subject to category rules, soft-wrapped paragraphs,
 source/abstract/summary callouts, flat lists, fact cards and tables, ordinary
@@ -375,3 +400,11 @@ For a run begun under an older format, use the supported `revise` lifecycle;
 retain the old run and actual reviews, regenerate the new presentation and
 review its desktop/mobile output. Old render approvals cannot approve new HTML.
 Do not patch hashes or recreate review observations just to change the template.
+
+Before accepting a rendering change, run `test_reader_layout`: its synthetic
+heading/chain/matn fixture and fixed reference measurements cover desktop and
+mobile typography, reading width, callout padding and paragraph spacing. Inspect
+both viewport previews as well. Compare equivalent components and content; a
+longer title or an article without an authored abstract naturally has a different
+page silhouette. Never manufacture an abstract or source headings to match a
+screenshot. Preserve the Faith & Reason palette and working Back navigation.

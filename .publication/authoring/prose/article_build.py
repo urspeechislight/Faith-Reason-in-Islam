@@ -256,7 +256,7 @@ def main(argv=None):
     i=sub.add_parser('prepare');i.add_argument('manifest',type=Path);i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path)
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
     i=sub.add_parser('paths');i.add_argument('manifest',type=Path)
-    i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True);i.add_argument('--site-root',type=Path,help='Clean same-repository worktree at fetched origin/main; preserves parent run and checkout')
+    i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True);i.add_argument('--site-root',type=Path,help='Clean same-repository worktree at fetched origin/main; preserves parent run and checkout');i.add_argument('--config',type=Path)
     i=sub.add_parser('release-request');i.add_argument('manifest',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
     i=sub.add_parser('release-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True);i.add_argument('--session-id')
     for command in ['reviews','stage','status']:

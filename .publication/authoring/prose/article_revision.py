@@ -120,6 +120,9 @@ def revise(B,a):
         destination=copy.deepcopy(parent);destination['paths']['site_root']=str(site)
         B.inputs(destination)
     else:B.inputs(parent)
+    config=getattr(a,'config',None)
+    render=B.read(config) if config else copy.deepcopy(parent.get('render',{}))
+    B.render_article.validate_options(render)
     text=source.read_text();slug=parent['slug']
     target.parent.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.revision-',dir=target.parent.parent) as temp:
@@ -128,6 +131,7 @@ def revise(B,a):
             'source':'candidate.md','baseline':'reviews/master.baseline.json','review':'reviews/master.review.json',
             'evidence':'evidence.json','html_baseline':'reviews/html.baseline.json','html_review':'reviews/html.review.json','scripture_review':'reviews/scripture-alignment.json'}.items()}
         child['paths']['site_root']=str(site);child['builds']=[];child['ready']=None;child.pop('latest_build',None);child.pop('staged',None)
+        child['render']=render
         child['initial_source_sha256']=review.digest(text)
         child['destination_snapshot']=destination_snapshot(B,child)
         if (site/(slug+'.html')).exists():child['operation']='repair';child['original_article_sha256']=B.digest(site/(slug+'.html'))

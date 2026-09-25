@@ -36,7 +36,7 @@ class SpeechTests(unittest.TestCase):
     def test_stripping_nesting_rejected_without_changing_words(self):
         source,page,receipt=self.render()
         page=page.replace('class="source-matn" data-quote-role="matn"','class="plain"')
-        with self.assertRaisesRegex(ValueError,'invalid generated reader label'):H.verify(page,receipt)
+        self.assertTrue(any('hierarchy' in e for e in H.verify(page,receipt)))
 
     def test_isnad_cannot_be_indented_with_matn(self):
         source,page,receipt=self.render()

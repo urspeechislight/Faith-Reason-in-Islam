@@ -62,9 +62,14 @@ then regenerate and preflight before review.
 - **Quotations:** one source passage stays in one square tint callout, with
   source label, source-defined paragraphs, and citation separated by a rule.
   Desktop padding is 32px horizontally, mobile 20px. Explicit nested Markdown
-  `> >` identifies the entire matn; `>` holds its isnad. Render chain and matn
-  as separate labeled units with the chain rule and distinct typography from
-  the reference. Preserve nested dialogue boundaries and all source text.
+  `> >` identifies the entire matn; outer `>` paragraphs may be source headings,
+  context or isnad. Declare `render.source_roles` in the existing configuration
+  when distinguishing them (see article-build.md). Never infer an isnad merely
+  from a following matn. Keep source headings separate from chains, use the
+  reference's distinct chain/report typography and separator, and omit
+  explanatory isnad/matn labels. Nested paragraph gaps are 20.8px with no extra
+  trailing gap; the chain-to-matn gap is 24px. Preserve nested dialogue boundaries
+  and all source text.
   Never infer Arabic boundaries, merge paragraphs or add transliteration to
   reports. Scripture remains original → transliteration → English.
 - **Source roles:** only canonical source callouts carry data-content-role=source.
