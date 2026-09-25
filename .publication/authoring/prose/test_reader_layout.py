@@ -113,21 +113,99 @@ class ReaderTests(unittest.TestCase):
         self.assertRegex(css,r'nav li a\[aria-current=location\]\{[^}]*color:#6F552B')
     def test_original_layer_is_not_labeled_as_english_chain(self):
         source=note(extra='> [!info] Hebrew witness\n> אשה\n>\n> A narrator, from a witness:\n>\n> > He spoke.')
-        page,_=R.render(source,H.prepare(source),{'languages':{'Hebrew witness':'he'}})
+        page,_=R.render(source,H.prepare(source),{'languages':{'Hebrew witness':'he'},'source_roles':{'Hebrew witness':['context','isnad','matn']}})
         self.assertNotIn('class="chain-text">אשה',page)
         self.assertIn('class="chain-text">A narrator',page)
     def test_legacy_page_is_untouched(self):
         page='<main><blockquote><p>Legacy source</p></blockquote></main>'
         self.assertEqual(L.normalize(page),page)
 
+class SourceRoleTests(unittest.TestCase):
+    source='> [!note] Synthetic witness\n> Chapter on reading the record.\n>\n> The compiler, from a witness, who reported the following.\n>\n> > The witness entered the room.\n> >\n> > The narrator recorded the answer.'
+    roles={'source_roles':{'Synthetic witness':['heading','isnad','matn','matn']}}
+    def render(self,options=None):
+        text=note(extra=self.source)
+        return R.render(text,H.prepare(text),options)
+    def test_heading_is_not_a_second_isnad(self):
+        page,receipt=self.render(self.roles)
+        tree=L.Tree(page)
+        chains=[n for n in tree.nodes if n.tag=='span' and n.attrs.get('class')=='chain-text']
+        self.assertEqual([n.text() for n in chains],['The compiler, from a witness, who reported the following.'])
+        self.assertEqual(page.count('class="source-heading translation"'),1)
+        self.assertNotIn('Chain of transmission',page)
+        self.assertNotIn('Report text',page)
+        self.assertNotIn('data-reader-ui="isnad"',page)
+        self.assertNotIn('data-reader-ui="matn"',page)
+        self.assertEqual(H.verify(page,receipt),[])
+    def test_unmarked_source_context_is_never_guessed(self):
+        page,receipt=self.render()
+        self.assertNotIn('class="isnad-segment"',page)
+        self.assertEqual(page.count('data-quote-role="matn"'),1)
+        self.assertEqual(H.verify(page,receipt),[])
+    def test_roles_cannot_override_boundaries_or_silently_drift(self):
+        for roles in (['heading'],['heading','isnad','context','matn'],['matn','isnad','matn','matn'],['heading','unknown','matn','matn'],'isnad'):
+            with self.subTest(roles=roles),self.assertRaises(ValueError):
+                self.render({'source_roles':{'Synthetic witness':roles}})
+        with self.assertRaisesRegex(ValueError,'absent'):
+            self.render({'source_roles':{'Missing witness':[]}})
+        with self.assertRaisesRegex(ValueError,'unique report caption'):
+            R.render(note(extra=self.source+'\n\n'+self.source),H.prepare(note(extra=self.source+'\n\n'+self.source)),self.roles)
+    def test_both_languages_keep_their_explicit_roles(self):
+        source=note(extra='> [!note] Synthetic bilingual\n> عنوان المصدر\n>\n> سلسلة النقل\n>\n> > نص المصدر\n>\n> Chapter on reading.\n>\n> A compiler, from a witness.\n>\n> > The witness spoke.')
+        page,receipt=R.render(source,H.prepare(source),{'source_roles':{'Synthetic bilingual':['heading','isnad','matn','heading','isnad','matn']}})
+        self.assertEqual(page.count('class="chain-text"'),2)
+        self.assertEqual(page.count('class="source-heading '),2)
+        self.assertEqual(H.verify(page,receipt),[])
+
+
 class BrowserTests(unittest.TestCase):
+    def test_reference_typography_and_compact_source_spacing(self):
+        """Reference v6 component measurements, with the user's explanatory labels removed.
+
+        These fixed measurements come from the approved reference at 1280/390px;
+        they do not derive expected values from the renderer stylesheet.
+        """
+        import tempfile
+        from playwright.sync_api import sync_playwright
+        fixture=SourceRoleTests()
+        page,receipt=fixture.render(fixture.roles)
+        with tempfile.TemporaryDirectory() as td,sync_playwright() as pw:
+            path=Path(td)/'reference-components.html';path.write_text(page)
+            browser=pw.chromium.launch()
+            for width,main_width,padding,body_size,quote_size,h1_size in ((1280,760,32,17,17,65.28),(390,350,20,16,16,39.2)):
+                tab=browser.new_page(viewport={'width':width,'height':900})
+                tab.goto(path.as_uri());tab.evaluate('document.fonts.ready')
+                def css(selector,prop):return tab.locator(selector).last.evaluate('(e,p)=>getComputedStyle(e)[p]',prop)
+                def px(selector,prop):return float(css(selector,prop).removesuffix('px'))
+                self.assertAlmostEqual(px('main','width'),main_width,places=1)
+                self.assertAlmostEqual(px('h1','fontSize'),h1_size,places=1)
+                self.assertAlmostEqual(px('h1','lineHeight'),h1_size*1.16,places=1)
+                self.assertIn('Inter',css('main section > p','fontFamily'))
+                self.assertAlmostEqual(px('main section > p','fontSize'),body_size,places=1)
+                self.assertAlmostEqual(px('main section > p','lineHeight'),body_size*1.85,places=1)
+                self.assertAlmostEqual(px('.hadith-callout','paddingLeft'),padding,places=1)
+                self.assertIn('Literata',css('.source-matn p','fontFamily'))
+                self.assertAlmostEqual(px('.source-matn p','fontSize'),quote_size,places=1)
+                self.assertAlmostEqual(px('.source-matn p','lineHeight'),quote_size*1.9,places=1)
+                self.assertAlmostEqual(px('.source-matn p:last-child','marginBottom'),0,places=1)
+                self.assertAlmostEqual(px('.source-matn p:first-child','marginBottom'),20.8,places=1)
+                self.assertAlmostEqual(px('.source-isnad','marginBottom'),24,places=1)
+                self.assertAlmostEqual(px('.isnad-segment','paddingBottom'),20,places=1)
+                self.assertAlmostEqual(px('.chain-text','fontSize'),15,places=1)
+                self.assertAlmostEqual(px('.chain-text','lineHeight'),27,places=1)
+                self.assertIn('Inter',css('.source-heading','fontFamily'))
+                self.assertFalse(tab.evaluate('document.documentElement.scrollWidth>innerWidth'))
+                self.assertTrue(tab.locator('.source-matn p').first.is_visible())
+                tab.close()
+            browser.close()
+
     def test_navigation_facts_fonts_and_source_groups(self):
         import tempfile
         from pathlib import Path
         from playwright.sync_api import sync_playwright
         from test_callout_speech import SOURCE
         source=note(extra=SOURCE)
-        page,_=R.render(source,H.prepare(source))
+        page,_=R.render(source,H.prepare(source),{'source_roles':{'Synthetic witness':['isnad','matn','matn','matn','matn']}})
         with tempfile.TemporaryDirectory() as td,sync_playwright() as pw:
             path=Path(td)/'reading.html';path.write_text(page)
             browser=pw.chromium.launch()

@@ -129,6 +129,21 @@ def original_attrs(language):
     return f'class="text-xl" lang="{esc(language)}"'
 
 
+def source_roles(caption,kind,parts,depths,options):
+    """Style only declared semantic roles; nesting alone establishes matn, never isnad."""
+    declared=options.get('source_roles',{}).get(H.inline(caption))
+    if declared is None:return ['matn' if depth else 'context' for depth in depths]
+    if kind=='quote':raise ValueError('source_roles applies to reports, not scripture: '+caption)
+    if not isinstance(declared,list) or len(declared)!=len(parts):
+        raise ValueError('source_roles needs one role per source paragraph: '+caption)
+    for role,depth in zip(declared,depths):
+        if role not in ('heading','context','isnad','matn'):
+            raise ValueError('unknown source paragraph role: '+str(role))
+        if (role=='matn')!=bool(depth):
+            raise ValueError('source_roles must preserve explicit matn nesting: '+caption)
+    return declared
+
+
 def render_source(item,receipt,options):
     kind,caption,parts=callout_parts(item);identifier=item['id']
     layout=receipt['paragraph_layout'][identifier]
@@ -138,6 +153,7 @@ def render_source(item,receipt,options):
     if boundary_errors:raise ValueError(identifier+': '+('; '.join(boundary_errors)).lower())
     rendered=['<div class="source-label" data-reader-ui="source">'+('Scripture' if kind=='quote' else 'Transmitted report')+'</div>'];role='original';speech_open=False;speech_direction=None;speech_role=None
     depths=layout.get('quote_depths',[0]*len(parts))
+    semantic_roles=source_roles(caption,kind,parts,depths,options)
     original_count=options.get('source_paragraphs',{}).get(H.inline(caption))
     if original_count is not None and (type(original_count) is not int or not 0<original_count<len(parts)):
         raise ValueError(identifier+': source_paragraphs must leave at least one original and one English paragraph')
@@ -168,14 +184,11 @@ def render_source(item,receipt,options):
             quote_role='speech' if kind=='quote' else 'matn'
             rendered.append(f'<blockquote class="source-{quote_role}" data-quote-role="{quote_role}" dir="{direction}">');speech_open=True;speech_direction=direction;speech_role=role
         value=inline(raw,receipt)
-        if kind!='quote' and not depth and any(depths[index+1:]):
-            same_layer=any(d and report_role(k,parts[k])==role for k,d in enumerate(depths[index+1:],index+1))
-            if same_layer:
-                label='الإسناد · Isnad' if role=='original' and 'lang="ar"' in attrs else 'Isnad · Chain of transmission'
-                value=f'<span class="isnad-segment"><span class="segment-label" data-reader-ui="isnad" dir="ltr">{label}</span><span class="chain-text">'+value+'</span></span>'
-        if kind!='quote' and opened_matn:
-            label='المتن · Matn' if role=='original' and 'lang="ar"' in attrs else 'Matn · Report text'
-            rendered.append(f'<span class="segment-label matn-label" data-reader-ui="matn" dir="ltr">{label}</span>')
+        semantic_role=semantic_roles[index]
+        if kind!='quote' and semantic_role in ('isnad','heading'):
+            attrs=attrs.replace('class="',f'class="source-{semantic_role} ',1)
+        if kind!='quote' and semantic_role=='isnad':
+            value='<span class="isnad-segment"><span class="chain-text">'+value+'</span></span>'
         rendered.append(f'<p {attrs}>{value}</p>')
     if speech_open:rendered.append('</blockquote>')
     css='quran-callout' if kind=='quote' else 'hadith-callout'
@@ -275,9 +288,9 @@ def render_block(item,receipt,options):
 
 def validate_options(options):
     if not isinstance(options,dict):raise ValueError('render config must be an object')
-    allowed={'slug','template','languages','source_paragraphs','section_ids','note_map','register'}
+    allowed={'slug','template','languages','source_paragraphs','source_roles','section_ids','note_map','register'}
     if set(options)-allowed:raise ValueError('unknown render options: '+', '.join(sorted(set(options)-allowed)))
-    for key in ('languages','source_paragraphs','section_ids','note_map'):
+    for key in ('languages','source_paragraphs','source_roles','section_ids','note_map'):
         if key in options and not isinstance(options[key],dict):raise ValueError(key+' must be an object')
     for key in ('languages','section_ids','note_map'):
         if any(not isinstance(k,str) or not isinstance(v,str) for k,v in options.get(key,{}).items()):raise ValueError(key+' must map strings to strings')
@@ -291,8 +304,12 @@ def render(source,receipt,options=None,site_root=None):
     meta,_=metadata(source);items=source_items(source)
     if not items or not items[0]['raw'][0].startswith('# '):raise ValueError('master must start with one H1 title')
     captions={H.inline(CALL.match(i['raw'][0])[2]) for i in items if CALL.match(i['raw'][0])}
-    for key in ('languages','source_paragraphs'):
+    for key in ('languages','source_paragraphs','source_roles'):
         if set(options.get(key,{}))-captions:raise ValueError(key+': configured caption is absent from the master')
+    for caption in options.get('source_roles',{}):
+        matches=[i for i in items if CALL.match(i['raw'][0]) and H.inline(CALL.match(i['raw'][0])[2])==caption]
+        if len(matches)!=1 or CALL.match(matches[0]['raw'][0])[1] not in SOURCE_TYPES-{'quote'}:
+            raise ValueError('source_roles requires a unique report caption: '+str(caption))
     headings=[i for i in items if i['raw'][0].startswith('#')];ids={};heading_by_text={}
     special={'The Facts':'facts','Final Verdict':'verdict','The Reading':'reading','Commentary':'commentary','Glossary':'glossary'}
     for item in headings:

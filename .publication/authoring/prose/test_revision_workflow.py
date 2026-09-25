@@ -124,6 +124,22 @@ class RevisionTests(ManifestTests):
         with patch.object(B.review,'extract',return_value={'quotes':[]}):self.assertEqual(self.call('preflight',child),0)
         self.assertEqual(self.call('reviews',child),0)
         self.assertEqual(B.read(B.read(child)['paths']['review'])['status'],'pending')
+    def test_revision_updates_render_config_without_touching_parent_or_approving(self):
+        self.init();self.preflight();before=self.manifest.read_bytes()
+        config=self.root/'render-options.json'
+        options={'source_roles':{'A witness':['context']},'template':'flowing'}
+        B.write(config,options);child=self.root/'format-revision/build.json'
+        self.assertEqual(self.call('revise',self.manifest,'--source',self.source,'--config',config,'--output',child,'--reason','Explicit source roles'),0)
+        data=B.read(child)
+        self.assertEqual(data['render'],options)
+        self.assertEqual(self.manifest.read_bytes(),before)
+        self.assertIsNone(data['ready']);self.assertEqual(data['builds'],[])
+        self.assertFalse(Path(data['paths']['review']).exists())
+        self.assertEqual(self.call('preflight',child),0)
+        B.write(config,{'unsupported':True});bad=self.root/'bad-options/build.json'
+        self.assertEqual(self.call('revise',self.manifest,'--source',self.source,'--config',config,'--output',bad,'--reason','Invalid option'),1)
+        self.assertFalse(bad.parent.exists());self.assertEqual(self.manifest.read_bytes(),before)
+
     def test_reuse_requires_real_prior_review_and_keeps_current_approval_pending(self):
         self.ready();self.source.write_text(note(extra='A later witness arrived.'))
         child=self.root/'r2/build.json'

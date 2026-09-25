@@ -73,3 +73,9 @@ readiness, response and legacy-provenance commands.
 Website creation and repair both use the shared reader-v1 format through
 article_build.py. Follow the website reference for layout, typography, retained
 Faith & Reason colors and Back navigation. Never reuse an old HTML shell.
+
+During rendering preparation, distinguish source headings, context, isnad and
+matn using the existing `source_roles` configuration documented in article-build.md.
+A paragraph before a narration is not automatically a chain. Use the shared
+reference typography and compact spacing, without explanatory isnad/matn labels.
+Check desktop and mobile output before review; do not repair layout in article HTML.
