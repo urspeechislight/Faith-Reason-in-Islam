@@ -61,12 +61,12 @@ def compatible_binding(previous,current):
     return previous==current
 
 
-def load(manifest):
+def load(manifest,scope_changes=True):
     data=read(manifest)
     if data.get('schema')!=SCHEMA:raise ValueError('unsupported run manifest schema; preserve it and adopt its retained handoff into a new run')
     if str(data.get('paths',{}).get('site_root','')).startswith('/Users/'):
         raise ValueError('project execution belongs on Titan; use titan-project and a Titan site worktree')
-    article_scope.check(data)
+    article_scope.check(data,changes=scope_changes)
     return data
 
 def inputs(data):
@@ -256,7 +256,7 @@ def main(argv=None):
     i=sub.add_parser('prepare');i.add_argument('manifest',type=Path);i.add_argument('--baseline',type=Path);i.add_argument('--review',type=Path)
     i=sub.add_parser('verify');i.add_argument('manifest',type=Path);i.add_argument('--html-baseline',type=Path);i.add_argument('--html-review',type=Path);i.add_argument('--evidence',type=Path)
     i=sub.add_parser('paths');i.add_argument('manifest',type=Path)
-    i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True)
+    i=sub.add_parser('revise');i.add_argument('manifest',type=Path);i.add_argument('--source',type=Path,required=True);i.add_argument('--output',type=Path,required=True);i.add_argument('--reason',required=True);i.add_argument('--site-root',type=Path,help='Clean same-repository worktree at fetched origin/main; preserves parent run and checkout')
     i=sub.add_parser('release-request');i.add_argument('manifest',type=Path);i.add_argument('--parent-model',required=True);i.add_argument('--output',type=Path,required=True)
     i=sub.add_parser('release-accept');i.add_argument('manifest',type=Path);i.add_argument('--request',type=Path,required=True);i.add_argument('--response',type=Path,required=True);i.add_argument('--agent-id',required=True);i.add_argument('--model',required=True);i.add_argument('--session-id')
     for command in ['reviews','stage','status']:

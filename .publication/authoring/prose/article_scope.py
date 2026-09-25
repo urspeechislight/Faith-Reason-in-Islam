@@ -7,6 +7,10 @@ import subprocess
 from urllib.parse import urlsplit
 
 
+class ScopeConflict(ValueError):
+    """Unrelated local work requires an isolated destination, not scope rebinding."""
+
+
 def location(site):
     site = Path(site).resolve()
     if (site / '.git').exists():
@@ -26,19 +30,53 @@ def url_slug(url):
     return path[len(prefix):-5]
 
 
-def check(data):
+def git(site,*args):
+    result=subprocess.run(['git','-C',str(site),*args],capture_output=True,text=True)
+    if result.returncode:raise ValueError('Git worktree check failed: '+' '.join(args)+'; '+result.stderr.strip())
+    return result.stdout.strip()
+
+
+def comparison_base(site,recorded):
+    """Exclude only upstream commits proven to descend from this task's baseline."""
+    merge=subprocess.run(['git','-C',str(site),'merge-base','HEAD','refs/remotes/origin/main'],capture_output=True,text=True)
+    if merge.returncode==0:
+        shared=merge.stdout.strip()
+        ancestor=subprocess.run(['git','-C',str(site),'merge-base','--is-ancestor',recorded,shared],capture_output=True)
+        if ancestor.returncode==0:return shared
+    return recorded
+
+
+def revision_site(parent,site):
+    """Validate a clean same-repository destination without modifying either checkout."""
+    old=Path(parent['paths']['site_root']).resolve();site=Path(site).resolve()
+    if not (old/'.git').exists() or not (site/'.git').exists():raise ValueError('revise --site-root requires registered Git worktrees in the same repository')
+    if git(site,'rev-parse','--show-toplevel')!=str(site):raise ValueError('revision site must be the Git worktree root')
+    if git(old,'rev-parse','--path-format=absolute','--git-common-dir')!=git(site,'rev-parse','--path-format=absolute','--git-common-dir'):
+        raise ValueError('revision destination belongs to a different repository')
+    if git(site,'status','--porcelain','--untracked-files=all'):raise ValueError('revision destination must be clean; preserve its edits and choose a fresh worktree')
+    if git(site,'rev-parse','HEAD')!=git(site,'rev-parse','refs/remotes/origin/main'):
+        raise ValueError('revision destination must start at fetched origin/main; create a fresh worktree there')
+    scoped=dict(parent,paths=dict(parent['paths'],site_root=str(site)))
+    scoped.pop('task_scope',None)
+    check(scoped)
+    return site
+
+
+def check(data,changes=True):
     path = location(data['paths']['site_root'])
     if path.exists():
         scope = json.loads(path.read_text())
         if scope.get('slug') != data['slug']:
             raise ValueError('worktree belongs to article ' + str(scope.get('slug')) + '; this run targets ' + data['slug'] + '. Do not repair another article to unblock this task. Use its separately authorized worktree.')
-        if scope.get('base_commit'):
+        if changes and scope.get('base_commit'):
             site=str(Path(data['paths']['site_root']).resolve())
-            names=subprocess.check_output(['git','-C',site,'diff','--name-only',scope['base_commit']],text=True).splitlines()
+            base=comparison_base(site,scope['base_commit'])
+            names=subprocess.check_output(['git','-C',site,'diff','--name-only',base],text=True).splitlines()
+            names+=subprocess.check_output(['git','-C',site,'diff','--cached','--name-only',base],text=True).splitlines()
             names+=subprocess.check_output(['git','-C',site,'ls-files','--others','--exclude-standard'],text=True).splitlines()
             slug=data['slug'];allowed={slug+'.html','index.html','facts.html'} | {'.prose-reviews/'+slug+suffix for suffix in ('.baseline.json','.review.json','.handoff.json','.evidence.json')}
             outside=sorted(set(names)-allowed)
-            if outside:raise ValueError('worktree has changes outside article '+slug+': '+', '.join(outside[:12])+'. Preserve them and use a clean task worktree; do not repair unrelated articles or runtime code.')
+            if outside:raise ScopeConflict('worktree has changes outside article '+slug+': '+', '.join(outside[:12])+'. Preserve them; continue with revise --site-root CLEAN_WORKTREE --source CANDIDATE --output NEW_RUN/build.json --reason REASON. Do not edit scope records or unrelated files.')
     elif data.get('task_scope'):
         raise ValueError('worktree task scope is missing; inspect the task before restoring it')
 

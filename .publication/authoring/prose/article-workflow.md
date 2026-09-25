@@ -62,6 +62,13 @@ fidelity and the user's request outrank a style target or template convention.
 - **Create** from a topic or sources: define the question, research it, write
   one cited master, preflight its rendering before review, then publish for an
   article request; save only for a note-only request.
+- **Repair** includes the current shared presentation. Repeating a previously
+  completed URL is a fresh instruction to check current requirements, not a
+  reason to decline. Compare the retained build with the installed renderer via
+  `status`; matching live bytes to an older approved build proves only that older
+  publication. `needs-revision` means continue with `revise`, affected review and
+  publication in this invocation. Ask about a specific defect only if the current
+  format and requested checks are already satisfied and the request remains unclear.
 - **Repair** a note or URL: preserve the existing note, HTML and deployment
   version in a new run directory. Read the complete article. List concrete
   defects with locations and distinguish research/attribution/inference,
