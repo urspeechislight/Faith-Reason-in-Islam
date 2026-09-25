@@ -1,6 +1,8 @@
 """Reader format round trips and hostile disclosure/label mutations."""
 import copy
+import re
 import unittest
+from pathlib import Path
 import reader_layout as L
 import handoff as H
 import render_article as R
@@ -55,6 +57,60 @@ class ReaderTests(unittest.TestCase):
         source=note(extra='| Name | Value |\n|---|---|\n| One | Two |')
         page,_=R.render(source,H.prepare(source))
         self.assertIn('<th>Name</th>',page)
+    def test_tables_carry_scroll_affordance(self):
+        source=note(extra='| Name | Value |\n|---|---|\n| One | Two |')
+        page,receipt=R.render(source,H.prepare(source))
+        self.assertIn('<div class="table-frame"><div class="table-scroll"',page)
+        self.assertEqual(H.verify(page,receipt),[])
+        self.assertIn('main .table-frame.can-scroll::after',page)
+        self.assertIn('@media(max-width:900px){main .table-frame:not(.scroll-known)::after{opacity:1}}',page)
+        self.assertIn("querySelectorAll('main .table-frame')",page)
+        self.assertIn("frame.classList.toggle('can-scroll'",page)
+    def test_muted_strong_text_passes_caption_contrast(self):
+        css=(Path(__file__).parent/'reader.css').read_text()
+        match=re.search(r'--muted-strong:(#[0-9A-Fa-f]{6})',css)
+        self.assertTrue(match)
+        def luminance(color):
+            channels=[int(color[i:i+2],16)/255 for i in (1,3,5)]
+            channels=[c/12.92 if c<=.04045 else ((c+.055)/1.055)**2.4 for c in channels]
+            return .2126*channels[0]+.7152*channels[1]+.0722*channels[2]
+        def ratio(fore,back):
+            first,second=sorted((luminance(fore),luminance(back)),reverse=True)
+            return (first+.05)/(second+.05)
+        color=match.group(1)
+        self.assertGreaterEqual(ratio(color,'#F3F5F7'),4.5)
+        self.assertGreaterEqual(ratio(color,'#F8F1E2'),4.5)
+        for selector in ('blockquote cite','.transliteration','.isnad-segment'):
+            self.assertRegex(css,re.escape(selector)+r'\{[^}]*color:var\(--muted-strong\)')
+    def test_table_header_passes_contrast(self):
+        css=(Path(__file__).parent/'reader.css').read_text()
+        rule=re.search(r'th\{[^}]*\}',css)
+        self.assertTrue(rule)
+        background=re.search(r'background:(#[0-9A-Fa-f]{6})',rule.group(0))
+        color=re.search(r'color:(#[0-9A-Fa-f]{6})',rule.group(0))
+        self.assertTrue(background and color)
+        def luminance(value):
+            channels=[int(value[i:i+2],16)/255 for i in (1,3,5)]
+            channels=[c/12.92 if c<=.04045 else ((c+.055)/1.055)**2.4 for c in channels]
+            return .2126*channels[0]+.7152*channels[1]+.0722*channels[2]
+        first,second=sorted((luminance(color.group(1)),luminance(background.group(1))),reverse=True)
+        self.assertGreaterEqual((first+.05)/(second+.05),4.5)
+    def test_contents_navigation_passes_contrast(self):
+        css=(Path(__file__).parent/'reader.css').read_text()
+        def luminance(value):
+            channels=[int(value[i:i+2],16)/255 for i in (1,3,5)]
+            channels=[c/12.92 if c<=.04045 else ((c+.055)/1.055)**2.4 for c in channels]
+            return .2126*channels[0]+.7152*channels[1]+.0722*channels[2]
+        def ratio(fore,back):
+            first,second=sorted((luminance(fore),luminance(back)),reverse=True)
+            return (first+.05)/(second+.05)
+        strong=re.search(r'--muted-strong:(#[0-9A-Fa-f]{6})',css).group(1)
+        self.assertGreaterEqual(ratio(strong,'#F7F4EC'),4.5)
+        self.assertGreaterEqual(ratio('#6F552B','#F7F4EC'),4.5)
+        for selector in ('nav li a span','.mobile-contents>summary span'):
+            self.assertRegex(css,re.escape(selector)+r'\{[^}]*color:var\(--muted-strong\)')
+        self.assertRegex(css,r'nav li a:hover\{[^}]*color:#6F552B')
+        self.assertRegex(css,r'nav li a\[aria-current=location\]\{[^}]*color:#6F552B')
     def test_original_layer_is_not_labeled_as_english_chain(self):
         source=note(extra='> [!info] Hebrew witness\n> אשה\n>\n> A narrator, from a witness:\n>\n> > He spoke.')
         page,_=R.render(source,H.prepare(source),{'languages':{'Hebrew witness':'he'}})

@@ -261,7 +261,7 @@ def render_block(item,receipt,options):
         for index,row in enumerate(rows):
             tag='th' if index==0 else 'td'
             content+='<tr>'+''.join(f'<{tag}>'+inline(cell,receipt)+f'</{tag}>' for cell in row)+'</tr>'
-        return f'<div class="table-scroll" {mapped}><table>{content}</table></div>'
+        return f'<div class="table-frame"><div class="table-scroll" {mapped}><table>{content}</table></div></div>'
     if re.match(r'^(?:[-*+] |\d+\. )',first):
         fact=all(re.match(r'^[-*+] \*\*[^*]+:?\*\*',line) for line in raw)
         if fact:

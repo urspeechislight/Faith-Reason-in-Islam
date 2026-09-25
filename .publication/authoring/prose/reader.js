@@ -20,7 +20,7 @@ updateChapter();
 
 function revealHash() {
   let id;
-  try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+  try { id = decodeURIComponent(location.hash.slice(1)); } catch (hashError) { return; }
   const target = document.getElementById(id);
   if (!target) return;
   for (let parent = target.parentElement; parent; parent = parent.parentElement) {
@@ -30,10 +30,23 @@ function revealHash() {
 }
 window.addEventListener('hashchange', revealHash);
 if (location.hash) revealHash();
+function referrerPage() {
+  try { return new URL(document.referrer); } catch (referrerError) { return null; }
+}
 for (const link of document.querySelectorAll('[data-reader-back]')) {
-  try {
-    const prior = new URL(document.referrer);
-    const current = new URL(location.href);
-    if (['https:','http:'].includes(prior.protocol) && prior.origin + prior.pathname + prior.search !== current.origin + current.pathname + current.search) link.href = prior.href;
-  } catch (_) { /* Direct visits retain the ordinary home link. */ }
+  const prior = referrerPage();
+  const current = new URL(location.href);
+  if (prior && ['https:','http:'].includes(prior.protocol) && prior.origin + prior.pathname + prior.search !== current.origin + current.pathname + current.search) link.href = prior.href;
+}
+for (const frame of document.querySelectorAll('main .table-frame')) {
+  const scroller = frame.querySelector('.table-scroll');
+  if (!scroller) continue;
+  const update = () => {
+    const overflow = scroller.scrollWidth - scroller.clientWidth;
+    frame.classList.add('scroll-known');
+    frame.classList.toggle('can-scroll', overflow > 1 && scroller.scrollLeft < overflow - 2);
+  };
+  scroller.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
 }
