@@ -1,7 +1,7 @@
 {
   "prose/test_scope_resume.py": "db85719db7bedcebafc29c6de1b1320cd9927c61f406cc7614fc9ebbef8c7399",
-  "prose/test_reader_layout.py": "773c3259754655cd857567d2766176baff91857fd08d701fde1cfb44700153a0",
-  "prose/reader.css": "5b0038e340889d51a1cb687068b722b1b6721b8d7fc33c87d01311f2d1225192",
+  "prose/test_reader_layout.py": "7f413fb020285aa72e60fa46dd9b8af90c7d2922c83f34cff3ede315204180cf",
+  "prose/reader.css": "25a6d8649c371c0a6c982685b62fd5f86c2b68a932807775dcf59fb8b806dc69",
   "prose/reader.js": "56118c09d4646156101e6a5e1fde8a47a0c188bffa2a74999b211c071f80c091",
   "prose/test_callout_speech.py": "25bd05b99b5235ae0a086fc8c0eaf5b0ce5f69d48f3331798339317dac1af54a",
   "prose/review_dispatch.py": "b2015b0f58e4b5df6804b072888f17a2b6ea4bca96c9b86fc3aa16685e956da7",
