@@ -219,6 +219,29 @@ class BrowserTests(unittest.TestCase):
                 tab.close()
             browser.close()
 
+    def test_collapsible_section_heading_shares_the_marker_line(self):
+        """A section heading inside a summary sits on the disclosure marker's line, with the usual gap below."""
+        import tempfile
+        from playwright.sync_api import sync_playwright
+        source=note('debate');end=source.rfind('\n## ',0,source.find('[!summary]'))
+        source=source[:end]+'\n## Glossary\n\n- **term.** A meaning.\n'+source[end:]
+        page,receipt=R.render(source,H.prepare(source))
+        self.assertIn('<details open><summary>',page)
+        with tempfile.TemporaryDirectory() as td,sync_playwright() as pw:
+            path=Path(td)/'glossary.html';path.write_text(page)
+            browser=pw.chromium.launch()
+            for width in (1280,390):
+                tab=browser.new_page(viewport={'width':width,'height':900})
+                tab.goto(path.as_uri());tab.evaluate('document.fonts.ready')
+                box=tab.evaluate("""()=>{const s=document.querySelector('#glossary summary');const h=s.querySelector('h2');
+                    const a=s.getBoundingClientRect(),b=h.getBoundingClientRect(),n=s.nextElementSibling.getBoundingClientRect();
+                    return {height:a.height,line:parseFloat(getComputedStyle(h).lineHeight),indent:b.left-a.left,gap:n.top-a.bottom}}""")
+                self.assertAlmostEqual(box['height'],box['line'],places=0)
+                self.assertGreater(box['indent'],0)
+                self.assertAlmostEqual(box['gap'],28,places=0)
+                tab.close()
+            browser.close()
+
     def test_navigation_facts_fonts_and_source_groups(self):
         import tempfile
         from pathlib import Path

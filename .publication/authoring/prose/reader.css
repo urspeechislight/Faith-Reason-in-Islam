@@ -24,6 +24,8 @@ main .table-frame {position:relative;}
 main .table-frame::after {content:"";position:absolute;top:0;right:0;bottom:0;width:2.5rem;background:linear-gradient(to right,rgba(253,251,247,0),rgba(253,251,247,.94));pointer-events:none;opacity:0;}
 main .table-frame.can-scroll::after {opacity:1;}
 @media(max-width:900px){main .table-frame:not(.scroll-known)::after{opacity:1}}
+main .content-section>details>summary {cursor:pointer;margin-block-end:1.75rem;}
+main .content-section>details>summary>h2 {display:inline;margin:0;}
 main .premises .premise-card {margin:0;}
 main .premise-card.space-y-1 {margin:1.5rem 0;}
 main .premise-card.space-y-1 p {font-family:var(--sans);font-size:.875rem;margin:0 0 .35rem;}
