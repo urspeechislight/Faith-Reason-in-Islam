@@ -6,10 +6,15 @@ one page grouped by category, then article, each row linking to
 <article>.html#anchor. Regenerate whenever any article ships or its Facts
 block changes; never hand-edit the output.
 """
+import importlib.util
 import json
 import os
 import re
 from pathlib import Path
+
+_spec = importlib.util.spec_from_file_location("reader_layout", Path(__file__).resolve().parent / "runtime/reader_layout.py")
+_reader = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_reader)
 
 REPO = Path(os.environ["PUBLICATION_SITE_DIR"])
 INV = {}
@@ -31,13 +36,16 @@ def title_of(slug: str) -> str:
 
 def extract_facts(slug: str):
     """Return [(subtable_title, [row_cells_with_first_anchor])] from a page."""
-    src = (REPO / slug).read_text()
+    raw = (REPO / slug).read_text()
+    reader = 'data-article-format="reader-v1"' in raw
+    src = _reader.normalize(raw)
     m = re.search(r'<section id="facts".*?</section>', src, flags=re.S)
     if not m:
         return []
     ftxt = m.group(0)
     out = []
-    for sec in re.findall(r'<div class="analysis-section">(.*?)(?=<div class="analysis-section">|$)', ftxt, flags=re.S):
+    sections = re.findall(r'<div class="analysis-section">(.*?)(?=<div class="analysis-section">|$)', ftxt, flags=re.S) or ([ftxt] if reader else [])
+    for sec in sections:
         hm = re.search(r'analysis-heading[^>]*>([^<]+)<', sec) or re.search(r'<summary><h4[^>]*>([^<]+)</h4></summary>', sec)
         title = hm.group(1).strip() if hm else "Facts"
         rows = []

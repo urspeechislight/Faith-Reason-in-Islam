@@ -66,9 +66,9 @@ class StatusTests(unittest.TestCase):
 class FactsIndexTests(unittest.TestCase):
     def test_index_reads_reader_and_legacy_facts(self):
         import importlib.util
-        path=Path(__file__).resolve().parent.parent/'gen_facts_index.py'
-        spec=importlib.util.spec_from_file_location('facts_index',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-        with tempfile.TemporaryDirectory() as td:
+        path=Path(__file__).resolve().parent/'gen_facts_index.py'
+        with tempfile.TemporaryDirectory() as td,patch.dict(os.environ,{'PUBLICATION_SITE_DIR':td}):
+            spec=importlib.util.spec_from_file_location('facts_index',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
             root=Path(td)
             legacy='<section id="facts"><div class="analysis-section"><table><tr><td>Claim &amp; qualification</td><td><a href="#proof">↗</a></td></tr></table></div></section>'
             reader='<main data-article-format="reader-v1"><section id="facts"><div data-note-block="n0001" data-reader-table=\'["Claim","Detail"]\'><details data-reader-row="0"><summary data-reader-cell="0">Claim &amp; qualification</summary><div data-reader-cell="1"><a href="#proof">↗</a></div></details></div></section></main>'
