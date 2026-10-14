@@ -198,6 +198,49 @@ class BrowserTests(unittest.TestCase):
                 self.assertTrue(tab.locator('.source-matn p').first.is_visible())
                 tab.close()
             browser.close()
+    def test_matn_after_context_paragraph_keeps_paragraph_spacing(self):
+        """A matn that directly follows an outer paragraph keeps the callout's paragraph gap."""
+        import tempfile
+        from playwright.sync_api import sync_playwright
+        source=note(extra='> [!note] Synthetic speech\n> نص المصدر\n>\n> > The witness spoke.\n>\n> A compiler, from a man, from a witness.')
+        page,receipt=R.render(source,H.prepare(source),{'source_roles':{'Synthetic speech':['context','matn','isnad']}})
+        with tempfile.TemporaryDirectory() as td,sync_playwright() as pw:
+            path=Path(td)/'matn-spacing.html';path.write_text(page)
+            browser=pw.chromium.launch()
+            for width in (1280,390):
+                tab=browser.new_page(viewport={'width':width,'height':900})
+                tab.goto(path.as_uri());tab.evaluate('document.fonts.ready')
+                gap=tab.evaluate("""()=>{const q=document.querySelector('.source-matn');const p=q.previousElementSibling;
+                    return q.getBoundingClientRect().top-p.getBoundingClientRect().bottom}""")
+                self.assertAlmostEqual(gap,20.8,places=1)
+                after=tab.evaluate("""()=>{const q=document.querySelector('.source-matn');const p=q.nextElementSibling;
+                    return p.getBoundingClientRect().top-q.getBoundingClientRect().bottom}""")
+                self.assertAlmostEqual(after,20.8,places=1)
+                tab.close()
+            browser.close()
+
+    def test_collapsible_section_heading_shares_the_marker_line(self):
+        """A section heading inside a summary sits on the disclosure marker's line, with the usual gap below."""
+        import tempfile
+        from playwright.sync_api import sync_playwright
+        source=note('debate');end=source.rfind('\n## ',0,source.find('[!summary]'))
+        source=source[:end]+'\n## Glossary\n\n- **term.** A meaning.\n'+source[end:]
+        page,receipt=R.render(source,H.prepare(source))
+        self.assertIn('<details open><summary>',page)
+        with tempfile.TemporaryDirectory() as td,sync_playwright() as pw:
+            path=Path(td)/'glossary.html';path.write_text(page)
+            browser=pw.chromium.launch()
+            for width in (1280,390):
+                tab=browser.new_page(viewport={'width':width,'height':900})
+                tab.goto(path.as_uri());tab.evaluate('document.fonts.ready')
+                box=tab.evaluate("""()=>{const s=document.querySelector('#glossary summary');const h=s.querySelector('h2');
+                    const a=s.getBoundingClientRect(),b=h.getBoundingClientRect(),n=s.nextElementSibling.getBoundingClientRect();
+                    return {height:a.height,line:parseFloat(getComputedStyle(h).lineHeight),indent:b.left-a.left,gap:n.top-a.bottom}}""")
+                self.assertAlmostEqual(box['height'],box['line'],places=0)
+                self.assertGreater(box['indent'],0)
+                self.assertAlmostEqual(box['gap'],28,places=0)
+                tab.close()
+            browser.close()
 
     def test_navigation_facts_fonts_and_source_groups(self):
         import tempfile
