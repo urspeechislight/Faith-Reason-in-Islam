@@ -11,7 +11,7 @@ concurrency:
 jobs:
   publication-check:
     name: Publication gate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     permissions:
       contents: read
@@ -82,7 +82,7 @@ jobs:
     name: Deploy checked site
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.publication-check.outputs.mode == 'publication'
     needs: publication-check
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
