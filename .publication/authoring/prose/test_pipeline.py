@@ -67,6 +67,22 @@ class TranslationTests(unittest.TestCase):
     def test_real_negation_not_forced_into_positive(self):
         text='Some men did not agree, but others did.'
         self.assertEqual(t.check_translation(text,'u','plain'),[]);self.assertTrue(t.translation_warnings(text,'plain'))
+    def test_permitted_arabic_passes_only_in_parentheses(self):
+        self.assertEqual(t.check_translation('The letter ba (ب) is first.','u','plain',['ب']),[])
+        self.assertTrue(t.check_translation('The letter ba ب is first.','u','plain',['ب']))
+        self.assertTrue(t.check_translation('The letter seen (س) is next.','u','plain',['ب']))
+        self.assertTrue(t.check_translation('The letter ba (ب) is first.','u','plain'))
+    def test_permitted_arabic_must_be_distinct_arabic_strings(self):
+        for bad in ['ب',['b'],['ب','ب'],['(ب)'],[' ب']]:
+            with self.assertRaises(ValueError):t.validate_job({'blocks':[dict(self.unit,permitted_arabic=bad)]})
+        self.assertNotIn('permitted_arabic',t.validate_job({'blocks':[dict(self.unit,permitted_arabic=[])]})[0])
+    def test_permitted_arabic_reaches_prompt_and_acceptance(self):
+        self.job.write_text(json.dumps({'blocks':[dict(self.unit,permitted_arabic=['ب','الم'])]}))
+        code,requests=self.prepare();self.assertEqual(code,0)
+        prompt=json.loads(Path(requests[0]).read_text())['prompt']
+        self.assertIn('"permitted_arabic"',prompt);self.assertIn('inside parentheses',prompt)
+        self.assertEqual(self.accept(requests[0],json.dumps({'u':'The letter ba (ب) and Alif Lam Meem (الم).'})),0)
+        self.assertEqual(self.call(self.args+['--check-only']),0)
     def test_interrupted_dispatch_does_not_leave_stale_cache(self):
         self.run_engine();self.style.write_text('Changed again.');self.prepare()
         self.assertEqual(json.loads(self.out.read_text()),{})
