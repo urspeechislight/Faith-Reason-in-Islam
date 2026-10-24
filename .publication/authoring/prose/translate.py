@@ -32,6 +32,8 @@ DEFAULT_BATCH = 12
 DEFAULT_MAX_PROMPT_CHARS = 50000
 VALID_MODES = {"plain", "elevated", "mixed"}
 ARABIC_RE = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]")
+# A job may permit exact Arabic strings, such as a letter the source names, and only inside parentheses.
+PERMITTED_ARABIC_RE = re.compile(rf"{ARABIC_RE.pattern}+(?: {ARABIC_RE.pattern}+)*")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -89,13 +91,13 @@ def read_json_object(path: Path) -> dict[str, Any]:
     return data
 
 
-def validate_job(job: dict[str, Any]) -> list[dict[str, str]]:
+def validate_job(job: dict[str, Any]) -> list[dict[str, Any]]:
     blocks = job.get("blocks")
     if not isinstance(blocks, list) or not blocks:
         raise ValueError("job must contain a non-empty 'blocks' list")
 
     seen: set[str] = set()
-    clean: list[dict[str, str]] = []
+    clean: list[dict[str, Any]] = []
     for index, raw in enumerate(blocks):
         if not isinstance(raw, dict):
             raise ValueError(f"blocks[{index}] must be an object")
@@ -109,6 +111,7 @@ def validate_job(job: dict[str, Any]) -> list[dict[str, str]]:
             raise ValueError('source_language must identify the actual source, for example grc, he, arc, la, ar')
         mode = raw.get("mode", "plain")
         note = raw.get("note", "")
+        permitted = raw.get("permitted_arabic", [])
 
         if not isinstance(uid, str) or not uid.strip():
             raise ValueError(f"blocks[{index}].id must be a non-empty string")
@@ -126,8 +129,14 @@ def validate_job(job: dict[str, Any]) -> list[dict[str, str]]:
             raise ValueError(f"{uid}: mode must be one of {sorted(VALID_MODES)}")
         if not isinstance(note, str):
             raise ValueError(f"{uid}: note must be a string")
+        if (not isinstance(permitted, list) or len(set(permitted)) != len(permitted)
+                or not all(isinstance(x, str) and PERMITTED_ARABIC_RE.fullmatch(x) for x in permitted)):
+            raise ValueError(f"{uid}: permitted_arabic must be a list of distinct Arabic strings")
 
-        clean.append({"id": uid, "source": arabic, "source_language": language, "mode": mode, "note": note})
+        unit = {"id": uid, "source": arabic, "source_language": language, "mode": mode, "note": note}
+        if permitted:
+            unit["permitted_arabic"] = permitted
+        clean.append(unit)
     return clean
 
 
@@ -154,7 +163,8 @@ def build_prompt(style_text: str, units: list[dict[str, str]], repair_notes: dic
         + "Translate every unit directly from its identified source_language into complete, natural English. Do not use an Arabic or other intermediary.  Follow the style card above and the unit mode. "
         + "Preserve every name, number, condition, negation, sequence, and qualification. Do not summarize. "
         + "Return only one valid JSON object. Use exactly the requested keys. Every value must be a string. "
-        + "Do not include markdown fences, commentary, or Arabic script in the output.\n\n"
+        + "Do not include markdown fences, commentary, or Arabic script in the output. "
+        + "The one exception is a unit's permitted_arabic strings, each written exactly and inside parentheses.\n\n"
         + "REQUIRED OUTPUT SHAPE\n"
         + json.dumps(output_shape, ensure_ascii=False, indent=2)
         + "\n\nINPUT UNITS\n"
@@ -220,11 +230,14 @@ def validate_response(data: dict[str, Any], expected_ids: list[str]) -> tuple[di
     return clean, errors
 
 
-def check_translation(text: str, uid: str, mode: str) -> list[str]:
+def check_translation(text: str, uid: str, mode: str, permitted: Iterable[str] = ()) -> list[str]:
     bad: list[str] = []
     if "—" in text or "–" in text:
         bad.append("em/en dash")
-    if ARABIC_RE.search(text):
+    unpermitted = text
+    for item in permitted:
+        unpermitted = unpermitted.replace(f"({item})", "")
+    if ARABIC_RE.search(unpermitted):
         bad.append("Arabic characters in output")
     if ":" in re.sub(r"\b\d+:\d+\b|https?://\S+", "", text):
         bad.append("colon in translation prose")
@@ -286,6 +299,8 @@ def fingerprint(unit: dict[str, str], *, style_hash: str, model: str) -> str:
         "style_hash": style_hash,
         "model": model,
     }
+    if unit.get("permitted_arabic"):
+        material["permitted_arabic"] = unit["permitted_arabic"]
     blob = json.dumps(material, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()
 
@@ -317,7 +332,7 @@ def load_cache(out_path: Path, blocks_by_id: dict[str, dict[str, str]], *, style
             continue
         unit = blocks_by_id[uid]
         cached_fp = state.get(uid)
-        violations = check_translation(value.strip(), uid, unit["mode"])
+        violations = check_translation(value.strip(), uid, unit["mode"], unit.get("permitted_arabic", ()))
 
         if violations:
             continue
@@ -449,7 +464,7 @@ def accept_response(args, blocks, style_text, style_hash, done, state):
     if errors:returned={}
     clean={}
     for uid,text in returned.items():
-        violations=check_translation(text,uid,by_id[uid]['mode'])
+        violations=check_translation(text,uid,by_id[uid]['mode'],by_id[uid].get('permitted_arabic',()))
         if violations:failures[uid]=violations
         else:clean[uid]=text
     for uid in ids:
