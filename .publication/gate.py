@@ -66,7 +66,7 @@ def classify_event():
     if kind=='pull_request':base=event['pull_request']['base']['sha']
     elif kind=='push':
         base=event.get('before')
-        if not base or set(base)=={'0'}:base=git('merge-base','origin/main','HEAD').decode().strip()
+        if not base or set(base)=={'0'} or event.get('forced'):base=git('merge-base','origin/main','HEAD').decode().strip()
     mode='runtime' if base and runtime_only_paths(changes(base)) else 'publication'
     with open(os.environ['GITHUB_OUTPUT'],'a') as output:output.write(f'mode={mode}\nbase={base or ""}\n')
     print('Check mode:',mode)
