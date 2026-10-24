@@ -87,6 +87,16 @@ class PublicationTests(unittest.TestCase):
         for path in ['article.html','.prose-reviews/article.review.json','style.css','.publication/legacy.json','.publication/assets.json']:
             self.assertFalse(gate.runtime_only_paths(['.publication/gate.py',path]))
         self.assertFalse(gate.runtime_only_paths([]))
+    def test_forced_push_compares_against_merge_base(self):
+        def classify(event):
+            with tempfile.TemporaryDirectory() as tmp:
+                event_path=Path(tmp,'event.json');event_path.write_text(json.dumps(event));output=Path(tmp,'output')
+                env={'GITHUB_EVENT_PATH':str(event_path),'GITHUB_EVENT_NAME':'push','GITHUB_OUTPUT':str(output)}
+                with patch.dict('os.environ',env),patch.object(gate,'git',return_value=b'mergebase\n'),patch.object(gate,'changes',return_value=[]):
+                    gate.classify_event()
+                return output.read_text()
+        self.assertIn('base=mergebase\n',classify({'before':'rewritten','forced':True}))
+        self.assertIn('base=previous\n',classify({'before':'previous','forced':False}))
     def test_runtime_run_never_supplies_article_approval(self):
         name='Validate exact public artifacts and obtain independent decisions'
         for outcome,expected in [('skipped',False),('failure',False),('success',True)]:
