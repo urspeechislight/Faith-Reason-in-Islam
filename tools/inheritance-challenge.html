@@ -422,7 +422,10 @@ const whyLocked={
   daughters:"The Quran gives daughters 1/2 (one) or 2/3 (two or more), but names no lower share for when the shares don't all fit. Imam al-Sadiq said: \"Children and siblings are the ones whose shares go up and down.\" So daughters take what is left. And when there is money left over, it goes back to them.",
   sisters:"The Quran gives a full sister 1/2 and two or more sisters 2/3 (4:176), with no lower share named. So, like daughters, sisters take what is left after the locked seats, and get the leftover when there is extra.",
   sons:"Sons have no number in the Quran at all. They always take what is left, with each son getting twice a daughter's part.",
-  brothers:"Full brothers have no number in the Quran. With sisters, they share what is left, each brother getting twice a sister's part."
+  brothers:"Full brothers have no number in the Quran. With sisters, they share what is left, each brother getting twice a sister's part.",
+  motherThird:"With no children, the Quran gives the mother 1/3: 'if he has no child and his parents inherit from him, his mother gets a third' (4:11). She drops to 1/6 only with children, or with enough brothers and sisters while the father is alive.",
+  motherHajb:"With no children the mother would get 1/3, but the Quran lowers her to 1/6 'if he has brothers' (4:11). In Ja'fari law this needs the father alive and at least two brothers, one brother and two sisters, or four sisters (full or father's side). The brothers and sisters still get nothing.",
+  fatherRest:"With no children, the Quran names no number for the father. It gives the mother 1/3 'and his parents inherit from him' (4:11), so the father takes what is left after the spouse and the mother."
 };
 const famousNaive=[
   {name:"Wife",frac:F(1,8),type:"fixed",short:"Wife 1/8",key:"wife"},
@@ -466,12 +469,35 @@ document.getElementById("copy-pitch").onclick=async()=>{
 /* ---------- 2. calculator ---------- */
 const PRESETS=[
   {id:"famous",name:"The famous challenge",s:{mode:"kids",sex:"man",hasSpouse:true,father:true,mother:true,daughters:2,sons:0}},
-  {id:"h2s",name:"Husband + 2 sisters",s:{mode:"sibs",sex:"woman",hasSpouse:true,fullS:2,fullB:0,maternal:0}},
+  {id:"h2s",name:"Husband + 2 sisters",s:{mode:"sibs",sex:"woman",hasSpouse:true,father:false,mother:false,fullS:2,fullB:0,maternal:0}},
   {id:"only2d",name:"Only 2 daughters",s:{mode:"kids",sex:"man",hasSpouse:false,father:false,mother:false,daughters:2,sons:0}}
 ];
 let S={mode:"kids",sex:"man",hasSpouse:true,spouse:"wife",father:true,mother:true,daughters:2,sons:0,fullS:2,fullB:0,maternal:0};
 let activePreset="famous";
 
+// No children but at least one parent: parents are first-class heirs and block all siblings.
+function parentsNoKids(s){
+  const rows=[];
+  if(s.spouse==="wife")rows.push({name:"Wife",key:"wife",count:1,type:"fixed",named:F(1,4)});
+  if(s.spouse==="husband")rows.push({name:"Husband",key:"husband",count:1,type:"fixed",named:F(1,2)});
+  const sibs=s.fullS+s.fullB+s.maternal;
+  // the mother drops to 1/6 only with the father alive and enough full or father's-side siblings
+  const hajb=s.father&&(s.fullB>=2||(s.fullB>=1&&s.fullS>=2)||s.fullS>=4);
+  let m=null;
+  if(s.mother){m={name:"Mother",key:hajb?"motherHajb":"motherThird",count:1,type:"fixed",named:hajb?F(1,6):F(1,3)};rows.push(m)}
+  rows.forEach(r=>r.gets=r.named);
+  const used=sum(rows.map(r=>r.named)),rest=sub(F(1),used);
+  let story;
+  if(s.father){
+    rows.push({name:"Father",key:"fatherRest",count:1,type:"flex",named:null,gets:rest});
+    story=`There are no children, so the father has no fixed number. ${val(used)>0?`Locked seats take <b>${fs(used)}</b>, and the`:"The"} father takes what is left: <b>${fs(rest)}</b>. Total: exactly 100%.`;
+  }else{
+    m.radd=rest;m.gets=add(m.named,rest);
+    story=`The mother takes her 1/3${val(rest)>0?`, and the leftover <b>${fs(rest)}</b> goes back to her, because no closer heir is left`:""}. Total: exactly 100%.`;
+  }
+  if(sibs>0)story+=hajb?` The brothers and sisters get nothing, because parents come first. But there are enough of them to lower the mother from 1/3 to 1/6 (4:11).`:` The brothers and sisters get nothing, because parents come first.`;
+  return{rows,naive:sum(rows.map(r=>r.named||r.gets)),kase:"parents",story,fixedSum:used,rest,flexUp:false};
+}
 function compute(s){
   const rows=[];
   if(s.mode==="kids"){
@@ -480,8 +506,10 @@ function compute(s){
     if(s.spouse==="husband")rows.push({name:"Husband",key:"husband",count:1,type:"fixed",named:F(1,4)});
     if(s.father)rows.push({name:"Father",key:"father",count:1,type:"fixed",named:F(1,6)});
     if(s.mother)rows.push({name:"Mother",key:"mother",count:1,type:"fixed",named:F(1,6)});
+  }else if(s.father||s.mother){
+    return parentsNoKids(s);
   }else{
-    if(s.fullS+s.fullB+s.maternal===0)return{error:"Add at least one brother or sister."};
+    if(s.fullS+s.fullB+s.maternal===0)return{error:"Add at least one brother or sister, or turn on a parent."};
     if(s.spouse==="wife")rows.push({name:"Wife",key:"wife",count:1,type:"fixed",named:F(1,4)});
     if(s.spouse==="husband")rows.push({name:"Husband",key:"husband",count:1,type:"fixed",named:F(1,2)});
     if(s.maternal>0)rows.push({name:s.maternal===1?"Half-sibling (mother's side)":s.maternal+" half-siblings (mother's side)",key:"maternal",count:s.maternal,type:"fixed",named:s.maternal===1?F(1,6):F(1,3)});
@@ -547,10 +575,10 @@ function renderControls(){
   const sp=sw("hasSpouse",S.sex==="man"?"Wife":"Husband");
   document.getElementById("controls").innerHTML= S.mode==="kids"
     ? sp+sw("father","Father")+sw("mother","Mother")+step("daughters","Daughters",4)+step("sons","Sons",3)
-    : sp+step("fullS","Full sisters",4)+step("fullB","Full brothers",3)+step("maternal","Half-siblings (mother's side)",3);
+    : sp+sw("father","Father")+sw("mother","Mother")+step("fullS","Full sisters",4)+step("fullB","Full brothers",3)+step("maternal","Half-siblings (mother's side)",3);
   document.getElementById("mode-note").innerHTML= S.mode==="kids"
     ? "With any child alive, brothers and sisters get nothing."
-    : "Brothers and sisters only inherit when there are <b>no</b> children and <b>no</b> parents.";
+    : "Parents come before brothers and sisters. If either parent is alive, brothers and sisters get nothing.";
   document.getElementById("presets").innerHTML=PRESETS.map(p=>`<button data-p="${p.id}" class="${activePreset===p.id?"on":""}">${esc(p.name)}</button>`).join("");
 }
 function renderCalc(){
