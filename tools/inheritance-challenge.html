@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The 27/24 Challenge | Faith &amp; Reason in Islam</title>
+<meta name="description" content="Critics say the Quran's inheritance shares add up to more than 100%. An interactive calculator with the Ahl al-Bayt answer, the Quran verses, the full narrations and debate practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#14201D; --muted:#56655F; --line:#D6DFDA;
+  --fixed:#0D7564; --fixed2:#2E9C89; --fixed-soft:#DCEFEA;
+  --flex:#B97A06; --flex-soft:#FAEBCB;
+  --over:#C13A27; --over-soft:#F8DCD6;
+  --on-seg:#FFFFFF; --shadow:0 10px 30px rgba(20,32,29,.16);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --arabic:"Amiri","Traditional Arabic","Times New Roman",serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0E1513; --surface:#16211E; --ink:#E6EEEB; --muted:#9BADA7; --line:#2A3834;
+  --fixed:#43C2AC; --fixed2:#2C907F; --fixed-soft:#173A33;
+  --flex:#EBAE40; --flex-soft:#3A2D12;
+  --over:#F2735F; --over-soft:#3E1F1A;
+  --on-seg:#0E1513; --shadow:0 10px 30px rgba(0,0,0,.5); color-scheme:dark}}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:8px 64px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,6vw,44px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:26px;font-weight:800}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--flex);outline-offset:2px;border-radius:6px}
+
+/* header + tabs */
+.home{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--fixed);text-decoration:none}
+.home:hover{text-decoration:underline}
+header.top{padding-block:12px 6px}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+nav.tabs{position:sticky;top:0;z-index:5;background:var(--bg);display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding-block:10px;border-bottom:1px solid var(--line);margin-bottom:20px}
+nav.tabs button{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+nav.tabs .n{font-family:var(--display);font-weight:800;font-size:15px}
+nav.tabs .t{font-size:13px;line-height:1.2;text-align:center}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.hint{font-size:14px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.hint b{color:var(--ink)}
+.btn{background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:10px 18px;font-weight:700}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* estate bars */
+.bars{display:flex;flex-direction:column;gap:14px}
+.barblock .label{display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:15px;margin-bottom:6px}
+.track{position:relative;height:54px;border-radius:10px;background:var(--bg);border:1px dashed var(--line)}
+.estate{position:absolute;inset:0 auto 0 0;border-right:3px solid var(--ink);border-radius:10px 0 0 10px}
+.estate-tag{position:absolute;bottom:-21px;font-size:12px;font-weight:700;transform:translateX(-100%);white-space:nowrap;padding-right:4px}
+.key{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
+.key button{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:4px 8px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.key button:hover{border-color:var(--ink)}
+.key .i{color:var(--muted);font-weight:400}
+details.more-ev summary{cursor:pointer;font-weight:700;padding:10px 0;color:var(--fixed)}
+details.more-ev[open] summary{margin-bottom:10px}
+.subbtn{border:0;background:none;color:var(--fixed);font-weight:700;padding:0;text-decoration:underline;text-underline-offset:3px}
+.segs{position:absolute;inset:4px auto 4px 0;display:flex;gap:2px}
+.seg{border:0;border-radius:6px;height:100%;padding:0 2px;color:var(--on-seg);font-weight:700;font-size:13px;overflow:hidden;white-space:nowrap;text-overflow:clip;display:flex;align-items:center;justify-content:center;transition:filter .15s,transform .15s}
+.seg:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.seg.fixed{background:var(--fixed)}
+.seg.fixed.alt{background:var(--fixed2)}
+.seg.flex{background:var(--flex)}
+.seg.over{background:repeating-linear-gradient(135deg,var(--over) 0 6px,transparent 6px 10px);color:var(--ink);border:2px solid var(--over)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:14px;height:14px;border-radius:4px;display:inline-block}
+.dot.fixed{background:var(--fixed)} .dot.flex{background:var(--flex)} .dot.over{background:var(--over)}
+.total{font-family:var(--display);font-size:20px;font-weight:800}
+.total.bad{color:var(--over)} .total.good{color:var(--fixed)}
+
+/* seats visual */
+.seats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.zone{border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.zone.fixedz{background:var(--fixed-soft)} .zone.flexz{background:var(--flex-soft)}
+.zone h3{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:0;border-radius:10px;padding:8px 10px;font-weight:700;font-size:14px;display:flex;flex-direction:column;align-items:flex-start;gap:0;text-align:left}
+.chip small{font-weight:400;font-size:12px;opacity:.9}
+.chip.fixed{background:var(--fixed);color:var(--on-seg)}
+.chip.flex{background:var(--flex);color:var(--on-seg)}
+.lock{font-size:12px;font-weight:700}
+
+/* steps in challenge */
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.step .k{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+.quote-critic{border-left:4px solid var(--over);background:var(--over-soft);border-radius:0 12px 12px 0;padding:12px 14px}
+.answer30{border-left:4px solid var(--fixed);background:var(--fixed-soft);border-radius:0 12px 12px 0;padding:14px}
+
+/* calculator */
+.presets{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.presets button{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700}
+.presets button.on{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.seg-toggle{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg-toggle button{border:0;background:transparent;padding:7px 14px;font-size:14px;font-weight:700}
+.seg-toggle button.on{background:var(--ink);color:var(--bg)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.ctl{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--bg);border-radius:12px;padding:8px 10px}
+.ctl .name{font-weight:700;font-size:15px}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);font-weight:800}
+.stepper output{min-width:20px;text-align:center;font-weight:800}
+.switch{width:46px;height:28px;border-radius:999px;border:0;background:var(--line);position:relative}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--surface);transition:left .15s}
+.switch[aria-pressed="true"]{background:var(--fixed)}
+.switch[aria-pressed="true"]::after{left:21px}
+.explain{background:var(--bg);border-radius:12px;padding:12px 14px}
+table.res{width:100%;border-collapse:collapse;font-size:15px}
+table.res th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 4px;border-bottom:1px solid var(--line)}
+table.res td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.res tr{cursor:pointer}
+table.res tr:hover td{background:var(--bg)}
+table.res td.r,table.res th.r{text-align:right}
+table.res tfoot td{font-weight:800;border-bottom:0;cursor:default}
+.tablewrap{overflow-x:auto}
+.amtrow{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:6px 12px}
+.amtrow:focus-within{border-color:var(--ink)}
+.amtrow .cur{font-family:var(--display);font-weight:800;font-size:22px;color:var(--muted)}
+.amtrow input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:800 24px var(--display);font-variant-numeric:tabular-nums;padding:4px 0;outline:none}
+
+/* proof */
+.seatlist{display:flex;flex-direction:column;gap:8px}
+.seatrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;text-align:left;width:100%}
+.seatrow:hover{border-color:var(--ink)}
+.seatrow .who{font-weight:700}
+.seatrow .arrow{display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px}
+.seatrow .arrow .from{color:var(--muted)}
+.seatrow .arrow .to{border-radius:6px;padding:1px 7px}
+.seatrow.fixed .to{background:var(--fixed-soft);color:var(--fixed)}
+.seatrow.flex .to{background:var(--flex-soft);color:var(--flex)}
+.evid{display:flex;flex-direction:column;gap:10px}
+.ev{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:14px;text-align:left;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;width:100%}
+.ev:hover{border-color:var(--ink)}
+.ev .badge{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:14px;background:var(--fixed-soft);color:var(--fixed)}
+.ev.star .badge{background:var(--flex);color:var(--on-seg)}
+.ev .who{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.ev .line{font-weight:700;font-size:17px;margin-top:2px}
+.ev .ar{font-family:var(--arabic);font-size:20px;direction:rtl;text-align:right;color:var(--muted);margin-top:4px}
+.ev .more{font-size:14px;color:var(--fixed);font-weight:700;margin-top:4px}
+
+/* debate */
+.qcard{display:flex;flex-direction:column;gap:12px}
+.critic{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:start}
+.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-family:var(--display)}
+.avatar.c{background:var(--over-soft);color:var(--over)}
+.bubble{background:var(--over-soft);border-radius:4px 14px 14px 14px;padding:10px 14px;font-weight:700}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 14px;text-align:left}
+.opt:hover{border-color:var(--ink)}
+.opt.right{border-color:var(--fixed);background:var(--fixed-soft)}
+.opt.wrong{border-color:var(--over);background:var(--over-soft)}
+.fb{border-radius:12px;padding:12px 14px}
+.fb.good{background:var(--fixed-soft)} .fb.bad{background:var(--over-soft)}
+.progress{display:flex;gap:6px}
+.progress i{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.progress i.done{background:var(--fixed)} .progress i.miss{background:var(--over)} .progress i.now{background:var(--ink)}
+.flip{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:14px;text-align:left;width:100%;display:flex;flex-direction:column;gap:6px}
+.flip:hover{border-color:var(--ink)}
+.flip .q{font-weight:700}
+.flip .tap{font-size:14px;color:var(--fixed);font-weight:700}
+
+/* tooltip */
+#tip{position:fixed;z-index:30;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:700;padding:6px 10px;border-radius:8px;max-width:240px;opacity:0;transition:opacity .1s}
+#tip.show{opacity:1}
+
+/* drawer */
+#scrim{position:fixed;inset:0;background:rgba(10,16,14,.45);z-index:40}
+#drawer{position:fixed;z-index:41;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);display:flex;flex-direction:column;
+  left:0;right:0;bottom:0;max-height:82vh;border-radius:20px 20px 0 0;
+  padding:14px max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));
+  transform:translateY(105%);transition:transform .22s ease}
+#drawer.open{transform:none}
+@media (min-width:900px){
+  #drawer{left:auto;top:0;bottom:0;right:0;width:460px;max-height:none;border-radius:0;transform:translateX(105%);
+    padding:calc(18px + env(safe-area-inset-top,0px)) calc(22px + env(safe-area-inset-right,0px)) 22px 22px}
+}
+.dhead{display:flex;justify-content:space-between;align-items:start;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.dhead .close{border:0;background:var(--bg);width:36px;height:36px;border-radius:50%;font-size:20px;flex:0 0 auto}
+.grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
+@media (min-width:900px){.grab{display:none}}
+.dbody{overflow-y:auto;padding-top:14px;display:flex;flex-direction:column;gap:14px}
+.dbody .ar{font-family:var(--arabic);font-size:21px;line-height:1.9;direction:rtl;text-align:right}
+.dbody .chain{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+.dbody .tr p+p{margin-top:8px}
+.dbody .tr b{color:var(--fixed)}
+.dbody .proves{background:var(--flex-soft);border-radius:12px;padding:12px}
+.dbody .src{font-size:13px;color:var(--muted)}
+.sect{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.copyrow{display:flex;gap:8px;align-items:center}
+.ok{font-size:14px;color:var(--fixed);font-weight:700}
+
+@media (max-width:520px){
+  .seats{grid-template-columns:1fr}
+  nav.tabs .t{font-size:12px}
+  .seg{font-size:11px;padding:0 1px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="home" href="../index.html">‹ Faith &amp; Reason in Islam</a>
+  <header class="top stack" style="gap:6px">
+    <span class="kicker">Quran inheritance · Ahl al-Bayt answer</span>
+    <h1>The 27/24 Challenge</h1>
+    <p class="muted">Critics say the Quran's inheritance shares add up to more than 100%. Learn why that's wrong using the teaching of the <span data-tip="The Prophet's family: the Imams Shia Muslims follow" style="border-bottom:1px dotted currentColor">Ahl al-Bayt</span>, test it yourself, then practise the debate.</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-challenge" data-view="challenge"><span class="n">1</span><span class="t">The challenge</span></button>
+    <button role="tab" id="tab-calculator" data-view="calculator"><span class="n">2</span><span class="t">Try it</span></button>
+    <button role="tab" id="tab-proof" data-view="proof"><span class="n">3</span><span class="t">The proof</span></button>
+    <button role="tab" id="tab-debate" data-view="debate"><span class="n">4</span><span class="t">Debate</span></button>
+  </nav>
+
+  <!-- 1 CHALLENGE -->
+  <section id="view-challenge" class="stack" role="tabpanel">
+    <div class="quote-critic">
+      <p class="kicker" style="color:var(--over)">What the critic says</p>
+      <p style="font-weight:700;margin-top:4px">"A man dies. He leaves a wife, his mom, his dad and 2 daughters. Add up the Quran's shares and you get 27/24, which is 112.5%. You can't hand out more than all of the money!"</p>
+    </div>
+
+    <div class="card stack">
+      <h2>See the critic's math</h2>
+      <p class="hint">Tap any coloured block to learn more.</p>
+      <div class="bars" id="chal-bars"></div>
+      <div class="row">
+        <button class="btn" id="chal-toggle">Now show the right way</button>
+      </div>
+    </div>
+
+    <div class="card stack">
+      <h2>Where the critic goes wrong</h2>
+      <div class="steps">
+        <div class="step"><span class="k">1</span><p>The critic treats every share as a <b>fixed amount</b> that must be paid in full.</p></div>
+        <div class="step"><span class="k">2</span><p>But the Quran gives two kinds of share. Some heirs have a <b style="color:var(--fixed)">locked seat</b>. Others have a <b style="color:var(--flex)">flexible seat</b>.</p></div>
+        <div class="step"><span class="k">3</span><p>Locked seats are paid first. Flexible seats share <b>what is left</b>. So the total is always exactly 100%.</p></div>
+      </div>
+      <p class="hint">Tap a seat to see why it is locked or flexible.</p>
+      <div class="seats" id="seats-visual"></div>
+      <p class="hint">More family members (husband, sisters, sons…) in <b>Try it</b> and <b>The proof</b>.</p>
+    </div>
+
+    <div class="answer30 stack" style="gap:10px">
+      <p class="kicker" style="color:var(--fixed)">Your 30-second answer</p>
+      <p id="pitch">In this family, the Quran has already put the wife (1/8) and the mother (1/6) at their lowest share, and the father's 1/6 is fixed. Nothing can push them lower. The Quran names no lower share for daughters, so theirs is the one that changes. Pay the locked seats first: 3/24 + 4/24 + 4/24 = 11/24. The daughters get the rest: 13/24. Total: 24/24. Imam Ali gave this exact answer for this exact case: "They get what remains."</p>
+      <div class="copyrow"><button class="btn ghost" id="copy-pitch">Copy answer</button><span class="ok" id="copied" hidden>Copied</span></div>
+      <p class="muted" style="font-size:15px">Heard that Ali said "the eighth became a ninth"? <button class="subbtn" id="pulpit-link">Here's the answer</button></p>
+    </div>
+  </section>
+
+  <!-- 2 CALCULATOR -->
+  <section id="view-calculator" class="stack" role="tabpanel" hidden>
+    <div class="stack" style="gap:8px">
+      <h2>Try any family</h2>
+      <p class="muted">Pick a ready-made case or build your own. Watch the critic's bar and the correct bar.</p>
+    </div>
+    <div class="presets" id="presets"></div>
+    <div class="card stack" style="gap:10px">
+      <label for="amt" style="font-weight:700">Amount to divide</label>
+      <div class="amtrow"><span class="cur">$</span><input id="amt" type="text" inputmode="decimal" autocomplete="off" value="24,000" aria-label="Amount to divide in dollars"></div>
+      <p class="hint">Use what is left after funeral costs, debts and any will (up to 1/3).</p>
+    </div>
+    <div class="card stack">
+      <div class="row" style="justify-content:space-between">
+        <span class="name" style="font-weight:700">Who died?</span>
+        <div class="seg-toggle" id="sex">
+          <button data-sex="man">A man</button>
+          <button data-sex="woman">A woman</button>
+        </div>
+      </div>
+      <div class="row" style="justify-content:space-between">
+        <span class="name" style="font-weight:700" id="kids-q">Did he leave children?</span>
+        <div class="seg-toggle" id="mode">
+          <button data-mode="kids">Yes</button>
+          <button data-mode="sibs">No</button>
+        </div>
+      </div>
+      <div class="controls" id="controls"></div>
+      <p class="hint" id="mode-note"></p>
+    </div>
+
+    <div class="card stack">
+      <div class="bars" id="calc-bars"></div>
+      <div class="legend">
+        <span><i class="dot fixed"></i>Locked seat</span>
+        <span><i class="dot flex"></i>Flexible seat</span>
+        <span><i class="dot over"></i>Too much</span>
+      </div>
+      <div class="explain" id="explain"></div>
+      <h3 style="margin-top:4px">Who gets what</h3>
+      <div class="tablewrap"><table class="res num" id="moneytable"></table></div>
+      <p class="hint">Tap any block, name or row to see why.</p>
+    </div>
+  </section>
+
+  <!-- 3 PROOF -->
+  <section id="view-proof" class="stack" role="tabpanel" hidden>
+    <div class="card stack">
+      <h2>Proof from the Quran</h2>
+      <p>For some heirs, the Quran names a <b style="color:var(--fixed)">lower share</b> for when the shares don't all fit. For daughters and sisters, it names none.</p>
+      <p class="hint">Tap or click a row to read the verse.</p>
+      <div class="seatlist" id="seatlist"></div>
+      <p class="muted" style="font-size:15px">Also: the Quran says every share is paid "after any gift written in his will, or any debt" (4:11–12). So the shares were always shares of <b>what is left</b>, not a fixed pile of money.</p>
+    </div>
+
+    <div class="stack" style="gap:8px">
+      <h2>Proof from the Imams</h2>
+      <p class="muted">Strongest first. Tap a card for the full narration in Arabic and English, and who passed it on.</p>
+    </div>
+    <div class="evid" id="evid"></div>
+    <details class="more-ev" id="more-ev"><summary>More evidence (5)</summary><div class="evid" id="evid-more"></div></details>
+  </section>
+
+  <!-- 4 DEBATE -->
+  <section id="view-debate" class="stack" role="tabpanel" hidden>
+    <div class="seg-toggle" id="dmode" style="align-self:flex-start">
+      <button data-d="defend" class="on">Defend</button>
+      <button data-d="attack">Tough questions</button>
+    </div>
+    <div id="defend" class="card qcard"></div>
+    <div id="attack" class="stack" hidden>
+      <p class="muted">The hardest attacks a smart critic could make. Answer each one in your head first, then tap to check.</p>
+      <div class="stack" id="attacks" style="gap:10px"></div>
+    </div>
+  </section>
+</div>
+
+<div id="tip" role="tooltip"></div>
+<div id="scrim" hidden></div>
+<aside id="drawer" aria-hidden="true" aria-labelledby="dtitle" role="dialog">
+  <div class="grab"></div>
+  <div class="dhead"><h3 id="dtitle"></h3><button class="close" id="dclose" aria-label="Close">×</button></div>
+  <div class="dbody" id="dbody"></div>
+</aside>
+
+<script>
+/* ---------- fractions ---------- */
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+function F(n,d=1){if(d<0){n=-n;d=-d}const g=gcd(n,d)||1;return{n:n/g,d:d/g}}
+const add=(a,b)=>F(a.n*b.d+b.n*a.d,a.d*b.d), sub=(a,b)=>F(a.n*b.d-b.n*a.d,a.d*b.d),
+      mul=(a,b)=>F(a.n*b.n,a.d*b.d), div=(a,b)=>F(a.n*b.d,a.d*b.n);
+const val=a=>a.n/a.d, sum=arr=>arr.reduce((s,x)=>add(s,x),F(0));
+const fs=a=>a.n===0?"0":a.d===1?String(a.n):a.n+"/"+a.d;
+const pct=a=>{const p=val(a)*100;return (Math.round(p*10)/10)+"%"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let AMT=24000;
+const money=x=>{const c=Math.round(x*100)/100;return "$"+c.toLocaleString("en-US",{minimumFractionDigits:Number.isInteger(c)?0:2,maximumFractionDigits:2})};
+const amtOf=f=>money(AMT*val(f));
+
+/* ---------- drawer + tooltip ---------- */
+const drawer=document.getElementById("drawer"),scrim=document.getElementById("scrim"),tip=document.getElementById("tip");
+let lastFocus=null;
+drawer.inert=true;
+function openDrawer(title,html){
+  lastFocus=document.activeElement;tip.classList.remove("show");
+  drawer.inert=false;document.documentElement.style.overflow="hidden";
+  document.getElementById("dtitle").textContent=title;
+  document.getElementById("dbody").innerHTML=html;
+  scrim.hidden=false;drawer.classList.add("open");drawer.setAttribute("aria-hidden","false");
+  document.getElementById("dbody").scrollTop=0;
+  document.getElementById("dclose").focus();
+}
+function closeDrawer(){if(!drawer.classList.contains("open"))return;drawer.classList.remove("open");drawer.inert=true;document.documentElement.style.overflow="";drawer.setAttribute("aria-hidden","true");scrim.hidden=true;if(lastFocus)lastFocus.focus()}
+scrim.onclick=closeDrawer;document.getElementById("dclose").onclick=closeDrawer;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+document.addEventListener("mouseover",e=>{const t=e.target.closest("[data-tip]");if(!t){tip.classList.remove("show");return}tip.textContent=t.dataset.tip;tip.classList.add("show")});
+document.addEventListener("mousemove",e=>{if(!tip.classList.contains("show"))return;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8);tip.style.left=x+"px";tip.style.top=(e.clientY+16)+"px"});
+document.addEventListener("click",e=>{const t=e.target.closest("[data-open]");if(!t)return;const d=DRAWERS[t.dataset.open];if(d)openDrawer(d.title,d.html)});
+const DRAWERS={};let dn=0;
+function reg(title,html){const k="d"+(dn++);DRAWERS[k]={title,html};return k}
+
+/* ---------- bar renderer ---------- */
+const SCALE=1.5; // track width = 150% of estate
+function bar(label,segs,totalFrac,opts={}){
+  const over=val(totalFrac)>1.0000001;
+  let html=`<div class="barblock"><div class="label"><span>${esc(label)}</span><span class="total num ${over?"bad":"good"}">${over?"✗":"✓"} ${pct(totalFrac)}</span></div>
+  <div class="track"><div class="estate" style="width:${100/SCALE}%"><span class="estate-tag" style="left:100%">All the money = 100%</span></div><div class="segs" style="width:100%">`;
+  let alt=false,run=F(0);
+  const seg=(frac,cls,s,text)=>{const w=val(frac)/SCALE*100;return `<button class="seg ${cls}" style="flex:0 0 calc(${w}% - 2px)" data-tip="${esc(s.tip||s.name)} · tap or click" data-open="${s.drawer||""}" aria-label="${esc(s.tip||s.name)}">${w>5?esc(text):""}</button>`};
+  segs.forEach(s=>{
+    let cls=s.type==="fixed"?("fixed"+(alt?" alt":"")):s.type;
+    if(s.type==="fixed")alt=!alt;
+    const end=add(run,s.frac);
+    if(val(end)>1.0000001){
+      const inside=sub(F(1),run),outside=sub(end,F(1));
+      if(val(inside)>0)html+=seg(inside,"flex",s,fs(s.frac));
+      html+=seg(outside,"over",{...s,tip:`Too much: ${fs(outside)} over 100%`},"+"+fs(outside));
+    }else html+=seg(s.frac,cls,s,fs(s.frac));
+    run=end;
+  });
+  html+=`</div></div><div class="key">${segs.map(s=>`<button data-open="${s.drawer||""}" data-tip="Tap or click for why"><i class="dot ${s.type==="over"?"flex":s.type}"></i>${esc(s.name)} ${fs(s.frac)}<span class="i">›</span></button>`).join("")}</div></div>`;
+  return html;
+}
+
+/* ---------- 1. challenge ---------- */
+const whyLocked={
+  wife:"The Quran gives the wife 1/4, and tells her to drop to 1/8 if there are children (4:12). Because Allah named her backup share, nothing can push her lower.",
+  husband:"The Quran gives the husband 1/2, and tells him to drop to 1/4 if there are children (4:12). His backup share is named, so nothing pushes him lower.",
+  mother:"The Quran gives the mother 1/3, and tells her to drop to 1/6 if there are children or brothers (4:11). Her backup share is named.",
+  father:"The Quran gives each parent 1/6 when there are children (4:11). Imam al-Sadiq showed his student the Scroll of Inheritance Shares, which says the parents are never pushed below their two-sixths.",
+  maternal:"Half-siblings through the mother get 1/6 (one) or share 1/3 (two or more), set in 4:12. Imam al-Sadiq said they are never reduced from their third.",
+  daughters:"The Quran gives daughters 1/2 (one) or 2/3 (two or more), but names no lower share for when the shares don't all fit. Imam al-Sadiq said: \"Children and siblings are the ones whose shares go up and down.\" So daughters take what is left. And when there is money left over, it goes back to them.",
+  sisters:"The Quran gives a full sister 1/2 and two or more sisters 2/3 (4:176), with no lower share named. So, like daughters, sisters take what is left after the locked seats, and get the leftover when there is extra.",
+  sons:"Sons have no number in the Quran at all. They always take what is left, with each son getting twice a daughter's part.",
+  brothers:"Full brothers have no number in the Quran. With sisters, they share what is left, each brother getting twice a sister's part."
+};
+const famousNaive=[
+  {name:"Wife",frac:F(1,8),type:"fixed",short:"Wife 1/8",key:"wife"},
+  {name:"Father",frac:F(1,6),type:"fixed",short:"Dad 1/6",key:"father"},
+  {name:"Mother",frac:F(1,6),type:"fixed",short:"Mom 1/6",key:"mother"},
+  {name:"2 daughters",frac:F(2,3),type:"over",short:"Daughters 2/3",key:"daughters"}
+];
+let chalRight=false;
+function renderChallenge(){
+  const el=document.getElementById("chal-bars");
+  const mk=(s,amount)=>{s.tip=`${s.name}: ${amount}`;s.drawer=reg(`${s.name}: ${s.type==="flex"?"flexible seat":s.type==="over"?"why this overflows":"locked seat"}`,
+    `<p>${s.type==="over"?"The critic pays the daughters their full 2/3 <b>after</b> everyone else, so the total goes past 100%. ":""}${whyLocked[s.key]}</p>`+(s.key==="daughters"?`<div class="proves"><b>In this case:</b> locked seats take 3/24 + 4/24 + 4/24 = 11/24. That leaves 13/24 for the two daughters, so each gets 13/48.</div>`:""));return s};
+  let html=bar("The critic's way",famousNaive.map(s=>mk({...s},fs(s.frac))),F(27,24));
+  if(chalRight){
+    const right=[
+      {name:"Wife",frac:F(1,8),type:"fixed",short:"Wife 1/8",key:"wife"},
+      {name:"Father",frac:F(1,6),type:"fixed",short:"Dad 1/6",key:"father"},
+      {name:"Mother",frac:F(1,6),type:"fixed",short:"Mom 1/6",key:"mother"},
+      {name:"2 daughters",frac:F(13,24),type:"flex",short:"Daughters 13/24",key:"daughters"}];
+    html+=bar("The Ahl al-Bayt way",right.map(s=>mk(s,fs(s.frac))),F(1));
+  }
+  el.innerHTML=html+`<div class="legend"><span><i class="dot fixed"></i>Locked seat</span><span><i class="dot flex"></i>Flexible seat</span><span><i class="dot over"></i>Paid too much</span></div>`;
+  document.getElementById("chal-toggle").textContent=chalRight?"Hide the right way":"Now show the right way";
+}
+document.getElementById("chal-toggle").onclick=()=>{chalRight=!chalRight;renderChallenge()};
+
+function renderSeats(){
+  const fixed=[["Wife","1/8 with children","wife"],["Mother","1/6 with children","mother"],["Father","1/6 with children","father"]];
+  const flex=[["Daughters","2/3, or what's left","daughters"]];
+  const chip=(c,t)=>`<button class="chip ${t}" data-tip="${esc(c[0])}: tap or click to see why" data-open="${reg(c[0]+(t==="fixed"?": locked seat":": flexible seat"),`<p>${whyLocked[c[2]]}</p>`)}">${esc(c[0])}<small>${esc(c[1])}</small></button>`;
+  document.getElementById("seats-visual").innerHTML=
+   `<div class="zone fixedz"><h3>🔒 Locked seats</h3><p class="lock muted">Paid first. Never squeezed.</p><div class="chips">${fixed.map(c=>chip(c,"fixed")).join("")}</div></div>
+    <div class="zone flexz"><h3>↕ Flexible seats</h3><p class="lock muted">Share what is left. Can go down or up.</p><div class="chips">${flex.map(c=>chip(c,"flex")).join("")}</div></div>`;
+}
+document.getElementById("copy-pitch").onclick=async()=>{
+  const t=document.getElementById("pitch").textContent;
+  try{await navigator.clipboard.writeText(t);document.getElementById("copied").hidden=false;setTimeout(()=>document.getElementById("copied").hidden=true,1800)}
+  catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById("pitch"));const s=getSelection();s.removeAllRanges();s.addRange(r)}
+};
+
+/* ---------- 2. calculator ---------- */
+const PRESETS=[
+  {id:"famous",name:"The famous challenge",s:{mode:"kids",sex:"man",hasSpouse:true,father:true,mother:true,daughters:2,sons:0}},
+  {id:"h2s",name:"Husband + 2 sisters",s:{mode:"sibs",sex:"woman",hasSpouse:true,fullS:2,fullB:0,maternal:0}},
+  {id:"only2d",name:"Only 2 daughters",s:{mode:"kids",sex:"man",hasSpouse:false,father:false,mother:false,daughters:2,sons:0}}
+];
+let S={mode:"kids",sex:"man",hasSpouse:true,spouse:"wife",father:true,mother:true,daughters:2,sons:0,fullS:2,fullB:0,maternal:0};
+let activePreset="famous";
+
+function compute(s){
+  const rows=[];
+  if(s.mode==="kids"){
+    if(s.sons+s.daughters===0)return{error:"Add at least one son or daughter. If there are no children, switch the children question to No."};
+    if(s.spouse==="wife")rows.push({name:"Wife",key:"wife",count:1,type:"fixed",named:F(1,8)});
+    if(s.spouse==="husband")rows.push({name:"Husband",key:"husband",count:1,type:"fixed",named:F(1,4)});
+    if(s.father)rows.push({name:"Father",key:"father",count:1,type:"fixed",named:F(1,6)});
+    if(s.mother)rows.push({name:"Mother",key:"mother",count:1,type:"fixed",named:F(1,6)});
+  }else{
+    if(s.fullS+s.fullB+s.maternal===0)return{error:"Add at least one brother or sister."};
+    if(s.spouse==="wife")rows.push({name:"Wife",key:"wife",count:1,type:"fixed",named:F(1,4)});
+    if(s.spouse==="husband")rows.push({name:"Husband",key:"husband",count:1,type:"fixed",named:F(1,2)});
+    if(s.maternal>0)rows.push({name:s.maternal===1?"Half-sibling (mother's side)":s.maternal+" half-siblings (mother's side)",key:"maternal",count:s.maternal,type:"fixed",named:s.maternal===1?F(1,6):F(1,3)});
+  }
+  const fixedSum=sum(rows.map(r=>r.named));
+  const rest=sub(F(1),fixedSum);
+  rows.forEach(r=>r.gets=r.named);
+  let flexRow=null,story="",kase="";
+  const isKids=s.mode==="kids";
+  const male=isKids?s.sons:s.fullB, fem=isKids?s.daughters:s.fullS;
+  const mName=isKids?"son":"brother", fName=isKids?"daughter":"sister";
+  if(male>0){
+    const nm=[male?`${male} ${mName}${male>1?"s":""}`:"",fem?`${fem} ${fName}${fem>1?"s":""}`:""].filter(Boolean).join(" + ");
+    flexRow={name:nm,key:isKids?"sons":"brothers",count:male+fem,type:"flex",named:null,gets:rest,split:{male,fem}};
+    kase="residue";
+    story=`Locked seats take <b>${fs(fixedSum)}</b>. The ${isKids?"children":"brothers and sisters"} share what is left: <b>${fs(rest)}</b>. Each ${mName} gets 2 parts and each ${fName} gets 1 part. Total: exactly 100%.`;
+  }else if(fem>0){
+    const named=fem===1?F(1,2):F(2,3);
+    flexRow={name:`${fem} ${fName}${fem>1?"s":""}`,key:isKids?"daughters":"sisters",count:fem,type:"flex",named};
+    if(val(named)>val(rest)+1e-9){
+      flexRow.gets=rest;kase="deficit";
+      story=`Locked seats take <b>${fs(fixedSum)}</b>. That leaves <b>${fs(rest)}</b>. The ${fName}s' Quran share (${fs(named)}) doesn't fit, so they take <b>what is left: ${fs(rest)}</b>. Total: exactly 100%.`;
+    }else if(Math.abs(val(named)-val(rest))<1e-9){
+      flexRow.gets=named;kase="exact";
+      story=`Everyone gets exactly the share the Quran names. It adds up to exactly 100% with nothing left over.`;
+    }else{
+      const extra=sub(rest,named);kase="surplus";
+      // radd: kids mode → daughters + parents in proportion; sibs mode → full sisters only
+      const pool=[flexRow].concat(isKids?rows.filter(r=>r.key==="father"||r.key==="mother"):[]);
+      const poolSum=sum(pool.map(r=>r.named));
+      pool.forEach(r=>{r.radd=mul(extra,div(r.named,poolSum));r.gets=add(r.named,r.radd)});
+      flexRow.gets=add(named,flexRow.radd);
+      const who=pool.length>1?`${fName}s and parents (by the size of their share)`:`${fName}${fem>1?"s":""}`;
+      story=`After everyone takes their Quran share, <b>${fs(extra)}</b> is left over. The leftover goes back to the ${who}. Total: exactly 100%. So the ${fName}s' share went <b>up</b>, not down.`;
+    }
+  }else{
+    // only maternal siblings (+spouse): they take their share plus the rest
+    const m=rows.find(r=>r.key==="maternal");
+    const extra=rest;m.radd=extra;m.gets=add(m.named,extra);kase="surplus";
+    story=`The half-siblings take their share, and the leftover <b>${fs(extra)}</b> goes back to them. Total: exactly 100%.`;
+  }
+  const flexUp=flexRow&&flexRow.named&&val(flexRow.gets)>val(flexRow.named)+1e-9;
+  if(flexRow)rows.push(flexRow);
+  const naiveParts=rows.map(r=>r.named||r.gets);
+  const naive=sum(naiveParts);
+  return{rows,naive,kase,story,fixedSum,rest,flexUp};
+}
+function perPerson(r){
+  if(r.split){const parts=2*r.split.male+r.split.fem;const unit=div(r.gets,F(parts));
+    const a=[];if(r.split.male)a.push(`each ${S.mode==="kids"?"son":"brother"} ${fs(mul(unit,F(2)))}`);if(r.split.fem)a.push(`each ${S.mode==="kids"?"daughter":"sister"} ${fs(unit)}`);return a.join(", ")}
+  return r.count>1?`each ${fs(div(r.gets,F(r.count)))}`:"";
+}
+function rowDrawer(r){
+  let h=`<div class="proves num"><b>Quran number:</b> ${r.named?fs(r.named):"none, takes what is left"}<br><b>Actually gets:</b> ${fs(r.gets)} (${pct(r.gets)}) = ${amtOf(r.gets)}${perPerson(r)?"<br><b>Per person:</b> "+perPerson(r):""}${r.radd?`<br><b>Includes leftover given back:</b> +${fs(r.radd)}`:""}</div><p>${whyLocked[r.key]}</p>`;
+  return reg(`${r.name}: ${r.type==="fixed"?"locked seat":"flexible seat"}`,h);
+}
+function renderControls(){
+  document.querySelectorAll("#mode button").forEach(b=>b.classList.toggle("on",b.dataset.mode===S.mode));
+  document.querySelectorAll("#sex button").forEach(b=>b.classList.toggle("on",b.dataset.sex===S.sex));
+  document.getElementById("kids-q").textContent=`Did ${S.sex==="man"?"he":"she"} leave children?`;
+  const step=(k,label,max)=>`<div class="ctl"><span class="name">${label}</span><div class="stepper"><button data-k="${k}" data-d="-1" aria-label="Fewer ${label}">−</button><output class="num">${S[k]}</output><button data-k="${k}" data-d="1" aria-label="More ${label}">+</button></div></div>`;
+  const sw=(k,label)=>`<div class="ctl"><span class="name">${label}</span><button class="switch" data-sw="${k}" aria-pressed="${S[k]}" aria-label="${label}"></button></div>`;
+  const sp=sw("hasSpouse",S.sex==="man"?"Wife":"Husband");
+  document.getElementById("controls").innerHTML= S.mode==="kids"
+    ? sp+sw("father","Father")+sw("mother","Mother")+step("daughters","Daughters",4)+step("sons","Sons",3)
+    : sp+step("fullS","Full sisters",4)+step("fullB","Full brothers",3)+step("maternal","Half-siblings (mother's side)",3);
+  document.getElementById("mode-note").innerHTML= S.mode==="kids"
+    ? "With any child alive, brothers and sisters get nothing."
+    : "Brothers and sisters only inherit when there are <b>no</b> children and <b>no</b> parents.";
+  document.getElementById("presets").innerHTML=PRESETS.map(p=>`<button data-p="${p.id}" class="${activePreset===p.id?"on":""}">${esc(p.name)}</button>`).join("");
+}
+function renderCalc(){
+  S.spouse=S.hasSpouse?(S.sex==="man"?"wife":"husband"):"none";
+  renderControls();
+  const r=compute(S);
+  const bars=document.getElementById("calc-bars"),ex=document.getElementById("explain");
+  if(r.error){bars.innerHTML="";ex.innerHTML=r.error;document.getElementById("moneytable").innerHTML="";return}
+  const naiveSegs=r.rows.map(x=>({name:x.name,frac:x.named||x.gets,type:x.type==="flex"&&val(r.naive)>1?"over":x.type,short:fs(x.named||x.gets),tip:`${x.name}: ${fs(x.named||x.gets)}`,drawer:rowDrawer(x)}));
+  const rightSegs=r.rows.map(x=>({name:x.name,frac:x.gets,type:x.type,short:fs(x.gets),tip:`${x.name}: gets ${fs(x.gets)}`,drawer:rowDrawer(x)}));
+  let h=bar("The critic's way (everyone's full number)",naiveSegs,r.naive)+bar("The Ahl al-Bayt way",rightSegs,F(1));
+  bars.innerHTML=h;
+  let awl="";
+  if(val(r.naive)>1){
+    const den=r.naive;
+    const d=reg("The shrink-everyone method",`<p>Some Muslims solve this case differently. Instead of locked and flexible seats, they shrink <b>everyone's</b> share a little so it fits (in Arabic this is called <i>'awl</i>).</p><div class="proves num">${r.rows.map(x=>`<b>${esc(x.name)}:</b> ${fs(div(x.named||x.gets,den))} = ${amtOf(div(x.named||x.gets,den))}`).join("<br>")}</div><p>This also adds up to exactly 100%, so it is <b>not</b> a math error either. The critic is wrong both ways.</p><p>The Imams taught that this method came from Umar's ruling, and that Allah's own wording shows who is paid first. See Ibn Abbas in <b>The proof</b>.</p>`);
+    awl=`<p class="num" style="margin-top:8px;font-size:15px">The critic's way would need <b>${money(AMT*val(r.naive))}</b>, but there is only <b>${money(AMT)}</b>.</p><p style="margin-top:8px;font-size:15px"><button class="subbtn" data-open="${d}">How do other Muslims solve this?</button></p>`;
+  }else if(r.flexUp){
+    awl=`<p class="muted" style="margin-top:8px;font-size:15px">This is why "2/3 is a maximum" is the wrong idea: the ${S.mode==="kids"?"daughters":"sisters"} end up with <b>more</b> than their Quran number.</p>`;
+  }
+  ex.innerHTML=`<p>${r.story}</p>`+awl;
+  const each=x=>{
+    if(x.split){const parts=2*x.split.male+x.split.fem,unit=AMT*val(x.gets)/parts,a=[];
+      if(x.split.male)a.push(`${money(unit*2)} per ${S.mode==="kids"?"son":"brother"}`);
+      if(x.split.fem)a.push(`${money(unit)} per ${S.mode==="kids"?"daughter":"sister"}`);
+      return a.join("<br>")}
+    return x.count>1?`${money(AMT*val(x.gets)/x.count)} each`:"";
+  };
+  document.getElementById("moneytable").innerHTML=`<thead><tr><th>Heir</th><th class="r">Share</th><th class="r">Amount</th></tr></thead><tbody>`+
+    r.rows.map(x=>{const e=each(x);return `<tr data-open="${rowDrawer(x)}" tabindex="0"><td><b>${esc(x.name)}</b>${e?`<br><span class="muted" style="font-size:13px">${e}</span>`:""}</td><td class="r">${fs(x.gets)}</td><td class="r"><b>${amtOf(x.gets)}</b></td></tr>`}).join("")+
+    `</tbody><tfoot><tr><td>Total</td><td class="r">100%</td><td class="r">${money(AMT)}</td></tr></tfoot>`;
+}
+document.getElementById("view-calculator").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.p){const p=PRESETS.find(x=>x.id===b.dataset.p);S={...S,...p.s};activePreset=p.id;renderCalc();return}
+  if(b.dataset.mode){S.mode=b.dataset.mode;activePreset=null;renderCalc();return}
+  if(b.dataset.sex){S.sex=b.dataset.sex;activePreset=null;renderCalc();return}
+  if(b.dataset.sw){S[b.dataset.sw]=!S[b.dataset.sw];activePreset=null;renderCalc();return}
+  if(b.dataset.k){const k=b.dataset.k,max={daughters:4,sons:3,fullS:4,fullB:3,maternal:3}[k];S[k]=Math.max(0,Math.min(max,S[k]+ +b.dataset.d));activePreset=null;renderCalc()}
+});
+
+/* ---------- 3. proof ---------- */
+const VERSES={
+  husband:{ref:"Surat al-Nisa 4:12",ar:"وَلَكُمْ نِصْفُ مَا تَرَكَ أَزْوَاجُكُمْ إِنْ لَمْ يَكُنْ لَهُنَّ وَلَدٌ ۚ فَإِنْ كَانَ لَهُنَّ وَلَدٌ فَلَكُمُ الرُّبُعُ مِمَّا تَرَكْنَ",en:"You get half of what your wives leave if they have no child. If they have a child, you get a quarter of what they leave."},
+  wife:{ref:"Surat al-Nisa 4:12",ar:"وَلَهُنَّ الرُّبُعُ مِمَّا تَرَكْتُمْ إِنْ لَمْ يَكُنْ لَكُمْ وَلَدٌ ۚ فَإِنْ كَانَ لَكُمْ وَلَدٌ فَلَهُنَّ الثُّمُنُ مِمَّا تَرَكْتُمْ",en:"Your wives get a quarter of what you leave if you have no child. If you have a child, they get an eighth of what you leave."},
+  mother:{ref:"Surat al-Nisa 4:11",ar:"فَإِنْ لَمْ يَكُنْ لَهُ وَلَدٌ وَوَرِثَهُ أَبَوَاهُ فَلِأُمِّهِ الثُّلُثُ ۚ فَإِنْ كَانَ لَهُ إِخْوَةٌ فَلِأُمِّهِ السُّدُسُ",en:"If he has no child and his parents inherit from him, his mother gets a third. If he has brothers, his mother gets a sixth."},
+  father:{ref:"Surat al-Nisa 4:11",ar:"وَلِأَبَوَيْهِ لِكُلِّ وَاحِدٍ مِنْهُمَا السُّدُسُ مِمَّا تَرَكَ إِنْ كَانَ لَهُ وَلَدٌ",en:"Each of his parents gets a sixth of what he leaves if he has a child."},
+  maternal:{ref:"Surat al-Nisa 4:12",ar:"وَإِنْ كَانَ رَجُلٌ يُورَثُ كَلَالَةً أَوِ امْرَأَةٌ وَلَهُ أَخٌ أَوْ أُخْتٌ فَلِكُلِّ وَاحِدٍ مِنْهُمَا السُّدُسُ ۚ فَإِنْ كَانُوا أَكْثَرَ مِنْ ذَٰلِكَ فَهُمْ شُرَكَاءُ فِي الثُّلُثِ",en:"If a man or woman is kalala (someone with no parent or child), and has a brother or a sister, each gets a sixth. If there are more than that, they share a third. (The Imams explain this verse is about half-siblings through the mother.)"},
+  daughters:{ref:"Surat al-Nisa 4:11",ar:"فَإِنْ كُنَّ نِسَاءً فَوْقَ اثْنَتَيْنِ فَلَهُنَّ ثُلُثَا مَا تَرَكَ ۖ وَإِنْ كَانَتْ وَاحِدَةً فَلَهَا النِّصْفُ",en:"If there are only daughters, two or more, they get two-thirds of what he leaves. If there is one, she gets half."},
+  sisters:{ref:"Surat al-Nisa 4:176",ar:"إِنِ امْرُؤٌ هَلَكَ لَيْسَ لَهُ وَلَدٌ وَلَهُ أُخْتٌ فَلَهَا نِصْفُ مَا تَرَكَ ۚ وَهُوَ يَرِثُهَا إِنْ لَمْ يَكُنْ لَهَا وَلَدٌ ۚ فَإِنْ كَانَتَا اثْنَتَيْنِ فَلَهُمَا الثُّلُثَانِ مِمَّا تَرَكَ",en:"If a man dies with no child and has a sister, she gets half of what he leaves. And he inherits all of hers if she has no child. If there are two sisters, they get two-thirds of what he leaves."}
+};
+const SEATROWS=[
+  ["Husband","1/2","1/4","fixed","husband","Lower share named"],
+  ["Wife","1/4","1/8","fixed","wife","Lower share named"],
+  ["Mother","1/3","1/6","fixed","mother","Lower share named"],
+  ["Father","1/6","1/6","fixed","father","Already his lowest share"],
+  ["Daughters","1/2 or 2/3","?","flex","daughters","No lower share named"],
+  ["Full sisters","1/2 or 2/3","?","flex","sisters","No lower share named"]
+];
+function verseDrawer(key,who,type){
+  const v=VERSES[key];
+  const point=type==="fixed"
+    ?"Allah named exactly what this share becomes when the shares don't all fit. That makes it a locked seat."
+    :"Allah names no lower share here. So this is the share that moves: down to what is left when the shares don't fit, or up when there is money left over.";
+  let extra="";
+  if(key==="father")extra=`<p class="sect" style="margin-top:6px">Supporting narration</p>`+narr(N.zurara);
+  return reg(`${who}: what the Quran says`,`<div class="proves">${point}</div><p>${v.en}</p><p class="sect">${v.ref}</p><p class="ar">${v.ar}</p>`+extra);
+}
+function renderSeatList(){
+  document.getElementById("seatlist").innerHTML=SEATROWS.map(r=>`<button class="seatrow ${r[3]}" data-tip="${esc(r[5])} · tap or click" data-open="${verseDrawer(r[4],r[0],r[3])}"><span><span class="who">${r[0]}</span><br><span class="muted" style="font-size:13px">${r[5]}</span></span><span class="arrow num"><span class="from">${r[1]}</span><span>→</span><span class="to">${r[2]}</span><span class="muted">›</span></span></button>`).join("")
+  +`<p class="hint">→ shows the share when the shares don't all fit. <b>?</b> means the Quran names no number.</p>`
+  +`<button class="seatrow fixed" data-tip="Tap or click" data-open="${verseDrawer("maternal","Half-siblings (mother's side)","fixed")}"><span><span class="who">Half-siblings (mother's side)</span><br><span class="muted" style="font-size:13px">Fixed. Never cut below their share.</span></span><span class="arrow num"><span class="to">1 gets 1/6 · 2+ share 1/3</span><span class="muted">›</span></span></button>`;
+}
+
+/* narrations: full Arabic, chain, translation */
+const N={
+  ubayda:{who:"Imam Ali",line:"In this exact case, Ali told Umar: \"They get what remains.\"",short:"لهما ما يبقى",star:true,
+    src:"Shaykh al-Tusi, transmitted in al-Hurr al-Amili, Wasa'il al-Shi'a (Al al-Bayt ed.) 26:83",
+    ar:"وباسناده عن أبي طالب الأنباري ، عن الحسن بن محمد بن أيوب ، عن عثمان بن أبي شيبة ، عن يحيى بن أبي بكر ، عن شعبة ، عن سماك ، عن عبيدة السلماني قال : كان علي (عليه السلام) على المنبر فقام إليه رجل فقال : يا أمير المؤمنين ! رجل مات وترك ابنتيه وأبويه وزوجة فقال (عليه السلام) : صار ثمن المرأة تسعا . قال سماك فقلت لعبيدة : وكيف ذلك ؟ قال : إن عمر بن الخطاب وقعت في أمارته هذه الفريضة فلم يدر ما يصنع وقال : للبنتين الثلثان وللأبوين السدسان وللزوجة الثمن ، قال : هذا الثمن باقيا بعد الأبوين والبنتين ، فقال له أصحاب محمد (صلى الله عليه وآله) : أعط هؤلاء فريضتهم للأبوين السدسان وللزوجة الثمن ، وللبنتين ما يبقى ، فقال : فأين فريضتهما الثلثان ؟ فقال له علي (عليه السلام) : لهما ما يبقى ، فأبى ذلك عليه عمر وابن مسعود فقال علي (عليه السلام) على ما رأى عمر . قال عبيدة : وأخبرني جماعة من أصحاب علي (عليه السلام) بعد ذلك في مثلها : أنه أعطى الزوج الربع مع الابنتين وللأبوين السدسين والباقي رد على البنتين ، وذلك هو الحق وإن أباه قومنا .",
+    chain:"Shaykh al-Tusi by his chain, from Abu Talib al-Anbari, from al-Hasan b. Muhammad b. Ayyub, from Uthman b. Abi Shayba, from Yahya b. Abi Bakr, from Shu'ba, from Simak, from 'Ubayda al-Salmani. Many of these narrators are Sunni.",
+    en:[
+      "<b>'Ubayda said:</b> Ali was on the pulpit when a man stood up and asked: \"O Commander of the Faithful (Ali)! A man died and left his two daughters, his parents and a wife.\" Ali replied: \"The woman's eighth has become a ninth.\"",
+      "<b>Simak said:</b> I asked 'Ubayda: \"How did that happen?\"",
+      "<b>'Ubayda explained:</b> This case came up while Umar b. al-Khattab was ruling, and he did not know what to do. Umar said: \"The two daughters get two-thirds, the parents two-sixths, and the wife an eighth. Yet this eighth is left over once the parents and daughters are paid.\" The Companions of Muhammad told him: \"Give these heirs their shares: the parents their two-sixths, the wife her eighth, and the two daughters whatever remains.\" Umar asked: \"Then where is their share of two-thirds?\" Ali answered him: \"They get whatever remains.\" Umar and Ibn Mas'ud rejected this, so Ali's pulpit remark described the result of Umar's ruling.",
+      "<b>'Ubayda added:</b> Later, a group of Ali's companions told me that in a similar case Ali gave the husband a quarter alongside the two daughters, gave the parents their two-sixths, and returned the rest to the two daughters.",
+      "<b>The narrator concludes:</b> \"That is the truth, even if our people reject it.\""],
+    proves:"This is the critic's exact case. Ali's answer is the one on this page: wife, mother and father first, daughters get what remains. It also shows the shrink-everyone method came from Umar's ruling, not from Ali."},
+  bukayrShort:{who:"Imam al-Sadiq",line:"\"Children and siblings are the ones whose shares go up and down.\"",short:"الولد والاخوة هم الذين يزادون وينقصون",star:true,
+    src:"Tafsir al-Ayyashi, in Wasa'il al-Shi'a 26:83",
+    ar:"محمد بن مسعود العياشي في (تفسيره) عن بكير بن أعين ، عن أبي عبد الله (عليه السلام) قال : الولد والاخوة هم الذين يزادون وينقصون .",
+    chain:"Muhammad b. Mas'ud al-Ayyashi, in his Tafsir, from Bukayr b. A'yan, from Abu Abdillah (Imam al-Sadiq). The middle of the chain was dropped in the surviving text of al-Ayyashi.",
+    en:["<b>Imam al-Sadiq said:</b> \"Children and siblings are the ones whose shares are increased and decreased.\""],
+    proves:"The whole rule in one sentence: daughters' and sisters' shares are not fixed. They move."},
+  ishaq:{who:"Imam al-Sadiq",line:"\"Four heirs are never harmed: the two parents, the husband and the wife.\"",short:"أربعة لا يدخل عليهم ضرر في الميراث",
+    src:"Shaykh al-Tusi, Tahdhib, in Wasa'il al-Shi'a 26:81",
+    ar:"وباسناده عن علي بن الحسن ، عن محمد بن علي ، عن علي بن النعمان ، عن إسحاق بن عمار ، عن أبي عبد الله (عليه السلام) قال : أربعة لا يدخل عليهم ضرر في الميراث : للوالدين السدسان أو ما فوق ذلك ، وللزوج النصف أو الربع وللمرأة الربع أو الثمن .",
+    chain:"Shaykh al-Tusi by his chain, from Ali b. al-Hasan, from Muhammad b. Ali, from Ali b. al-Nu'man, from Ishaq b. Ammar, from Abu Abdillah (Imam al-Sadiq).",
+    en:["<b>Imam al-Sadiq said:</b> \"There are four heirs whose inheritance is never harmed. The parents get two-sixths or more. The husband gets a half or a quarter. The wife gets a quarter or an eighth.\""],
+    proves:"Names the locked seats. Daughters and sisters are not on the list."},
+  baqirSisters:{who:"Imam al-Baqir",line:"Husband + 2 sisters: \"The husband gets half, the two sisters get what remains.\"",short:"للزوج النصف ، وللأختين ما بقي",
+    src:"Tafsir al-Ayyashi, in al-Bahrani, al-Burhan fi Tafsir al-Qur'an 2:205, hadith 2858",
+    ar:"العياشي : عن بكير بن أعين ، قال : كنت عند أبي جعفر (عليه السلام) فدخل عليه رجل ، فقال : ما تقول في أختين وزوج ؟ قال : فقال أبو جعفر (عليه السلام) : «للزوج النصف ، وللأختين ما بقي» . قال : فقال الرجل : ليس هكذا يقول الناس ، قال : «فما يقولون» ؟ قال : يقولون : للأختين الثلثان ، وللزوج النصف ، ويقسمون على سبعة . قال : فقال أبو جعفر (عليه السلام) : «ولم قالوا ذلك ؟» قال : لأن الله سمى للأختين الثلثين ، وللزوج النصف . قال : «فما يقولون لو كان مكان الأختين أخ» ؟ قال : يقولون : للزوج النصف وما بقي فللأخ . فقال له : «فيعطون من أمر الله له بالكل النصف ، ومن أمر الله بالثلثين أربعة من سبعة ؟ !» . قال : وأين سمى الله له ذلك ؟ قال : فقال أبو جعفر (عليه السلام) : «اقرأ الآية التي في آخر السورة ﴿يستفتونك قل الله يفتيكم في الكلالة إن امرؤ هلك ليس له ولد وله أخت فلها نصف ما ترك وهو يرثها إن لم يكن لها ولد﴾» قال : فقال أبو جعفر (عليه السلام) : «فإنما كان ينبغي لهم أن يجعلوا لهذا المال للزوج النصف ثم يقسمون على تسعة» قال : فقال الرجل : هكذا يقولون . قال : فقال أبو جعفر (عليه السلام) : «فهكذا يقولون» . ثم أقبل علي فقال : «يا بكير ، نظرت في الفرائض ؟» قال : قلت : وما أصنع بشيء هو عندي باطل ؟ قال : فقال : «انظر فيها ، فإنه إذا جاءت تلك كان أقوى لك عليها» .",
+    chain:"Al-Ayyashi, from Bukayr b. A'yan. The middle of the chain was dropped in the surviving text of al-Ayyashi.",
+    en:[
+      "<b>Bukayr said:</b> I was with Abu Ja'far (Imam al-Baqir) when a man came in and asked: \"What do you say about two sisters and a husband?\"",
+      "<b>Imam al-Baqir answered:</b> \"The husband gets half, and the two sisters get what remains.\"",
+      "<b>The man said:</b> \"That is not what people say.\" <b>The Imam asked:</b> \"What do they say?\" <b>The man said:</b> \"They say the two sisters get two-thirds and the husband half, and they divide the money into seven.\" <b>The Imam asked:</b> \"Why do they say that?\" <b>The man said:</b> \"Because Allah named two-thirds for the two sisters and half for the husband.\"",
+      "<b>The Imam asked:</b> \"What would they say if there were a brother in place of the two sisters?\" <b>The man said:</b> \"They say the husband gets half and the brother gets what remains.\"",
+      "<b>The Imam said:</b> \"So they give the one Allah gave everything only half, and give the ones Allah gave two-thirds four parts out of seven?!\" <b>The man asked:</b> \"Where did Allah give the brother everything?\"",
+      "<b>The Imam said:</b> \"Read the verse at the end of the surah: <i>'They ask you for a ruling. Say: Allah gives you a ruling on kalala. If a man dies with no child and has a sister, she gets half of what he left, and he inherits from her if she has no child.'</i>\" <b>Then the Imam said:</b> \"To be consistent, they should have given the husband his half and then divided the money into nine.\" <b>The man said:</b> \"That is what they say.\" <b>The Imam said:</b> \"So that is what they say.\"",
+      "<b>Then the Imam turned to Bukayr and asked:</b> \"Bukayr, have you studied the inheritance rules?\" <b>Bukayr said:</b> \"What would I do with something I think is false?\" <b>The Imam said:</b> \"Study them, because when a case like this comes, it will make you stronger against them.\""],
+    proves:"The sisters version of the critic's challenge (1/2 + 2/3), answered the same way. Notice the Imam told his student to study the opponents' method so he could debate it."},
+  baqirBrother:{who:"Imam al-Baqir",line:"\"Allah gave the brother everything and the sister half. Why do you squeeze him and not her?\"",short:"فالكل أكثر من النصف",
+    src:"Tafsir al-Ayyashi, in al-Burhan fi Tafsir al-Qur'an 2:206, hadith 2863",
+    ar:"عن بكير ، قال : دخل رجل على أبي جعفر (عليه السلام) فسأله عن امرأة تركت زوجها وإخوتها لأمها وأختا لأب . قال : «للزوج النصف ثلاثة أسهم ، وللإخوة من الام الثلث سهمان ، وللأخت للأب سهم» فقال له الرجل : فإن فرائض زيد وابن مسعود وفرائض العامة والقضاة على غير ذا يا أبا جعفر ، يقولون : للأخت للأب والام ثلاثة أسهم ، نصيب من ستة ، يعول إلى ثمانية ! فقال أبو جعفر (عليه السلام) : «ولم قالوا» ؟ قال : لأن الله قال : ﴿وله أخت فلها نصف ما ترك﴾ . فقال أبو جعفر (عليه السلام) : «فما لكم نقصتم الأخ إن كنتم تحتجون بأمر الله ، فإن الله سمى لها النصف ، وإن الله سمى للأخ الكل ، فالكل أكثر من النصف ، فإنه تعالى قال : ﴿فلها نصف﴾ وقال للأخ : ﴿وهو يرثها﴾ يعني جميع المال إن لم يكن لها ولد ، فلا تعطون الذي جعل الله له الجميع في بعض فرائضكم شيئا ، وتعطون الذي جعل الله له النصف تاما ؟ !» .",
+    chain:"Al-Ayyashi, from Bukayr. The middle of the chain was dropped; the same teaching comes with full chains in al-Kafi.",
+    en:[
+      "<b>Bukayr said:</b> A man came to Abu Ja'far (Imam al-Baqir) and asked about a woman who left her husband, her half-siblings through her mother, and one sister through her father.",
+      "<b>The Imam answered:</b> \"The husband gets half, which is three shares. The mother's-side siblings get a third, which is two shares. The father's-side sister gets one share.\"",
+      "<b>The man objected:</b> \"O Abu Ja'far, the rulings of Zayd and Ibn Mas'ud, and of the people and the judges, are different. They give the full sister three shares, a half out of six, and stretch the total to eight!\" <b>The Imam asked:</b> \"Why do they say that?\" <b>The man said:</b> \"Because Allah said: <i>'and he has a sister, so she gets half of what he left.'</i>\"",
+      "<b>The Imam said:</b> \"Then why do you cut the brother short, if you argue from Allah's command? Allah named half for her and named the whole for the brother, and the whole is more than half. He said of her <i>'she gets half'</i>, and of the brother <i>'and he inherits from her'</i>, meaning all of the money if she has no child. So in some of your rulings you give nothing to the one Allah gave everything, yet you pay in full the one Allah gave half?!\""],
+    proves:"A brother in the same spot only gets what is left, and everyone agrees on that. So a sister cannot be paid more than a brother would. Her share must move too."},
+  ibnAbbas:{who:"Ibn Abbas",line:"\"Pay those Allah put first in full. The rest go to those He put last.\"",short:"بدئ بما قدم الله",
+    src:"al-Kafi, as quoted in al-Tabataba'i, al-Mizan 4:219",
+    ar:"عن الزهري عن عبيد الله بن عبد الله بن عتبة قال : جالست ابن عباس فعرض ذكر الفرائض من المواريث فقال ابن عباس : سبحان الله العظيم ، أترون الذي أحصى رمل عالج عددا جعل في مال نصفا ونصفا وثلثا ، فهذان النصفان قد ذهبا بالمال فأين موضع الثلث ؟ فقال له زفر بن أوس البصري : يا أبا العباس فمن أول من أعال هذه الفرائض ؟ فقال : عمر بن الخطاب لما التفت عنده الفرائض ودفع بعضها بعضا قال : والله ما أدري أيكم قدم الله وأيكم أخر ، وما أجد شيئا أوسع من أن أقسم عليكم هذا المال بالحصص ، وأدخل على كل ذي حق حقه ، فادخل عليه من عول الفرائض ، وأيم الله لو قدم من قدم الله وأخر من أخر الله ما عالت الفريضة . فقال له زفر بن أوس : وأيها قدم وأيها أخر ؟ فقال : كل فريضة لم يهبطها الله عن فريضة إلا إلى فريضة فهذا ما قدم الله ، وأما ما أخر الله فكل فريضة إذا زالت عن فرضها لم يكن لها إلا ما بقي فتلك التي أخر ، فأما التي قدم فالزوج له النصف فإذا دخل عليه ما يزيله عنه رجع إلى الربع لا يزيله عنه شئ ، والزوجة لها الربع فإذا زالت إلى الثمن لا يزيلها عنه شئ ، والام لها الثلث فإذا زالت عنه صارت إلى السدس ولا يزيلها عنه شئ ، فهذه الفرائض التي قدم الله عز وجل ، وأما التي أخر ففريضة البنات والأخوات لها النصف والثلثان فإذا أزالتهن الفرائض عن ذلك لم يكن لها إلا ما بقي ، فتلك التي أخر الله ، فإذا اجتمع ما قدم الله وما أخر بدئ بما قدم الله فأعطي حقه كاملا ، فإن بقي شئ كان لمن أخر وإن لم يبق شئ فلا شئ له . فقال له زفر : فما منعك أن تشير بهذا الرأي على عمر ؟ فقال : هيبته .",
+    chain:"Al-Kafi, from al-Zuhri, from Ubaydullah b. Abdullah b. Utba. Al-Tabataba'i quotes only these names; the full chain in al-Kafi is longer.",
+    en:[
+      "<b>Ubaydullah said:</b> I was sitting with Ibn Abbas when inheritance shares came up.",
+      "<b>Ibn Abbas said:</b> \"Glory be to Allah! Do you think the One who counted every grain of sand in the desert of Alij would put a half, another half and a third in one inheritance? The two halves already use up all the money, so where would the third come from?\"",
+      "<b>Zufar b. Aws asked:</b> \"Who was the first to stretch the shares like this?\"",
+      "<b>Ibn Abbas answered:</b> \"Umar b. al-Khattab. When the shares got tangled before him, he said: 'By Allah, I don't know which of you Allah put first and which He put last. The easiest thing I can find is to divide this money among you proportionally, so each heir takes part of the loss.' So he shrank everyone's share. By Allah, if he had put first those Allah put first and put last those Allah put last, no share would ever have been stretched.\"",
+      "<b>Zufar asked:</b> \"Which did Allah put first, and which did He put last?\"",
+      "<b>Ibn Abbas answered:</b> \"Every share that Allah only lowers to another named share is one He put first. Every share that, once pushed down, gets only what is left is one He put last. Those He put first: the husband has half, and if something pushes him down he goes to a quarter and nothing pushes him lower. The wife has a quarter, and if she goes down to an eighth, nothing pushes her lower. The mother has a third, and if she is pushed down she goes to a sixth and nothing pushes her lower. Those He put last are the shares of daughters and sisters: a half or two-thirds, and if the other shares push them down, they get only what is left. When both groups are present, start with those Allah put first and pay them in full. If anything is left, it goes to those He put last. If nothing is left, they get nothing.\"",
+      "<b>Zufar asked:</b> \"What stopped you from telling Umar this?\" <b>Ibn Abbas answered:</b> \"I was afraid of him.\""],
+    proves:"The locked-seat / flexible-seat rule, spelled out by the Prophet's cousin, with the reason: look at which heirs the Quran gives a backup share."},
+  kafiBukayr:{who:"Imam al-Sadiq",line:"\"No sister or daughter gets more than a brother or son would in her place.\"",short:"ولا تزاد أنثى من الأخوات ولا من الولد على ما لو كان ذكرا لم يزد عليه",
+    src:"al-Kafi 7:102, in al-Burhan fi Tafsir al-Qur'an 2:41, hadith 2200",
+    ar:"محمد بن يعقوب : عن علي بن إبراهيم ، عن أبيه ، عن ابن أبي عمير ومحمد بن عيسى ، عن يونس جميعا ، عن عمر بن أذينة ، عن بكير بن أعين ، قال : قلت لأبي عبد الله (عليه السلام) : امرأة تركت زوجها ، وإخوتها لأمها ، وإخوتها وأخواتها لأبيها ؟ فقال : «للزوج النصف ثلاثة أسهم ، وللإخوة من الام الثلث ، الذكر والأنثى فيه سواء ، وبقي سهم فهو للإخوة والأخوات للأب ، للذكر مثل حظ الأنثيين ، لأن السهام لا تعول ولا ينقص الزوج من النصف ، ولا الإخوة من الام من ثلثهم ، لأن الله عز وجل يقول : ﴿فإن كانوا أكثر من ذلك فهم شركاء في الثلث﴾ . وإن كانت واحدة فلها السدس ، والذي عنى الله تبارك وتعالى في قوله : ﴿وإن كان رجل يورث كلالة أو امرأة وله أخ أو أخت فلكل واحد منهما السدس فإن كانوا أكثر من ذلك فهم شركاء في الثلث﴾ إنما عنى بذلك الإخوة والأخوات من الام خاصة . وقال في آخر سورة النساء : ﴿يستفتونك قل الله يفتيكم في الكلالة إن امرؤ هلك ليس له ولد وله أخت﴾ يعني أختا لأب وأم أو أختا لأب ﴿فلها نصف ما ترك وهو يرثها إن لم يكن لها ولد فإن كانتا اثنتين فلهما الثلثان مما ترك وإن كانوا إخوة رجالا ونساء فللذكر مثل حظ الأنثيين﴾ فهم الذين يزادون وينقصون وكذلك أولادهما الذين يزادون وينقصون . ولو أن امرأة تركت زوجها وإخوتها لأمها وأختيها لأبيها ، كان للزوج النصف ثلاثة أسهم ، وللإخوة من الام سهمان ، وبقي سهم فهو للأختين من الأب ، وإن كانت واحدة فهو لها لأن الأختين لأب لو كانتا أخوين لأب لم يزادا على ما بقي ، ولو كانت واحدة أو كان مكان الواحدة أخ لم يزد على ما بقي ، ولا تزاد أنثى من الأخوات ، ولا من الولد على ما لو كان ذكرا لم يزد عليه» .",
+    chain:"Muhammad b. Ya'qub al-Kulayni, from Ali b. Ibrahim, from his father, from Ibn Abi Umayr and Muhammad b. Isa, both from Yunus, from Umar b. Udhayna, from Bukayr b. A'yan.",
+    en:[
+      "<b>Bukayr said:</b> I asked Abu Abdillah (Imam al-Sadiq) about a woman who left her husband, her siblings through her mother, and her brothers and sisters through her father.",
+      "<b>The Imam answered:</b> \"The husband gets half, which is three shares. The mother's-side siblings get a third, with males and females equal. One share is left, and it goes to the father's-side brothers and sisters, a male getting twice a female. This is because the shares never go over the whole. The husband is never cut below half, and the mother's-side siblings are never cut below their third, because Allah says: <i>'If they are more than that, they share a third.'</i> If there is only one, that one gets a sixth.",
+      "\"When Allah said, <i>'If a man or a woman has no parent or child and has a brother or a sister, each gets a sixth; if there are more, they share a third,'</i> He meant only the siblings through the mother. And at the end of Surat al-Nisa He said: <i>'They ask you for a ruling. Say: Allah gives you a ruling on kalala. If a man dies with no child and has a sister'</i>, meaning a full sister or a father's-side sister, <i>'she gets half of what he left, and he inherits from her if she has no child. If there are two, they get two-thirds of what he left. If there are brothers and sisters, a male gets twice a female.'</i> These are the ones whose shares go up and down, and the same is true of their children.",
+      "\"If a woman left her husband, her mother's-side siblings and her two father's-side sisters, the husband gets half, which is three shares, the mother's-side siblings two shares, and the one share left is for the two sisters. If there is just one sister, it is hers. That is because if the two sisters had been two brothers, they would only have got what was left. And if there were one sister, or a brother in her place, he would only have got what was left. <b>No sister and no daughter is given more than a male in her place would be given.</b>\""],
+    proves:"Two rules in one: (1) \"These are the ones whose shares go up and down.\" (2) A sister or daughter never gets more than a brother or son would in the same spot."},
+  zurara:{who:"The Scroll of Inheritance Shares",line:"\"The parents are never cut below their two-sixths.\"",short:"لا ينقص الأبوان من السدسين شيئا",
+    src:"Shaykh al-Tusi, Tahdhib, in Wasa'il al-Shi'a 26:81",
+    ar:"وعنه عن علي بن أسباط ، عن محمد بن حمران ، عن زرارة قال : أراني أبو عبد الله (عليه السلام) صحيفة الفرائض فإذا فيها : لا ينقص الأبوان من السدسين شيئا .",
+    chain:"From Ali b. al-Hasan, from Ali b. Asbat, from Muhammad b. Humran, from Zurara.",
+    en:["<b>Zurara said:</b> Abu Abdillah (Imam al-Sadiq) showed me the Scroll of Inheritance Shares, and in it was written: \"The parents are never cut below their two-sixths in any way.\""],
+    proves:"The father and mother have locked seats of 1/6 each when there are children."}
+};
+function narr(n){
+  return `<div class="proves"><b>What this proves:</b> ${n.proves}</div><div class="tr">${n.en.map(p=>`<p>${p}</p>`).join("")}</div><p class="sect">Original Arabic</p><p class="ar">${n.ar}</p><p class="chain"><b>Who passed it on:</b> ${esc(n.chain)}</p><p class="src">Source: ${esc(n.src)}</p>`;
+}
+const EVTOP=["ubayda","bukayrShort","ibnAbbas"], EVMORE=["ishaq","baqirSisters","kafiBukayr","baqirBrother"];
+const evCard=(k,i)=>{const n=N[k];return `<button class="ev ${n.star?"star":""}" data-tip="Tap or click for the full narration" data-open="${reg(n.who,narr(n))}"><span class="badge">${i}</span><span><span class="who">${esc(n.who)}</span><div class="line">${esc(n.line)}</div><div class="ar">${n.short}</div><div class="more">Read the full narration ›</div></span></button>`};
+function renderEvidence(){
+  document.getElementById("evid").innerHTML=EVTOP.map((k,i)=>evCard(k,i+1)).join("");
+  let h=EVMORE.map((k,i)=>evCard(k,i+4)).join("");
+  h+=`<button class="ev" data-tip="Tap or click to read more" data-open="${reg("Allamah Tabataba'i, al-Mizan",`<div class="proves"><b>What this proves:</b> The rule comes from reading the Quran's own words carefully, not from patching a mistake.</div><p>Tabataba'i, the great 20th-century Shia Quran scholar, points out three things in his explanation of these verses:</p><div class="tr"><p><b>1. Look at the wording.</b> For the husband, wife and mother, the Quran gives a second, smaller share for when the shares don't all fit. For daughters and sisters, it says nothing about that case. That silence tells us the shortfall falls on them, not on the heirs Allah gave a lowest share.</p><p><b>2. It works both ways.</b> Whoever takes the shortfall also gets the leftover when there is extra. One daughter with her father gets 1/2 from the Quran plus the leftover.</p><p><b>3. History.</b> The shrink-everyone method was started by Umar during his rule. Ali had already rejected it, and Ibn Abbas later argued the same thing.</p></div><p class="src">Source: al-Mizan fi Tafsir al-Qur'an 4:213–214, 220–221; 5:153–154</p>`)}"><span class="badge">S</span><span><span class="who">Scholar · Allamah Tabataba'i</span><div class="line">The Quran's own wording shows which heirs come first.</div><div class="more">Read the explanation ›</div></span></button>`;
+  document.getElementById("evid-more").innerHTML=h;
+}
+
+/* ---------- 4. debate ---------- */
+const ROUNDS=[
+  {c:"1/8 + 1/6 + 1/6 + 2/3 = 27/24. The Quran can't add up!",
+   o:[["Shrink everyone's share a little so it all fits into 100%.",0,"That does add to 100%, but it's not what the Imams taught, and the critic will say you're changing every number. Use locked seats first."],
+      ["Wife, mom and dad have locked shares. The daughters get what's left: 13/24.",1,"Yes. 3/24 + 4/24 + 4/24 = 11/24 for the locked seats. Daughters get the other 13/24. Total 24/24."],
+      ["Pay the daughters their 2/3 first, then split the rest among the others.",0,"That cuts the wife below 1/8, which the Quran names as her lowest share. That breaks a verse."]]},
+  {c:"But 4:11 clearly says two daughters get two-thirds!",
+   o:[["It does, but the Quran names a lower share for wife and mother, and none for daughters.",1,"Yes. That difference in the verses shows which shares are locked and which can move."],
+      ["It does, but that verse only applies when there is no wife at all.",0,"The verse doesn't say that. Don't invent a condition."],
+      ["It does, but the other verses about wives were revealed later and replace it.",0,"No verse was cancelled. Both apply. The question is who is paid first."]]},
+  {c:"You made that rule up to hide the mistake.",
+   o:[["Muslim scholars have hundreds of years of commentary on this, so it must be right.",0,"Too vague. Give the critic the exact evidence."],
+      ["Ali gave this exact answer in Umar's time: 'They get what remains.'",1,"Yes. The rule is from the first generation of Islam, for this very case."],
+      ["The Quran is in Arabic, so you can't judge it from a translation.",0,"The translation is fine here. Use the evidence instead of dodging."]]},
+  {c:"So two-thirds is just the maximum daughters can get?",
+   o:[["Yes. It's the most they can ever get.",0,"Careful! If a man leaves only two daughters, they get 100%: 2/3 from the verse plus the leftover."],
+      ["No. It's their share when there's room. It can go down or up.",1,"Exactly. Try 'Only 2 daughters' in the Try it tab."],
+      ["No. It's the least they can get.",0,"Not true either. In the famous case they get 13/24, which is less than 2/3."]]},
+  {c:"Husband + two sisters: 1/2 + 2/3 = 7/6. Another error!",
+   o:[["The husband's half is locked. The two sisters take what's left: 1/2.",1,"Yes, and Imam al-Baqir answered this exact question: 'The husband gets half, the two sisters get what remains.'"],
+      ["The sisters get 2/3 and the husband gets what's left: 1/3.",0,"That cuts the husband below 1/2, his named share when there are no children."],
+      ["Divide the money into 7 parts: husband 3, sisters 4.",0,"That's the shrink-everyone method. It adds to 100%, but the Imams rejected it."]]},
+  {c:"Muslims disagree on this. So the Quran is unclear!",
+   o:[["Both Muslim methods add up to exactly 100%, so neither is a math error.",1,"Yes. A disagreement about who is paid first is a legal question, not a math mistake."],
+      ["Muslims don't really disagree about inheritance.",0,"They do, and the critic knows it. Admit it and show why it isn't a math error."],
+      ["Disagreement proves the Shia method is the only one that works.",0,"Too strong. The other method also adds to 100%. Make the math point first."]]}
+];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let qi=0,results=[],answered=false;
+function renderDefend(){
+  const el=document.getElementById("defend");
+  if(qi>=ROUNDS.length){
+    const right=results.filter(Boolean).length;
+    el.innerHTML=`<div class="progress">${results.map(r=>`<i class="${r?"done":"miss"}"></i>`).join("")}</div><h2>You scored ${right} / ${ROUNDS.length}</h2><p>${right===ROUNDS.length?"Perfect. You're ready to debate.":"Go back over the ones you missed, then try again."}</p><div class="row"><button class="btn" id="again">Try again</button><button class="btn ghost" id="toAttack">Try the tough questions</button></div>`;
+    el.querySelector("#again").onclick=()=>{qi=0;results=[];answered=false;renderDefend()};
+    el.querySelector("#toAttack").onclick=()=>setDmode("attack");
+    return;
+  }
+  const r={...ROUNDS[qi],o:shuffle(ROUNDS[qi].o)};
+  el.innerHTML=`<div class="progress">${ROUNDS.map((_,i)=>`<i class="${i<qi?(results[i]?"done":"miss"):i===qi?"now":""}"></i>`).join("")}</div>
+  <p class="kicker">Round ${qi+1} of ${ROUNDS.length} · Pick the best reply</p>
+  <div class="critic"><span class="avatar c">C</span><div class="bubble">${esc(r.c)}</div></div>
+  <div class="opts">${r.o.map((o,i)=>`<button class="opt" data-i="${i}">${esc(o[0])}</button>`).join("")}</div><div id="fb"></div>`;
+  answered=false;
+  el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    if(answered)return;answered=true;
+    const o=r.o[+b.dataset.i],ok=o[1]===1;results[qi]=ok;
+    b.classList.add(ok?"right":"wrong");
+    if(!ok)el.querySelectorAll(".opt").forEach(x=>{if(r.o[+x.dataset.i][1]===1)x.classList.add("right")});
+    el.querySelector("#fb").innerHTML=`<div class="fb ${ok?"good":"bad"}"><b>${ok?"Correct.":"Not the best."}</b> ${esc(o[2])}${ok?"":" The green answer is stronger."}</div><div class="row" style="margin-top:10px"><button class="btn" id="next">${qi+1<ROUNDS.length?"Next round":"See my score"}</button></div>`;
+    el.querySelector("#next").onclick=()=>{qi++;renderDefend()};
+  });
+}
+const ATTACKS=[
+  {q:"\"Ali himself said on the pulpit: 'The wife's eighth became a ninth.' So Ali shrank everyone too!\"",
+   a:"<p>The same report explains it. When the case came to Umar, Ali told him: <b>\"They get what remains.\"</b> Umar and Ibn Mas'ud refused. So Ali's pulpit line describes what Umar's ruling did to the wife.</p><p>The same narrator says Ali's companions later saw Ali rule the locked-seat way. Shaykh al-Tusi read the pulpit line as Ali criticising the ruling, not agreeing with it.</p>",ev:"ubayda"},
+  {q:"\"You're fixing the Quran with hadith written down centuries later.\"",
+   a:"<p>The rule is visible in the Quran itself. Husband, wife and mother get a lower share for when the shares don't all fit. Daughters and sisters don't. That difference is in the verses.</p><p>Also, the Quran says every share is paid <b>after debts and any gift written in a will</b> (4:11–12). So shares were always shares of what is left, never of a fixed pile.</p>",verse:"daughters"},
+  {q:"\"Why should daughters be the ones who lose out? That's unfair to women.\"",
+   a:"<p>Two of the locked seats are women: the wife and the mother. And a son in the same spot gets <b>only what is left</b> too, with no number at all.</p><p>Also, daughters get the upside: when there is extra, it goes back to them. A man who leaves only two daughters gives them 100%, not 2/3.</p>",ev:"kafiBukayr"},
+  {q:"\"If shares can move, then 2/3 means nothing.\"",
+   a:"<p>It means a lot. It is the daughters' share whenever there is room. Example: 2 daughters + both parents = 2/3 + 1/6 + 1/6 = exactly 100%. Everyone gets their exact Quran number.</p><p>The Quran also uses 2/3 to set the split between daughters and others when there's extra to return.</p>"},
+  {q:"\"Other Muslims shrink everyone's share. So even Muslim scholars think the shares are too big.\"",
+   a:"<p>Shrinking everyone also adds up to exactly 100%, so it's still not a math error. It's a different legal choice.</p><p>Ibn Abbas said Umar started it because he didn't know whom Allah put first. Ibn Abbas and the Imams showed whom Allah put first from the Quran's own wording.</p>",ev:"ibnAbbas"}
+];
+const TURNS=[
+  {q:"\"If a son in the same spot only gets what's left, why should a daughter get a guaranteed 2/3? That would pay a girl more than a boy in the same place.\"",
+   a:"<p>Use this when the critic insists 2/3 must always be paid. Everyone agrees a son has no fixed number and takes only what is left. So if 2/3 were guaranteed, a daughter would beat a son in the very same position.</p><p>Imam al-Sadiq said it directly: no sister or daughter is given more than a male in her place would be given.</p>",ev:"kafiBukayr"},
+  {q:"\"Your math pays the daughters their full 2/3 and leaves the wife short. Where does the Quran say daughters come before the wife?\"",
+   a:"<p>Use this to flip the burden of proof. The Quran names the wife's lowest share: 1/8 when there are children. Paying daughters 2/3 first leaves only 1/3 for the wife and parents, so somebody falls below a share Allah named.</p><p>The critic's way breaks a verse. The locked-seat way breaks none.</p>",verse:"wife"},
+  {q:"\"If you shrink everyone, why not shrink the brother too? Allah gave him all the money and the sister only half.\"",
+   a:"<p>Use this against the shrink-everyone method. Imam al-Baqir asked this exact question: Allah gave a brother everything and a sister half, yet that method gives the brother only what is left and pays the sister a stretched full share. That's backwards.</p>",ev:"baqirBrother"}
+];
+function cardsHTML(list,kicker,color){
+  return list.map(a=>{
+    let body=a.a;
+    if(a.ev)body+=`<p class="sect" style="margin-top:6px">Evidence</p>`+narr(N[a.ev]);
+    if(a.verse){const v=VERSES[a.verse];body+=`<p class="sect" style="margin-top:6px">${v.ref}</p><p>${v.en}</p><p class="ar">${v.ar}</p>`}
+    return `<button class="flip" data-tip="Tap or click for the answer" data-open="${reg(kicker==="Critic attack"?"How to answer it":"Why this works",`<div class="${kicker==="Critic attack"?"quote-critic":"answer30"}"><b>${esc(a.q)}</b></div>`+body)}"><span class="kicker" style="color:${color}">${kicker}</span><span class="q">${esc(a.q)}</span><span class="tap">Tap to see ${kicker==="Critic attack"?"the answer":"why it works"} ›</span></button>`}).join("");
+}
+function renderAttack(){
+  document.getElementById("attacks").innerHTML=cardsHTML(ATTACKS,"Critic attack","var(--over)")
+    +`<h3 style="margin-top:10px">Turn it around</h3><p class="muted">Questions you can ask back. Each one puts the critic on the spot.</p>`
+    +cardsHTML(TURNS,"Your attack","var(--fixed)");
+}
+function setDmode(m){
+  document.querySelectorAll("#dmode button").forEach(b=>b.classList.toggle("on",b.dataset.d===m));
+  document.getElementById("defend").hidden=m!=="defend";
+  document.getElementById("attack").hidden=m!=="attack";
+}
+document.querySelectorAll("#dmode button").forEach(b=>b.onclick=()=>setDmode(b.dataset.d));
+
+/* ---------- routing ---------- */
+const VIEWS=["challenge","calculator","proof","debate"];
+function show(v){
+  if(!VIEWS.includes(v))v="challenge";
+  VIEWS.forEach(x=>{document.getElementById("view-"+x).hidden=x!==v;document.getElementById("tab-"+x).setAttribute("aria-selected",x===v)});
+  scrollTo({top:0});
+}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>{if(location.hash==="#"+b.dataset.view)show(b.dataset.view);else location.hash=b.dataset.view});
+addEventListener("hashchange",()=>show(location.hash.slice(1)));
+
+const amtEl=document.getElementById("amt");
+amtEl.addEventListener("input",()=>{const n=parseFloat(amtEl.value.replace(/[^0-9.]/g,""));AMT=isFinite(n)&&n>=0?n:0;renderCalc()});
+amtEl.addEventListener("blur",()=>{amtEl.value=AMT.toLocaleString("en-US",{maximumFractionDigits:2})});
+document.getElementById("moneytable").addEventListener("keydown",e=>{const t=e.target.closest("[data-open]");if(e.key==="Enter"&&t){const d=DRAWERS[t.dataset.open];if(d)openDrawer(d.title,d.html)}});
+renderChallenge();renderSeats();renderCalc();renderSeatList();renderEvidence();renderDefend();renderAttack();
+const pulpitKey=reg("\"The eighth became a ninth\"",`<div class="quote-critic"><b>${esc(ATTACKS[0].q)}</b></div>`+ATTACKS[0].a+`<p class="sect" style="margin-top:6px">Evidence</p>`+narr(N.ubayda));
+document.getElementById("pulpit-link").onclick=()=>{const d=DRAWERS[pulpitKey];openDrawer(d.title,d.html)};
+show(location.hash.slice(1));
+</script>
+</body>
+</html>

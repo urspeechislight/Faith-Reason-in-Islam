@@ -15,6 +15,20 @@ import tempfile
 class PublicationTests(unittest.TestCase):
     def test_unmarked_html_is_still_an_article(self):
         self.assertEqual(gate.article_paths(['new.html','nested/unmarked.htm','index.html','facts.html','.publication/index-template.html']),['new.html','nested/unmarked.htm'])
+    def test_only_registered_tools_skip_article_review(self):
+        import public_files
+        with patch.object(public_files,'registered_tools',return_value={'tools/calc.html':'x'}):
+            self.assertEqual(gate.article_paths(['tools/calc.html','tools/other.html','tools/sub/calc.html','calc.html']),['tools/other.html','tools/sub/calc.html','calc.html'])
+            self.assertIn('tools/calc.html',public_files.public_names(['tools/calc.html']))
+        with patch.object(public_files,'registered_tools',return_value={}):
+            self.assertEqual(gate.article_paths(['tools/calc.html']),['tools/calc.html'])
+    def test_tool_mechanical_rules(self):
+        good='<!doctype html><html><head><meta name="viewport" content="x"><title>T</title></head><body><a href="../index.html">home</a><script>1</script></body></html>'
+        self.assertEqual(gate.tool_errors(good),[])
+        self.assertTrue(gate.tool_errors(good.replace('<script>','<script src="https://x.example/a.js">')))
+        self.assertTrue(gate.tool_errors(good.replace('<title>T</title>','')))
+        self.assertTrue(gate.tool_errors(good.replace('../index.html','index.html')))
+        self.assertTrue(gate.tool_errors(good+'<iframe src="x"></iframe>'))
     def test_corpus_export_cannot_change_quote_or_full_context(self):
         raw='source words and qualifying context';note='a candidate'
         passage={'id':'S1','start':0,'end':12,'source':{'title':'Witness','page':1},'quote':raw[:12],'quote_sha256':evidence.sha(raw[:12]),'source_sha256':evidence.sha(raw)}

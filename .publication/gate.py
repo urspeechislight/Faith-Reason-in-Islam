@@ -123,6 +123,20 @@ def prior_success(allow_older_policy=False):
     return None
 
 
+def tool_errors(page):
+    """Mechanical rules for a registered interactive tool. Tools carry no prose review."""
+    import re
+    errors=[]
+    if not re.match(r'\s*<!doctype html>',page,re.I):errors.append('missing <!doctype html>')
+    if not re.search(r'<title>[^<]+</title>',page):errors.append('missing <title>')
+    if not re.search(r'<meta name="viewport"',page):errors.append('missing viewport meta')
+    if re.search(r'<script[^>]*\bsrc=',page,re.I):errors.append('external or linked scripts are not allowed; inline the script')
+    if re.search(r'<(iframe|object|embed)\b',page,re.I):errors.append('embedded frames are not allowed')
+    if re.search(r'<form\b[^>]*\baction=',page,re.I):errors.append('forms must not submit anywhere')
+    if not re.search(r'href="\.\./index\.html"',page):errors.append('missing link back to the library (../index.html)')
+    return errors
+
+
 def article_paths(names):
     return [p for p in names if public_files.is_article(p)]
 
@@ -168,6 +182,14 @@ def main():
         inventory=public_files.snapshot()
         assets={n:h for n,h in inventory.items() if Path(n).suffix.lower() in public_files.STATIC}
         if assets!=read(HERE/'assets.json'):raise ValueError('static assets changed; validate rendering and update the checked asset manifest')
+        tools={n:h for n,h in inventory.items() if public_files.is_tool(n)}
+        registered=public_files.registered_tools()
+        changed=sorted(n for n,h in tools.items() if registered.get(n)!=h)
+        if changed:raise ValueError('interactive tool bytes differ from the checked tool manifest: '+', '.join(changed))
+        for name in tools:
+            errors=tool_errors(Path(name).read_text())
+            if errors:raise ValueError(name+': '+'; '.join(errors))
+            results.append({'path':name,'status':'tool-checked','artifact_sha256':tools[name]})
         overrides={}
         for path in article_paths(names):
             current_article=path
